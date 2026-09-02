@@ -247,7 +247,11 @@ class ConditionalNorm(BaseModule):
         gamma = self.ego_mlp_gamma(actv)
         beta = self.ego_mlp_beta(actv)
 
-        # apply scale and bias
+        # Broadcast only over the BEV spatial axes. With a per-GPU batch
+        # larger than one, leaving gamma/beta as (bs, channels) aligns ``bs``
+        # with ``bev_w`` under PyTorch's right-to-left broadcasting rules.
+        gamma = gamma[:, None, None, :]
+        beta = beta[:, None, None, :]
         embed = gamma * embed + beta
         return embed
 

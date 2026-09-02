@@ -15,6 +15,9 @@ from torchvision.transforms.functional import rotate
 from .bevformer import BEVFormer
 from mmdet3d.models import builder
 from ..utils import e2e_predictor_utils
+from .radar_bev_encoder import RadarBEVEncoder
+from .doppler_bev_advection import DopplerBEVAdvection
+from .doppler_radial_flow_loss import DopplerRadialFlowLoss
 
 
 @DETECTORS.register_module()
@@ -30,6 +33,9 @@ class Drive_OccWorld(BEVFormer):
                  point_cloud_range,
                  bev_h,
                  bev_w,
+                 radar_encoder=None,
+                 doppler_advection=None,
+                 doppler_flow_loss=None,
 
                  # Plan Head configurations.
                  turn_on_plan=False,
@@ -73,10 +79,17 @@ class Drive_OccWorld(BEVFormer):
         super().__init__(*args, **kwargs)
         # occ head
         self.future_pred_head = builder.build_head(future_pred_head)
-        # flow head
-        self.turn_on_flow = turn_on_flow
-        if self.turn_on_flow:
-            future_pred_head_flow = future_pred_head
+        # The legacy flag enables Cam4DOcc flow-label supervision and flow
+        # evaluation. M2 can reuse the same WorldHeadV1 prediction layers
+        # without requiring those labels.
+        self.turn_on_flow = bool(turn_on_flow)
+        self.doppler_radial_flow_loss = (
+            DopplerRadialFlowLoss(**doppler_flow_loss)
+            if doppler_flow_loss is not None else None)
+        self.predict_flow = (
+            self.turn_on_flow or self.doppler_radial_flow_loss is not None)
+        if self.predict_flow:
+            future_pred_head_flow = copy.deepcopy(future_pred_head)
             future_pred_head_flow['num_classes'] = 3
             future_pred_head_flow['turn_on_flow'] = True
             future_pred_head_flow['prev_render_neck']['occ_flow'] = 'flow'
@@ -89,6 +102,17 @@ class Drive_OccWorld(BEVFormer):
                 self.vehicles_id = [2,3,4,5,6,7,9,10]
             self.gmo_id = 1 # sem_clsses -> GMO
             self.iou_thresh_for_vpq = 0.2
+
+            if not self.turn_on_flow:
+                # M2 supervises the current-frame flow projection only. Keep
+                # the established WorldHeadV1 voxel prediction layers, but do
+                # not optimize its unused autoregressive decoder stack.
+                trainable_prefixes = (
+                    'bev_pred_head.', 'bev_soft_weights.', 'occ_pred_conv.')
+                for name, parameter in (
+                        self.future_pred_head_flow.named_parameters()):
+                    parameter.requires_grad = name.startswith(
+                        trainable_prefixes)
         
         # plan head
         self.turn_on_plan = turn_on_plan
@@ -111,6 +135,12 @@ class Drive_OccWorld(BEVFormer):
         self.point_cloud_range = point_cloud_range
         self.bev_h = bev_h
         self.bev_w = bev_w
+        self.radar_bev_encoder = (
+            RadarBEVEncoder(**radar_encoder)
+            if radar_encoder is not None else None)
+        self.doppler_advection = (
+            DopplerBEVAdvection(**doppler_advection)
+            if doppler_advection is not None else None)
 
         # Augmentations.
         self.random_drop_image_rate = random_drop_image_rate
@@ -146,11 +176,13 @@ class Drive_OccWorld(BEVFormer):
             del self.future_pred_head.prev_frame_embedding
             del self.future_pred_head.can_bus_mlp
             del self.future_pred_head.positional_encoding
-            del self.future_pred_head_flow.transformer
-            del self.future_pred_head_flow.bev_embedding
-            del self.future_pred_head_flow.prev_frame_embedding
-            del self.future_pred_head_flow.can_bus_mlp
-            del self.future_pred_head_flow.positional_encoding
+            if self.predict_flow:
+                del self.future_pred_head_flow.transformer
+                del self.future_pred_head_flow.bev_embedding
+                del self.future_pred_head_flow.prev_frame_embedding
+                if hasattr(self.future_pred_head_flow, 'can_bus_mlp'):
+                    del self.future_pred_head_flow.can_bus_mlp
+                del self.future_pred_head_flow.positional_encoding
 
     def set_epoch(self, epoch):
         self.training_epoch = epoch
@@ -283,6 +315,9 @@ class Drive_OccWorld(BEVFormer):
             ref2future = ref2future.transpose(-1, -2)
             ref2future = ref2future.detach().clone()
 
+        # Keep the unexpanded target-to-reference transform for the Doppler
+        # prior; the history attention path needs one copy per memory frame.
+        future2ref_reference = future2ref
         # 2. compute the transformation matrix from current frame to all previous frames.
         future2ref = future2ref.unsqueeze(1).repeat(1, num_frame, 1, 1).contiguous()
         future_to_history_list = torch.matmul(future2ref, ref_to_history_list)
@@ -307,10 +342,44 @@ class Drive_OccWorld(BEVFormer):
 
         # 5. get target bev_grids at target future frame.
         tgt_grids = bev_grids[:, -1].contiguous()
-        return tgt_grids, aligned_bev_grids, ref2future, future_to_history_list.transpose(-1, -2)
+        # Grid for sampling a reference-frame feature map into this future
+        # decoder frame.  Unlike ``aligned_bev_grids``, this remains anchored
+        # to the measured current frame throughout autoregressive rollout.
+        target_bev_coords = bev_coords[:, -1]
+        target_bev_coords_h = torch.cat([
+            target_bev_coords,
+            torch.ones_like(target_bev_coords[..., :2])], dim=-1)
+        future_to_ref_coords = torch.matmul(
+            target_bev_coords_h, future2ref_reference)[..., :2]
+        future_to_ref_grid, _ = e2e_predictor_utils.bev_coords_to_grids(
+            future_to_ref_coords, self.bev_h, self.bev_w,
+            self.point_cloud_range)
+
+        return (tgt_grids, aligned_bev_grids, ref2future,
+                future_to_history_list.transpose(-1, -2),
+                future_to_ref_grid)
     
 
-    def obtain_ref_bev(self, img, img_metas, prev_bev):
+    def fuse_radar_bev(self, camera_bev, radar_bev):
+        """Fuse current radar into camera BEV as a learnable residual."""
+        if self.radar_bev_encoder is None:
+            return camera_bev
+        if radar_bev is None:
+            raise ValueError(
+                'radar_encoder is enabled but the dataset returned no radar_bev')
+        radar_dtype = next(self.radar_bev_encoder.parameters()).dtype
+        radar_bev = radar_bev.to(dtype=radar_dtype)
+        radar_encoder_input = radar_bev[:, :self.radar_bev_encoder.in_channels]
+        radar_feat = self.radar_bev_encoder(
+            radar_encoder_input, output_size=(self.bev_h, self.bev_w))
+        radar_tokens = radar_feat.flatten(2).transpose(1, 2).contiguous()
+        if radar_tokens.shape != camera_bev.shape:
+            raise ValueError(
+                'Radar and camera BEV shapes do not match: '
+                f'{tuple(radar_tokens.shape)} vs {tuple(camera_bev.shape)}')
+        return camera_bev + radar_tokens.to(dtype=camera_bev.dtype)
+
+    def obtain_ref_bev(self, img, img_metas, prev_bev, radar_bev=None):
         # Extract current BEV features.
         # C1. Forward.
         img_feats = self.extract_feat(img=img, img_metas=img_metas)
@@ -320,9 +389,10 @@ class Drive_OccWorld(BEVFormer):
         # C3. BEVFormer Encoder Forward.
         # ref_bev: bs, bev_h * bev_w, c
         ref_bev = self.pts_bbox_head(img_feats, img_metas, prev_bev, only_bev=True)
+        ref_bev = self.fuse_radar_bev(ref_bev, radar_bev)
         return ref_bev
     
-    def obtain_ref_bev_with_plan(self, img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, ref_real_traj=None):
+    def obtain_ref_bev_with_plan(self, img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, ref_real_traj=None, radar_bev=None):
         # Extract current BEV features.
         # C1. Forward.
         img_feats = self.extract_feat(img=img, img_metas=img_metas)
@@ -332,6 +402,7 @@ class Drive_OccWorld(BEVFormer):
         # C2. BEVFormer Encoder Forward.
         # ref_bev: bs, bev_h * bev_w, c
         ref_bev = self.pts_bbox_head(img_feats, img_metas, prev_bev, only_bev=True)
+        ref_bev = self.fuse_radar_bev(ref_bev, radar_bev)
 
         # C3. PlanHead 
         if 'v1' in self.plan_head_type:
@@ -347,8 +418,9 @@ class Drive_OccWorld(BEVFormer):
         return ref_bev, ref_pose_pred, ref_pose_loss
 
     
-    def future_pred(self, prev_bev_input, action_condition_dict, cond_norm_dict, plan_dict, 
-                    valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ'):
+    def future_pred(self, prev_bev_input, action_condition_dict, cond_norm_dict,
+                    plan_dict, valid_frames, img_metas, prev_img_metas,
+                    num_frames, occ_flow='occ', radar_bev=None):
         if occ_flow == 'occ':
             future_pred_head = self.future_pred_head
         elif occ_flow == 'flow':
@@ -360,6 +432,7 @@ class Drive_OccWorld(BEVFormer):
         # prev_bev_input: B,memory_queue_len,HW,C
         ref_bev = prev_bev_input[:, -1].unsqueeze(0).repeat(
                 len(self.future_pred_head.bev_pred_head), 1, 1, 1).contiguous()
+        measured_ref_bev = prev_bev_input[:, -1]
 
         next_bev_feats, next_bev_sem, next_pose_loss = [ref_bev], [], []
         next_pose_preds = plan_dict['ref_pose_pred'] # B,Lout,2
@@ -386,9 +459,19 @@ class Drive_OccWorld(BEVFormer):
             action_condition_dict['plan_traj'] = plan_traj
 
             # 1. obtain the coordinates of future BEV query to previous frames.
-            tgt_grids, aligned_prev_grids, ref2future, future2history = self._align_bev_coordnates(
+            (tgt_grids, aligned_prev_grids, ref2future, future2history,
+             future_to_ref_grid) = self._align_bev_coordnates(
                 future_frame_index, ref_to_history_list, img_metas, plan_traj)
             cond_norm_dict['future2history'] = future2history
+
+            rollout_prior = None
+            if occ_flow == 'occ' and self.doppler_advection is not None:
+                if radar_bev is None:
+                    raise ValueError(
+                        'doppler_advection is enabled but radar_bev is missing')
+                rollout_prior = self.doppler_advection(
+                    measured_ref_bev, radar_bev, future_frame_index,
+                    future_to_ref_grid)
 
 
             # 2. transform for generating freespace of future frame.
@@ -396,14 +479,18 @@ class Drive_OccWorld(BEVFormer):
             if future_frame_index in valid_frames:  # compute loss if it is a valid frame.
                 pred_feat, bev_sem_pred = future_pred_head(
                     prev_bev_input, img_metas, future_frame_index, action_condition_dict, cond_norm_dict,
-                    tgt_points=tgt_grids, bev_h=self.bev_h, bev_w=self.bev_w, ref_points=aligned_prev_grids)
+                    tgt_points=tgt_grids, bev_h=self.bev_h,
+                    bev_w=self.bev_w, ref_points=aligned_prev_grids,
+                    rollout_prior=rollout_prior)
                 next_bev_feats.append(pred_feat)
                 next_bev_sem.append(bev_sem_pred)
             else:
                 with torch.no_grad():
                     pred_feat, bev_sem_pred = future_pred_head(
                         prev_bev_input, img_metas, future_frame_index, action_condition_dict, cond_norm_dict,
-                        tgt_points=tgt_grids, bev_h=self.bev_h, bev_w=self.bev_w, ref_points=aligned_prev_grids)
+                        tgt_points=tgt_grids, bev_h=self.bev_h,
+                        bev_w=self.bev_w, ref_points=aligned_prev_grids,
+                        rollout_prior=rollout_prior)
                     next_bev_feats.append(pred_feat)
 
 
@@ -454,10 +541,18 @@ class Drive_OccWorld(BEVFormer):
         # preds
         occ_preds = occ_preds.permute(1, 0, 3, 2, 6, 4, 5).squeeze(3)
         inter_num, select_frames, bs, num_cls, hw, d = occ_preds.shape
-        occ_preds = occ_preds.view(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
-        # gts
-        occ_gts = occ_gts[0][self.future_pred_head.history_queue_length:]
-        occ_gts = occ_gts.view(select_frames*bs, *occ_gts.shape[-3:])
+        occ_preds = occ_preds.reshape(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
+        # Dataset collation returns (bs, frames, H, W, D). The original
+        # ``occ_gts[0]`` silently discarded every sample except the first.
+        # Match the prediction's frame-major flattening order: (frame, batch).
+        occ_gts = occ_gts[:, self.future_pred_head.history_queue_length:]
+        if occ_gts.shape[:2] != (bs, select_frames):
+            raise ValueError(
+                'Occupancy target shape does not match predictions: '
+                f'got {tuple(occ_gts.shape[:2])}, expected '
+                f'({bs}, {select_frames})')
+        occ_gts = occ_gts.transpose(0, 1).reshape(
+            select_frames * bs, *occ_gts.shape[-3:])
         
         # occ loss
         losses_occupancy = self.future_pred_head.loss_occ(occ_preds, occ_gts)
@@ -465,7 +560,7 @@ class Drive_OccWorld(BEVFormer):
     
     def compute_sem_norm_loss(self, bev_sem_preds, occ_gts):
         # gts
-        occ_gts = occ_gts[0][self.future_pred_head.history_queue_length:-1]
+        occ_gts = occ_gts[:, self.future_pred_head.history_queue_length:-1]
 
         loss_dict = {}
         # loss sem
@@ -476,7 +571,7 @@ class Drive_OccWorld(BEVFormer):
 
     def compute_sem_norm(self, bev_sem_preds, occ_gts):
         # gts
-        occ_gts = occ_gts[0][self.future_pred_head.history_queue_length:]
+        occ_gts = occ_gts[:, self.future_pred_head.history_queue_length:]
 
         # loss sem
         if bev_sem_preds[0] is not None:
@@ -486,7 +581,7 @@ class Drive_OccWorld(BEVFormer):
 
     def compute_obj_motion_norm(self, flow_preds, flow_gts):
         # gts
-        flow_gts = flow_gts[0][self.future_pred_head_flow.history_queue_length:]
+        flow_gts = flow_gts[:, self.future_pred_head_flow.history_queue_length:]
 
         # preds
         if flow_preds[0] is not None:
@@ -509,13 +604,31 @@ class Drive_OccWorld(BEVFormer):
         # preds
         flow_preds = flow_preds.permute(1, 0, 3, 2, 6, 4, 5).squeeze(3)
         inter_num, select_frames, bs, num_cls, hw, d = flow_preds.shape
-        flow_preds = flow_preds.view(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
+        flow_preds = flow_preds.reshape(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
         # gts
-        flow_gts = flow_gts[0][self.future_pred_head_flow.history_queue_length:]
-        flow_gts = flow_gts.view(select_frames*bs, *flow_gts.shape[-4:])
+        flow_gts = flow_gts[:, self.future_pred_head_flow.history_queue_length:]
+        if flow_gts.shape[:2] != (bs, select_frames):
+            raise ValueError(
+                'Flow target shape does not match predictions: '
+                f'got {tuple(flow_gts.shape[:2])}, expected '
+                f'({bs}, {select_frames})')
+        flow_gts = flow_gts.transpose(0, 1).reshape(
+            select_frames * bs, *flow_gts.shape[-4:])
         # flow loss
         losses_flow = self.future_pred_head_flow.loss_flow(flow_preds, flow_gts)
         return losses_flow
+
+    def predict_current_flow(self, ref_bev):
+        """Run the existing WorldHeadV1 flow predictor on the measured BEV."""
+        if not self.predict_flow:
+            raise RuntimeError('No flow prediction head is configured')
+        num_intermediate = len(self.future_pred_head_flow.bev_pred_head)
+        current_features = ref_bev.unsqueeze(0).unsqueeze(0).expand(
+            1, num_intermediate, -1, -1, -1)
+        current_preds = self.future_pred_head_flow.forward_head(
+            current_features)
+        current_index = self.future_pred_head_flow.pred_history_frame_num
+        return current_preds[0, :, current_index]
     
     def compute_plan_loss(self, outs_planning, sdc_planning, sdc_planning_mask, gt_future_boxes):
         ## outs_planning, sdc_planning: under ref_lidar coord
@@ -529,7 +642,7 @@ class Drive_OccWorld(BEVFormer):
         # preds
         occ_preds = occ_preds.permute(1, 0, 3, 2, 6, 4, 5).squeeze(3)
         inter_num, select_frames, bs, num_cls, hw, d = occ_preds.shape
-        occ_preds = occ_preds.view(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
+        occ_preds = occ_preds.reshape(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
         # gts
         occ_gts = occ_gts[0][self.future_pred_head.history_queue_length:]
         occ_gts = occ_gts.view(select_frames*bs, *occ_gts.shape[-3:])
@@ -544,14 +657,14 @@ class Drive_OccWorld(BEVFormer):
         # occ_preds
         occ_preds = occ_preds.permute(1, 0, 3, 2, 6, 4, 5).squeeze(3)
         inter_num, select_frames, bs, num_cls, hw, d = occ_preds.shape
-        occ_preds = occ_preds.view(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
+        occ_preds = occ_preds.reshape(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
         # occ_gts
         occ_gts = occ_gts[0][self.future_pred_head.history_queue_length:]
         occ_gts = occ_gts.view(select_frames*bs, *occ_gts.shape[-3:])
         # flow_preds
         flow_preds = flow_preds.permute(1, 0, 3, 2, 6, 4, 5).squeeze(3)
         inter_num, select_frames, bs, num_cls, hw, d = flow_preds.shape
-        flow_preds = flow_preds.view(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
+        flow_preds = flow_preds.reshape(inter_num, select_frames*bs, num_cls, self.bev_w, self.bev_h, d).transpose(3,4)
         # instance_gts
         instance_gts = instance_gts[0][self.future_pred_head.history_queue_length:]
         instance_gts = instance_gts.view(select_frames*bs, *instance_gts.shape[-3:])
@@ -579,10 +692,11 @@ class Drive_OccWorld(BEVFormer):
         self.planning_metric_v2(pred_under_ref, gt_under_ref, sdc_planning_mask, segmentation_bev)
 
 
-    @auto_fp16(apply_to=('img', 'segmentation', 'flow', 'sdc_planning'))
+    @auto_fp16(apply_to=('img', 'radar_bev', 'segmentation', 'flow', 'sdc_planning'))
     def forward_train(self,
                       img_metas=None,
                       img=None,
+                      radar_bev=None,
                       # occ_flow
                       segmentation=None,
                       instance=None, 
@@ -657,9 +771,9 @@ class Drive_OccWorld(BEVFormer):
             sem_occupancy = segmentation[0][self.future_pred_head.history_queue_length:].unsqueeze(0)   # using GT occupancy to calculate sample_traj cost during training
             sem_occupancy = F.interpolate(sem_occupancy, size=(self.bev_h, self.bev_w, self.future_pred_head.num_pred_height), mode='nearest')
             ref_sem_occupancy = sem_occupancy[:, 0]
-            ref_bev, ref_pose_pred, ref_pose_loss = self.obtain_ref_bev_with_plan(img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, ref_real_traj)
+            ref_bev, ref_pose_pred, ref_pose_loss = self.obtain_ref_bev_with_plan(img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, ref_real_traj, radar_bev=radar_bev)
         else:
-            ref_bev = self.obtain_ref_bev(img, img_metas, prev_bev)
+            ref_bev = self.obtain_ref_bev(img, img_metas, prev_bev, radar_bev=radar_bev)
             sem_occupancy, ref_pose_pred, ref_pose_loss = None, None, None
 
 
@@ -688,13 +802,23 @@ class Drive_OccWorld(BEVFormer):
 
             # D5. predict future occ in auto-regressive manner
             next_bev_preds, next_bev_sem, next_pose_preds, next_pose_loss = self.future_pred(prev_bev_list, action_condition_dict, cond_norm_dict, plan_dict, 
-                                                                            valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ')
+                                                                            valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ', radar_bev=radar_bev)
 
 
-            # D6. predict future flow in auto-regressive manner
+            # D6. Predict flow. Legacy label supervision uses the complete
+            # autoregressive branch; M2-only training needs just the current
+            # WorldHeadV1 flow prediction at radar return locations.
+            doppler_current_flow_preds = None
             if self.turn_on_flow:
                 next_bev_preds_flow, _, _, _ = self.future_pred(prev_bev_list, action_condition_dict, cond_norm_dict, plan_dict, 
                                                                 valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='flow')
+                if self.doppler_radial_flow_loss is not None:
+                    current_index = (
+                        self.future_pred_head_flow.pred_history_frame_num)
+                    doppler_current_flow_preds = next_bev_preds_flow[
+                        0, :, current_index]
+            elif self.doppler_radial_flow_loss is not None:
+                doppler_current_flow_preds = self.predict_current_flow(ref_bev)
 
 
         # E. Compute Loss
@@ -706,6 +830,12 @@ class Drive_OccWorld(BEVFormer):
         if self.turn_on_flow:
             losses_flow = self.compute_flow_loss(next_bev_preds_flow, flow)
             losses.update(losses_flow)
+        # E2b. Free radial Doppler supervision. This intentionally constrains
+        # only dot(v_pred, line_of_sight), never the tangential component.
+        if self.doppler_radial_flow_loss is not None:
+            losses_doppler_flow = self.doppler_radial_flow_loss(
+                doppler_current_flow_preds, radar_bev)
+            losses.update(losses_doppler_flow)
         # E3. Compute loss for plan regression.
         if self.turn_on_plan:
             if 'v1' in self.plan_head_type: # used for fine-grained_MMO when sem_occupancy distinguish categories in MMO
@@ -735,6 +865,7 @@ class Drive_OccWorld(BEVFormer):
     def forward_test(self, 
                      img_metas, 
                      img=None,
+                     radar_bev=None,
                      # occ_flow
                      segmentation=None, 
                      instance=None, 
@@ -772,9 +903,9 @@ class Drive_OccWorld(BEVFormer):
             ref_sample_traj = sample_traj[:, :, 0]
             ref_command = command[:, 0]
             ref_sem_occupancy = None
-            ref_bev, ref_pose_pred, _ = self.obtain_ref_bev_with_plan(img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command)
+            ref_bev, ref_pose_pred, _ = self.obtain_ref_bev_with_plan(img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, radar_bev=radar_bev)
         else:
-            ref_bev = self.obtain_ref_bev(img, img_metas, prev_bev)
+            ref_bev = self.obtain_ref_bev(img, img_metas, prev_bev, radar_bev=radar_bev)
             ref_pose_pred = None
 
 
@@ -792,7 +923,7 @@ class Drive_OccWorld(BEVFormer):
 
         # D5. predict future occ in auto-regressive manner
         next_bev_preds, _, next_pose_preds, _ = self.future_pred(prev_bev_list, action_condition_dict, cond_norm_dict, plan_dict,
-                                                                valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ')
+                                                                valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ', radar_bev=radar_bev)
 
         # D6. predict future flow in auto-regressive manner
         if self.turn_on_flow:

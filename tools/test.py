@@ -4,6 +4,7 @@
 #  Modified by Zhiqi Li
 # ---------------------------------------------
 import argparse
+import datetime
 import mmcv
 import os
 import torch
@@ -186,7 +187,12 @@ def main():
         distributed = False
     else:
         distributed = True
-        init_dist(args.launcher, **cfg.dist_params)
+        dist_params = cfg.dist_params.copy()
+        timeout_seconds = os.getenv('DIST_TIMEOUT_SECONDS')
+        if timeout_seconds:
+            dist_params['timeout'] = datetime.timedelta(
+                seconds=int(timeout_seconds))
+        init_dist(args.launcher, **dist_params)
 
     # set random seeds
     if args.seed is not None:

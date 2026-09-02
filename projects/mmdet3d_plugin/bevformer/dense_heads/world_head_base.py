@@ -277,7 +277,8 @@ class WorldHeadTemplate(BaseModule):
 
     @auto_fp16(apply_to=('prev_features'))
     def _get_next_bev_features(self, prev_features, img_metas, target_frame_index, 
-                               action_condition_dict, cond_norm_dict, tgt_points, ref_points, bev_h, bev_w):
+                               action_condition_dict, cond_norm_dict, tgt_points,
+                               ref_points, bev_h, bev_w, rollout_prior=None):
         """ Forward function for each frame.
 
         Args:
@@ -296,7 +297,11 @@ class WorldHeadTemplate(BaseModule):
         dtype = prev_features.dtype
         #  * BEV queries.
         bev_queries = self.bev_embedding.weight.to(dtype)  # bev_h * bev_w, bev_dims
-        bev_queries = bev_queries.unsqueeze(0)
+        # The learned query table is shared across samples, but every sample
+        # still needs an explicit batch entry. Keeping it at batch size one
+        # relies on broadcasting through ``query_pos`` and leaves the
+        # attention value tensor at B=1.
+        bev_queries = bev_queries.unsqueeze(0).expand(bs, -1, -1)
         bev_mask = torch.zeros((bs, self.bev_h, self.bev_w),
                                device=bev_queries.device).to(dtype)
         bev_pos = self.positional_encoding(bev_mask).to(dtype)  # bs, bev_dims, bev_h, bev_w
@@ -325,7 +330,10 @@ class WorldHeadTemplate(BaseModule):
             action_condition = cur_can_bus
 
         if self.use_command:
-            command = command.unsqueeze(0)  # bs,1 (command)
+            # Keep the batch axis intact. ``unsqueeze(0)`` only happened to
+            # work for the historical samples_per_gpu=1 setting and turns a
+            # batch of commands into shape (1, bs).
+            command = command.unsqueeze(-1)  # bs, 1 (command)
             # fourier embed
             if self.use_fourier:
                 command = self.fourier_embed_command(command)
@@ -376,6 +384,15 @@ class WorldHeadTemplate(BaseModule):
         else:
             bev_queries_input = bev_queries
 
+        if rollout_prior is not None:
+            expected_shape = (bs, bev_h * bev_w, self.embed_dims)
+            if rollout_prior.shape != expected_shape:
+                raise ValueError(
+                    'rollout_prior must have shape {}, got {}'.format(
+                        expected_shape, tuple(rollout_prior.shape)))
+            bev_queries_input = (
+                bev_queries_input + rollout_prior.to(bev_queries_input.dtype))
+
 
         # 3. obtain prev embeddings (bs, num_frames, bev_h * bev_w, dims).
         if self.prev_render_neck:
@@ -424,7 +441,8 @@ class WorldHeadTemplate(BaseModule):
                 cond_norm_dict,
                 tgt_points,  # tgt_points config for self-attention.
                 ref_points,  # ref_points config for cross-attention.
-                bev_h, bev_w,):
+                bev_h, bev_w,
+                rollout_prior=None):
         f"""Forward function: a wrapper function for self._get_next_bev_features
         
         From previous multi-frame BEV features (mlvl_feats) predict 
@@ -449,7 +467,8 @@ class WorldHeadTemplate(BaseModule):
 
         next_bev_feat, bev_sem_pred = self._get_next_bev_features(
             prev_feats, img_metas, target_frame_index, action_condition_dict, 
-            cond_norm_dict, tgt_points, ref_points, bev_h, bev_w)
+            cond_norm_dict, tgt_points, ref_points, bev_h, bev_w,
+            rollout_prior=rollout_prior)
         return next_bev_feat, bev_sem_pred
 
     def forward_head(self, next_bev_feats):

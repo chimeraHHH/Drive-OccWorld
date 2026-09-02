@@ -609,8 +609,13 @@ class PredictionMSDeformableAttention(BaseModule):
         if query_pos is not None:
             query = query + query_pos
 
-        bs, num_query, _ = query.shape
-        bs, num_value, _ = value.shape
+        query_bs, num_query, _ = query.shape
+        value_bs, num_value, _ = value.shape
+        if query_bs != value_bs:
+            raise ValueError(
+                'Attention query/value batch sizes differ: '
+                f'{query_bs} vs {value_bs}')
+        bs = query_bs
         assert (spatial_shapes[:, 0] * spatial_shapes[:, 1]).sum() == num_value
 
         value = self.value_proj(value)

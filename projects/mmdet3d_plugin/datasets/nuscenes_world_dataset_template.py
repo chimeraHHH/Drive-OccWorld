@@ -14,6 +14,9 @@ from projects.mmdet3d_plugin.datasets.samplers import sampler as trajectory_samp
 from projects.mmdet3d_plugin.bevformer.dense_heads.plan_head import calculate_birds_eye_view_parameters
 from mmdet3d.core.bbox import LiDARInstance3DBoxes
 from prettytable import PrettyTable
+from mmcv.parallel import DataContainer as DC
+
+from .radar_bev import NuScenesRadarBEV
 
 
 @DATASETS.register_module()
@@ -31,6 +34,7 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
                  load_frame_interval=None,
                  rand_frame_interval=(1,),
                  plan_grid_conf=None,
+                 radar_cfg=None,
 
                  *args,
                  **kwargs):
@@ -45,6 +49,12 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         self.usable_index = []
 
         super().__init__(*args, **kwargs)
+        # nuscenes-devkit 1.1.9 stores this as a dict_keys view, which cannot
+        # be pickled when distributed training starts DataLoader workers with
+        # the ``spawn`` multiprocessing method.  Keep the same order/content
+        # while making the dataset safe to serialize.
+        self.eval_detection_configs.class_names = list(
+            self.eval_detection_configs.class_names)
         self.classes = classes
         self.use_separate_classes = use_separate_classes
         self.use_fine_occ = use_fine_occ
@@ -52,6 +62,10 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         # load origin nusc dataset for instance annotation
         self.nusc = NuScenes(version='v1.0-trainval', dataroot=self.data_root, verbose=False)
         self.nusc_can = NuScenesCanBus(dataroot=self.data_root)
+        self.radar_bev_loader = None
+        if radar_cfg is not None:
+            self.radar_bev_loader = NuScenesRadarBEV(
+                nusc=self.nusc, **radar_cfg)
 
         # scene2map
         self.scene2map = {}
@@ -430,6 +444,9 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         input_dict = self.get_data_info(index)
         if input_dict is None:
             return None
+        radar_bev = None
+        if occ_load_flag and self.radar_bev_loader is not None:
+            radar_bev = self.radar_bev_loader(input_dict['sample_idx'])
         if aug_param is not None:
             input_dict['aug_param'] = copy.deepcopy(aug_param)
         
@@ -484,6 +501,9 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
 
         self.pre_pipeline(input_dict)
         example = self.pipeline(input_dict)
+        if example is not None and radar_bev is not None:
+            example['radar_bev'] = DC(
+                torch.from_numpy(radar_bev), stack=True)
         return example
         
     def _prepare_data_info(self, index, rand_interval=None):
