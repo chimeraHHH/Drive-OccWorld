@@ -4,6 +4,7 @@ from nuscenes.can_bus.can_bus_api import NuScenesCanBus
 from .nuscenes_dataset import CustomNuScenesDataset
 import mmcv
 from mmdet.datasets import DATASETS
+from mmdet.datasets.builder import PIPELINES
 import numpy as np
 import cv2
 import torch
@@ -17,12 +18,18 @@ from prettytable import PrettyTable
 from mmcv.parallel import DataContainer as DC
 
 from .radar_bev import NuScenesRadarBEV
+from .radar_observations import NuScenesRadarObservations
 
 
 @DATASETS.register_module()
 class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
     r"""World dataset for visual point cloud forecasting.
     """
+
+    # union2one uses future poses/actions, but never future camera pixels.
+    _FUTURE_META_KEYS = (
+        'scene_token', 'ego2global_translation', 'ego2global_rotation',
+        'lidar2ego_translation', 'lidar2ego_rotation', 'can_bus')
 
     def __init__(self,
                  classes,
@@ -35,6 +42,8 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
                  rand_frame_interval=(1,),
                  plan_grid_conf=None,
                  radar_cfg=None,
+                 radar_observation_cfg=None,
+                 future_metadata_only=False,
 
                  *args,
                  **kwargs):
@@ -49,6 +58,10 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         self.usable_index = []
 
         super().__init__(*args, **kwargs)
+        self.future_metadata_only = bool(future_metadata_only)
+        self._future_metadata_rng_transforms = (
+            self._validate_future_metadata_pipeline()
+            if self.future_metadata_only else ())
         # nuscenes-devkit 1.1.9 stores this as a dict_keys view, which cannot
         # be pickled when distributed training starts DataLoader workers with
         # the ``spawn`` multiprocessing method.  Keep the same order/content
@@ -66,6 +79,13 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         if radar_cfg is not None:
             self.radar_bev_loader = NuScenesRadarBEV(
                 nusc=self.nusc, **radar_cfg)
+        self.radar_observation_loader = None
+        if radar_observation_cfg is not None:
+            if radar_cfg is not None:
+                raise ValueError('M3 radar_observation_cfg requires radar_cfg=None; '
+                                 'support radar features are built in the model')
+            self.radar_observation_loader = NuScenesRadarObservations(
+                nusc=self.nusc, **radar_observation_cfg)
 
         # scene2map
         self.scene2map = {}
@@ -447,6 +467,9 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         radar_bev = None
         if occ_load_flag and self.radar_bev_loader is not None:
             radar_bev = self.radar_bev_loader(input_dict['sample_idx'])
+        radar_observations = None
+        if occ_load_flag and self.radar_observation_loader is not None:
+            radar_observations = self.radar_observation_loader(input_dict['sample_idx'])
         if aug_param is not None:
             input_dict['aug_param'] = copy.deepcopy(aug_param)
         
@@ -504,7 +527,72 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         if example is not None and radar_bev is not None:
             example['radar_bev'] = DC(
                 torch.from_numpy(radar_bev), stack=True)
+        if example is not None and radar_observations is not None:
+            example['radar_observations'] = DC(
+                torch.from_numpy(radar_observations), stack=True)
         return example
+
+    def _validate_future_metadata_pipeline(self):
+        """Fail closed if a pipeline could change required future metadata.
+
+        The supported image transforms only alter camera fields. Replaying
+        their original RNG operations preserves subsequent samples' image
+        augmentation choices without decoding the unused future JPEGs.
+        """
+        train_names = (
+            'LoadMultiViewImageFromFiles',
+            'PhotoMetricDistortionMultiViewImage', 'CropResizeFlipImage',
+            'NormalizeMultiviewImage', 'PadMultiViewImage', 'LoadOccupancy',
+            'DefaultFormatBundle3D', 'CustomCollect3D')
+        test_names = (
+            'LoadMultiViewImageFromFiles', 'NormalizeMultiviewImage',
+            'PadMultiViewImage', 'LoadOccupancy', 'DefaultFormatBundle3D',
+            'CustomCollect3D')
+        transforms = self.pipeline.transforms
+        names = tuple(type(transform).__name__ for transform in transforms)
+        if (names not in (train_names, test_names) or
+                any(type(transform) is not PIPELINES.get(name)
+                    for name, transform in zip(names, transforms))):
+            raise ValueError(
+                'future_metadata_only only supports the standard GMO image '
+                'pipelines; disable it for this pipeline: {}'.format(names))
+        collector = transforms[-1]
+        if (not set(self._FUTURE_META_KEYS).issubset(collector.meta_keys) or
+                'vel_steering' not in collector.keys):
+            raise ValueError(
+                'future_metadata_only requires future pose metadata and '
+                'vel_steering in CustomCollect3D')
+        random_transforms = []
+        for name, transform in zip(names, transforms):
+            if name == 'CropResizeFlipImage' and transform.debug:
+                raise ValueError(
+                    'future_metadata_only requires CropResizeFlipImage '
+                    'debug=False')
+            if name in ('PhotoMetricDistortionMultiViewImage',
+                        'CropResizeFlipImage'):
+                random_transforms.append((name, transform))
+        return tuple(random_transforms)
+
+    def _prepare_future_data_info(self, index):
+        """Prepare future poses/actions, retaining the original RNG stream."""
+        # get_data_info also normalizes can_bus position/yaw from the ego pose;
+        # reading data_infos directly would miss that existing behavior.
+        input_dict = self.get_data_info(index)
+        if input_dict is None:
+            return None
+        for name, transform in self._future_metadata_rng_transforms:
+            if name == 'PhotoMetricDistortionMultiViewImage':
+                # This transform's RNG branches depend on camera count only,
+                # never image size/values. Use its implementation, not a second
+                # hand-maintained list of random draws.
+                transform(dict(img=[
+                    np.zeros((1, 1, 3), dtype=np.float32)
+                    for _ in input_dict['img_filename']]))
+            else:  # CropResizeFlipImage: samples Python and NumPy RNGs.
+                transform._sample_augmentation(dict(aug_param={}))
+        meta = {key: input_dict[key] for key in self._FUTURE_META_KEYS}
+        return dict(img_metas=DC(meta, cpu_only=True),
+                    vel_steering=input_dict['vel_steering'])
         
     def _prepare_data_info(self, index, rand_interval=None):
         """
@@ -553,7 +641,10 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
 
             occ_load_flag = False
 
-            example = self._prepare_data_info_single(idx, occ_load_flag)
+            if self.future_metadata_only:
+                example = self._prepare_future_data_info(idx)
+            else:
+                example = self._prepare_data_info_single(idx, occ_load_flag)
             if example is None and not has_future:
                 return None
             future_queue.append(example)
@@ -568,6 +659,10 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
         Evaluate by IOU and VPQ metrics for model evaluation
         '''
         eval_results = {}
+        if 'horizon_ious' in results:
+            eval_results['IoU_by_horizon'] = results['horizon_ious']
+            if logger is not None:
+                logger.info('Deduplicated per-horizon IoU: %s', results['horizon_ious'])
         
         ''' calculate IOU of current and future frames'''
         if 'hist_for_iou' in results.keys():

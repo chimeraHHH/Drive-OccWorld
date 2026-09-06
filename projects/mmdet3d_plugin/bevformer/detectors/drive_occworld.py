@@ -18,6 +18,7 @@ from ..utils import e2e_predictor_utils
 from .radar_bev_encoder import RadarBEVEncoder
 from .doppler_bev_advection import DopplerBEVAdvection
 from .doppler_radial_flow_loss import DopplerRadialFlowLoss
+from .doppler_posterior_transport import DopplerPosteriorTransport
 
 
 @DETECTORS.register_module()
@@ -36,6 +37,9 @@ class Drive_OccWorld(BEVFormer):
                  radar_encoder=None,
                  doppler_advection=None,
                  doppler_flow_loss=None,
+                 doppler_posterior=None,
+                 doppler_nll_weight=0.05,
+                 scientific_eval=False,
 
                  # Plan Head configurations.
                  turn_on_plan=False,
@@ -141,6 +145,15 @@ class Drive_OccWorld(BEVFormer):
         self.doppler_advection = (
             DopplerBEVAdvection(**doppler_advection)
             if doppler_advection is not None else None)
+        if doppler_posterior is not None and (
+                doppler_advection is not None or doppler_flow_loss is not None
+                or self.turn_on_flow or turn_on_plan):
+            raise ValueError('M3 requires its own motion path and plan/legacy flow disabled')
+        self.doppler_posterior = (
+            DopplerPosteriorTransport(**doppler_posterior)
+            if doppler_posterior is not None else None)
+        self.doppler_nll_weight = float(doppler_nll_weight)
+        self.scientific_eval = bool(scientific_eval)
 
         # Augmentations.
         self.random_drop_image_rate = random_drop_image_rate
@@ -379,7 +392,21 @@ class Drive_OccWorld(BEVFormer):
                 f'{tuple(radar_tokens.shape)} vs {tuple(camera_bev.shape)}')
         return camera_bev + radar_tokens.to(dtype=camera_bev.dtype)
 
-    def obtain_ref_bev(self, img, img_metas, prev_bev, radar_bev=None):
+    def condition_reference(self, camera_bev, radar_bev=None,
+                            radar_observations=None):
+        """M3 predicts its prior before radar fusion; withheld returns never enter it."""
+        state = None
+        if self.doppler_posterior is not None:
+            if radar_bev is not None:
+                raise ValueError('M3 accepts per-return observations, not cached velocity BEV')
+            if radar_observations is None:
+                raise ValueError('M3 requires radar_observations')
+            state = self.doppler_posterior.prepare(camera_bev, radar_observations)
+            radar_bev = state['geometry']
+        return self.fuse_radar_bev(camera_bev, radar_bev), state
+
+    def obtain_ref_bev(self, img, img_metas, prev_bev, radar_bev=None,
+                       radar_observations=None, return_motion_state=False):
         # Extract current BEV features.
         # C1. Forward.
         img_feats = self.extract_feat(img=img, img_metas=img_metas)
@@ -389,8 +416,9 @@ class Drive_OccWorld(BEVFormer):
         # C3. BEVFormer Encoder Forward.
         # ref_bev: bs, bev_h * bev_w, c
         ref_bev = self.pts_bbox_head(img_feats, img_metas, prev_bev, only_bev=True)
-        ref_bev = self.fuse_radar_bev(ref_bev, radar_bev)
-        return ref_bev
+        ref_bev, motion_state = self.condition_reference(
+            ref_bev, radar_bev, radar_observations)
+        return (ref_bev, motion_state) if return_motion_state else ref_bev
     
     def obtain_ref_bev_with_plan(self, img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, ref_real_traj=None, radar_bev=None):
         # Extract current BEV features.
@@ -420,7 +448,7 @@ class Drive_OccWorld(BEVFormer):
     
     def future_pred(self, prev_bev_input, action_condition_dict, cond_norm_dict,
                     plan_dict, valid_frames, img_metas, prev_img_metas,
-                    num_frames, occ_flow='occ', radar_bev=None):
+                    num_frames, occ_flow='occ', radar_bev=None, motion_state=None):
         if occ_flow == 'occ':
             future_pred_head = self.future_pred_head
         elif occ_flow == 'flow':
@@ -465,6 +493,12 @@ class Drive_OccWorld(BEVFormer):
             cond_norm_dict['future2history'] = future2history
 
             rollout_prior = None
+            if occ_flow == 'occ' and self.doppler_posterior is not None:
+                if motion_state is None:
+                    raise ValueError('M3 posterior state is missing from future rollout')
+                rollout_prior = self.doppler_posterior.transport(
+                    measured_ref_bev, motion_state, future_frame_index,
+                    future_to_ref_grid)
             if occ_flow == 'occ' and self.doppler_advection is not None:
                 if radar_bev is None:
                     raise ValueError(
@@ -653,6 +687,42 @@ class Drive_OccWorld(BEVFormer):
         hist_for_iout_future_time_weighting = self.evaluate_occupancy_forecasting(occ_preds[-1][1:], occ_gts[1:], img_metas=img_metas, time_weighting=True)
         return hist_for_iou, hist_for_iou_current, hist_for_iou_future, hist_for_iout_future_time_weighting
 
+    def evaluate_occ_records(self, occ_preds, occ_gts, img_metas):
+        """One record per sample, with horizons intact for deduplication and CIs.
+
+        No global aggregate is formed before distributed sampler padding is
+        removed. GMO/non-GMO confusion matrices are not moving/static masks.
+        """
+        preds = occ_preds.permute(1, 0, 3, 2, 6, 4, 5).squeeze(3)
+        _, frames, batch, classes, hw, depth = preds.shape
+        preds = preds[-1].reshape(
+            frames, batch, classes, self.bev_w, self.bev_h, depth).transpose(3, 4)
+        targets = occ_gts[:, self.future_pred_head.history_queue_length:]
+        if targets.shape[:2] != (batch, frames):
+            raise ValueError('Scientific evaluation prediction/target frames mismatch')
+        records = []
+        for b in range(batch):
+            meta = img_metas[b]
+            token = meta.get('sample_idx', meta.get('sample_token', meta.get('lidar_token')))
+            if token is None or 'scene_token' not in meta:
+                raise ValueError('Scientific evaluation requires sample and scene tokens')
+            histograms = []
+            for t in range(frames):
+                pred = F.interpolate(
+                    preds[t, b:b+1], size=targets.shape[-3:],
+                    mode='trilinear', align_corners=False)[0].argmax(0)
+                gt = targets[b, t].long()
+                mask = (gt >= 0) & (gt < classes)
+                cm = torch.bincount(
+                    classes * gt[mask] + pred[mask],
+                    minlength=classes * classes).reshape(classes, classes)
+                histograms.append(cm.cpu().numpy())
+            records.append(dict(sample_token=str(token),
+                                scene_token=str(meta['scene_token']),
+                                hist_by_horizon=np.stack(histograms),
+                                horizon_seconds=[0.5*t for t in range(frames)]))
+        return records
+
     def evaluate_instance(self, occ_preds, flow_preds, occ_gts, instance_gts):
         # occ_preds
         occ_preds = occ_preds.permute(1, 0, 3, 2, 6, 4, 5).squeeze(3)
@@ -697,6 +767,7 @@ class Drive_OccWorld(BEVFormer):
                       img_metas=None,
                       img=None,
                       radar_bev=None,
+                      radar_observations=None,
                       # occ_flow
                       segmentation=None,
                       instance=None, 
@@ -764,6 +835,7 @@ class Drive_OccWorld(BEVFormer):
         # C. Extract current BEV features.
         img = img[:, -1, ...]
         img_metas = [each[num_frames-1] for each in img_metas]
+        motion_state = None
         if self.turn_on_plan:
             ref_sample_traj = sample_traj[:, :, 0]
             ref_real_traj = sdc_planning[:, 0]
@@ -773,7 +845,9 @@ class Drive_OccWorld(BEVFormer):
             ref_sem_occupancy = sem_occupancy[:, 0]
             ref_bev, ref_pose_pred, ref_pose_loss = self.obtain_ref_bev_with_plan(img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, ref_real_traj, radar_bev=radar_bev)
         else:
-            ref_bev = self.obtain_ref_bev(img, img_metas, prev_bev, radar_bev=radar_bev)
+            ref_bev, motion_state = self.obtain_ref_bev(
+                img, img_metas, prev_bev, radar_bev=radar_bev,
+                radar_observations=radar_observations, return_motion_state=True)
             sem_occupancy, ref_pose_pred, ref_pose_loss = None, None, None
 
 
@@ -802,7 +876,7 @@ class Drive_OccWorld(BEVFormer):
 
             # D5. predict future occ in auto-regressive manner
             next_bev_preds, next_bev_sem, next_pose_preds, next_pose_loss = self.future_pred(prev_bev_list, action_condition_dict, cond_norm_dict, plan_dict, 
-                                                                            valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ', radar_bev=radar_bev)
+                                                                            valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ', radar_bev=radar_bev, motion_state=motion_state)
 
 
             # D6. Predict flow. Legacy label supervision uses the complete
@@ -826,6 +900,9 @@ class Drive_OccWorld(BEVFormer):
         # E1. Compute loss for occ predictions.
         losses_occupancy = self.compute_occ_loss(next_bev_preds, segmentation)
         losses.update(losses_occupancy)
+        if motion_state is not None:
+            losses['loss_m3_doppler_nll'] = (
+                self.doppler_nll_weight * motion_state['loss_doppler_nll'])
         # E2. Compute loss for flow predictions.
         if self.turn_on_flow:
             losses_flow = self.compute_flow_loss(next_bev_preds_flow, flow)
@@ -866,6 +943,7 @@ class Drive_OccWorld(BEVFormer):
                      img_metas, 
                      img=None,
                      radar_bev=None,
+                     radar_observations=None,
                      # occ_flow
                      segmentation=None, 
                      instance=None, 
@@ -899,13 +977,16 @@ class Drive_OccWorld(BEVFormer):
         # C. Extract current BEV features.
         img = img[:, -1, ...]
         img_metas = [each[num_frames-1] for each in img_metas]
+        motion_state = None
         if self.turn_on_plan:
             ref_sample_traj = sample_traj[:, :, 0]
             ref_command = command[:, 0]
             ref_sem_occupancy = None
             ref_bev, ref_pose_pred, _ = self.obtain_ref_bev_with_plan(img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, radar_bev=radar_bev)
         else:
-            ref_bev = self.obtain_ref_bev(img, img_metas, prev_bev, radar_bev=radar_bev)
+            ref_bev, motion_state = self.obtain_ref_bev(
+                img, img_metas, prev_bev, radar_bev=radar_bev,
+                radar_observations=radar_observations, return_motion_state=True)
             ref_pose_pred = None
 
 
@@ -923,7 +1004,7 @@ class Drive_OccWorld(BEVFormer):
 
         # D5. predict future occ in auto-regressive manner
         next_bev_preds, _, next_pose_preds, _ = self.future_pred(prev_bev_list, action_condition_dict, cond_norm_dict, plan_dict,
-                                                                valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ', radar_bev=radar_bev)
+                                                                valid_frames, img_metas, prev_img_metas, num_frames, occ_flow='occ', radar_bev=radar_bev, motion_state=motion_state)
 
         # D6. predict future flow in auto-regressive manner
         if self.turn_on_flow:
@@ -934,14 +1015,18 @@ class Drive_OccWorld(BEVFormer):
         # E. Evaluate
         test_output = {}
         # evaluate occ
-        occ_iou, occ_iou_current, occ_iou_future, occ_iou_future_time_weighting = self.evaluate_occ(next_bev_preds, segmentation, img_metas)
-        test_output.update(hist_for_iou=occ_iou, hist_for_iou_current=occ_iou_current, 
-                           hist_for_iou_future=occ_iou_future, hist_for_iou_future_time_weighting=occ_iou_future_time_weighting)
+        if self.scientific_eval:
+            test_output['occ_records'] = self.evaluate_occ_records(
+                next_bev_preds, segmentation, img_metas)
+        else:
+            occ_iou, occ_iou_current, occ_iou_future, occ_iou_future_time_weighting = self.evaluate_occ(next_bev_preds, segmentation, img_metas)
+            test_output.update(hist_for_iou=occ_iou, hist_for_iou_current=occ_iou_current,
+                               hist_for_iou_future=occ_iou_future, hist_for_iou_future_time_weighting=occ_iou_future_time_weighting)
         # evaluate flow(instance)
         if self.turn_on_flow:
             vpq = self.evaluate_instance(next_bev_preds, next_bev_preds_flow, segmentation, instance)
             test_output.update(vpq=vpq)
-        else:
+        elif not self.scientific_eval:
             test_output.update(vpq=0.1)
         # evluate plan
         if self.turn_on_plan:

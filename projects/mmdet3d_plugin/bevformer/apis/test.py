@@ -136,6 +136,7 @@ def custom_multi_gpu_test(model, data_loader, tmpdir=None, gpu_collect=False, sh
     
     # init predictions
     iou_metric = []
+    occ_records = []
     iou_current_metric = []
     iou_future_metric = []
     iou_future_time_weighting_metric = []
@@ -174,6 +175,9 @@ def custom_multi_gpu_test(model, data_loader, tmpdir=None, gpu_collect=False, sh
 
             result = model(return_loss=False, rescale=True, **data)
 
+            if 'occ_records' in result:
+                occ_records.extend(result['occ_records'])
+
             if 'hist_for_iou' in result.keys():
                 iou_metric.append(result['hist_for_iou'])
             if 'hist_for_iou_current' in result.keys():
@@ -196,6 +200,15 @@ def custom_multi_gpu_test(model, data_loader, tmpdir=None, gpu_collect=False, sh
 
     # collect lists from multi-GPUs
     res = {}
+
+    if 'occ_records' in result:
+        # Preserve sample IDs until after gathering, including padded returns.
+        # An upper bound prevents collect_results_cpu from truncating a unique
+        # sample before ID-based deduplication with a different sampler order.
+        gathered = collect_results_cpu(occ_records, len(dataset) * world_size, tmpdir)
+        if rank == 0:
+            from ...datasets.m3_metrics import aggregate_records
+            res.update(aggregate_records(gathered, expected_samples=len(dataset)))
 
     if 'hist_for_iou' in result.keys():
         iou_metric = [sum(iou_metric)]

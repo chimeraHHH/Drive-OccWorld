@@ -12,6 +12,29 @@ from projects.mmdet3d_plugin.bevformer.losses.semkitti_loss import geo_scal_loss
 from projects.mmdet3d_plugin.bevformer.losses.lovasz_softmax import lovasz_softmax
 
 
+def _downsample_occ_target(target_voxels, output_size=(256, 256, 20)):
+    """Preserve the legacy occupied-voxel mode and ignore-label semantics.
+
+    Empty values in nonempty blocks receive distinct negative labels before
+    taking the mode. In particular, a block with one occupied voxel and seven
+    empty voxels becomes ignored (255), so max pooling is not equivalent.
+    """
+    B, tH, tW, tD = target_voxels.shape
+    H, W, D = output_size
+    ratio = tH // H
+    if ratio != 1:
+        target_voxels = target_voxels.reshape(B, H, ratio, W, ratio, D, ratio).permute(0,1,3,5,2,4,6).reshape(B, H, W, D, ratio**3)
+        empty_mask = target_voxels.sum(-1) == 0
+        target_voxels = target_voxels.to(torch.int64)
+        occ_space = target_voxels[~empty_mask]
+        occ_space[occ_space==0] = -torch.arange(len(occ_space[occ_space==0])).to(occ_space.device) - 1
+        target_voxels[~empty_mask] = occ_space
+        target_voxels = torch.mode(target_voxels, dim=-1)[0]
+        target_voxels[target_voxels<0] = 255
+        target_voxels = target_voxels.long()
+    return target_voxels
+
+
 @HEADS.register_module()
 class WorldHeadV1(WorldHeadBase):
     def __init__(self,
@@ -169,27 +192,19 @@ class WorldHeadV1(WorldHeadBase):
         else:
             return self.forward_head_layers(next_bev_feats) # multi-decoder_layers
 
-    def loss_voxel(self, output_voxels, target_voxels, tag):
+    def loss_voxel(self, output_voxels, target_voxels, tag,
+                   target_voxels_prepared=False):
         B, C, pH, pW, pD = output_voxels.shape
-        tB, tH, tW, tD = target_voxels.shape
 
         H, W, D = 256, 256, 20
+        empty_idx = 0
         # output_voxel align to H,W,D
         if pH != H:
             output_voxels = F.interpolate(output_voxels, size=(H, W, D), mode='trilinear', align_corners=False)
-        # target_voxel align to H,W,D
-        ratio = tH // H
-        if ratio != 1:
-            target_voxels = target_voxels.reshape(B, H, ratio, W, ratio, D, ratio).permute(0,1,3,5,2,4,6).reshape(B, H, W, D, ratio**3)
-            empty_idx = 0
-            empty_mask = target_voxels.sum(-1) == empty_idx    # B,H,W,D
-            target_voxels = target_voxels.to(torch.int64)
-            occ_space = target_voxels[~empty_mask]
-            occ_space[occ_space==0] = -torch.arange(len(occ_space[occ_space==0])).to(occ_space.device) - 1
-            target_voxels[~empty_mask] = occ_space
-            target_voxels = torch.mode(target_voxels, dim=-1)[0]
-            target_voxels[target_voxels<0] = 255
-            target_voxels = target_voxels.long()
+        # loss_occ prepares this shared target once for all decoder layers.
+        # Preserve direct loss_voxel callers that provide full-resolution GT.
+        if not target_voxels_prepared:
+            target_voxels = _downsample_occ_target(target_voxels, (H, W, D))
 
         assert torch.isnan(output_voxels).sum().item() == 0
         assert torch.isnan(target_voxels).sum().item() == 0
@@ -212,8 +227,11 @@ class WorldHeadV1(WorldHeadBase):
             target_voxels =            select_frame*bs,      H,W,D
         """
         loss_dict = {}
+        target_voxels = _downsample_occ_target(target_voxels)
         for index, output_voxel in enumerate(output_voxels):
-            loss_dict.update(self.loss_voxel(output_voxel, target_voxels,  tag='inter_{}'.format(index)))
+            loss_dict.update(self.loss_voxel(
+                output_voxel, target_voxels, tag='inter_{}'.format(index),
+                target_voxels_prepared=True))
             
         return loss_dict
     

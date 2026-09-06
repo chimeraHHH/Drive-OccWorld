@@ -1,0 +1,74 @@
+{
+  "torch": "1.10.1+cu111",
+  "numpy": "1.19.5",
+  "status": "CPU_MODULE_SMOKE_ONLY",
+  "full_camera_forward": false,
+  "detector_class": "Drive_OccWorld",
+  "model_parameters": 76351662,
+  "predict_flow": false,
+  "samples": [
+    {
+      "token": "e93e98b63d3b40209056d129dc53ceee",
+      "valid_returns": 39
+    },
+    {
+      "token": "14d5adfe50bb4445bc3aa5fe607691a8",
+      "valid_returns": 111
+    },
+    {
+      "token": "ae4e0c3aa3f24c91aab599e8b54e9264",
+      "valid_returns": 57
+    },
+    {
+      "token": "8de7ec06e1ac48c689c4d24d6cc64fd7",
+      "valid_returns": 68
+    },
+    {
+      "token": "ba94cb79ebc74614bc2442185cb53c26",
+      "valid_returns": 30
+    },
+    {
+      "token": "4dfab70f0b3f405bbf17f7c534d2dd91",
+      "valid_returns": 63
+    },
+    {
+      "token": "140c678882194ae69e47136c81168b6d",
+      "valid_returns": 43
+    },
+    {
+      "token": "b8002d4effb540c0b1bb70addf423f32",
+      "valid_returns": 83
+    },
+    {
+      "token": "1e19d0a5189b46f4b62aa47508f2983e",
+      "valid_returns": 71
+    },
+    {
+      "token": "b7f4a3b32d654cc2b69c1c260a5f34a0",
+      "valid_returns": 66
+    }
+  ],
+  "selected_lag_range": [
+    0.005040884017944336,
+    0.008998870849609375
+  ],
+  "selected_radial_range": [
+    -0.3550942838191986,
+    0.33772894740104675
+  ],
+  "module_parameters": 164355,
+  "feature_shape": [
+    1,
+    40000,
+    256
+  ],
+  "support_returns": 32,
+  "heldout_returns": 7,
+  "synthetic_feature_loss": 0.1288190633058548,
+  "prior_output_bias_gradient": [
+    -3.8142276025610045e-05,
+    -0.0003969150420743972,
+    0.028306882828474045
+  ],
+  "cpu_module_seconds": 0.7362239649519324
+}
