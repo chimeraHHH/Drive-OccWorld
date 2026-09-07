@@ -528,8 +528,10 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
             example['radar_bev'] = DC(
                 torch.from_numpy(radar_bev), stack=True)
         if example is not None and radar_observations is not None:
+            # Fixed [max_returns, 9] records are already padded by the loader.
+            # MMCV's default pad_dims=2 expects at least three dimensions.
             example['radar_observations'] = DC(
-                torch.from_numpy(radar_observations), stack=True)
+                torch.from_numpy(radar_observations), stack=True, pad_dims=None)
         return example
 
     def _validate_future_metadata_pipeline(self):

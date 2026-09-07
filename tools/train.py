@@ -105,6 +105,8 @@ def main():
     cfg = Config.fromfile(args.config)
     if args.cfg_options is not None:
         cfg.merge_from_dict(args.cfg_options)
+    if cfg.get('m3_h200_requires_resolution', False):
+        raise ValueError('Resolve the H200 protocol with tools/m3_prepare_h200_config.py before training')
     # import modules from string list.
     if cfg.get('custom_imports', None):
         from mmcv.utils import import_modules_from_strings
@@ -142,6 +144,11 @@ def main():
     if cfg.get('close_tf32', False):
         torch.backends.cuda.matmul.allow_tf32 = False
         torch.backends.cudnn.allow_tf32 = False
+    # Defaults changed between the L40S (torch 1.10) and H200 (torch 2.x)
+    # runtimes. An explicit policy keeps arithmetic settings reviewable.
+    if cfg.get('tf32_policy') is not None:
+        torch.backends.cuda.matmul.allow_tf32 = bool(cfg.tf32_policy.matmul)
+        torch.backends.cudnn.allow_tf32 = bool(cfg.tf32_policy.cudnn)
 
     # work_dir is determined in this priority: CLI > segment in file > filename
     if args.work_dir is not None:

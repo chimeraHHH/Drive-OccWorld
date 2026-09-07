@@ -237,7 +237,7 @@ class RadarObservationDatasetAttachmentTest(unittest.TestCase):
         scope = dict(
             copy=__import__('copy'),
             torch=types.SimpleNamespace(from_numpy=lambda value: value),
-            DC=lambda value, stack: (value, stack))
+            DC=lambda value, stack, pad_dims=2: (value, stack, pad_dims))
         executable = ast.Module(body=[method], type_ignores=[])
         exec(compile(ast.fix_missing_locations(executable), str(path), 'exec'), scope)
         calls = []
@@ -257,6 +257,7 @@ class RadarObservationDatasetAttachmentTest(unittest.TestCase):
         self.assertEqual(calls, ['sample'])
         self.assertIs(result['radar_observations'][0], output)
         self.assertTrue(result['radar_observations'][1])
+        self.assertIsNone(result['radar_observations'][2])
 
 
 if __name__ == '__main__':
