@@ -1,0 +1,15 @@
+{
+  "note": "Known setup and DDP compatibility modifications compared with the 1.4.0 source archive; the installation recipe still requires the existing local backup source trees.",
+  "files": [
+    {
+      "path": "setup.py",
+      "source_sha256": "5d3cfddf2ff0670ad8da2ebc29621a24bf42a596665ee13c715d5ec95259a462",
+      "original_sha256": "680874a341fef92e222a9892f557b70428bdcec4041825217023008271019e56"
+    },
+    {
+      "path": "mmcv/parallel/distributed.py",
+      "source_sha256": "ec3f14156c0afe140d01f81570782c87739b68be43947d31bb6f23fe5504365e",
+      "original_sha256": "dd5f433f26b5ec5a3c45e38b12200c93bf6674dffd5419b274f6f02cd5abc8a1"
+    }
+  ]
+}

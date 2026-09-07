@@ -1,0 +1,11 @@
+{
+  "python": "3.10.21",
+  "torch": "2.1.2+cu121",
+  "torch_cuda": "12.1",
+  "mmcv": "1.4.0",
+  "mmdet": "2.14.0",
+  "mmseg": "0.14.1",
+  "mmdet3d": "0.17.1",
+  "mmcv_cuda": "12.4",
+  "mmcv_compiler": "GCC 11.4"
+}

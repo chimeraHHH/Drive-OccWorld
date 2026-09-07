@@ -141,33 +141,78 @@ def arm_finite_loader(loader, microsteps):
     return prefix
 
 
-def finish_loader_workers(loader, prefix):
+class PreflightWorkerCleanupError(RuntimeError):
+    def __init__(self, message, details):
+        super().__init__(message + ': ' + str(details))
+        self.details = details
+
+
+def _shutdown_workers_with_grace(iterator, grace_seconds):
+    # PyTorch 2.1 joins each worker for MP_STATUS_CHECK_INTERVAL (5 seconds),
+    # then terminate()s survivors without joining them again. Large nuScenes
+    # replicas need more time to release Python objects. Only this diagnostic
+    # parent's shutdown call gets a longer bound; restore it even on failure.
+    from torch.utils.data import _utils
+    previous = _utils.MP_STATUS_CHECK_INTERVAL
+    try:
+        _utils.MP_STATUS_CHECK_INTERVAL = grace_seconds
+        iterator._shutdown_workers()
+    finally:
+        _utils.MP_STATUS_CHECK_INTERVAL = previous
+    return previous
+
+
+def finish_loader_workers(loader, prefix, grace_seconds=60.0):
     """Require natural exhaustion, then explicitly join and verify worker exits.
 
     The guarded private attributes describe PyTorch 2.1's actual iterator. They
     let this diagnostic fail on unconsumed tasks or abnormal exits instead of
     relying on a late __del__ after writing PASS.
     """
+    if not math.isfinite(grace_seconds) or not 0 < grace_seconds <= 300:
+        raise ValueError('Worker exit grace must be positive and at most 300 seconds per worker')
+    started = time.perf_counter()
+    details = dict(dataloader_workers_exited_cleanly=False, grace_seconds=grace_seconds,
+                   grace_scope='per worker; PyTorch joins workers sequentially',
+                   post_shutdown_join_seconds=5.0, elapsed_seconds=0.0)
     iterator = getattr(loader, '_iterator', None)
     if iterator is None:
-        raise RuntimeError('Missing persistent-worker iterator at diagnostic completion')
+        raise PreflightWorkerCleanupError('Missing persistent-worker iterator', details)
     counters = dict(dispatched=prefix.dispatched, sent=iterator._send_idx,
                     received=iterator._rcvd_idx, yielded=iterator._num_yielded,
                     outstanding=iterator._tasks_outstanding)
+    details['counters'] = counters
     if (any(counters[key] != prefix.microsteps
             for key in ('dispatched', 'sent', 'received', 'yielded')) or
             counters['outstanding'] != 0):
-        raise RuntimeError('DataLoader did not naturally drain its finite prefix: ' + str(counters))
+        raise PreflightWorkerCleanupError('DataLoader did not naturally drain its finite prefix', details)
+    if hasattr(iterator, '_pin_memory_thread'):
+        raise PreflightWorkerCleanupError('Bounded diagnostic expects the production unpinned loader', details)
     workers = list(iterator._workers)
-    iterator._shutdown_workers()
+    shutdown_error = None
+    try:
+        details['previous_join_interval_seconds'] = _shutdown_workers_with_grace(iterator, grace_seconds)
+    except Exception as exc:
+        shutdown_error = exc
+        details['shutdown_error'] = repr(exc)
+    # Join even when PyTorch took its timeout/terminate fallback: an unknown
+    # exitcode is not a clean exit, and a reaped SIGTERM exit must remain FAIL.
+    for worker in workers:
+        try:
+            worker.join(timeout=5.0)
+        except Exception as exc:
+            details.setdefault('join_errors', []).append(repr(exc))
     exits = [dict(pid=worker.pid, exitcode=worker.exitcode, alive=worker.is_alive())
              for worker in workers]
-    if not exits or any(worker['alive'] or worker['exitcode'] != 0 for worker in exits):
-        raise RuntimeError('DataLoader workers did not exit cleanly: ' + str(exits))
+    details.update(workers=exits, elapsed_seconds=time.perf_counter() - started)
+    if (shutdown_error is not None or details.get('join_errors') or not exits or
+            any(worker['alive'] or worker['exitcode'] != 0 for worker in exits)):
+        raise PreflightWorkerCleanupError('DataLoader workers did not exit cleanly', details) from shutdown_error
     loader._iterator = None
-    return dict(dataloader_workers_exited_cleanly=True, counters=counters, workers=exits,
-                full_loader_length=len(loader), dispatched_microsteps=prefix.microsteps,
-                method='finite sampler prefix, natural exhaustion, explicit verified shutdown')
+    details.update(dataloader_workers_exited_cleanly=True, full_loader_length=len(loader),
+                   dispatched_microsteps=prefix.microsteps,
+                   method='finite prefix, natural exhaustion, bounded graceful shutdown and verified join')
+    return details
 
 
 def register_preflight_hook(torch, report):
@@ -272,6 +317,8 @@ def register_preflight_hook(torch, report):
                 cleanup_error = repr(exc)
                 report['dataloader_workers_exited_cleanly'] = False
                 report['dataloader_cleanup_error'] = cleanup_error
+                if hasattr(exc, 'details'):
+                    report['dataloader_cleanup'] = exc.details
             require_all(cleanup_error is None,
                         'At least one rank failed verified DataLoader cleanup; see rank reports')
             self.finish(runner)

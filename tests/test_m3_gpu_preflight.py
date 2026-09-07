@@ -4,9 +4,11 @@ from functools import partial
 import importlib.util
 import json
 import logging
+import multiprocessing
 from pathlib import Path
 import sys
 import tempfile
+import time
 import types
 import unittest
 from unittest.mock import patch
@@ -119,14 +121,25 @@ class PreflightConfigTest(unittest.TestCase):
                 MODULE.FiniteSamplerPrefix(original, limit)
 
     def test_worker_cleanup_does_not_accept_an_abnormal_exit(self):
-        worker = types.SimpleNamespace(pid=1, exitcode=-6, is_alive=lambda: False)
+        worker = types.SimpleNamespace(pid=1, exitcode=-6, is_alive=lambda: False,
+                                       join=lambda timeout: None)
         iterator = types.SimpleNamespace(
             _send_idx=6, _rcvd_idx=6, _num_yielded=6, _tasks_outstanding=0,
             _workers=[worker], _shutdown_workers=lambda: None)
         loader = types.SimpleNamespace(_iterator=iterator)
         prefix = types.SimpleNamespace(dispatched=6, microsteps=6)
-        with self.assertRaisesRegex(RuntimeError, 'did not exit cleanly'):
-            MODULE.finish_loader_workers(loader, prefix)
+        with patch.object(MODULE, '_shutdown_workers_with_grace',
+                          side_effect=lambda iterator, grace: iterator._shutdown_workers()):
+            with self.assertRaisesRegex(RuntimeError, 'did not exit cleanly'):
+                MODULE.finish_loader_workers(loader, prefix)
+
+
+def delayed_shutdown_worker(index_queue, ready, delay_seconds):
+    """A test-owned worker that needs time to release state after its sentinel."""
+    ready.set()
+    if index_queue.get() is not None:
+        raise RuntimeError('Expected shutdown sentinel')
+    time.sleep(delay_seconds)
 
 
 class WorkerTensorDataset:
@@ -147,6 +160,73 @@ class WorkerTensorDataset:
 
 @unittest.skipIf(torch is None, 'Real PyTorch/MMCV required for CPU worker integration')
 class PreflightWorkerLifecycleTest(unittest.TestCase):
+    def make_delayed_worker_loader(self, delay_seconds):
+        from torch.utils.data.dataloader import _MultiProcessingDataLoaderIter
+        context = multiprocessing.get_context('spawn')
+        queue, ready = context.Queue(), context.Event()
+        worker = context.Process(target=delayed_shutdown_worker,
+                                 args=(queue, ready, delay_seconds))
+        worker.start()
+
+        def reap_owned_worker():
+            if worker.is_alive():
+                worker.terminate()
+            worker.join(timeout=5)
+        self.addCleanup(reap_owned_worker)
+        self.assertTrue(ready.wait(timeout=60), 'Test worker failed to start')
+        iterator = types.SimpleNamespace(
+            _shutdown=False, _workers_done_event=context.Event(),
+            _persistent_workers=True, _workers_status=[True], _workers=[worker],
+            _worker_pids_set=False, _index_queues=[queue],
+            _send_idx=4, _rcvd_idx=4, _num_yielded=4, _tasks_outstanding=0)
+        iterator._mark_worker_as_unavailable = types.MethodType(
+            _MultiProcessingDataLoaderIter._mark_worker_as_unavailable, iterator)
+        iterator._shutdown_workers = types.MethodType(
+            _MultiProcessingDataLoaderIter._shutdown_workers, iterator)
+
+        class Loader:
+            _iterator = iterator
+            def __len__(self):
+                return 11966
+        return Loader(), types.SimpleNamespace(dispatched=4, microsteps=4), worker
+
+    def test_real_torch_shutdown_allows_slow_clean_exit_and_restores_interval(self):
+        from torch.utils.data import _utils
+        loader, prefix, worker = self.make_delayed_worker_loader(0.2)
+        with patch.object(_utils, 'MP_STATUS_CHECK_INTERVAL', 0.02):
+            result = MODULE.finish_loader_workers(loader, prefix, grace_seconds=1.0)
+            self.assertEqual(_utils.MP_STATUS_CHECK_INTERVAL, 0.02)
+        self.assertTrue(result['dataloader_workers_exited_cleanly'])
+        self.assertEqual(worker.exitcode, 0)
+        self.assertGreaterEqual(result['elapsed_seconds'], 0.2)
+        self.assertEqual(result['grace_seconds'], 1.0)
+        self.assertEqual(result['previous_join_interval_seconds'], 0.02)
+
+    def test_real_torch_shutdown_timeout_is_reaped_and_fails(self):
+        from torch.utils.data import _utils
+        loader, prefix, worker = self.make_delayed_worker_loader(1.0)
+        with patch.object(_utils, 'MP_STATUS_CHECK_INTERVAL', 0.15):
+            with self.assertRaises(MODULE.PreflightWorkerCleanupError) as failure:
+                MODULE.finish_loader_workers(loader, prefix, grace_seconds=0.02)
+            self.assertEqual(_utils.MP_STATUS_CHECK_INTERVAL, 0.15)
+        details = failure.exception.details
+        self.assertFalse(details['dataloader_workers_exited_cleanly'])
+        self.assertEqual(details['grace_seconds'], 0.02)
+        self.assertFalse(worker.is_alive())
+        self.assertIsNotNone(worker.exitcode)
+        self.assertNotEqual(worker.exitcode, 0)
+        self.assertEqual(details['workers'][0]['exitcode'], worker.exitcode)
+
+    def test_shutdown_exception_does_not_leak_the_temporary_interval(self):
+        from torch.utils.data import _utils
+        previous = _utils.MP_STATUS_CHECK_INTERVAL
+        def fail_shutdown():
+            raise RuntimeError('injected shutdown failure')
+        iterator = types.SimpleNamespace(_shutdown_workers=fail_shutdown)
+        with self.assertRaisesRegex(RuntimeError, 'injected shutdown failure'):
+            MODULE._shutdown_workers_with_grace(iterator, 60.0)
+        self.assertEqual(_utils.MP_STATUS_CHECK_INTERVAL, previous)
+
     def test_real_mmcv_runner_drains_spawn_workers_at_complete_update(self):
         directory = ROOT / 'projects/mmdet3d_plugin/datasets/samplers'
         package_name = '_preflight_worker_sampler'

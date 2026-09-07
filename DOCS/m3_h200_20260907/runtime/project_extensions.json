@@ -1,0 +1,97 @@
+{
+  "cpu_plugin_import": "passed",
+  "cuda_initialized": false,
+  "torch_compiled_architectures": "sm_50 sm_60 sm_70 sm_75 sm_80 sm_86 sm_90",
+  "libraries": {
+    "mmcv": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmcv/_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: _ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\nELF file    2: _ext.cpython-310-x86_64-linux-gnu.2.sm_90.cubin\nELF file    3: _ext.cpython-310-x86_64-linux-gnu.3.sm_90.cubin\nELF file    4: _ext.cpython-310-x86_64-linux-gnu.4.sm_90.cubin\nELF file    5: _ext.cpython-310-x86_64-linux-gnu.5.sm_90.cubin\nELF file    6: _ext.cpython-310-x86_64-linux-gnu.6.sm_90.cubin\nELF file    7: _ext.cpython-310-x86_64-linux-gnu.7.sm_90.cubin\nELF file    8: _ext.cpython-310-x86_64-linux-gnu.8.sm_90.cubin\nELF file    9: _ext.cpython-310-x86_64-linux-gnu.9.sm_90.cubin\nELF file   10: _ext.cpython-310-x86_64-linux-gnu.10.sm_90.cubin\nELF file   11: _ext.cpython-310-x86_64-linux-gnu.11.sm_90.cubin\nELF file   12: _ext.cpython-310-x86_64-linux-gnu.12.sm_90.cubin\nELF file   13: _ext.cpython-310-x86_64-linux-gnu.13.sm_90.cubin\nELF file   14: _ext.cpython-310-x86_64-linux-gnu.14.sm_90.cubin\nELF file   15: _ext.cpython-310-x86_64-linux-gnu.15.sm_90.cubin\nELF file   16: _ext.cpython-310-x86_64-linux-gnu.16.sm_90.cubin\nELF file   17: _ext.cpython-310-x86_64-linux-gnu.17.sm_90.cubin\nELF file   18: _ext.cpython-310-x86_64-linux-gnu.18.sm_90.cubin\nELF file   19: _ext.cpython-310-x86_64-linux-gnu.19.sm_90.cubin\nELF file   20: _ext.cpython-310-x86_64-linux-gnu.20.sm_90.cubin\nELF file   21: _ext.cpython-310-x86_64-linux-gnu.21.sm_90.cubin\nELF file   22: _ext.cpython-310-x86_64-linux-gnu.22.sm_90.cubin\nELF file   23: _ext.cpython-310-x86_64-linux-gnu.23.sm_90.cubin\nELF file   24: _ext.cpython-310-x86_64-linux-gnu.24.sm_90.cubin\nELF file   25: _ext.cpython-310-x86_64-linux-gnu.25.sm_90.cubin\nELF file   26: _ext.cpython-310-x86_64-linux-gnu.26.sm_90.cubin\nELF file   27: _ext.cpython-310-x86_64-linux-gnu.27.sm_90.cubin\nELF file   28: _ext.cpython-310-x86_64-linux-gnu.28.sm_90.cubin\nELF file   29: _ext.cpython-310-x86_64-linux-gnu.29.sm_90.cubin\nELF file   30: _ext.cpython-310-x86_64-linux-gnu.30.sm_90.cubin\nELF file   31: _ext.cpython-310-x86_64-linux-gnu.31.sm_90.cubin\nELF file   32: _ext.cpython-310-x86_64-linux-gnu.32.sm_90.cubin\nELF file   33: _ext.cpython-310-x86_64-linux-gnu.33.sm_90.cubin\nELF file   34: _ext.cpython-310-x86_64-linux-gnu.34.sm_90.cubin\nELF file   35: _ext.cpython-310-x86_64-linux-gnu.35.sm_90.cubin\nELF file   36: _ext.cpython-310-x86_64-linux-gnu.36.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "DCNv3": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/DCNv3.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: DCNv3.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "dvxlr": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/cache/torch_extensions/dvxlr/dvxlr.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: dvxlr.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "dvxlr_v2": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/cache/torch_extensions/dvxlr_v2/dvxlr_v2.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: dvxlr_v2.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/iou3d/iou3d_cuda.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/iou3d/iou3d_cuda.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: iou3d_cuda.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/spconv/sparse_conv_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/spconv/sparse_conv_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: sparse_conv_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\nELF file    2: sparse_conv_ext.cpython-310-x86_64-linux-gnu.2.sm_90.cubin\nELF file    3: sparse_conv_ext.cpython-310-x86_64-linux-gnu.3.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/voxel/voxel_layer.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/voxel/voxel_layer.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: voxel_layer.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\nELF file    2: voxel_layer.cpython-310-x86_64-linux-gnu.2.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/paconv/assign_score_withk_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/paconv/assign_score_withk_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: assign_score_withk_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/gather_points/gather_points_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/gather_points/gather_points_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: gather_points_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/knn/knn_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/knn/knn_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: knn_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/group_points/group_points_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/group_points/group_points_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: group_points_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/furthest_point_sample/furthest_point_sample_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/furthest_point_sample/furthest_point_sample_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: furthest_point_sample_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/roiaware_pool3d/roiaware_pool3d_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/roiaware_pool3d/roiaware_pool3d_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: roiaware_pool3d_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\nELF file    2: roiaware_pool3d_ext.cpython-310-x86_64-linux-gnu.2.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/interpolate/interpolate_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/interpolate/interpolate_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: interpolate_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\nELF file    2: interpolate_ext.cpython-310-x86_64-linux-gnu.2.sm_90.cubin\n",
+      "stderr": ""
+    },
+    "mmdet3d/ops/ball_query/ball_query_ext.cpython-310-x86_64-linux-gnu.so": {
+      "path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/lib/python3.10/site-packages/mmdet3d/ops/ball_query/ball_query_ext.cpython-310-x86_64-linux-gnu.so",
+      "returncode": 0,
+      "elf_listing": "ELF file    1: ball_query_ext.cpython-310-x86_64-linux-gnu.1.sm_90.cubin\n",
+      "stderr": ""
+    }
+  }
+}
