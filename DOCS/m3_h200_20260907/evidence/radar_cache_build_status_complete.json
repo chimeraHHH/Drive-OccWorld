@@ -1,0 +1,56 @@
+{
+  "status": "COMPLETE",
+  "tokens_processed": 34149,
+  "tokens_required": 34149,
+  "tokens_selected": 34149,
+  "splits": [
+    "train",
+    "val"
+  ],
+  "workers": 8,
+  "limit": null,
+  "manifest": {
+    "bev_h": 200,
+    "bev_w": 200,
+    "columns": [
+      "x",
+      "y",
+      "z",
+      "rcs",
+      "ux",
+      "uy",
+      "radial_velocity",
+      "lag_seconds",
+      "valid"
+    ],
+    "data_root": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/datasets/nuscenes_driveocc",
+    "data_version": "v1.0-trainval",
+    "direction_tolerance": 0.001,
+    "max_returns": 4096,
+    "max_time_lag": 0.15,
+    "min_distance": 1.0,
+    "min_time_lag": 0.0,
+    "nsweeps": 1,
+    "point_cloud_range": [
+      -51.2,
+      -51.2,
+      -5.0,
+      51.2,
+      51.2,
+      3.0
+    ],
+    "radar_channels": [
+      "RADAR_FRONT",
+      "RADAR_FRONT_LEFT",
+      "RADAR_FRONT_RIGHT",
+      "RADAR_BACK_LEFT",
+      "RADAR_BACK_RIGHT"
+    ],
+    "radial_source": "projected_nuscenes_compensated_velocity",
+    "schema": "radarflowocc_m3_per_return",
+    "source": "NuScenesRadarBEV._load_channel:v1",
+    "subsample_seed": 0,
+    "subsampling": "token_blake2b_seeded_randomstate_return_indices_v1",
+    "version": 1
+  }
+}

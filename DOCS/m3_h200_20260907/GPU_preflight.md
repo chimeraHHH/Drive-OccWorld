@@ -51,6 +51,13 @@ the diagnostic config copy, input protocol, and GPU UUID inventory are retained.
 The cleanup report verifies dispatched/sent/received/yielded task counts all equal
 `2N`, no outstanding task, and zero exit codes from all workers. Cleanup failures
 prevent PASS; they are not silenced or left to an interpreter-exit destructor.
+During diagnostic cleanup, PyTorch 2.1's parent-side worker join interval is
+temporarily increased from 5 seconds to 60 seconds **per worker**, then restored
+even if shutdown raises. This allows large dataset replicas time to release their
+objects. A subsequent bounded join (at most 5 seconds per worker) reaps any
+processes; timeout/termination or any nonzero exit code still means FAIL. The
+report retains `grace_seconds`, `elapsed_seconds`, counters and worker exit codes,
+including on failure. The formal training process is not modified by this setting.
 
 This is a full-model compatibility and update test. It is neither an accuracy
 result nor a throughput benchmark: startup and synchronization checks affect the
@@ -65,3 +72,9 @@ The test suite includes a real CPU MMCV runner using the production sampler and
 accumulation/LR hooks, two spawn workers with tensor IPC, and 10 complete updates.
 It checks that the full 11966-microstep epoch length and 24-epoch schedule remain
 unchanged while only 20 microsteps are dispatched and all workers exit normally.
+Additional tests call PyTorch's actual shutdown implementation with test-owned
+spawn workers: a slow normal exit succeeds within its grace period, a timeout is
+reaped and rejected, and the temporary join interval is restored after exceptions.
+The 11 targeted tests passed on the H200 CPU runtime. A real large-dataset worker
+teardown check and the final GPU/DDP preflight are separate required validations;
+the scaled worker tests alone do not establish that the large dataset exits cleanly.

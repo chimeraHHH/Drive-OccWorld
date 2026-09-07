@@ -1,0 +1,39 @@
+{
+  "training_source_commit": "5f1d0f0eeb8f28acd1ac741c565fdebb7f8e2316",
+  "host": "WHUServer-H200",
+  "start_utc": "2026-09-07T03:37:50+00:00",
+  "status": "TRAINING_CONFIRMED",
+  "supervisor_pid": 595900,
+  "torchrun_pid": 595903,
+  "rank_pids": [
+    595921,
+    595922
+  ],
+  "config": "/home/wangning/Workspace/RadarFlowOcc-m3/configs_runtime/m3_h200_equivalent.py",
+  "config_sha256": "24c198be8d117a1202440971ff777d6adecf3065e86b75da2c27a209f5c7e572",
+  "preflight": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/diagnostics/gpu_preflight_cached_20260907_1133/preflight_summary.json",
+  "work_dir": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/work_dirs/gmo_radar_m3_h200720_w2_2g_b1_acc2_seed0_fcos3d",
+  "stdout_log": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/diagnostics/formal_training_20260907.log",
+  "gpu_uuids": [
+    "GPU-74b9b73f-c405-55bc-bf76-f8aa85d1e7fe",
+    "GPU-000b6236-3632-a001-9667-1f02cbb61c8b"
+  ],
+  "effective_global_batch": 4,
+  "epochs": 24,
+  "optimizer_updates_per_epoch": 5983,
+  "initialization": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/checkpoints/r101_dcn_fcos3d_pretrain_l40s_reference.pth",
+  "runner_log": "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/work_dirs/gmo_radar_m3_h200720_w2_2g_b1_acc2_seed0_fcos3d/20260907_033823.log",
+  "runner_initialized_utc": "2026-09-07T03:39:07+00:00",
+  "first_training_log": {
+    "utc": "2026-09-07T03:41:25.943+00:00",
+    "epoch": 1,
+    "microsteps": 20,
+    "optimizer_updates": 10,
+    "loss": 41.2805,
+    "grad_norm": 12.6535,
+    "m3_doppler_nll": 0.123,
+    "lr": 3.453e-05,
+    "finite": true,
+    "timing_scope": "Includes cold startup; not a full-run ETA benchmark"
+  }
+}
