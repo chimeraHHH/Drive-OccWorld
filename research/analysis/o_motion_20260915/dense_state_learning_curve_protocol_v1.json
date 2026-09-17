@@ -1,0 +1,91 @@
+{
+  "schema": "dense-state-learning-curve-v1",
+  "status": "FROZEN",
+  "seed": 11,
+  "selected_ordinals": [
+    396,
+    445,
+    60,
+    115
+  ],
+  "updates_per_arm": 512,
+  "milestones": [
+    32,
+    128,
+    512
+  ],
+  "lr": 0.0003,
+  "physical_weight": 0.1,
+  "arms": {
+    "P": "0.1 physical only; score transport; training skips unused render",
+    "J": "occupancy+0.1 physical, transport",
+    "D": "occupancy+0.1 physical, identity readout"
+  },
+  "trainable": [
+    "dynamics",
+    "content_increment",
+    "velocity"
+  ],
+  "frozen": [
+    "encoder",
+    "decoder"
+  ],
+  "initialization": "same authenticated shared current codec from v2; independent new AdamW, no resume",
+  "schedule": "constant lr, 4 fixed samples in original selected order, 128 cycles, no sample replacement",
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "grad_clip_norm": 10
+  },
+  "resources": {
+    "max_seconds": 2400,
+    "max_allocated_gib": 24
+  },
+  "prior_complete_sha256": "02d38934a434eaddccb7b8f95577d6f15b2bf130a1c395bcac5940abb5ec9595",
+  "shared_codec_sha256": "591d7d695f3dc3ea25853ed95388d688fd59d8e60984a7c5ffc78934bbe95115",
+  "sources_sha256": {
+    "dense_task_state_v1.py": "5081d2be86c94ad533ed414002e761a4fa8edd142841d2ee67bb147acc3e9550",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "dense_task_state_v2.py": "830b646e98d2a6f8ca0c1da2436f6334bfe206a0682ec55ff1b7099d39a4521d",
+    "dense_state_learning_curve_v1.py": "ecaf219770a8bf2cf726065796c3818e99305baf7e5aa4c2a909d742416bcf00"
+  },
+  "runtime_source_sha256": {
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/bevformer.py": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/radar_bev_encoder.py": "326592d9fb94bd37bd957855bc332863dd552a32a814e67915514cda2905df5f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/radar_bev.py": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_transformer.py": "384f283c7338fb5e2c212011f3fc56982b150c54b0f39c602120f4139535f740",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/conditionalnorm.py": "31549af09e3aa73d172af854299cd4ada20ceff69db7ee57dbe0f1f7b23ed76d",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/semkitti_loss.py": "e6a4b9accef1f47cf031f84e18fac925d2764b4105b8010486c8229e589abaa4",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/lovasz_softmax.py": "046a43d610d34cdd6d4b5f791aa5df0723e9cae3cbff4e34de086574b62cf8be"
+  },
+  "cache_index_sha256": {
+    "train": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1"
+  },
+  "labels": {
+    "manifest_sha256": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe",
+    "complete_sha256": "3d14a03cd61761a1ebc26313463dbff06854907c19c49057667a0ffd257e05bd"
+  },
+  "measurement": "0/32/128/512 continuous checkpoints, full fine GT occupancy; same original object population physical EPE; fixed-model zero/reverse address; per-sample gradient norm/cos and actual update norms",
+  "claim_boundary": "Train4 learnability only. P-J changes gradients to content as well as motion; not pure velocity-gradient intervention. Optimizer step count and lr match, update magnitudes and FLOPs need not match. D is identity readout not strongest generic future-latent baseline. No dev/held-out or O comparison.",
+  "interpretation": {
+    "P_fits_J_does_not": "joint objective impedes fitting under this protocol; gradient direction/step scale/content effects require separate evidence",
+    "all_fit": "32 updates were insufficient; proceed to larger-data question with strong controls",
+    "none_fit": "audit input representation, target/parameterization and optimization before scaling; not proof of unidentifiability"
+  },
+  "time_contract": "Fixed nominal horizons .5/1/1.5/2 s as input; sparse targets have actual dataset timestamps. Record per-sample offsets; no exact-time motion-accuracy claim.",
+  "input_contract": "Only frozen observed BEV token tensor; GT enters loss/metrics only; no official external baseline training"
+}

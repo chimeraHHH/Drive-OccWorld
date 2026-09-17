@@ -1557,6 +1557,18 @@
       "sha256": "027318e5eb2fbdc956f598f31e6deb07105c6b4aeb6c83540ec969e7b6f30cda"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_protocol_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_protocol_v1.json",
+      "bytes": 5814,
+      "sha256": "51d69b8b73543c81c0c011ec6c98ce87eae2d0c0141733776f228a1f38530679"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_v1.py",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_v1.py",
+      "bytes": 16745,
+      "sha256": "ecaf219770a8bf2cf726065796c3818e99305baf7e5aa4c2a909d742416bcf00"
+    },
+    {
       "source": "analysis/o_motion_20260915/dense_task_state_fit_evidence_v2.json",
       "destination": "research/analysis/o_motion_20260915/dense_task_state_fit_evidence_v2.json",
       "bytes": 12597,
@@ -2893,6 +2905,12 @@
       "destination": "research/analysis/o_motion_20260915/research_notes/delta_interface_review_20260917.md",
       "bytes": 1713,
       "sha256": "3bcfb747bfd1d36be6359c295c56b6a74cb4611e97a468243d41e93cae292ccf"
+    },
+    {
+      "source": "analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md",
+      "destination": "research/analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md",
+      "bytes": 2404,
+      "sha256": "10c7c3f2232979b069240e1b8546dc2c897c0dc6ec35fba9503ca21c120c32b1"
     },
     {
       "source": "analysis/o_motion_20260915/research_notes/fixed_D_coverage_complementarity_feasibility_v1.md",
