@@ -1,0 +1,232 @@
+{
+  "status": "PASS_COMPLETED_RECORD_AGGREGATION_AUDIT",
+  "arm": "J",
+  "actual_updates": 2048,
+  "train_samples": 512,
+  "development_samples": 200,
+  "development_scenes": 100,
+  "evaluation_complete_sha256": "7ba5f418651350bd6ed24139826e56b481ba5075747f5fc4f68019b0b0bbb3a9",
+  "training_complete_sha256": "71e4f775ee732aadc748082d3cfe7afaeb15c2adb2c3369c54f1260477739dbc",
+  "source_sha256": "b14cd01bd9be2d3b4e91da03e17b96ced2ea6e0e111ef4d5756a66d4583dd8f0",
+  "verified_text_files_sha256": {
+    "J_train/protocol.json": "55b4a8891d3e3a4652c29505d7492418e691429085b515eeee693057465403ed",
+    "J_train/manifest.json": "db13c01e6e8211d98b7727399c7a0a87797c3d9e30e969087ac24cd1c4ed642e",
+    "J_train/samples.jsonl": "95ad7e4c4c1078e68d0c75f6f030cb02f8864cbc96dc4db1c1f1226bda2b62e5",
+    "J_train/sample_order.jsonl": "4bb218f505913d89416cb112aa8dbeba62e838858bd7984d8bd642d10cdff6f4",
+    "J_train/training.jsonl": "76e939ff3e806f06fe7b8fea559e2e2a116405b510a3341c9ee7ae29e3cfb368",
+    "J_evaluate/protocol.json": "36f1f800b97088d6fbd61c032755f8c0b935833a98844f6cb8a00ac5ceb02faa",
+    "J_evaluate/manifest.json": "5e6994c77a8eb7e16eea23398e8ea3163f1853d3c22b7c647806b68e14d46d25",
+    "J_evaluate/records.jsonl": "a6e08d6561259ac0e2ecaba9d6ccea25348ffa33ebb494f08c721fd87a2e6f85",
+    "J_evaluate/summary.json": "b4094d2e1d65440bddd706a82df5273781b018cb884ea53fddb3e06b7d2531c6"
+  },
+  "original_O_metrics_all_exact": true,
+  "original_GT_domains_exact": true,
+  "update_orders_exact": true,
+  "classification_and_physical_scalars_checked": 796,
+  "metrics": {
+    "J": {
+      "current_GMO_percent": 14.290996288035718,
+      "future_GMO_percent": 9.029113871325126,
+      "horizon_GMO_percent": [
+        14.290996288035718,
+        11.350022862889677,
+        9.353282676451201,
+        8.11195350002746,
+        7.301196445932175
+      ],
+      "future_FP": 22649491,
+      "future_FN": 4111000,
+      "future_macro_moving_recall_percent": 26.723749561832822,
+      "future_macro_stationary_recall_percent": 46.608541310023334,
+      "future_pooled_moving_recall_percent": 27.28814379045959,
+      "future_pooled_stationary_recall_percent": 46.59646823811426,
+      "arrival_IoU_percent": 3.01224565268624,
+      "vacating_IoU_percent": 7.721650371567529,
+      "own_current_persistence": {
+        "future_GMO_percent": 9.599875785520094,
+        "horizon_GMO_percent": [
+          11.179543583930073,
+          9.684389366014234,
+          8.971366170595724,
+          8.56420402154035
+        ],
+        "future_FP": 15065998,
+        "future_FN": 4645663,
+        "forecast_minus_persistence_GMO_pp": -0.5707619141949678,
+        "forecast_minus_persistence_scene95CI_pp": [
+          -0.8866121851299817,
+          -0.24613779977709446
+        ],
+        "derivation": "Exact marginal of saved GT/prediction joint t0-future transitions; all voxels valid at both endpoints, both native marginals rechecked",
+        "zero_displacement_interpretation": "T fixed-material zero transport gives current persistence; this identity does not apply to evolving J/D content"
+      }
+    },
+    "O": {
+      "current_GMO_percent": 15.919135166218117,
+      "future_GMO_percent": 14.663996820993908,
+      "horizon_GMO_percent": [
+        15.919135166218117,
+        15.757836297017255,
+        15.131982961502526,
+        14.295167528202807,
+        13.471000497253046
+      ],
+      "future_FP": 13647997,
+      "future_FN": 3732899,
+      "future_macro_moving_recall_percent": 43.45212184451138,
+      "future_macro_stationary_recall_percent": 47.42531840759605,
+      "future_pooled_moving_recall_percent": 44.078172222147906,
+      "future_pooled_stationary_recall_percent": 47.390651218537755,
+      "arrival_IoU_percent": 8.123418932735992,
+      "vacating_IoU_percent": 9.981808766477277,
+      "own_current_persistence": {
+        "future_GMO_percent": 10.598536763751664,
+        "horizon_GMO_percent": [
+          12.4159497481417,
+          10.734508870106716,
+          9.85072993101423,
+          9.392958505744014
+        ],
+        "future_FP": 17568872,
+        "future_FN": 4163381,
+        "forecast_minus_persistence_GMO_pp": 4.065460057242245,
+        "forecast_minus_persistence_scene95CI_pp": [
+          3.339806199041039,
+          4.8707928254315345
+        ],
+        "derivation": "Exact marginal of saved GT/prediction joint t0-future transitions; all voxels valid at both endpoints, both native marginals rechecked",
+        "zero_displacement_interpretation": "T fixed-material zero transport gives current persistence; this identity does not apply to evolving J/D content"
+      }
+    }
+  },
+  "difference_vs_O": {
+    "GMO": {
+      "delta_pp": -5.634882949668782,
+      "scene_bootstrap_95CI_pp": [
+        -6.190764431169619,
+        -5.092341583176271
+      ]
+    },
+    "moving": {
+      "delta_pp": -16.72837228267856,
+      "scene_bootstrap_95CI_pp": [
+        -20.217705994368387,
+        -12.999607690484762
+      ]
+    },
+    "stationary": {
+      "delta_pp": -0.816777097572718,
+      "scene_bootstrap_95CI_pp": [
+        -2.969827080476569,
+        1.2873186795239384
+      ]
+    }
+  },
+  "physical": [
+    {
+      "horizon_seconds": 0.5,
+      "groups": {
+        "stationary": {
+          "objects": 2080,
+          "points": 386895,
+          "epe": 0.16297319174361155,
+          "zero_epe": 0.03486981059080211
+        },
+        "ambiguous": {
+          "objects": 712,
+          "points": 117367,
+          "epe": 0.19848326532125773,
+          "zero_epe": 0.12928608039276068
+        },
+        "moving": {
+          "objects": 1397,
+          "points": 148448,
+          "epe": 1.3490044071364367,
+          "zero_epe": 1.845983353468504
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "groups": {
+        "stationary": {
+          "objects": 2101,
+          "points": 390599,
+          "epe": 0.2771726419414684,
+          "zero_epe": 0.06585482011191049
+        },
+        "ambiguous": {
+          "objects": 655,
+          "points": 112081,
+          "epe": 0.34030312867229906,
+          "zero_epe": 0.23701052437161238
+        },
+        "moving": {
+          "objects": 1320,
+          "points": 140000,
+          "epe": 2.6156898939878497,
+          "zero_epe": 3.7489588087861994
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "groups": {
+        "stationary": {
+          "objects": 2124,
+          "points": 397689,
+          "epe": 0.3702523708098276,
+          "zero_epe": 0.1004113706679421
+        },
+        "ambiguous": {
+          "objects": 567,
+          "points": 99083,
+          "epe": 0.4704079135201283,
+          "zero_epe": 0.32895471925833314
+        },
+        "moving": {
+          "objects": 1269,
+          "points": 136093,
+          "epe": 3.906159320132626,
+          "zero_epe": 5.638005289142498
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "groups": {
+        "stationary": {
+          "objects": 2136,
+          "points": 405387,
+          "epe": 0.44949283875624796,
+          "zero_epe": 0.13307924050553316
+        },
+        "ambiguous": {
+          "objects": 487,
+          "points": 83899,
+          "epe": 0.6283329281087544,
+          "zero_epe": 0.43950849847166407
+        },
+        "moving": {
+          "objects": 1226,
+          "points": 132148,
+          "epe": 5.205798278392904,
+          "zero_epe": 7.52165143673511
+        }
+      }
+    }
+  ],
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 11,
+    "unit": "scene",
+    "sampling": "multinomial scene counts; pooled counts before ratios",
+    "scope": "Exposed dev200 sampling variation; not training-seed uncertainty"
+  },
+  "limitations": [
+    "No independent rerun of raw predictions or checkpoint loading in this CPU audit",
+    "Physical EPE is XYZ rigid-box proxy at original source points, not O physical EPE",
+    "Not full5119 or independent confirmation",
+    "Only T/J/D have matched training; original O budget/input privileges differ"
+  ]
+}

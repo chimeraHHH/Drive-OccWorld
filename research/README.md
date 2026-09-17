@@ -12,7 +12,7 @@
 
 train512 的共同 current codec 已完成 2,048 更新，512 样本当前 IoU 16.5057%，逐样本混淆矩阵独立复算一致；这不是未来 O 对比结果。[扩大数据的实验记录](analysis/o_motion_20260915/dense_material512_准备与启动记录.md)固定了 T/J/D 各 2,048 更新和原 dev200 共同评价，采用服务器顺序运行。完整非零 T/J/D 计算图已通过严格确定性前反向检查。
 
-前一轮[固定材料结果](analysis/o_motion_20260915/dense_material_learning_curve_v1_结果与决策.md)中，T/J 的 train4 moving 2s EPE 为 1.116/2.204m，IoU 为 21.281%/20.802%；同种子 J 此前为 22.093%，因此不据此宣称小幅 IoU 优越。扩大数据后的 T 已得到上述负结果，J/D 泛化结果仍待评估，目标尚未达到。
+前一轮[固定材料结果](analysis/o_motion_20260915/dense_material_learning_curve_v1_结果与决策.md)中，T/J 的 train4 moving 2s EPE 为 1.116/2.204m，IoU 为 21.281%/20.802%；同种子 J 此前为 22.093%，因此不据此宣称小幅 IoU 优越。扩大数据后的 T 已得到上述负结果，J 的 dev200 结果同样失败，D 仍在执行，目标尚未达到。
 
 
 | 证据 | 结果与边界 |
@@ -37,7 +37,11 @@ train512 的共同 current codec 已完成 2,048 更新，512 样本当前 IoU 1
 
 这些 EPE 使用 GT 定义的虚拟材料点评价固定的输入侧运动场，不能称为 O 的运动读出，也不构成 held-out 泛化或新占据收益。两种质量筛选并不等价；完整报告同时保留不筛选比较。当前 train16/dev200 已反复用于开发，必须另行锁定独立确认场景。
 
+固定 T 的[最终权重训练集诊断](analysis/o_motion_20260915/material512_train_fit_诊断设计.md)已通过真实两样本 preflight（零更新，468 个分类标量独立核验），完整 train512 评价已独立启动，用于区分训练拟合问题与开发集表现；尚无完整拟合结果。J 已完成 2,048 更新及 dev200 评价，独立复算 future GMO 9.0291%，仍低于 O 14.6640%；moving 2s XYZ EPE 5.2058m，也高于 CRN-CV 3.4093m。D 已按服务器顺序开始训练。少帧路线补充了“同 H 的 Doppler 增益是否随历史缩短而增加”的机制对照；不提前声称等性能或节省计算。
+
 ## 从这里阅读
+
+- [J 的真实 dev200 结果与决策](analysis/o_motion_20260915/dense_material512_J_结果与研究决策.md)；[独立计数审计](analysis/o_motion_20260915/dense_material512_J_evidence_v1.json)；[T/J 输入及当前输出精确一致](analysis/o_motion_20260915/dense_material512_T_J_boundary_evidence_v1.json)。
 
 - [T 的真实 dev200 结果与决策](analysis/o_motion_20260915/dense_material512_T_结果与研究决策.md)；[独立计数/persistence 审计](analysis/o_motion_20260915/dense_material512_T_evidence_v1.json)；[同源 XYZ CRN-CV 对照](analysis/o_motion_20260915/dense_material512_T_physical_reference_v1.json)。
 - [JEPA-WMs 预测状态与读出审查](analysis/o_motion_20260915/research_notes/jepa_wms_predictive_state_audit_20260917.md)；[四文件固定源码身份](analysis/o_motion_20260915/jepa_wms_source_identity_v1.json)。只读论文/源码，没有训练外部模型；机器人 planning 结论不能直接迁移为本项目收益。

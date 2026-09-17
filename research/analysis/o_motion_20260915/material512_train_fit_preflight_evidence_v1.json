@@ -1,0 +1,13 @@
+{
+  "status": "VERIFIED_REAL_TWO_TRAIN_ANCHOR_PREFLIGHT",
+  "anchors": 2,
+  "scenes": 1,
+  "optimizer_updates": 0,
+  "classification_scalars_checked": 468,
+  "complete_sha256": "f6a4dabb8f3938ddd3a223143ee8d20bcdb947f56fc65c1c7633189b8452df54",
+  "source_sha256": "29523d72be3c8f9de66aed5b4fc032d1414520d848ac26d3f1e06cfa743a9ca9",
+  "protocol_sha256": "39dc766ca0b4a693f135c44b05f7b804de682860ece8d18c37dc5166473eb38c",
+  "final_parameter_digest": "67047496fd52a7e2335507e491fe5279e08aa12e3565727fa28fd3ee9e89da36",
+  "peak_allocated_gib": 0.6997261047363281,
+  "caveat": "Execution check only, not full512 training-fit results; full evaluation launched separately."
+}

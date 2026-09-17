@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED_T_J_IDENTICAL_INPUT_AND_CURRENT_OUTPUT_BOUNDARY",
+  "anchors": 200,
+  "scenes": 100,
+  "initial_parameters_sha256": "34e90d7be81c1ac7a57a8c3f82a83fac5971531a5eaa5c603825f8d3f63d4514",
+  "sample_orders_sha256": "e47327ffc56ed196d1fde628f0b3841031f59553210c93f06636ae87fdbabba2",
+  "exact_current_prediction_sha256_pairs": 200,
+  "J_training_complete_sha256": "71e4f775ee732aadc748082d3cfe7afaeb15c2adb2c3369c54f1260477739dbc",
+  "J_evaluation_complete_sha256": "7ba5f418651350bd6ed24139826e56b481ba5075747f5fc4f68019b0b0bbb3a9",
+  "caveat": "Matching inputs, initial parameters, frozen codec, sample order and current outputs; future models trained separately with distinct rendering mechanisms."
+}
