@@ -1,0 +1,100 @@
+{
+  "schema": "shared-current-codec512-v1",
+  "status": "FROZEN",
+  "training": {
+    "seed": 11,
+    "samples": 512,
+    "epochs": 4,
+    "updates": 2048,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "grad_clip_norm": 10.0,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "order": "single np.RandomState(11), four sequential permutation(512) draws",
+    "target_slice": [
+      0,
+      2,
+      3
+    ],
+    "lru_max_samples": 8
+  },
+  "model": {
+    "shape_xyz": [
+      200,
+      200,
+      16
+    ],
+    "extent_xyz": [
+      -51.2,
+      -51.2,
+      -5.0,
+      51.2,
+      51.2,
+      3.0
+    ],
+    "class_weights": [
+      1.0,
+      5.0
+    ],
+    "frozen_modules": [
+      "dynamics",
+      "content_increment",
+      "velocity"
+    ],
+    "trainable_modules": [
+      "encoder",
+      "decoder"
+    ]
+  },
+  "numerical_policy": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": false,
+    "cudnn_benchmark": false,
+    "deterministic_algorithms": true,
+    "cudnn_deterministic": true,
+    "loss_device": "cpu",
+    "downsample_device": "cpu",
+    "cublas_workspace_config": ":4096:8"
+  },
+  "resources": {
+    "max_seconds": 3600,
+    "max_allocated_gib": 24
+  },
+  "sources_sha256": {
+    "dense_task_state_v1.py": "5081d2be86c94ad533ed414002e761a4fa8edd142841d2ee67bb147acc3e9550",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "dense_task_state_v2.py": "830b646e98d2a6f8ca0c1da2436f6334bfe206a0682ec55ff1b7099d39a4521d",
+    "train_shared_current_codec512_v1.py": "be270f20e9d4200cfbdffc7cdc72f3e97d4eedba5818f4b3b64b75bb3396ad9b"
+  },
+  "runtime_source_sha256": {
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/bevformer.py": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/radar_bev_encoder.py": "326592d9fb94bd37bd957855bc332863dd552a32a814e67915514cda2905df5f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/radar_bev.py": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_transformer.py": "384f283c7338fb5e2c212011f3fc56982b150c54b0f39c602120f4139535f740",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/conditionalnorm.py": "31549af09e3aa73d172af854299cd4ada20ceff69db7ee57dbe0f1f7b23ed76d",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/semkitti_loss.py": "e6a4b9accef1f47cf031f84e18fac925d2764b4105b8010486c8229e589abaa4",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/lovasz_softmax.py": "046a43d610d34cdd6d4b5f791aa5df0723e9cae3cbff4e34de086574b62cf8be"
+  },
+  "cache_index_sha256": {
+    "train": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1"
+  },
+  "determinism_probe_sha256": "04e41ea5ba43ac629ef4ae419421c0fa509697c195a8de99bb281ca4fe8b05fe",
+  "initialization": "fresh seed11; no prior checkpoint",
+  "input_contract": "authenticated original observed BEV only; current target slice for supervision, no future target values used",
+  "output_contract": "full modelstate shared_codec.pth, recurrent parameters unchanged; current-only original train512 fine evaluation",
+  "claim_boundary": "shared current representation preparation, not future forecasting performance or O comparison; single seed, original train512/256 scenes; no dev/confirmation inference"
+}

@@ -1,0 +1,44 @@
+{
+  "status": "COMPLETE_TRAIN4_MATERIAL_COMPARISON_VERIFIED",
+  "protocol_sha256": "98d398c3090c88ec2bf5da6859cb50a387511b7bf00deee0308b1d129907290e",
+  "complete_sha256": "34c6065f857ca05fb971d75987ead0f236945e280a97c3dc3e492c92b37204ef",
+  "runner_terminal_status": "EXITED_ZERO",
+  "runner_absent": true,
+  "child_absent": true,
+  "optimizer_updates": 1024,
+  "downloaded_sha256": {
+    "complete.json": "34c6065f857ca05fb971d75987ead0f236945e280a97c3dc3e492c92b37204ef",
+    "protocol.json": "98d398c3090c88ec2bf5da6859cb50a387511b7bf00deee0308b1d129907290e",
+    "manifest.json": "abc46e7acd3e6ccd11704a9a9247d62ccee008b41f5a3b844945100b9b6f9fc7",
+    "summary.json": "3ecc3cda629dcf739cb3868a3d43eedc9b54d64801126bec1f2e01b8e5be7d3f",
+    "training.jsonl": "4c196c2819ca9b667dfca5700c0fea223ed4d3c5bb8e4eefde61f52b898e5fc5",
+    "milestones.jsonl": "6f3cd44d956b156832f6697433f475050c00b94212a083fac882231191ab8ab5",
+    "objects.jsonl": "3f0b3a489b0ee1f6b33ebb4969cce28a895b4282c972900164be18691c42761e",
+    "mechanism_checks.json": "e3cc918301c03fcfd929c1545c7f8858ef82abd4ce4572dc70dac46f2604973e"
+  },
+  "mechanism_checks": {
+    "native_evolving_logits_exact": true,
+    "same_parameter_motion_exact": true,
+    "fixed_zero_is_current_persistence": true,
+    "last_increment_direct_readout_path_removed": true,
+    "recurrent_increment_indirect_path_retained": true,
+    "gradients": {
+      "fixed": {
+        "last_increment_gradient": null,
+        "velocity_gradient": 0.2489277571439743,
+        "recurrent_increment_gradient": 0.017620926722884178
+      },
+      "evolving": {
+        "last_increment_gradient": 0.004346849862486124,
+        "velocity_gradient": 0.2593315541744232,
+        "recurrent_increment_gradient": 0.8856638073921204
+      }
+    }
+  },
+  "aggregate_scalars": 432,
+  "aggregate_max_abs_error": 0.0,
+  "seconds": 484.1348031599773,
+  "peak_allocated_gib": 3.4651989936828613,
+  "scope": "train4 only; no O or held-out inference",
+  "report": "dense_material_learning_curve_v1_\u7ed3\u679c\u4e0e\u51b3\u7b56.md"
+}

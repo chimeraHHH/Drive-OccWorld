@@ -1,0 +1,21 @@
+{
+  "status": "PASS_DETERMINISTIC_CURRENT_CODEC_GRAPH",
+  "synthetic_operator_probe": true,
+  "optimizer_updates": 0,
+  "coarse_cpu_gpu_exact": true,
+  "records": [
+    {
+      "loss": 1.2644773721694946,
+      "gradient_sha256": "1583201d596a2b560954c11103deef65928fc87dc2147e3165cb521b8c6fd0ee",
+      "gradient_norm": 3.3746213912963867,
+      "seconds": 0.964366730011534
+    },
+    {
+      "loss": 1.2644773721694946,
+      "gradient_sha256": "1583201d596a2b560954c11103deef65928fc87dc2147e3165cb521b8c6fd0ee",
+      "gradient_norm": 3.3746213912963867,
+      "seconds": 0.30356616000062786
+    }
+  ],
+  "peak_allocated_gib": 0.3392362594604492
+}

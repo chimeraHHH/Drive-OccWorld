@@ -4,6 +4,9 @@
 
 ## 当前结论
 
+最新 T/J 对照已完成：[固定材料结果与决策](analysis/o_motion_20260915/dense_material_learning_curve_v1_结果与决策.md)。固定当前内容组在 train4 上 moving 2s EPE1.116m，自由内容组2.204m；IoU21.281%/20.802%。上一轮同种子J为22.093%，因此小IoU差不构成稳健优越性。停止围绕train4调参，下一阶段扩大到train512的共同codec和未来状态比较。
+
+
 | 证据 | 结果与边界 |
 |---|---|
 | 原协议完整 5,119 样本 | O future GMO IoU 14.7478%，M0 13.9449%；这是二分类占据指标，不是语义 mIoU。O 的改善尚不能解释为物理运动更准。 |
@@ -39,7 +42,7 @@
 - [任务直接使用的未来状态：设计、文献依据与局限](analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md)；[新状态实现](analysis/o_motion_20260915/dense_task_state_v2.py)；[训练集小样本 fit 协议](analysis/o_motion_20260915/dense_task_state_fit_protocol_v2.json)。v2 已完成真实 train4 工程 fit、位移干预与全网格评分；[结果与下一步](analysis/o_motion_20260915/dense_task_state_fit_v2_结果与决策.md)。任务连接通过；该 32 更新阶段不能替代后续 512 更新的可学习性诊断，没有超过 O 的证据。
 - [密集输入认证](analysis/o_motion_20260915/server_results/diagnostics/dense_history_inputs_train16_v1/complete.json)；[已运行的密集 DELTA 实现](analysis/o_motion_20260915/extract_delta_dense_history_v1.py)。
 
-密集历史比较已完成：增加输入观测有收益，但不足以胜过现有强对照。停止继续扩展外部三维速度路线，保留 O/M0 与冻结诊断输出，已完成自有未来状态与 identity readout 的小样本工程比较。512 更新学习曲线已确认小样本运动可学习，但联合占据收益与物理准确性并不一致。固定最终 checkpoint 的 16 组内容/位移交叉读出也已完成：P 位移传播当前内容有收益，P 训练后内容却使结果退化；J 依赖内容—位移配合，D 内容直接读出更好。下一步先明确持久内容与运动迁移的分工，再冻结较大数据协议；后续同时验证 Doppler 是否能减少真实视觉历史和系统成本。
+密集历史比较已完成：增加输入观测有收益，但不足以胜过现有强对照。停止继续扩展外部三维速度路线，保留 O/M0 与冻结诊断输出，已完成自有未来状态与 identity readout 的小样本工程比较。512 更新学习曲线已确认小样本运动可学习，但联合占据收益与物理准确性并不一致。固定最终 checkpoint 的 16 组内容/位移交叉读出也已完成：P 位移传播当前内容有收益，P 训练后内容却使结果退化；J 依赖内容—位移配合，D 内容直接读出更好。新增 T/J 实验已表明固定当前内容保留较高训练占据拟合且物理误差较低；下一步在确定数值策略后扩大到train512，后续同时验证Doppler能否减少真实视觉历史和系统成本。
 
 ## 归档与复现边界
 

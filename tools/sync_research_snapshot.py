@@ -52,11 +52,12 @@ def main():
         if (p / filename).is_file():
             selected.add(p / filename)
     # Explicit, aggregate-only learning-curve artifacts; no arrays or weights.
-    p = workspace / 'analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1'
-    for filename in ('learning_curves.csv', 'aggregate_audit.json',
-                     'learning_curves.png', 'learning_curves.pdf'):
-        if (p / filename).is_file():
-            selected.add(p / filename)
+    for directory in ('dense_state_learning_curve_evaluation_v1', 'dense_material_learning_curve_evaluation_v1'):
+        p = workspace / 'analysis/o_motion_20260915' / directory
+        for filename in ('learning_curves.csv', 'aggregate_audit.json',
+                         'learning_curves.png', 'learning_curves.pdf'):
+            if (p / filename).is_file():
+                selected.add(p / filename)
     # The actual P2 integration, including its imported module and focused test.
     overlays = (
         'projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py',
