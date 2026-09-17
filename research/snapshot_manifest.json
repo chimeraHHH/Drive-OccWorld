@@ -1557,6 +1557,24 @@
       "sha256": "027318e5eb2fbdc956f598f31e6deb07105c6b4aeb6c83540ec969e7b6f30cda"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_material_learning_curve_protocol_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material_learning_curve_protocol_v1.json",
+      "bytes": 5931,
+      "sha256": "98d398c3090c88ec2bf5da6859cb50a387511b7bf00deee0308b1d129907290e"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material_learning_curve_v1.py",
+      "destination": "research/analysis/o_motion_20260915/dense_material_learning_curve_v1.py",
+      "bytes": 16635,
+      "sha256": "fb93945a49dcd0b753a9ec2381060872b5d5d9cfafb21818cf19279edd071293"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material_state_v1.py",
+      "destination": "research/analysis/o_motion_20260915/dense_material_state_v1.py",
+      "bytes": 4736,
+      "sha256": "0e9bf3ee90d769665370b534edd422c293fe8a9c8084b9308bbb246feac37d2b"
+    },
+    {
       "source": "analysis/o_motion_20260915/dense_state_cross_readout_aggregate_audit_v2.json",
       "destination": "research/analysis/o_motion_20260915/dense_state_cross_readout_aggregate_audit_v2.json",
       "bytes": 1199,
@@ -3043,6 +3061,12 @@
       "destination": "research/analysis/o_motion_20260915/research_notes/inference_motion_evidence_available_assets_v1.md",
       "bytes": 17179,
       "sha256": "177b29d31fcfb7c033735d22ace7fa323db2b8127ea6b0cb3ea02dbf37295d95"
+    },
+    {
+      "source": "analysis/o_motion_20260915/research_notes/material_state_design_v1.md",
+      "destination": "research/analysis/o_motion_20260915/research_notes/material_state_design_v1.md",
+      "bytes": 3302,
+      "sha256": "f0b4dae00bca7fbb8349da24b8cdfa18c65f8d69525f5216144548b2e19e7a03"
     },
     {
       "source": "analysis/o_motion_20260915/research_notes/measurement_motion_reliability_primary_sources_v1.md",
