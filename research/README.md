@@ -4,6 +4,10 @@
 
 ## 当前结论
 
+已将 Doppler 替代视觉历史列为高优先级待验证假设。[真实输入审计](analysis/o_motion_20260915/视觉历史效率_输入审计与实施边界.md)确认原生 O 为三个相机时刻及五 radar sweeps，单槽 BEV 不等于单帧；原 train512/dev200 均具备八时刻 sample 历史链，图像关联与文件验证尚未完成。真实缓存反例表明仅将 nsweeps 改成 1 仍读取旧五 sweep 缓存。首轮考虑 H=1/H=3 的 camera-only、雷达几何、径向动态证据对照，同时测窗口和 streaming 成本，尚未训练这一矩阵。
+
+2026-09-17 10:35 UTC 只读检查：既有服务器序列已完成 T_train/T_evaluate，自动进入 J_train（1,022/2,048 更新），runner/controller 身份仍一致。阶段完成不等于科学结果已通过独立复算；T/J/D 最终共同评价仍待齐备。
+
 train512 的共同 current codec 已完成 2,048 更新，512 样本当前 IoU 16.5057%，逐样本混淆矩阵独立复算一致；这不是未来 O 对比结果。[扩大数据的实验记录](analysis/o_motion_20260915/dense_material512_准备与启动记录.md)固定了 T/J/D 各 2,048 更新和原 dev200 共同评价，采用服务器顺序运行。完整非零 T/J/D 计算图已通过严格确定性前反向检查。
 
 前一轮[固定材料结果](analysis/o_motion_20260915/dense_material_learning_curve_v1_结果与决策.md)中，T/J 的 train4 moving 2s EPE 为 1.116/2.204m，IoU 为 21.281%/20.802%；同种子 J 此前为 22.093%，因此不据此宣称小幅 IoU 优越。扩大数据后的泛化结果仍待评估，目标尚未达到。
@@ -35,6 +39,7 @@ train512 的共同 current codec 已完成 2,048 更新，512 样本当前 IoU 1
 
 - [train512 未来状态训练协议](analysis/o_motion_20260915/dense_material512_training_protocol_v1.json)；[原 O 共同评价协议](analysis/o_motion_20260915/dense_material512_evaluation_protocol_v1.json)；[共同 codec 证据](analysis/o_motion_20260915/shared_current_codec512_evidence_v1.json)。
 - [用户新增方向：用雷达动态先验减少视觉历史与计算](analysis/o_motion_20260915/雷达动态先验与视觉历史效率_实验计划.md)。已加入后续 roadmap，包含真实图像历史审计、Doppler 消融、流式推理成本与 CRISP/TEOcc 近邻；目前是待验证假设。
+- [少帧输入实施边界](analysis/o_motion_20260915/视觉历史效率_输入审计与实施边界.md)；[712 anchors 历史链](analysis/o_motion_20260915/visual_history_population_evidence_v2.json)；[真实雷达缓存反例](analysis/o_motion_20260915/radar_cache_sweep_identity_evidence_v1.json)；[CRISP history 与效率专项审计](analysis/o_motion_20260915/research_notes/crisp_history_substitution_audit_20260917.md)。
 - [最新学习曲线结果与决策](analysis/o_motion_20260915/dense_state_learning_curve_v1_结果与决策.md)；[真实曲线图](analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.png)；[648 指标复算](analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/aggregate_audit.json)。
 - [固定 codec 的物理单任务/联合任务学习曲线设计](analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md)；[冻结协议](analysis/o_motion_20260915/dense_state_learning_curve_protocol_v1.json)。本轮仍只用既定 train4 做可学习性诊断。
 - [O 验证模型卡](analysis/m0_improvement_20260915/O验证通过模型卡.md)；[完整评价汇总](analysis/m0_improvement_20260915/server_results/campaign_objective_joint_full_v2/summary_v1/metrics.csv)。

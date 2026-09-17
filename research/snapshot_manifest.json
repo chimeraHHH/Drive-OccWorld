@@ -1107,6 +1107,12 @@
       "sha256": "37f0441591e526e418c66079d805fedb9b5b1175af99b1331803ca39a9476b20"
     },
     {
+      "source": "analysis/o_motion_20260915/audit_radar_cache_sweep_identity_v1.py",
+      "destination": "research/analysis/o_motion_20260915/audit_radar_cache_sweep_identity_v1.py",
+      "bytes": 2776,
+      "sha256": "60564ed7d0b0291f68f6a0c82a2cfb23bd63ce9dc0fe0d5cbe8d11a7034aebb6"
+    },
+    {
       "source": "analysis/o_motion_20260915/audit_source_motion_train_v1.py",
       "destination": "research/analysis/o_motion_20260915/audit_source_motion_train_v1.py",
       "bytes": 20604,
@@ -1117,6 +1123,18 @@
       "destination": "research/analysis/o_motion_20260915/audit_supported_fusion_train_v2.py",
       "bytes": 23156,
       "sha256": "e2161ff883fe559e6eb9f7136a0b08ec2ba5e1a2fa3bf50a1fdfa08e3106d52d"
+    },
+    {
+      "source": "analysis/o_motion_20260915/audit_visual_history_population_v1.py",
+      "destination": "research/analysis/o_motion_20260915/audit_visual_history_population_v1.py",
+      "bytes": 4764,
+      "sha256": "c29b5420288ba42fce4fd8bb61ff4143a28ad2559063085e5a335757bff2480e"
+    },
+    {
+      "source": "analysis/o_motion_20260915/audit_visual_history_population_v2.py",
+      "destination": "research/analysis/o_motion_20260915/audit_visual_history_population_v2.py",
+      "bytes": 4816,
+      "sha256": "96b78d835b26308fd3e6166a249574af8de38e85c6fa6027268d76ddff369de5"
     },
     {
       "source": "analysis/o_motion_20260915/build_full_motion_targets_v1.py",
@@ -3003,6 +3021,12 @@
       "sha256": "f14b1d44e33e57cd533eb4360f4cd12d1f02e191d0a14bd864711918e277d1b8"
     },
     {
+      "source": "analysis/o_motion_20260915/radar_cache_sweep_identity_evidence_v1.json",
+      "destination": "research/analysis/o_motion_20260915/radar_cache_sweep_identity_evidence_v1.json",
+      "bytes": 1319,
+      "sha256": "16292f1622890e2b96ca551b2c6b5d0c221e0fb1840a3a70cf06a8c6ad4a90e8"
+    },
+    {
       "source": "analysis/o_motion_20260915/radar_evidence_train_analysis_rules_v1.json",
       "destination": "research/analysis/o_motion_20260915/radar_evidence_train_analysis_rules_v1.json",
       "bytes": 5318,
@@ -3067,6 +3091,12 @@
       "destination": "research/analysis/o_motion_20260915/research_notes/O_t0_readout_and_query_support_interface_v1.md",
       "bytes": 5391,
       "sha256": "99489f1a42fa28f8396c5e33deae5c3b15957ccaad16513015336b9b15467851"
+    },
+    {
+      "source": "analysis/o_motion_20260915/research_notes/crisp_history_substitution_audit_20260917.md",
+      "destination": "research/analysis/o_motion_20260915/research_notes/crisp_history_substitution_audit_20260917.md",
+      "bytes": 7166,
+      "sha256": "c4b826914eea971623ad3aa28f0d4558bafacf7ee6b516627a4563fb8a6c4b67"
     },
     {
       "source": "analysis/o_motion_20260915/research_notes/dego_motion_coupling_boundary_v1.md",
@@ -3963,16 +3993,34 @@
       "sha256": "d710aaa791b24204ed2d482d23cb02d58658c897b5ba93cb12e2300b320580c1"
     },
     {
+      "source": "analysis/o_motion_20260915/visual_history_population_evidence_v2.json",
+      "destination": "research/analysis/o_motion_20260915/visual_history_population_evidence_v2.json",
+      "bytes": 2745,
+      "sha256": "40a501b0ae8eb80e7be6ff1da5f8e53b85f6516105a4104a3281a37dc926a631"
+    },
+    {
+      "source": "analysis/o_motion_20260915/visual_history_source_identity_v1.json",
+      "destination": "research/analysis/o_motion_20260915/visual_history_source_identity_v1.json",
+      "bytes": 1152,
+      "sha256": "586241925546a6e3b914415c7855abd03b7ceb93f962ff3318dc1e372ba0ae5e"
+    },
+    {
       "source": "analysis/o_motion_20260915/研究推进与实验约定.md",
       "destination": "research/analysis/o_motion_20260915/研究推进与实验约定.md",
       "bytes": 10602,
       "sha256": "752d4c39962417921a06f5831d72d284c63aabb3a9b583d20e1d5ab7165bf831"
     },
     {
+      "source": "analysis/o_motion_20260915/视觉历史效率_输入审计与实施边界.md",
+      "destination": "research/analysis/o_motion_20260915/视觉历史效率_输入审计与实施边界.md",
+      "bytes": 5101,
+      "sha256": "e7649f1e69c822800ef1e2d8bde2f9b5a4db65323e7357f816da97fde651e2b5"
+    },
+    {
       "source": "analysis/o_motion_20260915/雷达动态先验与视觉历史效率_实验计划.md",
       "destination": "research/analysis/o_motion_20260915/雷达动态先验与视觉历史效率_实验计划.md",
-      "bytes": 7052,
-      "sha256": "776c5519c6d68b7788dffca1af8b6770840994a028e9170fbc70f6870e0667e1"
+      "bytes": 7627,
+      "sha256": "3f950d234bff5002b537db997bf0e80dad46093a8e3b88a79cf4654f99a757f1"
     },
     {
       "source": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py",
@@ -4020,6 +4068,7 @@
     "analysis/o_motion_20260915/current_research_state.json",
     "analysis/o_motion_20260915/dense_material512_dispatch_v1.json",
     "analysis/o_motion_20260915/dense_material512_remote_readonly_v1.json",
+    "analysis/o_motion_20260915/dense_material512_remote_readonly_v2.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_dispatch_v1.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_state_cross_readout_dispatch_v1.json",

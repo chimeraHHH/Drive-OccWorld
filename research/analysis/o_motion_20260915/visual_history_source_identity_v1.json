@@ -1,0 +1,14 @@
+{
+  "status": "PASS_LOCAL_REMOTE_SOURCE_IDENTICAL",
+  "files_sha256": {
+    "projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+    "projects/mmdet3d_plugin/bevformer/detectors/bevformer.py": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+    "projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_template.py": "9de0dfbba0b77567cf011fb0adb163492e8d5e6f510040b95626b3bcded822cc",
+    "projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+    "projects/mmdet3d_plugin/datasets/radar_bev.py": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+    "projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e"
+  },
+  "repository": "/home/wangning/Workspace/RadarFlowOcc-sota-p2",
+  "config_sha256": "c92faf7c2a4697ae7faa0c69ca844068dd8f5a6d28463e7ad45307c4ab374303",
+  "scope": "Current source/config identity for observation-history audit; no model forward or speed measurement"
+}

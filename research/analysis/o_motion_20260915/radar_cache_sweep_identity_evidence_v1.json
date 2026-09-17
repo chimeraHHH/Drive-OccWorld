@@ -1,0 +1,32 @@
+{
+  "schema": "radar-cache-sweep-identity-audit-v1",
+  "status": "PASS_READ_ONLY_CACHE_COLLISION_COUNTEREXAMPLE",
+  "source_sha256": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+  "script_sha256": "60564ed7d0b0291f68f6a0c82a2cfb23bd63ce9dc0fe0d5cbe8d11a7034aebb6",
+  "sample_token": "464fe0be05a74ec9852573cb9e3afd89",
+  "nsweeps_settings": [
+    5,
+    1
+  ],
+  "cache_paths": [
+    "/home/wangning/data_cache/RadarFlowOcc_sota_p2_20260911/radar5/464fe0be05a74ec9852573cb9e3afd89.npy",
+    "/home/wangning/data_cache/RadarFlowOcc_sota_p2_20260911/radar5/464fe0be05a74ec9852573cb9e3afd89.npy"
+  ],
+  "same_path": true,
+  "cache_file_sha256": "d480fcd1c959816f25628a9e1bc776c1078a06df017f574fa08c149c55e88b72",
+  "shape": [
+    8,
+    200,
+    200
+  ],
+  "dtype": "float32",
+  "loaded_arrays_exact": true,
+  "array_sha256": "529d2cb848dfc0ae51e99fee65001674b8a5e2076d34471610c24180632b15b7",
+  "cache_bytes_unchanged": true,
+  "raw_radar_files_read": 0,
+  "models_loaded": 0,
+  "optimizer_updates": 0,
+  "cache_writes": 0,
+  "conclusion": "A nsweeps=1 loader accepts the existing radar5 cache unchanged. Changing nsweeps alone cannot establish a current-sweep-only input.",
+  "limitation": "One actual cached sample; no independent raw-sweep reconstruction or velocity provenance verification."
+}
