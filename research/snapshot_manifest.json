@@ -1557,6 +1557,24 @@
       "sha256": "027318e5eb2fbdc956f598f31e6deb07105c6b4aeb6c83540ec969e7b6f30cda"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_task_state_fit_protocol_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_task_state_fit_protocol_v1.json",
+      "bytes": 4556,
+      "sha256": "7981d179ec6fd9c58923fbafaf49cdc8a0b1f42ae58cef255f083c17146e7b72"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_task_state_fit_v1.py",
+      "destination": "research/analysis/o_motion_20260915/dense_task_state_fit_v1.py",
+      "bytes": 12586,
+      "sha256": "bb29248d4a041479e5353afe18c97cada4c2fc3c6232f324edc4d742e39f923c"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_task_state_v1.py",
+      "destination": "research/analysis/o_motion_20260915/dense_task_state_v1.py",
+      "bytes": 7520,
+      "sha256": "5081d2be86c94ad533ed414002e761a4fa8edd142841d2ee67bb147acc3e9550"
+    },
+    {
       "source": "analysis/o_motion_20260915/derive_fixed_owner_error_floor_v1.py",
       "destination": "research/analysis/o_motion_20260915/derive_fixed_owner_error_floor_v1.py",
       "bytes": 7222,
@@ -2977,6 +2995,12 @@
       "destination": "research/analysis/o_motion_20260915/research_notes/shared_state_research_question_and_endpoint_interpretation_v1.md",
       "bytes": 5888,
       "sha256": "e499457a2ee15fbc6e4df9d9a108e12f362cc536bb244b9e171f514e65f7d978"
+    },
+    {
+      "source": "analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md",
+      "destination": "research/analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md",
+      "bytes": 4966,
+      "sha256": "2bc6a4723c4ad766f9a885068e876ebaabc0c44ee0a06f8032da32ec9c9ff123"
     },
     {
       "source": "analysis/o_motion_20260915/research_notes/three_world_model_papers_20260917.md",
