@@ -1611,6 +1611,18 @@
       "sha256": "027318e5eb2fbdc956f598f31e6deb07105c6b4aeb6c83540ec969e7b6f30cda"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_material512_D_evidence_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_D_evidence_v1.json",
+      "bytes": 7989,
+      "sha256": "457035c58318d183c4d8df50f4452573af5eba829ff586801fc45129a09c833b"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_D_physical_reference_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_D_physical_reference_v1.json",
+      "bytes": 5350,
+      "sha256": "1b6eba4f661df1db9d8f4a6acf27aa6d0292d4b4649823bacbaa887bc0d68488"
+    },
+    {
       "source": "analysis/o_motion_20260915/dense_material512_J_evidence_v1.json",
       "destination": "research/analysis/o_motion_20260915/dense_material512_J_evidence_v1.json",
       "bytes": 7992,
@@ -1681,6 +1693,12 @@
       "destination": "research/analysis/o_motion_20260915/dense_material512_准备与启动记录.md",
       "bytes": 5788,
       "sha256": "e90f0de694f2893dd107594e4adc6ed2a09e3ee4040cbd855dca4c0edc893699"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_完整结果与阶段决策.md",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_完整结果与阶段决策.md",
+      "bytes": 4320,
+      "sha256": "e66ed213c5a8d118029913dfb023e9a5f94df00a6f3e7123d8462639a9b7f279"
     },
     {
       "source": "analysis/o_motion_20260915/dense_material_learning_curve_evaluation_v1/aggregate_audit.json",
@@ -2541,6 +2559,12 @@
       "sha256": "ad78a7f14573c82f5e292e784ffc38c988226ba076b93914f229d6fae2deaac6"
     },
     {
+      "source": "analysis/o_motion_20260915/material512_train_fit_evidence_v1.json",
+      "destination": "research/analysis/o_motion_20260915/material512_train_fit_evidence_v1.json",
+      "bytes": 6899,
+      "sha256": "1842f326d9177cb1c7a041cae325396cb18a7d057df2d01ab0abd530e5d71119"
+    },
+    {
       "source": "analysis/o_motion_20260915/material512_train_fit_preflight_evidence_v1.json",
       "destination": "research/analysis/o_motion_20260915/material512_train_fit_preflight_evidence_v1.json",
       "bytes": 670,
@@ -2725,6 +2749,12 @@
       "destination": "research/analysis/o_motion_20260915/native_full_o_stream_v1.py",
       "bytes": 27715,
       "sha256": "3a8d338de78caae5d73e11012cd9cec38a47621913ddbb0bbda9cfae6e510bef"
+    },
+    {
+      "source": "analysis/o_motion_20260915/native_visual_history_window_v1.py",
+      "destination": "research/analysis/o_motion_20260915/native_visual_history_window_v1.py",
+      "bytes": 9754,
+      "sha256": "1e5288351b69ea6a9395038f02d6374f1ae976171813593bb5d63c65e43d8c03"
     },
     {
       "source": "analysis/o_motion_20260915/object_state_conditioned_forecast_design_draft_v1.md",
@@ -3115,6 +3145,12 @@
       "destination": "research/analysis/o_motion_20260915/probe_fixed_D_cpu_v1.py",
       "bytes": 8311,
       "sha256": "f14b1d44e33e57cd533eb4360f4cd12d1f02e191d0a14bd864711918e277d1b8"
+    },
+    {
+      "source": "analysis/o_motion_20260915/probe_native_visual_history_v1.py",
+      "destination": "research/analysis/o_motion_20260915/probe_native_visual_history_v1.py",
+      "bytes": 11381,
+      "sha256": "92076323fed0ffd158d4fb1b4b6db1cd171609ef2662e1245f46afc19486c3e7"
     },
     {
       "source": "analysis/o_motion_20260915/radar_cache_sweep_identity_evidence_v1.json",
@@ -4176,6 +4212,7 @@
     "analysis/o_motion_20260915/dense_material512_remote_readonly_v5.json",
     "analysis/o_motion_20260915/dense_material512_remote_readonly_v6.json",
     "analysis/o_motion_20260915/dense_material512_remote_readonly_v7.json",
+    "analysis/o_motion_20260915/dense_material512_remote_readonly_v8.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_dispatch_v1.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_state_cross_readout_dispatch_v1.json",
@@ -4238,6 +4275,7 @@
     "analysis/o_motion_20260915/material512_determinism_probe_v2_dispatch.json",
     "analysis/o_motion_20260915/material512_train_fit_full_v1_dispatch.json",
     "analysis/o_motion_20260915/material512_train_fit_preflight_v1_dispatch.json",
+    "analysis/o_motion_20260915/material512_train_fit_remote_readonly_v1.json",
     "analysis/o_motion_20260915/motion_evidence_train_analysis_v1.json",
     "analysis/o_motion_20260915/motion_metadata_evidence_v1.json",
     "analysis/o_motion_20260915/motion_metadata_evidence_v2.json",
@@ -4248,6 +4286,7 @@
     "analysis/o_motion_20260915/raliflow_repository_snapshot.json",
     "analysis/o_motion_20260915/remote_readonly_motion_probe.py",
     "analysis/o_motion_20260915/remote_readonly_motion_probe_v2.py",
+    "analysis/o_motion_20260915/report_20260917_remote_readonly.json",
     "analysis/o_motion_20260915/research_dispatch.py",
     "analysis/o_motion_20260915/scene_disjoint_confirmation_candidate_v1.json",
     "analysis/o_motion_20260915/shared_current_codec512_dispatch_v1.json",

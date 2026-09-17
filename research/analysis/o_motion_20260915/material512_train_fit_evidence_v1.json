@@ -1,0 +1,227 @@
+{
+  "schema": "independent-material512-train-fit-audit-v1",
+  "status": "COMPLETE",
+  "anchors": 512,
+  "scenes": 256,
+  "verified_files": {
+    "protocol.json": "39dc766ca0b4a693f135c44b05f7b804de682860ece8d18c37dc5166473eb38c",
+    "manifest.json": "bb085cc8761296dee03f88ca9e70f9859db1dea80a5e934b8f2918c2c4f191e8",
+    "records.jsonl": "c2c428a2e481ce54102f9f7bfffb873b209817c23a27b8a0b913389954dacfb9",
+    "summary.json": "ca9609819d2660e0610b582a9f172ef52703e636439a040de3f7b778631c4dde"
+  },
+  "complete_sha256": "3c37e99f47633979d270e2c17241816350704735cc91d6b328bc7ee5ddeb9608",
+  "checkpoint_sha256": "495089d29554ccdf2d9d3edff131bc606de0f576254b0c8027f23f6386cdded3",
+  "parameter_sha256": "67047496fd52a7e2335507e491fe5279e08aa12e3565727fa28fd3ee9e89da36",
+  "recomputed_classification_scalars": 120042,
+  "current_GMO_percent": 16.505674362117922,
+  "future_GMO_percent": [
+    13.701747660390124,
+    11.26683500286668,
+    9.737665913485873,
+    8.607460523753428
+  ],
+  "future_macro_GMO_percent": 10.828427275124028,
+  "persistence": {
+    "matches_full_future_valid_domain": true,
+    "confusion": [
+      [
+        [
+          5353130816,
+          10719230
+        ],
+        [
+          2795762,
+          2063312
+        ]
+      ],
+      [
+        [
+          5352972497,
+          10970872
+        ],
+        [
+          2954081,
+          1811670
+        ]
+      ],
+      [
+        [
+          5352932900,
+          11105896
+        ],
+        [
+          2993678,
+          1676646
+        ]
+      ],
+      [
+        [
+          5352937967,
+          11205532
+        ],
+        [
+          2988611,
+          1577010
+        ]
+      ]
+    ],
+    "future_GMO_percent": [
+      13.2447794060252,
+      11.51244456958777,
+      10.627678873646538,
+      9.999332325290359
+    ],
+    "future_macro_GMO_percent": 11.346058793637466,
+    "forecast_same_domain_GMO_percent": [
+      13.701747660390124,
+      11.26683500286668,
+      9.737665913485873,
+      8.607460523753428
+    ],
+    "forecast_minus_persistence_pp": -0.5176315185134381
+  },
+  "physical": [
+    {
+      "horizon_seconds": 0.5,
+      "groups": {
+        "stationary": {
+          "objects": 5509,
+          "points": 953969,
+          "epe_object_sum": 1217.8548252612388,
+          "epe": 0.2210664050210998,
+          "magnitude_object_sum": 1178.0155738257256,
+          "magnitude": 0.2138347383963924,
+          "zero_epe_object_sum": 172.31958077776127,
+          "zero_epe": 0.03127964799015452
+        },
+        "ambiguous": {
+          "objects": 1875,
+          "points": 338682,
+          "epe_object_sum": 497.2077619193155,
+          "epe": 0.2651774730236349,
+          "magnitude_object_sum": 408.6104342253848,
+          "magnitude": 0.2179255649202052,
+          "zero_epe_object_sum": 246.6943154911303,
+          "zero_epe": 0.1315703015952695
+        },
+        "moving": {
+          "objects": 3870,
+          "points": 416816,
+          "epe_object_sum": 4500.296341541475,
+          "epe": 1.1628672717161435,
+          "magnitude_object_sum": 3436.222259718456,
+          "magnitude": 0.8879127286094202,
+          "zero_epe_object_sum": 6730.456964736338,
+          "zero_epe": 1.739136166598537
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "groups": {
+        "stationary": {
+          "objects": 5485,
+          "points": 948599,
+          "epe_object_sum": 1708.3516969946438,
+          "epe": 0.3114588326334811,
+          "magnitude_object_sum": 1611.736961148486,
+          "magnitude": 0.2938444778757495,
+          "zero_epe_object_sum": 335.0396589111813,
+          "zero_epe": 0.06108289132382521
+        },
+        "ambiguous": {
+          "objects": 1791,
+          "points": 336617,
+          "epe_object_sum": 731.5485616991496,
+          "epe": 0.4084581584026519,
+          "magnitude_object_sum": 535.0909826984889,
+          "magnitude": 0.29876660117168563,
+          "zero_epe_object_sum": 440.20887091517505,
+          "zero_epe": 0.24578943099674766
+        },
+        "moving": {
+          "objects": 3691,
+          "points": 389986,
+          "epe_object_sum": 8602.737021154398,
+          "epe": 2.3307334113124893,
+          "magnitude_object_sum": 8066.821054843826,
+          "magnitude": 2.185538080423686,
+          "zero_epe_object_sum": 13073.28600382049,
+          "zero_epe": 3.541936061723243
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "groups": {
+        "stationary": {
+          "objects": 5516,
+          "points": 960292,
+          "epe_object_sum": 2173.4212163866855,
+          "epe": 0.3940212502513933,
+          "magnitude_object_sum": 2005.7622587349356,
+          "magnitude": 0.36362622529639876,
+          "zero_epe_object_sum": 504.1538073122054,
+          "zero_epe": 0.09139844222483781
+        },
+        "ambiguous": {
+          "objects": 1548,
+          "points": 299416,
+          "epe_object_sum": 841.5453391231517,
+          "epe": 0.543633940002036,
+          "magnitude_object_sum": 582.7771877749918,
+          "magnitude": 0.37647105153423244,
+          "zero_epe_object_sum": 539.7745439231933,
+          "zero_epe": 0.3486915658418561
+        },
+        "moving": {
+          "objects": 3572,
+          "points": 380275,
+          "epe_object_sum": 12856.367617776858,
+          "epe": 3.5992070598479446,
+          "magnitude_object_sum": 12447.714247096697,
+          "magnitude": 3.4848024207997472,
+          "zero_epe_object_sum": 19130.948203856296,
+          "zero_epe": 5.355808567708929
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "groups": {
+        "stationary": {
+          "objects": 5513,
+          "points": 958645,
+          "epe_object_sum": 2674.4598779134326,
+          "epe": 0.48511878794003854,
+          "magnitude_object_sum": 2445.578500468193,
+          "magnitude": 0.44360212234140994,
+          "zero_epe_object_sum": 653.528212219288,
+          "zero_epe": 0.11854311848708289
+        },
+        "ambiguous": {
+          "objects": 1363,
+          "points": 275621,
+          "epe_object_sum": 922.257647914363,
+          "epe": 0.6766380395556588,
+          "magnitude_object_sum": 608.8297699136984,
+          "magnitude": 0.4466836169579592,
+          "zero_epe_object_sum": 610.3640547422252,
+          "zero_epe": 0.4478092844770545
+        },
+        "moving": {
+          "objects": 3456,
+          "points": 373931,
+          "epe_object_sum": 16747.1181954164,
+          "epe": 4.8458096630255785,
+          "magnitude_object_sum": 16359.11467890807,
+          "magnitude": 4.733540126998863,
+          "zero_epe_object_sum": 24605.42614406033,
+          "zero_epe": 7.1196256203878265
+        }
+      }
+    }
+  ],
+  "optimizer_updates": 0,
+  "caveat": "Training-set fit of one fixed T checkpoint; no O training comparison, no generalization or convergence claim. Raw predictions not independently rerun."
+}

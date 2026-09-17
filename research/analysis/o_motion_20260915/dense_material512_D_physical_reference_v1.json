@@ -1,0 +1,178 @@
+{
+  "status": "PASS_SAME_SOURCE_PHYSICAL_COMPARISON",
+  "arm": "D",
+  "source_sha256": "96dfc9de9b3ad45070d608ded57f89a6958f1693f6ef6f6fbfc22bf967764a01",
+  "reference_objects_sha256": "f3d14584dcf22dcdf12d7d020365ac85541a118e61460a61394c86322f871620",
+  "candidate_records_sha256": "eea54caab5585624f3b886984b8b6e29cbe3eea1560e3e532ded1f3f57323942",
+  "same_sparse_label_manifest": true,
+  "same_development_index": true,
+  "all_anchor_group_object_and_point_counts_exact": true,
+  "nonempty_anchor_horizon_group_checks": 2138,
+  "max_zero_target_mean_norm_roundoff_m": 7.698309048009833e-07,
+  "roundoff_bound_m": 1e-05,
+  "comparisons": [
+    {
+      "endpoint_index": 1,
+      "nominal_horizon_seconds": 0.5,
+      "group": "stationary",
+      "objects": 2080,
+      "candidate_EPE_XYZ_m": 0.16503016285660146,
+      "CRN_CV_EPE_XYZ_m": 0.044338192914390506,
+      "candidate_minus_CRN_CV_m": 0.12069196994221096,
+      "scene95CI_m": [
+        0.11057406128555053,
+        0.13219152503667897
+      ]
+    },
+    {
+      "endpoint_index": 1,
+      "nominal_horizon_seconds": 0.5,
+      "group": "ambiguous",
+      "objects": 712,
+      "candidate_EPE_XYZ_m": 0.20765674211384183,
+      "CRN_CV_EPE_XYZ_m": 0.1409210440585596,
+      "candidate_minus_CRN_CV_m": 0.06673569805528222,
+      "scene95CI_m": [
+        0.05457654101252844,
+        0.07902863115427634
+      ]
+    },
+    {
+      "endpoint_index": 1,
+      "nominal_horizon_seconds": 0.5,
+      "group": "moving",
+      "objects": 1397,
+      "candidate_EPE_XYZ_m": 1.2148017709886483,
+      "CRN_CV_EPE_XYZ_m": 0.8449931783824067,
+      "candidate_minus_CRN_CV_m": 0.36980859260624155,
+      "scene95CI_m": [
+        0.30808681196596605,
+        0.4408556683226402
+      ]
+    },
+    {
+      "endpoint_index": 2,
+      "nominal_horizon_seconds": 1.0,
+      "group": "stationary",
+      "objects": 2101,
+      "candidate_EPE_XYZ_m": 0.30558623875326796,
+      "CRN_CV_EPE_XYZ_m": 0.08573967426909822,
+      "candidate_minus_CRN_CV_m": 0.21984656448416978,
+      "scene95CI_m": [
+        0.19382953046473164,
+        0.2530424979894576
+      ]
+    },
+    {
+      "endpoint_index": 2,
+      "nominal_horizon_seconds": 1.0,
+      "group": "ambiguous",
+      "objects": 655,
+      "candidate_EPE_XYZ_m": 0.384618423126999,
+      "CRN_CV_EPE_XYZ_m": 0.2570477777739154,
+      "candidate_minus_CRN_CV_m": 0.1275706453530836,
+      "scene95CI_m": [
+        0.10251658772285684,
+        0.156463061282841
+      ]
+    },
+    {
+      "endpoint_index": 2,
+      "nominal_horizon_seconds": 1.0,
+      "group": "moving",
+      "objects": 1320,
+      "candidate_EPE_XYZ_m": 2.3938268289935136,
+      "CRN_CV_EPE_XYZ_m": 1.6876250495250615,
+      "candidate_minus_CRN_CV_m": 0.7062017794684521,
+      "scene95CI_m": [
+        0.5907373009035319,
+        0.8499051070285225
+      ]
+    },
+    {
+      "endpoint_index": 3,
+      "nominal_horizon_seconds": 1.5,
+      "group": "stationary",
+      "objects": 2124,
+      "candidate_EPE_XYZ_m": 0.4353974821840748,
+      "CRN_CV_EPE_XYZ_m": 0.1311296396155687,
+      "candidate_minus_CRN_CV_m": 0.30426784256850614,
+      "scene95CI_m": [
+        0.258099235106492,
+        0.3653397225555942
+      ]
+    },
+    {
+      "endpoint_index": 3,
+      "nominal_horizon_seconds": 1.5,
+      "group": "ambiguous",
+      "objects": 567,
+      "candidate_EPE_XYZ_m": 0.5826973517976299,
+      "CRN_CV_EPE_XYZ_m": 0.3712723077757749,
+      "candidate_minus_CRN_CV_m": 0.211425044021855,
+      "scene95CI_m": [
+        0.15534422505246454,
+        0.2778133312640606
+      ]
+    },
+    {
+      "endpoint_index": 3,
+      "nominal_horizon_seconds": 1.5,
+      "group": "moving",
+      "objects": 1269,
+      "candidate_EPE_XYZ_m": 3.7426268383653354,
+      "CRN_CV_EPE_XYZ_m": 2.540452867095954,
+      "candidate_minus_CRN_CV_m": 1.2021739712693813,
+      "scene95CI_m": [
+        1.0214691190665155,
+        1.4298215142910873
+      ]
+    },
+    {
+      "endpoint_index": 4,
+      "nominal_horizon_seconds": 2.0,
+      "group": "stationary",
+      "objects": 2136,
+      "candidate_EPE_XYZ_m": 0.5720649411238921,
+      "CRN_CV_EPE_XYZ_m": 0.16973845184021608,
+      "candidate_minus_CRN_CV_m": 0.40232648928367604,
+      "scene95CI_m": [
+        0.33355890712111524,
+        0.49367260062150886
+      ]
+    },
+    {
+      "endpoint_index": 4,
+      "nominal_horizon_seconds": 2.0,
+      "group": "ambiguous",
+      "objects": 487,
+      "candidate_EPE_XYZ_m": 0.800892428852288,
+      "CRN_CV_EPE_XYZ_m": 0.5322217929276831,
+      "candidate_minus_CRN_CV_m": 0.26867063592460483,
+      "scene95CI_m": [
+        0.16957801686139387,
+        0.3813658087091839
+      ]
+    },
+    {
+      "endpoint_index": 4,
+      "nominal_horizon_seconds": 2.0,
+      "group": "moving",
+      "objects": 1226,
+      "candidate_EPE_XYZ_m": 5.22071403950195,
+      "CRN_CV_EPE_XYZ_m": 3.409315497861369,
+      "candidate_minus_CRN_CV_m": 1.8113985416405816,
+      "scene95CI_m": [
+        1.55091781918414,
+        2.1315392539923894
+      ]
+    }
+  ],
+  "bootstrap": {
+    "seed": 11,
+    "replicates": 10000,
+    "unit": "scene",
+    "scope": "exposed dev200; not seed variance"
+  },
+  "limitation": "Aggregate source-label match plus authenticated common producers; candidate records do not contain per-object IDs/predictions. No new O physical head or held-out improvement claim."
+}

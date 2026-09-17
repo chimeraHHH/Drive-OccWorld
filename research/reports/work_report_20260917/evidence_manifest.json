@@ -1,0 +1,137 @@
+{
+  "description": "Source evidence for the work report, not raw data or model weights",
+  "files": [
+    {
+      "path": "analysis/m0_improvement_20260915/server_results/campaign_objective_joint_full_v2/summary_v1/metrics.csv",
+      "sha256": "a363dbb0e2e5c9d1687f8db2c0f9a8167847428b8ccd17fc9804c9cfaf1b6102",
+      "bytes": 2604
+    },
+    {
+      "path": "analysis/m0_improvement_20260915/O验证通过模型卡.md",
+      "sha256": "3ae1dba35300084b882b258397afd73bf6fc9218e20c932a4cd4babf5d2a7044",
+      "bytes": 7743
+    },
+    {
+      "path": "analysis/o_motion_20260915/dense_material512_T_evidence_v1.json",
+      "sha256": "64d1fefec07fdb4e9d41cf3b8b775a96fd239a326533f0bc89140d1920614ce8",
+      "bytes": 7993
+    },
+    {
+      "path": "analysis/o_motion_20260915/dense_material512_J_evidence_v1.json",
+      "sha256": "8096d7b321152364084645626568b14e5e86b34460f598de4e022460dd96a85c",
+      "bytes": 7992
+    },
+    {
+      "path": "analysis/o_motion_20260915/dense_material512_T_physical_reference_v1.json",
+      "sha256": "28542bbf7907ec68b77865b9bee51dafe28c5bc17802c29f9ec2b5720935ac35",
+      "bytes": 5350
+    },
+    {
+      "path": "analysis/o_motion_20260915/dense_material512_J_physical_reference_v1.json",
+      "sha256": "191080a2a5299b24fad32a7258dec54039fd6c4c6a6a275bd04b87559587c3c1",
+      "bytes": 5357
+    },
+    {
+      "path": "analysis/o_motion_20260915/material512_train_fit_evidence_v1.json",
+      "sha256": "1842f326d9177cb1c7a041cae325396cb18a7d057df2d01ab0abd530e5d71119",
+      "bytes": 6899
+    },
+    {
+      "path": "analysis/o_motion_20260915/delta_dense_history_comparison_v1.json",
+      "sha256": "b558d89c01237e211c7824c3055b5b3f9b39edd5ddf44c4d4a20b0e3ce0c3acc",
+      "bytes": 29665
+    },
+    {
+      "path": "analysis/o_motion_20260915/delta_dense_history_train16_结果与研究决策.md",
+      "sha256": "7cc670df5185e4d0c007d382aa1f5e6284020aef36516e89ec1125cd5c4d78dd",
+      "bytes": 6966
+    },
+    {
+      "path": "analysis/o_motion_20260915/history_frozen_flow_shared_v2_结果与决策.md",
+      "sha256": "713aa01d5cfb89904c4b9e6a288c70549299f460370768e9a7071f5d05ac0506",
+      "bytes": 7603
+    },
+    {
+      "path": "analysis/o_motion_20260915/visual_history_source_identity_v1.json",
+      "sha256": "586241925546a6e3b914415c7855abd03b7ceb93f962ff3318dc1e372ba0ae5e",
+      "bytes": 1152
+    },
+    {
+      "path": "analysis/o_motion_20260915/visual_history_population_evidence_v2.json",
+      "sha256": "40a501b0ae8eb80e7be6ff1da5f8e53b85f6516105a4104a3281a37dc926a631",
+      "bytes": 2745
+    },
+    {
+      "path": "analysis/o_motion_20260915/radar_cache_sweep_identity_evidence_v1.json",
+      "sha256": "16292f1622890e2b96ca551b2c6b5d0c221e0fb1840a3a70cf06a8c6ad4a90e8",
+      "bytes": 1319
+    },
+    {
+      "path": "analysis/o_motion_20260915/雷达动态先验与视觉历史效率_实验计划.md",
+      "sha256": "989920f8e24ab22cb876be3ece4021adf3269fbc58a227e7048eae67f40867dd",
+      "bytes": 8976
+    },
+    {
+      "path": "analysis/o_motion_20260915/scene_disjoint_confirmation_population_v1.json",
+      "sha256": "5c2ef48a555a8d4a335652da23bb2ee778412ee0d0b5cb7078084f5fb3bdf938",
+      "bytes": 3147
+    },
+    {
+      "path": "analysis/o_motion_20260915/dense_material512_D_evidence_v1.json",
+      "sha256": "457035c58318d183c4d8df50f4452573af5eba829ff586801fc45129a09c833b",
+      "bytes": 7989
+    },
+    {
+      "path": "analysis/o_motion_20260915/dense_material512_D_physical_reference_v1.json",
+      "sha256": "1b6eba4f661df1db9d8f4a6acf27aa6d0292d4b4649823bacbaa887bc0d68488",
+      "bytes": 5350
+    },
+    {
+      "path": "analysis/o_motion_20260915/server_results/training/dense_material512_v1/D_train/complete.json",
+      "sha256": "3d174e34342b9c5b77a7ddbb8bd39e9870532b385ddf92126fc30ab6e35ccd06",
+      "bytes": 1500
+    },
+    {
+      "path": "analysis/o_motion_20260915/server_results/training/dense_material512_v1/D_evaluate/complete.json",
+      "sha256": "ec74a363046b9998865fac0c80a258f389aefa66eb05e5df31dc4ef94e1208dc",
+      "bytes": 674
+    },
+    {
+      "path": "analysis/o_motion_20260915/report_20260917_remote_readonly.json",
+      "sha256": "507505abad84d998945940b629132a629812257599786c41a4c2e2decf341543",
+      "bytes": 3927
+    },
+    {
+      "path": "analysis/o_motion_20260915/future_feature_residual_result_interpretation_v1.md",
+      "sha256": "c82020614153e0cad4435e0114b161020e502cb5859ae15d645b09d22dcb8aec",
+      "bytes": 12164
+    },
+    {
+      "path": "analysis/o_motion_20260915/object_state_velocity_assignment_结果与决策.md",
+      "sha256": "a2f94cc74493517c87a3339689150a3acd30f885004fd88da151cf5affdd9c9c",
+      "bytes": 3903
+    },
+    {
+      "path": "analysis/o_motion_20260915/research_notes/three_world_model_papers_20260917.md",
+      "sha256": "0f139093e8212ed7ee67dd9524b1908a3c78dd05e3f6cf63835780618edf09e1",
+      "bytes": 6614
+    },
+    {
+      "path": "analysis/o_motion_20260915/research_notes/jepa_wms_predictive_state_audit_20260917.md",
+      "sha256": "2a8c65aaf7d8d7f086b3c2af9221f2a9c26daa2608546f10a8e003ee109fab59",
+      "bytes": 7754
+    },
+    {
+      "path": "analysis/o_motion_20260915/native_visual_history_window_v1.py",
+      "sha256": "1e5288351b69ea6a9395038f02d6374f1ae976171813593bb5d63c65e43d8c03",
+      "bytes": 9754
+    },
+    {
+      "path": "analysis/o_motion_20260915/probe_native_visual_history_v1.py",
+      "sha256": "92076323fed0ffd158d4fb1b4b6db1cd171609ef2662e1245f46afc19486c3e7",
+      "bytes": 11381
+    }
+  ],
+  "report_checked_utc": "2026-09-17T12:53:23.599733+00:00",
+  "remote_status_checked_utc": "2026-09-17T12:42:52.506121+00:00"
+}

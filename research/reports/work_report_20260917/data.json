@@ -1,0 +1,991 @@
+{
+  "scope": "2026-09-14 to 2026-09-17; single seed 11; real results only",
+  "full5119": {
+    "M0": [
+      {
+        "horizon_s": 0.0,
+        "GMO_percent": 15.97238233958005
+      },
+      {
+        "horizon_s": 0.5,
+        "GMO_percent": 15.183460079271885
+      },
+      {
+        "horizon_s": 1.0,
+        "GMO_percent": 14.368490541172672
+      },
+      {
+        "horizon_s": 1.5,
+        "GMO_percent": 13.523121993891385
+      },
+      {
+        "horizon_s": 2.0,
+        "GMO_percent": 12.702430714989529
+      }
+    ],
+    "M0_fp32": [
+      {
+        "horizon_s": 0.0,
+        "GMO_percent": 15.972392996918572
+      },
+      {
+        "horizon_s": 0.5,
+        "GMO_percent": 15.183566267268004
+      },
+      {
+        "horizon_s": 1.0,
+        "GMO_percent": 14.368624206362902
+      },
+      {
+        "horizon_s": 1.5,
+        "GMO_percent": 13.523655221637982
+      },
+      {
+        "horizon_s": 2.0,
+        "GMO_percent": 12.703557930853947
+      }
+    ],
+    "native1": [
+      {
+        "horizon_s": 0.0,
+        "GMO_percent": 15.74467678984003
+      },
+      {
+        "horizon_s": 0.5,
+        "GMO_percent": 14.84090575871385
+      },
+      {
+        "horizon_s": 1.0,
+        "GMO_percent": 14.128764053841495
+      },
+      {
+        "horizon_s": 1.5,
+        "GMO_percent": 13.370355447097712
+      },
+      {
+        "horizon_s": 2.0,
+        "GMO_percent": 12.570559312846404
+      }
+    ],
+    "O": [
+      {
+        "horizon_s": 0.0,
+        "GMO_percent": 15.832813965391445
+      },
+      {
+        "horizon_s": 0.5,
+        "GMO_percent": 15.637147307536567
+      },
+      {
+        "horizon_s": 1.0,
+        "GMO_percent": 15.153522666550804
+      },
+      {
+        "horizon_s": 1.5,
+        "GMO_percent": 14.486571732776923
+      },
+      {
+        "horizon_s": 2.0,
+        "GMO_percent": 13.713929818989792
+      }
+    ]
+  },
+  "dev200": {
+    "O": {
+      "current_GMO_percent": 15.919135166218117,
+      "future_GMO_percent": 14.663996820993908,
+      "horizon_GMO_percent": [
+        15.919135166218117,
+        15.757836297017255,
+        15.131982961502526,
+        14.295167528202807,
+        13.471000497253046
+      ],
+      "future_FP": 13647997,
+      "future_FN": 3732899,
+      "future_macro_moving_recall_percent": 43.45212184451138,
+      "future_macro_stationary_recall_percent": 47.42531840759605,
+      "future_pooled_moving_recall_percent": 44.078172222147906,
+      "future_pooled_stationary_recall_percent": 47.390651218537755,
+      "arrival_IoU_percent": 8.123418932735992,
+      "vacating_IoU_percent": 9.981808766477277,
+      "own_current_persistence": {
+        "future_GMO_percent": 10.598536763751664,
+        "horizon_GMO_percent": [
+          12.4159497481417,
+          10.734508870106716,
+          9.85072993101423,
+          9.392958505744014
+        ],
+        "future_FP": 17568872,
+        "future_FN": 4163381,
+        "forecast_minus_persistence_GMO_pp": 4.065460057242245,
+        "forecast_minus_persistence_scene95CI_pp": [
+          3.339806199041039,
+          4.8707928254315345
+        ],
+        "derivation": "Exact marginal of saved GT/prediction joint t0-future transitions; all voxels valid at both endpoints, both native marginals rechecked",
+        "zero_displacement_interpretation": "T fixed-material zero transport gives current persistence; this identity does not apply to evolving J/D content"
+      }
+    },
+    "T": {
+      "current_GMO_percent": 14.290996288035718,
+      "future_GMO_percent": 9.287625843311162,
+      "horizon_GMO_percent": [
+        14.290996288035718,
+        11.777846259368925,
+        9.718882356726082,
+        8.306642146061726,
+        7.347132611087916
+      ],
+      "future_FP": 20657517,
+      "future_FN": 4242421,
+      "future_macro_moving_recall_percent": 30.23569378874941,
+      "future_macro_stationary_recall_percent": 42.1909552693141,
+      "future_pooled_moving_recall_percent": 30.68610613467956,
+      "future_pooled_stationary_recall_percent": 42.19988813423891,
+      "arrival_IoU_percent": 3.7571930647164633,
+      "vacating_IoU_percent": 8.454597886618059,
+      "own_current_persistence": {
+        "future_GMO_percent": 9.599875785520094,
+        "horizon_GMO_percent": [
+          11.179543583930073,
+          9.684389366014234,
+          8.971366170595724,
+          8.56420402154035
+        ],
+        "future_FP": 15065998,
+        "future_FN": 4645663,
+        "forecast_minus_persistence_GMO_pp": -0.31224994220893265,
+        "forecast_minus_persistence_scene95CI_pp": [
+          -0.6377951653246567,
+          0.04897955735693541
+        ],
+        "derivation": "Exact marginal of saved GT/prediction joint t0-future transitions; all voxels valid at both endpoints, both native marginals rechecked",
+        "zero_displacement_interpretation": "T fixed-material zero transport gives current persistence; this identity does not apply to evolving J/D content"
+      }
+    },
+    "J": {
+      "current_GMO_percent": 14.290996288035718,
+      "future_GMO_percent": 9.029113871325126,
+      "horizon_GMO_percent": [
+        14.290996288035718,
+        11.350022862889677,
+        9.353282676451201,
+        8.11195350002746,
+        7.301196445932175
+      ],
+      "future_FP": 22649491,
+      "future_FN": 4111000,
+      "future_macro_moving_recall_percent": 26.723749561832822,
+      "future_macro_stationary_recall_percent": 46.608541310023334,
+      "future_pooled_moving_recall_percent": 27.28814379045959,
+      "future_pooled_stationary_recall_percent": 46.59646823811426,
+      "arrival_IoU_percent": 3.01224565268624,
+      "vacating_IoU_percent": 7.721650371567529,
+      "own_current_persistence": {
+        "future_GMO_percent": 9.599875785520094,
+        "horizon_GMO_percent": [
+          11.179543583930073,
+          9.684389366014234,
+          8.971366170595724,
+          8.56420402154035
+        ],
+        "future_FP": 15065998,
+        "future_FN": 4645663,
+        "forecast_minus_persistence_GMO_pp": -0.5707619141949678,
+        "forecast_minus_persistence_scene95CI_pp": [
+          -0.8866121851299817,
+          -0.24613779977709446
+        ],
+        "derivation": "Exact marginal of saved GT/prediction joint t0-future transitions; all voxels valid at both endpoints, both native marginals rechecked",
+        "zero_displacement_interpretation": "T fixed-material zero transport gives current persistence; this identity does not apply to evolving J/D content"
+      }
+    },
+    "D": {
+      "current_GMO_percent": 14.290996288035718,
+      "future_GMO_percent": 8.246189326084142,
+      "horizon_GMO_percent": [
+        14.290996288035718,
+        10.513220409100937,
+        8.519393346555404,
+        7.385967546871061,
+        6.566176001809169
+      ],
+      "future_FP": 25464090,
+      "future_FN": 4140183,
+      "future_macro_moving_recall_percent": 21.227059730463782,
+      "future_macro_stationary_recall_percent": 48.49885088297686,
+      "future_pooled_moving_recall_percent": 21.662878175926604,
+      "future_pooled_stationary_recall_percent": 48.509436675988816,
+      "arrival_IoU_percent": 2.338079684182891,
+      "vacating_IoU_percent": 8.424770953728771,
+      "own_current_persistence": {
+        "future_GMO_percent": 9.599875785520094,
+        "horizon_GMO_percent": [
+          11.179543583930073,
+          9.684389366014234,
+          8.971366170595724,
+          8.56420402154035
+        ],
+        "future_FP": 15065998,
+        "future_FN": 4645663,
+        "forecast_minus_persistence_GMO_pp": -1.3536864594359521,
+        "forecast_minus_persistence_scene95CI_pp": [
+          -1.7133060406024536,
+          -1.0264992828659896
+        ],
+        "derivation": "Exact marginal of saved GT/prediction joint t0-future transitions; all voxels valid at both endpoints, both native marginals rechecked",
+        "zero_displacement_interpretation": "T fixed-material zero transport gives current persistence; this identity does not apply to evolving J/D content"
+      }
+    }
+  },
+  "dev_physical": {
+    "T": [
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "stationary",
+        "objects": 2080,
+        "candidate_EPE_XYZ_m": 0.23225453607602348,
+        "CRN_CV_EPE_XYZ_m": 0.044338192914390506,
+        "candidate_minus_CRN_CV_m": 0.18791634316163297,
+        "scene95CI_m": [
+          0.17480997873135257,
+          0.20343933708923348
+        ]
+      },
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "ambiguous",
+        "objects": 712,
+        "candidate_EPE_XYZ_m": 0.2693145718621221,
+        "CRN_CV_EPE_XYZ_m": 0.1409210440585596,
+        "candidate_minus_CRN_CV_m": 0.1283935278035625,
+        "scene95CI_m": [
+          0.1109576343343225,
+          0.14891427301037224
+        ]
+      },
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "moving",
+        "objects": 1397,
+        "candidate_EPE_XYZ_m": 1.2179769732871912,
+        "CRN_CV_EPE_XYZ_m": 0.8449931783824067,
+        "candidate_minus_CRN_CV_m": 0.3729837949047846,
+        "scene95CI_m": [
+          0.31018030722067896,
+          0.44436207064688305
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "stationary",
+        "objects": 2101,
+        "candidate_EPE_XYZ_m": 0.3461996056584408,
+        "CRN_CV_EPE_XYZ_m": 0.08573967426909822,
+        "candidate_minus_CRN_CV_m": 0.26045993138934265,
+        "scene95CI_m": [
+          0.22757837196639058,
+          0.3044958713651709
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "ambiguous",
+        "objects": 655,
+        "candidate_EPE_XYZ_m": 0.4269539090436035,
+        "CRN_CV_EPE_XYZ_m": 0.2570477777739154,
+        "candidate_minus_CRN_CV_m": 0.16990613126968804,
+        "scene95CI_m": [
+          0.13919220158589254,
+          0.20581517983637218
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "moving",
+        "objects": 1320,
+        "candidate_EPE_XYZ_m": 2.389888853108133,
+        "CRN_CV_EPE_XYZ_m": 1.6876250495250615,
+        "candidate_minus_CRN_CV_m": 0.7022638035830713,
+        "scene95CI_m": [
+          0.5809919609538098,
+          0.852890304928703
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "stationary",
+        "objects": 2124,
+        "candidate_EPE_XYZ_m": 0.4578968761246071,
+        "CRN_CV_EPE_XYZ_m": 0.1311296396155687,
+        "candidate_minus_CRN_CV_m": 0.32676723650903844,
+        "scene95CI_m": [
+          0.27190031906809164,
+          0.4015502255901041
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "ambiguous",
+        "objects": 567,
+        "candidate_EPE_XYZ_m": 0.5652767287130122,
+        "CRN_CV_EPE_XYZ_m": 0.3712723077757749,
+        "candidate_minus_CRN_CV_m": 0.19400442093723724,
+        "scene95CI_m": [
+          0.14210426483433847,
+          0.2581883008359522
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "moving",
+        "objects": 1269,
+        "candidate_EPE_XYZ_m": 3.6587676931544215,
+        "CRN_CV_EPE_XYZ_m": 2.540452867095954,
+        "candidate_minus_CRN_CV_m": 1.1183148260584677,
+        "scene95CI_m": [
+          0.9328419788891382,
+          1.350323497974584
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "stationary",
+        "objects": 2136,
+        "candidate_EPE_XYZ_m": 0.5714237070464734,
+        "CRN_CV_EPE_XYZ_m": 0.16973845184021608,
+        "candidate_minus_CRN_CV_m": 0.40168525520625725,
+        "scene95CI_m": [
+          0.3266416021771916,
+          0.5064839055313709
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "ambiguous",
+        "objects": 487,
+        "candidate_EPE_XYZ_m": 0.717384141177724,
+        "CRN_CV_EPE_XYZ_m": 0.5322217929276831,
+        "candidate_minus_CRN_CV_m": 0.1851623482500408,
+        "scene95CI_m": [
+          0.09869029725140788,
+          0.28830327630834635
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "moving",
+        "objects": 1226,
+        "candidate_EPE_XYZ_m": 4.960963116240936,
+        "CRN_CV_EPE_XYZ_m": 3.409315497861369,
+        "candidate_minus_CRN_CV_m": 1.551647618379568,
+        "scene95CI_m": [
+          1.2994358956300922,
+          1.869252947434195
+        ]
+      }
+    ],
+    "J": [
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "stationary",
+        "objects": 2080,
+        "candidate_EPE_XYZ_m": 0.16297319174361166,
+        "CRN_CV_EPE_XYZ_m": 0.044338192914390506,
+        "candidate_minus_CRN_CV_m": 0.11863499882922117,
+        "scene95CI_m": [
+          0.10919898691634287,
+          0.12794906366644343
+        ]
+      },
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "ambiguous",
+        "objects": 712,
+        "candidate_EPE_XYZ_m": 0.19848326532125765,
+        "CRN_CV_EPE_XYZ_m": 0.1409210440585596,
+        "candidate_minus_CRN_CV_m": 0.057562221262698055,
+        "scene95CI_m": [
+          0.046407270219258286,
+          0.06775785604793101
+        ]
+      },
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "moving",
+        "objects": 1397,
+        "candidate_EPE_XYZ_m": 1.349004407136437,
+        "CRN_CV_EPE_XYZ_m": 0.8449931783824067,
+        "candidate_minus_CRN_CV_m": 0.5040112287540304,
+        "scene95CI_m": [
+          0.42900486346503086,
+          0.5863177008630138
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "stationary",
+        "objects": 2101,
+        "candidate_EPE_XYZ_m": 0.27717264194146823,
+        "CRN_CV_EPE_XYZ_m": 0.08573967426909822,
+        "candidate_minus_CRN_CV_m": 0.19143296767237003,
+        "scene95CI_m": [
+          0.173248804917338,
+          0.21088271335723566
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "ambiguous",
+        "objects": 655,
+        "candidate_EPE_XYZ_m": 0.3403031286722991,
+        "CRN_CV_EPE_XYZ_m": 0.2570477777739154,
+        "candidate_minus_CRN_CV_m": 0.08325535089838372,
+        "scene95CI_m": [
+          0.06295019012111759,
+          0.10187774657799034
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "moving",
+        "objects": 1320,
+        "candidate_EPE_XYZ_m": 2.6156898939878515,
+        "CRN_CV_EPE_XYZ_m": 1.6876250495250615,
+        "candidate_minus_CRN_CV_m": 0.92806484446279,
+        "scene95CI_m": [
+          0.7856327868819608,
+          1.084100329484545
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "stationary",
+        "objects": 2124,
+        "candidate_EPE_XYZ_m": 0.3702523708098275,
+        "CRN_CV_EPE_XYZ_m": 0.1311296396155687,
+        "candidate_minus_CRN_CV_m": 0.23912273119425878,
+        "scene95CI_m": [
+          0.2109573768654295,
+          0.26958504841716924
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "ambiguous",
+        "objects": 567,
+        "candidate_EPE_XYZ_m": 0.4704079135201283,
+        "CRN_CV_EPE_XYZ_m": 0.3712723077757749,
+        "candidate_minus_CRN_CV_m": 0.09913560574435336,
+        "scene95CI_m": [
+          0.05924870236874416,
+          0.13840278227481984
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "moving",
+        "objects": 1269,
+        "candidate_EPE_XYZ_m": 3.906159320132625,
+        "CRN_CV_EPE_XYZ_m": 2.540452867095954,
+        "candidate_minus_CRN_CV_m": 1.365706453036671,
+        "scene95CI_m": [
+          1.1475327073540955,
+          1.6037774122327433
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "stationary",
+        "objects": 2136,
+        "candidate_EPE_XYZ_m": 0.44949283875624796,
+        "CRN_CV_EPE_XYZ_m": 0.16973845184021608,
+        "candidate_minus_CRN_CV_m": 0.2797543869160319,
+        "scene95CI_m": [
+          0.24395350317562906,
+          0.31888494539978596
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "ambiguous",
+        "objects": 487,
+        "candidate_EPE_XYZ_m": 0.6283329281087543,
+        "CRN_CV_EPE_XYZ_m": 0.5322217929276831,
+        "candidate_minus_CRN_CV_m": 0.09611113518107112,
+        "scene95CI_m": [
+          0.019845687674538752,
+          0.16666835085224088
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "moving",
+        "objects": 1226,
+        "candidate_EPE_XYZ_m": 5.205798278392906,
+        "CRN_CV_EPE_XYZ_m": 3.409315497861369,
+        "candidate_minus_CRN_CV_m": 1.7964827805315369,
+        "scene95CI_m": [
+          1.521494243606391,
+          2.105298060236848
+        ]
+      }
+    ],
+    "D": [
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "stationary",
+        "objects": 2080,
+        "candidate_EPE_XYZ_m": 0.16503016285660146,
+        "CRN_CV_EPE_XYZ_m": 0.044338192914390506,
+        "candidate_minus_CRN_CV_m": 0.12069196994221096,
+        "scene95CI_m": [
+          0.11057406128555053,
+          0.13219152503667897
+        ]
+      },
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "ambiguous",
+        "objects": 712,
+        "candidate_EPE_XYZ_m": 0.20765674211384183,
+        "CRN_CV_EPE_XYZ_m": 0.1409210440585596,
+        "candidate_minus_CRN_CV_m": 0.06673569805528222,
+        "scene95CI_m": [
+          0.05457654101252844,
+          0.07902863115427634
+        ]
+      },
+      {
+        "endpoint_index": 1,
+        "nominal_horizon_seconds": 0.5,
+        "group": "moving",
+        "objects": 1397,
+        "candidate_EPE_XYZ_m": 1.2148017709886483,
+        "CRN_CV_EPE_XYZ_m": 0.8449931783824067,
+        "candidate_minus_CRN_CV_m": 0.36980859260624155,
+        "scene95CI_m": [
+          0.30808681196596605,
+          0.4408556683226402
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "stationary",
+        "objects": 2101,
+        "candidate_EPE_XYZ_m": 0.30558623875326796,
+        "CRN_CV_EPE_XYZ_m": 0.08573967426909822,
+        "candidate_minus_CRN_CV_m": 0.21984656448416978,
+        "scene95CI_m": [
+          0.19382953046473164,
+          0.2530424979894576
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "ambiguous",
+        "objects": 655,
+        "candidate_EPE_XYZ_m": 0.384618423126999,
+        "CRN_CV_EPE_XYZ_m": 0.2570477777739154,
+        "candidate_minus_CRN_CV_m": 0.1275706453530836,
+        "scene95CI_m": [
+          0.10251658772285684,
+          0.156463061282841
+        ]
+      },
+      {
+        "endpoint_index": 2,
+        "nominal_horizon_seconds": 1.0,
+        "group": "moving",
+        "objects": 1320,
+        "candidate_EPE_XYZ_m": 2.3938268289935136,
+        "CRN_CV_EPE_XYZ_m": 1.6876250495250615,
+        "candidate_minus_CRN_CV_m": 0.7062017794684521,
+        "scene95CI_m": [
+          0.5907373009035319,
+          0.8499051070285225
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "stationary",
+        "objects": 2124,
+        "candidate_EPE_XYZ_m": 0.4353974821840748,
+        "CRN_CV_EPE_XYZ_m": 0.1311296396155687,
+        "candidate_minus_CRN_CV_m": 0.30426784256850614,
+        "scene95CI_m": [
+          0.258099235106492,
+          0.3653397225555942
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "ambiguous",
+        "objects": 567,
+        "candidate_EPE_XYZ_m": 0.5826973517976299,
+        "CRN_CV_EPE_XYZ_m": 0.3712723077757749,
+        "candidate_minus_CRN_CV_m": 0.211425044021855,
+        "scene95CI_m": [
+          0.15534422505246454,
+          0.2778133312640606
+        ]
+      },
+      {
+        "endpoint_index": 3,
+        "nominal_horizon_seconds": 1.5,
+        "group": "moving",
+        "objects": 1269,
+        "candidate_EPE_XYZ_m": 3.7426268383653354,
+        "CRN_CV_EPE_XYZ_m": 2.540452867095954,
+        "candidate_minus_CRN_CV_m": 1.2021739712693813,
+        "scene95CI_m": [
+          1.0214691190665155,
+          1.4298215142910873
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "stationary",
+        "objects": 2136,
+        "candidate_EPE_XYZ_m": 0.5720649411238921,
+        "CRN_CV_EPE_XYZ_m": 0.16973845184021608,
+        "candidate_minus_CRN_CV_m": 0.40232648928367604,
+        "scene95CI_m": [
+          0.33355890712111524,
+          0.49367260062150886
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "ambiguous",
+        "objects": 487,
+        "candidate_EPE_XYZ_m": 0.800892428852288,
+        "CRN_CV_EPE_XYZ_m": 0.5322217929276831,
+        "candidate_minus_CRN_CV_m": 0.26867063592460483,
+        "scene95CI_m": [
+          0.16957801686139387,
+          0.3813658087091839
+        ]
+      },
+      {
+        "endpoint_index": 4,
+        "nominal_horizon_seconds": 2.0,
+        "group": "moving",
+        "objects": 1226,
+        "candidate_EPE_XYZ_m": 5.22071403950195,
+        "CRN_CV_EPE_XYZ_m": 3.409315497861369,
+        "candidate_minus_CRN_CV_m": 1.8113985416405816,
+        "scene95CI_m": [
+          1.55091781918414,
+          2.1315392539923894
+        ]
+      }
+    ]
+  },
+  "T_train512_fit": {
+    "schema": "independent-material512-train-fit-audit-v1",
+    "status": "COMPLETE",
+    "anchors": 512,
+    "scenes": 256,
+    "verified_files": {
+      "protocol.json": "39dc766ca0b4a693f135c44b05f7b804de682860ece8d18c37dc5166473eb38c",
+      "manifest.json": "bb085cc8761296dee03f88ca9e70f9859db1dea80a5e934b8f2918c2c4f191e8",
+      "records.jsonl": "c2c428a2e481ce54102f9f7bfffb873b209817c23a27b8a0b913389954dacfb9",
+      "summary.json": "ca9609819d2660e0610b582a9f172ef52703e636439a040de3f7b778631c4dde"
+    },
+    "complete_sha256": "3c37e99f47633979d270e2c17241816350704735cc91d6b328bc7ee5ddeb9608",
+    "checkpoint_sha256": "495089d29554ccdf2d9d3edff131bc606de0f576254b0c8027f23f6386cdded3",
+    "parameter_sha256": "67047496fd52a7e2335507e491fe5279e08aa12e3565727fa28fd3ee9e89da36",
+    "recomputed_classification_scalars": 120042,
+    "current_GMO_percent": 16.505674362117922,
+    "future_GMO_percent": [
+      13.701747660390124,
+      11.26683500286668,
+      9.737665913485873,
+      8.607460523753428
+    ],
+    "future_macro_GMO_percent": 10.828427275124028,
+    "persistence": {
+      "matches_full_future_valid_domain": true,
+      "confusion": [
+        [
+          [
+            5353130816,
+            10719230
+          ],
+          [
+            2795762,
+            2063312
+          ]
+        ],
+        [
+          [
+            5352972497,
+            10970872
+          ],
+          [
+            2954081,
+            1811670
+          ]
+        ],
+        [
+          [
+            5352932900,
+            11105896
+          ],
+          [
+            2993678,
+            1676646
+          ]
+        ],
+        [
+          [
+            5352937967,
+            11205532
+          ],
+          [
+            2988611,
+            1577010
+          ]
+        ]
+      ],
+      "future_GMO_percent": [
+        13.2447794060252,
+        11.51244456958777,
+        10.627678873646538,
+        9.999332325290359
+      ],
+      "future_macro_GMO_percent": 11.346058793637466,
+      "forecast_same_domain_GMO_percent": [
+        13.701747660390124,
+        11.26683500286668,
+        9.737665913485873,
+        8.607460523753428
+      ],
+      "forecast_minus_persistence_pp": -0.5176315185134381
+    },
+    "physical": [
+      {
+        "horizon_seconds": 0.5,
+        "groups": {
+          "stationary": {
+            "objects": 5509,
+            "points": 953969,
+            "epe_object_sum": 1217.8548252612388,
+            "epe": 0.2210664050210998,
+            "magnitude_object_sum": 1178.0155738257256,
+            "magnitude": 0.2138347383963924,
+            "zero_epe_object_sum": 172.31958077776127,
+            "zero_epe": 0.03127964799015452
+          },
+          "ambiguous": {
+            "objects": 1875,
+            "points": 338682,
+            "epe_object_sum": 497.2077619193155,
+            "epe": 0.2651774730236349,
+            "magnitude_object_sum": 408.6104342253848,
+            "magnitude": 0.2179255649202052,
+            "zero_epe_object_sum": 246.6943154911303,
+            "zero_epe": 0.1315703015952695
+          },
+          "moving": {
+            "objects": 3870,
+            "points": 416816,
+            "epe_object_sum": 4500.296341541475,
+            "epe": 1.1628672717161435,
+            "magnitude_object_sum": 3436.222259718456,
+            "magnitude": 0.8879127286094202,
+            "zero_epe_object_sum": 6730.456964736338,
+            "zero_epe": 1.739136166598537
+          }
+        }
+      },
+      {
+        "horizon_seconds": 1.0,
+        "groups": {
+          "stationary": {
+            "objects": 5485,
+            "points": 948599,
+            "epe_object_sum": 1708.3516969946438,
+            "epe": 0.3114588326334811,
+            "magnitude_object_sum": 1611.736961148486,
+            "magnitude": 0.2938444778757495,
+            "zero_epe_object_sum": 335.0396589111813,
+            "zero_epe": 0.06108289132382521
+          },
+          "ambiguous": {
+            "objects": 1791,
+            "points": 336617,
+            "epe_object_sum": 731.5485616991496,
+            "epe": 0.4084581584026519,
+            "magnitude_object_sum": 535.0909826984889,
+            "magnitude": 0.29876660117168563,
+            "zero_epe_object_sum": 440.20887091517505,
+            "zero_epe": 0.24578943099674766
+          },
+          "moving": {
+            "objects": 3691,
+            "points": 389986,
+            "epe_object_sum": 8602.737021154398,
+            "epe": 2.3307334113124893,
+            "magnitude_object_sum": 8066.821054843826,
+            "magnitude": 2.185538080423686,
+            "zero_epe_object_sum": 13073.28600382049,
+            "zero_epe": 3.541936061723243
+          }
+        }
+      },
+      {
+        "horizon_seconds": 1.5,
+        "groups": {
+          "stationary": {
+            "objects": 5516,
+            "points": 960292,
+            "epe_object_sum": 2173.4212163866855,
+            "epe": 0.3940212502513933,
+            "magnitude_object_sum": 2005.7622587349356,
+            "magnitude": 0.36362622529639876,
+            "zero_epe_object_sum": 504.1538073122054,
+            "zero_epe": 0.09139844222483781
+          },
+          "ambiguous": {
+            "objects": 1548,
+            "points": 299416,
+            "epe_object_sum": 841.5453391231517,
+            "epe": 0.543633940002036,
+            "magnitude_object_sum": 582.7771877749918,
+            "magnitude": 0.37647105153423244,
+            "zero_epe_object_sum": 539.7745439231933,
+            "zero_epe": 0.3486915658418561
+          },
+          "moving": {
+            "objects": 3572,
+            "points": 380275,
+            "epe_object_sum": 12856.367617776858,
+            "epe": 3.5992070598479446,
+            "magnitude_object_sum": 12447.714247096697,
+            "magnitude": 3.4848024207997472,
+            "zero_epe_object_sum": 19130.948203856296,
+            "zero_epe": 5.355808567708929
+          }
+        }
+      },
+      {
+        "horizon_seconds": 2.0,
+        "groups": {
+          "stationary": {
+            "objects": 5513,
+            "points": 958645,
+            "epe_object_sum": 2674.4598779134326,
+            "epe": 0.48511878794003854,
+            "magnitude_object_sum": 2445.578500468193,
+            "magnitude": 0.44360212234140994,
+            "zero_epe_object_sum": 653.528212219288,
+            "zero_epe": 0.11854311848708289
+          },
+          "ambiguous": {
+            "objects": 1363,
+            "points": 275621,
+            "epe_object_sum": 922.257647914363,
+            "epe": 0.6766380395556588,
+            "magnitude_object_sum": 608.8297699136984,
+            "magnitude": 0.4466836169579592,
+            "zero_epe_object_sum": 610.3640547422252,
+            "zero_epe": 0.4478092844770545
+          },
+          "moving": {
+            "objects": 3456,
+            "points": 373931,
+            "epe_object_sum": 16747.1181954164,
+            "epe": 4.8458096630255785,
+            "magnitude_object_sum": 16359.11467890807,
+            "magnitude": 4.733540126998863,
+            "zero_epe_object_sum": 24605.42614406033,
+            "zero_epe": 7.1196256203878265
+          }
+        }
+      }
+    ],
+    "optimizer_updates": 0,
+    "caveat": "Training-set fit of one fixed T checkpoint; no O training comparison, no generalization or convergence claim. Raw predictions not independently rerun."
+  },
+  "external_train16_XY_EPE_2s": {
+    "source": "delta_dense_history_train16_结果与研究决策.md",
+    "population": "16 train anchors / 8 scenes; moving 137, stationary 184 anchor-instances",
+    "rows": [
+      [
+        "CRN-CV",
+        3.022346,
+        0.092182
+      ],
+      [
+        "CV+D (0.5 m/s)",
+        2.737708,
+        0.101027
+      ],
+      [
+        "CV+RAFT (2 frames)",
+        3.294486,
+        0.390325
+      ],
+      [
+        "CV+DELTA (2 frames)",
+        2.997021,
+        0.266921
+      ],
+      [
+        "CV+DELTA (dense endpoints)",
+        2.898934,
+        0.188692
+      ],
+      [
+        "CV+DELTA (dense LSQ)",
+        2.893744,
+        0.188366
+      ]
+    ]
+  },
+  "server_status": {
+    "checked_utc": "2026-09-17T12:42:52.506121+00:00",
+    "sequence": "EXITED_ZERO",
+    "D_train": "COMPLETE_DENSE_MATERIAL512_TRAIN",
+    "D_evaluation": "COMPLETE_MATERIAL512_DEV200",
+    "D_aggregation_audit": "PASS_COMPLETED_RECORD_AGGREGATION_AUDIT",
+    "D_physical_audit": "PASS_SAME_SOURCE_PHYSICAL_COMPARISON",
+    "H1_preflight": "source implemented; no real forward completion receipt"
+  }
+}

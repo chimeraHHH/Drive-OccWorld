@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "pages": 9,
+  "verified_source_files": 26,
+  "all_source_hashes_match": true,
+  "critical_values_present": true,
+  "no_overfull_or_missing_glyphs": true,
+  "unresolved_references": false,
+  "visual_review": "All initial pages inspected as a contact sheet; final title, dense-result and visual-history pages inspected; removed a spill page containing only an evidence note.",
+  "independent_review": "D/T/J source records and report claims checked by a separate agent; no blocking discrepancy.",
+  "charts": "3, real aggregated results only",
+  "pdf_sha256": "e8ff7a98a41e01a4cbb56792475ff8007a88360dbe915fbf0a0289da68ab6b1a"
+}
