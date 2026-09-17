@@ -2909,8 +2909,8 @@
     {
       "source": "analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md",
       "destination": "research/analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md",
-      "bytes": 2404,
-      "sha256": "10c7c3f2232979b069240e1b8546dc2c897c0dc6ec35fba9503ca21c120c32b1"
+      "bytes": 3004,
+      "sha256": "f6f71c6cf0f2694b7b89a1016b8db9c6d5e1f80d805e2cecc4cc6a05b3ecd8d7"
     },
     {
       "source": "analysis/o_motion_20260915/research_notes/fixed_D_coverage_complementarity_feasibility_v1.md",
@@ -3381,6 +3381,12 @@
       "sha256": "3b0822c7d4c9218211dfec7c7d6854fd67b28f9b43640134dfe2228690a2c40e"
     },
     {
+      "source": "analysis/o_motion_20260915/summarize_dense_state_learning_curve_v1.py",
+      "destination": "research/analysis/o_motion_20260915/summarize_dense_state_learning_curve_v1.py",
+      "bytes": 7909,
+      "sha256": "90c0396a82f2d73e598353761820c049ffa9122e767e6456393c038a776d3b9a"
+    },
+    {
       "source": "analysis/o_motion_20260915/summarize_future_state_common_v1.py",
       "destination": "research/analysis/o_motion_20260915/summarize_future_state_common_v1.py",
       "bytes": 9951,
@@ -3707,8 +3713,14 @@
     {
       "source": "analysis/o_motion_20260915/研究推进与实验约定.md",
       "destination": "research/analysis/o_motion_20260915/研究推进与实验约定.md",
-      "bytes": 10058,
-      "sha256": "6bd894909d12b787dbd10fad1d81d81e26fd16961f2cae23175712b3d419ee51"
+      "bytes": 10602,
+      "sha256": "752d4c39962417921a06f5831d72d284c63aabb3a9b583d20e1d5ab7165bf831"
+    },
+    {
+      "source": "analysis/o_motion_20260915/雷达动态先验与视觉历史效率_实验计划.md",
+      "destination": "research/analysis/o_motion_20260915/雷达动态先验与视觉历史效率_实验计划.md",
+      "bytes": 7052,
+      "sha256": "776c5519c6d68b7788dffca1af8b6770840994a028e9170fbc70f6870e0667e1"
     },
     {
       "source": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py",
@@ -3752,6 +3764,8 @@
     "analysis/o_motion_20260915/crn_train512_dispatch_v1.py",
     "analysis/o_motion_20260915/crn_train512_dispatch_v2.py",
     "analysis/o_motion_20260915/current_research_state.json",
+    "analysis/o_motion_20260915/dense_state_learning_curve_dispatch_v1.json",
+    "analysis/o_motion_20260915/dense_state_learning_curve_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_task_state_audit_remote_readonly_v2.json",
     "analysis/o_motion_20260915/dense_task_state_fit_dispatch_receipt_v1.json",
     "analysis/o_motion_20260915/dense_task_state_fit_dispatch_receipt_v2.json",
