@@ -1557,6 +1557,60 @@
       "sha256": "027318e5eb2fbdc956f598f31e6deb07105c6b4aeb6c83540ec969e7b6f30cda"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_state_cross_readout_aggregate_audit_v2.json",
+      "destination": "research/analysis/o_motion_20260915/dense_state_cross_readout_aggregate_audit_v2.json",
+      "bytes": 1199,
+      "sha256": "cd81f458ea5dccd06b2dd8adc4f9d7ddeab70b89f4bf0a0822457fc89a52f622"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_cross_readout_v1.py",
+      "destination": "research/analysis/o_motion_20260915/dense_state_cross_readout_v1.py",
+      "bytes": 8541,
+      "sha256": "c6b73275872ff11e4b725bbd0ec7f6c991da254a88595dadbcf1a78b99e76f39"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_cross_readout_v2.json",
+      "destination": "research/analysis/o_motion_20260915/dense_state_cross_readout_v2.json",
+      "bytes": 77051,
+      "sha256": "144cc8a51839381d082028fb00132e278ca87ec8fcfb3c8b27b483049032a201"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_cross_readout_v2.py",
+      "destination": "research/analysis/o_motion_20260915/dense_state_cross_readout_v2.py",
+      "bytes": 9015,
+      "sha256": "752e48d894bc90de9819bcd8e2f377392bb69d967fc60b6d1a4c08c6a44baf69"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/aggregate_audit.json",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/aggregate_audit.json",
+      "bytes": 13481,
+      "sha256": "28d6e6f84e475324ae1dcdfea9a1fbfb749402775255381d2eeb6861ccd80aa7"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.csv",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.csv",
+      "bytes": 3556,
+      "sha256": "7f0e0066ca35514176cc18f8e659d854952496010daea22c892d44f1d0232d00"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.pdf",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.pdf",
+      "bytes": 30822,
+      "sha256": "a75ef8b429e32bf1f9df67ecc28d146c4482c98b9b56986a4cd72fe22cd8c82e"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.png",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.png",
+      "bytes": 181544,
+      "sha256": "4dc183e90df9f30d078146038bc7ebe13aea3be65a44ffe824e0fa38f953550c"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_evidence_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_evidence_v1.json",
+      "bytes": 2249,
+      "sha256": "cbdc407abbd766ee6c5b72b732f0505715927b81d255e41ae2f84484c7820001"
+    },
+    {
       "source": "analysis/o_motion_20260915/dense_state_learning_curve_protocol_v1.json",
       "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_protocol_v1.json",
       "bytes": 5814,
@@ -1567,6 +1621,12 @@
       "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_v1.py",
       "bytes": 16745,
       "sha256": "ecaf219770a8bf2cf726065796c3818e99305baf7e5aa4c2a909d742416bcf00"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_state_learning_curve_v1_结果与决策.md",
+      "destination": "research/analysis/o_motion_20260915/dense_state_learning_curve_v1_结果与决策.md",
+      "bytes": 8960,
+      "sha256": "09c43cfca88cc7bbff5b23862ba660cec709edea5994674ca10cbe38331a2b47"
     },
     {
       "source": "analysis/o_motion_20260915/dense_task_state_fit_evidence_v2.json",
@@ -3764,6 +3824,10 @@
     "analysis/o_motion_20260915/crn_train512_dispatch_v1.py",
     "analysis/o_motion_20260915/crn_train512_dispatch_v2.py",
     "analysis/o_motion_20260915/current_research_state.json",
+    "analysis/o_motion_20260915/dense_state_cross_readout_dispatch_v1.json",
+    "analysis/o_motion_20260915/dense_state_cross_readout_dispatch_v2.json",
+    "analysis/o_motion_20260915/dense_state_cross_readout_remote_readonly_terminal_v2.json",
+    "analysis/o_motion_20260915/dense_state_cross_readout_remote_readonly_v2.json",
     "analysis/o_motion_20260915/dense_state_learning_curve_dispatch_v1.json",
     "analysis/o_motion_20260915/dense_state_learning_curve_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_task_state_audit_remote_readonly_v2.json",

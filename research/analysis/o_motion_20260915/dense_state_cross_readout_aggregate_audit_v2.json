@@ -1,0 +1,32 @@
+{
+  "status": "PASS_CROSS_READOUT_AGGREGATION_AND_NATIVE_DETERMINISTIC_PARITY",
+  "source_sha256": "144cc8a51839381d082028fb00132e278ca87ec8fcfb3c8b27b483049032a201",
+  "aggregated_scalars": 96,
+  "max_absolute_aggregate_error": 0.0,
+  "all_16_count_matrices_exact": true,
+  "same_gt_denominators": true,
+  "same_sample_order": true,
+  "native_deterministic_logit_max_abs": 0,
+  "parameters_unchanged": true,
+  "comparison_to_original_nondeterministic_learning_curve": {
+    "P": {
+      "same_histogram": false,
+      "max_absolute_hist_cell_delta": 1,
+      "absolute_hist_cell_delta_sum": 2,
+      "future_iou_delta_pp": 1.0572565739552786e-07
+    },
+    "J": {
+      "same_histogram": true,
+      "max_absolute_hist_cell_delta": 0,
+      "absolute_hist_cell_delta_sum": 0,
+      "future_iou_delta_pp": 0.0
+    },
+    "D": {
+      "same_histogram": true,
+      "max_absolute_hist_cell_delta": 0,
+      "absolute_hist_cell_delta_sum": 0,
+      "future_iou_delta_pp": 0.0
+    }
+  },
+  "limitation": "Aggregate recomputation; native versus reconstructed logits exact only within deterministic v2 audit. Original training-run P histogram differs slightly; no claim of bitwise original-run parity."
+}

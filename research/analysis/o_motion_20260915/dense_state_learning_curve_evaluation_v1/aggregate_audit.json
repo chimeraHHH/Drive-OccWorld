@@ -1,0 +1,324 @@
+{
+  "status": "VERIFIED_TRAIN4_LEARNING_CURVE_AGGREGATES",
+  "source_complete_sha256": "34828150c3c532e1d48111e32c879cc25e6c3167a82a75929624f8d661aec402",
+  "aggregated_scalars": 648,
+  "max_abs_error": 0.0,
+  "same_gt_denominators": true,
+  "frozen_t0_hist": true,
+  "same_initial_parameters": true,
+  "update_order_verified": true,
+  "checkpoint_selection": false,
+  "scope": "same four training samples only; no O or held-out comparison",
+  "rows": [
+    {
+      "arm": "P",
+      "update": 0,
+      "train_future_iou_percent": 6.606961803533378,
+      "zero_address_iou_percent": 6.606961803533378,
+      "reverse_address_iou_percent": 6.606961803533378,
+      "moving2s_epe_m": 11.610731684460564,
+      "moving2s_predicted_magnitude_m": 0.0,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.019072275969982455,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4992067515850067,
+      "physical_loss_mean": 0.9396656900644302,
+      "occupancy_gradient_norm_mean": 0.39134279699979824,
+      "weighted_physical_gradient_norm_mean": 0.04615532776084148,
+      "dynamic_gradient_cosine_mean": 0.03168116076078014,
+      "velocity_gradient_cosine_mean": 0.05283455965426971
+    },
+    {
+      "arm": "P",
+      "update": 32,
+      "train_future_iou_percent": 6.350082029671798,
+      "zero_address_iou_percent": 5.684281180166784,
+      "reverse_address_iou_percent": 5.195879369104684,
+      "moving2s_epe_m": 10.884549088737238,
+      "moving2s_predicted_magnitude_m": 0.9733155843863441,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.3351650344043051,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.5075976997613907,
+      "physical_loss_mean": 0.8437361046671867,
+      "occupancy_gradient_norm_mean": 1.1372245581200673,
+      "weighted_physical_gradient_norm_mean": 0.12380205745398955,
+      "dynamic_gradient_cosine_mean": 0.007189579265748428,
+      "velocity_gradient_cosine_mean": 0.01986069993913961
+    },
+    {
+      "arm": "P",
+      "update": 128,
+      "train_future_iou_percent": 2.9406839170175507,
+      "zero_address_iou_percent": 2.2364419185018405,
+      "reverse_address_iou_percent": 1.8543587224100437,
+      "moving2s_epe_m": 4.849157012541436,
+      "moving2s_predicted_magnitude_m": 7.710036189459534,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.41668013624306255,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.6467266082763672,
+      "physical_loss_mean": 0.36996923573315144,
+      "occupancy_gradient_norm_mean": 6.000726185062771,
+      "weighted_physical_gradient_norm_mean": 0.1855150016120226,
+      "dynamic_gradient_cosine_mean": -0.06812294125583787,
+      "velocity_gradient_cosine_mean": -0.015869076991805238
+    },
+    {
+      "arm": "P",
+      "update": 512,
+      "train_future_iou_percent": 2.8628786579892074,
+      "zero_address_iou_percent": 2.0003408600249872,
+      "reverse_address_iou_percent": 1.632116228544996,
+      "moving2s_epe_m": 0.6757689879696744,
+      "moving2s_predicted_magnitude_m": 11.29492457652674,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.26557521316962257,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.6831119209527969,
+      "physical_loss_mean": 0.05027954955585301,
+      "occupancy_gradient_norm_mean": 6.606302720746885,
+      "weighted_physical_gradient_norm_mean": 0.14938596942397636,
+      "dynamic_gradient_cosine_mean": 0.059916413039889475,
+      "velocity_gradient_cosine_mean": -0.01233704030051333
+    },
+    {
+      "arm": "J",
+      "update": 0,
+      "train_future_iou_percent": 6.606961803533378,
+      "zero_address_iou_percent": 6.606961803533378,
+      "reverse_address_iou_percent": 6.606961803533378,
+      "moving2s_epe_m": 11.610731684460564,
+      "moving2s_predicted_magnitude_m": 0.0,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.019072275969982455,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4992067366838455,
+      "physical_loss_mean": 0.9396656602621078,
+      "occupancy_gradient_norm_mean": 0.391342826297843,
+      "weighted_physical_gradient_norm_mean": 0.04615532776084148,
+      "dynamic_gradient_cosine_mean": 0.03168111969886032,
+      "velocity_gradient_cosine_mean": 0.052834504811981806
+    },
+    {
+      "arm": "J",
+      "update": 32,
+      "train_future_iou_percent": 10.818601236591432,
+      "zero_address_iou_percent": 9.784165401642367,
+      "reverse_address_iou_percent": 8.91023236715,
+      "moving2s_epe_m": 11.447391950338362,
+      "moving2s_predicted_magnitude_m": 0.3669188327476493,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.2605706509459447,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4596719369292259,
+      "physical_loss_mean": 0.9166547507047653,
+      "occupancy_gradient_norm_mean": 0.2938040417683037,
+      "weighted_physical_gradient_norm_mean": 0.0689441688704639,
+      "dynamic_gradient_cosine_mean": -0.032976112224253076,
+      "velocity_gradient_cosine_mean": -0.09317049814274281
+    },
+    {
+      "arm": "J",
+      "update": 128,
+      "train_future_iou_percent": 17.402472649379945,
+      "zero_address_iou_percent": 14.207760461550556,
+      "reverse_address_iou_percent": 11.385409921470245,
+      "moving2s_epe_m": 10.427357987853316,
+      "moving2s_predicted_magnitude_m": 1.4828167858400163,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.44891652781220776,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.42860621958971024,
+      "physical_loss_mean": 0.7812776975333691,
+      "occupancy_gradient_norm_mean": 0.35622168915787433,
+      "weighted_physical_gradient_norm_mean": 0.1180573723560707,
+      "dynamic_gradient_cosine_mean": -3.809538438339852e-05,
+      "velocity_gradient_cosine_mean": -0.12192211699536157
+    },
+    {
+      "arm": "J",
+      "update": 512,
+      "train_future_iou_percent": 22.093264055624267,
+      "zero_address_iou_percent": 10.249767051059234,
+      "reverse_address_iou_percent": 6.3746223265453885,
+      "moving2s_epe_m": 2.120554774279441,
+      "moving2s_predicted_magnitude_m": 10.355783637052577,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.5479297597562153,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4056449383497238,
+      "physical_loss_mean": 0.18810645584017038,
+      "occupancy_gradient_norm_mean": 0.3985053915497573,
+      "weighted_physical_gradient_norm_mean": 0.24211503571692256,
+      "dynamic_gradient_cosine_mean": 0.08246900958886456,
+      "velocity_gradient_cosine_mean": -0.03308181057386496
+    },
+    {
+      "arm": "D",
+      "update": 0,
+      "train_future_iou_percent": 6.606961803533378,
+      "zero_address_iou_percent": 6.606961803533378,
+      "reverse_address_iou_percent": 6.606961803533378,
+      "moving2s_epe_m": 11.610731684460564,
+      "moving2s_predicted_magnitude_m": 0.0,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.019072275969982455,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4992067366838455,
+      "physical_loss_mean": 0.9396656602621078,
+      "occupancy_gradient_norm_mean": 0.30025699611541645,
+      "weighted_physical_gradient_norm_mean": 0.04615532776084148,
+      "dynamic_gradient_cosine_mean": 0.0,
+      "velocity_gradient_cosine_mean": null
+    },
+    {
+      "arm": "D",
+      "update": 32,
+      "train_future_iou_percent": 10.140512084686595,
+      "zero_address_iou_percent": 10.140512084686595,
+      "reverse_address_iou_percent": 10.140512084686595,
+      "moving2s_epe_m": 11.391783999681795,
+      "moving2s_predicted_magnitude_m": 0.41209586727707703,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.32067615441180936,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4635258689522743,
+      "physical_loss_mean": 0.9008298069238663,
+      "occupancy_gradient_norm_mean": 0.28549276539198076,
+      "weighted_physical_gradient_norm_mean": 0.0581573202556607,
+      "dynamic_gradient_cosine_mean": -0.03147268314474179,
+      "velocity_gradient_cosine_mean": null
+    },
+    {
+      "arm": "D",
+      "update": 128,
+      "train_future_iou_percent": 16.885572781577267,
+      "zero_address_iou_percent": 16.885572781577267,
+      "reverse_address_iou_percent": 16.885572781577267,
+      "moving2s_epe_m": 10.138417802721257,
+      "moving2s_predicted_magnitude_m": 1.7682069675882328,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.4388052426842267,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4293726459145546,
+      "physical_loss_mean": 0.7435217164456844,
+      "occupancy_gradient_norm_mean": 0.26097514018843077,
+      "weighted_physical_gradient_norm_mean": 0.13379923755784068,
+      "dynamic_gradient_cosine_mean": -0.0999773403858446,
+      "velocity_gradient_cosine_mean": null
+    },
+    {
+      "arm": "D",
+      "update": 512,
+      "train_future_iou_percent": 20.23347083629287,
+      "zero_address_iou_percent": 20.23347083629287,
+      "reverse_address_iou_percent": 20.23347083629287,
+      "moving2s_epe_m": 1.7738254275821785,
+      "moving2s_predicted_magnitude_m": 10.624133863783204,
+      "zero_moving2s_epe_m": 11.610731684460564,
+      "stationary2s_epe_m": 0.5155067811432977,
+      "zero_stationary2s_epe_m": 0.019072275969982455,
+      "occupancy_loss_mean": 0.4069298356771469,
+      "physical_loss_mean": 0.14783854596316814,
+      "occupancy_gradient_norm_mean": 0.24696571195650754,
+      "weighted_physical_gradient_norm_mean": 0.4425660791296867,
+      "dynamic_gradient_cosine_mean": 0.1823975882361897,
+      "velocity_gradient_cosine_mean": null
+    }
+  ],
+  "update_statistics": {
+    "P": {
+      "dynamics.": {
+        "first_nonzero_gradient_step": 2,
+        "update_norm_mean": 0.01627982958552086,
+        "update_norm_sum": 8.33527274778668,
+        "includes_adamw_weight_decay": true
+      },
+      "content_increment.": {
+        "first_nonzero_gradient_step": 2,
+        "update_norm_mean": 0.006365744271940516,
+        "update_norm_sum": 3.259261067233544,
+        "includes_adamw_weight_decay": true
+      },
+      "velocity.": {
+        "first_nonzero_gradient_step": 1,
+        "update_norm_mean": 0.0032743019075830385,
+        "update_norm_sum": 1.6764425766825157,
+        "includes_adamw_weight_decay": true
+      }
+    },
+    "J": {
+      "dynamics.": {
+        "first_nonzero_gradient_step": 2,
+        "update_norm_mean": 0.01534423820257238,
+        "update_norm_sum": 7.856249959717058,
+        "includes_adamw_weight_decay": true
+      },
+      "content_increment.": {
+        "first_nonzero_gradient_step": 1,
+        "update_norm_mean": 0.005554073439082997,
+        "update_norm_sum": 2.8436856008104945,
+        "includes_adamw_weight_decay": true
+      },
+      "velocity.": {
+        "first_nonzero_gradient_step": 1,
+        "update_norm_mean": 0.004821666719572917,
+        "update_norm_sum": 2.468693360421334,
+        "includes_adamw_weight_decay": true
+      }
+    },
+    "D": {
+      "dynamics.": {
+        "first_nonzero_gradient_step": 2,
+        "update_norm_mean": 0.015168861000561959,
+        "update_norm_sum": 7.766456832287722,
+        "includes_adamw_weight_decay": true
+      },
+      "content_increment.": {
+        "first_nonzero_gradient_step": 1,
+        "update_norm_mean": 0.00546809456799374,
+        "update_norm_sum": 2.799664418812795,
+        "includes_adamw_weight_decay": true
+      },
+      "velocity.": {
+        "first_nonzero_gradient_step": 1,
+        "update_norm_mean": 0.004581235957164138,
+        "update_norm_sum": 2.345592810068039,
+        "includes_adamw_weight_decay": true
+      }
+    }
+  },
+  "seconds": 701.9881365500041,
+  "peak_allocated_gib": 3.4427127838134766,
+  "parameter_counts": {
+    "P": {
+      "initial_parameters_sha256": "ece195d1f15faf8a1abcfdf2a09ac9833de1f6d26d45170006671822e49185e3",
+      "frozen_sha256": {
+        "encoder": "1035ad5714716985b95c2cbdc633767ac4854e3d0a876630ddcae054855012c9",
+        "decoder": "7fdd32438f89d5e99ab18bab9f2f304d098c156fea1d0ec456d6a21163e7a382"
+      },
+      "trainable_parameters": 52720,
+      "all_parameters": 107458
+    },
+    "J": {
+      "initial_parameters_sha256": "ece195d1f15faf8a1abcfdf2a09ac9833de1f6d26d45170006671822e49185e3",
+      "frozen_sha256": {
+        "encoder": "1035ad5714716985b95c2cbdc633767ac4854e3d0a876630ddcae054855012c9",
+        "decoder": "7fdd32438f89d5e99ab18bab9f2f304d098c156fea1d0ec456d6a21163e7a382"
+      },
+      "trainable_parameters": 52720,
+      "all_parameters": 107458
+    },
+    "D": {
+      "initial_parameters_sha256": "ece195d1f15faf8a1abcfdf2a09ac9833de1f6d26d45170006671822e49185e3",
+      "frozen_sha256": {
+        "encoder": "1035ad5714716985b95c2cbdc633767ac4854e3d0a876630ddcae054855012c9",
+        "decoder": "7fdd32438f89d5e99ab18bab9f2f304d098c156fea1d0ec456d6a21163e7a382"
+      },
+      "trainable_parameters": 52720,
+      "all_parameters": 107458
+    }
+  },
+  "source_sha256": "90c0396a82f2d73e598353761820c049ffa9122e767e6456393c038a776d3b9a"
+}

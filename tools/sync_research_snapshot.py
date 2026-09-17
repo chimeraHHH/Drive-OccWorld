@@ -51,6 +51,12 @@ def main():
     for filename in ('complete.json', 'summary.json'):
         if (p / filename).is_file():
             selected.add(p / filename)
+    # Explicit, aggregate-only learning-curve artifacts; no arrays or weights.
+    p = workspace / 'analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1'
+    for filename in ('learning_curves.csv', 'aggregate_audit.json',
+                     'learning_curves.png', 'learning_curves.pdf'):
+        if (p / filename).is_file():
+            selected.add(p / filename)
     # The actual P2 integration, including its imported module and focused test.
     overlays = (
         'projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py',
@@ -67,7 +73,13 @@ def main():
     for src, dest in pairs:
         assert src.is_file() and not src.is_symlink(), src
         data = src.read_bytes()
-        text = data.decode('utf-8')
+        if src.suffix in ('.png', '.pdf'):
+            assert src.name in ('learning_curves.png', 'learning_curves.pdf')
+            assert len(data) < 2_000_000
+            assert data.startswith(b'\x89PNG\r\n\x1a\n' if src.suffix == '.png' else b'%PDF-')
+            text = data.decode('latin-1')
+        else:
+            text = data.decode('utf-8')
         assert not secret.search(text), f'Credential-like content: {src.name}'
         if src.suffix == '.py':
             ast.parse(text, filename=src.name)

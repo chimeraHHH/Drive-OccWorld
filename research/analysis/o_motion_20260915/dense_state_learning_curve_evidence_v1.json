@@ -1,0 +1,63 @@
+{
+  "status": "COMPLETE_TRAIN4_CURVES_AND_FIXED_CROSS_READOUT",
+  "scope": "same four training samples; no held-out or O comparison",
+  "learning_curves": {
+    "complete_sha256": "34828150c3c532e1d48111e32c879cc25e6c3167a82a75929624f8d661aec402",
+    "optimizer_updates": 1536,
+    "seconds": 701.9881365500041,
+    "peak_allocated_gib": 3.4427127838134766,
+    "aggregate_scalars": 648,
+    "max_error": 0.0
+  },
+  "cross_readout": {
+    "status": "PASS_CROSS_READOUT_AGGREGATION_AND_NATIVE_DETERMINISTIC_PARITY",
+    "source_sha256": "144cc8a51839381d082028fb00132e278ca87ec8fcfb3c8b27b483049032a201",
+    "aggregated_scalars": 96,
+    "max_absolute_aggregate_error": 0.0,
+    "all_16_count_matrices_exact": true,
+    "same_gt_denominators": true,
+    "same_sample_order": true,
+    "native_deterministic_logit_max_abs": 0,
+    "parameters_unchanged": true,
+    "comparison_to_original_nondeterministic_learning_curve": {
+      "P": {
+        "same_histogram": false,
+        "max_absolute_hist_cell_delta": 1,
+        "absolute_hist_cell_delta_sum": 2,
+        "future_iou_delta_pp": 1.0572565739552786e-07
+      },
+      "J": {
+        "same_histogram": true,
+        "max_absolute_hist_cell_delta": 0,
+        "absolute_hist_cell_delta_sum": 0,
+        "future_iou_delta_pp": 0.0
+      },
+      "D": {
+        "same_histogram": true,
+        "max_absolute_hist_cell_delta": 0,
+        "absolute_hist_cell_delta_sum": 0,
+        "future_iou_delta_pp": 0.0
+      }
+    },
+    "limitation": "Aggregate recomputation; native versus reconstructed logits exact only within deterministic v2 audit. Original training-run P histogram differs slightly; no claim of bitwise original-run parity."
+  },
+  "processes": {
+    "dense_state_learning_curve_v1": {
+      "status": "EXITED_ZERO",
+      "runner_exists": false,
+      "child_exists": false
+    },
+    "dense_state_cross_readout_v1": {
+      "status": "FAILED",
+      "runner_exists": false,
+      "child_exists": false
+    },
+    "dense_state_cross_readout_v2": {
+      "runner_exists": false,
+      "child_exists": false,
+      "status": "EXITED_ZERO"
+    }
+  },
+  "report": "dense_state_learning_curve_v1_\u7ed3\u679c\u4e0e\u51b3\u7b56.md",
+  "verified_utc": "2026-09-17T04:11:33.830376+00:00"
+}
