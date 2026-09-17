@@ -1041,6 +1041,12 @@
       "sha256": "2dceb5a3c57882de34022c1899c7032cb9fa03604ff4d64a034fc5dccc5268f5"
     },
     {
+      "source": "analysis/o_motion_20260915/audit_dense_material512_results_v1.py",
+      "destination": "research/analysis/o_motion_20260915/audit_dense_material512_results_v1.py",
+      "bytes": 14608,
+      "sha256": "b14cd01bd9be2d3b4e91da03e17b96ced2ea6e0e111ef4d5756a66d4583dd8f0"
+    },
+    {
       "source": "analysis/o_motion_20260915/audit_fixed_speed_routing_dev_saved_vectors_v1.py",
       "destination": "research/analysis/o_motion_20260915/audit_fixed_speed_routing_dev_saved_vectors_v1.py",
       "bytes": 10472,
@@ -1267,6 +1273,12 @@
       "destination": "research/analysis/o_motion_20260915/common_output_readout_probe_v1.py",
       "bytes": 26631,
       "sha256": "4f134c29bff2ef3d97e0c486150595f3435a9fb6b0663551bf4e982a063c77c4"
+    },
+    {
+      "source": "analysis/o_motion_20260915/compare_material512_physical_reference_v1.py",
+      "destination": "research/analysis/o_motion_20260915/compare_material512_physical_reference_v1.py",
+      "bytes": 5014,
+      "sha256": "96dfc9de9b3ad45070d608ded57f89a6958f1693f6ef6f6fbfc22bf967764a01"
     },
     {
       "source": "analysis/o_motion_20260915/connected_motion_analysis_source_bindings_v2.json",
@@ -1585,6 +1597,24 @@
       "destination": "research/analysis/o_motion_20260915/delta_vs_raft_source_matching_audit_v1.json",
       "bytes": 359,
       "sha256": "027318e5eb2fbdc956f598f31e6deb07105c6b4aeb6c83540ec969e7b6f30cda"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_T_evidence_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_T_evidence_v1.json",
+      "bytes": 7993,
+      "sha256": "64d1fefec07fdb4e9d41cf3b8b775a96fd239a326533f0bc89140d1920614ce8"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_T_physical_reference_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_T_physical_reference_v1.json",
+      "bytes": 5350,
+      "sha256": "28542bbf7907ec68b77865b9bee51dafe28c5bc17802c29f9ec2b5720935ac35"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_T_结果与研究决策.md",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_T_结果与研究决策.md",
+      "bytes": 7142,
+      "sha256": "1509f47d570c6ac651a879f360bf8353e062645077ee74e088d3b099c01af831"
     },
     {
       "source": "analysis/o_motion_20260915/dense_material512_evaluation_protocol_v1.json",
@@ -2383,6 +2413,12 @@
       "destination": "research/analysis/o_motion_20260915/inspect_shared_rigid_formal_campaign_v1.py",
       "bytes": 3588,
       "sha256": "c231c9ee9091f27da1cde0b3dca608526d1e966f4dbf89c69b8e93638f71ab4c"
+    },
+    {
+      "source": "analysis/o_motion_20260915/jepa_wms_source_identity_v1.json",
+      "destination": "research/analysis/o_motion_20260915/jepa_wms_source_identity_v1.json",
+      "bytes": 1401,
+      "sha256": "d1fe987c53f2c810a91d7b762512e1d95b1fb1f36652ee9f270af29b56b64326"
     },
     {
       "source": "analysis/o_motion_20260915/joint_rigid_object_features_v1.py",
@@ -3199,6 +3235,12 @@
       "destination": "research/analysis/o_motion_20260915/research_notes/inference_motion_evidence_available_assets_v1.md",
       "bytes": 17179,
       "sha256": "177b29d31fcfb7c033735d22ace7fa323db2b8127ea6b0cb3ea02dbf37295d95"
+    },
+    {
+      "source": "analysis/o_motion_20260915/research_notes/jepa_wms_predictive_state_audit_20260917.md",
+      "destination": "research/analysis/o_motion_20260915/research_notes/jepa_wms_predictive_state_audit_20260917.md",
+      "bytes": 7754,
+      "sha256": "2a8c65aaf7d8d7f086b3c2af9221f2a9c26daa2608546f10a8e003ee109fab59"
     },
     {
       "source": "analysis/o_motion_20260915/research_notes/material_state_design_v1.md",
@@ -4069,6 +4111,8 @@
     "analysis/o_motion_20260915/dense_material512_dispatch_v1.json",
     "analysis/o_motion_20260915/dense_material512_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_material512_remote_readonly_v2.json",
+    "analysis/o_motion_20260915/dense_material512_remote_readonly_v3.json",
+    "analysis/o_motion_20260915/dense_material512_remote_readonly_v4.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_dispatch_v1.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_state_cross_readout_dispatch_v1.json",

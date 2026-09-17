@@ -1,0 +1,30 @@
+{
+  "commit": "13cf1d9c7e476f53c17714d2e0f1dc239a883ce0",
+  "files": [
+    {
+      "file": "app/vjepa_wm/train.py",
+      "url": "https://raw.githubusercontent.com/facebookresearch/jepa-wms/13cf1d9c7e476f53c17714d2e0f1dc239a883ce0/app/vjepa_wm/train.py",
+      "bytes": 89408,
+      "sha256": "c1fc4c57b99cab18df14405236adf463363fa4eef23705635a2a48e5d6e98285"
+    },
+    {
+      "file": "app/vjepa_wm/video_wm.py",
+      "url": "https://raw.githubusercontent.com/facebookresearch/jepa-wms/13cf1d9c7e476f53c17714d2e0f1dc239a883ce0/app/vjepa_wm/video_wm.py",
+      "bytes": 42128,
+      "sha256": "657bd3e9eb2ec35442cc06e208b4632a53503a35a83a96abbbf82608d2fe9154"
+    },
+    {
+      "file": "app/plan_common/models/wm_heads.py",
+      "url": "https://raw.githubusercontent.com/facebookresearch/jepa-wms/13cf1d9c7e476f53c17714d2e0f1dc239a883ce0/app/plan_common/models/wm_heads.py",
+      "bytes": 7848,
+      "sha256": "136e36fd67a321ad0a9df6c5d2c67dcd558ef8a8646f4b627932ce24e9921329"
+    },
+    {
+      "file": "app/plan_common/models/state_decoder.py",
+      "url": "https://raw.githubusercontent.com/facebookresearch/jepa-wms/13cf1d9c7e476f53c17714d2e0f1dc239a883ce0/app/plan_common/models/state_decoder.py",
+      "bytes": 5628,
+      "sha256": "4ed3467c721a7766019e07e060d9e8988714e039dace2e383439bc050666de6d"
+    }
+  ],
+  "scope": "read-only source inspection; no execution or weight download"
+}
