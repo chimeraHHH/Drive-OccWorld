@@ -18,6 +18,7 @@ from extract_metric_surface_history_v1 import (authenticate, load_models, infer_
     lift, sample, sha, read, write, CAMERAS)
 
 DELTA_SHA='7da306765904ec0b02e9cc8a33406250818680a1ad0b63384ae73cd58d4ef6cc'
+DENSE_COMPLETE_SHA='da9a245be14d0f5bfefecc0e203fab89545f546592aaec865ff222e80ea46826'
 
 
 def field(row,pair,uv,current_depth,past_uv,past_depth,quality):
@@ -42,7 +43,8 @@ def field(row,pair,uv,current_depth,past_uv,past_depth,quality):
 
 def anchored_velocity(points,times):
     t=np.asarray(times,float)
-    assert t[-1]==0 and np.all(np.diff(t)>0)
+    assert len(t)>=2 and t[-1]==0 and np.all(np.diff(t)>0)
+    assert points.shape[0]==len(t) and points.shape[-1]==3
     return np.sum(t[:,None,None]*(points-points[-1:]),axis=0)/np.sum(t*t)
 
 
@@ -57,13 +59,16 @@ def main(a):
     assert sha(a.delta_asset/'densetrack3d.pth')==DELTA_SHA
     old_done=read(a.twoframe/'complete.json')
     assert old_done['status']=='COMPLETE_FROZEN_HISTORY_TRACKER'
+    assert sha(a.twoframe/'protocol.json')==old_done['protocol_sha256']
     assert sha(a.twoframe/'records.jsonl')==old_done['records_sha256']
     old_records=[json.loads(s) for s in (a.twoframe/'records.jsonl').read_text().splitlines()]
+    assert sha(a.dense_history/'complete.json')==DENSE_COMPLETE_SHA
     dense_done=read(a.dense_history/'complete.json')
     assert dense_done['status']=='COMPLETE_AUTHENTICATED_DENSE_HISTORY_INPUTS'
     for f,h in dense_done['files_sha256'].items():assert sha(a.dense_history/f)==h
     rows=read(a.dense_history/'records.json')['records'][:a.anchors]
     original=read(a.history/'records.json')['records'][:a.anchors]
+    assert len(rows)==len(original)==a.anchors
     assert [r['identity'] for r in rows]==[r['identity'] for r in original]
     root=Path(read(a.history/'manifest.json')['source_data_root'])
     for name,quality in [('delta_dense_endpoint','official first/last visibility >0.9'),('delta_dense_lsq','official all-frame visibility >0.9')]:
@@ -101,17 +106,27 @@ def main(a):
     with torch.inference_mode():
         for row in rows:
             pairs={p['channel']:p for p in row['cameras']}
+            original_row=next(r for r in original if r['identity']==row['identity'])
             for channel in CAMERAS:
                 if a.max_pairs and pair_count>=a.max_pairs:break
                 tick=time.monotonic();pair=pairs[channel]
                 write(a.out/'progress.json',dict(phase='inference',pairs=pair_count,ordinal=row['ordinal'],camera=channel,seconds=tick-start))
                 frames=pair['frames'];T=len(frames)
                 assert 2<=T<=16
+                original_pair=next(p for p in original_row['cameras'] if p['channel']==channel)
+                for frame,which in ((frames[0],'past'),(frames[-1],'current')):
+                    for key in ('sample_data','K','camera_to_global','image'):
+                        assert frame[key]==pair[which][key]==original_pair[which][key]
+                for left,right in zip(frames,frames[1:]):
+                    l,r=left['sample_data'],right['sample_data']
+                    assert l['timestamp']<r['timestamp']
+                    assert l['next']==r['token'] and r['prev']==l['token']
                 rgb=[]
                 for frame in frames:
                     p=root/frame['image']['file']
                     assert frame['sample_data']['timestamp']<=row['input_availability_us'] and sha(p)==frame['image']['sha256']
                     rgb.append(np.asarray(Image.open(p).convert('RGB')))
+                    assert rgb[-1].shape==(900,1600,3)
                 depths=[infer_depth(torch,depth,x,f['K']) for x,f in zip(rgb,frames)]
                 video=torch.from_numpy(np.stack(rgb).transpose(0,3,1,2).copy()).float().cuda()[None]
                 videodepth=torch.from_numpy(np.stack(depths)).float().cuda()[None,:,None]
@@ -164,7 +179,9 @@ def main(a):
                                      input_frames=T,endpoint_quality=int(endpoint['quality_in_roi'].sum()),lsq_quality=int(lsq['quality_in_roi'].sum()))),flush=True)
                 del video,videodepth,output,low,results
     torch.cuda.synchronize()
+    assert pair_count==(min(a.max_pairs,6*a.anchors) if a.max_pairs else 6*a.anchors)
     for name,records in saved.items():
+        assert len(records)==pair_count
         out=a.out/name
         write(out/'complete.json',dict(status='COMPLETE_FROZEN_HISTORY_TRACKER' if not a.max_pairs else 'COMPLETE_RESOURCE_PROBE_ONLY',
               anchors=len(rows),pairs=len(records),optimizer_updates=0,GT_read=False,

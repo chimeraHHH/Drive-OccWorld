@@ -1,0 +1,15 @@
+{
+  "status": "PASS_MATCHED_ENDPOINT_AND_CONSECUTIVE_HISTORY_AUDIT",
+  "anchors": 16,
+  "sequences": 96,
+  "frame_count_histogram": {
+    "5": 3,
+    "6": 12,
+    "7": 81
+  },
+  "dense_complete_sha256": "da9a245be14d0f5bfefecc0e203fab89545f546592aaec865ff222e80ea46826",
+  "same_endpoint_sample_data_K_pose_image": true,
+  "consecutive_prev_next": true,
+  "strict_timestamp_order": true,
+  "scoring_or_GT_access": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS_ANALYTIC_DENSE_HISTORY_GEOMETRY",
+  "checks": {
+    "static_pose_compensation": true,
+    "moving_coordinate_direction": true,
+    "closed_boundary_and_missing": true,
+    "nonuniform_constant_velocity": true,
+    "twoframe_equivalence": true,
+    "rigid_coordinate_equivariance": true,
+    "independent_lstsq": true
+  },
+  "source_sha256": "cbe86a2734d73f84cab43a4af6fde971ae8fc911f146a461eee864aef640fccc"
+}

@@ -1029,6 +1029,12 @@
       "sha256": "7eae3722853bb7bdba9071b7396fadeb8440a40f9632774370ff9657e2fe477f"
     },
     {
+      "source": "analysis/o_motion_20260915/audit_delta_dense_history_geometry_v1.py",
+      "destination": "research/analysis/o_motion_20260915/audit_delta_dense_history_geometry_v1.py",
+      "bytes": 5881,
+      "sha256": "2dceb5a3c57882de34022c1899c7032cb9fa03604ff4d64a034fc5dccc5268f5"
+    },
+    {
       "source": "analysis/o_motion_20260915/audit_fixed_speed_routing_dev_saved_vectors_v1.py",
       "destination": "research/analysis/o_motion_20260915/audit_fixed_speed_routing_dev_saved_vectors_v1.py",
       "bytes": 10472,
@@ -1413,6 +1419,24 @@
       "sha256": "e147d9deca1409ee060a1ceb384f89424b55a9c40a866576b638f92f7f414e5a"
     },
     {
+      "source": "analysis/o_motion_20260915/delta_dense_history_analytic_checks_v1.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_history_analytic_checks_v1.json",
+      "bytes": 430,
+      "sha256": "d454820330f6344b3a850506b86484347f63ce322b6a5f6f86dab0f72cb1f334"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_history_input_matching_audit_v1.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_history_input_matching_audit_v1.json",
+      "bytes": 422,
+      "sha256": "c0cf9ae9cb27463b459bff21b0ba06f1f114ea9b497f4eef80b3403b1bf626de"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_history_scoring_preregistration_v1.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_history_scoring_preregistration_v1.json",
+      "bytes": 2104,
+      "sha256": "7b1957498c2f4236542b50b0b6ef82a377fe4631b3f6109cbdb6a1371010832f"
+    },
+    {
       "source": "analysis/o_motion_20260915/delta_history_train16_evaluation_v1/complete.json",
       "destination": "research/analysis/o_motion_20260915/delta_history_train16_evaluation_v1/complete.json",
       "bytes": 101211,
@@ -1547,8 +1571,8 @@
     {
       "source": "analysis/o_motion_20260915/extract_delta_dense_history_v1.py",
       "destination": "research/analysis/o_motion_20260915/extract_delta_dense_history_v1.py",
-      "bytes": 13659,
-      "sha256": "1f9a6415d2cfaa2961486e68e1c2b59261680356f4fcb97b99e30c8f137bdb1c"
+      "bytes": 14868,
+      "sha256": "cbe86a2734d73f84cab43a4af6fde971ae8fc911f146a461eee864aef640fccc"
     },
     {
       "source": "analysis/o_motion_20260915/extract_delta_history_v1.py",
@@ -2721,6 +2745,12 @@
       "sha256": "2ee56228a10e001c83fa09acc51ac9d388cc651880e382afccdd397f640f0204"
     },
     {
+      "source": "analysis/o_motion_20260915/research_notes/delta_dense_history_interface_review_20260917.md",
+      "destination": "research/analysis/o_motion_20260915/research_notes/delta_dense_history_interface_review_20260917.md",
+      "bytes": 1805,
+      "sha256": "d1530bbb915549a74297578f871dacd932013708af71cd52fa06edec39f51013"
+    },
+    {
       "source": "analysis/o_motion_20260915/research_notes/delta_interface_review_20260917.md",
       "destination": "research/analysis/o_motion_20260915/research_notes/delta_interface_review_20260917.md",
       "bytes": 1713,
@@ -3554,6 +3584,8 @@
     "analysis/o_motion_20260915/crn_train512_dispatch_v1.py",
     "analysis/o_motion_20260915/crn_train512_dispatch_v2.py",
     "analysis/o_motion_20260915/current_research_state.json",
+    "analysis/o_motion_20260915/dispatch_delta_dense_history_pair_probe_v1.py",
+    "analysis/o_motion_20260915/dispatch_delta_dense_history_train16_v1.py",
     "analysis/o_motion_20260915/dispatch_delta_history_pair_probe_v1.py",
     "analysis/o_motion_20260915/dispatch_delta_history_pair_probe_v2.py",
     "analysis/o_motion_20260915/dispatch_delta_history_train16_v1.py",

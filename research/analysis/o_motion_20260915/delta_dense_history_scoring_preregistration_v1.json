@@ -1,0 +1,49 @@
+{
+  "status": "FIXED_BEFORE_DENSE_MODEL_INFERENCE",
+  "source_sha256": "d159ddfcf7859d96da0dbe66db5a81a28d0c1c634893b443bf77e1cd73b6710c",
+  "arms": [
+    "zero",
+    "D",
+    "CRN_CV",
+    "CV_D_speed05",
+    "surface_all_zero",
+    "surface_quality_zero",
+    "CV_surface_all_uncovered",
+    "CV_surface_quality_uncovered"
+  ],
+  "variants": [
+    "delta_dense_endpoint",
+    "delta_dense_lsq"
+  ],
+  "radius_m": 1,
+  "grid_stride": 32,
+  "grid_phase": 4,
+  "quality_masks": {
+    "delta_dense_endpoint": "first/last official vis; same criterion as T2",
+    "delta_dense_lsq": "all-frame official vis; a stricter mask, so this is a complete estimator comparison, not a pure fitting-rule effect"
+  },
+  "horizons_s": [
+    0.5,
+    1,
+    1.5,
+    2
+  ],
+  "primary_time": "nominal for all arms",
+  "sensitivity_only": "actual future dt for CV and surface; D unchanged",
+  "population": "all original points, all valid objects; zero fallback and covered-CV hybrids",
+  "fitting": false,
+  "created_utc": "2026-09-17T02:44:50.400522+00:00",
+  "inference_source_sha256": "cbe86a2734d73f84cab43a4af6fde971ae8fc911f146a461eee864aef640fccc",
+  "reference": "delta_history_train16_v1/delta; two real endpoint frames",
+  "dense_input_complete_sha256": "da9a245be14d0f5bfefecc0e203fab89545f546592aaec865ff222e80ea46826",
+  "input_change": "add all 5-7 real frames in same original endpoint interval; not equal-input improvement over O",
+  "fit": "current-anchored unweighted LSQ with actual timestamps; report endpoint and LSQ separately",
+  "comparisons": [
+    "dense endpoint vs T2: matched queries/depth/endpoints/population, added frames",
+    "dense LSQ vs dense endpoint: report both unfiltered/quality and support fractions; masks can differ",
+    "both against retained CRN-CV and CV+D"
+  ],
+  "decision": "No O integration based on tiny moving-only gain; require useful moving gain with controlled stationary error relative to strong CV+D. If no favorable tradeoff, stop external 3D velocity expansion and implement task-readable future-state competitor.",
+  "exceeds_O": false,
+  "training": false
+}
