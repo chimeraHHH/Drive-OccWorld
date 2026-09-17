@@ -1569,6 +1569,36 @@
       "sha256": "027318e5eb2fbdc956f598f31e6deb07105c6b4aeb6c83540ec969e7b6f30cda"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_material512_evaluation_protocol_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_evaluation_protocol_v1.json",
+      "bytes": 5476,
+      "sha256": "36f1f800b97088d6fbd61c032755f8c0b935833a98844f6cb8a00ac5ceb02faa"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_preflight_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_preflight_v1.json",
+      "bytes": 453,
+      "sha256": "e38481dcb6f23992fcc4d9c267c0629d5cd1884f8ad77099543d680d126ff800"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_server_plan_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_server_plan_v1.json",
+      "bytes": 15245,
+      "sha256": "f469668bf944a27aa7b25638b4dd0cc101265e7af1e645ff6e8dee45196bf6ab"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_training_protocol_v1.json",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_training_protocol_v1.json",
+      "bytes": 5586,
+      "sha256": "55b4a8891d3e3a4652c29505d7492418e691429085b515eeee693057465403ed"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_material512_准备与启动记录.md",
+      "destination": "research/analysis/o_motion_20260915/dense_material512_准备与启动记录.md",
+      "bytes": 5788,
+      "sha256": "e90f0de694f2893dd107594e4adc6ed2a09e3ee4040cbd855dca4c0edc893699"
+    },
+    {
       "source": "analysis/o_motion_20260915/dense_material_learning_curve_evaluation_v1/aggregate_audit.json",
       "destination": "research/analysis/o_motion_20260915/dense_material_learning_curve_evaluation_v1/aggregate_audit.json",
       "bytes": 9265,
@@ -1801,6 +1831,12 @@
       "destination": "research/analysis/o_motion_20260915/eulerian_lagrangian_motion_sources_v1.json",
       "bytes": 23296,
       "sha256": "252037c1c222f8d935def70bfc1df31e38fc05ae1ef36b9f9a8316c731425141"
+    },
+    {
+      "source": "analysis/o_motion_20260915/evaluate_dense_material512_v1.py",
+      "destination": "research/analysis/o_motion_20260915/evaluate_dense_material512_v1.py",
+      "bytes": 13993,
+      "sha256": "07de8de22195df7d7b20d8b8c2433b3f2270a440b579a9f4fe3144e2d2c60a00"
     },
     {
       "source": "analysis/o_motion_20260915/evaluate_fixed_speed_routing_dev_cpu_v1.py",
@@ -2389,6 +2425,24 @@
       "destination": "research/analysis/o_motion_20260915/load_future_state_motion_v1.py",
       "bytes": 27345,
       "sha256": "880e54af4f6438a3d28197ffa1a17ca1a9e897dc81d1ee5599c788404a53b28c"
+    },
+    {
+      "source": "analysis/o_motion_20260915/material512_determinism_evidence_v2.json",
+      "destination": "research/analysis/o_motion_20260915/material512_determinism_evidence_v2.json",
+      "bytes": 2835,
+      "sha256": "206196d32a50df6f8c3d864df57c230aa85ece446d539f1240a98340ccd576e6"
+    },
+    {
+      "source": "analysis/o_motion_20260915/material512_determinism_probe_v1.py",
+      "destination": "research/analysis/o_motion_20260915/material512_determinism_probe_v1.py",
+      "bytes": 5012,
+      "sha256": "ceb8ed4e32fca0aa285bb167b4ad377549f65b21ef8685df72f8b8c357567e1f"
+    },
+    {
+      "source": "analysis/o_motion_20260915/material512_determinism_probe_v2.py",
+      "destination": "research/analysis/o_motion_20260915/material512_determinism_probe_v2.py",
+      "bytes": 5033,
+      "sha256": "ad78a7f14573c82f5e292e784ffc38c988226ba076b93914f229d6fae2deaac6"
     },
     {
       "source": "analysis/o_motion_20260915/merge_full_connected_motion_interface_v1.md",
@@ -3033,6 +3087,12 @@
       "sha256": "3bcfb747bfd1d36be6359c295c56b6a74cb4611e97a468243d41e93cae292ccf"
     },
     {
+      "source": "analysis/o_motion_20260915/research_notes/dense_material512_training_design_v1.md",
+      "destination": "research/analysis/o_motion_20260915/research_notes/dense_material512_training_design_v1.md",
+      "bytes": 6078,
+      "sha256": "e2e9185056e31c954ba3a8eb77045dad04c1975d08e217e839700cf0ad5f0926"
+    },
+    {
       "source": "analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md",
       "destination": "research/analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md",
       "bytes": 3004,
@@ -3291,6 +3351,12 @@
       "sha256": "64ed69ba8e271aa915e30c7b30862c382ccc85628f2558415a272e12b7d378a5"
     },
     {
+      "source": "analysis/o_motion_20260915/run_material512_sequence_v1.py",
+      "destination": "research/analysis/o_motion_20260915/run_material512_sequence_v1.py",
+      "bytes": 4463,
+      "sha256": "8bda1e1cd491d6ceaae0a2b48b04a83c23d559fb1690832f3698bc327f5e8e39"
+    },
+    {
       "source": "analysis/o_motion_20260915/run_raft_official_pair_probe_v1.py",
       "destination": "research/analysis/o_motion_20260915/run_raft_official_pair_probe_v1.py",
       "bytes": 17453,
@@ -3319,6 +3385,18 @@
       "destination": "research/analysis/o_motion_20260915/server_results/diagnostics/dense_history_inputs_train16_v1/summary.json",
       "bytes": 392,
       "sha256": "42bee989a3312db69ad9f32eafc86be6c41f63d401d9959a804b75d44629645b"
+    },
+    {
+      "source": "analysis/o_motion_20260915/shared_current_codec512_evidence_v1.json",
+      "destination": "research/analysis/o_motion_20260915/shared_current_codec512_evidence_v1.json",
+      "bytes": 883,
+      "sha256": "f2bde236372a9011af811a8089739a8cc0e2e95c0544b9a904f99ac771998651"
+    },
+    {
+      "source": "analysis/o_motion_20260915/shared_current_codec512_parameter_evidence_v1.json",
+      "destination": "research/analysis/o_motion_20260915/shared_current_codec512_parameter_evidence_v1.json",
+      "bytes": 715,
+      "sha256": "527b0184bc49d2d6ea034d8955bb6ebbb359de051a0ea3626a6a71e7f9c790c3"
     },
     {
       "source": "analysis/o_motion_20260915/shared_current_codec512_protocol_v1.json",
@@ -3807,6 +3885,12 @@
       "sha256": "e935a72c578350c14069b9c5a560c3995e80c00d9d19656feb3a67de8f924e51"
     },
     {
+      "source": "analysis/o_motion_20260915/train_dense_material512_v1.py",
+      "destination": "research/analysis/o_motion_20260915/train_dense_material512_v1.py",
+      "bytes": 25035,
+      "sha256": "6fe57e33349dd838901b513569b64a337544c5a9e6aedbba2e2664b6208f7e87"
+    },
+    {
       "source": "analysis/o_motion_20260915/train_future_feature_residual_v1.py",
       "destination": "research/analysis/o_motion_20260915/train_future_feature_residual_v1.py",
       "bytes": 34050,
@@ -3934,6 +4018,8 @@
     "analysis/o_motion_20260915/current_codec_determinism_dispatch_v1.json",
     "analysis/o_motion_20260915/current_codec_determinism_remote_readonly_v1.json",
     "analysis/o_motion_20260915/current_research_state.json",
+    "analysis/o_motion_20260915/dense_material512_dispatch_v1.json",
+    "analysis/o_motion_20260915/dense_material512_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_dispatch_v1.json",
     "analysis/o_motion_20260915/dense_material_learning_curve_remote_readonly_v1.json",
     "analysis/o_motion_20260915/dense_state_cross_readout_dispatch_v1.json",
@@ -3991,6 +4077,8 @@
     "analysis/o_motion_20260915/history_pose_address_control_train_analysis_v1.json",
     "analysis/o_motion_20260915/history_state_predictability_diagnostic_v1.json",
     "analysis/o_motion_20260915/inspect_dense_material_remote_readonly_v1.py",
+    "analysis/o_motion_20260915/material512_determinism_probe_v1_dispatch.json",
+    "analysis/o_motion_20260915/material512_determinism_probe_v2_dispatch.json",
     "analysis/o_motion_20260915/motion_evidence_train_analysis_v1.json",
     "analysis/o_motion_20260915/motion_metadata_evidence_v1.json",
     "analysis/o_motion_20260915/motion_metadata_evidence_v2.json",
@@ -4003,6 +4091,8 @@
     "analysis/o_motion_20260915/remote_readonly_motion_probe_v2.py",
     "analysis/o_motion_20260915/research_dispatch.py",
     "analysis/o_motion_20260915/scene_disjoint_confirmation_candidate_v1.json",
+    "analysis/o_motion_20260915/shared_current_codec512_dispatch_v1.json",
+    "analysis/o_motion_20260915/shared_current_codec512_remote_readonly_v1.json",
     "analysis/o_motion_20260915/wait_dependency_then_gpu_idle_exec_v1.py",
     "analysis/o_motion_20260915/wait_gpu_idle_then_exec_v1.py",
     "analysis/o_motion_20260915/watch_object_state_forecast_train_v1.py"

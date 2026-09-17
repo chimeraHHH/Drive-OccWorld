@@ -1,0 +1,27 @@
+{
+  "status": "PASS_ORIGINAL_CURRENT512_RECEIPT_AUDIT",
+  "complete_sha256": "b398136d7884da92a9db950412c9e51d46fcd8ba5da525d0ae0a162ab43e4451",
+  "checkpoint_sha256": "14e79dd5e6f9a7dc7cd300aa42f58a47b92a9f6c7b64a3ddb9ed255ea59aec02",
+  "actual_updates": 2048,
+  "samples": 512,
+  "scenes": 256,
+  "full_order_exact": true,
+  "frozen_recurrence_exact": true,
+  "current_confusion": [
+    [
+      5353525475,
+      10276379
+    ],
+    [
+      2401103,
+      2506163
+    ]
+  ],
+  "current_iou_percent": 16.505674362117922,
+  "elapsed_seconds": 996.6355444400106,
+  "peak_allocated_gib": 0.3423953056335449,
+  "independent_pooled_hist_exact": true,
+  "future_forecasting_claim": false,
+  "exceeds_O": false,
+  "checkpoint_file_verification": "Independently CPU-loaded exact checkpoint and verified all/frozen parameter identities; shared_current_codec512_parameter_evidence_v1.json"
+}

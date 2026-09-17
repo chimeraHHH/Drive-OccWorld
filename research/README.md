@@ -4,7 +4,9 @@
 
 ## 当前结论
 
-最新 T/J 对照已完成：[固定材料结果与决策](analysis/o_motion_20260915/dense_material_learning_curve_v1_结果与决策.md)。固定当前内容组在 train4 上 moving 2s EPE1.116m，自由内容组2.204m；IoU21.281%/20.802%。上一轮同种子J为22.093%，因此小IoU差不构成稳健优越性。停止围绕train4调参，下一阶段扩大到train512的共同codec和未来状态比较。
+train512 的共同 current codec 已完成 2,048 更新，512 样本当前 IoU 16.5057%，逐样本混淆矩阵独立复算一致；这不是未来 O 对比结果。[扩大数据的实验记录](analysis/o_motion_20260915/dense_material512_准备与启动记录.md)固定了 T/J/D 各 2,048 更新和原 dev200 共同评价，采用服务器顺序运行。完整非零 T/J/D 计算图已通过严格确定性前反向检查。
+
+前一轮[固定材料结果](analysis/o_motion_20260915/dense_material_learning_curve_v1_结果与决策.md)中，T/J 的 train4 moving 2s EPE 为 1.116/2.204m，IoU 为 21.281%/20.802%；同种子 J 此前为 22.093%，因此不据此宣称小幅 IoU 优越。扩大数据后的泛化结果仍待评估，目标尚未达到。
 
 
 | 证据 | 结果与边界 |
@@ -31,6 +33,7 @@
 
 ## 从这里阅读
 
+- [train512 未来状态训练协议](analysis/o_motion_20260915/dense_material512_training_protocol_v1.json)；[原 O 共同评价协议](analysis/o_motion_20260915/dense_material512_evaluation_protocol_v1.json)；[共同 codec 证据](analysis/o_motion_20260915/shared_current_codec512_evidence_v1.json)。
 - [用户新增方向：用雷达动态先验减少视觉历史与计算](analysis/o_motion_20260915/雷达动态先验与视觉历史效率_实验计划.md)。已加入后续 roadmap，包含真实图像历史审计、Doppler 消融、流式推理成本与 CRISP/TEOcc 近邻；目前是待验证假设。
 - [最新学习曲线结果与决策](analysis/o_motion_20260915/dense_state_learning_curve_v1_结果与决策.md)；[真实曲线图](analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/learning_curves.png)；[648 指标复算](analysis/o_motion_20260915/dense_state_learning_curve_evaluation_v1/aggregate_audit.json)。
 - [固定 codec 的物理单任务/联合任务学习曲线设计](analysis/o_motion_20260915/research_notes/dense_state_learning_curve_design_v1.md)；[冻结协议](analysis/o_motion_20260915/dense_state_learning_curve_protocol_v1.json)。本轮仍只用既定 train4 做可学习性诊断。
@@ -42,7 +45,7 @@
 - [任务直接使用的未来状态：设计、文献依据与局限](analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md)；[新状态实现](analysis/o_motion_20260915/dense_task_state_v2.py)；[训练集小样本 fit 协议](analysis/o_motion_20260915/dense_task_state_fit_protocol_v2.json)。v2 已完成真实 train4 工程 fit、位移干预与全网格评分；[结果与下一步](analysis/o_motion_20260915/dense_task_state_fit_v2_结果与决策.md)。任务连接通过；该 32 更新阶段不能替代后续 512 更新的可学习性诊断，没有超过 O 的证据。
 - [密集输入认证](analysis/o_motion_20260915/server_results/diagnostics/dense_history_inputs_train16_v1/complete.json)；[已运行的密集 DELTA 实现](analysis/o_motion_20260915/extract_delta_dense_history_v1.py)。
 
-密集历史比较已完成：增加输入观测有收益，但不足以胜过现有强对照。停止继续扩展外部三维速度路线，保留 O/M0 与冻结诊断输出，已完成自有未来状态与 identity readout 的小样本工程比较。512 更新学习曲线已确认小样本运动可学习，但联合占据收益与物理准确性并不一致。固定最终 checkpoint 的 16 组内容/位移交叉读出也已完成：P 位移传播当前内容有收益，P 训练后内容却使结果退化；J 依赖内容—位移配合，D 内容直接读出更好。新增 T/J 实验已表明固定当前内容保留较高训练占据拟合且物理误差较低；下一步在确定数值策略后扩大到train512，后续同时验证Doppler能否减少真实视觉历史和系统成本。
+密集历史比较已完成：增加输入观测有收益，但不足以胜过现有强对照。停止继续扩展外部三维速度路线，保留 O/M0 与冻结诊断输出，已完成自有未来状态与 identity readout 的小样本工程比较。512 更新学习曲线已确认小样本运动可学习，但联合占据收益与物理准确性并不一致。固定最终 checkpoint 的 16 组内容/位移交叉读出也已完成：P 位移传播当前内容有收益，P 训练后内容却使结果退化；J 依赖内容—位移配合，D 内容直接读出更好。新增 T/J 实验已表明固定当前内容保留较高训练占据拟合且物理误差较低；共同 train512 codec 和数值策略已核验，现以冻结协议执行扩大数据的 T/J/D 未来预测比较，后续验证 Doppler 能否减少真实视觉历史和系统成本。
 
 ## 归档与复现边界
 

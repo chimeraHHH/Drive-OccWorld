@@ -1,0 +1,75 @@
+{
+  "schema": "material512-determinism-probe-v2",
+  "synthetic": true,
+  "optimizer_updates": 0,
+  "dataset_samples_read": 0,
+  "arms": {
+    "T": {
+      "initial_parameters_sha256": "2cd018d94cba7c60aa452d0c97fe05af7365e3d849665aa5d2065705c23e5dae",
+      "repetitions": [
+        {
+          "loss": 1.3151658773422241,
+          "occupancy": 1.2622050046920776,
+          "physical": 0.5296083688735962,
+          "gradient_sha256": "ac02f1a84ddfbd72361ac7a14be9a132d8c09cb87864c66ec0d50d8f4edfd68b",
+          "gradient_norm": 0.5279799699783325,
+          "seconds": 2.3078772999870125
+        },
+        {
+          "loss": 1.3151658773422241,
+          "occupancy": 1.2622050046920776,
+          "physical": 0.5296083688735962,
+          "gradient_sha256": "ac02f1a84ddfbd72361ac7a14be9a132d8c09cb87864c66ec0d50d8f4edfd68b",
+          "gradient_norm": 0.5279799699783325,
+          "seconds": 2.0592553200258408
+        }
+      ]
+    },
+    "J": {
+      "initial_parameters_sha256": "2cd018d94cba7c60aa452d0c97fe05af7365e3d849665aa5d2065705c23e5dae",
+      "repetitions": [
+        {
+          "loss": 1.316298007965088,
+          "occupancy": 1.2633371353149414,
+          "physical": 0.5296083688735962,
+          "gradient_sha256": "6d457167694142bdb1576dc89b773e650c2dec6e7e0fb4ce697305d9148145d9",
+          "gradient_norm": 1.6838430166244507,
+          "seconds": 1.9487216499983333
+        },
+        {
+          "loss": 1.316298007965088,
+          "occupancy": 1.2633371353149414,
+          "physical": 0.5296083688735962,
+          "gradient_sha256": "6d457167694142bdb1576dc89b773e650c2dec6e7e0fb4ce697305d9148145d9",
+          "gradient_norm": 1.6838430166244507,
+          "seconds": 2.065295540000079
+        }
+      ]
+    },
+    "D": {
+      "initial_parameters_sha256": "2cd018d94cba7c60aa452d0c97fe05af7365e3d849665aa5d2065705c23e5dae",
+      "repetitions": [
+        {
+          "loss": 1.3177731037139893,
+          "occupancy": 1.2648122310638428,
+          "physical": 0.5296083688735962,
+          "gradient_sha256": "74bf087354d794bdd5ff5565a2691d4b5d34138b6a941094c69396d8f18a82eb",
+          "gradient_norm": 1.389316201210022,
+          "seconds": 1.5825886399834417
+        },
+        {
+          "loss": 1.3177731037139893,
+          "occupancy": 1.2648122310638428,
+          "physical": 0.5296083688735962,
+          "gradient_sha256": "74bf087354d794bdd5ff5565a2691d4b5d34138b6a941094c69396d8f18a82eb",
+          "gradient_norm": 1.389316201210022,
+          "seconds": 1.7161610400071368
+        }
+      ]
+    }
+  },
+  "status": "PASS_FULL_TJD_GRAPH_REPEATED",
+  "peak_allocated_gib": 2.9419479370117188,
+  "limitation": "Synthetic within-process repeated graph only; no training/generalization evidence",
+  "source_sha256": "ad78a7f14573c82f5e292e784ffc38c988226ba076b93914f229d6fae2deaac6"
+}

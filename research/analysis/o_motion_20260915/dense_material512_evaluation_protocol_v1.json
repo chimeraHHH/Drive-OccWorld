@@ -1,0 +1,63 @@
+{
+  "schema": "dense-material512-evaluation-v1",
+  "status": "FROZEN",
+  "training_protocol_sha256": "55b4a8891d3e3a4652c29505d7492418e691429085b515eeee693057465403ed",
+  "sources_sha256": {
+    "train_dense_material512_v1.py": "6fe57e33349dd838901b513569b64a337544c5a9e6aedbba2e2664b6208f7e87",
+    "train_shared_current_codec512_v1.py": "be270f20e9d4200cfbdffc7cdc72f3e97d4eedba5818f4b3b64b75bb3396ad9b",
+    "dense_material_state_v1.py": "0e9bf3ee90d769665370b534edd422c293fe8a9c8084b9308bbb246feac37d2b",
+    "dense_task_state_v1.py": "5081d2be86c94ad533ed414002e761a4fa8edd142841d2ee67bb147acc3e9550",
+    "dense_task_state_v2.py": "830b646e98d2a6f8ca0c1da2436f6334bfe206a0682ec55ff1b7099d39a4521d",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "evaluate_dense_material512_v1.py": "07de8de22195df7d7b20d8b8c2433b3f2270a440b579a9f4fe3144e2d2c60a00",
+    "common_change_evaluation_v2.py": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059",
+    "common_connected_motion_evaluation_v2.py": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1",
+    "common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+    "motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31"
+  },
+  "runtime_source_sha256": {
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/bevformer.py": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/radar_bev_encoder.py": "326592d9fb94bd37bd957855bc332863dd552a32a814e67915514cda2905df5f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/radar_bev.py": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_transformer.py": "384f283c7338fb5e2c212011f3fc56982b150c54b0f39c602120f4139535f740",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/conditionalnorm.py": "31549af09e3aa73d172af854299cd4ada20ceff69db7ee57dbe0f1f7b23ed76d",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/semkitti_loss.py": "e6a4b9accef1f47cf031f84e18fac925d2764b4105b8010486c8229e589abaa4",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/lovasz_softmax.py": "046a43d610d34cdd6d4b5f791aa5df0723e9cae3cbff4e34de086574b62cf8be"
+  },
+  "cache_index_sha256": {
+    "train": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+    "development": "fd42d2e511d754755fa5e2c06527077351869f06e868ecb8acb4404eadaa26c3"
+  },
+  "labels": {
+    "manifest_sha256": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe",
+    "complete_sha256": "3d14a03cd61761a1ebc26313463dbff06854907c19c49057667a0ffd257e05bd"
+  },
+  "o_records_sha256": "b9d24d56c3232735fdadd46bcb23b6b1a9c36b9d77591ba7e4792f8e043a89f7",
+  "resources": {
+    "max_seconds": 3600,
+    "max_allocated_gib": 16
+  },
+  "primary": "Mean of four future pooled original GMO IoUs; GT row/pred col fine512x512x40, original255 ignore",
+  "secondary": [
+    "moving >0.5m/s GT-positive recall with unknown retained",
+    "arrival01 and vacating10 IoU",
+    "all globalFP/FN",
+    "source object-equal raw-rigid-proxy EPE for own T/J/D only"
+  ],
+  "model_selection": false,
+  "evaluation_schedule": "Final2048 updates only, all three arms regardless of intermediate scores",
+  "claim_boundary": "Exposed dev200/100 scenes; own current predictions differ from O. Not full5119, not confirmation, not O physical EPE. T/J/D share all inputs and initialstate; original O may use extra ego-action inputs.",
+  "codec_final_parameters_sha256": "34e90d7be81c1ac7a57a8c3f82a83fac5971531a5eaa5c603825f8d3f63d4514",
+  "codec_encoder_decoder_sha256": {
+    "encoder": "4d1f7e999fcdfceab75e1501b28c9c8555ac0a6ac59f5d5129b704bf976aeab6",
+    "decoder": "52d33be31c01a3bd92fbe99c8d8c75aebd5bdd79dfb6051ccc7eb7dc021e3a39"
+  }
+}
