@@ -1563,16 +1563,34 @@
       "sha256": "7981d179ec6fd9c58923fbafaf49cdc8a0b1f42ae58cef255f083c17146e7b72"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_task_state_fit_protocol_v2.json",
+      "destination": "research/analysis/o_motion_20260915/dense_task_state_fit_protocol_v2.json",
+      "bytes": 4998,
+      "sha256": "21a9711cbbc4c429a790e5727c897fbdc0b96bdb1a5592e6b6df0413ce6e97c5"
+    },
+    {
       "source": "analysis/o_motion_20260915/dense_task_state_fit_v1.py",
       "destination": "research/analysis/o_motion_20260915/dense_task_state_fit_v1.py",
       "bytes": 12586,
       "sha256": "bb29248d4a041479e5353afe18c97cada4c2fc3c6232f324edc4d742e39f923c"
     },
     {
+      "source": "analysis/o_motion_20260915/dense_task_state_fit_v2.py",
+      "destination": "research/analysis/o_motion_20260915/dense_task_state_fit_v2.py",
+      "bytes": 12957,
+      "sha256": "9445858462387e0f5a81b0cdf2bff29e7b412c1e2c6d4da20334cc687f8420b6"
+    },
+    {
       "source": "analysis/o_motion_20260915/dense_task_state_v1.py",
       "destination": "research/analysis/o_motion_20260915/dense_task_state_v1.py",
       "bytes": 7520,
       "sha256": "5081d2be86c94ad533ed414002e761a4fa8edd142841d2ee67bb147acc3e9550"
+    },
+    {
+      "source": "analysis/o_motion_20260915/dense_task_state_v2.py",
+      "destination": "research/analysis/o_motion_20260915/dense_task_state_v2.py",
+      "bytes": 2865,
+      "sha256": "830b646e98d2a6f8ca0c1da2436f6334bfe206a0682ec55ff1b7099d39a4521d"
     },
     {
       "source": "analysis/o_motion_20260915/derive_fixed_owner_error_floor_v1.py",
@@ -2999,8 +3017,8 @@
     {
       "source": "analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md",
       "destination": "research/analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md",
-      "bytes": 4966,
-      "sha256": "2bc6a4723c4ad766f9a885068e876ebaabc0c44ee0a06f8032da32ec9c9ff123"
+      "bytes": 5491,
+      "sha256": "5d5d83310f45ffc1ccc055d3da2b43f110cc28f9baea3bac1890ad5f5778419f"
     },
     {
       "source": "analysis/o_motion_20260915/research_notes/three_world_model_papers_20260917.md",
@@ -3692,6 +3710,7 @@
     "analysis/o_motion_20260915/crn_train512_dispatch_v1.py",
     "analysis/o_motion_20260915/crn_train512_dispatch_v2.py",
     "analysis/o_motion_20260915/current_research_state.json",
+    "analysis/o_motion_20260915/dense_task_state_fit_dispatch_receipt_v1.json",
     "analysis/o_motion_20260915/dispatch_delta_dense_history_pair_probe_v1.py",
     "analysis/o_motion_20260915/dispatch_delta_dense_history_train16_v1.py",
     "analysis/o_motion_20260915/dispatch_delta_history_pair_probe_v1.py",
