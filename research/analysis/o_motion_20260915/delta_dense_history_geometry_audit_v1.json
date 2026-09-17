@@ -1,0 +1,27 @@
+{
+  "status": "PASS_INDEPENDENT_DENSE_GEOMETRY_AND_SOURCE_MATCHING",
+  "pairs": 96,
+  "exact_twoframe_current_queries_depths_points": true,
+  "source_queries": 134400,
+  "maximum_absolute_errors": {
+    "raw_points_m": 5.684341886080801e-13,
+    "endpoint_velocity_mps": 7.264810392371146e-06,
+    "lsq_velocity_mps": 7.264663906880742e-06,
+    "endpoint_t0_m": 7.629347976489953e-06,
+    "lsq_t0_m": 7.627271912724609e-06
+  },
+  "surface_mask_counts": {
+    "delta_dense_endpoint": {
+      "in_roi": 78295,
+      "quality_in_roi": 67895
+    },
+    "delta_dense_lsq": {
+      "in_roi": 78278,
+      "quality_in_roi": 65739
+    }
+  },
+  "lsq": "independent numpy.linalg.lstsq; current anchor fixed; all actual timestamps",
+  "mask_criteria_differ": true,
+  "GT_read": false,
+  "source_sha256": "2dceb5a3c57882de34022c1899c7032cb9fa03604ff4d64a034fc5dccc5268f5"
+}

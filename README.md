@@ -1,3 +1,5 @@
+> **RadarFlowOcc research branch:** Current code, verified results, limitations, and next experiments are indexed in [research/README.md](research/README.md). The original Drive-OccWorld project documentation follows below.
+
 # <img src="assets/figures/icon.png" alt="icon" style="height: 40px; vertical-align: middle;"> Driving in the Occupancy World: Vision-Centric 4D Occupancy Forecasting and Planning via World Models for Autonomous Driving
 
 [![Custom badge](https://img.shields.io/badge/Arxiv-pdf-8A2BE2?logo=arxiv)](https://arxiv.org/abs/2408.14197) [![Custom badge](https://img.shields.io/badge/Project-page-green?logo=document)](https://drive-occworld.github.io/) ![GitHub license](https://img.shields.io/badge/License-Apache--2.0-red)

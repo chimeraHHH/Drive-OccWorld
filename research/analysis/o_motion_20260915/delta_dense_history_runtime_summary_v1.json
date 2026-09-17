@@ -1,0 +1,23 @@
+{
+  "status": "VERIFIED_REMOTE_EXITED_ZERO_AND_NO_OWN_PROCESS_REMAINS",
+  "job_name": "delta_dense_history_train16_v1",
+  "runner_exit_code": 0,
+  "started_utc": "2026-09-17T02:46:14.805238+00:00",
+  "finished_utc": "2026-09-17T02:52:01.675985+00:00",
+  "runner_seconds": 346.870760980004,
+  "runner_exists": false,
+  "child_exists": false,
+  "inference": {
+    "status": "COMPLETE_DENSE_DELTA_ENDPOINT_AND_LSQ_HISTORY",
+    "pairs": 96,
+    "anchors": 16,
+    "seconds": 345.988375320012,
+    "peak_allocated_GiB": 3.576277732849121,
+    "optimizer_updates": 0,
+    "GT_read": false
+  },
+  "source_sha256": "cbe86a2734d73f84cab43a4af6fde971ae8fc911f146a461eee864aef640fccc",
+  "inference_complete_sha256": "9a52340d68cc8b98c69b2c011abb1f96737bc5c665c606e5978804fb7a5ee8af",
+  "receipt_sha256": "f0189be482f74dfd6d3f82512f322679ecbc25e7d43b62211ae8b998f793d923",
+  "note": "Raw server connection/runtime command receipt remains local. This only reports this job, not all processes on the shared GPU."
+}

@@ -939,6 +939,12 @@
       "sha256": "7cb83c22177f8371d153482b9556d35595fddf9829c1685fbdc5108683758ef0"
     },
     {
+      "source": "analysis/o_motion_20260915/GitHub同步约定.md",
+      "destination": "research/analysis/o_motion_20260915/GitHub同步约定.md",
+      "bytes": 1428,
+      "sha256": "8edae104b1a690094915564c2bf7876dcd78eb49581951db09a21747c97bc4e7"
+    },
+    {
       "source": "analysis/o_motion_20260915/R_R0结果解释与运动主张边界.md",
       "destination": "research/analysis/o_motion_20260915/R_R0结果解释与运动主张边界.md",
       "bytes": 5387,
@@ -1419,10 +1425,46 @@
       "sha256": "e147d9deca1409ee060a1ceb384f89424b55a9c40a866576b638f92f7f414e5a"
     },
     {
+      "source": "analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/complete.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/complete.json",
+      "bytes": 101155,
+      "sha256": "ce3363d048996e685265324de83689e4ed98afbb099ad4a8bb8343338d4f1181"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/independent_score_audit.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/independent_score_audit.json",
+      "bytes": 797,
+      "sha256": "182d17d5c7bf6f08cb1e15591516e39cbbb1935d94cea1ff7ea9e26ec53cc8ed"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/rules.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/rules.json",
+      "bytes": 1475,
+      "sha256": "7fe8424979ba4a9ded19be548d29341db1e5ccff421b0663dbc7d8462f4a357e"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/summary.csv",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_endpoint_train16_evaluation_v1/summary.csv",
+      "bytes": 35737,
+      "sha256": "3a4eef7b1d3bf3f1d74f1a0f3a2243a03be87bd0705bf277392325a7665264e5"
+    },
+    {
       "source": "analysis/o_motion_20260915/delta_dense_history_analytic_checks_v1.json",
       "destination": "research/analysis/o_motion_20260915/delta_dense_history_analytic_checks_v1.json",
       "bytes": 430,
       "sha256": "d454820330f6344b3a850506b86484347f63ce322b6a5f6f86dab0f72cb1f334"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_history_comparison_v1.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_history_comparison_v1.json",
+      "bytes": 29665,
+      "sha256": "b558d89c01237e211c7824c3055b5b3f9b39edd5ddf44c4d4a20b0e3ce0c3acc"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_history_geometry_audit_v1.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_history_geometry_audit_v1.json",
+      "bytes": 862,
+      "sha256": "50b653002caf8393bc1dec294876e32caad70ac477589a9f8396726c5dd7674c"
     },
     {
       "source": "analysis/o_motion_20260915/delta_dense_history_input_matching_audit_v1.json",
@@ -1431,10 +1473,46 @@
       "sha256": "c0cf9ae9cb27463b459bff21b0ba06f1f114ea9b497f4eef80b3403b1bf626de"
     },
     {
+      "source": "analysis/o_motion_20260915/delta_dense_history_runtime_summary_v1.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_history_runtime_summary_v1.json",
+      "bytes": 1003,
+      "sha256": "ba0f24e49da463b902b1b3b1e2daaec4b38dfe90b630daaf35c3b13f9599aa03"
+    },
+    {
       "source": "analysis/o_motion_20260915/delta_dense_history_scoring_preregistration_v1.json",
       "destination": "research/analysis/o_motion_20260915/delta_dense_history_scoring_preregistration_v1.json",
       "bytes": 2104,
       "sha256": "7b1957498c2f4236542b50b0b6ef82a377fe4631b3f6109cbdb6a1371010832f"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_history_train16_结果与研究决策.md",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_history_train16_结果与研究决策.md",
+      "bytes": 6966,
+      "sha256": "7cc670df5185e4d0c007d382aa1f5e6284020aef36516e89ec1125cd5c4d78dd"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/complete.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/complete.json",
+      "bytes": 101198,
+      "sha256": "0baaf534cfd9bc9658701cce998f60174177ad7d433860921151b20a03f20e1a"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/independent_score_audit.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/independent_score_audit.json",
+      "bytes": 798,
+      "sha256": "0b65144f17df236b29ee7abf7202a1c0c051da186c6be05a59004d080e3ddb48"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/rules.json",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/rules.json",
+      "bytes": 1474,
+      "sha256": "d720fde603602b60e96971c804bb4ea84011f235a2c10ee771605cc90d5507c4"
+    },
+    {
+      "source": "analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/summary.csv",
+      "destination": "research/analysis/o_motion_20260915/delta_dense_lsq_train16_evaluation_v1/summary.csv",
+      "bytes": 35780,
+      "sha256": "85a6eedb95f936e10d2d439b8196ea04939cf2c3a9fbcec0e495e69b0ee13924"
     },
     {
       "source": "analysis/o_motion_20260915/delta_history_train16_evaluation_v1/complete.json",
@@ -2989,6 +3067,12 @@
       "destination": "research/analysis/o_motion_20260915/run_raft_official_pair_probe_v1.py",
       "bytes": 17453,
       "sha256": "60491da9cc3b0dcfabcf9c09d15ca6ac1b2f2e8175b657870c6d54fb6e65789e"
+    },
+    {
+      "source": "analysis/o_motion_20260915/score_delta_dense_history_train16_v1.py",
+      "destination": "research/analysis/o_motion_20260915/score_delta_dense_history_train16_v1.py",
+      "bytes": 3567,
+      "sha256": "0dcee50fbfe91aeedfff6dc58edff204c95faf72987ab80b8303995aaf259ef1"
     },
     {
       "source": "analysis/o_motion_20260915/server_results/diagnostics/dense_history_inputs_train16_v1/complete.json",
