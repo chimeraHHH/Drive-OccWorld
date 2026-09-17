@@ -9,6 +9,7 @@
 | 原协议完整 5,119 样本 | O future GMO IoU 14.7478%，M0 13.9449%；这是二分类占据指标，不是语义 mIoU。O 的改善尚不能解释为物理运动更准。 |
 | 独立 Metric3D + RAFT，train16 / 8 scenes | 原评分人口上静止误运动明显，未胜过已有 CV+D；保留失败结果。 |
 | 官方两帧 DELTA，train16 / 8 scenes | 匹配网格、当前深度和评分人口后，优于匹配 RAFT，但仍未胜过 CV+D。96 对推理完成、零优化更新，三组评分独立复算。 |
+| 自有未来状态，train4 工程 fit | 96 次更新全部完成。transport/direct future IoU 12.30345%/12.23518%，物理运动仍近零运动参考；这是训练集诊断，不能与 O 完整评测比较。 |
 | 密集历史 DELTA，train16 / 8 scenes | 同一起止时刻增加为 5–7 帧，96 条序列均完成推理与独立几何/评分核验。优于两帧 DELTA，仍在四个 horizon 的 moving/stationary 上落后于 CV+D；停止继续扩展外部三维速度路线。 |
 
 最新物理对照，2 s XY EPE，单位 m、对象等权、越低越好：
@@ -31,10 +32,10 @@
 - [两帧 DELTA 结果与决策](analysis/o_motion_20260915/delta_history_train16_结果与研究决策.md)；[聚合评分](analysis/o_motion_20260915/delta_history_train16_evaluation_v1/summary.csv)；[独立复算](analysis/o_motion_20260915/delta_history_train16_evaluation_v1/independent_score_audit.json)。
 - [Metric3D + RAFT 失败结果](analysis/o_motion_20260915/metric_surface_history_train16_结果与研究决策.md)。
 - [世界模型文献与官方仓库综合判断](analysis/o_motion_20260915/research_notes/world_model_research_direction_v3_20260917.md)。这是阶段性调研；其中“尚未运行”反映该报告写作时点，后续 DELTA 运行状态以上述结果报告为准。
-- [任务直接使用的未来状态：设计、文献依据与局限](analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md)；[新状态实现](analysis/o_motion_20260915/dense_task_state_v2.py)；[训练集小样本 fit 协议](analysis/o_motion_20260915/dense_task_state_fit_protocol_v2.json)。初版 H200 合成几何/梯度检查通过；独立审查发现覆盖密度附加输入混淆后已停止初版，当前 v2 移除此输入，尚无完整真实训练结果；该候选没有超过 O 的证据。
+- [任务直接使用的未来状态：设计、文献依据与局限](analysis/o_motion_20260915/research_notes/task_native_state_design_20260917.md)；[新状态实现](analysis/o_motion_20260915/dense_task_state_v2.py)；[训练集小样本 fit 协议](analysis/o_motion_20260915/dense_task_state_fit_protocol_v2.json)。v2 已完成真实 train4 工程 fit、位移干预与全网格评分；[结果与下一步](analysis/o_motion_20260915/dense_task_state_fit_v2_结果与决策.md)。任务连接通过，但运动仍未学好，没有超过 O 的证据。
 - [密集输入认证](analysis/o_motion_20260915/server_results/diagnostics/dense_history_inputs_train16_v1/complete.json)；[已运行的密集 DELTA 实现](analysis/o_motion_20260915/extract_delta_dense_history_v1.py)。
 
-密集历史比较已完成：增加输入观测有收益，但不足以胜过现有强对照。停止继续扩展外部三维速度路线，保留 O/M0 与冻结诊断输出，转向任务可用未来状态与直接 future-latent 的竞争实验；共享合法输入、匹配训练预算，以原协议占据效用和认证后的物理误差共同判断。
+密集历史比较已完成：增加输入观测有收益，但不足以胜过现有强对照。停止继续扩展外部三维速度路线，保留 O/M0 与冻结诊断输出，已完成自有未来状态与 identity readout 的小样本工程比较。下一步先检查物理单任务与联合任务的运动学习曲线，再决定较大数据的正式协议及更强直接 future-latent 对照。
 
 ## 归档与复现边界
 
