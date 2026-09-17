@@ -1,0 +1,877 @@
+{
+  "objective": "继续科研，当前你的目标是研究如何改进 M0，你需要站在更高的视角，而不是去打补丁，你去广泛学习文献资料，也可以将开源仓库缝合进我们的项目，你需要做出比 M0 更好的效果",
+  "status": "COMPLETE_M0_IMPROVEMENT_VERIFIED",
+  "updated_utc": "2026-09-15T02:22:40.307968+00:00",
+  "previous_goal_turn_classification": "PROGRESS: diagnosed direct jump TCP outage; existing local HTTP CONNECT proxy authenticated jump and same H200 under unchanged strict host key checks; backed up and changed only local SSH transport; fresh exact process checks prove original full job continued through outage and queue remains waiting; no server job/protocol/model change",
+  "current_turn_focus": [
+    "Finish bounded no-training mechanism diagnostic using unchanged C/O model assets",
+    "Deliver full verified O gain with present-frame and false-negative tradeoffs"
+  ],
+  "constraints": {
+    "training_seeds": [
+      11
+    ],
+    "S3_restart": false,
+    "official_baseline_retraining": false,
+    "skills_used": false,
+    "retain_M0_checkpoint": true,
+    "no_mock_in_experimental_evidence": true
+  },
+  "completion_evidence_required": [
+    "Real learned candidate, reproducible source/checkpoint/data receipts",
+    "Unchanged fine-grained GMO task, horizon and native M0 input/evaluator conventions",
+    "Same-sample full validation comparison against M0 and a matched continuation/architecture control",
+    "Scene-paired effect uncertainty and explicit historical exposure; no seed robustness claim",
+    "Improvement cannot be declared from calibration, pilot-only gains, a different metric, or a selected subgroup"
+  ],
+  "unresolved": [
+    "No cross training-seed or blind-test claim; user requested one seed",
+    "O current t0 remains -.139579pp belowM0_fp32 while +.088137pp aboveC; long-horizon FN can rise",
+    "Whole training-objective intervention works but scale/clipping/readout/feature mechanisms remain unseparated",
+    "ICLR-level methodological novelty and broad generalization remain unestablished",
+    "Mechanism remains unresolved: engineering pilot passed; dev200 not run because measured required budget exceeded frozen ceiling. This is not a new M0 effect-success criterion."
+  ],
+  "current_stage": "COMPLETE_FIXED_TASK_M0_IMPROVEMENT",
+  "completed": [
+    "Broad primary literature and author-code review; temporal, spatial, multimodal and distillation branches",
+    "Native train/validation catalog verified; identities frozen train512/development200",
+    "Two real native-cache anchors replayed bitwise across 5 horizons and 3 decoder layers; full-GT confusion exact",
+    "Native final-horizon-only gradient reaches all four generated states and t0 reference on two real scenes",
+    "Nine memory-adapter CPU contracts passed on H200 runtime after Python AST canonicalization",
+    "Numerical flag intervention resolved two-slot first-step tolerance without widening it; frozen M0_fp32 reference added",
+    "All three full native-loss AdamW preflights passed; matched two-slot initialization and last-horizon BPTT verified",
+    "Protocol v2 frozen before candidate training; seed11, 512 updates per arm, same samples and precision",
+    "Two durable server card jobs dispatched; child sequencing independent of client connection",
+    "All 712 native anchors completed bitwise replay and exact per-sample confusion",
+    "Native1 and persistent2 actual optimizer updates confirmed live on separate H200 processes",
+    "New native M0 development score crosschecked against historical same-token records: delta -0.0000216628 pp",
+    "Full validation5119 and 2anchor joint-evaluation engineering identities frozen before candidate outcomes",
+    "Five additional primary 2026-era papers and official-code mechanisms reviewed; ForecastOcc feature supervision identified as prior art",
+    "native1 and persistent2 fixed512update training plus development200 evaluation completed; both below same-sample M0",
+    "Coordinate auxiliary source hashes matched live H200 files; four CPU physical counterexamples pass",
+    "Native streamed evaluation producer and strict merger prepared; not dispatched",
+    "Reference-frame adapter and real-data geometry audit delegated; engineering preflight driver prepared",
+    "Real source occupancy/loader/GT/geometry audit passed on fixed near-stationary anchor: all7 full GT arrays reconstructed exactly; no accuracy claim",
+    "All3 memory arms completed512updates and dev200; source-bound paired10000scene-bootstrap aggregation completed on server",
+    "Memory screen negative: native1 13.73856%, persistent2 12.73283%, rolling2 12.58628% vsM0 13.90385%; persistent2-rolling2 +0.14655pp does not establish baseline improvement",
+    "Real development plot PDF/PNG/SVG rendered and visually inspected",
+    "Reference-frame v3 GPU engineering preflight PASS: identical identity-pose logits, unchanged physical conditions, real geometry intervention, fullBPTT and finite full native loss updates; probe weights discarded",
+    "Frame protocol3b9e6ab frozen before training, same native1 seed/order/optimizer/data/scope, reused completed control",
+    "Fixed train16 loss/histograms audited: mean decrease concentrated in one rareforeground sample; 89.37% for native1 and over100% for both memory arms; all16 retained",
+    "Reference A real GPU0 process2204851 UID1009 confirmed; latest 270/512 updates with finite loss and gradients at18:31:57UTC",
+    "Read-only supervision granularity probe being prepared for idle GPU1; no optimizer or model change",
+    "Reference A final dev200 GMO11.0134%, belowM0_fp3213.9066% and native113.7386%; primaryA-M0fp32 -2.8932pp CI[-3.3104,-2.5019]; no expansion",
+    "Reference initialization4.87734% to final11.0134% indicates adaptation, not superiority; graph rendered and visually checked",
+    "supervision_granularity_v1 completed38.75s/40.10s runner; all64fullhist exact; original12loss maxdifference2.98e-8",
+    "Fixedtrain16 all5h labels:5.279234% originalGMO ignored by coarse labels,46.993810% coarseGMO block footprint is originalbackground; no predictionerror attribution",
+    "All3trainedarms coarseIoU also decreased; resolution-only explanation insufficient; numerical cancellation observed but tiny totalsoftmassdifference",
+    "full_supervision_preflight_v1 PASS64.44s: M0 initial fixed2coarse/full logits digest and fullGT hist exact, nooptimizer; full totalVJP31.375GiB and .726-.728s/anchor",
+    "Raw full-head gradient L2 rare866.289 vsnormal28.902/69.848; sem+geo dominate direction projection, but not proof of actual clippedAdamW/globaltraining causal harm",
+    "Full/coarse normal totalgradient cosine .9830/.9764; gradient families in each sample positively aligned; rare vsnormal-.0093/+.1697, normal-normal-.2822",
+    "Primary RankSEG/JMLR2023 and RankSEG-RMA2025 methods read: imagewise vsdatasetpooledIoU distinction prevents claiming direct plug-in equivalence",
+    "objective_supervision_preflight_v1 PASS38.78s runner: eachF/O4realAdamWupdates16examples; exactinitialnativefp32pred/fullGT hist, finitewholeheadgradandparameterchange, probesdiscarded",
+    "F/O protocol275b255 frozen beforetraining withoriginalseed11/control/order/LR/scope; F4200s64GiB,O2400s40GiB,CPUaggregate600s,runner5100s",
+    "Independent trainer/aggregate/wrapper audits passed; actual2preflightreceiptchain checked; stopped-child orphan risk repaired beforelaunch",
+    "objective_campaign_v1 dispatched19:15:38UTC; actualF4/512,O9/512 by19:16:14UTC withfiniteloss/grads",
+    "19:17:31UTC liveGPU verification: Fpid2206586 GPU0 94percent35902MiB; Opid2206587 GPU1 98percent18228MiB; uid1009sharedPGID2206581",
+    "Real-only objective plot script prepared182af003ccebc3f830d96c7b8a96bd59365bff7488c3dbfe16b2af0dceaca03b; no candidate mock/render yet",
+    "O actual final512updates/2048exposures complete19:31UTC: dev200 futureGMO14.6639968%, +.7573942pp vsM0fp32; point estimate only before aggregate",
+    "F source log512updates complete training.jsonl SHA34d2091b405ca4fd2823144b55c535359b4eb0506c309c79eec64a382266890b; finaldev underway at19:46:52UTC",
+    "C actual rare-containing accumulated groups67/229/275/395 rank1 eachpass in preclip L2;43/512clip35; no individual/AdamW attribution",
+    "Read primary Beyond Myopic World Models2608.07420v1 and SparseWorld-TC2511.22039v3; author source text inspected at8ef331da491f0c2c317d3d6cf3e21a9c8a1576be; no external baseline training or weight downloads",
+    "F/O fixed final paired dev200 audit PASS summary46c37b5b074e73896e357e0bc9744a538abb01b288521769a577f459be54ad6b; O+0.757394pp CI[.572746,.9634]vsM0fp32 and+.925441vsC; onlyOqualifies; F+.307971 below.5pp",
+    "Original five-model real dev figure rendered/visualQA and CPU all1536update clip diagnostic PASS; C/F/O43/41/0 updates exceedingclip35",
+    "Jointpilot_v1 started19:49:47UTC; both shards rejected fresh vs cached full boundary before sample completion; no full validation launched",
+    "Original pipeline one-anchor observer113.85s retained rejection, differenceaecf29305e3d4b086e834df4b391580e0964a330a22f4d91c09566b4036b95a5: onlyplan_dict.sample_traj differed; allotherleaves,GT,all5h3layerM0logits,hist exact; disabledplanning verified",
+    "v2 actual pilot completed20:08:48UTC (70.59s runner): two full-boundary hashes false solely inactive sample_traj; all active typed leaves, original fullGT, M0 all5h3layer logits and allfourmodel devhist exact; actualinputs never modified",
+    "Root output hash verification and independent frozen merger.collect rerun on complete same-SHA local mirror PASS; no local re-read of large checkpoint and no performance score from pilot",
+    "Post-pilot full authorization81cd07a6155ff232f98698e5397243b84fac6e8c3d2a61681181e618f4c27980 frozen:21600seconds32GiB2shards; bound pilot measured2.881-3.273s/sample4.974GiBpeak; upper bound not ETA",
+    "Full objective_joint_full_v2 launched20:17:22UTC runner2209043;20:18:25UTC actualUID1009 child2209049/2209050 matchingGPUUUIDs and processstartticks,5/2560+5/2559completed, no campaign failure",
+    "Full real-only plotting script adapted to v2 schema and source/auth bindings; no partial or mock full figures",
+    "Primary Lovasz-Softmax CVPR2018, nondecomposable ICML2015 and calibrated linear-fractional AISTATS2020 methods read; multi-horizon ratio-sum derivation and prior-art boundary documented",
+    "20:21:21UTC independent live snapshot: all4 actual process PID/UID/startticks match;53+51 samples completed, both failures absent; bounded read-only monitor saved without accessing partial performance",
+    "Native source audit: fixed t0BEV passed through shared per-layer occupancy readout; t0 logits produced only after4future feature steps and never fed into active future rollout; final t0 directly affected by74528 readout parameters",
+    "Completeddev comparator correction: t0 O-C +.08516958pp CI[.05842239,.11456262], unlike O-M0fp32-.15914061pp; cannot attribute t0cost to removalofscaling versusC",
+    "Sanyal2018 full public paper+appendices and author DeepPerf commitc012be18ee0db9d6f7cd7ad24d2a7161be7754a0 read; rawANNAMP sourcef8dc9cc saved as non-executed text, documented valuation/finalbatch differences",
+    "KoyejoNIPS2014 Theorem2 and algorithms1/2 read; derived actual anchor-normalized CE tiltedmeasure minimizer and separated from O compositeobjective, unknownBayesIoU and naturalprobability; independentmathreviewPASS",
+    "objective_full_dependency.py55939464aee53067227e4ff98e4cd66890616141a33f54a97f671e25014eddde reviewed, realpilot rejectedasfull; true20:43:13UTC livebinding/onewaititerationPASS. Completedfull success path still unavailable",
+    "21:00:56UTC readout_transition_v1 dispatched with frozen protocolb2521df;21:01:25UTC runner2210048/child2210049 actualUID1009/startticks match, WAITING_FOR_FULL; no newGPU process/pilot/result, nooptimizer; fulljob remains running",
+    "21:13:40UTC exactfull4processidentities live;1007+1005/5119 complete, failuresabsent, recent3.08-3.12s/anchor; posthocqueue exact2processes verified21:03:38UTC WAITING_FOR_FULL noGPUstage",
+    "Completedtrue192rowbinaryaffinityreanalysis73e800e9d3b29cfd86b5c98d898918e0aa11e9167deb86267c3387784005271a:4oldmodels16trainanchors3layers;scalarapproxerrors1.068e-6/2.628e-6;idealstatisticsubstitutionresidual.0360722,notCUDAidentity; independentCSVrecomputePASS",
+    "Source/PyTorchv2.1.2 analysis: GMO class0 containsbackground+unoccupied;sem/geo sharebinaryR/Sstatistics,conditionalweightedidentitywithepsilon; noclaimofharm or newOforward",
+    "Readoutplot9caadb15395832f454df338bf3d712846a659d0b6b9a42aa378d8eebf063e19b ready, no mock or completedhybridrender; finalactualresults+visualQA pending",
+    "Reusable O model card completed: original M0 full network plus frozen O complete future head, exact paths/hashes/loading references and actual tradeoffs"
+  ],
+  "running_or_dispatched": [
+    {
+      "job": "objective_joint_full_v2",
+      "campaign": "campaign_objective_joint_full_v2",
+      "status": "EXITED_ZERO",
+      "runner_pid": 2209043,
+      "child_pids": [
+        2209049,
+        2209050
+      ],
+      "uid": 1009,
+      "checked_utc": "2026-09-14T22:40:17.148915+00:00",
+      "completed": [
+        2560,
+        2559
+      ],
+      "planned": [
+        2560,
+        2559
+      ],
+      "optimizer_steps": 0,
+      "server_auto_merge": true,
+      "automatic_retry": false,
+      "live_receipt": "receipts/objective_full_monitor_20260915_064007_523958.json",
+      "eta_assumption": "Linear extrapolation from post-initialization progress only; throughput must persist, merge excluded, not a guarantee",
+      "returncode": 0
+    },
+    {
+      "job": "readout_transition_v1",
+      "campaign": "campaign_readout_transition_v1",
+      "status": "FAILED_NO_RETRY",
+      "runner_pid": 2210048,
+      "runner_startticks": 105165164,
+      "child_pid": 2210049,
+      "child_startticks": 105165216,
+      "uid": 1009,
+      "checked_utc": "2026-09-14T22:49:27.021561+00:00",
+      "diagnostic_protocol_sha256": "b2521df119bc7877729154b45fbc19dd31474afe620a0f864df31a3e68e892b9",
+      "outer_seconds": 22119,
+      "wait_deadline_unix": 1789439842.4789393,
+      "pilot_max_seconds": 300,
+      "development_max_seconds_ceiling": 1500,
+      "diagnostic_execution_deadline_seconds": 1800,
+      "extra_TERM_cleanup_grace_seconds": 20,
+      "max_allocated_gib": 32,
+      "optimizer_steps": 0,
+      "actual_GPU_pilot_complete": false,
+      "automatic_retry": false,
+      "server_sequence_independent_of_client": true,
+      "live_receipt": "receipts/readout_transition_monitor_20260915_064916_668269.json",
+      "returncode": 1,
+      "failure": "Path type error in source verification before make_models/forward; no2x2 results",
+      "original_failure_preserved": true
+    },
+    {
+      "job": "readout_transition_v2",
+      "campaign": "campaign_readout_transition_v2",
+      "status": "FAILED",
+      "returncode": 1,
+      "runner_pid": 2217696,
+      "uid": 1009,
+      "runner_startticks": 105852424,
+      "seconds": 2.129083390114829,
+      "optimizer_updates": 0,
+      "automatic_retry": false,
+      "original_failure_preserved": true
+    },
+    {
+      "job": "readout_transition_v2b",
+      "campaign": "campaign_readout_transition_v2b",
+      "status": "FAILED",
+      "returncode": 1,
+      "runner_pid": 2218138,
+      "uid": 1009,
+      "runner_startticks": 105933856,
+      "seconds": 10.829191280063242,
+      "optimizer_updates": 0,
+      "automatic_retry": false,
+      "original_failure_preserved": true
+    },
+    {
+      "job": "readout_transition_v3",
+      "campaign": "campaign_readout_transition_v3",
+      "status": "FAILED",
+      "runner_pid": 2218661,
+      "uid": 1009,
+      "startticks": 105975277,
+      "live_receipt": "receipts/readout_transition_v3_monitor_20260915_071835_782484.json",
+      "optimizer_updates": 0,
+      "automatic_retry": false,
+      "returncode": 1,
+      "seconds": 165.2044645601418,
+      "pilot_status": "PASS_READOUT_TRANSITION_ENGINEERING",
+      "development_started": false,
+      "reason": "resource_derived_2388s_exceeds_1500s_ceiling",
+      "all_processes_gone": true
+    }
+  ],
+  "protocol_sha256": "071547971498579a5f695697aacaa2dbf17eecfdd93c066c011227bcac08505a",
+  "server_campaign": "campaign_objective_joint_full_v2",
+  "next_read_only_command": "python3 analysis/m0_improvement_20260915/monitor_readout_transition_v3.py",
+  "full_validation_selection_sha256": "60811c8a0847eaf38caeac489eb5dafc3f34cf90b402e640a182356a620eb391",
+  "full_validation_dispatched": true,
+  "frame_protocol_sha256": "3b9e6ab2252d73659d454824d94166729017cfc9ad063b6172ceb8d304276ad9",
+  "frame_campaign": "campaign_frame_v1",
+  "memory_campaign_deadline_unix": 1789417106,
+  "memory_campaign_deadline_note": "Historical completed memory campaign only; new reference job has its own2700second bound.",
+  "preparing": [],
+  "reference_result_summary_sha256": "fadb8b47dbf7e4da664df3eb5d362f7d291ef3fcee3bbf9b22cfc90c9b5ecfa5",
+  "reference_final_checkpoint_sha256": "da36a5b18ae9b3bdc0c10dbdd2446550777fcea1360e7345258ce2adc22442e3",
+  "supervision_probe_summary_sha256": "f76c849cfd28fb74ec8c3ad38856d56b8ec47628813268970ae0d61ca6d08dd6",
+  "full_loss_vjp_summary_sha256": "e32c9f4e6dd2ff97909ada9aac7e90de891934a0205031dd1846e3ee2e188c5d",
+  "current_turn_classification": "Core M0 improvement proven; final no-training diagnostic pilot passed and development stopped by preset resource ceiling; no expansion or scientific inference from two anchors",
+  "objective_protocol_sha256": "275b2551775b169471cb230a1416d0454c0560d229c4fe9b7ec5166cfc4c460d",
+  "objective_trainmode_summary_sha256": "66b614b51f9a4269ac7b93c1bb3fd65344a3f62815f7a1b1c5b58b4d805b7737",
+  "latest_training_status": {
+    "all_arms_complete": true,
+    "F_updates": 512,
+    "O_updates": 512,
+    "seeds": [
+      11
+    ],
+    "job_exit_code": 0,
+    "runner_seconds": 1892.385256020003
+  },
+  "objective_development_summary_sha256": "46c37b5b074e73896e357e0bc9744a538abb01b288521769a577f459be54ad6b",
+  "qualified_candidates": [
+    "O"
+  ],
+  "full_evaluation_protocol_sha256": "b1b1b046b5acf9dc1207a19e0b7b740d6db38a0982a3794f670fa06862189f28",
+  "full_authorization_sha256": "81cd07a6155ff232f98698e5397243b84fac6e8c3d2a61681181e618f4c27980",
+  "full_campaign_deadline_unix": 1789438642.4789393,
+  "full_campaign_deadline_note": "Concurrent shards share this6h deadline; wrapper merges within900s and outer22800s job includes1200s margin. No automatic retry or later training.",
+  "native_pilot_summary_sha256": "423da1537731aed3deaed72303faa1532c20b0fb7169a4b157978c0033839db5",
+  "native_pilot_complete_sha256": "e4b2690d7045a8bf9b0cc49a3ac22bf87d0a282537e191ea17167fbeb2adb3fb",
+  "completed_full_fetch_command": "python3 analysis/m0_improvement_20260915/snapshot.py --job objective_joint_full_v2 --fetch campaign_objective_joint_full_v2/state.json --fetch campaign_objective_joint_full_v2/manifest.json --fetch campaign_objective_joint_full_v2/complete.json --fetch campaign_objective_joint_full_v2/failed.json --fetch campaign_objective_joint_full_v2/evaluation/shard_00_of_02/progress.json --fetch campaign_objective_joint_full_v2/evaluation/shard_00_of_02/complete.json --fetch campaign_objective_joint_full_v2/evaluation/shard_00_of_02/failed.json --fetch campaign_objective_joint_full_v2/evaluation/shard_01_of_02/progress.json --fetch campaign_objective_joint_full_v2/evaluation/shard_01_of_02/complete.json --fetch campaign_objective_joint_full_v2/evaluation/shard_01_of_02/failed.json --fetch campaign_objective_joint_full_v2/summary_v1/summary.json --fetch campaign_objective_joint_full_v2/summary_v1/complete.json --fetch campaign_objective_joint_full_v2/summary_v1/report.md --fetch campaign_objective_joint_full_v2/summary_v1/metrics.csv --fetch campaign_objective_joint_full_v2/summary_v1/contrasts.csv --fetch campaign_objective_joint_full_v2/summary_v1/sample_hash_ledger.json --fetch campaign_objective_joint_full_v2/summary_v1/development_disclosure.json --fetch campaign_objective_joint_full_v2/summary_v1/raw_confusions.npz",
+  "new_research_artifacts": {
+    "O当前与未来预测连接审计.md": "827327806e699105b298057ce1ccf131c07cb15066d59ab098a05d1dbf4b45b0",
+    "O改进的概率与决策边界.md": "0195152818f77e03b44295631965cc27bfd2c257302e8f60bd8b42a873ab7f52",
+    "sanyal2018_nondecomposable_card.md": "f9ae9b885fa549ddbd8787f3f2b4d437e479f5d3d0002a30aaf3edf88ca98309",
+    "sanyal2018_nondecomposable_sources.json": "05692db1f7f881ac9f9f4291e1352e4c410be28d54a412de1698bc6c5f94995b",
+    "readout_transition_factorization_design_audit.md": "ecc3344137acbf268f0b41d5b77fb517dd235a94e8c6fcd6bb2254a4d6c410ad",
+    "readout_transition_diagnostic.py": "e943479e17f4ff1e4c7dee7eaf948556463d8b3ef64c99c9d9709261f4358f0c",
+    "readout_transition_diagnostic_protocol_v1.json": "b2521df119bc7877729154b45fbc19dd31474afe620a0f864df31a3e68e892b9",
+    "run_readout_transition_campaign.py": "bdb73316059c00530a5f48d7a98c8d1d06cd46b9498679e8333fe6752d1be6af",
+    "objective_full_dependency.py": "55939464aee53067227e4ff98e4cd66890616141a33f54a97f671e25014eddde",
+    "readout_transition_producer_audit.md": "f057a733acfb4083326c5d644eac76cb880401176eaf3a3d6728d64f37be9f26",
+    "readout_transition_campaign_audit.md": "f1fc548c66a8c49b9972d2271e834042e38f87b94fa4213167fb400ccc2f6734",
+    "readout_transition_dispatch_plan_v1.json": "0161d17747a145dd1fdbf5654d1036f8d5e45676fd8028a0e91c0f9d91aa5dab",
+    "full结果判读审查.md": "86af3bc76ce0111517e4bf9978d480323d90d7008984f6504b537bf94f1e8a91",
+    "O目标与优化器机制边界.md": "4a8a48de75ac32a767c04135390f4fb9c34ab7ea7f1c3a796e33521823d58591",
+    "二分类任务中的scaling约束.md": "c8c0a0e836acde015ddd0d69915e53cd297d0bf61cd9a95414997a72c3d3e8a9",
+    "binary_affinity_reanalysis.py": "685bc584b291825336219a5cad360e7d6c95d6d2c032c72c68f731efbd81a441",
+    "binary_affinity_reanalysis_v1/summary.json": "73e800e9d3b29cfd86b5c98d898918e0aa11e9167deb86267c3387784005271a",
+    "binary_affinity_reanalysis_v1/numbers.csv": "dcc9f3b713400f13013dbbb31582d324b5cebdc43523cf2ef7608a0089fa603c",
+    "binary_affinity_independent_audit.md": "974b21fc21d4baafe683a7b1e38375d57396d26fd313b776b3d48ec1df7f9027",
+    "plot_readout_transition_results.py": "9caadb15395832f454df338bf3d712846a659d0b6b9a42aa378d8eebf063e19b",
+    "plot_readout_transition_results_usage.md": "b71e5f553e2f4adc6a818a904a997dce2dbd9d5c4fe4f39650c77a70baa08aee",
+    "full_objective_independent_audit.md": "8024dc6f43215a658c6669a27e99dbb39e1ee7099d699c0d83059393ea20e77e",
+    "full_objective_interpretation.md": "e789688c0dc472b4fb32d9144264e9ee72eac27b484b0cdaf495b51b510e97d1",
+    "plot_objective_full_results_reviewed.py": "f5433a944147029908c4c20cada820bd7b4652f3250ed65bf781636834612099",
+    "plot_objective_full_results_reviewed_usage.md": "2a185c604aeb1a4b07b257c78aff6a2da746cef7fdc1eb246635095eae15cde1",
+    "figures/objective_full_v2_reviewed/render_receipt.json": "8d9e4b1c209c70f7ec27b654094992ae67b29e2dde81e90a4b5b0439a9b2c1c2",
+    "figures/objective_full_v2_reviewed/visual_qa.json": "8ec1dbd283581cb346f38ef5c99ced121d0f5979a5368a39fb52c73bdd3b4353"
+  },
+  "next_diagnostic_read_only_command": "python3 analysis/m0_improvement_20260915/monitor_readout_transition_v4.py",
+  "completed_diagnostic_fetch_files": [
+    "campaign_readout_transition_v2b/dependency_complete.json",
+    "campaign_readout_transition_v2b/failed.json",
+    "campaign_readout_transition_v2b/gpu_before.json",
+    "campaign_readout_transition_v2b/manifest.json",
+    "campaign_readout_transition_v2b/pilot/failed.json",
+    "campaign_readout_transition_v2b/pilot.log",
+    "campaign_readout_transition_v2b/state.json"
+  ],
+  "next_actions": [],
+  "additional_training_started_this_turn": false,
+  "active_local_watcher": {
+    "exec_session_id": 48670,
+    "status": "EXITED_ZERO",
+    "reason": "First full shard completed normally; root then verified both complete and full EXITED_ZERO. Do not resume old watcher."
+  },
+  "local_transport_recovery": {
+    "receipt": "receipts/ssh_transport_recovery_20260914T220623Z.json",
+    "ssh_config": "ssh_config",
+    "backup": "ssh_config.before_proxy_20260914T220623Z",
+    "route": "same whu-ext via existing127.0.0.1:7890 HTTP CONNECT; same H200 ProxyJump",
+    "strict_host_key_checking": true,
+    "batch_mode": true,
+    "fresh_full_proof": "receipts/objective_full_monitor_20260915_060625_151650.json",
+    "fresh_queue_proof": "receipts/readout_transition_monitor_20260915_060625_142729.json",
+    "server_job_restarted": false
+  },
+  "core_effect_requirement_proven": true,
+  "full_result": {
+    "job": "objective_joint_full_v2",
+    "status": "EXITED_ZERO",
+    "returncode": 0,
+    "runner_seconds": 8528.042677880032,
+    "samples": 5119,
+    "scenes": 150,
+    "summary_sha256": "199347570b9d34130c6366ef3fb138bbc08c1310a50010a1f200061fe428f463",
+    "complete_sha256": "cdf54175b84613b1e175fe783f490ab62681c18060c5289981f2be426d2a53e5",
+    "raw_confusions_sha256": "4f649ede18d41e371bb36837e642b99e095c24936601761e1f402744399366f4",
+    "models": {
+      "M0": {
+        "future_macro_gmo": {
+          "estimate": 0.13944375832331368,
+          "ci95": [
+            0.1302938565404579,
+            0.14822047859242593
+          ],
+          "unit": "ratio"
+        },
+        "future_macro_binary_miou": {
+          "estimate": 0.5687143758814351,
+          "ci95": [
+            0.5641015695700788,
+            0.5731349858327184
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_gmo": {
+          "estimate": 0.13976180288937715,
+          "ci95": [
+            0.13058921445982297,
+            0.14856309095098896
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_binary_miou": {
+          "estimate": 0.5688733989467399,
+          "ci95": [
+            0.5642462773038357,
+            0.5733028974768972
+          ],
+          "unit": "ratio"
+        }
+      },
+      "M0_fp32": {
+        "future_macro_gmo": {
+          "estimate": 0.1394485090653071,
+          "ci95": [
+            0.13029515430403607,
+            0.14822612865307203
+          ],
+          "unit": "ratio"
+        },
+        "future_macro_binary_miou": {
+          "estimate": 0.5687167635681736,
+          "ci95": [
+            0.564103510545378,
+            0.573135450981822
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_gmo": {
+          "estimate": 0.1397665897454787,
+          "ci95": [
+            0.13059517906679047,
+            0.14856803912459496
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_binary_miou": {
+          "estimate": 0.5688758046912035,
+          "ci95": [
+            0.5642494662591034,
+            0.5733065832600847
+          ],
+          "unit": "ratio"
+        }
+      },
+      "native1": {
+        "future_macro_gmo": {
+          "estimate": 0.13727646143124866,
+          "ci95": [
+            0.1281443344141629,
+            0.14595254556005768
+          ],
+          "unit": "ratio"
+        },
+        "future_macro_binary_miou": {
+          "estimate": 0.5674864860331829,
+          "ci95": [
+            0.5628810048435413,
+            0.5718355143511777
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_gmo": {
+          "estimate": 0.13758438723596966,
+          "ci95": [
+            0.1284198684284058,
+            0.14627462800769836
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_binary_miou": {
+          "estimate": 0.5676404500395129,
+          "ci95": [
+            0.5630255697136645,
+            0.5720080214634474
+          ],
+          "unit": "ratio"
+        }
+      },
+      "O": {
+        "future_macro_gmo": {
+          "estimate": 0.1474779288146352,
+          "ci95": [
+            0.13809933090979398,
+            0.15640522998663417
+          ],
+          "unit": "ratio"
+        },
+        "future_macro_binary_miou": {
+          "estimate": 0.5727932662264281,
+          "ci95": [
+            0.5680723052950043,
+            0.5772763765314067
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_gmo": {
+          "estimate": 0.14812802692281923,
+          "ci95": [
+            0.1387389467378635,
+            0.15705243830691382
+          ],
+          "unit": "ratio"
+        },
+        "future_pooled_binary_miou": {
+          "estimate": 0.5731183187967346,
+          "ci95": [
+            0.5683952189800612,
+            0.5775904674009321
+          ],
+          "unit": "ratio"
+        }
+      }
+    },
+    "primary_comparisons": [
+      {
+        "contrast": "O - M0_fp32",
+        "left": "O",
+        "right": "M0_fp32",
+        "primary_contrast": true,
+        "precision_only_contrast": false,
+        "metrics": {
+          "future_macro_gmo": {
+            "delta_ratio": 0.00802941974932811,
+            "delta_pp": 0.8029419749328109,
+            "ci95_ratio": [
+              0.006817817621685348,
+              0.009406098037937325
+            ],
+            "ci95_pp": [
+              0.6817817621685348,
+              0.9406098037937325
+            ]
+          },
+          "future_macro_binary_miou": {
+            "delta_ratio": 0.004076502658254544,
+            "delta_pp": 0.4076502658254544,
+            "ci95_ratio": [
+              0.0034618806432550665,
+              0.004772839808907872
+            ],
+            "ci95_pp": [
+              0.34618806432550664,
+              0.4772839808907872
+            ]
+          },
+          "future_pooled_gmo": {
+            "delta_ratio": 0.00836143717734053,
+            "delta_pp": 0.836143717734053,
+            "ci95_ratio": [
+              0.007153946190180476,
+              0.009711856971601122
+            ],
+            "ci95_pp": [
+              0.7153946190180476,
+              0.9711856971601122
+            ]
+          },
+          "future_pooled_binary_miou": {
+            "delta_ratio": 0.004242514105531114,
+            "delta_pp": 0.42425141055311144,
+            "ci95_ratio": [
+              0.003631764439520788,
+              0.004926892060777634
+            ],
+            "ci95_pp": [
+              0.36317644395207876,
+              0.4926892060777634
+            ]
+          }
+        },
+        "horizons": [
+          {
+            "horizon_seconds": 0.0,
+            "gmo_delta_ratio": -0.0013957903152712614,
+            "gmo_delta_pp": -0.13957903152712614,
+            "gmo_ci95_pp": [
+              -0.16823943168111805,
+              -0.10943681473979372
+            ],
+            "delta_FP": 5210733,
+            "delta_FN": -641470
+          },
+          {
+            "horizon_seconds": 0.5,
+            "gmo_delta_ratio": 0.004535810402685636,
+            "gmo_delta_pp": 0.4535810402685636,
+            "gmo_ci95_pp": [
+              0.32196672417237765,
+              0.6130495747234687
+            ],
+            "delta_FP": 1855394,
+            "delta_FN": -886178
+          },
+          {
+            "horizon_seconds": 1.0,
+            "gmo_delta_ratio": 0.007848984601879022,
+            "gmo_delta_pp": 0.7848984601879022,
+            "gmo_ci95_pp": [
+              0.6531724002068174,
+              0.9389449434146904
+            ],
+            "delta_FP": -3353844,
+            "delta_FN": -494696
+          },
+          {
+            "horizon_seconds": 1.5,
+            "gmo_delta_ratio": 0.009629165111389393,
+            "gmo_delta_pp": 0.9629165111389393,
+            "gmo_ci95_pp": [
+              0.8317457493106776,
+              1.109676136998006
+            ],
+            "delta_FP": -9429346,
+            "delta_FN": 175333
+          },
+          {
+            "horizon_seconds": 2.0,
+            "gmo_delta_ratio": 0.01010371888135847,
+            "gmo_delta_pp": 1.010371888135847,
+            "gmo_ci95_pp": [
+              0.8734417240176663,
+              1.1500937821516128
+            ],
+            "delta_FP": -15277960,
+            "delta_FN": 883584
+          }
+        ],
+        "registered_minimum_meaningful_effect_pp": 0.5,
+        "point_meets_registered_minimum": true,
+        "ci_lower_meets_registered_minimum": true,
+        "ci_lower_positive": true
+      },
+      {
+        "contrast": "O - native1",
+        "left": "O",
+        "right": "native1",
+        "primary_contrast": true,
+        "precision_only_contrast": false,
+        "metrics": {
+          "future_macro_gmo": {
+            "delta_ratio": 0.010201467383386537,
+            "delta_pp": 1.0201467383386538,
+            "ci95_ratio": [
+              0.00929598415154961,
+              0.011115063787903102
+            ],
+            "ci95_pp": [
+              0.929598415154961,
+              1.1115063787903101
+            ]
+          },
+          "future_macro_binary_miou": {
+            "delta_ratio": 0.005306780193245264,
+            "delta_pp": 0.5306780193245264,
+            "ci95_ratio": [
+              0.0048467851971593,
+              0.005769604507591416
+            ],
+            "ci95_pp": [
+              0.48467851971593,
+              0.5769604507591416
+            ]
+          },
+          "future_pooled_gmo": {
+            "delta_ratio": 0.01054363968684957,
+            "delta_pp": 1.054363968684957,
+            "ci95_ratio": [
+              0.009668094713781345,
+              0.011423329042714125
+            ],
+            "ci95_pp": [
+              0.9668094713781346,
+              1.1423329042714125
+            ]
+          },
+          "future_pooled_binary_miou": {
+            "delta_ratio": 0.005477868757221671,
+            "delta_pp": 0.5477868757221671,
+            "ci95_ratio": [
+              0.005030107134823492,
+              0.005924978736402004
+            ],
+            "ci95_pp": [
+              0.5030107134823492,
+              0.5924978736402003
+            ]
+          }
+        },
+        "horizons": [
+          {
+            "horizon_seconds": 0.0,
+            "gmo_delta_ratio": 0.0008813717555141432,
+            "gmo_delta_pp": 0.08813717555141432,
+            "gmo_ci95_pp": [
+              0.06946010246604503,
+              0.10805099689586405
+            ],
+            "delta_FP": -2234242,
+            "delta_FN": 231288
+          },
+          {
+            "horizon_seconds": 0.5,
+            "gmo_delta_ratio": 0.007962415488227154,
+            "gmo_delta_pp": 0.7962415488227154,
+            "gmo_ci95_pp": [
+              0.719158383184662,
+              0.8781687332369164
+            ],
+            "delta_FP": -16336464,
+            "delta_FN": 1363371
+          },
+          {
+            "horizon_seconds": 1.0,
+            "gmo_delta_ratio": 0.010247586127093089,
+            "gmo_delta_pp": 1.024758612709309,
+            "gmo_ci95_pp": [
+              0.9386990168920436,
+              1.1141791102399479
+            ],
+            "delta_FP": -22187329,
+            "delta_FN": 1859756
+          },
+          {
+            "horizon_seconds": 1.5,
+            "gmo_delta_ratio": 0.011162162856792113,
+            "gmo_delta_pp": 1.1162162856792113,
+            "gmo_ci95_pp": [
+              1.0104222852221654,
+              1.223236515185816
+            ],
+            "delta_FP": -26905162,
+            "delta_FN": 2322355
+          },
+          {
+            "horizon_seconds": 2.0,
+            "gmo_delta_ratio": 0.011433705061433902,
+            "gmo_delta_pp": 1.1433705061433903,
+            "gmo_ci95_pp": [
+              1.010467522323432,
+              1.2756453765609215
+            ],
+            "delta_FP": -31284632,
+            "delta_FN": 2736222
+          }
+        ],
+        "registered_minimum_meaningful_effect_pp": 0.5,
+        "point_meets_registered_minimum": true,
+        "ci_lower_meets_registered_minimum": true,
+        "ci_lower_positive": true
+      }
+    ],
+    "independent_audit": "full_objective_independent_audit.md",
+    "independent_audit_sha256": "8024dc6f43215a658c6669a27e99dbb39e1ee7099d699c0d83059393ea20e77e",
+    "interpretation": "full_objective_interpretation.md",
+    "reviewed_plot": "figures/objective_full_v2_reviewed",
+    "goal_scope_note": "Establishes fixed original-task full-validation improvement; not a new blind test, training-seed robustness or ICLR novelty claim; 2x2 result is not a new success gate",
+    "interpretation_sha256": "e8a30acd0ebc61180175d340a5ce3283bd23d45761a74d511ae605905a0e863d",
+    "model_card": "O验证通过模型卡.md",
+    "model_card_sha256": "3ae1dba35300084b882b258397afd73bf6fc9218e20c932a4cd4babf5d2a7044"
+  },
+  "pending_authorized_work": [],
+  "diagnostic_v2b": {
+    "job": "readout_transition_v2b",
+    "runner_status": "FAILED",
+    "returncode": 1,
+    "all_processes_gone": true,
+    "monitor": "receipts/readout_transition_v2b_monitor_20260915_070907_164236.json",
+    "complete_package_sha256": "c1b462017d3e1588cde51677d3789e8f80c4bcb7f434dfab8de3d4430a60dbc4",
+    "failure": {
+      "status": "FAILED_READOUT_TRANSITION_DIAGNOSTIC",
+      "mode": "pilot",
+      "error_type": "ValueError",
+      "error": "Actual final source audit differs: native1",
+      "seconds": 10.322855900041759,
+      "optimizer_updates": 0,
+      "automatic_retry": false
+    },
+    "optimizer_updates": 0
+  },
+  "readout_diagnostic_terminal": {
+    "job": "readout_transition_v3",
+    "pilot_status": "PASS_READOUT_TRANSITION_ENGINEERING",
+    "pilot_samples": 2,
+    "pilot_scenes": 2,
+    "pilot_complete_sha256": "b445a81450edc8c7a236747df0194ac4f10e704160925b0cd30abb24e8d8a328",
+    "pilot_summary_sha256": "6d97cb9a6010ac162c6a72a403b967a6e18c7420ec6ccd6795a349f4b81aaa8e",
+    "runner_status": "FAILED",
+    "returncode": 1,
+    "failure_sha256": "0c2fa255d76af7ee4446c582a8485e76fed65855775405c2457860870373ea8f",
+    "stop_reason": "Frozen resource formula yields 2388s above development 1500s ceiling",
+    "development_started": false,
+    "optimizer_updates": 0,
+    "scientific_mechanism_result": false,
+    "no_further_run_queued": true,
+    "independent_audit": "readout_transition_v3_pilot_audit.md",
+    "independent_audit_sha256": "3b9a3ebaf482197d922dabb4bcdc0e5654b1986dd70016f98cef445c2d94d5b1"
+  },
+  "completion_evidence": "completion_evidence.json",
+  "completion_evidence_sha256": "2f8c44750c2603ea25844273c520c4bc6d9cb1766310802fd9a3006e39b88fac",
+  "newly_authorized_formal_diagnostic": {
+    "updated_utc": "2026-09-15T02:22:40.307968+00:00",
+    "user_request": "开始正式诊断",
+    "job": "readout_transition_v4",
+    "campaign": "campaign_readout_transition_v4",
+    "protocol_sha256": "4baad13ab4d6fe0ddce740b6a345923668f3bba2e4a8b10e21bb84f7694b0d83",
+    "state": "EXITED_ZERO",
+    "phase": "COMPLETE",
+    "launch_identity": {
+      "runner_pid": 2220046,
+      "uid": 1009,
+      "startticks": 106286634,
+      "created_utc": "2026-09-15T00:07:51.702842+00:00"
+    },
+    "samples": 200,
+    "scenes": 100,
+    "combinations": [
+      "CC",
+      "CO",
+      "OC",
+      "OO"
+    ],
+    "optimizer_updates": 0,
+    "new_training": false,
+    "previous_M0_improvement_goal_remains_complete": true,
+    "pilot_seconds": 300,
+    "development_ceiling_seconds": 3000,
+    "total_seconds": 3600,
+    "automatic_retry": false,
+    "monitor_receipt": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/m0_improvement_20260915/receipts/readout_transition_v4_monitor_20260915_102229_915054.json",
+    "result_complete": true,
+    "pilot_status": "PASS_READOUT_TRANSITION_ENGINEERING",
+    "pilot_seconds_actual": 104.0136631000787,
+    "actual_development_budget_seconds": 2167,
+    "development_process": {
+      "pid": 2220211,
+      "uid": 1009,
+      "startticks": 106297654,
+      "gpu_uuid": "GPU-74b9b73f-c405-55bc-bf76-f8aa85d1e7fe"
+    },
+    "pilot_complete_sha256": "18cef39f4cd283d1059f9abe7ab9ae9d24b6929d271ee2820ff5b8e23bc2049b",
+    "development_authorization_sha256": "59a285a715e9e51618304e91322b1c53dd5c8d95e906cb81919c5ea12475b767",
+    "plot_script": "plot_readout_transition_results_v4.py",
+    "progress": {
+      "completed": 200,
+      "planned": 200
+    },
+    "error": null,
+    "returncode": 0,
+    "finished_utc": "2026-09-15T00:28:04.978361+00:00",
+    "elapsed_seconds": 1210.1655377699062,
+    "all_engineering_gates_passed": true,
+    "model_and_input_state_unchanged": true,
+    "summary_sha256": "f5cbfd7a47d3e426c6b6125d3ea888adffb4d3d8962052930c723d0827243dc0",
+    "complete_sha256": "f8a649ce2d65c0b4ad60fd6feb526194c1624e3e8694ab8f5e415f8d25f40fbf",
+    "future_macro_gmo_percent": {
+      "CC": 13.73855587653895,
+      "CO": 13.778904712098322,
+      "OC": 14.70152139985766,
+      "OO": 14.663996820993908
+    },
+    "effects_future_macro_gmo": {
+      "total_O_minus_C": {
+        "delta_ratio": 0.009254409444549583,
+        "delta_pp": 0.9254409444549583,
+        "ci95_ratio": [
+          0.007890497087048292,
+          0.010615852544253465
+        ],
+        "ci95_pp": [
+          0.7890497087048292,
+          1.0615852544253466
+        ]
+      },
+      "readout_on_C_features": {
+        "delta_ratio": 0.00040348835559372853,
+        "delta_pp": 0.04034883555937285,
+        "ci95_ratio": [
+          0.00019848494190232506,
+          0.0006237481819506688
+        ],
+        "ci95_pp": [
+          0.019848494190232505,
+          0.06237481819506688
+        ]
+      },
+      "features_under_O_readout": {
+        "delta_ratio": 0.008850921088955854,
+        "delta_pp": 0.8850921088955854,
+        "ci95_ratio": [
+          0.0074656098495369146,
+          0.010243726372496712
+        ],
+        "ci95_pp": [
+          0.7465609849536915,
+          1.0243726372496713
+        ]
+      },
+      "features_under_C_readout": {
+        "delta_ratio": 0.009629655233187095,
+        "delta_pp": 0.9629655233187095,
+        "ci95_ratio": [
+          0.008134515586156212,
+          0.01113695854630811
+        ],
+        "ci95_pp": [
+          0.8134515586156212,
+          1.113695854630811
+        ]
+      },
+      "readout_on_O_features": {
+        "delta_ratio": -0.0003752457886375127,
+        "delta_pp": -0.03752457886375127,
+        "ci95_ratio": [
+          -0.0006974474458437269,
+          -6.053453967086801e-05
+        ],
+        "ci95_pp": [
+          -0.06974474458437269,
+          -0.006053453967086802
+        ]
+      },
+      "interaction_on_metric_scale": {
+        "delta_ratio": -0.0007787341442312412,
+        "delta_pp": -0.07787341442312412,
+        "ci95_ratio": [
+          -0.0009527208298877931,
+          -0.00060822925166934
+        ],
+        "ci95_pp": [
+          -0.09527208298877932,
+          -0.06082292516693401
+        ]
+      }
+    },
+    "actual_figure": "figures/readout_transition_development_v4/readout_transition_results.pdf",
+    "figure_visual_qa": "figures/readout_transition_development_v4/visual_qa.json",
+    "interpretation": "正式诊断结果与推进方向.md",
+    "independent_audit": "readout_transition_v4_independent_audit.md",
+    "independent_audit_sha256": "046d935901ac8b9b8e89e98d51f190513cfb40ece8e0188246de6e013645436a",
+    "independent_statistics_max_difference": 0.0,
+    "interpretation_sha256": "6b9be15f12bbbc49dca07cf977c87f745e22236218da460db4d9acc3b8ba7e5a",
+    "all_delivery_checks_passed": true
+  }
+}

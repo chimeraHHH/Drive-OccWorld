@@ -1,0 +1,49 @@
+{
+  "status": "FROZEN_BEFORE_NEW_TRAINING_OR_DEV_RESULTS",
+  "schema": "connected-motion-comparison-contract-v1",
+  "training_seed": 11,
+  "original_primary": "four-future mean of per-horizon pooled original native GMO IoU",
+  "occupancy_pairs": [
+    "J-O",
+    "D-O",
+    "J-D"
+  ],
+  "physical_pairs": [
+    "J-P",
+    "D-P",
+    "J-D",
+    "J-zero",
+    "D-zero",
+    "P-zero"
+  ],
+  "P": "fixed source_motion_train_v1 head; not O flow",
+  "physical_mean_unit": "equal anchor-instance after point EPE mean",
+  "physical_report": [
+    "XY and 3D",
+    "all and each of 3 original speed groups",
+    "each of 4 nominal horizons",
+    "mean median p90 plus denominator"
+  ],
+  "physical_interval_scope": "means; median/p90 remain point estimates",
+  "common_output": "unchanged occupancy transition 00/01/10/11, GT endpoint-speed-positive recall, full-domain FP/FN; no flow/identity claim",
+  "resampling": {
+    "unit": "scene",
+    "keep_all_anchors_objects": true,
+    "repetitions": 10000,
+    "seed": 11,
+    "paired": true,
+    "interval": "percentile95",
+    "multiplicity_adjusted": false
+  },
+  "single_training_seed_variation_covered": false,
+  "historical_validation_exposure": true,
+  "original_O_full_required_for_success": true,
+  "full5119_required": true,
+  "no_goal_success_from_development_only": true,
+  "no_goal_success_from_physical_head_EPE_vs_zero_only": true,
+  "no_candidate_selection_by_best_checkpoint_threshold_seed_or_horizon": true,
+  "analysis_source_sha256": "3b0822c7d4c9218211dfec7c7d6854fd67b28f9b43640134dfe2228690a2c40e",
+  "analytic_tests_sha256": "bec71428bbb15b8f720845d303059e475798bc09ab902e1865fb8770947af7c8",
+  "common_metric_source_sha256": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+  "decision_source_sha256": "7c9ed25c01506e38f489db9c03cdb7cc9830f7351e53b69237da0bda189cfe41"
+}

@@ -1,0 +1,30 @@
+# J/D initial VJP preflight: observed failure and diagnostic boundary
+
+The real H200 preflight stopped before any optimizer update or training example was completed. Runner 58690 and child 58691 both exited and were absent at the 2026-09-15 16:36:07 UTC observation. The outer duration was 50.731 s. No formal J/D training, development evaluation, or reusable weights were produced.
+
+Frozen trainer SHA: `7b61c80b87e3a7c5940ba25288429b1b5ebc1696556f0dfab05512c4860ba1b9`.
+Frozen protocol SHA: `9ccfa458a8b67b978959240b790e0e1b99b4c72e1771c0696900e41be6f3af2e`.
+
+The failing assertion compared the total-loss VJP with the sum of separately computed physical-loss and occupancy-loss VJPs, element by element, at `rtol=1e-5`, `atol=1e-7`. The first arm is J. Checks before this assertion establish finite gradients, nonzero physical and J occupancy motion gradients, and no physical-loss gradient into the gate. The original failure receipt does not retain the difference magnitude, affected parameter names, or cancellation statistics. It therefore does not establish either a wiring defect or harmless numerical roundoff.
+
+The next action is one isolated, no-update diagnostic at the same frozen initialization and first training anchor. It will compare repeated VJPs on the same graph and the physical/occupancy/total gradients at both the displacement node and motion parameters. CPU float64 arithmetic on the returned float32 gradients distinguishes final vector addition rounding from discrepancies already introduced during shared-head backward. Per-layer norms, maximum errors, finite/None checks, and parameter/input/GT identity are retained as small JSON records. The diagnostic must stop at this boundary and cannot enter the optimizer loop.
+
+The current precision policy disables matrix-multiplication TF32 while allowing cuDNN TF32. PyTorch 2.1.2 documents that floating-point operations are not associative and mathematically equivalent computations need not be bitwise equal; its matrix and convolution TF32 controls are separate. These are plausible mechanisms, not an explanation proved for this failure. Sources: [version-matched numerical-accuracy documentation](https://raw.githubusercontent.com/pytorch/pytorch/v2.1.2/docs/source/notes/numerical_accuracy.rst), [version-matched CUDA semantics](https://raw.githubusercontent.com/pytorch/pytorch/v2.1.2/docs/source/notes/cuda.rst).
+
+Do not expand tolerances merely to pass, change loss weights, replace the anchor, or restart the failed directory. Any subsequent numerical-policy or engineering-check change must follow the diagnostic evidence and preserve a new, explicit version. M0/O and the physical-and-occupancy research goal remain unchanged.
+
+## Completed first diagnostic
+
+`connected_motion_vjp_diagnostic_v1` exited zero in 19.298 s, with zero updates. Its result SHA is `4ef3f729c5c85e22574337ca189ee7a41d5fdc8a02ffb1194ac10e071318a64d`; root verified result/observations against the completion receipt. All model parameters, buffers, inputs, GT and O predictions were unchanged.
+
+On fixed train ordinal 396, J's occupancy-to-motion VJP is nonzero; D's corresponding parameter gradients are all None. J/D physical gradients and initial motion outputs are byte equal. J's parameter-level sum discrepancy has max absolute error `3.896653652191162e-05`, relative L2 `0.00021089503245645425`, and 60,215 failing coordinates out of 467,904 under the original rule. The largest total-VJP repeat difference is `3.026798367500305e-08`; final float32 vector addition contributes at most `3.4924596548080444e-09`. Thus neither final addition nor measured repeat noise accounts for the larger discrepancy. At the displacement node the sum discrepancy is only `1.862645149230957e-09` and passes the original tolerance. D's motion sum discrepancy is exactly zero.
+
+This localizes the remaining question but does not isolate the cuDNN switch. A second no-update diagnostic holds the motion forward graph and detached displacement cotangents fixed, then compares head-only VJPs with cuDNN TF32 enabled and disabled. The actual source for PyTorch 2.1.2 `convolution_backward` reads this setting at backward execution, making this a valid intervention without recomputing O or the forward activations. A trainer V2 draft uses full-precision VJPs only for its initial engineering assertion and restores the original setting before training; it remains conditional on that diagnostic, not an executed or validated fix.
+
+## Fixed-cotangent intervention and registered correction
+
+The second actual job exited zero in 20.528 s, without updates. Result SHA: `a56507a4e336bb9981e6434214cbe7ab1bf1d4000d57cf614833088e6a4109b8`; completion SHA: `c4ea5acab6f23aaa8f031d4a8ce29c311bcb71b3f0033b0791a303998c1a8559`. Both files and the observations hash were verified locally.
+
+With the same motion graph and fixed `qP`, `qO`, `qP+qO`, TF32-enabled head backward has max additivity discrepancy `3.896653652191162e-05` and relative L2 `0.0002108964456756356`, failing the original rule. TF32-disabled head backward reduces these to `3.725290298461914e-08` and `9.62868874362277e-07`, passing that same rule. The fixed original total cotangent `qT` also passes with TF32 disabled. All fixed cotangents, forward outputs, parameters, buffers, inputs and GT remained unchanged; the original flag was restored. This isolates an effect of the cuDNN TF32 policy on this initial-head numerical assertion. It does not establish the effect of that policy on final training quality.
+
+Trainer V2 is now registered with SHA `1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a` and protocol SHA `e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259`. Only its zero-update engineering VJPs temporarily disable cuDNN TF32, with `try/finally` restoration. Forward operations, actual optimizer-update precision, both losses and their weights, gradient tolerances, seed, data, learning rates and fixed budgets are unchanged. A new real four-update preflight must still pass its complete graph and optimizer checks before formal training. The failed V1 is preserved and will not be resumed.

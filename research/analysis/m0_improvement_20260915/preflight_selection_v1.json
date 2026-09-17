@@ -1,0 +1,24 @@
+{
+  "schema": "native-state-selection-v1",
+  "catalog_sha256": "b59f92a4488dc465130b9477f50bcf6b16469b27b26205443f6878cf022c90f1",
+  "rule": "SHA ordered scenes, two evenly spaced interior usable positions per scene; identities only",
+  "records": [
+    {
+      "sample_token": "464fe0be05a74ec9852573cb9e3afd89",
+      "scene_token": "1ad821fcfc9f4c24bb879ec7d5ba0ec1",
+      "official_index": 9899,
+      "split": "train"
+    },
+    {
+      "sample_token": "1dacdffab5c240f1b20e05566b940ef6",
+      "scene_token": "d2db9f5df62c4d338d3bed43f616b954",
+      "official_index": 23322,
+      "split": "train"
+    }
+  ],
+  "training_scenes": 256,
+  "development_scenes": 100,
+  "historical_val_exposure": true,
+  "locked_scenes_used": false,
+  "interpretation": "Two distinct real training scenes for engineering parity and resource profile only"
+}

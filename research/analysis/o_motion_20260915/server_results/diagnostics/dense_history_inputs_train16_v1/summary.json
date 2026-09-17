@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_AUTHENTICATED_DENSE_HISTORY_INPUTS",
+  "anchors": 16,
+  "sequences": 96,
+  "frames_per_sequence_minmax": [
+    5,
+    7
+  ],
+  "image_occurrences": 654,
+  "unique_images": 654,
+  "interframe_dt_s_minmax": [
+    0.049767,
+    0.2
+  ],
+  "source_bytes": 103249090,
+  "seconds": 23.317446600005496,
+  "GT_read": false,
+  "model_forward": false,
+  "optimizer_updates": 0
+}

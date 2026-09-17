@@ -1,0 +1,152 @@
+{
+  "schema": "history-pose-address-control-train-analysis-v1",
+  "status": "FROZEN_PRESPECIFIED_NO_REAL_POSE_RESULT_READ",
+  "parent_analyzer_sha256": "69ad87766e8964412fef11bd3e0b7810b4c109a5e2bc7ce1f94475e580df68c0",
+  "pose_extractor_sha256": "f721ae8b4ee12b7795a7b2e5d26d6c9aa6ef6c02103af21fbf85522244e9869f",
+  "pose_core_sha256": "7de75c862634729a804b95ac6b6d9f03b2193a0622a279102083977fa1724072",
+  "pose_protocol_sha256": "8183a66c5beaea546ab479b93e2bc98ba6902fb1f76a74fa2dd5dc3faf0a2d13",
+  "source_endpoints": {
+    "parent_core_sha256": "c7469179d1628979b30eb256e695fdd6479ffd6e2df047d380d890512f57a5ea",
+    "camera_complete_sha256": "0c0d2e640a12e3299e8dacc03189776669cd2e50036a65de823026304119b648",
+    "history_inputs_complete_sha256": "040d62242a541b9685f3f39f1534b3663b0e1142b4cd7d9737cdbfd15d94314d",
+    "motion_complete_sha256": "3bd429effb1fbe50ac0aeb77330bc0100ee144bf8406fbd078097fb336301a73",
+    "raw_manifest_sha256": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+    "raw_complete_sha256": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69",
+    "points_file_sha256": "91bcc80882e41ffd5234cecce4b517ef4081839c89dbb6a048c4226b723ca6fd"
+  },
+  "metrics": [
+    "delta_eD_minus_eGT",
+    "delta_eZero_minus_eGT",
+    "broken_delta_eD_minus_eGT",
+    "broken_delta_eZero_minus_eGT",
+    "actual_minus_broken_delta_eD_minus_eGT",
+    "actual_minus_broken_delta_eZero_minus_eGT"
+  ],
+  "auc_features": [
+    "score_true",
+    "score_broken",
+    "lsq_speed_xy_mps"
+  ],
+  "directions": [
+    1,
+    1,
+    1
+  ],
+  "reference_reason_codes": {
+    "0": "valid",
+    "1": "original_photo_invalid",
+    "2": "current_pose_unavailable",
+    "3": "past_pose_unavailable",
+    "4": "current_GT_projection_invalid",
+    "5": "past_GT_projection_invalid"
+  },
+  "pose_reason_codes": {
+    "0": "available",
+    "1": "time_outside",
+    "2": "missing_box",
+    "3": "broken_link",
+    "4": "not_evaluated"
+  },
+  "horizons_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "speed_edges_mps": [
+    0,
+    0.1,
+    0.5,
+    1,
+    2,
+    5,
+    10,
+    null
+  ],
+  "speed_bin_convention": "Left closed, right open; last edge positive infinity; original sum-reduction LSQ speed",
+  "strata": [
+    "all",
+    "no_radar",
+    "radar_present"
+  ],
+  "groups": [
+    "all",
+    "stationary",
+    "ambiguous",
+    "moving"
+  ],
+  "group_naming": "stationary is the unchanged original future-GT static group; future motion group is not a past-motion label",
+  "group_and_bin_scope": "Three radar strata times four original future-GT groups at all speeds; seven individual speed bins only for no_radar/all",
+  "population": "Original future-valid AND CRN-uncovered (owner<0); all original source points retained",
+  "common_population": "Within every cell, all six dimensionless metrics, three secondary AUC scores, two reference correlations, and four continuous descriptors use exactly reference_reason_code==0; no extra filter",
+  "point_weight": "1 / number of ALL original points in that object; never renormalized to uncovered, camera-valid, pose-valid, radar or speed subset",
+  "denominator": "ALL original future-valid objects per horizon/group, including fully covered and all camera/pose-missing objects",
+  "metric_definitions": {
+    "delta_eD_minus_eGT": "corr_GT - corr_D, positive means GT-reference patch residual below D residual",
+    "delta_eZero_minus_eGT": "corr_GT - corr_zero, positive means GT-reference patch residual below zero residual",
+    "broken_delta_eD_minus_eGT": "broken_corr_GT - broken_corr_D, same past-image width//2 circular-roll control",
+    "broken_delta_eZero_minus_eGT": "broken_corr_GT - broken_corr_zero, same broken control",
+    "actual_minus_broken_delta_eD_minus_eGT": "delta_eD_minus_eGT - broken_delta_eD_minus_eGT on the exact same points",
+    "actual_minus_broken_delta_eZero_minus_eGT": "delta_eZero_minus_eGT - broken_delta_eZero_minus_eGT on the exact same points"
+  },
+  "dimensionless_summary": {
+    "units": "Dimensionless correlation differences, NOT physical EPE",
+    "conditional": "sum(w*value)/sum(w) in common population",
+    "signs": "Positive/zero/negative original weight fractions on identical common population; zero uses exact equality",
+    "full": "sum(w*value)/ALL original valid object count",
+    "empty": "Conditional and sign fractions null; full contribution zero when original denominator exists, otherwise null"
+  },
+  "reference_correlations": "Original-object-point-weighted conditional mean of GT and broken GT correlations on same reference-valid population",
+  "continuous_descriptors": [
+    "actual_past_GT_displacement_xy_m",
+    "actual_past_D_to_GT_error_xy_m",
+    "past_reference_departure_from_zero_px",
+    "past_reference_departure_from_D_px"
+  ],
+  "descriptor_weighting": "Same reference-valid population; original-object-point-weighted conditional means only; units m for displacement/error and px for image departure; no added bin or filter",
+  "secondary_auc": {
+    "label": "Bpast_cam = norm(GTdisp_past_xy) - norm(GTdisp_past_xy - dt_camera_past_minus_lidar_t0 * original_four_horizon_sum_LSQ_D_xy)",
+    "label_units": "m",
+    "positive": "Bpast_cam>0",
+    "negative": "Bpast_cam<0",
+    "zero": "Excluded only from binary AUC and counted",
+    "scores": [
+      "score_true",
+      "score_broken",
+      "lsq_speed_xy_mps"
+    ],
+    "directions": [
+      1,
+      1,
+      1
+    ],
+    "population": "Exactly common reference-valid support for all three scores",
+    "ties": 0.5,
+    "undefined": "null if either weighted class is absent",
+    "forbidden": "No AUC with nonnegative GT-D error as all-positive label; no AUC of new GT-reference deltas; no future-benefit AUC"
+  },
+  "physical_missingness": "All six reference reason partitions retain unchanged original FUTURE physical benefit/gain/cost with ALL original object denominator; no missing-score zero fill",
+  "timestamp_and_bracket_validation": "Collector/core verify raw sample annotation times and interpolation links; analyzer verifies frozen source hashes, old timestamp ledger, alpha in [0,1], and historical slot indices <=2; actual-past dt uses selected original camera time minus original LiDAR t0",
+  "restrictions": {
+    "no_fit": true,
+    "no_threshold_search": true,
+    "no_direction_selection": true,
+    "no_new_bin": true,
+    "no_new_filter": true,
+    "no_bootstrap": true,
+    "no_development": true,
+    "no_model_forward": true,
+    "no_training": true,
+    "no_image_read_in_analysis": true,
+    "no_raw_GT_read_in_analysis": true
+  },
+  "limitations": [
+    "Privileged historical GT-reference diagnostic; not a deployable signal or mathematical upper bound",
+    "Virtual material points inside original boxes are not certified visible surfaces",
+    "Rigid box interpolation and original perspective patches may not identify real photometric correspondence",
+    "Future GT group is not a past motion classification; past-displacement/error descriptors are reported without new filtering",
+    "Original repeated image patches and object points are not IID",
+    "train512 / 256 scenes was seen by D; no unseen-scene generalization claim",
+    "Dimensionless correlation effects and signed past-benefit AUC do not establish future motion, occupancy or routing improvement"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "history-camera-evidence-train-analysis-v1",
+  "status": "PRESPECIFIED_NO_REAL_SCORES_READ",
+  "camera_extractor_sha256": "263103e142b14348b832ace257e23e8cbbecb22073124151f446247f5fa747c0",
+  "camera_module_sha256": "c7469179d1628979b30eb256e695fdd6479ffd6e2df047d380d890512f57a5ea",
+  "camera_protocol_sha256": "255af7df71d2a2d04943fea0780974e39c1de3c6bc004e2faf2058f1fdaa8286",
+  "features": [
+    "score_true",
+    "score_broken",
+    "lsq_speed_xy_mps",
+    "current_zero_texture_std",
+    "past_hypothesis_pixel_separation"
+  ],
+  "directions": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "roles": [
+    "primary_real_correspondence",
+    "paired_broken_control",
+    "fixed_positive_D_speed_control",
+    "exploratory_input_texture",
+    "exploratory_projection_geometry"
+  ],
+  "definitions": {
+    "score_true": "residual_zero - residual_D",
+    "score_broken": "broken_residual_zero - broken_residual_D",
+    "lsq_speed_xy_mps": "Original radar analyzer NumPy sum-reduction LSQ norm_xy, same bytes/bins; collector einsum velocity separately exact-checked against D_h, old observable magnitude uses frozen tolerance",
+    "current_zero_texture_std": "patch_std[:,zero,current]",
+    "past_hypothesis_pixel_separation": "norm(uv_D_past - uv_zero_past)"
+  },
+  "reason_codes": {
+    "0": "valid",
+    "1": "no_current_zero_view",
+    "2": "missing_previous_keyframe",
+    "3": "hypothesis_projection_invalid",
+    "4": "low_current_zero_texture"
+  },
+  "horizons_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "speed_edges_mps": [
+    0.0,
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    null
+  ],
+  "last_edge": "positive infinity",
+  "bins": "left closed, right open; all seven always reported",
+  "population": "owner<0 AND original future valid; no_radar prespecified focus; all/radar_present/no_radar all reported",
+  "groups": [
+    "all",
+    "stationary",
+    "ambiguous",
+    "moving"
+  ],
+  "denominator": "ALL original valid objects per horizon/group, including fully covered and photometrically missing objects",
+  "point_weight": "1 / number of ALL original points in that object, never renormalized to uncovered/valid/radar subset",
+  "benefit_xy_m": "norm(target_xy) - norm(D_xy-target_xy)",
+  "full_contribution": "sum(weight*benefit)/original object count; positive gain and negative cost separately",
+  "harm_reach": "each reason cost divided by all-uncovered-group cost, this-radar-group cost and this-radar-speed-bin cost; all use unchanged full denominator",
+  "auc": {
+    "population": "exact same reason_code==0 for every feature, actual and broken",
+    "positive": "benefit>0",
+    "negative": "benefit<0",
+    "zero": "excluded only from binary AUC and counted physically",
+    "ties": 0.5,
+    "undefined": "null when either class absent",
+    "directions_fixed": true
+  },
+  "missing": "Scores remain undefined; no zero fill. All five reason partitions retain physical support. No new low-texture or depth exclusion.",
+  "scene_distribution": "each h/radar/GT-group at all speeds: all256 scene rows including null; q25/median/q75 across defined scenes; no CI",
+  "paired_difference": "AUC_true minus AUC_broken on same valid population; descriptive only, no significance claim",
+  "frozen_math_reuse": [
+    "analyze_motion_evidence_train_v1.weighted_auc",
+    "analyze_motion_evidence_train_v1.continuous"
+  ],
+  "restrictions": {
+    "no_fit": true,
+    "no_threshold_search": true,
+    "no_direction_selection": true,
+    "no_bootstrap": true,
+    "no_development": true,
+    "no_model": true,
+    "no_image_search": true,
+    "no_future_GT_in_feature_definition": true
+  },
+  "limitations": [
+    "train512/D-seen/training-internal",
+    "same source points repeat one image patch/radar cell: not IID",
+    "input modalities already influenced D; not statistically independent new sensors",
+    "projectable virtual material points are not certified visible surfaces",
+    "future LSQ velocity extrapolated to past is an explicit hypothesis",
+    "AUC and coverage do not establish useful routing, motion improvement or occupancy improvement"
+  ],
+  "metadata_matrix_tolerance": "float64 rtol=0 atol=1e-9; source pose reconstruction and inverse(C)*G0; no metric tolerance change"
+}

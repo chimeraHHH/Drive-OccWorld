@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETE_AUTHENTICATED_DENSE_HISTORY_INPUTS",
+  "anchors": 16,
+  "sequences": 96,
+  "frames_per_sequence_minmax": [
+    5,
+    7
+  ],
+  "image_occurrences": 654,
+  "unique_images": 654,
+  "interframe_dt_s_minmax": [
+    0.049767,
+    0.2
+  ],
+  "source_bytes": 103249090,
+  "seconds": 23.317446600005496,
+  "GT_read": false,
+  "model_forward": false,
+  "optimizer_updates": 0,
+  "files_sha256": {
+    "records.json": "2579dcf2f74994385fed6bbc5aee3cd4eea745394e4bfee5585e25bf0477c51e",
+    "manifest.json": "02ea316bb85873998051c1d92e8bd5c1072fad49636af27e1183455330fe3595",
+    "summary.json": "42bee989a3312db69ad9f32eafc86be6c41f63d401d9959a804b75d44629645b"
+  }
+}

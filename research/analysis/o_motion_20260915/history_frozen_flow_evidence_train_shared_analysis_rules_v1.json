@@ -1,0 +1,249 @@
+{
+  "schema": "history-frozen-flow-evidence-train-analysis-v1",
+  "status": "FROZEN_PRESPECIFIED_NO_REAL_FLOW_RESULT_READ",
+  "parent_analyzer_sha256": "69ad87766e8964412fef11bd3e0b7810b4c109a5e2bc7ce1f94475e580df68c0",
+  "pose_analyzer_sha256": "610fec1c9eb95c482fc53d51a04214e65ea5f596f0f0e513051ede0cd4465e04",
+  "pose_complete_sha256": "1f759d6050f003d90cc692d490421d179ec406f02266ace41d59ff37654165b0",
+  "pose_protocol_sha256": "8183a66c5beaea546ab479b93e2bc98ba6902fb1f76a74fa2dd5dc3faf0a2d13",
+  "flow_extractor_sha256": "55097e1bb16752cd591e7cf0b71fa1389be2f01466347854ed4a2a1ce6784f6c",
+  "flow_core_sha256": "02f5c5efca336bffba37b9fe510a667716e758ef333d7e0d60ee998b268be1da",
+  "flow_protocol_sha256": "64ddda82da8f2e1726cb827b1b24b3209fd8dc0f880d99b0f757a8a7bebf3681",
+  "primary_features": [
+    "flow_score_px",
+    "broken_flow_score_px",
+    "score_true",
+    "score_broken",
+    "lsq_speed_xy_mps",
+    "hypothesis_flow_separation_px"
+  ],
+  "extension_features": [
+    "flow_score_px",
+    "broken_flow_score_px",
+    "lsq_speed_xy_mps",
+    "hypothesis_flow_separation_px"
+  ],
+  "directions": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "extension_directions": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "horizons_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "speed_edges_mps": [
+    0,
+    0.1,
+    0.5,
+    1,
+    2,
+    5,
+    10,
+    null
+  ],
+  "speed_bin_convention": "Left closed/right open, final edge positive infinity; original sum-reduction LSQ speed",
+  "strata": [
+    "all",
+    "no_radar",
+    "radar_present"
+  ],
+  "groups": [
+    "all",
+    "stationary",
+    "ambiguous",
+    "moving"
+  ],
+  "bin_scope": "All speeds for three radar strata times four original future-GT groups; seven individual bins only for no_radar/all",
+  "population": "Original future-valid AND CRN-uncovered owner<0; preserve ALL original source support",
+  "primary_population": "Exactly original photo reason_code==0; all six scores share every such point, regardless of FB availability or predicted endpoint OOB",
+  "extension_population": "Exactly original photo reason_code==4, low current-zero texture; separately report only four defined scores; no ZNCC zero fill; no mixing with primary",
+  "other_population": "Original reason_code 1/2/3 remains physically counted, with no flow scoring",
+  "point_weight": "1/number of ALL original points in each object; never re-normalize to any radar/speed/uncovered/photo/flow/pose/FB subset",
+  "denominator": "ALL original future-valid objects per horizon/group, including fully covered and all score/pose/FB-missing objects",
+  "feature_definitions": {
+    "flow_score_px": "norm(uZero_current + Fcp(uZero_current) - uZero_past) - norm(uD_current + Fcp(uD_current) - uD_past)",
+    "broken_flow_score_px": "Same residual difference using independent F(current, np.roll(past, width//2, axis=1)); original candidate past UV is NOT shifted",
+    "score_true": "Original frozen ZNCC residual_zero - residual_D",
+    "score_broken": "Original frozen broken ZNCC residual_zero - residual_D",
+    "lsq_speed_xy_mps": "norm(sum_h(h*D_h_xy)/sum_h(h*h)), nominal original four horizons, old NumPy sum-reduction bytes/bins",
+    "hypothesis_flow_separation_px": "norm((uD_past-uD_current)-(uZero_past-uZero_current)); not just past-UV separation"
+  },
+  "primary_auc": {
+    "target": "Original future benefit_xy_m=norm(future_target_xy)-norm(D_h_xy-future_target_xy)",
+    "scores": "All named primary or extension scores at fixed positive directions; identical population within each branch",
+    "positive": "benefit>0",
+    "negative": "benefit<0",
+    "zero": "Excluded only from binary AUC, separately counted",
+    "ties": 0.5,
+    "undefined": "null if either weighted class absent"
+  },
+  "secondary_auc": {
+    "target": "Bpast_cam=norm(GTdisp_past_xy)-norm(GTdisp_past_xy-dt_camera_past_minus_lidar_t0*original_four_horizon_LSQ_D_xy)",
+    "population": "Intersection of scoring branch with the EXISTING reference_valid pose mask, same support for all scores; no new pose extraction",
+    "extension": "All reason-4 references missing by existing pose contract; report zero available points, all missing counts and null AUCs",
+    "privilege": "Historical GT only supplies this diagnostic target; not a deployable feature or mathematical upper bound"
+  },
+  "FB": {
+    "scope": "True forward and reverse flow only, separately at zero and D current addresses",
+    "residual": "norm(Fcp(u) + Fpc(u+Fcp(u)))",
+    "domain": "Closed original image rectangle x in [0,1599], y in [0,899]; exact final pixel centers are valid",
+    "missing": "Predicted endpoint OOB makes FB undefined/NaN; it does not make the primary or extension score unavailable",
+    "summaries": "Original-point-weighted conditional mean FB residual in px, endpoint OOB point fraction and original-weight fraction, full-original-denominator FUTURE physical gain/cost by available/OOB",
+    "forbidden": "No confidence/visibility claim, no FB threshold and no score filtering"
+  },
+  "physical_ledger": "Full original future physical gain/cost retained in reason0/reason4/other partition, plus the two true-flow FB-availability partitions within each scoring branch",
+  "restrictions": {
+    "no_fit": true,
+    "no_threshold_search": true,
+    "no_new_bin": true,
+    "no_new_filter": true,
+    "no_bootstrap": true,
+    "no_new_pose_reference": true,
+    "no_development": true,
+    "no_training": true,
+    "no_flow_model_in_analysis": true,
+    "no_image_read": true,
+    "no_raw_GT_read": true
+  },
+  "limitations": [
+    "Training-internal D-seen train512 / 256 scenes; no unseen-scene generalization claim",
+    "Frozen RAFT shares the original image evidence and adds an external learned prior; not statistically independent truth",
+    "Original virtual material points are not certified visible surfaces",
+    "Broken flow is a destructive negative control, not known-transform equivariance or flow-accuracy evaluation",
+    "Pixel residuals and descriptive AUC do not establish model, motion, routing or occupancy improvement",
+    "Past consistency and future D benefit are distinct labels; four horizons reuse the same past evidence and are not independent",
+    "Primary and low-texture extension have different supports and must not be pooled"
+  ],
+  "frozen_flow_endpoints": {
+    "asset_manifest_sha256": "db378bcf49a348a8968d571f834a33e3f434582e7b0d551b805f49cefb320cdd",
+    "checkpoint_sha256": "fcfa4125d6418f4de95d84aec20a3c5f4e205101715a79f193243c186ac9a7e1",
+    "probe_source_sha256": "60491da9cc3b0dcfabcf9c09d15ca6ac1b2f2e8175b657870c6d54fb6e65789e",
+    "history_inputs_complete_sha256": "040d62242a541b9685f3f39f1534b3663b0e1142b4cd7d9737cdbfd15d94314d",
+    "camera_complete_sha256": "0c0d2e640a12e3299e8dacc03189776669cd2e50036a65de823026304119b648"
+  },
+  "frozen_inference_settings": {
+    "official_commit": "2888e15a51fa41140771d3f498ed8023cff098d1",
+    "model": "full_RAFT_things",
+    "iterations": 20,
+    "dtype": "float32",
+    "TF32": false,
+    "mixed_precision": false,
+    "alternate_corr": false,
+    "cudnn_benchmark": false,
+    "eval": true,
+    "no_grad": true,
+    "flow_init": null,
+    "input_RGB_range": [
+      0,
+      255
+    ],
+    "original_shape_HWC": [
+      900,
+      1600,
+      3
+    ],
+    "official_padder": [
+      0,
+      0,
+      2,
+      2
+    ],
+    "unpad_to_original": true,
+    "flows": [
+      "current_to_past",
+      "past_to_current",
+      "current_to_broken_past"
+    ],
+    "calls_per_camera": 3,
+    "cameras_per_sample": 6,
+    "total_model_forwards": 9216,
+    "broken_past": "torch.roll(original_raw_past,800,width_axis) before official pad; independent forward",
+    "broken_candidate_past_addresses": "unchanged, matching original ZNCC broken convention",
+    "fb": "true forward+true reverse only; continuous; no filtering/threshold",
+    "sampling": "bilinear closed original pixel-center domain; exact last pixel allowed; no extrapolation",
+    "hypothesis_order": [
+      "zero",
+      "D"
+    ],
+    "time_order": [
+      "current",
+      "past"
+    ],
+    "score": "norm(u0current+F(u0current)-u0past)-norm(uDcurrent+F(uDcurrent)-uDpast)",
+    "positive_score_direction": "supports D over zero",
+    "geometric_control": "norm((uDpast-uDcurrent)-(u0past-u0current))",
+    "primary": "original camera reason0 exactly",
+    "extension": "original lowtexture reason4 exactly; no original ZNCC scores available",
+    "other_reasons": "remain missing; original five reason codes retained",
+    "out_of_bounds_predicted_endpoint": "keep primary/extension residual; only FB becomes missing"
+  },
+  "extraction_protocol_analysis_contract": {
+    "primary_scores": [
+      "flow_score",
+      "broken_flow_score",
+      "original_ZNCC_score",
+      "original_broken_ZNCC_score",
+      "D_speed",
+      "hypothesis_flow_separation_px"
+    ],
+    "extension_scores": [
+      "flow_score",
+      "broken_flow_score",
+      "D_speed",
+      "hypothesis_flow_separation_px"
+    ],
+    "directions": "all positive, no sign selection",
+    "future_target": "original D-versus-zero future XY displacement benefit, all four horizons",
+    "past_target": "existing history-GT actual-camera-time benefit only on original photo-valid and pose-valid shared support; unavailable on reason4",
+    "weights": "unchanged 1/all original object points",
+    "physical_denominators": "all original future-valid objects, including unobserved and covered points",
+    "strata": [
+      "all",
+      "no_radar",
+      "radar_present"
+    ],
+    "future_groups": [
+      "all",
+      "stationary",
+      "ambiguous",
+      "moving"
+    ],
+    "speed_bins_mps": [
+      0,
+      0.1,
+      0.5,
+      1,
+      2,
+      5,
+      10,
+      null
+    ],
+    "individual_speed_bin_scope": "only no_radar/all; exact previous fixed bins",
+    "FB": "conditional continuous summaries and available/OOB physical accounting, never gate or select score population",
+    "no_bootstrap_or_fit": true,
+    "interpretation": "train512 internal evidence discrimination, not measured flow accuracy, causal sensor information or model gain"
+  },
+  "operational_amendment": {
+    "kind": "shared_gpu_admission_and_allocator_cap_only",
+    "parent_protocol_sha256": "bed2332cff08b4f857e46eec22f456344e1f1b5d1b1f0f36fd864d432b0b46c5",
+    "parent_collector_sha256": "17ecf5be37edcee747f4b2b6e2a760655b697c94142a5ec539acf90a3f298e93",
+    "physical_index": 0,
+    "gpu_uuid": "GPU-74b9b73f-c405-55bc-bf76-f8aa85d1e7fe",
+    "minimum_free_bytes": 17179869184,
+    "allow_existing_compute_processes": true,
+    "allow_nonzero_utilization": true,
+    "allocator_cap_bytes": 12884901888,
+    "scientific_settings_unchanged": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-16",
+  "status": "READ_ONLY_PRIMARY_SOURCE_RESEARCH",
+  "primary_works": [
+    {
+      "title": "Occupancy Flow Fields for Motion Forecasting in Autonomous Driving",
+      "year": 2022,
+      "paper": "https://arxiv.org/pdf/2203.03875",
+      "paper_locations": [
+        "Section III-C, PDF page 3",
+        "Section IV-C, PDF page 5"
+      ],
+      "repo": "waymo-research/waymo-open-dataset",
+      "commit": "99a4cb3ff07e2fe06c2ce73da001f850f628e45a",
+      "file": "src/waymo_open_dataset/utils/occupancy_flow_metrics.py",
+      "lines": "203-309",
+      "code_url": "https://github.com/waymo-research/waymo-open-dataset/blob/99a4cb3ff07e2fe06c2ce73da001f850f628e45a/src/waymo_open_dataset/utils/occupancy_flow_metrics.py",
+      "code_file_sha256": "c5bec60df2758b40e1e801b85cbc3dd6bdfd2a6308ff01bf869f54e0a34550b5",
+      "bytes": 12090
+    },
+    {
+      "title": "Point Cloud Forecasting as a Proxy for 4D Occupancy Forecasting",
+      "year": 2023,
+      "paper": "https://arxiv.org/pdf/2302.13130",
+      "paper_locations": [
+        "Section 4, equations 16-17"
+      ],
+      "repo": "tarashakhurana/4d-occ-forecasting",
+      "commit": "e1ea9434113d303986684395a961aaacac90d470",
+      "file": "cvpr23-evalkit/evaluate.py",
+      "lines": "17-67",
+      "code_url": "https://github.com/tarashakhurana/4d-occ-forecasting/blob/e1ea9434113d303986684395a961aaacac90d470/cvpr23-evalkit/evaluate.py",
+      "code_file_sha256": "770f6b46c9d0e932230b51d83fce9b8d4abae1ac1749093ea4da7d4e45aa3635",
+      "bytes": 5262
+    },
+    {
+      "title": "Generalized optimal sub-pattern assignment metric",
+      "year": 2017,
+      "arxiv_first_year": 2016,
+      "paper": "https://arxiv.org/pdf/1601.05585",
+      "paper_locations": [
+        "Section II-B; Proposition 1; PDF pages 2-3"
+      ],
+      "repo": "abusajana/GOSPA",
+      "commit": "fe0fe088a1d961a5e3986e611d224781736fa80b",
+      "file": "GOSPA.m",
+      "lines": "56-131",
+      "code_url": "https://github.com/abusajana/GOSPA/blob/fe0fe088a1d961a5e3986e611d224781736fa80b/GOSPA.m",
+      "code_file_sha256": "f40280a17ea701d4ee0e63670b4c232a76c92edb554513e768be187c229eb09f",
+      "bytes": 6502
+    }
+  ],
+  "local_evidence_sha256": {
+    "common_motion_evaluation_reconsideration_v1.md": "1c0c0440234c7e1552fa0d650cba186871fd28873ad78db4a14604c9a1ffb01b",
+    "common_motion_claim_boundary_v1.md": "4a230a5504c09127ac9b4b00198f88e680c02bcc9dd4f2296a3c8df27900f7fc",
+    "occupancy_motion_readout_v1.py": "10f7991e8bb41ecd37f5de9c336f9d4509c08ff4583390d808235f5d0099e064",
+    "server_results/jobs/occupancy_motion_readout_cpu_test_v1/state.json": "824237b6e014d187a8e3afd022e36896d62885a15a6a09533f87f4db837dcedb",
+    "server_results/jobs/occupancy_motion_readout_cpu_test_v1/output.log": "87cd20a578c958c9e374fffe836ba23ed0b8c28368c5a5748087bb8d96f2927a"
+  },
+  "training_performed": false,
+  "models_evaluated": false,
+  "metrics_or_protocols_changed": false,
+  "scores_generated": false
+}

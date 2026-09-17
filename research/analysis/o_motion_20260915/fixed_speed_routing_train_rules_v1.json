@@ -1,0 +1,54 @@
+{
+  "status": "FROZEN_BEFORE_NEW_POLICY_RESULTS",
+  "created_utc": "2026-09-16T15:02:58.855242+00:00",
+  "source_sha256": "1e45065d38a968c4662080993f1d75e90c3d3b3e9594e774d119e770c8b3d96c",
+  "reference_analysis_sha256": "38bb878bffc98c67715adb84f4a1a2983e5425c1e2a07d0fea1509576117b518",
+  "thresholds_mps": [
+    0.0,
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    null
+  ],
+  "null_threshold_means": "positive infinity / use no D",
+  "scope": "existing train512 / 256 scenes only, D-seen data",
+  "policy": "owner>=0: unchanged horizon*CRN_velocity; owner<0 and original four-horizon LSQ Dspeed>=threshold: D displacement; otherwise zero",
+  "threshold_ties": ">=; same decision for all four horizons",
+  "threshold_source": "all original seven speed-bin boundaries plus infinity; no new grid or optimization",
+  "metrics": [
+    "XY EPE",
+    "XYZ EPE",
+    "relative to CRN-CV and full CV-covered/D-uncovered blend",
+    "original-weight D coverage",
+    "full-denominator positive gain and negative cost"
+  ],
+  "groups": [
+    "all",
+    "stationary",
+    "ambiguous",
+    "moving"
+  ],
+  "denominator": "All original future-valid objects; all source points within each object; never selected-only renormalization",
+  "selection": false,
+  "dev_read": false,
+  "bootstrap": false,
+  "training": false,
+  "new_model_inference": false,
+  "primary_flow_protocol_changed": false,
+  "limitations": [
+    "Cached query points inherited from GT-defined source support, not full-grid deployable inference.",
+    "D saw training scenes; this is a descriptive comparator, not unseen-scene performance.",
+    "No winner selected and no development threshold tuning.",
+    "Occupancy/O task is not executed; no claim of joint goal achievement."
+  ],
+  "coverage_partition": "CV retained / D selected / zero fallback point counts and original object-equal weight; sums preserve original support",
+  "implementation_amendment": {
+    "created_utc": "2026-09-16T15:05:11.683417+00:00",
+    "previous_source_sha256": "8672f90f986981bcfce2118add588550b6e088e6fee9a06d86511b3b0a5e962c",
+    "reason": "Handle legitimate empty source anchors in zero-contribution array reducer; no metric or selection rule changed.",
+    "results_written_before_amendment": false
+  }
+}

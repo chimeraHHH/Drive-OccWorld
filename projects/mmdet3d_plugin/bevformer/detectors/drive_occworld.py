@@ -19,6 +19,7 @@ from .radar_bev_encoder import RadarBEVEncoder
 from .doppler_bev_advection import DopplerBEVAdvection
 from .doppler_radial_flow_loss import DopplerRadialFlowLoss
 from .doppler_posterior_transport import DopplerPosteriorTransport
+from .credible_motion_residual import CredibleMotionResidual
 
 
 @DETECTORS.register_module()
@@ -39,6 +40,7 @@ class Drive_OccWorld(BEVFormer):
                  doppler_flow_loss=None,
                  doppler_posterior=None,
                  doppler_nll_weight=0.05,
+                 motion_residual=None,
                  scientific_eval=False,
 
                  # Plan Head configurations.
@@ -153,6 +155,13 @@ class Drive_OccWorld(BEVFormer):
             DopplerPosteriorTransport(**doppler_posterior)
             if doppler_posterior is not None else None)
         self.doppler_nll_weight = float(doppler_nll_weight)
+        if motion_residual is not None and (
+                doppler_posterior is not None or doppler_advection is not None
+                or doppler_flow_loss is not None or self.turn_on_flow or turn_on_plan):
+            raise ValueError('P2 motion residual requires an independent path with plan/flow disabled')
+        self.motion_residual = (
+            CredibleMotionResidual(**motion_residual)
+            if motion_residual is not None else None)
         self.scientific_eval = bool(scientific_eval)
 
         # Augmentations.
@@ -393,8 +402,8 @@ class Drive_OccWorld(BEVFormer):
         return camera_bev + radar_tokens.to(dtype=camera_bev.dtype)
 
     def condition_reference(self, camera_bev, radar_bev=None,
-                            radar_observations=None):
-        """M3 predicts its prior before radar fusion; withheld returns never enter it."""
+                            radar_observations=None, radar_nll_support_mask=None):
+        """Condition motion before radar fusion, preserving complete M0 radar in P2."""
         state = None
         if self.doppler_posterior is not None:
             if radar_bev is not None:
@@ -403,10 +412,17 @@ class Drive_OccWorld(BEVFormer):
                 raise ValueError('M3 requires radar_observations')
             state = self.doppler_posterior.prepare(camera_bev, radar_observations)
             radar_bev = state['geometry']
+        if self.motion_residual is not None:
+            if radar_bev is None or radar_observations is None:
+                raise ValueError('P2 requires complete radar_bev and current radar_observations')
+            state = self.motion_residual.prepare(
+                camera_bev, radar_observations,
+                nll_support_mask=radar_nll_support_mask)
         return self.fuse_radar_bev(camera_bev, radar_bev), state
 
     def obtain_ref_bev(self, img, img_metas, prev_bev, radar_bev=None,
-                       radar_observations=None, return_motion_state=False):
+                       radar_observations=None, return_motion_state=False,
+                       radar_nll_support_mask=None):
         # Extract current BEV features.
         # C1. Forward.
         img_feats = self.extract_feat(img=img, img_metas=img_metas)
@@ -417,7 +433,7 @@ class Drive_OccWorld(BEVFormer):
         # ref_bev: bs, bev_h * bev_w, c
         ref_bev = self.pts_bbox_head(img_feats, img_metas, prev_bev, only_bev=True)
         ref_bev, motion_state = self.condition_reference(
-            ref_bev, radar_bev, radar_observations)
+            ref_bev, radar_bev, radar_observations, radar_nll_support_mask)
         return (ref_bev, motion_state) if return_motion_state else ref_bev
     
     def obtain_ref_bev_with_plan(self, img, img_metas, prev_bev, ref_sample_traj, ref_sem_occupancy, ref_command, ref_real_traj=None, radar_bev=None):
@@ -493,6 +509,12 @@ class Drive_OccWorld(BEVFormer):
             cond_norm_dict['future2history'] = future2history
 
             rollout_prior = None
+            if occ_flow == 'occ' and self.motion_residual is not None:
+                if motion_state is None:
+                    raise ValueError('P2 motion state is missing from future rollout')
+                rollout_prior = self.motion_residual.transport(
+                    measured_ref_bev, motion_state, future_frame_index,
+                    future_to_ref_grid)
             if occ_flow == 'occ' and self.doppler_posterior is not None:
                 if motion_state is None:
                     raise ValueError('M3 posterior state is missing from future rollout')
@@ -768,6 +790,7 @@ class Drive_OccWorld(BEVFormer):
                       img=None,
                       radar_bev=None,
                       radar_observations=None,
+                      radar_nll_support_mask=None,
                       # occ_flow
                       segmentation=None,
                       instance=None, 
@@ -847,7 +870,8 @@ class Drive_OccWorld(BEVFormer):
         else:
             ref_bev, motion_state = self.obtain_ref_bev(
                 img, img_metas, prev_bev, radar_bev=radar_bev,
-                radar_observations=radar_observations, return_motion_state=True)
+                radar_observations=radar_observations, return_motion_state=True,
+                radar_nll_support_mask=radar_nll_support_mask)
             sem_occupancy, ref_pose_pred, ref_pose_loss = None, None, None
 
 
@@ -900,9 +924,11 @@ class Drive_OccWorld(BEVFormer):
         # E1. Compute loss for occ predictions.
         losses_occupancy = self.compute_occ_loss(next_bev_preds, segmentation)
         losses.update(losses_occupancy)
-        if motion_state is not None:
+        if motion_state is not None and self.doppler_posterior is not None:
             losses['loss_m3_doppler_nll'] = (
                 self.doppler_nll_weight * motion_state['loss_doppler_nll'])
+        if motion_state is not None and 'loss_p2_doppler_nll' in motion_state:
+            losses['loss_p2_doppler_nll'] = motion_state['loss_p2_doppler_nll']
         # E2. Compute loss for flow predictions.
         if self.turn_on_flow:
             losses_flow = self.compute_flow_loss(next_bev_preds_flow, flow)
@@ -944,6 +970,7 @@ class Drive_OccWorld(BEVFormer):
                      img=None,
                      radar_bev=None,
                      radar_observations=None,
+                     radar_nll_support_mask=None,
                      # occ_flow
                      segmentation=None, 
                      instance=None, 
@@ -986,7 +1013,8 @@ class Drive_OccWorld(BEVFormer):
         else:
             ref_bev, motion_state = self.obtain_ref_bev(
                 img, img_metas, prev_bev, radar_bev=radar_bev,
-                radar_observations=radar_observations, return_motion_state=True)
+                radar_observations=radar_observations, return_motion_state=True,
+                radar_nll_support_mask=radar_nll_support_mask)
             ref_pose_pred = None
 
 

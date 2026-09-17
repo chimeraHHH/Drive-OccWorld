@@ -1,0 +1,3010 @@
+{
+  "schema": "connected-motion-pooled-comparison-v1",
+  "anchors": 200,
+  "scenes": 100,
+  "scene_tokens": [
+    "034dee1695304630b0692da8c1f153fc",
+    "04219bfdc9004ba2af16d3079ecc4353",
+    "07aed9dae37340a997535ad99138e243",
+    "080a52cb8f59489b9cddc7b721808088",
+    "0ac05652a4c44374998be876ba5cd6fd",
+    "0e7ede02718341558414865d5c604745",
+    "112ca771e318478a88cfa692f61ffcac",
+    "197a7e4d3de84e57af17b3d65fcb3893",
+    "19d97841d6f64eba9f6eb9b6e8c257dc",
+    "1aa633b683174280b243e0a9a7ad9171",
+    "21a7ba093614493b83838b9656b3558d",
+    "223096a415cc45bf8ecd4c3a42251fd7",
+    "26a6b03c8e2f4e6692f174a7074e54ff",
+    "2eb4d7f00e584a548aa0b899638bfb0a",
+    "2f56eb47c64f43df8902d9f88aa8a019",
+    "3045ed93c2534ec2a5cabea89b186bd9",
+    "30a1a4ccd60047b4a22ee3bf0645f3ad",
+    "32185f91e68f4069ab3cdd2f4f1a4ff1",
+    "325cef682f064c55a255f2625c533b75",
+    "3363f396bb43405fbdd17d65dc123d4e",
+    "36f27b26ef4c423c9b79ac984dc33bae",
+    "380ff00ec86447e3b986edc8e82ffba7",
+    "3927699fa562451a98bb13bf8405361d",
+    "3a2d9bf6115f40898005d1c1df2b7282",
+    "3ada261efee347cba2e7557794f1aec8",
+    "3b2ee26cb8484f77895bc336663df502",
+    "40209c4e465d4b4e8341ebd52be0d842",
+    "44c9089913db4d4ab839a2fcb35989ed",
+    "4962cb207a824e57bd10a2af49354b16",
+    "4bb9626f13184da7a67ba1b241c19558",
+    "50ff554b3ecb4d208849d042b7643715",
+    "5301151d8b6a42b0b252e95634bd3995",
+    "54f56f80350b4c07af598ee87cf3886a",
+    "5521cd85ed0e441f8d23938ed09099dd",
+    "55b3a17359014f398b6bbd90e94a8e1b",
+    "57dc3221a3d845b5ab17ff0f98ce336f",
+    "5a0dd8908a3a459b83ec5eb6ac7d0f82",
+    "5eaff323af5b4df4b864dbd433aeb75c",
+    "6498fce2f38645fc9bf9d4464b159230",
+    "64bfc5edd71147858ce7446892d7f864",
+    "656bb27689dc4e9b8e4559e3f6a7e534",
+    "6741d407b1b44511853e5ec7aaee2992",
+    "68e79a88244f447f993a72da444b29ba",
+    "6d872d1448814fd189e631b1187c3771",
+    "6f83169d067343658251f72e1dd17dbc",
+    "7061c08f7eec4495979a0cf68ab6bb79",
+    "7210f928860043b5a7e0d3dd4b3e80ff",
+    "7365495b74464629813b41eacdb711af",
+    "7bd098ac88cb4221addd19202a7ea5de",
+    "8180a1dbbba3479bb0c7f4ff6e9a3f0e",
+    "848ac962547c4508b8f3b0fcc8d53270",
+    "84e056bd8e994362a37cba45c0f75558",
+    "85651af9c04945c3a394cf845cb480a6",
+    "8edbc31083ab4fb187626e5b3c0411f7",
+    "905cfed4f0fc46679e8df8890cca4141",
+    "9068766ee9374872a380fe75fcfb299e",
+    "91c071bcc1ad4fa1b555399e1cfbab79",
+    "952cb0bcd89b4ca4b904cdcbbf595523",
+    "955ff42a1990442d868cdfc0c01583d4",
+    "96e5f1f0944946f391b4ef33ad623008",
+    "991d65cab952449a821deb32e971ff19",
+    "9d1307e95c524ca4a51e03087bd57c29",
+    "9f1f69646d644e35be4fe0122a8b91ef",
+    "a04daf2d0f194b2ab2ff2a47dfebc1d7",
+    "a2b005c4dd654af48194ada18662c8ca",
+    "a7d073bc435b4356a0a9a5ebfb61f229",
+    "aacd6706a091407fb1b0e5343d27da7e",
+    "acc29386502047339e1ec6b9c7e512d2",
+    "aedcd3cf7c4a49d7a4a43ab7443a9eb1",
+    "afd73f70ff7d46d6b772d341c08e31a5",
+    "b07358651c604e2d83da7c4d4755de73",
+    "b4b82c4d338a4b6d86835388ce076345",
+    "b51869782c0e464b8021eb798609f35f",
+    "b789de07180846cc972118ee6d1fb027",
+    "c3ab8ee2c1a54068a72d7eb4cf22e43d",
+    "c4df079d260241ff8015218e29b42ea7",
+    "c525507ee2ef4c6d8bb64b0e0cf0dd32",
+    "c65c4acf86954f8cbd53a3541a3bfa3a",
+    "c92fdd793fbb4401b12782a9b8d4a499",
+    "ca6e45c25d954dc4af6e12dd7b23454d",
+    "cb3e964697d448b3bc04a9bc06c9e131",
+    "cba3ddd5c3664a43b6a08e586e094900",
+    "d01e7279da2649ef896dc42f6b9ee7ab",
+    "d29527ec841045d18d04a933e7a0afd2",
+    "d7bacba9119840f78f3c804134ceece0",
+    "dce6f3f2bf6b4859abcf3268581969d3",
+    "ddb615d9bb22484cabc6545b632a1025",
+    "e036014a715945aa965f4ec24e8639c9",
+    "e60ef590e3614187b7800db3e5284e1a",
+    "e6f1a7e6218a4737bfedc6af90926b3e",
+    "e7ef871f77f44331aefdebc24ec034b7",
+    "e8099a6136804f3bb9b38ff94d98eb64",
+    "e8834785d9ff4783a5950281a4579943",
+    "ec7b7459461e4da1a236ba23e22377c9",
+    "efa5c96f05594f41a2498eb9f2e7ad99",
+    "f24b4682fbb9482aba149534deed1cc9",
+    "f5b29a1e09d04355adcd60ab72de006b",
+    "fb73d1a6c16147ee9416faf6b310fadb",
+    "fcbccedd61424f1b85dcbf8f897f9754",
+    "fcc020250f884397965ba00c1d9ad9e6"
+  ],
+  "physical_rows_per_arm": 16074,
+  "original_occupancy": {
+    "O": {
+      "future_GMO_IoU_percent": 14.663996820993908,
+      "t0_GMO_IoU_percent": 15.919135166218117,
+      "h1_GMO_IoU_percent": 15.757836297017255,
+      "h2_GMO_IoU_percent": 15.131982961502526,
+      "h3_GMO_IoU_percent": 14.295167528202807,
+      "h4_GMO_IoU_percent": 13.471000497253046,
+      "future_FP": 13647997,
+      "future_FN": 3732899
+    },
+    "J": {
+      "future_GMO_IoU_percent": 14.757611343325813,
+      "t0_GMO_IoU_percent": 15.919135166218117,
+      "h1_GMO_IoU_percent": 15.905464628607557,
+      "h2_GMO_IoU_percent": 15.210822699694518,
+      "h3_GMO_IoU_percent": 14.374434735155747,
+      "h4_GMO_IoU_percent": 13.539723309845431,
+      "future_FP": 13358726,
+      "future_FN": 3758361
+    },
+    "D": {
+      "future_GMO_IoU_percent": 14.75514879867601,
+      "t0_GMO_IoU_percent": 15.919135166218117,
+      "h1_GMO_IoU_percent": 15.896879191308184,
+      "h2_GMO_IoU_percent": 15.211553654317001,
+      "h3_GMO_IoU_percent": 14.367751212031092,
+      "h4_GMO_IoU_percent": 13.544411137047769,
+      "future_FP": 13369907,
+      "future_FN": 3756925
+    }
+  },
+  "occupancy_comparisons": {
+    "J-minus-O": {
+      "future_GMO_IoU_percent": {
+        "difference": 0.09361452233190448,
+        "unit": "percentage_points",
+        "lower95": 0.03753183720451223,
+        "upper95": 0.14820519595116802,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "t0_GMO_IoU_percent": {
+        "difference": 0.0,
+        "unit": "percentage_points",
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h1_GMO_IoU_percent": {
+        "difference": 0.14762833159030286,
+        "unit": "percentage_points",
+        "lower95": 0.0858131750831351,
+        "upper95": 0.20809458676453862,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h2_GMO_IoU_percent": {
+        "difference": 0.07883973819199142,
+        "unit": "percentage_points",
+        "lower95": 0.022489472965841317,
+        "upper95": 0.13429388254659677,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h3_GMO_IoU_percent": {
+        "difference": 0.07926720695293987,
+        "unit": "percentage_points",
+        "lower95": 0.015052945892192327,
+        "upper95": 0.1441917643635727,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h4_GMO_IoU_percent": {
+        "difference": 0.06872281259238555,
+        "unit": "percentage_points",
+        "lower95": -0.0031067180862803133,
+        "upper95": 0.14536699964751043,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "future_FP": {
+        "difference": -289271,
+        "unit": "voxels",
+        "lower95": -367081.3,
+        "upper95": -207509.60000000003,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "future_FN": {
+        "difference": 25462,
+        "unit": "voxels",
+        "lower95": 12805.575,
+        "upper95": 37769.149999999994,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      }
+    },
+    "D-minus-O": {
+      "future_GMO_IoU_percent": {
+        "difference": 0.09115197768210237,
+        "unit": "percentage_points",
+        "lower95": 0.03941184973035221,
+        "upper95": 0.1425298693625578,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "t0_GMO_IoU_percent": {
+        "difference": 0.0,
+        "unit": "percentage_points",
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h1_GMO_IoU_percent": {
+        "difference": 0.1390428942909292,
+        "unit": "percentage_points",
+        "lower95": 0.0813915387765142,
+        "upper95": 0.19620671385667482,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h2_GMO_IoU_percent": {
+        "difference": 0.0795706928144746,
+        "unit": "percentage_points",
+        "lower95": 0.028351348909893662,
+        "upper95": 0.1304934763249988,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h3_GMO_IoU_percent": {
+        "difference": 0.0725836838282845,
+        "unit": "percentage_points",
+        "lower95": 0.013569922211930497,
+        "upper95": 0.13238693405640667,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h4_GMO_IoU_percent": {
+        "difference": 0.07341063979472295,
+        "unit": "percentage_points",
+        "lower95": 0.006934486861260503,
+        "upper95": 0.1446825799363082,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "future_FP": {
+        "difference": -278090,
+        "unit": "voxels",
+        "lower95": -351365.35,
+        "upper95": -201570.95,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "future_FN": {
+        "difference": 24026,
+        "unit": "voxels",
+        "lower95": 12137.7,
+        "upper95": 35558.125,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      }
+    },
+    "J-minus-D": {
+      "future_GMO_IoU_percent": {
+        "difference": 0.002462544649802112,
+        "unit": "percentage_points",
+        "lower95": -0.004671691295085045,
+        "upper95": 0.009718903596304295,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "t0_GMO_IoU_percent": {
+        "difference": 0.0,
+        "unit": "percentage_points",
+        "lower95": 0.0,
+        "upper95": 0.0,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h1_GMO_IoU_percent": {
+        "difference": 0.008585437299373666,
+        "unit": "percentage_points",
+        "lower95": -0.0028160515472838376,
+        "upper95": 0.020279530532779554,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h2_GMO_IoU_percent": {
+        "difference": -0.000730954622483182,
+        "unit": "percentage_points",
+        "lower95": -0.009754462314351463,
+        "upper95": 0.008485176881062137,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h3_GMO_IoU_percent": {
+        "difference": 0.006683523124655366,
+        "unit": "percentage_points",
+        "lower95": -0.0021632052808715054,
+        "upper95": 0.015311685237138615,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "h4_GMO_IoU_percent": {
+        "difference": -0.004687827202337402,
+        "unit": "percentage_points",
+        "lower95": -0.01433107301710721,
+        "upper95": 0.00485476559304003,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "future_FP": {
+        "difference": -11181,
+        "unit": "voxels",
+        "lower95": -19288.425,
+        "upper95": -2547.9500000000007,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      },
+      "future_FN": {
+        "difference": 1436,
+        "unit": "voxels",
+        "lower95": -46.0,
+        "upper95": 2864.074999999999,
+        "defined_draws": 10000,
+        "undefined_draws": 0
+      }
+    }
+  },
+  "physical": [
+    {
+      "horizon_seconds": 0.5,
+      "group": "all",
+      "object_anchor_pairs": 4189,
+      "source_point_occurrences": 652710,
+      "scenes_with_support": 100,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 4189,
+              "mean": 0.4197104215938125,
+              "median": 0.08780058510027511,
+              "p90": 1.0506972572655575
+            },
+            "J": {
+              "count": 4189,
+              "mean": 0.41239796000491813,
+              "median": 0.08728951981446625,
+              "p90": 0.9770632449560128
+            },
+            "D": {
+              "count": 4189,
+              "mean": 0.4088212495972059,
+              "median": 0.08587434883575741,
+              "p90": 0.9632678062498933
+            },
+            "zero": {
+              "count": 4189,
+              "mean": 0.638758608283777,
+              "median": 0.051154512122424174,
+              "p90": 2.5277231535119244
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.00731246158889437,
+              "unit": "metres",
+              "lower95": -0.010807099899274666,
+              "upper95": -0.004266978036393591,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.010889171996606606,
+              "unit": "metres",
+              "lower95": -0.014715043540880152,
+              "upper95": -0.0075429157862129115,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.003576710407712236,
+              "unit": "metres",
+              "lower95": 0.003043675650275439,
+              "upper95": 0.004138072247261922,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.21904818668996445,
+              "unit": "metres",
+              "lower95": -0.2737504222241538,
+              "upper95": -0.16962950162190205,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.22636064827885882,
+              "unit": "metres",
+              "lower95": -0.2840002311678663,
+              "upper95": -0.1745431679205361,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.22993735868657106,
+              "unit": "metres",
+              "lower95": -0.28783771363216365,
+              "upper95": -0.17794318916218263,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 4189,
+              "mean": 0.43429708300793435,
+              "median": 0.11377052567668385,
+              "p90": 1.0567376607178287
+            },
+            "J": {
+              "count": 4189,
+              "mean": 0.42916993703819134,
+              "median": 0.11737472332604232,
+              "p90": 0.9797850010312427
+            },
+            "D": {
+              "count": 4189,
+              "mean": 0.42359473088949334,
+              "median": 0.112610827787611,
+              "p90": 0.9691013221802611
+            },
+            "zero": {
+              "count": 4189,
+              "mean": 0.6549103938286202,
+              "median": 0.08699999691249291,
+              "p90": 2.5294789081695592
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.005127145969743008,
+              "unit": "metres",
+              "lower95": -0.00872338236664514,
+              "upper95": -0.0019951378230440193,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.010702352118441005,
+              "unit": "metres",
+              "lower95": -0.014522145345319695,
+              "upper95": -0.007360275350638547,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.005575206148697998,
+              "unit": "metres",
+              "lower95": 0.004908905291859178,
+              "upper95": 0.0062656293977656,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.2206133108206858,
+              "unit": "metres",
+              "lower95": -0.27506321419334906,
+              "upper95": -0.17142271042213933,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.2257404567904288,
+              "unit": "metres",
+              "lower95": -0.28324457349000204,
+              "upper95": -0.17397218296362318,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.2313156629391268,
+              "unit": "metres",
+              "lower95": -0.28877047989507465,
+              "upper95": -0.1793942649532294,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "stationary",
+      "object_anchor_pairs": 2080,
+      "source_point_occurrences": 386895,
+      "scenes_with_support": 99,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 2080,
+              "mean": 0.05954983495303028,
+              "median": 0.039436578000026284,
+              "p90": 0.1009051909146169
+            },
+            "J": {
+              "count": 2080,
+              "mean": 0.06315941654729092,
+              "median": 0.04259608776645943,
+              "p90": 0.09830814488768687
+            },
+            "D": {
+              "count": 2080,
+              "mean": 0.05938554380577099,
+              "median": 0.03761103554620834,
+              "p90": 0.09711997030312494
+            },
+            "zero": {
+              "count": 2080,
+              "mean": 0.012438193192150738,
+              "median": 0.004700098002332894,
+              "p90": 0.03650050326949384
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0036095815942606344,
+              "unit": "metres",
+              "lower95": 0.0024878439678130684,
+              "upper95": 0.004725271782774067,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.000164291147259292,
+              "unit": "metres",
+              "lower95": -0.0013767778922661622,
+              "upper95": 0.0011433167425470145,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.0037738727415199264,
+              "unit": "metres",
+              "lower95": 0.0031960248197645024,
+              "upper95": 0.004329338938544038,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.04711164176087954,
+              "unit": "metres",
+              "lower95": 0.040292912150995654,
+              "upper95": 0.05547150546768162,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.05072122335514018,
+              "unit": "metres",
+              "lower95": 0.043803303792727746,
+              "upper95": 0.05951410058300305,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.04694735061362025,
+              "unit": "metres",
+              "lower95": 0.03976416695573362,
+              "upper95": 0.05610013501764441,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 2080,
+              "mean": 0.07718960886677483,
+              "median": 0.05370784993990589,
+              "p90": 0.1420894890411153
+            },
+            "J": {
+              "count": 2080,
+              "mean": 0.0843713187242942,
+              "median": 0.058731358487801,
+              "p90": 0.1446337815664696
+            },
+            "D": {
+              "count": 2080,
+              "mean": 0.07739102581902106,
+              "median": 0.05164513707827559,
+              "p90": 0.1440617056939955
+            },
+            "zero": {
+              "count": 2080,
+              "mean": 0.0348698105362284,
+              "median": 0.021087801666437922,
+              "p90": 0.0896858250727465
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.007181709857519369,
+              "unit": "metres",
+              "lower95": 0.0060499179613511525,
+              "upper95": 0.008304554803534033,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.00020141695224623613,
+              "unit": "metres",
+              "lower95": -0.0009409755591470236,
+              "upper95": 0.001444227460826004,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.006980292905273133,
+              "unit": "metres",
+              "lower95": 0.0061277377744904885,
+              "upper95": 0.007821405641400086,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.04231979833054642,
+              "unit": "metres",
+              "lower95": 0.03522432769557739,
+              "upper95": 0.05104755479854868,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.04950150818806579,
+              "unit": "metres",
+              "lower95": 0.04211502829442174,
+              "upper95": 0.05863800539289669,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.04252121528279266,
+              "unit": "metres",
+              "lower95": 0.03504735096497974,
+              "upper95": 0.05195219773943994,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "ambiguous",
+      "object_anchor_pairs": 712,
+      "source_point_occurrences": 117367,
+      "scenes_with_support": 89,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 712,
+              "mean": 0.1278601436688801,
+              "median": 0.10963285537787086,
+              "p90": 0.21962635390027163
+            },
+            "J": {
+              "count": 712,
+              "mean": 0.13039764047388128,
+              "median": 0.1055937387630059,
+              "p90": 0.22170727779905725
+            },
+            "D": {
+              "count": 712,
+              "mean": 0.12946692523323677,
+              "median": 0.10538024543534175,
+              "p90": 0.22350469501135956
+            },
+            "zero": {
+              "count": 712,
+              "mean": 0.10840075600775297,
+              "median": 0.09243038756644423,
+              "p90": 0.19023335586248927
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.002537496805001177,
+              "unit": "metres",
+              "lower95": 0.0007098485774920477,
+              "upper95": 0.00434485446080964,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.001606781564356674,
+              "unit": "metres",
+              "lower95": -8.033946863180565e-05,
+              "upper95": 0.0033078820035505707,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.000930715240644503,
+              "unit": "metres",
+              "lower95": 0.00044196498830738204,
+              "upper95": 0.00140097062490735,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.019459387661127134,
+              "unit": "metres",
+              "lower95": 0.01318830735593341,
+              "upper95": 0.026912557779824247,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.02199688446612831,
+              "unit": "metres",
+              "lower95": 0.015364486308867506,
+              "upper95": 0.029703088924036006,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.021066169225483808,
+              "unit": "metres",
+              "lower95": 0.014366648468429291,
+              "upper95": 0.028884213315339673,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 712,
+              "mean": 0.1486003602589006,
+              "median": 0.125748969310778,
+              "p90": 0.25624215044729914
+            },
+            "J": {
+              "count": 712,
+              "mean": 0.15303076778541358,
+              "median": 0.12696149795815886,
+              "p90": 0.2580696905389148
+            },
+            "D": {
+              "count": 712,
+              "mean": 0.15026346432152496,
+              "median": 0.12320533954865939,
+              "p90": 0.25742520005437486
+            },
+            "zero": {
+              "count": 712,
+              "mean": 0.12928608025270816,
+              "median": 0.10888522198606868,
+              "p90": 0.22127374773569353
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.004430407526512969,
+              "unit": "metres",
+              "lower95": 0.0026165781050012083,
+              "upper95": 0.006229303937734712,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.0016631040626243487,
+              "unit": "metres",
+              "lower95": 4.758595929528279e-05,
+              "upper95": 0.003316612547973887,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.0027673034638886207,
+              "unit": "metres",
+              "lower95": 0.002021351069943935,
+              "upper95": 0.0034981036447072305,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.019314280006192452,
+              "unit": "metres",
+              "lower95": 0.013106727354567116,
+              "upper95": 0.026729864937920747,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.023744687532705422,
+              "unit": "metres",
+              "lower95": 0.017222870541067206,
+              "upper95": 0.03146866236504525,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.0209773840688168,
+              "unit": "metres",
+              "lower95": 0.01432129985689278,
+              "upper95": 0.028814157995861064,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "moving",
+      "object_anchor_pairs": 1397,
+      "source_point_occurrences": 148448,
+      "scenes_with_support": 98,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 1397,
+              "mean": 1.1047006994000967,
+              "median": 0.6748147705719472,
+              "p90": 2.640461870432132
+            },
+            "J": {
+              "count": 1397,
+              "mean": 1.0761061904257934,
+              "median": 0.6683992368741807,
+              "p90": 2.606704225821531
+            },
+            "D": {
+              "count": 1397,
+              "mean": 1.0714744686332336,
+              "median": 0.6631898620767412,
+              "p90": 2.59364222041134
+            },
+            "zero": {
+              "count": 1397,
+              "mean": 1.8415941517419812,
+              "median": 0.7869809358480481,
+              "p90": 4.630057401060823
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.02859450897430338,
+              "unit": "metres",
+              "lower95": -0.03780155275074503,
+              "upper95": -0.02036004621342011,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.03322623076686315,
+              "unit": "metres",
+              "lower95": -0.043484925277025355,
+              "upper95": -0.02394377226148715,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.004631721792559773,
+              "unit": "metres",
+              "lower95": 0.003253130745500793,
+              "upper95": 0.00614696407376677,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.7368934523418844,
+              "unit": "metres",
+              "lower95": -0.872651934712899,
+              "upper95": -0.6108371689002744,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.7654879613161878,
+              "unit": "metres",
+              "lower95": -0.908715051349936,
+              "upper95": -0.6322244893998992,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.7701196831087476,
+              "unit": "metres",
+              "lower95": -0.9143344317201312,
+              "upper95": -0.6361142893248964,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 1397,
+              "mean": 1.1116053241037998,
+              "median": 0.6806987204251808,
+              "p90": 2.641413158150306
+            },
+            "J": {
+              "count": 1397,
+              "mean": 1.0832803268741855,
+              "median": 0.671573974004577,
+              "p90": 2.6116382985960325
+            },
+            "D": {
+              "count": 1397,
+              "mean": 1.0783660754442361,
+              "median": 0.669162542561344,
+              "p90": 2.595153807812902
+            },
+            "zero": {
+              "count": 1397,
+              "mean": 1.845983353394994,
+              "median": 0.7912028637412513,
+              "p90": 4.633984120916951
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.028324997229614235,
+              "unit": "metres",
+              "lower95": -0.03753769018781208,
+              "upper95": -0.020074959271580976,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.033239248659563625,
+              "unit": "metres",
+              "lower95": -0.04350676543299668,
+              "upper95": -0.02395891281528892,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.00491425142994939,
+              "unit": "metres",
+              "lower95": 0.0035501048818479875,
+              "upper95": 0.0063931667397963245,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.7343780292911943,
+              "unit": "metres",
+              "lower95": -0.869878088192867,
+              "upper95": -0.6088722327667603,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.7627030265208086,
+              "unit": "metres",
+              "lower95": -0.9056003360093137,
+              "upper95": -0.6298878757214517,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.767617277950758,
+              "unit": "metres",
+              "lower95": -0.9115076679531317,
+              "upper95": -0.6340769479475348,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "all",
+      "object_anchor_pairs": 4076,
+      "source_point_occurrences": 642680,
+      "scenes_with_support": 100,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 4076,
+              "mean": 0.8091973750842242,
+              "median": 0.15563641594306094,
+              "p90": 2.13460749150033
+            },
+            "J": {
+              "count": 4076,
+              "mean": 0.7901164347030197,
+              "median": 0.15251803845015635,
+              "p90": 1.9867790923322803
+            },
+            "D": {
+              "count": 4076,
+              "mean": 0.7878001667738374,
+              "median": 0.15286590298268404,
+              "p90": 1.9784239130917305
+            },
+            "zero": {
+              "count": 4076,
+              "mean": 1.2566101079824987,
+              "median": 0.09059123765222465,
+              "p90": 4.913299451703704
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.019080940381204448,
+              "unit": "metres",
+              "lower95": -0.026357308064933506,
+              "upper95": -0.012703531296180466,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.021397208310386828,
+              "unit": "metres",
+              "lower95": -0.029470197732099225,
+              "upper95": -0.014236961519993785,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.0023162679291823807,
+              "unit": "metres",
+              "lower95": 0.0014260860824147042,
+              "upper95": 0.0032957385748421443,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.44741273289827455,
+              "unit": "metres",
+              "lower95": -0.5595668502526581,
+              "upper95": -0.34702674386329524,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.466493673279479,
+              "unit": "metres",
+              "lower95": -0.5847874095240575,
+              "upper95": -0.36111101668681694,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.4688099412086614,
+              "unit": "metres",
+              "lower95": -0.587831675165235,
+              "upper95": -0.3627875695549311,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 4076,
+              "mean": 0.8355779943200837,
+              "median": 0.20108822586566338,
+              "p90": 2.160723705904645
+            },
+            "J": {
+              "count": 4076,
+              "mean": 0.8183450078475961,
+              "median": 0.20235270761015525,
+              "p90": 1.9995781601403002
+            },
+            "D": {
+              "count": 4076,
+              "mean": 0.8144523585219805,
+              "median": 0.20181913459366413,
+              "p90": 1.9961105432951456
+            },
+            "zero": {
+              "count": 4076,
+              "mean": 1.2861208293186062,
+              "median": 0.15000000498500696,
+              "p90": 4.920188398561632
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.01723298647248761,
+              "unit": "metres",
+              "lower95": -0.024542926867901563,
+              "upper95": -0.010797915415838575,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.021125635798103226,
+              "unit": "metres",
+              "lower95": -0.029159458405118212,
+              "upper95": -0.014005391444149333,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.003892649325615616,
+              "unit": "metres",
+              "lower95": 0.0029088572904152456,
+              "upper95": 0.004939286142014848,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.45054283499852243,
+              "unit": "metres",
+              "lower95": -0.5625666994094729,
+              "upper95": -0.35043245616720436,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.46777582147101004,
+              "unit": "metres",
+              "lower95": -0.5864075332074514,
+              "upper95": -0.3626353462465171,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.47166847079662566,
+              "unit": "metres",
+              "lower95": -0.5910803079141759,
+              "upper95": -0.3658564648780207,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "stationary",
+      "object_anchor_pairs": 2101,
+      "source_point_occurrences": 390599,
+      "scenes_with_support": 99,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 2101,
+              "mean": 0.10888870015923455,
+              "median": 0.06880136626858062,
+              "p90": 0.19316001207316447
+            },
+            "J": {
+              "count": 2101,
+              "mean": 0.1109693288993085,
+              "median": 0.06857206650780852,
+              "p90": 0.18978172872424207
+            },
+            "D": {
+              "count": 2101,
+              "mean": 0.11058136186850472,
+              "median": 0.06768106938630872,
+              "p90": 0.18855619944540902
+            },
+            "zero": {
+              "count": 2101,
+              "mean": 0.02581960595510413,
+              "median": 0.012562588441461046,
+              "p90": 0.07352482692175456
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0020806287400739476,
+              "unit": "metres",
+              "lower95": 8.207978252079696e-05,
+              "upper95": 0.004149299530099025,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.0016926617092701685,
+              "unit": "metres",
+              "lower95": -0.00047869571017720395,
+              "upper95": 0.0039970286995377,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.00038796703080377914,
+              "unit": "metres",
+              "lower95": -9.366406275287605e-05,
+              "upper95": 0.0008050704734006625,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.08306909420413042,
+              "unit": "metres",
+              "lower95": 0.07045510090571776,
+              "upper95": 0.09862961557208283,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.08514972294420436,
+              "unit": "metres",
+              "lower95": 0.07180751566626821,
+              "upper95": 0.10165063081314255,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.08476175591340059,
+              "unit": "metres",
+              "lower95": 0.0711674645749892,
+              "upper95": 0.1016099376814842,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 2101,
+              "mean": 0.14049008526147083,
+              "median": 0.0948091541187625,
+              "p90": 0.2583120903002058
+            },
+            "J": {
+              "count": 2101,
+              "mean": 0.14536538877790808,
+              "median": 0.09808901133053255,
+              "p90": 0.2668837579565868
+            },
+            "D": {
+              "count": 2101,
+              "mean": 0.14248952426826658,
+              "median": 0.0942632658465091,
+              "p90": 0.26604037280717413
+            },
+            "zero": {
+              "count": 2101,
+              "mean": 0.06585482006315245,
+              "median": 0.044777225558905225,
+              "p90": 0.1560000072174584
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.004875303516437252,
+              "unit": "metres",
+              "lower95": 0.00287028368084288,
+              "upper95": 0.006923023124418778,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.00199943900679575,
+              "unit": "metres",
+              "lower95": -7.680150059686729e-05,
+              "upper95": 0.004211849881194802,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.0028758645096415014,
+              "unit": "metres",
+              "lower95": 0.0019811652169432043,
+              "upper95": 0.003734242536766979,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.07463526519831838,
+              "unit": "metres",
+              "lower95": 0.061616253570323284,
+              "upper95": 0.09059700944216192,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.07951056871475563,
+              "unit": "metres",
+              "lower95": 0.06580037104692543,
+              "upper95": 0.09641479692656268,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.07663470420511413,
+              "unit": "metres",
+              "lower95": 0.06276870690709205,
+              "upper95": 0.09385757691607503,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "ambiguous",
+      "object_anchor_pairs": 655,
+      "source_point_occurrences": 112081,
+      "scenes_with_support": 87,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 655,
+              "mean": 0.23603000561294785,
+              "median": 0.19467072899219273,
+              "p90": 0.40925936181847533
+            },
+            "J": {
+              "count": 655,
+              "mean": 0.23875140929836972,
+              "median": 0.1952635473899751,
+              "p90": 0.4159903952915034
+            },
+            "D": {
+              "count": 655,
+              "mean": 0.2393178417276714,
+              "median": 0.19577110897229044,
+              "p90": 0.4136352725394334
+            },
+            "zero": {
+              "count": 655,
+              "mean": 0.20324750891872367,
+              "median": 0.16912877915008215,
+              "p90": 0.37206114423056225
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0027214036854218693,
+              "unit": "metres",
+              "lower95": 6.477280982026687e-05,
+              "upper95": 0.00569269057266447,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.0032878361147235524,
+              "unit": "metres",
+              "lower95": 0.00025016245518926297,
+              "upper95": 0.006562171071869863,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": -0.0005664324293016831,
+              "unit": "metres",
+              "lower95": -0.0012674489999356415,
+              "upper95": 0.00012104646794000508,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.03278249669422417,
+              "unit": "metres",
+              "lower95": 0.0205518727155225,
+              "upper95": 0.04658257254604829,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.03550390037964604,
+              "unit": "metres",
+              "lower95": 0.022539748018190572,
+              "upper95": 0.049811489938487045,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.036070332808947725,
+              "unit": "metres",
+              "lower95": 0.022922864315053207,
+              "upper95": 0.05063459788738762,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 655,
+              "mean": 0.26914951188133884,
+              "median": 0.23052119400336238,
+              "p90": 0.45934980698904554
+            },
+            "J": {
+              "count": 655,
+              "mean": 0.27367641683356025,
+              "median": 0.23163130339962232,
+              "p90": 0.4633072072432927
+            },
+            "D": {
+              "count": 655,
+              "mean": 0.27264912492768956,
+              "median": 0.2287895851392002,
+              "p90": 0.46630332864303553
+            },
+            "zero": {
+              "count": 655,
+              "mean": 0.2370105241167064,
+              "median": 0.20618625743330596,
+              "p90": 0.4097210740031602
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.004526904952221411,
+              "unit": "metres",
+              "lower95": 0.0018924756249558792,
+              "upper95": 0.007426516418508488,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.0034996130463507136,
+              "unit": "metres",
+              "lower95": 0.0005529814772965285,
+              "upper95": 0.006682290113285732,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.0010272919058706975,
+              "unit": "metres",
+              "lower95": -7.117298225570584e-05,
+              "upper95": 0.0021743458921449008,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.03213898776463245,
+              "unit": "metres",
+              "lower95": 0.020123006131738248,
+              "upper95": 0.04583071962146001,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.03666589271685386,
+              "unit": "metres",
+              "lower95": 0.024042587318832975,
+              "upper95": 0.05075743415128225,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.03563860081098316,
+              "unit": "metres",
+              "lower95": 0.022608768235593008,
+              "upper95": 0.05017881514618874,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "moving",
+      "object_anchor_pairs": 1320,
+      "source_point_occurrences": 140000,
+      "scenes_with_support": 97,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 1320,
+              "mean": 2.2082679455547463,
+              "median": 1.3391083927939755,
+              "p90": 5.0699354351928525
+            },
+            "J": {
+              "count": 1320,
+              "mean": 2.144686253592144,
+              "median": 1.3304420081817057,
+              "p90": 5.008305812703184
+            },
+            "D": {
+              "count": 1320,
+              "mean": 2.137870342540006,
+              "median": 1.3315384472335372,
+              "p90": 4.971164752573221
+            },
+            "zero": {
+              "count": 1320,
+              "mean": 3.7383096133963853,
+              "median": 1.594833245467931,
+              "p90": 9.291081651562859
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.06358169196260244,
+              "unit": "metres",
+              "lower95": -0.08403769230562239,
+              "upper95": -0.04507544595100501,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.07039760301474018,
+              "unit": "metres",
+              "lower95": -0.09289432389974925,
+              "upper95": -0.049723696318212204,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.006815911052137746,
+              "unit": "metres",
+              "lower95": 0.004216804690437537,
+              "upper95": 0.00963254543219698,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -1.530041667841639,
+              "unit": "metres",
+              "lower95": -1.8213928835740778,
+              "upper95": -1.260972369542589,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -1.5936233598042415,
+              "unit": "metres",
+              "lower95": -1.9020874560294831,
+              "upper95": -1.309787464572924,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -1.6004392708563793,
+              "unit": "metres",
+              "lower95": -1.9115969802139785,
+              "upper95": -1.3144586682992512,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 1320,
+              "mean": 2.222994928357602,
+              "median": 1.348093309989635,
+              "p90": 5.116136980352295
+            },
+            "J": {
+              "count": 1320,
+              "mean": 2.1597753917715417,
+              "median": 1.337442932475592,
+              "p90": 5.041387604541761
+            },
+            "D": {
+              "count": 1320,
+              "mean": 2.152842534863885,
+              "median": 1.3380662309079048,
+              "p90": 5.019581218411863
+            },
+            "zero": {
+              "count": 1320,
+              "mean": 3.748958810646601,
+              "median": 1.5996639444158802,
+              "p90": 9.296596113846308
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.06321953658606017,
+              "unit": "metres",
+              "lower95": -0.08360860207378011,
+              "upper95": -0.04476012784580568,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.07015239349371694,
+              "unit": "metres",
+              "lower95": -0.09263340787993525,
+              "upper95": -0.049547950364804125,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.00693285690765677,
+              "unit": "metres",
+              "lower95": 0.004315087561386266,
+              "upper95": 0.009744091223188032,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -1.5259638822889992,
+              "unit": "metres",
+              "lower95": -1.8164404112816241,
+              "upper95": -1.2575289803764882,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -1.5891834188750593,
+              "unit": "metres",
+              "lower95": -1.8967804859798907,
+              "upper95": -1.3063146640779602,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -1.596116275782716,
+              "unit": "metres",
+              "lower95": -1.9064546978901997,
+              "upper95": -1.3113008813081357,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "all",
+      "object_anchor_pairs": 3960,
+      "source_point_occurrences": 632865,
+      "scenes_with_support": 100,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 3960,
+              "mean": 1.1884552156953574,
+              "median": 0.21288833664109796,
+              "p90": 3.1049785071043137
+            },
+            "J": {
+              "count": 3960,
+              "mean": 1.158415355730317,
+              "median": 0.20740043617608178,
+              "p90": 2.9088241705481255
+            },
+            "D": {
+              "count": 3960,
+              "mean": 1.155807414860782,
+              "median": 0.20819762265750705,
+              "p90": 2.8872852155808455
+            },
+            "zero": {
+              "count": 3960,
+              "mean": 1.8660234078083442,
+              "median": 0.12024758445585386,
+              "p90": 7.465456798012119
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.03003985996504044,
+              "unit": "metres",
+              "lower95": -0.04117412510887376,
+              "upper95": -0.02015046063956778,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.03264780083457541,
+              "unit": "metres",
+              "lower95": -0.04481917755909531,
+              "upper95": -0.021809327789696787,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.002607940869534975,
+              "unit": "metres",
+              "lower95": 0.0014465841505515499,
+              "upper95": 0.0038767405101157834,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.6775681921129868,
+              "unit": "metres",
+              "lower95": -0.8487687546128831,
+              "upper95": -0.5250722287884527,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.7076080520780272,
+              "unit": "metres",
+              "lower95": -0.8885927438053735,
+              "upper95": -0.546882081841589,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.7102159929475622,
+              "unit": "metres",
+              "lower95": -0.8919689794394852,
+              "upper95": -0.5486821813069308,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 3960,
+              "mean": 1.2251338704423396,
+              "median": 0.2805130749655591,
+              "p90": 3.179119385598427
+            },
+            "J": {
+              "count": 3960,
+              "mean": 1.1962258694145513,
+              "median": 0.2757921298489968,
+              "p90": 2.956982540213969
+            },
+            "D": {
+              "count": 3960,
+              "mean": 1.1929807515895707,
+              "median": 0.2805556727322678,
+              "p90": 2.9505617372925363
+            },
+            "zero": {
+              "count": 3960,
+              "mean": 1.9076817642333619,
+              "median": 0.20532016507508408,
+              "p90": 7.4656962166589445
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.028908001027788233,
+              "unit": "metres",
+              "lower95": -0.040018672336494844,
+              "upper95": -0.019032159219526147,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.032153118852768836,
+              "unit": "metres",
+              "lower95": -0.04427685092819273,
+              "upper95": -0.0213801656658197,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.0032451178249806034,
+              "unit": "metres",
+              "lower95": 0.0021018666848115542,
+              "upper95": 0.004484158786715508,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.6825478937910223,
+              "unit": "metres",
+              "lower95": -0.8532442587244474,
+              "upper95": -0.530744151448569,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.7114558948188106,
+              "unit": "metres",
+              "lower95": -0.891696885881018,
+              "upper95": -0.5516706570735217,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.7147010126437912,
+              "unit": "metres",
+              "lower95": -0.8958836450680189,
+              "upper95": -0.5540691241937281,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "stationary",
+      "object_anchor_pairs": 2124,
+      "source_point_occurrences": 397689,
+      "scenes_with_support": 99,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 2124,
+              "mean": 0.15770974954111355,
+              "median": 0.09989411334443385,
+              "p90": 0.29026459802345417
+            },
+            "J": {
+              "count": 2124,
+              "mean": 0.15943230565463376,
+              "median": 0.09808611978119913,
+              "p90": 0.28003597171399586
+            },
+            "D": {
+              "count": 2124,
+              "mean": 0.1601144865909541,
+              "median": 0.09943942162027572,
+              "p90": 0.28217912516904864
+            },
+            "zero": {
+              "count": 2124,
+              "mean": 0.04035536181686618,
+              "median": 0.023391142451219888,
+              "p90": 0.10867730119497489
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0017225561135202072,
+              "unit": "metres",
+              "lower95": -0.0012624205334980279,
+              "upper95": 0.004948769792266966,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.0024047370498405385,
+              "unit": "metres",
+              "lower95": -0.0007804557118629401,
+              "upper95": 0.0058997919915039,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": -0.0006821809363203313,
+              "unit": "metres",
+              "lower95": -0.001376419580024693,
+              "upper95": -8.087088410703207e-05,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.11735438772424737,
+              "unit": "metres",
+              "lower95": 0.09967704297309733,
+              "upper95": 0.13841324785050674,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.11907694383776758,
+              "unit": "metres",
+              "lower95": 0.10037943715029375,
+              "upper95": 0.1419265877361557,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.11975912477408791,
+              "unit": "metres",
+              "lower95": 0.10071556705438439,
+              "upper95": 0.14284760967250368,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 2124,
+              "mean": 0.20520627254286822,
+              "median": 0.13761225939526522,
+              "p90": 0.3914205164205259
+            },
+            "J": {
+              "count": 2124,
+              "mean": 0.20867491074472932,
+              "median": 0.13655764405289564,
+              "p90": 0.3891312493479743
+            },
+            "D": {
+              "count": 2124,
+              "mean": 0.20827748009529495,
+              "median": 0.1354572403038956,
+              "p90": 0.392726510504377
+            },
+            "zero": {
+              "count": 2124,
+              "mean": 0.10041137049976791,
+              "median": 0.06871316458482171,
+              "p90": 0.24159088511847135
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0034686382018611073,
+              "unit": "metres",
+              "lower95": 0.000530760921539518,
+              "upper95": 0.006612223459081698,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.0030712075524267357,
+              "unit": "metres",
+              "lower95": -1.3152543079743928e-05,
+              "upper95": 0.006433116864904608,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.00039743064943437156,
+              "unit": "metres",
+              "lower95": -0.00030978753184274926,
+              "upper95": 0.0010347499692830518,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.10479490204310031,
+              "unit": "metres",
+              "lower95": 0.08661916877970804,
+              "upper95": 0.12634923628340455,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.10826354024496142,
+              "unit": "metres",
+              "lower95": 0.08915282759553778,
+              "upper95": 0.1315494510566507,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.10786610959552705,
+              "unit": "metres",
+              "lower95": 0.08850194316643921,
+              "upper95": 0.1314005843450998,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "ambiguous",
+      "object_anchor_pairs": 567,
+      "source_point_occurrences": 99083,
+      "scenes_with_support": 86,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 567,
+              "mean": 0.3326340785035703,
+              "median": 0.2647966014293491,
+              "p90": 0.571715476985766
+            },
+            "J": {
+              "count": 567,
+              "mean": 0.3355823740376281,
+              "median": 0.2609421968403646,
+              "p90": 0.5690616796910247
+            },
+            "D": {
+              "count": 567,
+              "mean": 0.3355456588090989,
+              "median": 0.26132024814890725,
+              "p90": 0.5655408351988434
+            },
+            "zero": {
+              "count": 567,
+              "mean": 0.28347431516522575,
+              "median": 0.23534443828853788,
+              "p90": 0.48456370906388746
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0029482955340577877,
+              "unit": "metres",
+              "lower95": -0.00161309649913719,
+              "upper95": 0.007950406332109434,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.002911580305528627,
+              "unit": "metres",
+              "lower95": -0.002002630883989542,
+              "upper95": 0.00816253225383311,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 3.671522852916054e-05,
+              "unit": "metres",
+              "lower95": -0.0009607981906860783,
+              "upper95": 0.0010338154250602132,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.04915976333834454,
+              "unit": "metres",
+              "lower95": 0.03160807758225144,
+              "upper95": 0.06867452384724339,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.05210805887240233,
+              "unit": "metres",
+              "lower95": 0.03307567411586994,
+              "upper95": 0.0732458356643442,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.05207134364387317,
+              "unit": "metres",
+              "lower95": 0.0326681260894822,
+              "upper95": 0.07357384054787278,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 567,
+              "mean": 0.3765753771617382,
+              "median": 0.3152446782960464,
+              "p90": 0.6254300226007226
+            },
+            "J": {
+              "count": 567,
+              "mean": 0.38025036853814914,
+              "median": 0.31525427866340755,
+              "p90": 0.6233321852593678
+            },
+            "D": {
+              "count": 567,
+              "mean": 0.3797497968006298,
+              "median": 0.3128105014877752,
+              "p90": 0.6217902256515219
+            },
+            "zero": {
+              "count": 567,
+              "mean": 0.32895471890317085,
+              "median": 0.2870992878786914,
+              "p90": 0.5609404670201398
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0036749913764109188,
+              "unit": "metres",
+              "lower95": -0.0008662064148406991,
+              "upper95": 0.008696804816123819,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.00317441963889159,
+              "unit": "metres",
+              "lower95": -0.0015550221610413431,
+              "upper95": 0.008353252419196924,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.0005005717375193286,
+              "unit": "metres",
+              "lower95": -0.0004912470391741627,
+              "upper95": 0.001478220865305539,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.04762065825856737,
+              "unit": "metres",
+              "lower95": 0.03033157925931431,
+              "upper95": 0.06701499778256688,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.05129564963497829,
+              "unit": "metres",
+              "lower95": 0.032759225300358866,
+              "upper95": 0.07224246365338256,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.05079507789745896,
+              "unit": "metres",
+              "lower95": 0.03189695301167762,
+              "upper95": 0.07214236539266261,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "moving",
+      "object_anchor_pairs": 1269,
+      "source_point_occurrences": 136093,
+      "scenes_with_support": 97,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 1269,
+              "mean": 3.2960627451668763,
+              "median": 2.013949292592574,
+              "p90": 7.60309804259343
+            },
+            "J": {
+              "count": 1269,
+              "mean": 3.198120871081385,
+              "median": 1.9872040700819773,
+              "p90": 7.371287882657692
+            },
+            "D": {
+              "count": 1269,
+              "mean": 3.188857214172381,
+              "median": 1.9903133693745576,
+              "p90": 7.324269124504822
+            },
+            "zero": {
+              "count": 1269,
+              "mean": 5.628847887882849,
+              "median": 2.3990366731082835,
+              "p90": 14.01280558142817
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.09794187408549115,
+              "unit": "metres",
+              "lower95": -0.13002020954696514,
+              "upper95": -0.06881607498953546,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.10720553099449504,
+              "unit": "metres",
+              "lower95": -0.14188440305041874,
+              "upper95": -0.07550253518248852,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.009263656909003881,
+              "unit": "metres",
+              "lower95": 0.0060042706315341365,
+              "upper95": 0.012740240688841054,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -2.332785142715973,
+              "unit": "metres",
+              "lower95": -2.7848934272148322,
+              "upper95": -1.9191398288812962,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -2.4307270168014643,
+              "unit": "metres",
+              "lower95": -2.9095521293622197,
+              "upper95": -1.9926966463335376,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -2.439990673710468,
+              "unit": "metres",
+              "lower95": -2.9220987807004675,
+              "upper95": -1.9992933700883402,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 1269,
+              "mean": 3.311389885910092,
+              "median": 2.0247486614630934,
+              "p90": 7.635627371825192
+            },
+            "J": {
+              "count": 1269,
+              "mean": 3.2137328396364757,
+              "median": 1.9986535904285037,
+              "p90": 7.389346227532639
+            },
+            "D": {
+              "count": 1269,
+              "mean": 3.2044950936062535,
+              "median": 1.9997092618354275,
+              "p90": 7.366654557551225
+            },
+            "zero": {
+              "count": 1269,
+              "mean": 5.638005287474002,
+              "median": 2.405582552839735,
+              "p90": 14.034194570191522
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.09765704627361638,
+              "unit": "metres",
+              "lower95": -0.1297259731498708,
+              "upper95": -0.06850061105104316,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.10689479230383858,
+              "unit": "metres",
+              "lower95": -0.14154752487271233,
+              "upper95": -0.07518430009122205,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.009237746030222205,
+              "unit": "metres",
+              "lower95": 0.006032788670752321,
+              "upper95": 0.012650127796858146,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -2.3266154015639096,
+              "unit": "metres",
+              "lower95": -2.7767794672776827,
+              "upper95": -1.9141554726840098,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -2.424272447837526,
+              "unit": "metres",
+              "lower95": -2.9019444180208422,
+              "upper95": -1.9879776559714717,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -2.433510193867748,
+              "unit": "metres",
+              "lower95": -2.9139468250396487,
+              "upper95": -1.9939356688168843,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "all",
+      "object_anchor_pairs": 3849,
+      "source_point_occurrences": 621434,
+      "scenes_with_support": 100,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 3849,
+              "mean": 1.5596483913546897,
+              "median": 0.26604815802440496,
+              "p90": 4.287838523998282
+            },
+            "J": {
+              "count": 3849,
+              "mean": 1.518473569798019,
+              "median": 0.2597972014916043,
+              "p90": 3.8974601887910167
+            },
+            "D": {
+              "count": 3849,
+              "mean": 1.5146521635874053,
+              "median": 0.2612746943090606,
+              "p90": 3.849386169627908
+            },
+            "zero": {
+              "count": 3849,
+              "mean": 2.471062105583879,
+              "median": 0.14682647079165795,
+              "p90": 9.778096334476142
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.04117482155667074,
+              "unit": "metres",
+              "lower95": -0.05608073642361495,
+              "upper95": -0.02820734018567641,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.0449962277672844,
+              "unit": "metres",
+              "lower95": -0.06150489199792283,
+              "upper95": -0.030512448418898944,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.003821406210613665,
+              "unit": "metres",
+              "lower95": 0.002028907291288057,
+              "upper95": 0.005763878727814814,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.9114137142291892,
+              "unit": "metres",
+              "lower95": -1.1446850966542128,
+              "upper95": -0.7052264945820752,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.9525885357858599,
+              "unit": "metres",
+              "lower95": -1.1990862999743683,
+              "upper95": -0.735073142230983,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.9564099419964736,
+              "unit": "metres",
+              "lower95": -1.2039913836928904,
+              "upper95": -0.7372031828839943,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 3849,
+              "mean": 1.6075519782629422,
+              "median": 0.35688609041511854,
+              "p90": 4.318765682706035
+            },
+            "J": {
+              "count": 3849,
+              "mean": 1.5670338369003844,
+              "median": 0.34904388953215076,
+              "p90": 3.9796025818230816
+            },
+            "D": {
+              "count": 3849,
+              "mean": 1.5630115290809112,
+              "median": 0.3495007956537702,
+              "p90": 3.9193484394735743
+            },
+            "zero": {
+              "count": 3849,
+              "mean": 2.525290350301217,
+              "median": 0.264000013313691,
+              "p90": 9.7836342772422
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.040518141362557714,
+              "unit": "metres",
+              "lower95": -0.05537474451042444,
+              "upper95": -0.027593792862885682,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.04454044918203093,
+              "unit": "metres",
+              "lower95": -0.06102946036528783,
+              "upper95": -0.030118305588933875,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.004022307819473214,
+              "unit": "metres",
+              "lower95": 0.00225300384465828,
+              "upper95": 0.0059460328549194134,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -0.9177383720382748,
+              "unit": "metres",
+              "lower95": -1.1501554989834042,
+              "upper95": -0.7118456436504821,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -0.9582565134008325,
+              "unit": "metres",
+              "lower95": -1.2037171683497832,
+              "upper95": -0.7413717788030235,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -0.9622788212203057,
+              "unit": "metres",
+              "lower95": -1.208854696361754,
+              "upper95": -0.7438806240683223,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "stationary",
+      "object_anchor_pairs": 2136,
+      "source_point_occurrences": 405387,
+      "scenes_with_support": 99,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 2136,
+              "mean": 0.20220549751862482,
+              "median": 0.12776016242359808,
+              "p90": 0.37255217247272937
+            },
+            "J": {
+              "count": 2136,
+              "mean": 0.20449200648517685,
+              "median": 0.127817336722551,
+              "p90": 0.3566671363589139
+            },
+            "D": {
+              "count": 2136,
+              "mean": 0.20587592669819085,
+              "median": 0.12730554370996494,
+              "p90": 0.36106303611916035
+            },
+            "zero": {
+              "count": 2136,
+              "mean": 0.05488430325755971,
+              "median": 0.0351089821942685,
+              "p90": 0.14653536746775997
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.0022865089665520255,
+              "unit": "metres",
+              "lower95": -0.0016620365938733684,
+              "upper95": 0.006559385585973607,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.0036704291795660315,
+              "unit": "metres",
+              "lower95": -0.0006216962727280572,
+              "upper95": 0.00837708910867419,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": -0.001383920213014006,
+              "unit": "metres",
+              "lower95": -0.002354167912713342,
+              "upper95": -0.0005372466194675518,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.1473211942610651,
+              "unit": "metres",
+              "lower95": 0.12517293567394638,
+              "upper95": 0.17346851221294102,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.14960770322761713,
+              "unit": "metres",
+              "lower95": 0.12621056765368405,
+              "upper95": 0.17765517464671193,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.15099162344063113,
+              "unit": "metres",
+              "lower95": 0.12703218841822553,
+              "upper95": 0.17947819866736994,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 2136,
+              "mean": 0.26533238264945813,
+              "median": 0.17811761004390314,
+              "p90": 0.5041276581384821
+            },
+            "J": {
+              "count": 2136,
+              "mean": 0.2684714470121172,
+              "median": 0.17716246029188013,
+              "p90": 0.5102866580380714
+            },
+            "D": {
+              "count": 2136,
+              "mean": 0.2693885098197402,
+              "median": 0.1758937129449528,
+              "p90": 0.5139533119472048
+            },
+            "zero": {
+              "count": 2136,
+              "mean": 0.13307924049548525,
+              "median": 0.09351453976618909,
+              "p90": 0.32304099719750934
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.003139064362659094,
+              "unit": "metres",
+              "lower95": -0.0006533457880254673,
+              "upper95": 0.007270877190377183,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.004056127170282087,
+              "unit": "metres",
+              "lower95": -4.233171362777656e-05,
+              "upper95": 0.008584092445193653,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": -0.0009170628076229925,
+              "unit": "metres",
+              "lower95": -0.00181508913670035,
+              "upper95": -8.469881810282642e-05,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.13225314215397288,
+              "unit": "metres",
+              "lower95": 0.10938171428608032,
+              "upper95": 0.15867814471166336,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.13539220651663197,
+              "unit": "metres",
+              "lower95": 0.11129367782428587,
+              "upper95": 0.1639495183269881,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.13630926932425497,
+              "unit": "metres",
+              "lower95": 0.11192467872845943,
+              "upper95": 0.1653073441223067,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "ambiguous",
+      "object_anchor_pairs": 487,
+      "source_point_occurrences": 83899,
+      "scenes_with_support": 86,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 487,
+              "mean": 0.4666588721855112,
+              "median": 0.3543323222506684,
+              "p90": 0.7839561800363162
+            },
+            "J": {
+              "count": 487,
+              "mean": 0.47324638115064843,
+              "median": 0.34317527697558203,
+              "p90": 0.7742567570361549
+            },
+            "D": {
+              "count": 487,
+              "mean": 0.47401114730302774,
+              "median": 0.3418213801134355,
+              "p90": 0.7697515401770648
+            },
+            "zero": {
+              "count": 487,
+              "mean": 0.38378074003157386,
+              "median": 0.3117348415448884,
+              "p90": 0.6849405325248386
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.006587508965137212,
+              "unit": "metres",
+              "lower95": -0.001290137117012556,
+              "upper95": 0.015062911374185674,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.007352275117516516,
+              "unit": "metres",
+              "lower95": -0.0009513211609844223,
+              "upper95": 0.016188245100856966,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": -0.0007647661523793037,
+              "unit": "metres",
+              "lower95": -0.0022585101017334186,
+              "upper95": 0.0007987811148765754,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.08287813215393736,
+              "unit": "metres",
+              "lower95": 0.05384429920034617,
+              "upper95": 0.11378848666993241,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.08946564111907457,
+              "unit": "metres",
+              "lower95": 0.05701153761855724,
+              "upper95": 0.12402843861313305,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.09023040727145387,
+              "unit": "metres",
+              "lower95": 0.057168060522241125,
+              "upper95": 0.12516666315315256,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 487,
+              "mean": 0.5192425823371444,
+              "median": 0.4054948692083224,
+              "p90": 0.848851040762245
+            },
+            "J": {
+              "count": 487,
+              "mean": 0.5260737200234057,
+              "median": 0.4050735026653502,
+              "p90": 0.843838225863235
+            },
+            "D": {
+              "count": 487,
+              "mean": 0.5269431807511332,
+              "median": 0.40186266499393897,
+              "p90": 0.8432669028680497
+            },
+            "zero": {
+              "count": 487,
+              "mean": 0.43950849825690513,
+              "median": 0.3768175552228272,
+              "p90": 0.7543621137182669
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": 0.006831137686261313,
+              "unit": "metres",
+              "lower95": -0.0008505102191498664,
+              "upper95": 0.015213527048774557,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": 0.007700598413988846,
+              "unit": "metres",
+              "lower95": -0.0004058445830395744,
+              "upper95": 0.01637416830761211,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": -0.0008694607277275335,
+              "unit": "metres",
+              "lower95": -0.0022656980173742123,
+              "upper95": 0.0006059361015453457,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": 0.07973408408023924,
+              "unit": "metres",
+              "lower95": 0.05108896576583562,
+              "upper95": 0.1104339372057735,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": 0.08656522176650056,
+              "unit": "metres",
+              "lower95": 0.05422443909132766,
+              "upper95": 0.12092721319985687,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": 0.08743468249422809,
+              "unit": "metres",
+              "lower95": 0.05445597016351729,
+              "upper95": 0.12245795095387996,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "moving",
+      "object_anchor_pairs": 1226,
+      "source_point_occurrences": 132148,
+      "scenes_with_support": 96,
+      "metrics": {
+        "epe_xy_m": {
+          "values": {
+            "P": {
+              "count": 1226,
+              "mean": 4.358819612455199,
+              "median": 2.704166915143081,
+              "p90": 10.138741858573576
+            },
+            "J": {
+              "count": 1226,
+              "mean": 4.222951759118981,
+              "median": 2.6829531956828596,
+              "p90": 9.737084759950108
+            },
+            "D": {
+              "count": 1226,
+              "mean": 4.2082396162186075,
+              "median": 2.6689010897337693,
+              "p90": 9.708914539248013
+            },
+            "zero": {
+              "count": 1226,
+              "mean": 7.509774838693985,
+              "median": 3.210710846390879,
+              "p90": 18.724971505713192
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.13586785333621787,
+              "unit": "metres",
+              "lower95": -0.17818418463573193,
+              "upper95": -0.09721998565386786,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.15057999623659146,
+              "unit": "metres",
+              "lower95": -0.19760716100597125,
+              "upper95": -0.10779455174179356,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.014712142900373593,
+              "unit": "metres",
+              "lower95": 0.009666710445752846,
+              "upper95": 0.02019402514690085,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -3.1509552262387857,
+              "unit": "metres",
+              "lower95": -3.7651513891575163,
+              "upper95": -2.589921993471026,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -3.2868230795750035,
+              "unit": "metres",
+              "lower95": -3.9334116133973382,
+              "upper95": -2.6913238113351357,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -3.301535222475377,
+              "unit": "metres",
+              "lower95": -3.952150810344434,
+              "upper95": -2.701357172956042,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        },
+        "epe_3d_m": {
+          "values": {
+            "P": {
+              "count": 1226,
+              "mean": 4.378341319246845,
+              "median": 2.728678265138377,
+              "p90": 10.158115247622838
+            },
+            "J": {
+              "count": 1226,
+              "mean": 4.24295295739013,
+              "median": 2.6907509925170117,
+              "p90": 9.749219417002628
+            },
+            "D": {
+              "count": 1226,
+              "mean": 4.22838188371261,
+              "median": 2.677119673709419,
+              "p90": 9.72347823338328
+            },
+            "zero": {
+              "count": 1226,
+              "mean": 7.521651437161432,
+              "median": 3.217479869350022,
+              "p90": 18.734511579204955
+            }
+          },
+          "comparisons": {
+            "J-minus-P": {
+              "difference": -0.1353883618567151,
+              "unit": "metres",
+              "lower95": -0.1776462247241845,
+              "upper95": -0.09691474547171844,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-P": {
+              "difference": -0.1499594355342344,
+              "unit": "metres",
+              "lower95": -0.19679144369403595,
+              "upper95": -0.10733585484688084,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-D": {
+              "difference": 0.014571073677519308,
+              "unit": "metres",
+              "lower95": 0.009617504170086222,
+              "upper95": 0.0199864316138582,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "P-minus-zero": {
+              "difference": -3.143310117914587,
+              "unit": "metres",
+              "lower95": -3.7565136920641495,
+              "upper95": -2.584030778682225,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "J-minus-zero": {
+              "difference": -3.278698479771302,
+              "unit": "metres",
+              "lower95": -3.9247696182031473,
+              "upper95": -2.685258932008725,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            },
+            "D-minus-zero": {
+              "difference": -3.2932695534488214,
+              "unit": "metres",
+              "lower95": -3.943168188793528,
+              "upper95": -2.6950827636062344,
+              "defined_draws": 10000,
+              "undefined_draws": 0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "bootstrap": {
+    "repetitions": 10000,
+    "seed": 11,
+    "unit": "scene",
+    "keep_all_anchors_objects": true,
+    "paired": true,
+    "interval": "percentile95",
+    "multiplicity_adjusted": false,
+    "weights_sha256": "1f1bdad2e7b0df2b277ba76144cc681d3d411a4edb77c30fe812aeb0d704d8e6"
+  },
+  "contract": {
+    "occupancy": "original per-horizon pooled GMO IoU averaged over four futures",
+    "physical": "point EPE mean inside object, then equal anchor-instance weight; not voxel weighted",
+    "physical_labels": "fixed t0 source-point rigid-box proxy, not directly observed dense scene flow",
+    "P": "unchanged pretrained source-motion head, not O",
+    "O_has_no_native_flow": true,
+    "EPE_lower_is_better": true,
+    "zero_denominator": "null, never zero error",
+    "median_p90": "point estimates; CI above applies to means",
+    "single_training_seed": 11,
+    "historical_development_exposure": true,
+    "model_selected": false
+  },
+  "input_sha256": {
+    "analysis/o_motion_20260915/server_results/training/connected_motion_train_v2/development_records.jsonl": "e9dc348405fc335acd36080045d2aa9c0e287100ee7486b804bc26ae781a3430",
+    "analysis/o_motion_20260915/server_results/training/connected_motion_train_v2/development_objects.jsonl": "b73499b8e4ce1bd0de6ffc3ff6001d3a58ab9f33483c8bfb8f7ed68e6f88d0ea"
+  },
+  "source_sha256": "3b0822c7d4c9218211dfec7c7d6854fd67b28f9b43640134dfe2228690a2c40e"
+}

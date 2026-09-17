@@ -1,0 +1,26 @@
+{
+  "status": "PASS_INDEPENDENT_OBJECT_LOOP_RECOMPUTATION",
+  "scalar_errors_checked": 46592,
+  "maximum_absolute_difference_m": 1.3011813848606835e-13,
+  "all_original_population_retained": true,
+  "surface_supported_original_points": {
+    "in_roi": 19984,
+    "fb1_in_roi": 13989
+  },
+  "supported_nearest_distance_m_quantiles": {
+    "in_roi": [
+      0.005320610117308138,
+      0.5194130316010992,
+      0.8927363432313109,
+      0.9999195731464743
+    ],
+    "fb1_in_roi": [
+      0.005320610117308138,
+      0.5713918143400442,
+      0.9138624884608078,
+      0.9996336051722687
+    ]
+  },
+  "notes": "Direct object loops versus bincount scoring; no model re-inference or geometry re-estimation",
+  "source_sha256": "a1b19e9bd03bbeeee9ea10fc9cd197b78d999f1b27d4bab9b2ed02f754b0b99a"
+}

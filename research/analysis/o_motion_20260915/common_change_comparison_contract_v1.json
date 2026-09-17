@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_BEFORE_CANDIDATE_DEVELOPMENT_OUTPUTS",
+  "schema": "common-change-comparison-contract-v1",
+  "source_sha256": "60ed3eced9a90bba4363982d3af9280855c3d1086f3b5c3fc9c66be32da20a2c",
+  "tests_sha256": "1177c04db001288accde52067a7a57d20462a0f73170842ed169adc82127a8d2",
+  "bootstrap": {
+    "repetitions": 10000,
+    "seed": 11,
+    "unit": "scene",
+    "paired": true,
+    "all_anchors_per_scene": true,
+    "multiplicity_adjusted": false
+  },
+  "primary": "Mean of four future per-horizon pooled GMO IoUs on original GT",
+  "secondary": [
+    "All four occupancy transition IoUs, explicitly arrival and vacating",
+    "Original total FP/FN",
+    "GT physical endpoint-speed positive recall; all groups and unmatched annotations kept"
+  ],
+  "comparisons": [
+    "A-O",
+    "Z-O",
+    "A-Z"
+  ],
+  "motion_claim": "Common output occupancy changes and speed-attributed risk, not O native physical flow EPE",
+  "undefined_values": "null with explicit undefined bootstrap repetitions; no perfect empty score",
+  "candidate_selection_in_aggregator": false
+}

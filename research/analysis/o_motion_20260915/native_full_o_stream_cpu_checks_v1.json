@@ -1,0 +1,22 @@
+{
+  "schema": "native-full-o-stream-cpu-check-v1",
+  "source_sha256": "3a8d338de78caae5d73e11012cd9cec38a47621913ddbb0bbda9cfae6e510bef",
+  "checks": {
+    "python_3_10_ast": true,
+    "help_without_torch": true,
+    "frozen_dependency_SHA_and_import_count": 5,
+    "authenticated_actual_full_reference_rows": 5119,
+    "actual_full_reference_scenes": 150,
+    "GT_hist_orientation_and_row_sums": true,
+    "ordered_official_identity_and_original_data_info_mapping": true,
+    "fixed_pilot_official_indices": [
+      2036,
+      2998
+    ]
+  },
+  "scope": "CPU source and existing-reference checks only; constructed an index lookup from the authenticated ledger to exercise _selected_rows, not the real dataset loader",
+  "torch_forward_run": false,
+  "cuda_run": false,
+  "new_model_metrics_generated": false,
+  "server_dispatch": false
+}

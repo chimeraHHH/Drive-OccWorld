@@ -1,0 +1,32 @@
+{
+  "schema": "native-joint-validation-selection-v1",
+  "scope": "engineering_only_two_cached_validation_anchors",
+  "created_utc": "2026-09-14T17:30:16.132877+00:00",
+  "config_sha256": "c92faf7c2a4697ae7faa0c69ca844068dd8f5a6d28463e7ad45307c4ab374303",
+  "ann_sha256": "83c1637453777f2ff02d5ae0daa719d008f1c7f450662b2ebe77074c35ee7eb9",
+  "catalog_sha256": "b59f92a4488dc465130b9477f50bcf6b16469b27b26205443f6878cf022c90f1",
+  "split_manifest_sha256": "e325cc0c0039322a18c2eba48d0eb3790773c05e2cb8f9808ec08fd9ea3ca8f3",
+  "records": [
+    {
+      "sample_token": "297c52902a384b84ba179f3160ac54e9",
+      "scene_token": "aedcd3cf7c4a49d7a4a43ab7443a9eb1",
+      "official_index": 2036,
+      "split": "validation",
+      "historical_partition": "development"
+    },
+    {
+      "sample_token": "01076466d815421c857d2c8cf8034488",
+      "scene_token": "7bd098ac88cb4221addd19202a7ea5de",
+      "official_index": 2998,
+      "split": "validation",
+      "historical_partition": "development"
+    }
+  ],
+  "samples": 2,
+  "scenes": 2,
+  "historical_validation_exposure": true,
+  "rule": "Two fixed existing-cache development anchors from distinct scenes, chosen before candidate outcome; no performance inference",
+  "training_seed": 11,
+  "training_repeats_added": 0,
+  "launch_status": "NOT_DISPATCHED; engineering parity and pilot outcomes required first"
+}

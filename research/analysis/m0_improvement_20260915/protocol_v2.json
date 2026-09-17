@@ -1,0 +1,125 @@
+{
+  "schema": "observation-memory-protocol-v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_TRAINING",
+  "created_utc": "2026-09-14T16:50:46.858013+00:00",
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+  "config_sha256": "c92faf7c2a4697ae7faa0c69ca844068dd8f5a6d28463e7ad45307c4ab374303",
+  "m0_sha256": "0348dc8f28d2959637dcd9ac7ccd29fea0da20c25c9856cdb4709c3e221dd9dc",
+  "training": {
+    "scope": "whole_future_pred_head",
+    "seed": 11,
+    "train_samples": 512,
+    "development_samples": 200,
+    "passes": 4,
+    "accumulate": 4,
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "grad_clip": 35,
+    "warmup_updates": 50,
+    "selection": "fixed final after four complete passes, no dev checkpoint selection"
+  },
+  "evaluation": {
+    "primary": "arithmetic mean over four future horizons of pooled foreground class1 IoU",
+    "primary_mechanism_contrast": "persistent2 minus rolling2",
+    "utility_contrasts": [
+      "persistent2 minus native1 continuation",
+      "persistent2 minus original M0"
+    ],
+    "minimum_meaningful_effect_pp": 0.5,
+    "confidence": "10000 scene-paired bootstrap resamples, seed11, percentile95",
+    "development_only": true,
+    "full_validation_required": 5119,
+    "historical_validation_exposure": true,
+    "training_seed_robustness_claim": false
+  },
+  "resource_policy": {
+    "train_microbatch": 1,
+    "accumulated_samples_per_update": 4,
+    "updates_per_arm": 512,
+    "examples_per_arm": 2048,
+    "warmup_updates": 50,
+    "measured_costs": {
+      "native1": {
+        "trainable_parameters": 13274016,
+        "update_seconds_mean": 1.7083865400248517,
+        "update_seconds_max": 1.7135580399772152,
+        "max_memory_bytes": 16886129664
+      },
+      "persistent2": {
+        "trainable_parameters": 13348288,
+        "update_seconds_mean": 1.7437223033048213,
+        "update_seconds_max": 1.7514766799286008,
+        "max_memory_bytes": 18254922752
+      },
+      "rolling2": {
+        "trainable_parameters": 13348288,
+        "update_seconds_mean": 1.736453829992873,
+        "update_seconds_max": 1.7376188799971715,
+        "max_memory_bytes": 18254922752
+      }
+    },
+    "cache_bytes_per_anchor_max": 192698686,
+    "planned_cache_bytes_approx": 137201464432,
+    "measured_cache_seconds_per_anchor": [
+      2.816007829969749,
+      3.349128679954447
+    ],
+    "raw_estimated_total_gpu_hours": 1.5669788080190858,
+    "planning_range_total_gpu_hours": [
+      1.5,
+      3.2
+    ],
+    "planning_note": "Two hot-cache training anchors only; many-anchor IO and evaluation may cost more. Final budget fixed to equal examples, not timing-based arm truncation.",
+    "global_deadline_hours_after_dispatch": 3,
+    "upper_bound_card_wall_hours": 6,
+    "max_cache_bytes_per_split": 150000000000,
+    "extraction_timeout_seconds": 7800,
+    "screen_limit": "Development screen; no architectural futility claim solely from wide pilot intervals. Expand data/validation before declaring success."
+  },
+  "source_sha256": {
+    "memory_experiment.py": "42f81d5799c32bf98e6e6da4055d79c9d62f50332d8aed87797e4ea72a7d6f2c",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "observation_memory.py": "0f01a29dc79daf2f0abb42bd2a23f8d168606cd3928212229ee5aeb3f94a5733",
+    "run_campaign_card.py": "b562b772a995aa466122b4f9233c1c679dcb3fd18a51b1c218cccd73c49a0246",
+    "wait_for_native_cache.py": "43f2994f895bf01b87ad638b626010c969ebb9c94ed8d0c90859c6996cd9b388",
+    "aggregate_memory.py": "2e3d6368b39018da5c950eac72324e5a4682c1cb4008faf36ce26cbda8af2e9a",
+    "test_observation_memory.py": "23b11b542e3b5898b97f39fd2cebc7781ebf3d3c185de7799ce32345ac740026",
+    "job_runner.py": "07c26a06723d97c218eb6d6243406bbb6512355588031a079f156e624818d8a8"
+  },
+  "numerical_policy": {
+    "observer_cache_matmul_tf32": true,
+    "observer_cache_cudnn_tf32": true,
+    "future_matmul_tf32": false,
+    "future_cudnn_tf32": true,
+    "float_dtype": "float32",
+    "original_M0_reference": "native unchanged cached predictions with TF32 enabled",
+    "additional_reference": "same cached observed state, native M0 future head without matmul TF32, frozen before optimizer"
+  },
+  "runtime_source_sha256": {
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/bevformer.py": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/radar_bev_encoder.py": "326592d9fb94bd37bd957855bc332863dd552a32a814e67915514cda2905df5f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/radar_bev.py": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_transformer.py": "384f283c7338fb5e2c212011f3fc56982b150c54b0f39c602120f4139535f740",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/conditionalnorm.py": "31549af09e3aa73d172af854299cd4ada20ceff69db7ee57dbe0f1f7b23ed76d",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/semkitti_loss.py": "e6a4b9accef1f47cf031f84e18fac925d2764b4105b8010486c8229e589abaa4",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/lovasz_softmax.py": "046a43d610d34cdd6d4b5f791aa5df0723e9cae3cbff4e34de086574b62cf8be"
+  },
+  "frozen_utc": "2026-09-14T17:17:58.460851+00:00",
+  "engineering_evidence": {
+    "native_cache_complete_sha256": "56d635525c030ff78c41dc3049dc7027bc1329f8251a6a6e1b3156038ba486cb",
+    "native_replay_gradient_sha256": "dccc7eeefe36d37b91d00c263edb856d0746e27719ed9b395ff23f0fdcef5043",
+    "memory_profile_sha256": "261f822ad620fdca8b5e2ed03bb65d0b2a9c54c27db66e0384325ad7e707acdd",
+    "precision_probe_sha256": "56ce6db2ae646e162e9b3e633f36273ee8fb85904dfc098134335de742c757ac",
+    "checks": "Native bitwise replay, first-step original tolerance, same 2-slot initial weights, first two horizons equal, last-horizon-only BPTT, 5 AdamW updates per mode",
+    "postprofile_source_review_sha256": "5be1bf2473e6948b8927392c1ceabbe2d54c1cae3f6150f37a3f16af3a86b160"
+  },
+  "revision": 2,
+  "supersedes_sha256": "7e0f0b91f312a02d41e7ae8c8c6f138a27f949f1de07001898a9fc49d0e34e5e",
+  "revision_reason": "Before any candidate training: reset RNG after frozen reference and bind producer receipts, output path and deadline."
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "object-state-conditioned-occupancy-source-audit-v1",
+  "checked_date": "2026-09-16",
+  "method": "MotionPerceiver",
+  "publication": "IEEE Robotics and Automation Letters 9(3):2822–2829 (2024)",
+  "doi": "10.1109/LRA.2024.3360811",
+  "paper": {
+    "url": "https://arxiv.org/html/2306.08879v2",
+    "sha256": "5dfd157120d507fb4ea560ef4f158e60b92bca6da57b25cbdf725aef93042c09",
+    "sections": [
+      "IV-A/B/C/D",
+      "V-A/C/E",
+      "VI",
+      "Figure 1"
+    ]
+  },
+  "author_project": "https://sites.google.com/monash.edu/motionperceiver",
+  "repository": "https://github.com/5had3z/motion-perceiver",
+  "commit": "cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f",
+  "code_files": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/README.md",
+      "sha256": "28d66f853bc10cc18bf962bdf581b62a268ae156d2eeef6207dcd7503b3d7456"
+    },
+    {
+      "path": "cfg/no-ctx.yml",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/cfg/no-ctx.yml",
+      "sha256": "18c9f227c53137368ff2341af6b0dc584dee32e7da9329097b20cd1adc07eb62"
+    },
+    {
+      "path": "cfg/all-ctx.yml",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/cfg/all-ctx.yml",
+      "sha256": "516269396a7a8c14819bec9e501ca1be6a018af83d5fff999408647ce49c1020"
+    },
+    {
+      "path": "cfg/occ-flow.yml",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/cfg/occ-flow.yml",
+      "sha256": "52c211158eb76b5dda7b721238749ddbed4fa4d088a213e50e1b5993f4303c33"
+    },
+    {
+      "path": "src/model/motion_perceiver.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/model/motion_perceiver.py",
+      "sha256": "48f9a25146ba6d64d75ebd67e3dc20e67a0cefc004fffe20bc9a1f50fec51dec"
+    },
+    {
+      "path": "src/model/_iadapter.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/model/_iadapter.py",
+      "sha256": "a83323199d360f9e90d31fc7c8e7cc18d8fe1ef4628654d2ff3e38b2c0cc0023"
+    },
+    {
+      "path": "src/model/_oadapter.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/model/_oadapter.py",
+      "sha256": "3bc131ea570790353bbaa2c64e177b43fdba98a5cc45128f0e546bb7541b6a72"
+    },
+    {
+      "path": "src/loss.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/loss.py",
+      "sha256": "d68d377cd8ebbca914a515e8981e8f8d1c049bddc6f2e19cc2c5f3590c2f53cd"
+    },
+    {
+      "path": "src/dataset/waymo.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/dataset/waymo.py",
+      "sha256": "41d1fdc2d4fa695458e28e439ba673ba74d0857f0a14118e09af4ec9bcd9ade5"
+    },
+    {
+      "path": "src/dataset/common.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/dataset/common.py",
+      "sha256": "839102e3445b1121d5a2d972eb46751e8d62d99e587c252ec2e31247179a3dce"
+    },
+    {
+      "path": "train.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/train.py",
+      "sha256": "3c37ee0438e47617a0886f593802667d75abba7afd791566d9fcce2e2c5efe0e"
+    },
+    {
+      "path": "src/dataset/plugins/maskfrompoly/maskfrompoly.cpp",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/dataset/plugins/maskfrompoly/maskfrompoly.cpp",
+      "sha256": "ac53d332adfea192fa14ab555857f65dd50c0619d29803a09127da33672be2bc"
+    },
+    {
+      "path": "src/dataset/plugins/maskfrompoly/maskfrompoly.hpp",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/dataset/plugins/maskfrompoly/maskfrompoly.hpp",
+      "sha256": "f08fddbcde7ea4b512df68ba42d9daa592520d7424f3a0c9ca681197ca684658"
+    },
+    {
+      "path": "src/model/perceiver_io.py",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/src/model/perceiver_io.py",
+      "sha256": "5afc4ce051f24017d033030fe5289b42f0bff97382e61c1ae37f88e86a80c24a"
+    },
+    {
+      "path": "Dockerfile",
+      "url": "https://raw.githubusercontent.com/5had3z/motion-perceiver/cc68a9d1fc0f1b4cfb49d26b6872ba94a723819f/Dockerfile",
+      "sha256": "0d1eeee4845b16b71d85dc4d4e11fb4553bc8933eb3c4edf2c44bc896e149d76"
+    }
+  ],
+  "blob_identity_checked": true,
+  "github_license_detected": null,
+  "releases": [],
+  "checkpoint_scope": "No trained model file in inspected Git tree, no direct checkpoint link found in README, releases API empty; does not prove no weight available elsewhere.",
+  "execution": {
+    "external_code_executed": false,
+    "dependencies_installed": false,
+    "models_loaded": false,
+    "training": false
+  },
+  "scope": "One source-backed published method; no second method added without equally direct verified implementation."
+}

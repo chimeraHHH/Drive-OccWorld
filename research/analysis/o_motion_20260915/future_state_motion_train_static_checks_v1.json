@@ -1,0 +1,21 @@
+{
+  "status": "CPU_SOURCE_AND_REAL_ENGINEERING_METADATA_PASS",
+  "source_sha256": "2cb16d2d1e15a17b808b23cee8637066c9f5fb85f934950cdf94d680e10bc393",
+  "python310_AST": true,
+  "top_level_torch_imported": false,
+  "source_files": 18,
+  "package_files": 22,
+  "actual_preflight_metadata": {
+    "complete_sha256": "8d2e2dd9094ffb897eccd60febc95d2e06b30f93e7b8aaad74dc4657bde20dbd",
+    "manifest_sha256": "568a0862f0c3e87a5a1b3a2cca9460eca8bbcafa2d884442829c12d3f9acb5e1",
+    "summary_sha256": "e5d2f4772c5e76bfef73aa2024e7a411541f7e9e6aef52861ca444084df505b1",
+    "weights_loaded": false,
+    "actual_preflight_passed": true
+  },
+  "original_O_LR512_max_absolute_recalculation_difference": 1.6940658945086007e-21,
+  "original_O_log_sha256": "c5895553f25f8f26fbcedf2479b4302bee314be68e21a42717fc6e63e93d9b70",
+  "formal_training_performed": false,
+  "checkpoint_loaded": false,
+  "optimizer_updates_in_this_check": 0,
+  "analysis_bindings_pending": true
+}

@@ -1,0 +1,511 @@
+{
+  "schema": "oracle-transport-train16-independent-recalculation-v1",
+  "status": "PASS",
+  "created_utc": "2026-09-15T14:43:55.754908+00:00",
+  "sources": {
+    "output_directory": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/server_results/probes/oracle_transport_train16_v2",
+    "output_sha256": {
+      "summary.json": "e2fe809b1043e9d50b5816c42e78133ef30970d00b9ffe91afce5189328f2459",
+      "records.jsonl": "4388c1181d76e4447a3b6301c23f0d2d4cd092c13be96abe68f7463793a1013b",
+      "complete.json": "581933f14cf08e47c7651addf4b3dbb551e04a4b6747d58702a053170beed8d1",
+      "manifest.json": "5681684de97f5a78dcb8abae84d6fdb598360bae2c3c3053dc986ffbfc37fda4"
+    },
+    "job_sha256": {
+      "spec.json": "48bb609249c7e9a8751bc4be3b9a51b1fca5af5b76e64b39d5c3c5cde369022a",
+      "state.json": "daef16f30e1cd912ab72e191a3942722be5cf5031db029f999cf571d89ab9d72",
+      "runner.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output.log": "5ee1a48a22edb750aa64fc60faa495c67bd503e130cc28cebf333bad54ddd9a8",
+      "launch.json": "dc04f2e9a1f7d399987d2e9ee4f6a48221db8ab858c0833c7b7b8accc8ca75b6",
+      "package/native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+      "package/transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+      "package/motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+      "package/oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+      "package/job_runner.py": "07c26a06723d97c218eb6d6243406bbb6512355588031a079f156e624818d8a8"
+    },
+    "actual_source_sha256": {
+      "oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+      "motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+      "job_runner.py": "07c26a06723d97c218eb6d6243406bbb6512355588031a079f156e624818d8a8",
+      "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+      "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0"
+    },
+    "sparse_crosscheck_manifest_sha256": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe"
+  },
+  "samples": 16,
+  "scenes": 8,
+  "runner_seconds": 86.18660067000019,
+  "probe_seconds": 84.72706301000017,
+  "all_five_horizon_GT_row_sums_identical": true,
+  "all_t0_histograms_identical": true,
+  "all_7conditions_5h_hist_and_iou_exact": true,
+  "raw_track_horizon_centers_checked": 1694,
+  "oracle_support_checked_against_independent_sparse_labels": true,
+  "cv_history_support_counts_recomputed": true,
+  "speed_exactly_half_count": 0,
+  "scores": {
+    "O": {
+      "iou_by_horizon_percent": [
+        21.509225687945303,
+        22.224551201866188,
+        22.200134601428882,
+        21.201453350280527,
+        20.248254885227247
+      ],
+      "future_mean_iou_percent": 21.468598509700712,
+      "future_delta_vs_O_pp": 0.0,
+      "future_pooled_TP": 347893,
+      "future_pooled_FP": 1031994,
+      "future_pooled_FN": 236364,
+      "future_pooled_FP_delta_vs_O": 0,
+      "future_pooled_FN_delta_vs_O": 0,
+      "future_FP_delta_by_horizon_vs_O": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "future_FN_delta_by_horizon_vs_O": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "persist_O0": {
+      "iou_by_horizon_percent": [
+        21.509225687945303,
+        16.802216182312357,
+        14.899816199197211,
+        14.19682406072122,
+        13.769137522613095
+      ],
+      "future_mean_iou_percent": 14.91699849121097,
+      "future_delta_vs_O_pp": -6.551600018489742,
+      "future_pooled_TP": 288391,
+      "future_pooled_FP": 1349949,
+      "future_pooled_FN": 295866,
+      "future_pooled_FP_delta_vs_O": 317955,
+      "future_pooled_FN_delta_vs_O": 59502,
+      "future_FP_delta_by_horizon_vs_O": [
+        34615,
+        67779,
+        95262,
+        120299
+      ],
+      "future_FN_delta_by_horizon_vs_O": [
+        18242,
+        20382,
+        13755,
+        7123
+      ]
+    },
+    "static_splat_O0": {
+      "iou_by_horizon_percent": [
+        21.509225687945303,
+        16.68082267834503,
+        14.776455504447616,
+        14.090046773296699,
+        13.633370370747919
+      ],
+      "future_mean_iou_percent": 14.795173831709317,
+      "future_delta_vs_O_pp": -6.673424677991395,
+      "future_pooled_TP": 288693,
+      "future_pooled_FP": 1367935,
+      "future_pooled_FN": 295564,
+      "future_pooled_FP_delta_vs_O": 335941,
+      "future_pooled_FN_delta_vs_O": 59200,
+      "future_FP_delta_by_horizon_vs_O": [
+        39031,
+        72284,
+        99723,
+        124903
+      ],
+      "future_FN_delta_by_horizon_vs_O": [
+        18086,
+        20315,
+        13644,
+        7155
+      ]
+    },
+    "oracle_O0": {
+      "iou_by_horizon_percent": [
+        21.509225687945303,
+        20.3627973866589,
+        19.80131498977844,
+        19.198916193796986,
+        19.22209519386215
+      ],
+      "future_mean_iou_percent": 19.64628094102412,
+      "future_delta_vs_O_pp": -1.822317568676592,
+      "future_pooled_TP": 354445,
+      "future_pooled_FP": 1219693,
+      "future_pooled_FN": 229812,
+      "future_pooled_FP_delta_vs_O": 187699,
+      "future_pooled_FN_delta_vs_O": -6552,
+      "future_FP_delta_by_horizon_vs_O": [
+        9681,
+        34946,
+        60820,
+        82252
+      ],
+      "future_FN_delta_by_horizon_vs_O": [
+        6289,
+        3096,
+        -3878,
+        -12059
+      ]
+    },
+    "cv_O0": {
+      "iou_by_horizon_percent": [
+        21.509225687945303,
+        20.073917122958797,
+        18.52602636567821,
+        16.955001390400326,
+        15.555091538282511
+      ],
+      "future_mean_iou_percent": 17.777509104329962,
+      "future_delta_vs_O_pp": -3.69108940537075,
+      "future_pooled_TP": 324717,
+      "future_pooled_FP": 1243027,
+      "future_pooled_FN": 259540,
+      "future_pooled_FP_delta_vs_O": 211033,
+      "future_pooled_FN_delta_vs_O": 23176,
+      "future_FP_delta_by_horizon_vs_O": [
+        10337,
+        39277,
+        67258,
+        94161
+      ],
+      "future_FN_delta_by_horizon_vs_O": [
+        7467,
+        8064,
+        5134,
+        2511
+      ]
+    },
+    "blend_oracle_half": {
+      "iou_by_horizon_percent": [
+        21.509225687945303,
+        22.677845434124787,
+        22.66313401495189,
+        21.827272362373815,
+        21.431159607839078
+      ],
+      "future_mean_iou_percent": 22.14985285482239,
+      "future_delta_vs_O_pp": 0.6812543451216797,
+      "future_pooled_TP": 361544,
+      "future_pooled_FP": 1046464,
+      "future_pooled_FN": 222713,
+      "future_pooled_FP_delta_vs_O": 14470,
+      "future_pooled_FN_delta_vs_O": -13651,
+      "future_FP_delta_by_horizon_vs_O": [
+        -12749,
+        -2732,
+        9171,
+        20780
+      ],
+      "future_FN_delta_by_horizon_vs_O": [
+        880,
+        -1314,
+        -4439,
+        -8778
+      ]
+    },
+    "blend_static_half": {
+      "iou_by_horizon_percent": [
+        21.509225687945303,
+        20.44470559833469,
+        18.26194351143276,
+        16.84031519081037,
+        16.205772623489047
+      ],
+      "future_mean_iou_percent": 17.93818423101672,
+      "future_delta_vs_O_pp": -3.530414278683992,
+      "future_pooled_TP": 308837,
+      "future_pooled_FP": 1134938,
+      "future_pooled_FN": 275420,
+      "future_pooled_FP_delta_vs_O": 102944,
+      "future_pooled_FN_delta_vs_O": 39056,
+      "future_FP_delta_by_horizon_vs_O": [
+        -4608,
+        15656,
+        37471,
+        54425
+      ],
+      "future_FN_delta_by_horizon_vs_O": [
+        8839,
+        13584,
+        10674,
+        5959
+      ]
+    }
+  },
+  "support_by_horizon": {
+    "oracle": [
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27825.133666992188,
+        "labeled_source_mass": 18008.827209472656,
+        "valid_source_voxels": 40622,
+        "collision_mass_above_one": 421.43867588043213,
+        "clipped_low_voxels": 8244153,
+        "clipped_high_voxels": 6088,
+        "source_annotated_voxel_fraction": 0.0039669921875,
+        "source_probability_mass_in_annotated_fraction": 0.6456396591416868,
+        "boundary_probability_mass_loss": 67.86663818359375,
+        "boundary_mass_loss_fraction": 0.002433106422438196,
+        "collision_excess_fraction_source": 0.015109119537858774
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27790.52569580078,
+        "labeled_source_mass": 17901.733825683594,
+        "valid_source_voxels": 39975,
+        "collision_mass_above_one": 334.42424070835114,
+        "clipped_low_voxels": 8243842,
+        "clipped_high_voxels": 5837,
+        "source_annotated_voxel_fraction": 0.00390380859375,
+        "source_probability_mass_in_annotated_fraction": 0.6418002233471376,
+        "boundary_probability_mass_loss": 102.474609375,
+        "boundary_mass_loss_fraction": 0.003673846780691605,
+        "collision_excess_fraction_source": 0.011989539922182409
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27790.551971435547,
+        "labeled_source_mass": 17731.69268798828,
+        "valid_source_voxels": 38639,
+        "collision_mass_above_one": 374.0431478023529,
+        "clipped_low_voxels": 8243743,
+        "clipped_high_voxels": 5880,
+        "source_annotated_voxel_fraction": 0.00377333984375,
+        "source_probability_mass_in_annotated_fraction": 0.6357040294692865,
+        "boundary_probability_mass_loss": 102.44833374023438,
+        "boundary_mass_loss_fraction": 0.003672904765330111,
+        "collision_excess_fraction_source": 0.013409928788942295
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27782.02310180664,
+        "labeled_source_mass": 17666.673217773438,
+        "valid_source_voxels": 39460,
+        "collision_mass_above_one": 431.768172621727,
+        "clipped_low_voxels": 8244252,
+        "clipped_high_voxels": 5841,
+        "source_annotated_voxel_fraction": 0.003853515625,
+        "source_probability_mass_in_annotated_fraction": 0.6333729976869945,
+        "boundary_probability_mass_loss": 110.97720336914062,
+        "boundary_mass_loss_fraction": 0.003978675730647301,
+        "collision_excess_fraction_source": 0.015479445305193962
+      }
+    ],
+    "cv": [
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27833.22216796875,
+        "labeled_source_mass": 17977.08087158203,
+        "valid_source_voxels": 40490,
+        "collision_mass_above_one": 406.8809895515442,
+        "clipped_low_voxels": 8244171,
+        "clipped_high_voxels": 6286,
+        "source_annotated_voxel_fraction": 0.0039541015625,
+        "source_probability_mass_in_annotated_fraction": 0.6445015120243709,
+        "boundary_probability_mass_loss": 59.77813720703125,
+        "boundary_mass_loss_fraction": 0.002143123240705623,
+        "collision_excess_fraction_source": 0.014587207725948506
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27799.9560546875,
+        "labeled_source_mass": 17977.08087158203,
+        "valid_source_voxels": 40490,
+        "collision_mass_above_one": 294.633621096611,
+        "clipped_low_voxels": 8243925,
+        "clipped_high_voxels": 6124,
+        "source_annotated_voxel_fraction": 0.0039541015625,
+        "source_probability_mass_in_annotated_fraction": 0.6445015120243709,
+        "boundary_probability_mass_loss": 93.04425048828125,
+        "boundary_mass_loss_fraction": 0.003335756263947558,
+        "collision_excess_fraction_source": 0.01056299494041662
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27756.99884033203,
+        "labeled_source_mass": 17977.08087158203,
+        "valid_source_voxels": 40490,
+        "collision_mass_above_one": 338.9961314201355,
+        "clipped_low_voxels": 8244200,
+        "clipped_high_voxels": 6141,
+        "source_annotated_voxel_fraction": 0.0039541015625,
+        "source_probability_mass_in_annotated_fraction": 0.6445015120243709,
+        "boundary_probability_mass_loss": 136.00146484375,
+        "boundary_mass_loss_fraction": 0.004875827747311707,
+        "collision_excess_fraction_source": 0.012153448094905442
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27739.137649536133,
+        "labeled_source_mass": 17977.08087158203,
+        "valid_source_voxels": 40490,
+        "collision_mass_above_one": 397.1025924682617,
+        "clipped_low_voxels": 8244360,
+        "clipped_high_voxels": 6130,
+        "source_annotated_voxel_fraction": 0.0039541015625,
+        "source_probability_mass_in_annotated_fraction": 0.6445015120243709,
+        "boundary_probability_mass_loss": 153.86265563964844,
+        "boundary_mass_loss_fraction": 0.005516174450802911,
+        "collision_excess_fraction_source": 0.014236639591423801
+      }
+    ],
+    "static": [
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27893.00030517578,
+        "labeled_source_mass": 27893.00030517578,
+        "valid_source_voxels": 10240000,
+        "collision_mass_above_one": 0.0,
+        "clipped_low_voxels": 8250368,
+        "clipped_high_voxels": 9649,
+        "source_annotated_voxel_fraction": 1.0,
+        "source_probability_mass_in_annotated_fraction": 1.0,
+        "boundary_probability_mass_loss": 0.0,
+        "boundary_mass_loss_fraction": 0.0,
+        "collision_excess_fraction_source": 0.0
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27893.00030517578,
+        "labeled_source_mass": 27893.00030517578,
+        "valid_source_voxels": 10240000,
+        "collision_mass_above_one": 0.0,
+        "clipped_low_voxels": 8250368,
+        "clipped_high_voxels": 9649,
+        "source_annotated_voxel_fraction": 1.0,
+        "source_probability_mass_in_annotated_fraction": 1.0,
+        "boundary_probability_mass_loss": 0.0,
+        "boundary_mass_loss_fraction": 0.0,
+        "collision_excess_fraction_source": 0.0
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27893.00030517578,
+        "labeled_source_mass": 27893.00030517578,
+        "valid_source_voxels": 10240000,
+        "collision_mass_above_one": 0.0,
+        "clipped_low_voxels": 8250368,
+        "clipped_high_voxels": 9649,
+        "source_annotated_voxel_fraction": 1.0,
+        "source_probability_mass_in_annotated_fraction": 1.0,
+        "boundary_probability_mass_loss": 0.0,
+        "boundary_mass_loss_fraction": 0.0,
+        "collision_excess_fraction_source": 0.0
+      },
+      {
+        "source_probability_mass": 27893.00030517578,
+        "destination_mass": 27893.00030517578,
+        "labeled_source_mass": 27893.00030517578,
+        "valid_source_voxels": 10240000,
+        "collision_mass_above_one": 0.0,
+        "clipped_low_voxels": 8250368,
+        "clipped_high_voxels": 9649,
+        "source_annotated_voxel_fraction": 1.0,
+        "source_probability_mass_in_annotated_fraction": 1.0,
+        "boundary_probability_mass_loss": 0.0,
+        "boundary_mass_loss_fraction": 0.0,
+        "collision_excess_fraction_source": 0.0
+      }
+    ]
+  },
+  "scene_effects_descriptive_only": [
+    {
+      "scene_token": "1ad821fcfc9f4c24bb879ec7d5ba0ec1",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 23.880647305017813,
+        "blend_oracle_half": 27.3599205416996,
+        "blend_static_half": 7.0760469643024235
+      },
+      "blend_oracle_half_minus_O_pp": 3.479273236681788
+    },
+    {
+      "scene_token": "1c76efe7d0b048bc815c0445eeaa76ab",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 17.583537941752653,
+        "blend_oracle_half": 19.47891742670562,
+        "blend_static_half": 14.491358491083599
+      },
+      "blend_oracle_half_minus_O_pp": 1.8953794849529686
+    },
+    {
+      "scene_token": "212b65c558254e2084489bf76e371e1a",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 17.97139176746604,
+        "blend_oracle_half": 17.93918831361429,
+        "blend_static_half": 17.984702914331738
+      },
+      "blend_oracle_half_minus_O_pp": -0.03220345385174994
+    },
+    {
+      "scene_token": "2cc8ffb250c44b42a888e9185810e04c",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 27.29459184022911,
+        "blend_oracle_half": 27.360428298854828,
+        "blend_static_half": 18.60699029800371
+      },
+      "blend_oracle_half_minus_O_pp": 0.06583645862571785
+    },
+    {
+      "scene_token": "634a8c5835e44aec912604a9a1972a5d",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 23.989089337821927,
+        "blend_oracle_half": 23.178727034048627,
+        "blend_static_half": 21.984769177680946
+      },
+      "blend_oracle_half_minus_O_pp": -0.8103623037732994
+    },
+    {
+      "scene_token": "65cfdc10a42e499ea704c617e077afe0",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 22.372500870524334,
+        "blend_oracle_half": 22.796955728035964,
+        "blend_static_half": 22.743436267789065
+      },
+      "blend_oracle_half_minus_O_pp": 0.4244548575116305
+    },
+    {
+      "scene_token": "d2db9f5df62c4d338d3bed43f616b954",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 22.31363004806231,
+        "blend_oracle_half": 24.028233600281702,
+        "blend_static_half": 15.973160104649843
+      },
+      "blend_oracle_half_minus_O_pp": 1.7146035522193905
+    },
+    {
+      "scene_token": "e12dee10fe2545e4ab88459ed4268bc6",
+      "anchors": 2,
+      "future_mean_iou_percent": {
+        "O": 19.673804107520027,
+        "blend_oracle_half": 20.670900751218703,
+        "blend_static_half": 11.809921477544382
+      },
+      "blend_oracle_half_minus_O_pp": 0.9970966436986757
+    }
+  ],
+  "scene_effects_positive": 6,
+  "inference_or_training_performed": false,
+  "model_inputs_or_weights_reread": false,
+  "GT_prediction_voxel_arrays_reread": false,
+  "limitations": [
+    "Hist row sums certify consistent counts, not standalone voxel-identity proof; same loaded GT path is supported by frozen producer code.",
+    "Probability masses are independently summed from authenticated records; original probability tensors were not saved/read.",
+    "No confidence intervals or significance tests;16 exposed train anchors in8 scenes.",
+    "Oracle is a privileged intervention, not a deployable candidate or universal mathematical performance upper bound."
+  ]
+}

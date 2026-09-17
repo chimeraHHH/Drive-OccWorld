@@ -1,0 +1,155 @@
+{
+  "schema": "common-motion-metric-source-audit-v1",
+  "retrieved_date": "2026-09-15",
+  "public_sources_only": true,
+  "no_skill": true,
+  "no_remote_server_or_gpu_in_this_research_task": true,
+  "papers": [
+    {
+      "title": "Occupancy Flow Fields for Motion Forecasting in Autonomous Driving",
+      "year": 2022,
+      "venue": "IEEE Robotics and Automation Letters",
+      "paper_url": "https://arxiv.org/abs/2203.03875",
+      "paper_read": "Main text and metric definitions; official metric implementation read in full",
+      "repository": "https://github.com/waymo-research/waymo-open-dataset",
+      "commit": "99a4cb3ff07e2fe06c2ce73da001f850f628e45a",
+      "commit_date": "2025-04-29",
+      "license_scope": "Apache-2.0 header in occupancy_flow_metrics.py; dataset license not inferred",
+      "code_files": [
+        "src/waymo_open_dataset/utils/occupancy_flow_metrics.py",
+        "src/waymo_open_dataset/protos/occupancy_flow_metrics.proto"
+      ],
+      "verified_facts": [
+        "Separate observed and occluded occupancy scores",
+        "PR-AUC uses 100 thresholds",
+        "Flow EPE masks exactly zero GT vectors",
+        "Flow-warped score requires predicted flow and GT origin occupancy",
+        "Pinned _flow_warp raises NotImplementedError because tensorflow-graphics dependency was deprecated"
+      ],
+      "research_inference": "No native binary-only EPE for O; preserve occupancy domain instead of borrowing the flow validity mask",
+      "code_urls": [
+        "https://github.com/waymo-research/waymo-open-dataset/blob/99a4cb3ff07e2fe06c2ce73da001f850f628e45a/src/waymo_open_dataset/utils/occupancy_flow_metrics.py",
+        "https://github.com/waymo-research/waymo-open-dataset/blob/99a4cb3ff07e2fe06c2ce73da001f850f628e45a/src/waymo_open_dataset/protos/occupancy_flow_metrics.proto"
+      ]
+    },
+    {
+      "title": "Cam4DOcc: Benchmark for Camera-Only 4D Occupancy Forecasting in Autonomous Driving Applications",
+      "year": 2024,
+      "venue": "CVPR",
+      "paper_url": "https://arxiv.org/html/2311.17663v3",
+      "paper_read": "Sections III-A/B/C and flow appendix; metric utility code",
+      "repository": "https://github.com/haomo-ai/Cam4DOcc",
+      "commit": "542f14a9d9e142d9faf9044df47c8488a7c3166a",
+      "commit_date": "2024-05-13",
+      "license_scope": "Repository MIT license",
+      "code_files": [
+        "projects/occ_plugin/utils/metric_util.py"
+      ],
+      "verified_facts": [
+        "GMO denotes movable semantic categories, not actual moving state",
+        "Future IoU and optional temporal weighting",
+        "Label preprocessing includes visibility/newborn conditions and missing-frame motion handling",
+        "Backward centripetal flow needs instance information and is not same physical point motion"
+      ],
+      "research_inference": "Use geometry IoU without importing their data filtering as a posthoc change to the current evaluator",
+      "code_urls": [
+        "https://github.com/haomo-ai/Cam4DOcc/blob/542f14a9d9e142d9faf9044df47c8488a7c3166a/projects/occ_plugin/utils/metric_util.py"
+      ]
+    },
+    {
+      "title": "OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving",
+      "year": 2024,
+      "venue": "ECCV",
+      "paper_url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/02024.pdf",
+      "paper_read": "Paper experiment metrics section and official multi_step_MeanIou plus separate planning evaluator",
+      "repository": "https://github.com/wzzheng/OccWorld",
+      "commit": "1ee7f77ecc4c984a4f7f6411d95c2e6e73806b6e",
+      "commit_date": "2024-04-12",
+      "license_scope": "Repository Apache-2.0 license",
+      "code_files": [
+        "utils/metric_util.py",
+        "eval_metric_stp3.py"
+      ],
+      "verified_facts": [
+        "Semantic and geometric IoU aggregated by horizon",
+        "Per-horizon TP, GT count and prediction count after ignore-label filtering",
+        "Planning L2/collision evaluates ego trajectory rather than other-object scene flow"
+      ],
+      "research_inference": "Temporal averaging of occupancy IoU does not identify temporal correspondence",
+      "code_urls": [
+        "https://github.com/wzzheng/OccWorld/blob/1ee7f77ecc4c984a4f7f6411d95c2e6e73806b6e/utils/metric_util.py",
+        "https://github.com/wzzheng/OccWorld/blob/1ee7f77ecc4c984a4f7f6411d95c2e6e73806b6e/eval_metric_stp3.py"
+      ]
+    },
+    {
+      "title": "UniOcc: A Unified Benchmark for Occupancy Forecasting and Prediction in Autonomous Driving",
+      "year": 2025,
+      "venue": "ICCV",
+      "paper_url": "https://arxiv.org/html/2503.24381v2",
+      "paper_read": "Sections 3.4/3.5, public uniocc_eval.py and uniocc_track.py interfaces; not the 2023 same-name occupancy model",
+      "repository": "https://github.com/tasl-lab/UniOcc",
+      "commit": "f627c020149e266947cd40cd1b1aac7d95ab841f",
+      "commit_date": "2025-09-06",
+      "license_scope": "Repository MIT license",
+      "code_files": [
+        "uniocc_eval.py",
+        "uniocc_track.py"
+      ],
+      "verified_facts": [
+        "Shape plausibility, temporal shape consistency and static consistency complement IoU",
+        "Public temporal tracker interface takes flow",
+        "Shape evaluation removes centroid and PCA rotation",
+        "Public reference temporal loop tests len on items() tuples, skipping those blocks",
+        "Static consistency evaluates overlapping transformed FOV"
+      ],
+      "research_inference": "Shape consistency can remain high for wrong positions; current public reference is not an executable, flow-free physical-displacement benchmark",
+      "unknowns": [
+        "No claim that the published paper used the exact defective public example; author clarification needed before reproducing it"
+      ],
+      "code_urls": [
+        "https://github.com/tasl-lab/UniOcc/blob/f627c020149e266947cd40cd1b1aac7d95ab841f/uniocc_eval.py",
+        "https://github.com/tasl-lab/UniOcc/blob/f627c020149e266947cd40cd1b1aac7d95ab841f/uniocc_track.py"
+      ]
+    },
+    {
+      "title": "Point Cloud Forecasting as a Proxy for 4D Occupancy Forecasting",
+      "year": 2023,
+      "venue": "CVPR",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Khurana_Point_Cloud_Forecasting_as_a_Proxy_for_4D_Occupancy_Forecasting_CVPR_2023_paper.pdf",
+      "paper_read": "Paper section 4 equations and section 5.2, author evaluation.py and generate_query_rays.py",
+      "repository": "https://github.com/tarashakhurana/4d-occ-forecasting",
+      "commit": "e1ea9434113d303986684395a961aaacac90d470",
+      "commit_date": "2024-04-11",
+      "license_scope": "Repository MIT license",
+      "code_files": [
+        "cvpr23-evalkit/evaluate.py",
+        "cvpr23-evalkit/generate_query_rays.py"
+      ],
+      "verified_facts": [
+        "Queries provide future ray origin and direction; prediction provides depth",
+        "Depth L1/AbsRel and symmetric nearest-neighbor point-cloud distance",
+        "Near-field ROI [-70,-70,-4.5,70,70,4.5] and either empty set returns 0 in released evaluator",
+        "Query generation uses every fifth ray, drop_last=True, and only 3s loop despite two available loaders"
+      ],
+      "research_inference": "Depth and Chamfer are future geometry, not correspondence; binary GMO cannot supply full physical first-return occupancy",
+      "code_urls": [
+        "https://github.com/tarashakhurana/4d-occ-forecasting/blob/e1ea9434113d303986684395a961aaacac90d470/cvpr23-evalkit/evaluate.py",
+        "https://github.com/tarashakhurana/4d-occ-forecasting/blob/e1ea9434113d303986684395a961aaacac90d470/cvpr23-evalkit/generate_query_rays.py"
+      ]
+    }
+  ],
+  "local_evidence": {
+    "common_output_readout_probe_v1.py": "4f134c29bff2ef3d97e0c486150595f3435a9fb6b0663551bf4e982a063c77c4",
+    "server_results/probes/common_output_readout_train16_v1/records.jsonl": "1bbe6cee3cbd99bf3e2418bdfb237d5c5cab32c8a636a6e28dfcbb3f0a58a995",
+    "server_results/probes/common_output_readout_train16_v1/summary.json": "75768d2b201d33860f23159ef91aa324635bd205ad192d68145ad781622c6233",
+    "server_results/probes/common_output_readout_train16_v1/complete.json": "080db671bc4d7c6f475cd2448cc5a038916587cfdecd56037d34961d67a1c9df",
+    "common_motion_evaluation_reconsideration_v1_qa.json": "7108ed38364ab25f6fbda944da1ed84771cf388a145c5562e1892030de3df7d4",
+    "train_motion_distribution_v1.md": "fc51526bf4bb32486ba883f4f7a8f2e9f6519a1b02c9a7a73af5e8f25c8c93f8"
+  },
+  "read_boundaries": [
+    "Official code was read, not installed or executed as a benchmark",
+    "One later public-source utility fetch timed out; no additional claim based on the missing read",
+    "Repository version and software license do not authorize unrestricted use of the associated dataset",
+    "No quantitative candidate result was inferred from literature"
+  ]
+}

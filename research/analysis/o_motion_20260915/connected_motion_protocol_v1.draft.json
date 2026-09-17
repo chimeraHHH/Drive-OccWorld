@@ -1,0 +1,91 @@
+{
+  "schema": "connected-motion-training-v1",
+  "status": "REVIEW_REQUIRED",
+  "training": {
+    "seed": 11,
+    "train_samples": 512,
+    "development_samples": 200,
+    "passes": 4,
+    "accumulate": 4,
+    "updates": 512,
+    "motion_parameters": 467904,
+    "gate_parameters": 97,
+    "motion_lr": 0.0001,
+    "gate_lr": 0.001,
+    "motion_grad_clip": 10.0,
+    "gate_grad_clip": 35.0,
+    "warmup_updates": 25,
+    "final_lr_ratio": 0.1,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "amsgrad": false,
+    "physical_loss_coefficient": 1.0,
+    "occupancy_loss_coefficient": 1.0,
+    "smooth_l1_beta_m": 0.5,
+    "lr_schedule": "gate=source.schedule_lr(u); motion=gate/10; u=0..511",
+    "order": "continuous_numpy_RandomState11_permutation_each_pass",
+    "physical_loss": "original point_xyz_mean/object_mean/present_group_mean/valid_horizon_mean",
+    "occupancy_loss": "original coarse twelve computed; select_objective O returns original CE+Lovasz six",
+    "scope": "independent motion and gate; separate AdamW moments and clip groups; frozen O",
+    "transport": "J: d; D: d.detach(); identical source O current argmax and probability",
+    "initialization": "same authenticated pretrained motion; same new seed11 gate; no A/Z gate reuse",
+    "checkpoint": "fixed final512; no resume, best or initial-development evaluation"
+  },
+  "sources_sha256": {
+    "train_connected_motion_v1.py": null,
+    "train_supported_fusion_v2.py": null,
+    "supported_motion_fusion.py": null,
+    "transport_ops.py": null,
+    "train_source_motion_v1.py": null,
+    "motion_prediction_head.py": null,
+    "learned_transport_probe_v1.py": null,
+    "native_state_cache.py": null,
+    "oracle_transport_probe.py": null,
+    "objective_supervision_adapters.py": null,
+    "joint_native_evaluation.py": null
+  },
+  "numerical_policy": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": true,
+    "cudnn_benchmark": false
+  },
+  "motion": {
+    "protocol_sha256": "96713467ddac9f048691855f2ef5ecdd2377129a5f37189b88c33346aec63120",
+    "complete_sha256": "53b2409376d522369e15feec1d536797f08fd04250cde33bd29caceeddfc2fce",
+    "checkpoint_sha256": "449e37a18136f51fe3716f9cd0333a3a3888a5d4d6747c01b982c2dd0c9d2d84",
+    "head_state_sha256": "38d5080f0edeedec21893852cc44ffc68a8e4e110f7cab5f262a3c429b9ca8fa"
+  },
+  "cache_index_sha256": {
+    "train": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+    "development": "fd42d2e511d754755fa5e2c06527077351869f06e868ecb8acb4404eadaa26c3"
+  },
+  "labels": {
+    "manifest_sha256": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe",
+    "complete_sha256": "3d14a03cd61761a1ebc26313463dbff06854907c19c49057667a0ffd257e05bd"
+  },
+  "o_development_records_sha256": "3f426891f6811a595542a1e9694783521ae89cf18d6385896012e5f52a8e9b9a",
+  "engineering": {
+    "independent_forward_rtol": 1e-05,
+    "independent_forward_atol": 1e-06,
+    "gradient_rtol": 1e-05,
+    "gradient_atol": 1e-07,
+    "exact_shared_value_VJP": true,
+    "first_fixed_train_anchor_only": true
+  },
+  "resources": {
+    "preflight": {
+      "max_seconds": 600,
+      "max_allocated_gib": 32
+    },
+    "train": {
+      "max_seconds": 7200,
+      "max_allocated_gib": 32
+    }
+  }
+}

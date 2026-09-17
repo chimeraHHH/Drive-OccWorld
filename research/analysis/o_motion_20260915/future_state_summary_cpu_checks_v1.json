@@ -1,0 +1,21 @@
+{
+  "scope": "CPU adaptation checks on previously completed real R/R0 and P/J/D records; no K/B performance data, relabeling, model execution, or synthetic result files",
+  "common_source_sha256": "23f6fc0a6d7a9c63a1e77f90ca94a2aedc72b68b82b201df4f34c6d3f3123e8a",
+  "physical_source_sha256": "920f4f96e0bd5df247b3d096bdf1709d80fed593622b70373093ea1160db2de3",
+  "python310_ast_and_cli_help": "PASS",
+  "actual_R_R0_count_value_all_paired_interval_math": "EXACTLY_EQUAL_TO_EXISTING_POOLED_RESULT",
+  "actual_R_R0_records_sha256": "0ff5f0475be12d96b8cac334a2b4f5d5ca4d135a172584a87cba110acf8e7896",
+  "actual_R_R0_pooled_sha256": "4b755b15d2b98f19047d44e71201f58ef3ff5be09054f0c39ad3758c1752a60a",
+  "old_model_records_rejected_by_public_K_B_contract": true,
+  "actual_P_J_D_all_group_mean_median_p90_and_paired_CI_math": "EXACTLY_EQUAL_TO_EXISTING_POOLED_RESULT",
+  "actual_P_J_D_objects_sha256": "b73499b8e4ce1bd0de6ffc3ff6001d3a58ab9f33483c8bfb8f7ed68e6f88d0ea",
+  "actual_P_J_D_pooled_sha256": "b0dd6508154b59ef947b446ddc86dbd3e996a38caf250927d5b51acebc56e485",
+  "physical_and_prior_bootstrap_weights_sha_equal": true,
+  "actual_D_support_matches_frozen_sparse_manifest": true,
+  "D_valid_objects_by_horizon": [4189, 4076, 3960, 3849],
+  "D_valid_points_by_horizon": [652710, 642680, 632865, 621434],
+  "formal_trainer_record_field_names_read_and_matched": true,
+  "K_B_actual_result_run_performed": false,
+  "GPU_used": false,
+  "torch_imported": false
+}

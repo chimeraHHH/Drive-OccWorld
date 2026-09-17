@@ -1,0 +1,161 @@
+{
+  "schema": "common-motion-reconsideration-QA-v1",
+  "scope": "Posthoc descriptive CPU reaggregation of fixed first16 training anchors; 8 scenes; not candidate comparison or population inference",
+  "records_file": "analysis/o_motion_20260915/server_results/probes/common_output_readout_train16_v1/records.jsonl",
+  "records_sha256": "1bbe6cee3cbd99bf3e2418bdfb237d5c5cab32c8a636a6e28dfcbb3f0a58a995",
+  "samples": 16,
+  "scenes": 8,
+  "horizons": [
+    {
+      "index": 0,
+      "seconds": 0.0,
+      "foreground_voxels": 147406,
+      "unique_voxels": 141003,
+      "unique_fraction": 0.9565621480808109,
+      "unknown_voxels": 6380,
+      "overlap_voxels": 23,
+      "GT_components": 1029,
+      "O_components": 257,
+      "GT_median_component_area_cells": 3,
+      "GT_singleton_components": 361,
+      "active_anchor_instance_occurrences": 446,
+      "fragmented_anchor_instance_occurrences": 153,
+      "complete_pure_anchor_instance_occurrences": 26
+    },
+    {
+      "index": 1,
+      "seconds": 0.5,
+      "foreground_voxels": 149080,
+      "unique_voxels": 140962,
+      "unique_fraction": 0.9455460155621143,
+      "unknown_voxels": 8099,
+      "overlap_voxels": 19,
+      "GT_components": 1058,
+      "O_components": 211,
+      "GT_median_component_area_cells": 3.0,
+      "GT_singleton_components": 384,
+      "active_anchor_instance_occurrences": 453,
+      "fragmented_anchor_instance_occurrences": 146,
+      "complete_pure_anchor_instance_occurrences": 21
+    },
+    {
+      "index": 2,
+      "seconds": 1.0,
+      "foreground_voxels": 148033,
+      "unique_voxels": 139393,
+      "unique_fraction": 0.9416346355204582,
+      "unknown_voxels": 8604,
+      "overlap_voxels": 36,
+      "GT_components": 1068,
+      "O_components": 177,
+      "GT_median_component_area_cells": 3.0,
+      "GT_singleton_components": 402,
+      "active_anchor_instance_occurrences": 448,
+      "fragmented_anchor_instance_occurrences": 150,
+      "complete_pure_anchor_instance_occurrences": 8
+    },
+    {
+      "index": 3,
+      "seconds": 1.5,
+      "foreground_voxels": 143935,
+      "unique_voxels": 135016,
+      "unique_fraction": 0.9380345294751103,
+      "unknown_voxels": 8762,
+      "overlap_voxels": 157,
+      "GT_components": 1067,
+      "O_components": 151,
+      "GT_median_component_area_cells": 3,
+      "GT_singleton_components": 423,
+      "active_anchor_instance_occurrences": 445,
+      "fragmented_anchor_instance_occurrences": 160,
+      "complete_pure_anchor_instance_occurrences": 13
+    },
+    {
+      "index": 4,
+      "seconds": 2.0,
+      "foreground_voxels": 143209,
+      "unique_voxels": 134474,
+      "unique_fraction": 0.9390052301182188,
+      "unknown_voxels": 8389,
+      "overlap_voxels": 346,
+      "GT_components": 1174,
+      "O_components": 121,
+      "GT_median_component_area_cells": 2.0,
+      "GT_singleton_components": 478,
+      "active_anchor_instance_occurrences": 456,
+      "fragmented_anchor_instance_occurrences": 168,
+      "complete_pure_anchor_instance_occurrences": 20
+    }
+  ],
+  "endpoints": [
+    {
+      "index": 1,
+      "seconds": 0.5,
+      "counts": {
+        "both_present": 436,
+        "both_GT_supported": 367,
+        "single_component_associated_but_not_complete_pure": 193,
+        "no_GT_support_at_either_endpoint": 69,
+        "fragmented_with_support": 159,
+        "complete_pure": 10,
+        "overlap_without_fragmentation": 5
+      },
+      "usable_fraction": 0.022935779816513763
+    },
+    {
+      "index": 2,
+      "seconds": 1.0,
+      "counts": {
+        "both_present": 427,
+        "both_GT_supported": 359,
+        "single_component_associated_but_not_complete_pure": 191,
+        "no_GT_support_at_either_endpoint": 68,
+        "fragmented_with_support": 162,
+        "complete_pure": 3,
+        "overlap_without_fragmentation": 3
+      },
+      "usable_fraction": 0.00702576112412178
+    },
+    {
+      "index": 3,
+      "seconds": 1.5,
+      "counts": {
+        "both_present": 416,
+        "both_GT_supported": 350,
+        "fragmented_with_support": 164,
+        "no_GT_support_at_either_endpoint": 66,
+        "single_component_associated_but_not_complete_pure": 175,
+        "complete_pure": 8,
+        "overlap_without_fragmentation": 3
+      },
+      "usable_fraction": 0.019230769230769232
+    },
+    {
+      "index": 4,
+      "seconds": 2.0,
+      "counts": {
+        "both_present": 415,
+        "both_GT_supported": 349,
+        "single_component_associated_but_not_complete_pure": 170,
+        "no_GT_support_at_either_endpoint": 66,
+        "fragmented_with_support": 168,
+        "complete_pure": 8,
+        "overlap_without_fragmentation": 3
+      },
+      "usable_fraction": 0.01927710843373494
+    }
+  ],
+  "category_priority": [
+    "complete_pure",
+    "no_GT_support_at_either_endpoint",
+    "fragmented_with_support",
+    "overlap_without_fragmentation",
+    "single_component_associated_but_not_complete_pure"
+  ],
+  "limitations": [
+    "anchor-instance occurrences are not independent unique objects",
+    "high unique-voxel association is not proof of exact box/occupancy physical alignment",
+    "complete purity can fail from tiny unknown foreground; fragmentation is not the sole demonstrated cause",
+    "no predictions changed or morphology/purity threshold selected"
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "schema": "common-change-pooled-summary-v1",
+  "samples": 16,
+  "scenes": 8,
+  "scene_tokens": [
+    "1ad821fcfc9f4c24bb879ec7d5ba0ec1",
+    "1c76efe7d0b048bc815c0445eeaa76ab",
+    "212b65c558254e2084489bf76e371e1a",
+    "2cc8ffb250c44b42a888e9185810e04c",
+    "634a8c5835e44aec912604a9a1972a5d",
+    "65cfdc10a42e499ea704c617e077afe0",
+    "d2db9f5df62c4d338d3bed43f616b954",
+    "e12dee10fe2545e4ab88459ed4268bc6"
+  ],
+  "arms": [
+    "O"
+  ],
+  "pooled_counts": {
+    "O": {
+      "occupancy_5x2x2": [
+        [
+          [
+            167313766,
+            310988
+          ],
+          [
+            48809,
+            98597
+          ]
+        ],
+        [
+          [
+            167328475,
+            294605
+          ],
+          [
+            50473,
+            98607
+          ]
+        ],
+        [
+          [
+            167354631,
+            269496
+          ],
+          [
+            55341,
+            92692
+          ]
+        ],
+        [
+          [
+            167382715,
+            245510
+          ],
+          [
+            61367,
+            82568
+          ]
+        ],
+        [
+          [
+            167406568,
+            222383
+          ],
+          [
+            69183,
+            74026
+          ]
+        ]
+      ],
+      "transition_4x4x4": [
+        [
+          [
+            167186452,
+            83571,
+            104387,
+            185630
+          ],
+          [
+            24194,
+            19549,
+            2353,
+            18618
+          ],
+          [
+            20708,
+            3129,
+            16928,
+            22275
+          ],
+          [
+            20158,
+            4814,
+            3768,
+            55626
+          ]
+        ],
+        [
+          [
+            167160230,
+            99639,
+            144296,
+            147807
+          ],
+          [
+            29495,
+            24402,
+            3341,
+            15544
+          ],
+          [
+            23800,
+            3183,
+            26305,
+            18867
+          ],
+          [
+            17356,
+            4470,
+            5149,
+            48276
+          ]
+        ],
+        [
+          [
+            167161185,
+            96666,
+            165459,
+            126830
+          ],
+          [
+            33674,
+            22241,
+            4409,
+            14290
+          ],
+          [
+            26988,
+            2614,
+            29083,
+            19400
+          ],
+          [
+            15693,
+            3514,
+            7591,
+            42523
+          ]
+        ],
+        [
+          [
+            167159556,
+            94954,
+            184018,
+            107290
+          ],
+          [
+            39073,
+            20183,
+            5741,
+            13939
+          ],
+          [
+            29644,
+            2115,
+            33350,
+            18024
+          ],
+          [
+            14547,
+            2503,
+            9822,
+            37401
+          ]
+        ]
+      ],
+      "groups_4x8x3_GT_TP_FN": [
+        [
+          [
+            64623,
+            45411,
+            19212
+          ],
+          [
+            20892,
+            13668,
+            7224
+          ],
+          [
+            34269,
+            22599,
+            11670
+          ],
+          [
+            18901,
+            12484,
+            6417
+          ],
+          [
+            778,
+            10,
+            768
+          ],
+          [
+            1499,
+            423,
+            1076
+          ],
+          [
+            8099,
+            3993,
+            4106
+          ],
+          [
+            19,
+            19,
+            0
+          ]
+        ],
+        [
+          [
+            62988,
+            42378,
+            20610
+          ],
+          [
+            28383,
+            19720,
+            8663
+          ],
+          [
+            25535,
+            13536,
+            11999
+          ],
+          [
+            20465,
+            13067,
+            7398
+          ],
+          [
+            1075,
+            0,
+            1075
+          ],
+          [
+            947,
+            68,
+            879
+          ],
+          [
+            8604,
+            3890,
+            4714
+          ],
+          [
+            36,
+            33,
+            3
+          ]
+        ],
+        [
+          [
+            60015,
+            36797,
+            23218
+          ],
+          [
+            27852,
+            18569,
+            9283
+          ],
+          [
+            24086,
+            12135,
+            11951
+          ],
+          [
+            20407,
+            11443,
+            8964
+          ],
+          [
+            1734,
+            0,
+            1734
+          ],
+          [
+            922,
+            70,
+            852
+          ],
+          [
+            8762,
+            3502,
+            5260
+          ],
+          [
+            157,
+            52,
+            105
+          ]
+        ],
+        [
+          [
+            63612,
+            35873,
+            27739
+          ],
+          [
+            22274,
+            14363,
+            7911
+          ],
+          [
+            25595,
+            11579,
+            14016
+          ],
+          [
+            19204,
+            8885,
+            10319
+          ],
+          [
+            2576,
+            0,
+            2576
+          ],
+          [
+            1213,
+            440,
+            773
+          ],
+          [
+            8389,
+            2822,
+            5567
+          ],
+          [
+            346,
+            64,
+            282
+          ]
+        ]
+      ]
+    }
+  },
+  "values": {
+    "O": {
+      "future_GMO_IoU_percent": 21.468598509700712,
+      "t0_GMO_IoU_percent": 21.509225687945303,
+      "future_FP": 1031994,
+      "future_FN": 236364,
+      "h1_GMO_IoU_percent": 22.224551201866188,
+      "h2_GMO_IoU_percent": 22.200134601428882,
+      "h3_GMO_IoU_percent": 21.201453350280527,
+      "h4_GMO_IoU_percent": 20.248254885227247,
+      "future_00_background_IoU_percent": 99.72619422642556,
+      "h1_00_background_IoU_percent": 99.73831603978162,
+      "h2_00_background_IoU_percent": 99.72414642383922,
+      "h3_00_background_IoU_percent": 99.72241261740872,
+      "h4_00_background_IoU_percent": 99.71990182467265,
+      "future_01_arrival_IoU_percent": 12.476838071036454,
+      "h1_01_arrival_IoU_percent": 12.513121847556135,
+      "h2_01_arrival_IoU_percent": 13.551095660672836,
+      "h3_01_arrival_IoU_percent": 12.536638708513708,
+      "h4_01_arrival_IoU_percent": 11.306496067403142,
+      "future_10_vacating_IoU_percent": 11.15636101611527,
+      "h1_10_vacating_IoU_percent": 9.754073800908106,
+      "h2_10_vacating_IoU_percent": 11.69417758434434,
+      "h3_10_vacating_IoU_percent": 11.380818958770309,
+      "h4_10_vacating_IoU_percent": 11.796373720438323,
+      "future_11_persistent_IoU_percent": 18.380087710434836,
+      "h1_11_persistent_IoU_percent": 17.89255972388859,
+      "h2_11_persistent_IoU_percent": 18.750218472903533,
+      "h3_11_persistent_IoU_percent": 18.50105072637171,
+      "h4_11_persistent_IoU_percent": 18.376521918575513,
+      "future_speed_le_0.1_recall_percent": 63.814145334763744,
+      "h1_speed_le_0.1_recall_percent": 70.27064667378488,
+      "h2_speed_le_0.1_recall_percent": 67.2794818060583,
+      "h3_speed_le_0.1_recall_percent": 61.31300508206282,
+      "h4_speed_le_0.1_recall_percent": 56.393447777148964,
+      "future_speed_gt_0.1_le_0.5_recall_percent": 66.51347276104623,
+      "h1_speed_gt_0.1_le_0.5_recall_percent": 65.42217116599656,
+      "h2_speed_gt_0.1_le_0.5_recall_percent": 69.47820878694993,
+      "h3_speed_gt_0.1_le_0.5_recall_percent": 66.67025707310069,
+      "h4_speed_gt_0.1_le_0.5_recall_percent": 64.48325401813774,
+      "future_speed_gt_0.5_le_5_recall_percent": 53.64419061949531,
+      "h1_speed_gt_0.5_le_5_recall_percent": 65.94589862557997,
+      "h2_speed_gt_0.5_le_5_recall_percent": 53.00959467397689,
+      "h3_speed_gt_0.5_le_5_recall_percent": 50.381964626754126,
+      "h4_speed_gt_0.5_le_5_recall_percent": 45.23930455167025,
+      "future_speed_gt_5_recall_percent": 58.06004771070916,
+      "h1_speed_gt_5_recall_percent": 66.04941537484788,
+      "h2_speed_gt_5_recall_percent": 63.850476423161496,
+      "h3_speed_gt_5_recall_percent": 56.07389621208409,
+      "h4_speed_gt_5_recall_percent": 46.26640283274318,
+      "future_annotated_future_only_recall_percent": 0.3213367609254499,
+      "h1_annotated_future_only_recall_percent": 1.2853470437017995,
+      "h2_annotated_future_only_recall_percent": 0.0,
+      "h3_annotated_future_only_recall_percent": 0.0,
+      "h4_annotated_future_only_recall_percent": 0.0,
+      "future_t0_missing_with_history_recall_percent": 19.81631880479567,
+      "h1_t0_missing_with_history_recall_percent": 28.218812541694465,
+      "h2_t0_missing_with_history_recall_percent": 7.1805702217529035,
+      "h3_t0_missing_with_history_recall_percent": 7.592190889370933,
+      "h4_t0_missing_with_history_recall_percent": 36.27370156636439,
+      "future_unknown_no_current_box_recall_percent": 42.030311475711386,
+      "h1_unknown_no_current_box_recall_percent": 49.30238301024818,
+      "h2_unknown_no_current_box_recall_percent": 45.211529521152954,
+      "h3_unknown_no_current_box_recall_percent": 39.968043825610586,
+      "h4_unknown_no_current_box_recall_percent": 33.639289545833826,
+      "future_overlap_current_boxes_recall_percent": 60.821198900384125,
+      "h1_overlap_current_boxes_recall_percent": 100.0,
+      "h2_overlap_current_boxes_recall_percent": 91.66666666666666,
+      "h3_overlap_current_boxes_recall_percent": 33.12101910828025,
+      "h4_overlap_current_boxes_recall_percent": 18.497109826589593,
+      "future_speed_gt_0.5_recall_percent": 55.62187558648753,
+      "h1_speed_gt_0.5_recall_percent": 65.98269700959187,
+      "h2_speed_gt_0.5_recall_percent": 57.832608695652176,
+      "h3_speed_gt_0.5_recall_percent": 52.992605578405595,
+      "h4_speed_gt_0.5_recall_percent": 45.679591062300496
+    }
+  },
+  "comparisons": {},
+  "protocol": {
+    "primary": "four-future mean of per-horizon pooled GMO IoU; unchanged original task",
+    "secondary": "all four occupancy transitions; physical endpoint-speed-attributed positive recall with global FP/FN",
+    "pooling": "sum confusion/GT/TP/FN before ratios; never average sample ratios",
+    "speed_group_order": [
+      "speed_le_0.1",
+      "speed_gt_0.1_le_0.5",
+      "speed_gt_0.5_le_5",
+      "speed_gt_5",
+      "annotated_future_only",
+      "t0_missing_with_history",
+      "unknown_no_current_box",
+      "overlap_current_boxes"
+    ],
+    "bootstrap": {
+      "unit": "scene",
+      "preserve_all_anchors_within_scene": true,
+      "paired": true,
+      "repetitions": 10000,
+      "seed": 11,
+      "interval": "percentile95",
+      "multiplicity_adjusted": false
+    },
+    "no_training_seed_uncertainty": true,
+    "historical_development_exposure": true,
+    "no_flow_EPE_or_instance_identity_claim": true,
+    "zero_denominator": "null; no perfect empty score",
+    "no_candidate_selection": true
+  },
+  "records_sha256": "ee501673f8500700881a3e3012fe0b3a6f2c897ad8bb2858f352cff0ad66ce57",
+  "evidence_role": "fixed train16 engineering QA only; not candidate or generalization evidence"
+}

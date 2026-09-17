@@ -1,0 +1,10 @@
+{
+  "status": "PASS_MATCHED_SOURCE_QUERIES_AND_BASELINES",
+  "pairs": 96,
+  "queries": 134400,
+  "same_uv_current_depth_current_reference_point_max_difference": 0,
+  "max_repeated_Metric3D_depth_difference_m": 0.0,
+  "all_scored_population_and_frozen_baselines_identical": true,
+  "quality_masks_differ_by_method": true,
+  "quality_masks_calibrated": false
+}

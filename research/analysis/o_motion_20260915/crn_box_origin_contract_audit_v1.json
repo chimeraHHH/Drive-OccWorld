@@ -1,0 +1,134 @@
+{
+  "status": "READ_ONLY_ORIGIN_AND_COVERAGE_CONFIRMED",
+  "sources": {
+    "mmdetection3d/mmdet3d/models/dense_heads/centerpoint_head.py": {
+      "sha256": "24befa63fbc130efd7c1d969cb95309ed3f121df7a8e7b836e1740451a7760f7",
+      "actual_import_path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/mmdetection3d/mmdet3d/models/dense_heads/centerpoint_head.py",
+      "official_commit_bytes_exact": true
+    },
+    "layers/heads/bev_depth_head_det.py": {
+      "sha256": "2fe7bca860157b0b6a06c945b4eedc8efc1d3fc89fe565ee7b2a752b79c033f7",
+      "actual_import_path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/layers/heads/bev_depth_head_det.py",
+      "official_commit_bytes_exact": true
+    },
+    "models/base_bev_depth.py": {
+      "sha256": "899985dde4dea0d4f12e07ebd0a5642203cfcbcad9f9b51da4f9e65e1000109b",
+      "actual_import_path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/models/base_bev_depth.py",
+      "official_commit_bytes_exact": true
+    },
+    "exps/base_exp.py": {
+      "sha256": "5e01fd0e09253c34d7c7296ccd07052a23a875a9996cabe8fa5edba1c3d1144d",
+      "actual_import_path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/exps/base_exp.py",
+      "official_commit_bytes_exact": true
+    },
+    "mmdetection3d/mmdet3d/core/bbox/structures/base_box3d.py": {
+      "sha256": "e22904836111737f105eb98cb77c8127cf4530572ea8f216256de5c92f5f4a19",
+      "actual_import_path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/mmdetection3d/mmdet3d/core/bbox/structures/base_box3d.py",
+      "official_commit_bytes_exact": true
+    },
+    "mmdetection3d/mmdet3d/core/bbox/structures/lidar_box3d.py": {
+      "sha256": "acd9be3cb745c59e83bd9b0ae47cac1e48527fbbeeabfaae14f95181923063f0",
+      "actual_import_path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/mmdetection3d/mmdet3d/core/bbox/structures/lidar_box3d.py",
+      "official_commit_bytes_exact": true
+    },
+    "datasets/nusc_det_dataset.py": {
+      "sha256": "45651e062f2258092f18720890ff7eff77c3f71664d751e04e865e9f55927ed3",
+      "path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/datasets/nusc_det_dataset.py",
+      "local_sha256": "45651e062f2258092f18720890ff7eff77c3f71664d751e04e865e9f55927ed3",
+      "official_commit_bytes_exact": true
+    },
+    "models/camera_radar_net_det.py": {
+      "sha256": "ba8df91783f2194483d19f6c298a6223916f6f55a9a28d15e30877e466f01df5",
+      "path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/models/camera_radar_net_det.py",
+      "local_sha256": "ba8df91783f2194483d19f6c298a6223916f6f55a9a28d15e30877e466f01df5",
+      "official_commit_bytes_exact": true
+    },
+    "exps/det/CRN_r50_256x704_128x128_4key.py": {
+      "sha256": "ebde9f5ea5826b89423535c9298b0098ab6796fd797042dfc811fcfb50c8dda2",
+      "path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/exps/det/CRN_r50_256x704_128x128_4key.py",
+      "local_sha256": "ebde9f5ea5826b89423535c9298b0098ab6796fd797042dfc811fcfb50c8dda2",
+      "official_commit_bytes_exact": true
+    },
+    "mmdetection3d/mmdet3d/core/bbox/coders/centerpoint_bbox_coders.py": {
+      "sha256": "20fd2c5ad66b72f368296c1ec96f230036bd7511a5c0a8dba4a1bd4e5c6dd300",
+      "path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/mmdetection3d/mmdet3d/core/bbox/coders/centerpoint_bbox_coders.py",
+      "local_sha256": "20fd2c5ad66b72f368296c1ec96f230036bd7511a5c0a8dba4a1bd4e5c6dd300",
+      "official_commit_bytes_exact": true
+    },
+    "evaluators/det_evaluators.py": {
+      "sha256": "e027413d25302d5a236868ae6ed797a304c57ceefe132c16f77c6af2f5b2f5d3",
+      "actual_path": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN/evaluators/det_evaluators.py"
+    }
+  },
+  "official_commit": "5e9d2fa2f91c714b297e75ca666d27fc4ad0d13d",
+  "mmdet3d_version": "1.0.0rc4",
+  "head_uses_inherited_decoder": true,
+  "code_contract": {
+    "target_z": "nuScenes center in CRN ego frame",
+    "decoded_z": "same regressed center before CenterHead final conversion",
+    "stored_box_tensor_z": "center minus height/2",
+    "export_translation": "ego-to-global transformed bottom center supplied to nuScenes Box(center)",
+    "semantic_inverse": "translation + R(export_quaternion) @ [0,0,height/2]",
+    "GT_used_to_fit_correction": false,
+    "bitwise_recovery_of_pre_subtraction_center_claim": false
+  },
+  "original_scoring_changed": false,
+  "GPU_used": false,
+  "model_forward_performed": false,
+  "receipts": {
+    "receipts/crn_z_origin_runtime_v1.json": "2d9b711857e82ff1c3e88be16064a05d12b03d63f23f1d2545941c5b6fca0149",
+    "receipts/crn_z_origin_source_parity_v1.json": "f9d8f5f98e36c8339515d37817fefcf5fc62c5a85b9de908b2bea97574fdc2b8",
+    "receipts/crn_coverage_geometry_diagnostic_v1_execution.json": "bbb9d0b25840374ae14e098ab3ebcc4032fed45a9e8abd40224525aa0e4a7156",
+    "crn_coverage_geometry_dev200_v1/complete.json": "86b6a3cdf77b918e9cc5bba482b0601d11f8b54b865bba4515ac31d2b04b6e5f",
+    "crn_coverage_geometry_dev200_v1/summary.json": "54610568b5867294560f4310bdd543f6807527d2adf083bcfba92763763777d2"
+  },
+  "moving_2s": {
+    "horizon_seconds": 2.0,
+    "group": "moving",
+    "source_points": 132148,
+    "xy_points": 110057,
+    "xyz_points": 55186,
+    "xy_z_excluded_points": 54871,
+    "z_above_only_points": 54775,
+    "z_below_only_points": 96,
+    "z_mixed_points": 0,
+    "objects": 1226,
+    "xy_objects_any": 1099,
+    "xy_objects_full": 484,
+    "xy_objects_none": 127,
+    "xy_objects_partial": 615,
+    "xy_point_coverage": 0.8328313708871871,
+    "xyz_objects_any": 1061,
+    "xyz_objects_full": 7,
+    "xyz_objects_none": 165,
+    "xyz_objects_partial": 1054,
+    "xyz_point_coverage": 0.4176075309501468,
+    "z_rejected_among_xy_fraction": 0.4985689233760688,
+    "z_rejected_among_original_uncovered_fraction": 0.7129622411060004
+  },
+  "unique_all_t0_source_support": {
+    "source_points": 661476,
+    "xy_points": 519570,
+    "xyz_points": 252837,
+    "xy_z_excluded_points": 266733,
+    "z_above_only_points": 266589,
+    "z_below_only_points": 144,
+    "z_mixed_points": 0,
+    "objects": 4288,
+    "xy_objects_any": 3865,
+    "xy_objects_full": 1126,
+    "xy_objects_none": 423,
+    "xy_objects_partial": 2739,
+    "xy_point_coverage": 0.785470674673004,
+    "xyz_objects_any": 3753,
+    "xyz_objects_full": 31,
+    "xyz_objects_none": 535,
+    "xyz_objects_partial": 3722,
+    "xyz_point_coverage": 0.3822315548863451,
+    "z_rejected_among_xy_fraction": 0.5133725965702408,
+    "z_rejected_among_original_uncovered_fraction": 0.6527350546570445
+  },
+  "original_owner_and_object_support_exact": true,
+  "all_source_points_inside_original_GT": 661476,
+  "proof_scope": "Current original interpreter/PYTHONPATH import and retained original entry source; completed historical PID cannot expose historical sys.modules. No checkpoint or model was instantiated."
+}

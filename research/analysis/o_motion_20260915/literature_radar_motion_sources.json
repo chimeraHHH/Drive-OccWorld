@@ -1,0 +1,947 @@
+{
+  "schema": "o-motion-primary-literature-audit-v1",
+  "retrieved_utc": "2026-09-15T10:17:50.816335+00:00",
+  "scope": "Public primary papers and author repositories only; no server, model execution, training, or frozen project edits. Single seed11 proposals only.",
+  "papers": [
+    {
+      "id": "CRT-Fusion",
+      "title": "CRT-Fusion: Camera, Radar, Temporal Fusion Using Motion Information for 3D Object Detection",
+      "year": 2024,
+      "venue": "NeurIPS 2024",
+      "venue_evidence": "publisher",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/c49a28241640407b23bba8f2495f4bc9-Paper-Conference.pdf",
+      "official_repository": "https://github.com/mjseong0414/CRT-Fusion",
+      "official_project_url": null,
+      "commit": "2fa611a5c8944c487e6fe78adbef63b3d0237fec",
+      "commit_date": "2024-12-05T05:59:36Z",
+      "license": "Apache-2.0",
+      "read_depth": "Sections 3.1–3.3 and official motion loss/history code",
+      "inference_inputs": "past camera+radar",
+      "training_supervision": "box-derived 2D velocity and object presence",
+      "prediction_task": "3D detection; velocity used for historical feature transport",
+      "code_interface": "motion_net, fuse_history, crtfusion_head motion loss",
+      "limits": "Chained boolean indexing in public grid update needs physical phantom before reuse; detection not occupancy forecasting."
+    },
+    {
+      "id": "CRN",
+      "title": "CRN: Camera Radar Net for Accurate, Robust, Efficient 3D Perception",
+      "year": 2023,
+      "venue": "ICCV 2023",
+      "venue_evidence": "publisher",
+      "primary_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Kim_CRN_Camera_Radar_Net_for_Accurate_Robust_Efficient_3D_Perception_ICCV_2023_paper.html",
+      "official_repository": "https://github.com/youngskkim/CRN",
+      "official_project_url": null,
+      "commit": "5e9d2fa2f91c714b297e75ca666d27fc4ad0d13d",
+      "commit_date": "2023-12-07T08:01:20Z",
+      "license": "MIT",
+      "read_depth": "Paper geometry/fusion and author README/module interfaces",
+      "inference_inputs": "camera+radar history",
+      "training_supervision": "detection/segmentation task labels",
+      "prediction_task": "detection, tracking, BEV segmentation",
+      "code_interface": "rvt_lss_fpn.py; multimodal_deformable_cross_attention.py",
+      "limits": "No direct dense physical flow supervision; compiled old framework dependencies."
+    },
+    {
+      "id": "RaFlow",
+      "title": "Self-Supervised Scene Flow Estimation with 4-D Automotive Radar",
+      "year": 2022,
+      "venue": "IEEE RA-L; IROS 2022",
+      "venue_evidence": "author and institutional manuscript",
+      "primary_url": "https://arxiv.org/abs/2203.01137",
+      "official_repository": "https://github.com/Toytiny/RaFlow",
+      "official_project_url": null,
+      "commit": "c01897faeb5d1e766ba899a677b38b1282b142e4",
+      "commit_date": "2023-03-18T20:58:51Z",
+      "license": "MIT",
+      "read_depth": "Paper self-supervision and original losses/2-frame model code",
+      "inference_inputs": "two consecutive radar point clouds",
+      "training_supervision": "radial displacement; soft Chamfer; smoothness",
+      "prediction_task": "scene flow and rigid static refinement",
+      "code_interface": "models/raflow_vod.py; losses/loss.py",
+      "limits": "Radial constraint alone underdetermines tangential flow; VoD versus nuScenes domain/input difference."
+    },
+    {
+      "id": "CMFlow",
+      "title": "Hidden Gems: 4D Radar Scene Flow Learning Using Cross-Modal Supervision",
+      "year": 2023,
+      "venue": "CVPR 2023",
+      "venue_evidence": "publisher",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2023/html/Ding_Hidden_Gems_4D_Radar_Scene_Flow_Learning_Using_Cross-Modal_Supervision_CVPR_2023_paper.html",
+      "official_repository": "https://github.com/Toytiny/CMFlow",
+      "official_project_url": null,
+      "commit": "16a095a250453b4fe1363e4ec9dddd20d0d64e4f",
+      "commit_date": "2023-07-17T23:58:01Z",
+      "license": "MIT",
+      "read_depth": "Method and losses/radar_loss.py; CMFlow/CMFlow-T forward; VoD loader",
+      "inference_inputs": "two consecutive radar point clouds only at inference",
+      "training_supervision": "LiDAR tracking, odometry, optical-flow point-to-ray, radar self-supervision",
+      "prediction_task": "scene flow, static mask, ego transform",
+      "code_interface": "models/cmflow.py:171–197; cmflow_t.py:64–107; losses/radar_loss.py:100–290",
+      "limits": "Official radial interval hard-coded .1s; training pseudo static mask differs from predicted inference mask; teacher noise."
+    },
+    {
+      "id": "TARS",
+      "title": "TARS: Traffic-Aware Radar Scene Flow Estimation",
+      "year": 2025,
+      "venue": "ICCV 2025",
+      "venue_evidence": "publisher",
+      "primary_url": "https://openaccess.thecvf.com/content/ICCV2025/html/Wu_TARS_Traffic-Aware_Radar_Scene_Flow_Estimation_ICCV_2025_paper.html",
+      "official_repository": null,
+      "official_project_url": "https://osvia.org/TARS/",
+      "commit": null,
+      "commit_date": null,
+      "license": null,
+      "read_depth": "Sections 3.1–3.5 and ego/segmentation supplement; official project page",
+      "inference_inputs": "two radar frames, target-frame detector features; past temporal context",
+      "training_supervision": "joint detection; flow/CMFlow-style supervision for VoD ego variant",
+      "prediction_task": "radar scene flow",
+      "code_interface": "No public author implementation verified at https://osvia.org/TARS/",
+      "limits": "Target frame must not be future sensor input for our forecasting; website template license is not model license."
+    },
+    {
+      "id": "RaLiFlow",
+      "title": "RaLiFlow: Scene Flow Estimation with 4D Radar and LiDAR Point Clouds",
+      "year": 2026,
+      "venue": "AAAI 2026; 40(5):4012–4021",
+      "venue_evidence": "publisher",
+      "primary_url": "https://ojs.aaai.org/index.php/AAAI/article/view/37404",
+      "official_repository": "https://github.com/FuJingyun/RaLiFlow",
+      "official_project_url": null,
+      "commit": "1abb92e9395271222e1437060f245c46e06ec461",
+      "commit_date": "2026-09-11T08:14:58Z",
+      "license": null,
+      "read_depth": "Paper dataset relabeling, local DBCF fusion, flow losses and training settings; author repo availability",
+      "inference_inputs": "two radar AND LiDAR frames at inference",
+      "training_supervision": "reconstructed VoD rigid-flow labels with radar-specific correction",
+      "prediction_task": "scene flow for radar and LiDAR",
+      "code_interface": "Author train.py/eval.py, preprocessing scripts; module implementation not exhaustively audited",
+      "limits": "Inference modality mismatch; labels/split differ; low radial speed is not proof of static; no license verified."
+    },
+    {
+      "id": "TEOcc",
+      "title": "TEOcc: Radar-camera Multi-modal Occupancy Prediction via Temporal Enhancement",
+      "year": 2024,
+      "venue": "ECAI 2024",
+      "venue_evidence": "author repository; publisher not separately checked",
+      "primary_url": "https://arxiv.org/html/2410.11228v1",
+      "official_repository": "https://github.com/VDIGPKU/TEOcc",
+      "official_project_url": null,
+      "commit": "7b4b8a022518f1a5fa1f2a60f7d37005218ac487",
+      "commit_date": "2024-10-16T05:44:04Z",
+      "license": null,
+      "read_depth": "Section 3 plus actual default radar config and both detector classes",
+      "inference_inputs": "past/current cameras+radar",
+      "training_supervision": "masked historical occupancy plus current occupancy/depth",
+      "prediction_task": "current semantic occupancy",
+      "code_interface": "bevdet_occ.py:204–238; teocc_rc.py; bevdet_rc_occ.py:316–371",
+      "limits": "Default radar config does not activate inspected masked-history path; no license verified; not future flow."
+    },
+    {
+      "id": "Let Occ Flow",
+      "title": "Let Occ Flow: Self-Supervised 3D Occupancy Flow Prediction",
+      "year": 2024,
+      "venue": "CoRL 2024; PMLR 270 (2025)",
+      "venue_evidence": "publisher",
+      "primary_url": "https://proceedings.mlr.press/v270/liu25e.html",
+      "official_repository": "https://github.com/eliliu2233/occ-flow",
+      "official_project_url": null,
+      "commit": "c782571ecc4556cb5a72c2d4be3ba40a2e9e839b",
+      "commit_date": "2026-09-13T09:13:27Z",
+      "license": null,
+      "read_depth": "Sections 3.1–3.4 and appendix; flow_loss and temporal_aggregation/config",
+      "inference_inputs": "past/current multi-view cameras",
+      "training_supervision": "2D optical flow, movable segmentation, rendering; optional LiDAR ray supervision",
+      "prediction_task": "current occupancy and horizontal flow",
+      "code_interface": "model/neck/temporal_aggregation.py; loss/flow_loss.py",
+      "limits": "Joint geometry/flow ambiguity; full SDF/renderer transplant changes problem/cost; no license verified."
+    },
+    {
+      "id": "OccFlowNet",
+      "title": "OccFlowNet: Occupancy Estimation via Differentiable Rendering and Occupancy Flow",
+      "year": 2025,
+      "venue": "WACV 2025",
+      "venue_evidence": "publisher",
+      "primary_url": "https://openaccess.thecvf.com/content/WACV2025/html/Boeder_OccFlowNet_Occupancy_Estimation_via_Differentiable_Rendering_and_Occupancy_Flow_WACV_2025_paper.html",
+      "official_repository": "https://github.com/boschresearch/OccFlowNet",
+      "official_project_url": null,
+      "commit": "27e102e467b771651977e69d3bc0b10177ff6779",
+      "commit_date": "2025-01-31T08:10:29Z",
+      "license": "AGPL-3.0",
+      "read_depth": "Paper formulation and create_flow_data.py plus detector train/test",
+      "inference_inputs": "cameras at inference",
+      "training_supervision": "rendering and annotation-derived rigid instance flow",
+      "prediction_task": "density and semantic occupancy, not learned flow output in audited detector",
+      "code_interface": "tools/create_flow_data.py:136–169; mmdet3d/models/detectors/occflownet.py:79–140",
+      "limits": "GT-derived flow is training input; cannot use as deployed motion prediction; AGPL + third-party licenses."
+    },
+    {
+      "id": "RadarOcc",
+      "title": "RadarOcc: Robust 3D Occupancy Prediction with 4D Imaging Radar",
+      "year": 2024,
+      "venue": "NeurIPS 2024",
+      "venue_evidence": "author paper/repo",
+      "primary_url": "https://arxiv.org/html/2405.14014v1",
+      "official_repository": "https://github.com/Toytiny/RadarOcc",
+      "official_project_url": null,
+      "commit": "dbaa20d29909b03af5f77a84dc69340561f46011",
+      "commit_date": "2026-03-27T17:48:49Z",
+      "license": "Apache-2.0",
+      "read_depth": "Paper input/method boundary and official code tree/README",
+      "inference_inputs": "4D range-azimuth-elevation-Doppler radar tensor",
+      "training_supervision": "LiDAR-derived K-Radar occupancy labels",
+      "prediction_task": "current 3D occupancy",
+      "code_interface": "projects/occ_plugin/occupancy/detectors/radarocc_self.py",
+      "limits": "nuScenes cached sparse points do not include original spectrum; not temporal motion forecasting."
+    },
+    {
+      "id": "MetaOcc",
+      "title": "MetaOcc: Spatio-Temporal Fusion of Surround-View 4D Radar and Camera for 3D Occupancy Prediction with Dual Training Strategies",
+      "year": 2025,
+      "venue": "arXiv preprint v2",
+      "venue_evidence": "preprint only",
+      "primary_url": "https://arxiv.org/html/2501.15384v2",
+      "official_repository": "https://github.com/LucasYang567/MetaOcc",
+      "official_project_url": null,
+      "commit": "713a9b1c8ff01131725f47c83bcd2e9795111926",
+      "commit_date": "2025-08-12T06:17:17Z",
+      "license": "Apache-2.0",
+      "read_depth": "Sections on radar height/lifting and fusion; complete repo file-tree availability check",
+      "inference_inputs": "surround 4D radar+cameras",
+      "training_supervision": "supervised or semi-supervised current occupancy",
+      "prediction_task": "current 3D occupancy",
+      "code_interface": "No implementation in audited 5-file tree",
+      "limits": "README/LICENSE/3 images only; learned height expansion is not recovered measured information."
+    },
+    {
+      "id": "CRISP",
+      "title": "CRISP: A Spatiotemporal Camera-Radar Backbone for Driving via Forecasting-Based World-Model Pretraining",
+      "year": 2026,
+      "venue": "arXiv:2607.04541v1; no venue verified",
+      "venue_evidence": "preprint only",
+      "primary_url": "https://arxiv.org/html/2607.04541v1",
+      "official_repository": "https://github.com/umfieldrobotics/CRISP",
+      "official_project_url": "https://umfieldrobotics.github.io/CRISP/",
+      "commit": null,
+      "commit_date": null,
+      "license": null,
+      "read_depth": "Sections III–V: equations3–18, architecture/training/eval protocol; author project/code link",
+      "inference_inputs": "past camera+radar; same provided future ego convention for forecasting",
+      "training_supervision": "future LiDAR supervision only during pretraining",
+      "prediction_task": "forecast point cloud; transferred future occupancy and other tasks",
+      "code_interface": "No public code/weights verified; author project says Code Coming Soon; linked repo API404",
+      "limits": "Very close prior art for radar-guided future pretraining; no identifiability proof from query gates; 24epochs/8A100 not our budget."
+    }
+  ],
+  "code_reads": [
+    {
+      "repo": "Toytiny/CMFlow",
+      "path": "models/cmflow.py",
+      "url": "https://raw.githubusercontent.com/Toytiny/CMFlow/16a095a250453b4fe1363e4ec9dddd20d0d64e4f/models/cmflow.py",
+      "sha256": "cb59b982bd107fbdc5d7f643bafb309762fc1e4000b6034da250a2f3d4b3b576",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/CMFlow/models/cmflow.py",
+      "lines": 199,
+      "symbols": [
+        {
+          "line": 10,
+          "text": "class CMFlow(nn.Module):"
+        },
+        {
+          "line": 12,
+          "text": "def __init__(self,args):"
+        },
+        {
+          "line": 51,
+          "text": "def rigid_to_flow(self,pc,trans):"
+        },
+        {
+          "line": 59,
+          "text": "def Backbone(self,pc1,pc2,feature1,feature2):"
+        },
+        {
+          "line": 96,
+          "text": "def EgoMotionHead(self, flow, pc1, score):"
+        },
+        {
+          "line": 112,
+          "text": "def refine_with_transform(self, flow, pc1, trans, mask):"
+        },
+        {
+          "line": 128,
+          "text": "def WeightedKabsch(self, A, B, W):"
+        },
+        {
+          "line": 171,
+          "text": "def forward(self, pc1, pc2, feature1, feature2, label_m, mode):"
+        }
+      ]
+    },
+    {
+      "repo": "Toytiny/CMFlow",
+      "path": "models/cmflow_t.py",
+      "url": "https://raw.githubusercontent.com/Toytiny/CMFlow/16a095a250453b4fe1363e4ec9dddd20d0d64e4f/models/cmflow_t.py",
+      "sha256": "bd392319399256722c670910e7c6854d35e75b36d0b4560d82c5520a74d5dcbd",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/CMFlow/models/cmflow_t.py",
+      "lines": 213,
+      "symbols": [
+        {
+          "line": 10,
+          "text": "class CMFlow_T(nn.Module):"
+        },
+        {
+          "line": 12,
+          "text": "def __init__(self,args):"
+        },
+        {
+          "line": 56,
+          "text": "def rigid_to_flow(self,pc,trans):"
+        },
+        {
+          "line": 64,
+          "text": "def Backbone(self,pc1,pc2,feature1,feature2,gfeat_prev):"
+        },
+        {
+          "line": 110,
+          "text": "def EgoMotionHead(self, flow, pc1, score):"
+        },
+        {
+          "line": 126,
+          "text": "def refine_with_transform(self, flow, pc1, trans, mask):"
+        },
+        {
+          "line": 142,
+          "text": "def WeightedKabsch(self, A, B, W):"
+        },
+        {
+          "line": 185,
+          "text": "def forward(self, pc1, pc2, feature1, feature2, label_m, mode, gfeat):"
+        }
+      ]
+    },
+    {
+      "repo": "Toytiny/CMFlow",
+      "path": "losses/radar_loss.py",
+      "url": "https://raw.githubusercontent.com/Toytiny/CMFlow/16a095a250453b4fe1363e4ec9dddd20d0d64e4f/losses/radar_loss.py",
+      "sha256": "85a23998c6bd8d042c7fbd269dd1a54d9aee71d135a636fecfc3ac9edc2ff3d2",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/CMFlow/losses/radar_loss.py",
+      "lines": 304,
+      "symbols": [
+        {
+          "line": 17,
+          "text": "class SoftChamferLoss(Module):"
+        },
+        {
+          "line": 19,
+          "text": "def __init__(self, zeta=0.005):"
+        },
+        {
+          "line": 23,
+          "text": "def forward(self, pc1, pc2, pc1_warp):"
+        },
+        {
+          "line": 60,
+          "text": "class SpatialSmoothnessLoss(Module):"
+        },
+        {
+          "line": 62,
+          "text": "def __init__(self, alpha=0.5, num_nb=8):"
+        },
+        {
+          "line": 67,
+          "text": "def forward(self, pc1, pred_flow):"
+        },
+        {
+          "line": 100,
+          "text": "class RadialDisplacementLoss(Module):"
+        },
+        {
+          "line": 102,
+          "text": "def __init__(self, intervel=0.1):"
+        },
+        {
+          "line": 106,
+          "text": "def forward(self, pc1, pred_f, vel1):"
+        },
+        {
+          "line": 124,
+          "text": "class SelfSupervisedLoss(Module):"
+        },
+        {
+          "line": 126,
+          "text": "def __init__(self, w_sc=1, w_ss=1, w_rd=1):"
+        },
+        {
+          "line": 135,
+          "text": "def forward(self, pc1, pc2, pred_f, vel1):"
+        },
+        {
+          "line": 163,
+          "text": "class EgoMotionLoss(Module):"
+        },
+        {
+          "line": 165,
+          "text": "def __init__(self):"
+        },
+        {
+          "line": 168,
+          "text": "def forward(self, pc1, pre_trans, gt_trans):"
+        },
+        {
+          "line": 184,
+          "text": "class MotionSegLoss(Module):"
+        },
+        {
+          "line": 186,
+          "text": "def __init__(self):"
+        },
+        {
+          "line": 191,
+          "text": "def forward(self, mseg_pre, mseg_gt):"
+        },
+        {
+          "line": 207,
+          "text": "class OpticalFlowLoss(Module):"
+        },
+        {
+          "line": 209,
+          "text": "def __init__(self):"
+        },
+        {
+          "line": 212,
+          "text": "def forward(self, opt, radar_u, radar_v, pc1_warp, mseg_gt, args):"
+        },
+        {
+          "line": 244,
+          "text": "class DynamicFlowLoss(Module):"
+        },
+        {
+          "line": 245,
+          "text": "def __init__(self):"
+        },
+        {
+          "line": 247,
+          "text": "def forward(self, pred_f, gt_f, dyn_mask):"
+        },
+        {
+          "line": 260,
+          "text": "class RadarFlowLoss(Module):"
+        },
+        {
+          "line": 262,
+          "text": "def __init__(self, w_self=1, w_em=1, w_ms=1, w_opt=0.1, w_dyn=1):"
+        },
+        {
+          "line": 271,
+          "text": "def forward(self, args, pc1, pc2, pred_f, vel1, gt_f=None, pre_trans=None, mseg_pre=None, gt_trans=None, \\"
+        }
+      ]
+    },
+    {
+      "repo": "Toytiny/CMFlow",
+      "path": "dataset/vod.py",
+      "url": "https://raw.githubusercontent.com/Toytiny/CMFlow/16a095a250453b4fe1363e4ec9dddd20d0d64e4f/dataset/vod.py",
+      "sha256": "6837f586cded7ff5bcc236feeec5c253ab7d10d4a650e66cd95aa98074360ce8",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/CMFlow/dataset/vod.py",
+      "lines": 137,
+      "symbols": [
+        {
+          "line": 14,
+          "text": "class vodDataset(Dataset):"
+        },
+        {
+          "line": 16,
+          "text": "def __init__(self, args, root='/mnt/12T/fangqiang/vod_unanno/flow_smp/', partition='train', textio=None):"
+        },
+        {
+          "line": 49,
+          "text": "def __getitem__(self, index):"
+        },
+        {
+          "line": 127,
+          "text": "def read_calib_files(self):"
+        },
+        {
+          "line": 136,
+          "text": "def __len__(self):"
+        }
+      ]
+    },
+    {
+      "repo": "Toytiny/CMFlow",
+      "path": "src/GETTING_STARTED.md",
+      "url": "https://raw.githubusercontent.com/Toytiny/CMFlow/16a095a250453b4fe1363e4ec9dddd20d0d64e4f/src/GETTING_STARTED.md",
+      "sha256": "467d9a6b40a30ce37f7e3ddc9b29eba6955735871fb188bd4f0ca21361d78487",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/CMFlow/src/GETTING_STARTED.md",
+      "lines": 161,
+      "symbols": []
+    },
+    {
+      "repo": "Toytiny/RaFlow",
+      "path": "losses/loss.py",
+      "url": "https://raw.githubusercontent.com/Toytiny/RaFlow/c01897faeb5d1e766ba899a677b38b1282b142e4/losses/loss.py",
+      "sha256": "6f7f0e2b4c00e73fd4cc707b413a287a4666c23d7ca0e412ebf6d97997e867e3",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/RaFlow/losses/loss.py",
+      "lines": 112,
+      "symbols": [
+        {
+          "line": 8,
+          "text": "def computeSoftChamfer(pc1, pc1_warp, pc2, zeta=0.005):"
+        },
+        {
+          "line": 47,
+          "text": "def computeWeightedSmooth(pc1, pred_flow, alpha=0.5):"
+        },
+        {
+          "line": 78,
+          "text": "def computeloss(pc1, pc2, agg_f, vel1,interval, args):"
+        }
+      ]
+    },
+    {
+      "repo": "Toytiny/RaFlow",
+      "path": "models/raflow_vod.py",
+      "url": "https://raw.githubusercontent.com/Toytiny/RaFlow/c01897faeb5d1e766ba899a677b38b1282b142e4/models/raflow_vod.py",
+      "sha256": "ba688001d86a2da471203e021abbcaafec99af462294f30751eb4e1380292ad4",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/RaFlow/models/raflow_vod.py",
+      "lines": 298,
+      "symbols": [
+        {
+          "line": 10,
+          "text": "class RaFlow_VoD(nn.Module):"
+        },
+        {
+          "line": 18,
+          "text": "def __init__(self,args):"
+        },
+        {
+          "line": 44,
+          "text": "def rigid_to_flow(self,pc,trans):"
+        },
+        {
+          "line": 52,
+          "text": "def ROFE_module(self,pc1,pc2,feature1,feature2):"
+        },
+        {
+          "line": 84,
+          "text": "def SFR_module(self, output, pc1, feature1, interval):"
+        },
+        {
+          "line": 122,
+          "text": "def rigid_transform_torch(self, A, B, M):"
+        },
+        {
+          "line": 162,
+          "text": "def forward(self,pc1,pc2,feature1,feature2,interval):"
+        },
+        {
+          "line": 172,
+          "text": "class MultiScaleEncoder(nn.Module):"
+        },
+        {
+          "line": 173,
+          "text": "def __init__(self, radius, nsample, in_channel, mlp, mlp2):"
+        },
+        {
+          "line": 182,
+          "text": "def forward(self, xyz, features):"
+        },
+        {
+          "line": 192,
+          "text": "class FeatureCorrelator(nn.Module):"
+        },
+        {
+          "line": 193,
+          "text": "def __init__(self, nsample, in_channel, mlp, bn = False, use_leaky = True):"
+        },
+        {
+          "line": 213,
+          "text": "def forward(self, xyz1, xyz2, points1, points2):"
+        },
+        {
+          "line": 269,
+          "text": "class FlowDecoder(nn.Module):"
+        },
+        {
+          "line": 270,
+          "text": "def __init__(self, fc_inch):"
+        },
+        {
+          "line": 287,
+          "text": "def forward(self, pc1, feature1, pc1_features, cor_features):"
+        }
+      ]
+    },
+    {
+      "repo": "VDIGPKU/TEOcc",
+      "path": "mmdet3d/models/detectors/bevdet_rc_occ.py",
+      "url": "https://raw.githubusercontent.com/VDIGPKU/TEOcc/7b4b8a022518f1a5fa1f2a60f7d37005218ac487/mmdet3d/models/detectors/bevdet_rc_occ.py",
+      "sha256": "614570d395f7f84a99d5d97bbac0dbfd680baf367c7ce0c9dc9a580a219a61ed",
+      "local": "analysis/o_motion_20260915/source_audit/VDIGPKU/TEOcc/mmdet3d/models/detectors/bevdet_rc_occ.py",
+      "lines": 460,
+      "symbols": [
+        {
+          "line": 23,
+          "text": "class Unet3D(nn.Module):"
+        },
+        {
+          "line": 24,
+          "text": "def __init__(self, in_channels, mid_channels):"
+        },
+        {
+          "line": 30,
+          "text": "def forward(self, x):"
+        },
+        {
+          "line": 38,
+          "text": "class Hourglass3D(nn.Module):"
+        },
+        {
+          "line": 39,
+          "text": "def __init__(self, mid_channels):"
+        },
+        {
+          "line": 66,
+          "text": "def forward(self, x, presqu=None, postsqu=None):"
+        },
+        {
+          "line": 88,
+          "text": "class BEVStereo4DOCCRC(BEVStereo4D):"
+        },
+        {
+          "line": 90,
+          "text": "def __init__(self,"
+        },
+        {
+          "line": 167,
+          "text": "def init_weights(self):"
+        },
+        {
+          "line": 188,
+          "text": "def fix_bn(m):"
+        },
+        {
+          "line": 202,
+          "text": "def radar_voxelize(self, points):"
+        },
+        {
+          "line": 232,
+          "text": "def extract_radar_feat(self, radar, img_metas):"
+        },
+        {
+          "line": 263,
+          "text": "def radar_bev_to_voxel(self, x):"
+        },
+        {
+          "line": 271,
+          "text": "def loss_single(self,voxel_semantics,mask_camera,preds):"
+        },
+        {
+          "line": 289,
+          "text": "def simple_test(self,"
+        },
+        {
+          "line": 316,
+          "text": "def forward_train(self,"
+        },
+        {
+          "line": 373,
+          "text": "def extract_feat(self, points, img, img_metas, radar, **kwargs):"
+        },
+        {
+          "line": 385,
+          "text": "def extract_img_feat(self,"
+        }
+      ]
+    },
+    {
+      "repo": "VDIGPKU/TEOcc",
+      "path": "mmdet3d/models/backbones/temporal_backbone.py",
+      "url": "https://raw.githubusercontent.com/VDIGPKU/TEOcc/7b4b8a022518f1a5fa1f2a60f7d37005218ac487/mmdet3d/models/backbones/temporal_backbone.py",
+      "sha256": "9e8aeed316d1633236ffe7b09b7400bc70cbbf18c44c879ceafcc9539b6be58a",
+      "local": "analysis/o_motion_20260915/source_audit/VDIGPKU/TEOcc/mmdet3d/models/backbones/temporal_backbone.py",
+      "lines": 337,
+      "symbols": [
+        {
+          "line": 30,
+          "text": "class LayerNorm2d(nn.Module):"
+        },
+        {
+          "line": 36,
+          "text": "def __init__(self, normalized_shape, eps=1e-6, data_format=\"channels_first\"):"
+        },
+        {
+          "line": 46,
+          "text": "def forward(self, x):"
+        },
+        {
+          "line": 57,
+          "text": "class TemporalDecoder(TransformerLayerSequence):"
+        },
+        {
+          "line": 58,
+          "text": "def __init__(self, *args, **kwargs):"
+        },
+        {
+          "line": 62,
+          "text": "def get_reference_points(H, W, Z=8, num_points_in_pillar=4, dim='2d', bs=1, device='cuda', dtype=torch.float):"
+        },
+        {
+          "line": 89,
+          "text": "def forward(self,"
+        },
+        {
+          "line": 153,
+          "text": "class BiTemporalPredictor(BaseModule):"
+        },
+        {
+          "line": 161,
+          "text": "def __init__(self,"
+        },
+        {
+          "line": 235,
+          "text": "def init_weights(self):"
+        },
+        {
+          "line": 250,
+          "text": "def forward("
+        }
+      ]
+    },
+    {
+      "repo": "VDIGPKU/TEOcc",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/VDIGPKU/TEOcc/7b4b8a022518f1a5fa1f2a60f7d37005218ac487/README.md",
+      "sha256": "11ec61acb492a35bb40fd6eaa3e4866d174557f499216ca19e18d65b3c826992",
+      "local": "analysis/o_motion_20260915/source_audit/VDIGPKU/TEOcc/README.md",
+      "lines": 133,
+      "symbols": []
+    },
+    {
+      "repo": "eliliu2233/occ-flow",
+      "path": "model/neck/temporal_aggregation.py",
+      "url": "https://raw.githubusercontent.com/eliliu2233/occ-flow/c782571ecc4556cb5a72c2d4be3ba40a2e9e839b/model/neck/temporal_aggregation.py",
+      "sha256": "f69ec69e4c69a5645ab7b39dc60652721f3b60314097e39ae970ddac924c2f68",
+      "local": "analysis/o_motion_20260915/source_audit/eliliu2233/occ-flow/model/neck/temporal_aggregation.py",
+      "lines": 344,
+      "symbols": [
+        {
+          "line": 20,
+          "text": "class TemporalBEVAttention(BaseModule):"
+        },
+        {
+          "line": 49,
+          "text": "def __init__(self,"
+        },
+        {
+          "line": 73,
+          "text": "def _is_power_of_2(n):"
+        },
+        {
+          "line": 102,
+          "text": "def init_weights(self):"
+        },
+        {
+          "line": 123,
+          "text": "def forward(self,"
+        },
+        {
+          "line": 268,
+          "text": "class AFFM(BaseModule):"
+        },
+        {
+          "line": 269,
+          "text": "def __init__(self, attention, bev_h=200, bev_w=200, num_queue=1, bev_pooling=True, init_cfg=None):"
+        },
+        {
+          "line": 283,
+          "text": "def forward(self, bev_list):"
+        },
+        {
+          "line": 312,
+          "text": "class FWD_ATTN(BaseModule):"
+        },
+        {
+          "line": 313,
+          "text": "def __init__(self, attention, bev_h=200, bev_w=200, num_queue=1, bev_pooling=True, init_cfg=None):"
+        },
+        {
+          "line": 324,
+          "text": "def forward(self, bev_list):"
+        }
+      ]
+    },
+    {
+      "repo": "eliliu2233/occ-flow",
+      "path": "loss/flow_loss.py",
+      "url": "https://raw.githubusercontent.com/eliliu2233/occ-flow/c782571ecc4556cb5a72c2d4be3ba40a2e9e839b/loss/flow_loss.py",
+      "sha256": "91ec294a9205d1cb99978913f21553fae9ffd70306f9287821ad4d20d46f34b8",
+      "local": "analysis/o_motion_20260915/source_audit/eliliu2233/occ-flow/loss/flow_loss.py",
+      "lines": 283,
+      "symbols": [
+        {
+          "line": 7,
+          "text": "def paint(img, uv, color):"
+        },
+        {
+          "line": 16,
+          "text": "class FlowLoss(BaseLoss):"
+        },
+        {
+          "line": 18,
+          "text": "def __init__(self, weight=1.0, input_dict=None, **kwargs):"
+        },
+        {
+          "line": 44,
+          "text": "def reproj_loss("
+        },
+        {
+          "line": 75,
+          "text": "def list2tensor(trans):"
+        },
+        {
+          "line": 145,
+          "text": "def cal_pixel(trans, coords):"
+        },
+        {
+          "line": 162,
+          "text": "def sample_pixel(pixel, imgs):"
+        },
+        {
+          "line": 180,
+          "text": "def get_diff(x1, x2):"
+        },
+        {
+          "line": 187,
+          "text": "def compute_l1_loss(points_warps, sample_flow_gt, lidar2warpImg, dyn_mask):"
+        }
+      ]
+    },
+    {
+      "repo": "eliliu2233/occ-flow",
+      "path": "config/nuscenes/nuscenes_occ_flow_voxelaffm.py",
+      "url": "https://raw.githubusercontent.com/eliliu2233/occ-flow/c782571ecc4556cb5a72c2d4be3ba40a2e9e839b/config/nuscenes/nuscenes_occ_flow_voxelaffm.py",
+      "sha256": "0ff4e6197a2edf65e8bff90f1df4a0852a18dd7dfe9087f0797b9aa0d5657072",
+      "local": "analysis/o_motion_20260915/source_audit/eliliu2233/occ-flow/config/nuscenes/nuscenes_occ_flow_voxelaffm.py",
+      "lines": 481,
+      "symbols": []
+    },
+    {
+      "repo": "Toytiny/RadarOcc",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Toytiny/RadarOcc/dbaa20d29909b03af5f77a84dc69340561f46011/README.md",
+      "sha256": "5725f923470a3af2b9fdea32319bcd8a0d55c3ab04bf0beb547c4e8649d7ec7e",
+      "local": "analysis/o_motion_20260915/source_audit/Toytiny/RadarOcc/README.md",
+      "lines": 163,
+      "symbols": []
+    },
+    {
+      "repo": "boschresearch/OccFlowNet",
+      "path": "tools/create_flow_data.py",
+      "url": "https://raw.githubusercontent.com/boschresearch/OccFlowNet/27e102e467b771651977e69d3bc0b10177ff6779/tools/create_flow_data.py",
+      "sha256": "bc0870b10e3634d28834b9949e2b680d9f83bc4f3867d14733cfb9c4316ef7ce",
+      "local": "analysis/o_motion_20260915/source_audit/boschresearch/OccFlowNet/tools/create_flow_data.py",
+      "lines": 262,
+      "symbols": [
+        {
+          "line": 26,
+          "text": "def load_annotations(ann_file):"
+        },
+        {
+          "line": 34,
+          "text": "def create_pc_grid():"
+        },
+        {
+          "line": 45,
+          "text": "def load_boxes(info, ego_l_t2global, device):"
+        },
+        {
+          "line": 88,
+          "text": "def create_flow(data_infos, metadata, args, device):"
+        }
+      ]
+    },
+    {
+      "repo": "boschresearch/OccFlowNet",
+      "path": "mmdet3d/models/detectors/occflownet.py",
+      "url": "https://raw.githubusercontent.com/boschresearch/OccFlowNet/27e102e467b771651977e69d3bc0b10177ff6779/mmdet3d/models/detectors/occflownet.py",
+      "sha256": "ddacf690f3c84c7ba74e3eec9ea51f0431680b6a85bd72c5ecf49dfd1899c422",
+      "local": "analysis/o_motion_20260915/source_audit/boschresearch/OccFlowNet/mmdet3d/models/detectors/occflownet.py",
+      "lines": 143,
+      "symbols": [
+        {
+          "line": 14,
+          "text": "class OccFlowNet(BEVStereo4D):"
+        },
+        {
+          "line": 16,
+          "text": "def __init__(self,"
+        },
+        {
+          "line": 56,
+          "text": "def loss_single(self, voxel_semantics, mask_camera, density_pred, semantic_pred):"
+        },
+        {
+          "line": 79,
+          "text": "def simple_test(self,"
+        },
+        {
+          "line": 101,
+          "text": "def forward_train(self,"
+        }
+      ]
+    },
+    {
+      "repo": "VDIGPKU/TEOcc",
+      "commit": "7b4b8a022518f1a5fa1f2a60f7d37005218ac487",
+      "path": "configs/teocc/teocc_rc.py",
+      "url": "https://raw.githubusercontent.com/VDIGPKU/TEOcc/7b4b8a022518f1a5fa1f2a60f7d37005218ac487/configs/teocc/teocc_rc.py",
+      "sha256": "90a5a67c6695ddd6bcbb238a27cdd69e57ea66f431e7058bc58c79c60a6d7f13",
+      "local": "analysis/o_motion_20260915/source_audit/VDIGPKU/TEOcc/configs/teocc/teocc_rc.py",
+      "lines": 319
+    },
+    {
+      "repo": "VDIGPKU/TEOcc",
+      "commit": "7b4b8a022518f1a5fa1f2a60f7d37005218ac487",
+      "path": "mmdet3d/models/detectors/bevdet_occ.py",
+      "url": "https://raw.githubusercontent.com/VDIGPKU/TEOcc/7b4b8a022518f1a5fa1f2a60f7d37005218ac487/mmdet3d/models/detectors/bevdet_occ.py",
+      "sha256": "0a2bdad50a8ff33fe5ae2130db6cb5970f8e72a19d5d462ac2df7b74f9a81049",
+      "local": "analysis/o_motion_20260915/source_audit/VDIGPKU/TEOcc/mmdet3d/models/detectors/bevdet_occ.py",
+      "lines": 344
+    },
+    {
+      "repo": "mjseong0414/CRT-Fusion",
+      "commit": "2fa611a5c8944c487e6fe78adbef63b3d0237fec",
+      "path": "mmdet3d/models/dense_heads/crtfusion_head.py",
+      "url": "https://raw.githubusercontent.com/mjseong0414/CRT-Fusion/2fa611a5c8944c487e6fe78adbef63b3d0237fec/mmdet3d/models/dense_heads/crtfusion_head.py",
+      "sha256": "3c2a666a2fb949c056dcb7f2425be21471e30c516140770950b6517de1e00f02",
+      "local": "analysis/o_motion_20260915/source_audit/mjseong0414/CRT-Fusion/mmdet3d/models/dense_heads/crtfusion_head.py",
+      "lines": 722
+    }
+  ],
+  "provenance_files_sha256": {
+    "official_repository_snapshot.json": "b6a5b07faaeb5b1af2f27286f8f18bb3844da17a9d0b189ab968ca208af6a39e",
+    "official_code_reads.json": "521a25577f1db8308d29260ec9f84c5abeb6a20cffe99fe4b41709924f7bbafd",
+    "raliflow_repository_snapshot.json": "ae5867d2b13147fed71fd73487c54654e2c2eee842f323f7add527cf68c87c1e",
+    "crisp_repository_snapshot.json": "5331f71e693f3596fa81637ab13cc6c34ba387d0809d141a9a9847f9f404c5cf"
+  },
+  "query_examples": [
+    "CRT-Fusion CRN radar motion temporal official",
+    "RaFlow CMFlow scene flow official",
+    "radar camera occupancy flow 2026 official code forecasting motion",
+    "site:ojs.aaai.org RaLiFlow",
+    "TARS traffic-aware radar scene flow official code"
+  ],
+  "distinctions": [
+    "Detection mAVE is not occupancy forecasting benefit.",
+    "Movable GMO semantics are not actual motion labels.",
+    "Box-derived rigid displacement is a proxy, not measured point correspondence.",
+    "Past-to-current scene flow is valid input evidence; current-to-future sensors are not legal forecasting inputs.",
+    "No claim that the broad idea of radar-aware future pretraining is novel."
+  ],
+  "unknowns": [
+    "Our exact label/sweep synchronization coverage requires a separate frozen data audit.",
+    "No measured local training cost for proposed modules.",
+    "CRISP and TARS public model implementation/weights not verified.",
+    "TEOcc default radar config versus paper auxiliary path requires author clarification or explicit reimplementation.",
+    "RaLiFlow, TEOcc, Let Occ Flow root code licenses not verified."
+  ]
+}

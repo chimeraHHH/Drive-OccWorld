@@ -1,0 +1,230 @@
+{
+  "schema": "shared-rigid-fixed-evaluation-source-audit-v1",
+  "status": "NO_BLOCKER_FOUND_STATIC_REVIEW_ONLY",
+  "created_utc": "2026-09-16T05:13:34.279737+00:00",
+  "runtime": {
+    "python": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "torch_imported": false,
+    "SSH_GPU_or_evaluation_performed": false
+  },
+  "scope": {
+    "full_source_read": [
+      "shared_rigid_final_endpoint_v1.py",
+      "evaluate_shared_rigid_state_v1.py",
+      "summarize_shared_rigid_state_v1.py",
+      "shared_rigid_formal_campaign_v1.py"
+    ],
+    "supporting_sources_read": [
+      "train_shared_rigid_state_v1.py",
+      "shared_rigid_geometry_cache_v1.py",
+      "shared_rigid_native_preflight_v1.py",
+      "common_change_evaluation_v2.py",
+      "common_connected_motion_evaluation_v2.py",
+      "train_source_motion_v1.py",
+      "summarize_object_state_common_v1.py",
+      "summarize_object_state_physical_v1.py",
+      "summarize_future_state_common_v1.py",
+      "summarize_future_state_physical_v1.py",
+      "summarize_common_change_v3.py",
+      "job_runner.py"
+    ],
+    "no_current_partial_scores_read": true,
+    "no_checkpoint_tensors_loaded": true
+  },
+  "static_checks": {
+    "AST_Python3_10_pass": [
+      "shared_rigid_final_endpoint_v1.py",
+      "evaluate_shared_rigid_state_v1.py",
+      "summarize_shared_rigid_state_v1.py",
+      "shared_rigid_formal_campaign_v1.py"
+    ],
+    "all_eval_sources_SHA_match": 39,
+    "all_campaign_package_sources_SHA_match": 48,
+    "all_analysis_sources_SHA_match": 1,
+    "frozen_training_protocol_binding_exact": true,
+    "CLI": {
+      "training": {
+        "entrypoint": "train_shared_rigid_state_v1.py",
+        "declared_required": [
+          "--checkpoint",
+          "--config",
+          "--connected-protocol",
+          "--engineering-preflight",
+          "--geometry-cache",
+          "--max-allocated-gib",
+          "--max-seconds",
+          "--o-checkpoint",
+          "--out",
+          "--predictions",
+          "--preflight-protocol",
+          "--protocol",
+          "--raw-metadata",
+          "--repo",
+          "--runtime-contract",
+          "--selection",
+          "--sparse-labels",
+          "--train-cache",
+          "--training-run"
+        ],
+        "supplied": [
+          "--checkpoint",
+          "--config",
+          "--connected-protocol",
+          "--device",
+          "--engineering-preflight",
+          "--geometry-cache",
+          "--max-allocated-gib",
+          "--max-seconds",
+          "--o-checkpoint",
+          "--out",
+          "--predictions",
+          "--preflight-protocol",
+          "--protocol",
+          "--raw-metadata",
+          "--repo",
+          "--runtime-contract",
+          "--selection",
+          "--sparse-labels",
+          "--train-cache",
+          "--training-run"
+        ],
+        "dynamic": [],
+        "duplicate_flags": false,
+        "output_and_resource_mapping_exact": true
+      },
+      "evaluation": {
+        "entrypoint": "evaluate_shared_rigid_state_v1.py",
+        "declared_required": [
+          "--checkpoint",
+          "--config",
+          "--connected-protocol",
+          "--crn-cv-root",
+          "--d-training-run",
+          "--dev-cache",
+          "--engineering-preflight",
+          "--final-training-run",
+          "--geometry-cache",
+          "--max-allocated-gib",
+          "--max-seconds",
+          "--o-checkpoint",
+          "--o-development-records",
+          "--out",
+          "--predictions",
+          "--preflight-protocol",
+          "--protocol",
+          "--raw-metadata",
+          "--repo",
+          "--runtime-contract",
+          "--selection",
+          "--sparse-labels",
+          "--train-cache",
+          "--training-complete-sha256",
+          "--training-protocol",
+          "--training-run"
+        ],
+        "supplied": [
+          "--checkpoint",
+          "--config",
+          "--connected-protocol",
+          "--crn-cv-root",
+          "--d-training-run",
+          "--dev-cache",
+          "--device",
+          "--engineering-preflight",
+          "--final-training-run",
+          "--geometry-cache",
+          "--max-allocated-gib",
+          "--max-seconds",
+          "--o-checkpoint",
+          "--o-development-records",
+          "--out",
+          "--predictions",
+          "--preflight-protocol",
+          "--protocol",
+          "--raw-metadata",
+          "--repo",
+          "--runtime-contract",
+          "--selection",
+          "--sparse-labels",
+          "--train-cache",
+          "--training-protocol",
+          "--training-run"
+        ],
+        "dynamic": [
+          "--training-complete-sha256"
+        ],
+        "duplicate_flags": false,
+        "output_and_resource_mapping_exact": true
+      },
+      "analysis": {
+        "entrypoint": "summarize_shared_rigid_state_v1.py",
+        "declared_required": [
+          "--evaluation-complete-sha256",
+          "--evaluation-protocol",
+          "--evaluation-run",
+          "--o-reference",
+          "--out",
+          "--raw-manifest",
+          "--selection",
+          "--sparse-manifest",
+          "--training-protocol",
+          "--training-run"
+        ],
+        "supplied": [
+          "--evaluation-protocol",
+          "--evaluation-run",
+          "--o-reference",
+          "--out",
+          "--raw-manifest",
+          "--selection",
+          "--sparse-manifest",
+          "--training-protocol",
+          "--training-run"
+        ],
+        "dynamic": [
+          "--evaluation-complete-sha256"
+        ],
+        "duplicate_flags": false,
+        "output_and_resource_mapping_exact": true
+      }
+    }
+  },
+  "sources_sha256": {
+    "shared_rigid_final_endpoint_v1.py": "549112b0a8de1fe5dd705da5376aff3622f48a087a67b2f0bef2d1a357191917",
+    "evaluate_shared_rigid_state_v1.py": "9785bb3082ac2c805ab54d291152391f0a4943f9948934ce9932cb4e530e9e6a",
+    "summarize_shared_rigid_state_v1.py": "9376155e95ac3d17001139b980c7c9fb30e0afda3c4a381e71941b19317ecfc6",
+    "shared_rigid_formal_campaign_v1.py": "8f7dbe2b9307b7881d5642a7a964046b2a992b5c7139f8f62bf8f8f6f42a0b1c"
+  },
+  "protocols_sha256": {
+    "shared_rigid_state_training_protocol_v1.json": "9c12d8ba84de797f3e452c0ea6449d881761325241e7fdca807d0cd84aa56199",
+    "shared_rigid_fixed_development_protocol_v1.json": "7b7aeb21c88c905bbe7eb0ed14a5eb3d261d5b8b02d210a1a07bf6c7dddf8353",
+    "shared_rigid_formal_campaign_plan_v1.json": "412e4a375d9eca1a5d9ba7d442db4f30344f280ac9001172d8be946f4ae56054"
+  },
+  "review_conclusions": {
+    "endpoint": "Requires both final512/2048 arms; authenticates all paired logs, order/LR/actual non-None optimizer counts before tensor load; strict final state+Adam+RNG validation on load; no optimizer restoration.",
+    "prediction_boundary": "Current prediction geometry and cached t0 BEV only; all O/Cpl/Fix predictions and dense physical fields precede GT/raw future label contents; original native all5h3layer decoding retained.",
+    "occupancy": "Full dev200/100 scenes, original O per-anchor confusion exact; common GT/masks/groups, per-model t0; original pooled5h confusion, transitions and FP/FN retained.",
+    "physical": "D/CRN_CV/Cpl/Fix exact same16074 anchor-instance-horizon key/support; missed detection/uncovered zero retained; old D records authenticated; CRN current EPE checked against v2 records with1e-12relative/1e-10m absolute rounding bound; no O flow.",
+    "statistics": "Old frozen pure mathematics with private arm names; counts pooled before per-horizon ratios and4future mean; object-point EPE then equal anchor-instance; whole100scene paired10000 seed11 resampling; null empty support; median/p90 descriptive; no checkpoint/promotion selection.",
+    "campaign": "One train then one evaluation then frozen summary; actual terminal SHA appended by controller; CLI/resource/output mappings consistent; all children inherit dedicated group; external bound runner cleans only owned group; no retry/resume."
+  },
+  "resource_contract": {
+    "training_inner_seconds": 4800,
+    "training_stage_outer_seconds": 4860,
+    "evaluation_inner_seconds": 1800,
+    "evaluation_stage_outer_seconds": 1860,
+    "analysis_stage_outer_seconds": 120,
+    "campaign_runner_seconds": 6900,
+    "GPU_allocated_cap_GiB": 32,
+    "runtime_guarantee_from_static_review": false
+  },
+  "blockers": [],
+  "boundaries": [
+    "Static source/field/SHA/CLI review is not actual final checkpoint load, final200 inference or completed statistics evidence.",
+    "No training or evaluation runtime, peak resource or numerical parity claim from this audit.",
+    "Original labels remain rigid-box material-point proxies; no measured dense scene-flow claim.",
+    "t0 and future states both may change through whole-head training; transitions are not isolated future-motion measurements.",
+    "Single training seed and exposed development scenes; success/full validation not inferred."
+  ],
+  "audit_helper_note": "First local AST-only CLI checker attempted literal_eval(type=float) and stopped; corrected checker reads only required keyword literals. No target source or evaluation was run or changed."
+}

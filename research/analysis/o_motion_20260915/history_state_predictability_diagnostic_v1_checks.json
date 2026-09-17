@@ -1,0 +1,14 @@
+{
+  "schema": "history-state-CV-CPU-math-check-v1",
+  "status": "PASS",
+  "tests": [
+    "non-square-vector yaw90 and real historical dt with nominal future slots",
+    "prefer nearest valid -1",
+    "fallback -2",
+    "missing history returns unavailable, not zero",
+    "nonpositive dt rejected"
+  ],
+  "scientific_evidence": false,
+  "source_sha256": "2b14c95bfa027416304288eec1282d1cc001984be42261cf656ee2cb6d6c96da",
+  "python310_AST": true
+}

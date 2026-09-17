@@ -1,0 +1,153 @@
+{
+  "schema": "radar-evidence-discrimination-train-analysis-v1",
+  "radar_extractor_sha256": "ee835ccb9accf3ae0d0e49c82466ee1504ee349e2f5de633967ba5d08946bd51",
+  "motion_extractor_sha256": "3bf1cd4c2cadca9d84d2220371f4eaa046db48cd48cd7ccc6fb25f222c110342",
+  "fixed_motion_analysis_sha256": "38bb878bffc98c67715adb84f4a1a2983e5425c1e2a07d0fea1509576117b518",
+  "pure_math_source_sha256": "5b8d36a60bba62f81b3e8d494f5b8a591bc540a3cda68fe311d434fbeda1139e",
+  "pure_math_reuse": [
+    "weighted_auc",
+    "continuous"
+  ],
+  "support": {
+    "samples": 512,
+    "scenes": 256,
+    "source_points": 1740053,
+    "object_horizon_rows": 43189,
+    "objects_by_horizon": [
+      11254,
+      10967,
+      10636,
+      10332
+    ],
+    "valid_points_by_horizon": [
+      1709467,
+      1675202,
+      1639983,
+      1608197
+    ]
+  },
+  "horizons_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "population": "current owner < 0 AND original future valid",
+  "radar_mapping": "XYZ C-order: x=source_flat_index//3200, y=(source_flat_index//16)%200; radar[0,:,y,x]",
+  "no_nearest_return_or_neighborhood": true,
+  "velocity": "sum_h(h*D_h)/sum_h(h*h), nominal h only",
+  "features": [
+    {
+      "name": "radar_mean_speed_mps",
+      "direction": 1,
+      "role": "primary"
+    },
+    {
+      "name": "radar_relative_zero_margin_mps",
+      "direction": 1,
+      "role": "primary"
+    },
+    {
+      "name": "radar_velocity_residual_mps",
+      "direction": -1,
+      "role": "secondary_control"
+    },
+    {
+      "name": "radar_log_count_normalized",
+      "direction": 1,
+      "role": "exploratory"
+    },
+    {
+      "name": "radar_mean_lag_seconds",
+      "direction": -1,
+      "role": "exploratory"
+    },
+    {
+      "name": "lsq_speed_xy_mps",
+      "direction": 1,
+      "role": "matched_population_D_control"
+    }
+  ],
+  "definitions": {
+    "radar_mean_speed_mps": "20*c6 (not norm of mean velocity)",
+    "radar_relative_zero_margin_mps": "norm(20*[c4,c5])-norm(vD_xy-20*[c4,c5])",
+    "radar_velocity_residual_mps": "norm(vD_xy-20*[c4,c5])",
+    "radar_log_count_normalized": "c1",
+    "radar_mean_lag_seconds": "0.5*c7",
+    "lsq_speed_xy_mps": "norm(vD_xy)"
+  },
+  "missing": {
+    "radar_features": "undefined when c0=0; no zero imputation in scoring",
+    "physical_support": "retained, with own full-denominator benefit/cost contribution"
+  },
+  "strata": [
+    "all",
+    "no_radar",
+    "radar_present",
+    "radar_present_nonclip",
+    "radar_present_velocity_clip"
+  ],
+  "auc_strata": [
+    "radar_present",
+    "radar_present_nonclip",
+    "radar_present_velocity_clip"
+  ],
+  "velocity_clip": "presence AND (abs(c4)==1 OR abs(c5)==1 OR c6==1)",
+  "other_saturation": "c1==1 count and c7==1 age are separately counted, never included in velocity_clip",
+  "clipped_scores": "computed from clipped summaries, not exact latent sensor velocities; no removal from physical support",
+  "auc": {
+    "positive": "benefit_xy>0",
+    "negative": "benefit_xy<0",
+    "zero": "excluded only from binary AUC, always counted",
+    "score": "fixed direction times feature",
+    "weight": "1/n_ALL_original_valid_object_points",
+    "ties": "0.5",
+    "undefined": "null when either weighted class absent",
+    "fit": false,
+    "direction_selection": false
+  },
+  "speed_bins": {
+    "edges_mps": [
+      0.0,
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      null
+    ],
+    "final_edge": "positive infinity",
+    "convention": "left closed, right open",
+    "same_bins_in_every_radar_stratum": true
+  },
+  "continuous": {
+    "benefit": "norm(gt_xy)-norm(D_xy-gt_xy)",
+    "conditional": "sum(w*benefit)/sum(w) in named subset",
+    "full_contribution": "sum(w*benefit)/ALL original object count of that horizon/GT group",
+    "positive_gain": "same full denominator, positive benefit only",
+    "negative_cost": "same full denominator, -negative benefit only",
+    "empty_subset": "conditional null, contribution zero if original object denominator exists"
+  },
+  "scene_summary": "all 256 scene AUCs, null retained; equal-defined-scene median/q25/q75/IQR, not a confidence interval",
+  "repeated_z": "same (sample,x,y) is one shared radar cell; retain original point weights and report distinct cell counts",
+  "physical_reference": "all four arms / four horizons / four groups XY and XYZ full-object EPE copied from hash-bound prior analysis, no new physical evaluation",
+  "restrictions": {
+    "no_fit": true,
+    "no_threshold_search": true,
+    "no_gate": true,
+    "no_bootstrap": true,
+    "no_development": true,
+    "no_model_forward": true,
+    "source_clipping_not_quality_filter": true
+  },
+  "limitations": [
+    "train512 was seen by D; no unseen-scene generalization",
+    "D already indirectly consumed radar; this is not independent new sensor information",
+    "five-sweep/five-sensor aggregates have no raw LOS or covariance and no object-motion position compensation",
+    "absence is missing measurement, not stationary evidence; clipping is censored magnitude",
+    "coarse speed stratification does not establish causal information or remove all amplitude confounding",
+    "sparse box-derived material-point support is not measured full-space flow",
+    "AUC for tiny gains and conditional subset gains do not establish routing or occupancy success"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "fixed-D-coverage-complementarity-analysis-v1",
+  "horizons_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "groups": [
+    "all",
+    "moving",
+    "ambiguous",
+    "stationary"
+  ],
+  "arms": [
+    "D",
+    "CRN_CV",
+    "fixed_blend",
+    "zero"
+  ],
+  "fixed_blend_producer_name": "CV_covered_D_uncovered",
+  "full_support": {
+    "anchors": 200,
+    "scenes": 100,
+    "object_horizon_rows": 16074
+  },
+  "full_mean": "mean point Euclidean error within each original anchor-instance, then equal anchor-instance mean",
+  "conditional_mean": "mean subset-point error within each nonempty anchor-instance subset, then equal nonempty anchor-instance mean",
+  "contribution": "subset point-error sum / original object point count, then mean over ALL original anchor-instances",
+  "empty_subset": {
+    "conditional_mean": null,
+    "error_sum": 0.0,
+    "full_denominator_contribution": 0.0
+  },
+  "zero_full_source": "producer row zero_epe_xy_m / zero_epe_3d_m",
+  "zero_subset_source": "frozen CRN-CV v2 coverage_object_records: zero subset mean times subset count; no raw point-norm recomputation",
+  "bootstrap": {
+    "comparison": "fixed_blend-minus-CRN_CV",
+    "unit": "scene",
+    "paired": true,
+    "repetitions": 10000,
+    "seed": 11,
+    "interval": "percentile95",
+    "preserve_all_natural_objects_within_scene": true,
+    "equal_scene_means": false,
+    "multiplicity_adjusted": false,
+    "training_seed_uncertainty_included": false
+  },
+  "validation": {
+    "reference_rtol": 1e-12,
+    "reference_atol_m": 1e-10
+  },
+  "restrictions": {
+    "no_model_or_threshold_selection": true,
+    "no_candidate_or_occupancy_claim": true,
+    "no_O_flow": true,
+    "historical_development_exposure": true,
+    "rigid_box_proxy_not_measured_scene_flow": true
+  }
+}

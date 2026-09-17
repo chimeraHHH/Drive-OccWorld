@@ -1,0 +1,337 @@
+{
+  "schema": "shared-rigid-native-preflight-independent-metadata-audit-v1",
+  "status": "PASS_WITH_METADATA_ONLY_SCOPE",
+  "created_utc": "2026-09-16T01:22:04.588388+00:00",
+  "runtime": {
+    "python": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "python_version": "3.14.4",
+    "numpy": "2.4.4",
+    "torch_imported": false,
+    "SSH_GPU_or_model_execution": false
+  },
+  "paths": {
+    "training_mirror": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1",
+    "job_mirror": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/server_results/jobs/shared_rigid_native_preflight_v1"
+  },
+  "verified_file_sha256": {
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/manifest.json": "4c81a8d4d4b5d821a2fe557f6454e7c1775a76f98434c33403f522643e3f486f",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/loaded_models.json": "2b35690be1f3030b1f40f7f510337cdd10beccb1bef244b0b760a1a6c0d34fd0",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/geometry.json": "a87e5169e5fb4977c22d42bad4ca6ae1d634eb4cba3eff699bd6cfbd5fa3ccf3",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/summary.json": "59ad77236568ae7d9933a1ac9a6630da576b85c68e524bfd7667a6361e3252cc",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/runs/Cpl/complete.json": "c6324c335eb2cf79185079184674f123d98846e99be7aced0d0bdaabd4e60743",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/runs/Cpl/manifest.json": "bf0b3c899faf1f57b3f0c6cfbda2657011978388c0d4640ff28093f37964a1b8",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/runs/Cpl/training.jsonl": "4969543f6ce7180a176334af143c2d4c679b20d717b839c442d4795f22812d23",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/runs/Fix/complete.json": "039c1bcc6f7c61a876b82bdf5735c0cb7032f4576514c77e48e8be8d0c67297f",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/runs/Fix/manifest.json": "2ebf26223b1830305aed7b23c69164351120d383291198847885d0258f252b37",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/runs/Fix/training.jsonl": "c5c79d2ac9cdeb5f56dce10faf78e870ef39193eb552e8a0bedc07eefa8c0c44",
+    "o_motion_20260915/shared_rigid_native_preflight_protocol_v1.json": "471d587d1254cd6ce6333a523ad18762bef0aa7ee6b07c068a8e8dd4b535cc56",
+    "o_motion_20260915/train_connected_motion_v2.py": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a",
+    "o_motion_20260915/train_supported_fusion_v2.py": "61cb7c96fc8127f4b3b5ef34fff380e0c2076210463cff29e4cee5d3a5d87d7c",
+    "o_motion_20260915/supported_motion_fusion.py": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c",
+    "o_motion_20260915/transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "o_motion_20260915/train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "o_motion_20260915/motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "o_motion_20260915/learned_transport_probe_v1.py": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054",
+    "m0_improvement_20260915/native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "o_motion_20260915/oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+    "m0_improvement_20260915/objective_supervision_adapters.py": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703",
+    "m0_improvement_20260915/joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "o_motion_20260915/common_change_evaluation_v2.py": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059",
+    "o_motion_20260915/common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+    "o_motion_20260915/motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+    "o_motion_20260915/common_connected_motion_evaluation_v2.py": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1",
+    "o_motion_20260915/object_state_forecast_preflight_v2.py": "6160b6741f525abcebfccc2b3549b21abffc75b2263bfa5c31c3c8a5231eff9b",
+    "o_motion_20260915/object_state_prediction_inputs_v1.py": "55e39715fdf19e5ae1f227a943a843b194eabed08e788ccb2694a040d6f18256",
+    "o_motion_20260915/object_state_conditioner_v2.py": "dad88c05105d85d9b2a6094c687630f1d661cd7a4e35be42a15a5d01b94a8f36",
+    "o_motion_20260915/rigid_object_motion_v1.py": "64ed69ba8e271aa915e30c7b30862c382ccc85628f2558415a272e12b7d378a5",
+    "o_motion_20260915/joint_rigid_object_features_v1.py": "dcaac4557959ec5f2df6f338bdb88eaa20ddadec9cbe23f3ed7a099cfe83cc47",
+    "o_motion_20260915/shared_rigid_native_bridge_v1.py": "5e778cc5e51733787913e7b9b35174792388c1599f08ad38abfbdb7b10b8d92e",
+    "o_motion_20260915/shared_rigid_prediction_geometry_v1.py": "ef5ea1f0a2e8be5c99ffd366038fd39bc759e4cea1c985824931ce3363b7155a",
+    "o_motion_20260915/crn_full_grid_geometry_v1.py": "1c1e7f0799b593b3ad41f282d8506bdc1312a1a8e53994ea8ba595ad12055b9c",
+    "o_motion_20260915/shared_rigid_native_preflight_v1.py": "99a043d557b4001259fc0067257177239262e5cac7af84d866f68852a55696d2",
+    "o_motion_20260915/connected_motion_protocol_v2.json": "e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259",
+    "m0_improvement_20260915/runtime_source_contract.json": "5972a886bb4bd48c1ecf621c3295ff29720cd12fce51315c4c7e34fe84d1cd9c",
+    "m0_improvement_20260915/selection_v1.json": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+    "m0_improvement_20260915/job_runner.py": "07c26a06723d97c218eb6d6243406bbb6512355588031a079f156e624818d8a8",
+    "o_motion_20260915/dispatch_shared_rigid_native_preflight_v1.py": "834fc77f13f3a18baa00478db1d5ed8114c7b7cdcb8a41a28041ec9b59e63ed5",
+    "m0_improvement_20260915/server_results/cache/campaign_cache_v1/train/index.json": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+    "m0_improvement_20260915/server_results/cache/campaign_cache_v1/train/complete.json": "69e49dbd8c7667e9c6e17c2ce70b4f879e8f40c33a0018251b9de2ae978d01bc",
+    "o_motion_20260915/sparse_motion_v1/manifest.json": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe",
+    "o_motion_20260915/sparse_motion_v1/complete.json": "3d14a03cd61761a1ebc26313463dbff06854907c19c49057667a0ffd257e05bd",
+    "o_motion_20260915/motion_targets_v1/manifest.json": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+    "o_motion_20260915/motion_targets_v1/complete.json": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69",
+    "o_motion_20260915/crn_train512_full_official_env_v1/manifest.json": "aad73753976920ce72861436ed1d648fe137647b37584c6d7e90a926d48e4695",
+    "o_motion_20260915/crn_train512_full_official_env_v1/complete.json": "82433bc87db02dd68d8672e094a56a38dc988390631d48e4ceab655f9460ce98",
+    "o_motion_20260915/server_results/training/connected_motion_train_v2/complete.json": "f0bf075fa36622b38c0c5136b187a184d16d3e07ed00857dfe21a0545f1c5f56",
+    "o_motion_20260915/server_results/training/connected_motion_train_v2/manifest.json": "edabdbb5cce3892f3d25a4ae314d5740086519195cc8db0dc64e81295859fe23",
+    "o_motion_20260915/server_results/training/shared_rigid_native_preflight_v1/complete.json": "198384ba7e768901c3c996504c897f5e7154bfdb4ddf61d3eb4da089a76d8212",
+    "o_motion_20260915/server_results/jobs/shared_rigid_native_preflight_v1/state.json": "093b2d11ab57d91a5447977803cfeadbb7347facbfcaa423ee25adfcbcfb8d3d",
+    "o_motion_20260915/server_results/jobs/shared_rigid_native_preflight_v1/launch.json": "b3cd5a6c04f6fe16c32b240f158577f39670f286460c7459b100824da2e71346",
+    "o_motion_20260915/server_results/jobs/shared_rigid_native_preflight_v1/output.log": "df5a5b31dd25f9e7af80a041a1b86b1a7c939e991900e069ff228cbf35d42b4b",
+    "o_motion_20260915/receipts/inspect_shared_rigid_native_preflight_v1_20260916_091622_639297.json": "ae4b6e3157226fbb644f0a8605c8408155f2ddfff75adabb83039c032801fd21"
+  },
+  "checks_passed": [
+    "top_and_two_arm_complete_file_ledgers_exact",
+    "24_sources_and_29_packaged_files_match_local_sha_launch_protocol_and_exit0",
+    "seed11_original_16_unique_train_anchors_identity_cache_raw_sparse_manifest_binding",
+    "two_arms_each_four_updates_four_microsteps_exact_orders_LR_loss_keys_and_384_group_support_checks",
+    "initial_two_anchor_O_CV_receipts_first4_training_pair_hashes_and_16_paired_RNG_records",
+    "logged_VJP_norm_arithmetic_expected_unused_parameters_and_282_Adam_parameter_state_records_at_step4",
+    "reported_resource_ceilings_no_weight_ledger_or_local_checkpoint_and_no_development_scores"
+  ],
+  "source_counts": {
+    "producer_sources": 24,
+    "packaged_sources_and_metadata": 29
+  },
+  "endpoint": {
+    "updates_per_arm": 4,
+    "microsteps_per_update": 4,
+    "examples_per_arm": 16,
+    "scenes": 16,
+    "selected_ordinals": [
+      396,
+      445,
+      60,
+      115,
+      423,
+      146,
+      410,
+      329,
+      285,
+      199,
+      339,
+      139,
+      394,
+      323,
+      174,
+      267
+    ],
+    "job_status": "EXITED_ZERO",
+    "returncode": 0,
+    "PID_observation_utc": "2026-09-16T01:16:50.109268+00:00",
+    "runner_and_child_missing_in_receipt": true
+  },
+  "independent_scalar_recalculations": {
+    "group_support_comparisons": 384,
+    "max_selected_loss_f64_sum_vs_logged_f32_difference": 1.0989606380462646e-07,
+    "max_group_mean_repool_vs_physical_loss_difference": 1.1102230246251565e-16,
+    "max_total_loss_arithmetic_difference": 0.0,
+    "max_gradient_norm_from_parameter_norms_difference": 4.440892098500626e-16,
+    "first4_CE_max_float32_ULPs": 3,
+    "first4_Lovasz_exact": true
+  },
+  "initial_parity": {
+    "two_actual_train_anchors": [
+      396,
+      445
+    ],
+    "all5h3layers_original_O_and_native_hist": "source_bound_runtime_receipts_crosschecked_not_predictions_recomputed",
+    "full_float64_CV": "source_bound_runtime_receipts_and_crossarm_hashes_crosschecked_not_field_recomputed",
+    "first4_paired_training_output_hashes_equal": true
+  },
+  "late_vjp": {
+    "Cpl": {
+      "occupancy": {
+        "future_head": {
+          "norm": 1.5965442592785521,
+          "none_parameters": 0,
+          "nonzero_parameters": 130
+        },
+        "object_encoder": {
+          "norm": 9.628956279882878e-06,
+          "none_parameters": 0,
+          "nonzero_parameters": 4
+        },
+        "pose_head": {
+          "norm": 5.3660808238909895e-06,
+          "none_parameters": 0,
+          "nonzero_parameters": 2
+        },
+        "value_encoder": {
+          "norm": 3.0279339492982784e-05,
+          "none_parameters": 0,
+          "nonzero_parameters": 4
+        },
+        "native_projection": {
+          "norm": 0.0009496876260098435,
+          "none_parameters": 0,
+          "nonzero_parameters": 1
+        }
+      },
+      "physical": {
+        "future_head": {
+          "norm": 0.0,
+          "none_parameters": 130,
+          "nonzero_parameters": 0
+        },
+        "object_encoder": {
+          "norm": 0.0006821026198361313,
+          "none_parameters": 0,
+          "nonzero_parameters": 4
+        },
+        "pose_head": {
+          "norm": 0.12615462295591207,
+          "none_parameters": 0,
+          "nonzero_parameters": 2
+        },
+        "value_encoder": {
+          "norm": 0.0,
+          "none_parameters": 4,
+          "nonzero_parameters": 0
+        },
+        "native_projection": {
+          "norm": 0.0,
+          "none_parameters": 1,
+          "nonzero_parameters": 0
+        }
+      }
+    },
+    "Fix": {
+      "occupancy": {
+        "future_head": {
+          "norm": 1.5965443711844585,
+          "none_parameters": 0,
+          "nonzero_parameters": 130
+        },
+        "object_encoder": {
+          "norm": 9.625094359370254e-06,
+          "none_parameters": 0,
+          "nonzero_parameters": 4
+        },
+        "pose_head": {
+          "norm": 6.646644354745439e-07,
+          "none_parameters": 0,
+          "nonzero_parameters": 2
+        },
+        "value_encoder": {
+          "norm": 3.0272763078610978e-05,
+          "none_parameters": 0,
+          "nonzero_parameters": 4
+        },
+        "native_projection": {
+          "norm": 0.0009496525279043378,
+          "none_parameters": 0,
+          "nonzero_parameters": 1
+        }
+      },
+      "physical": {
+        "future_head": {
+          "norm": 0.0,
+          "none_parameters": 130,
+          "nonzero_parameters": 0
+        },
+        "object_encoder": {
+          "norm": 0.0006821100947879045,
+          "none_parameters": 0,
+          "nonzero_parameters": 4
+        },
+        "pose_head": {
+          "norm": 0.12615497564421255,
+          "none_parameters": 0,
+          "nonzero_parameters": 2
+        },
+        "value_encoder": {
+          "norm": 0.0,
+          "none_parameters": 4,
+          "nonzero_parameters": 0
+        },
+        "native_projection": {
+          "norm": 0.0,
+          "none_parameters": 1,
+          "nonzero_parameters": 0
+        }
+      }
+    }
+  },
+  "optimizer_receipts": {
+    "Cpl": {
+      "head": {
+        "parameters": 130,
+        "all_logged_steps": 4,
+        "tensor_recomputed": false
+      },
+      "new": {
+        "parameters": 11,
+        "all_logged_steps": 4,
+        "tensor_recomputed": false
+      }
+    },
+    "Fix": {
+      "head": {
+        "parameters": 130,
+        "all_logged_steps": 4,
+        "tensor_recomputed": false
+      },
+      "new": {
+        "parameters": 11,
+        "all_logged_steps": 4,
+        "tensor_recomputed": false
+      }
+    }
+  },
+  "address_interventions": {
+    "Cpl": {
+      "future_changed_values": 2845787,
+      "future_total_values": 15360000,
+      "future_max_abs_difference": 2.6702880859375e-05,
+      "future_mean_abs_difference": 1.6046297053738576e-07,
+      "learned_values_and_physical_bytes_exact": true,
+      "t0_all_decoder_logits_exact": true
+    },
+    "Fix": {
+      "future_changed_values": 2845397,
+      "future_total_values": 15360000,
+      "future_max_abs_difference": 2.6702880859375e-05,
+      "future_mean_abs_difference": 1.6051508274964969e-07,
+      "learned_values_and_physical_bytes_exact": true,
+      "t0_all_decoder_logits_exact": true
+    }
+  },
+  "resources": {
+    "phases": {
+      "full_current_geometry_seconds": 78.63070220000373,
+      "native_initialization_seconds": 9.11179452000215,
+      "initial_O_CV_parity_seconds": 3.3528507399969385,
+      "four_paired_updates_seconds": 24.321395489998395,
+      "address_intervention_seconds": 1.8007044800033327
+    },
+    "paired_microstep_seconds": [
+      1.4436692300005234,
+      1.5778938500006916,
+      1.62363500000356,
+      1.583030570000119,
+      1.3582338399937726,
+      1.4045077800037689,
+      1.4704608200045186,
+      1.4272868799962453,
+      1.4584874899956048,
+      1.3979350599984173,
+      1.4206957100032014,
+      1.4743785099999513,
+      2.1490439400004107,
+      1.4874450999996043,
+      1.3798883800045587,
+      1.420443629998772
+    ],
+    "matched_accum4_update_seconds": [
+      6.30541790999996,
+      5.710983859993576,
+      5.801488889999746,
+      6.48684258999856
+    ],
+    "connectivity_VJP_microstep_index": 12,
+    "peak_allocated_bytes": 20683954176,
+    "peak_reserved_bytes": 22726836224,
+    "elapsed_seconds": 122.16458695999609,
+    "timing_scope": "whole wall time includes contract/asset checks, all16 full-grid CPU geometries, native init/parity, four paired accum4 updates, VJPs and address probe",
+    "complete_elapsed_seconds": 122.17580894999992,
+    "outer_runner_seconds": 124.2395547299966,
+    "peak_allocated_gib": 19.2634334564209
+  },
+  "limits": [
+    "No raw gradients, predictions, parameter updates or Adam moment tensors were saved/read/recomputed in this audit.",
+    "Initial tensor equality, frozen-state equality, unused-graph flags and address isolation are authenticated runtime observations, not independent model reruns.",
+    "No new task/GPU/SSH/Torch call, no labels/inputs/large checkpoints/prediction export were loaded; metadata identity/support and scalar arithmetic only.",
+    "Nonzero connection is weak and is not evidence of accuracy improvement, beneficial gradient direction, synergy, or full-validation promotion."
+  ]
+}

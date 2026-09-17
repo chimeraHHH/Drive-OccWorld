@@ -1,0 +1,61 @@
+{
+  "schema": "shared-rigid-formal-pipeline-source-audit-v1",
+  "status": "NO_SOURCE_BLOCKER_FOUND",
+  "created_utc": "2026-09-16T05:16:07.758462+00:00",
+  "source_sha256": {
+    "train_shared_rigid_state_v1.py": "3378bf608b262264eed99124f323b1e2a517faaf706b612256fb8ba2b0156ff3",
+    "shared_rigid_geometry_cache_v1.py": "d47431242dff6d9dba10fbd791e6516739b410282e60bf7f73470186c90fcaaa"
+  },
+  "execution_scope": {
+    "source_read_in_full": true,
+    "Torch_GPU_SSH_or_training": false,
+    "formal_training_endpoint_evaluated": false,
+    "cache_full_NPZ_or_geometry_recomputed": false,
+    "partial_development_scores_read": false
+  },
+  "source_review": {
+    "fresh_O_and_seed11_module": true,
+    "all512x4paired_examples_accum4_512_updates": true,
+    "separate_optimizers_paired_rng_and_input_checks": true,
+    "GT_after_prediction_no_forward_targets": true,
+    "full_current_predicted_owner_CV_float64_path_preserved": true,
+    "source_points_shared640000_XYZ_C_order": true,
+    "NPZ_and10array_SHA_dtype_shape_bytes_on_each_load": true,
+    "fixed_final_payload_head_plus_module_not_standalone_full_model": true,
+    "training_complete_pending_fixed_dev200_is_explicit": true,
+    "partial_or_failed_cache_rejected": true,
+    "QA_cache_rejected_by_default": true,
+    "NPZ_authentication_is_lazy_per_requested_record": true
+  },
+  "cache_actual_metadata": {
+    "complete_sha256": "a2504a0389cb2756032531961e305e22287ec890c96085e5ea29b2e61e4f1c99",
+    "manifest_sha256": "9952c8fb8edcc15fee607d362e1a5a1396e3048d4ebc09945918f88124675ab2",
+    "samples": 712,
+    "split_counts": {
+      "development": 200,
+      "train": 512
+    },
+    "all712_selection_identity_order_and_rawordinal_exact": true,
+    "all712_write_roundtrip_flags": true,
+    "builder_inner_seconds": 905.5870075300045,
+    "workers": 4,
+    "thread_environment": {
+      "MKL_NUM_THREADS": "2",
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2"
+    },
+    "raw_geometry_not_recomputed_here": true,
+    "no_full_cache_arrays_read_here": true
+  },
+  "limits": [
+    "Formal runtime/tensors not independently rerun.",
+    "Full cache small metadata demonstrates a completed712 builder record, not this audit repeating712 bytewise geometry comparisons.",
+    "Cache missing complete, failed.json, wrong source/selection, wrong count/order or QA-only endpoint is rejected; corrupted/missing NPZ is rejected when requested.",
+    "NumPy/compression calls are not preemptible; processpool context waits for active workers, so outer owned-process runner provides hard deadline.",
+    "No cache resumption; failed partial output remains unconsumable and is not overwritten.",
+    "Whole native futurehead trains, so unchanged t0 injection does not guarantee unchanged final t0 logits.",
+    "Physical loss goes into joint rigid module; native futurehead is not a physical readout input.",
+    "Fix keeps learned values and physical residuals; only Gaussian spatial address switches to CV, so Fix occupancy-to-pose may be nonzero."
+  ],
+  "blockers": []
+}

@@ -1,0 +1,418 @@
+{
+  "schema": "object-state-conditioning-primary-supplement-v1",
+  "checked_date": "2026-09-16",
+  "status": "PRIMARY_TEXT_AND_AUTHOR_SOURCE_READ_ONLY_NO_MODEL_RUN",
+  "scope": "Three methods maximum; no changes to frozen V/G experiment. No claim that noisy detector state plus 32 latents is already validated.",
+  "methods": [
+    {
+      "name": "HPP",
+      "paper_url": "https://arxiv.org/html/2402.02426v1",
+      "paper_version": "2402.02426v1",
+      "paper_sections": [
+        "III-C eq2-6",
+        "III-F",
+        "IV-C"
+      ],
+      "author_repo": "https://github.com/georgeliu233/HPP",
+      "commit": "3f99a809fa97817bf19b32167e28c0b1697ea01b",
+      "sources": [
+        {
+          "method": "hpp",
+          "repo": "georgeliu233/HPP",
+          "commit": "3f99a809fa97817bf19b32167e28c0b1697ea01b",
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/georgeliu233/HPP/3f99a809fa97817bf19b32167e28c0b1697ea01b/README.md",
+          "sha256": "e2bb32827572a6995427f666864e677da32550f148576a9459ea5d08033ee18f",
+          "bytes": 2539,
+          "git_blob_sha1": "0deca4a10e5bcd81b37e5380d4db566273df473b",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              1,
+              35
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/hpp/README.md"
+        },
+        {
+          "method": "hpp",
+          "repo": "georgeliu233/HPP",
+          "commit": "3f99a809fa97817bf19b32167e28c0b1697ea01b",
+          "path": "hpp/mmdet3d_plugin/uniad/dense_heads/occ_head.py",
+          "url": "https://raw.githubusercontent.com/georgeliu233/HPP/3f99a809fa97817bf19b32167e28c0b1697ea01b/hpp/mmdet3d_plugin/uniad/dense_heads/occ_head.py",
+          "sha256": "dd40f6166ab6491eabdab08340a3e7ba269b875663d87aaf6ea5bfad3611383a",
+          "bytes": 20237,
+          "git_blob_sha1": "b484158d52d067179d26002426f5d2dbe8150da2",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              173,
+              291
+            ],
+            [
+              335,
+              459
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/hpp/hpp/mmdet3d_plugin/uniad/dense_heads/occ_head.py"
+        },
+        {
+          "method": "hpp",
+          "repo": "georgeliu233/HPP",
+          "commit": "3f99a809fa97817bf19b32167e28c0b1697ea01b",
+          "path": "hpp/mmdet3d_plugin/uniad/dense_heads/motion_head.py",
+          "url": "https://raw.githubusercontent.com/georgeliu233/HPP/3f99a809fa97817bf19b32167e28c0b1697ea01b/hpp/mmdet3d_plugin/uniad/dense_heads/motion_head.py",
+          "sha256": "a9769e5293db8ea824c56ff4958133997cd8b9183f343f305092e32ebe1b4ed6",
+          "bytes": 32412,
+          "git_blob_sha1": "d8cb0fbcc9b36f2f18867f81e5dc153beb158345",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              92,
+              178
+            ],
+            [
+              186,
+              245
+            ],
+            [
+              272,
+              386
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/hpp/hpp/mmdet3d_plugin/uniad/dense_heads/motion_head.py"
+        },
+        {
+          "method": "hpp",
+          "repo": "georgeliu233/HPP",
+          "commit": "3f99a809fa97817bf19b32167e28c0b1697ea01b",
+          "path": "hpp/mmdet3d_plugin/uniad/detectors/uniad_e2e.py",
+          "url": "https://raw.githubusercontent.com/georgeliu233/HPP/3f99a809fa97817bf19b32167e28c0b1697ea01b/hpp/mmdet3d_plugin/uniad/detectors/uniad_e2e.py",
+          "sha256": "1694d1c78a9b7ae7ffbe3be4b9892ba667b0b4c426f996c3ec331ea096faea9f",
+          "bytes": 20072,
+          "git_blob_sha1": "7c92cb551b594435a9909f1c8c5eff2093292746",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              190,
+              223
+            ],
+            [
+              331,
+              347
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/hpp/hpp/mmdet3d_plugin/uniad/detectors/uniad_e2e.py"
+        }
+      ],
+      "boundaries": [
+        "Direct learned agent/motion-query-to-occupancy connection established in inspected source.",
+        "Inspected merge_queries consumes feature queries and max-pools modes; does not directly consume traj_preds/traj_scores. Full paper Eq2 and DOPP variant are not certified by this source path.",
+        "2D instance occupancy and matched-query supervision; no-query output is zero. Not our full 3D support.",
+        "README points to weights; availability and contents not downloaded or verified."
+      ]
+    },
+    {
+      "name": "StreamOcc",
+      "paper_url": "https://arxiv.org/html/2503.22087v3",
+      "paper_version": "2503.22087v3",
+      "paper_date": "2026-06-21",
+      "author_venue_claim": "ECCV 2026",
+      "paper_sections": [
+        "3.2 eq6-10",
+        "4.2",
+        "4.4",
+        "Appendix A.2/B.2"
+      ],
+      "author_repo": "https://github.com/moonseokha/StreamOcc",
+      "commit": "6258be52d1bec9378c1d3670e2e293e50f6b9969",
+      "sources": [
+        {
+          "method": "streamocc",
+          "repo": "moonseokha/StreamOcc",
+          "commit": "6258be52d1bec9378c1d3670e2e293e50f6b9969",
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/moonseokha/StreamOcc/6258be52d1bec9378c1d3670e2e293e50f6b9969/README.md",
+          "sha256": "db08e854d06bd6e201c071275215a05738580fbd84828a8aaf36b2a95b3d3615",
+          "bytes": 5356,
+          "git_blob_sha1": "2b3fcbad36bf983cfcaa92c2973d804728cb5040",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              1,
+              140
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/streamocc/README.md"
+        },
+        {
+          "method": "streamocc",
+          "repo": "moonseokha/StreamOcc",
+          "commit": "6258be52d1bec9378c1d3670e2e293e50f6b9969",
+          "path": "projects/configs/StreamOcc.py",
+          "url": "https://raw.githubusercontent.com/moonseokha/StreamOcc/6258be52d1bec9378c1d3670e2e293e50f6b9969/projects/configs/StreamOcc.py",
+          "sha256": "b6f8e9a16c451bb900a44f493da55a49df6f7f9fbeb7216c8df7fd40cf6c0012",
+          "bytes": 23073,
+          "git_blob_sha1": "7b6e9855f97d0bc9d6c6166e7088837298c0aa46",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              106,
+              117
+            ],
+            [
+              219,
+              250
+            ],
+            [
+              419,
+              440
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/streamocc/projects/configs/StreamOcc.py"
+        },
+        {
+          "method": "streamocc",
+          "repo": "moonseokha/StreamOcc",
+          "commit": "6258be52d1bec9378c1d3670e2e293e50f6b9969",
+          "path": "projects/mmdet3d_plugin/models/heads/queryagg/queryagg.py",
+          "url": "https://raw.githubusercontent.com/moonseokha/StreamOcc/6258be52d1bec9378c1d3670e2e293e50f6b9969/projects/mmdet3d_plugin/models/heads/queryagg/queryagg.py",
+          "sha256": "39ead87b88d88b2a94962a3289b3b116f50adc2278b34e60da7ec9f07041e1b6",
+          "bytes": 26484,
+          "git_blob_sha1": "b942bc8290c847afc20a250643a917f57d973d34",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              352,
+              405
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/streamocc/projects/mmdet3d_plugin/models/heads/queryagg/queryagg.py"
+        },
+        {
+          "method": "streamocc",
+          "repo": "moonseokha/StreamOcc",
+          "commit": "6258be52d1bec9378c1d3670e2e293e50f6b9969",
+          "path": "projects/mmdet3d_plugin/models/heads/queryagg/dqa.py",
+          "url": "https://raw.githubusercontent.com/moonseokha/StreamOcc/6258be52d1bec9378c1d3670e2e293e50f6b9969/projects/mmdet3d_plugin/models/heads/queryagg/dqa.py",
+          "sha256": "cda384ecff6f017f16e5a2e022e30b1602870926d47b3d4a9826dff49ecb228d",
+          "bytes": 19334,
+          "git_blob_sha1": "3331dc0e744b92fd410085aa567552ecf5d8ae61",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              21,
+              58
+            ],
+            [
+              160,
+              208
+            ],
+            [
+              240,
+              393
+            ],
+            [
+              445,
+              487
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/streamocc/projects/mmdet3d_plugin/models/heads/queryagg/dqa.py"
+        },
+        {
+          "method": "streamocc",
+          "repo": "moonseokha/StreamOcc",
+          "commit": "6258be52d1bec9378c1d3670e2e293e50f6b9969",
+          "path": "projects/mmdet3d_plugin/models/heads/queryagg/instance_bank.py",
+          "url": "https://raw.githubusercontent.com/moonseokha/StreamOcc/6258be52d1bec9378c1d3670e2e293e50f6b9969/projects/mmdet3d_plugin/models/heads/queryagg/instance_bank.py",
+          "sha256": "7706f7c834c17734ae7a07d8517752dfe882c2eedaf16ce1c85607f7d3828596",
+          "bytes": 10001,
+          "git_blob_sha1": "d47625b3a5a81bbda5cec267816a2264db032145",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              98,
+              157
+            ],
+            [
+              161,
+              229
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/streamocc/projects/mmdet3d_plugin/models/heads/queryagg/instance_bank.py"
+        }
+      ],
+      "boundaries": [
+        "Current semantic occupancy reconstruction; does not establish future forecasting or physical EPE.",
+        "Published query-to-voxel edges use discrete axis-aligned min/max envelope of predicted rotated corners.",
+        "Training query selection reads GT class/box costs; inference filters by predicted confidence. Not transferable as prediction-only conditioning input.",
+        "Dense residual plus FFN retained; no-edge is not a bitwise identity claim for full module.",
+        "No trained-weight link found in inspected README/tree/releases; no model executed."
+      ]
+    },
+    {
+      "name": "TrajFlow",
+      "paper_url": "https://arxiv.org/html/2501.14266v2",
+      "paper_version": "2501.14266v2",
+      "paper_date": "2025-08-02",
+      "paper_sections": [
+        "4 eq12/28",
+        "5 experiment support",
+        "6 density visualization and marginal-trajectory limitations"
+      ],
+      "author_repo": "https://github.com/UMN-Choi-Lab/TrajFlow",
+      "commit": "e7fe0339e004e4a2703e482521e96f3feb13da88",
+      "sources": [
+        {
+          "method": "trajflow_v2official",
+          "repo": "UMN-Choi-Lab/TrajFlow",
+          "commit": "e7fe0339e004e4a2703e482521e96f3feb13da88",
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/UMN-Choi-Lab/TrajFlow/e7fe0339e004e4a2703e482521e96f3feb13da88/README.md",
+          "sha256": "3b95496eee9d1260a25a7892937276f2128e8c91cc764e535cb50bd8b71cdafe",
+          "bytes": 1551,
+          "git_blob_sha1": "157020b48111a130dd9035ff6f408399a0576865",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              1,
+              30
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/trajflow_v2official/README.md"
+        },
+        {
+          "method": "trajflow_v2official",
+          "repo": "UMN-Choi-Lab/TrajFlow",
+          "commit": "e7fe0339e004e4a2703e482521e96f3feb13da88",
+          "path": "model/TrajFlow.py",
+          "url": "https://raw.githubusercontent.com/UMN-Choi-Lab/TrajFlow/e7fe0339e004e4a2703e482521e96f3feb13da88/model/TrajFlow.py",
+          "sha256": "3a2a9c4c40e595a71e26ba1f1f830012d15ad5cbd79138df147b098bbbf6fc5a",
+          "bytes": 6062,
+          "git_blob_sha1": "2e36a6272b14f14a7e2123f1fd75e6ac366ffbc0",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              37,
+              53
+            ],
+            [
+              75,
+              167
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/trajflow_v2official/model/TrajFlow.py"
+        },
+        {
+          "method": "trajflow_v2official",
+          "repo": "UMN-Choi-Lab/TrajFlow",
+          "commit": "e7fe0339e004e4a2703e482521e96f3feb13da88",
+          "path": "train.py",
+          "url": "https://raw.githubusercontent.com/UMN-Choi-Lab/TrajFlow/e7fe0339e004e4a2703e482521e96f3feb13da88/train.py",
+          "sha256": "45f36683b6ba1a8481e0d0ef5691c1203d937b9e992646bb2b9c5bf6980d60b8",
+          "bytes": 1606,
+          "git_blob_sha1": "c5f4cac33cbf18d5d15a3c89065f0cc03fcff22d",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              5,
+              30
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/trajflow_v2official/train.py"
+        },
+        {
+          "method": "trajflow_v2official",
+          "repo": "UMN-Choi-Lab/TrajFlow",
+          "commit": "e7fe0339e004e4a2703e482521e96f3feb13da88",
+          "path": "visualize.py",
+          "url": "https://raw.githubusercontent.com/UMN-Choi-Lab/TrajFlow/e7fe0339e004e4a2703e482521e96f3feb13da88/visualize.py",
+          "sha256": "2179fde171cbc49ddcae121ff0e0a93cca7d2bc4ab8a808b3515711e8cf12af6",
+          "bytes": 5222,
+          "git_blob_sha1": "bcbb8d1149bc48abfdb8cd3aa0fb182fb552ffdd",
+          "git_blob_verified": true,
+          "reviewed_lines": [
+            [
+              23,
+              59
+            ],
+            [
+              111,
+              139
+            ]
+          ],
+          "local_path": "analysis/o_motion_20260915/object_state_sources_supplement_v1/trajflow_v2official/visualize.py"
+        }
+      ],
+      "boundaries": [
+        "v2 paper links the organization repository; earlier kosieram21 snapshot was discovery evidence only.",
+        "Per-agent historical trajectory/kinematics to future position conditional density; not full 3D occupancy or detector-miss benchmark.",
+        "Future positions are training density samples, not forecast input in sample path.",
+        "Visualization divides density by maximum; this is not calibrated voxel Bernoulli occupancy or full scene-flow.",
+        "No trained-weight link found in inspected README/tree/releases."
+      ]
+    }
+  ],
+  "repository_audit": [
+    {
+      "repo": "georgeliu233/HPP",
+      "commit": "3f99a809fa97817bf19b32167e28c0b1697ea01b",
+      "date": "2026-03-22T06:39:14Z",
+      "license": null,
+      "releases": [],
+      "license_files": [],
+      "weights_files": []
+    },
+    {
+      "repo": "moonseokha/StreamOcc",
+      "commit": "6258be52d1bec9378c1d3670e2e293e50f6b9969",
+      "date": "2026-06-18T17:32:45Z",
+      "license": null,
+      "releases": [],
+      "license_files": [],
+      "weights_files": []
+    },
+    {
+      "repo": "UMN-Choi-Lab/TrajFlow",
+      "commit": "e7fe0339e004e4a2703e482521e96f3feb13da88",
+      "date": "2025-10-16T21:48:05Z",
+      "license": null,
+      "releases": [],
+      "license_files": [],
+      "weights_files": [],
+      "code_files": [
+        "README.md",
+        "datasets/Dataset.py",
+        "datasets/EthUcy.py",
+        "datasets/InD.py",
+        "evaluate.py",
+        "main.py",
+        "model/TrajFlow.py",
+        "model/encoder/CDE.py",
+        "model/encoder/GRU.py",
+        "model/flow/CNF.py",
+        "model/flow/DNF.py",
+        "model/layers/MovingBatchNorm.py",
+        "model/layers/Spline.py",
+        "model/layers/SquashLinear.py",
+        "train.py",
+        "visualize.py",
+        "visualize_temp.py"
+      ]
+    }
+  ],
+  "file_ledger": "analysis/o_motion_20260915/object_state_sources_supplement_v1/files.json",
+  "file_ledger_sha256": "308bf7b95226b71c0daf4fd71ee3de00fd2e3c27080f7e32ae3126db68d357cc",
+  "new_hypotheses_not_results": [
+    "Prediction-state-to-output sensitivity may encode scene-wide statistics rather than object-specific correspondence.",
+    "Compression/association is a possible implementation bottleneck, not a theorem that 32 latents represent at most 32 objects.",
+    "Future optional velocity-assignment intervention preserves original evaluation support; it is not a new success gate."
+  ],
+  "execution": {
+    "external_models_run": false,
+    "training_updates": 0,
+    "GPU_jobs": 0,
+    "frozen_experiment_modified": false,
+    "source_texts_downloaded_only": true
+  }
+}

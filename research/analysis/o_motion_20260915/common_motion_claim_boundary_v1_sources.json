@@ -1,0 +1,44 @@
+{
+  "schema": "output-only-motion-probe-primary-sources-v1",
+  "access_date": "2026-09-15",
+  "new_papers": 2,
+  "scope": "Read-only primary literature and official author code; no training or copied implementation",
+  "sources": [
+    {
+      "title": "MotionNet: Joint Perception and Motion Prediction for Autonomous Driving Based on Bird's Eye View Maps",
+      "authors": ["Pengxiang Wu", "Siheng Chen", "Dimitris N. Metaxas"],
+      "year": 2020,
+      "venue": "CVPR",
+      "paper_url": "https://arxiv.org/pdf/2003.06754",
+      "publisher_url": "https://openaccess.thecvf.com/content_CVPR_2020/html/Wu_MotionNet_Joint_Perception_and_Motion_Prediction_for_Autonomous_Driving_Based_CVPR_2020_paper.html",
+      "read_sections": ["3.1-3.5, PDF pages 3-5"],
+      "repo": "https://github.com/merlresearch/MotionNet",
+      "commit": "aea30a1777f06e83f65fa4cb3e93ae95519d9a5b",
+      "license_readme": "AGPL-3.0-or-later; adapted nuscenes-devkit CC-BY-NC-SA-4.0",
+      "files": [
+        {"path": "model.py", "sha256": "ec278c5972bf9a5384d9ab68b4aef3ae9bd6850a71ca91bf98615b680c340201", "lines": [[39, 51], [194, 220]]},
+        {"path": "data/nuscenes_dataloader.py", "sha256": "829f2cbe16b2b046b94fd8b2f3eee554fe52da6cbb550addfd95418995fc0976", "lines": [[123, 132]]},
+        {"path": "data/data_utils.py", "sha256": "c349aa0aac873ad03c76191e688359f9fd71668abc66c3f6c09168e2e9363fbb", "lines": [[61, 108], [228, 263], [455, 526]]},
+        {"path": "eval.py", "sha256": "a75f5549c1591c0b2e5af08d02e753522c69460fd4126e7cef8d35b4ccbfc237", "lines": [[141, 178], [196, 233]]}
+      ],
+      "transfer_limit": "Historical LiDAR binary voxels and supervised 2D dense motion; not a pretrained or official predicted-GMO-to-flow evaluator. Original masks, thresholds and box-derived target generation are not adopted."
+    },
+    {
+      "title": "Designing and Interpreting Probes with Control Tasks",
+      "authors": ["John Hewitt", "Percy Liang"],
+      "year": 2019,
+      "venue": "EMNLP-IJCNLP",
+      "paper_url": "https://aclanthology.org/D19-1275.pdf",
+      "read_sections": ["2-3, PDF pages 3-6"],
+      "repo": "https://github.com/john-hewitt/control-tasks",
+      "commit": "be70d7f42324797dcf2bb5360a94d8e64100fea8",
+      "files": [
+        {"path": "README.md", "sha256": "15f327056e2a556f27fc07c9e76903d09f9f36229de55e59dd5a1f9bc9b161d1", "lines": [[47, 53], [120, 129]]},
+        {"path": "control-tasks/probe.py", "sha256": "33b66322a3a882044f6ed18de63b0fe9e85a6bfdcdcaf134c0bc88aa41e1d09f", "lines": [[366, 451]]},
+        {"path": "control-tasks/data.py", "sha256": "f90b92e2a2e327f1e9a14581f86bd45b4340a20a4b5cadb3582838e8852c21e2", "lines": [[39, 59]]}
+      ],
+      "transfer_limit": "NLP control-task evidence about probe expressivity; not a motion-identifiability theorem or a source for a standard t0-only occupancy control."
+    }
+  ],
+  "not_found_claim": "The two verified additions do not define an official frozen predicted-binary-GMO-to-box-displacement benchmark; the proposed probe contract is project-specific."
+}

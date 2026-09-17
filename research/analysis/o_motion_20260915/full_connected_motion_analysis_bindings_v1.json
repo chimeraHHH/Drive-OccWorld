@@ -1,0 +1,27 @@
+{
+  "schema": "full-connected-motion-analysis-bindings-v1",
+  "created_utc": "2026-09-15T17:27:12.193212+00:00",
+  "status": "FROZEN_BEFORE_ROOT_FINAL_J_D_RESULT_ANALYSIS",
+  "sources_sha256": {
+    "native_full_o_stream_v1.py": "3a8d338de78caae5d73e11012cd9cec38a47621913ddbb0bbda9cfae6e510bef",
+    "full_connected_motion_evaluation_v1.py": "6f8656a249973bd2a45cb781086170eb8bbc72821ecff0556c576728bc82c1a2",
+    "merge_full_connected_motion_v1.py": "78474cb5a4f8345cc59653443cef11600e90b1ec5d0532e9ab99f5fc48c05e51",
+    "summarize_connected_motion_v1.py": "3b0822c7d4c9218211dfec7c7d6854fd67b28f9b43640134dfe2228690a2c40e",
+    "summarize_common_change_v2.py": "318dee1a19fbd5b0863f50d2e0346723d7050329b55170cb8efac60929b962ae"
+  },
+  "training_protocol_sha256": "e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259",
+  "comparison_contract_sha256": "5ad21424bab877fd1fb0739a3b2ba35904d36dee50aea7b78f4035f64de4d0dd",
+  "native_engineering_complete_sha256": "c35bbe651fe0f28f7d8bbd2c7cf02f50dae893b2bba356cf4931beb26dcebe43",
+  "full_population": {
+    "samples": 5119,
+    "scenes": 150,
+    "selection_sha256": "60811c8a0847eaf38caeac489eb5dafc3f34cf90b402e640a182356a620eb391"
+  },
+  "requires_real_completed_training_before_evaluation": true,
+  "real_J_D_native_pilot_not_yet_run": true,
+  "full_evaluation_not_yet_run": true,
+  "no_goal_success_from_development": true,
+  "physical_support_check": "Every P/J/D instance-horizon/group/source_points/dt matches actual full sparse NPZ independently; O has no flow",
+  "statistics": "Original per-horizon pooled GMO and scene-paired10000 seed11; original motion and common risk functions unchanged",
+  "sources_reviews": "Root plus independent agent; engineering code readiness does not imply candidate efficacy"
+}

@@ -1,0 +1,479 @@
+{
+  "schema": "eulerian-lagrangian-motion-primary-source-review-v1",
+  "created_at_utc": "2026-09-15T20:08:30.188654+00:00",
+  "scope": [
+    "FIERY",
+    "BEVerse"
+  ],
+  "execution": {
+    "external_models_executed": false,
+    "dependencies_installed": false,
+    "server_access": false,
+    "training_started": false,
+    "protocols_modified": false,
+    "KB_partial_scores_read": false
+  },
+  "report_file": "analysis/o_motion_20260915/eulerian_lagrangian_motion_source_review_v1.md",
+  "report_sha256": "dd8fdc295e4b28bf4717b4e2975440ce996693362fe224acf91b2243feecc036",
+  "methods": [
+    {
+      "name": "FIERY",
+      "official_repository": "https://github.com/wayveai/fiery",
+      "commit": "fd03f164935ac172ef6d96117a7a4873abf23919",
+      "commit_time": "2022-09-21T13:26:03Z",
+      "commit_api_receipt": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/commit.json",
+      "commit_api_receipt_sha256": "ff86ad389362ce1bb90e8e8581ad058b161c02c8b46bdfa999512ab39ee581fc",
+      "tree_api_receipt_sha256": "d31e08f0beb539de3347246891037663c2ba829fb16e80343621580b75056397",
+      "paper": {
+        "url": "https://arxiv.org/pdf/2104.10490",
+        "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery_paper.pdf",
+        "sha256": "f384f42bd8ff292d3acacbe6d78fa065d2f867132f8474f4ba868200b9a0d6d2",
+        "pages_read_1based": [
+          3,
+          4,
+          5,
+          6,
+          14
+        ],
+        "sections": [
+          "3.3",
+          "3.5",
+          "3.6",
+          "3.7",
+          "4.1",
+          "B.2"
+        ],
+        "version_note": "Downloaded exact bytes are hash bound; no inference from current branch after commit selection."
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/LICENSE",
+          "sha256": "2eaa55730268c9c57e40dbc136895ab291fb162f9bc8495c9bd4833d120d01c0",
+          "git_blob_sha1": "87996f1b3429c4cb899d0d09092ef77259ca5468",
+          "tree_blob_match": true,
+          "reviewed_ranges": [],
+          "review_depth": "retrieved_context_not_claimed_fully_reviewed",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/LICENSE",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/LICENSE"
+        },
+        {
+          "path": "fiery/configs/baseline.yml",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/configs/baseline.yml",
+          "sha256": "0d3ab54cd538c59cafd23e6291d8073f5bff04954e565d5e0e1955a7a71e5c56",
+          "git_blob_sha1": "e7003477adf80514868ecfa7f826017df41b0ebb",
+          "tree_blob_match": true,
+          "reviewed_ranges": [],
+          "review_depth": "retrieved_context_not_claimed_fully_reviewed",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/configs/baseline.yml",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/configs/baseline.yml"
+        },
+        {
+          "path": "fiery/data.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/data.py",
+          "sha256": "a728f8f536efaf992ddd35cfa80ad4ffd5a567a9579d7f01e2a1fb03a6e89809",
+          "git_blob_sha1": "aa2aaf8e19eb9d97b0310f9aba70bd717e266c73",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              241,
+              297
+            ],
+            [
+              312,
+              340
+            ],
+            [
+              378,
+              425
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/data.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/data.py"
+        },
+        {
+          "path": "fiery/losses.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/losses.py",
+          "sha256": "77496191e2b9a62f3670a70969e83b0c187af04ffe3f2ec8bfcbbc534100d3e2",
+          "git_blob_sha1": "4567266d69025f85bcf1397de59b49be8b517542",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              6,
+              37
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/losses.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/losses.py"
+        },
+        {
+          "path": "fiery/models/decoder.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/models/decoder.py",
+          "sha256": "fdc54cfbe92ff4a458cf08024c877c8263788015c7d9a896d7a613dc00ffb729",
+          "git_blob_sha1": "ed111db9f826f30f079b0ce652d9c709c07c586a",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              35,
+              90
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/models/decoder.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/models/decoder.py"
+        },
+        {
+          "path": "fiery/models/fiery.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/models/fiery.py",
+          "sha256": "4824aafcc5266c1e111944a7374d890bcbecbefdddb4acaa25a5d326f81c3978",
+          "git_blob_sha1": "488a3a2c69343c31a01a9a6b852a4f23bb597dd1",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              87,
+              170
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/models/fiery.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/models/fiery.py"
+        },
+        {
+          "path": "fiery/models/future_prediction.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/models/future_prediction.py",
+          "sha256": "2b4a54de338318d002444de25f38cb80b42a25c166ab28884eea449a1393e255",
+          "git_blob_sha1": "e4aa2af48219ffd46d594c1acfc8ba6b5f0a986a",
+          "tree_blob_match": true,
+          "reviewed_ranges": [],
+          "review_depth": "retrieved_context_not_claimed_fully_reviewed",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/models/future_prediction.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/models/future_prediction.py"
+        },
+        {
+          "path": "fiery/trainer.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/trainer.py",
+          "sha256": "e5073563d326a72eb4847b33ddbc07e540bec3f1044895c83d8c477e13fdbf13",
+          "git_blob_sha1": "2103fbe657782d50e5b817bca77dc29bfa6c59d6",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              35,
+              65
+            ],
+            [
+              95,
+              129
+            ],
+            [
+              133,
+              187
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/trainer.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/trainer.py"
+        },
+        {
+          "path": "fiery/utils/geometry.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/utils/geometry.py",
+          "sha256": "14596f1551013a89ecca972b7ac2f4d687dd16e1e2f2b8e946a2595307271075",
+          "git_blob_sha1": "a1dc0c3f0573a0baed7f05dce90cd4d9f89553c1",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              183,
+              222
+            ],
+            [
+              256,
+              280
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/utils/geometry.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/utils/geometry.py"
+        },
+        {
+          "path": "fiery/utils/instance.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/fiery/fiery/utils/instance.py",
+          "sha256": "90351fea6ffa3878c6b1ddee1123668cbfbc51b61d42124eb79b138db2df7979",
+          "git_blob_sha1": "3d6a076b6fee4cf7a9e0f64bbf3eed6bc03d1534",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              12,
+              77
+            ],
+            [
+              94,
+              144
+            ],
+            [
+              173,
+              269
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/wayveai/fiery/blob/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/utils/instance.py",
+          "raw_url": "https://raw.githubusercontent.com/wayveai/fiery/fd03f164935ac172ef6d96117a7a4873abf23919/fiery/utils/instance.py"
+        }
+      ]
+    },
+    {
+      "name": "BEVerse",
+      "official_repository": "https://github.com/zhangyp15/BEVerse",
+      "commit": "5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be",
+      "commit_time": "2022-07-29T02:24:05Z",
+      "commit_api_receipt": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/commit.json",
+      "commit_api_receipt_sha256": "938291bbdc8ea0373ec3a98cb2eb6f3dde9a689def70f242f122929adacefd3f",
+      "tree_api_receipt_sha256": "2b309acb6fa348ff4d9f47662de449c1c00d6b45de4dbf6f0fc86d0f3eebd64c",
+      "paper": {
+        "url": "https://arxiv.org/pdf/2205.09743",
+        "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/beverse_paper.pdf",
+        "sha256": "5ba1dfd4ba74a62fdcbd9f1747ddb815136cc788504412986cac6a013f789aef",
+        "pages_read_1based": [
+          4,
+          5
+        ],
+        "sections": [
+          "3.3",
+          "3.4",
+          "Figure 3",
+          "Table 3"
+        ],
+        "version_note": "Downloaded exact bytes are hash bound; no inference from current branch after commit selection."
+      },
+      "files": [
+        {
+          "path": "projects/configs/beverse_singleframe_tiny.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/configs/beverse_singleframe_tiny.py",
+          "sha256": "0a1db4d018b61b675923b734e36a5c8d3e7520818f08c5c182357caf39553eaf",
+          "git_blob_sha1": "9ffefb0b606c1e0ca81770ee7610c53b8c12d4f2",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              173,
+              200
+            ],
+            [
+              260,
+              284
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/configs/beverse_singleframe_tiny.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/configs/beverse_singleframe_tiny.py"
+        },
+        {
+          "path": "projects/configs/beverse_tiny.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/configs/beverse_tiny.py",
+          "sha256": "d15b29f2c38a4c69b845d9535c815533373debf488515be3f78e02879d54daa8",
+          "git_blob_sha1": "d94122270a21b72e2fba3cdd73f72673bd9ae621",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              1,
+              87
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/configs/beverse_tiny.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/configs/beverse_tiny.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/datasets/mtl_nuscenes_dataset_ego.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/datasets/mtl_nuscenes_dataset_ego.py",
+          "sha256": "b252b7687f1db1b9c11a6ff5074806c40eeee38b3b4521ab774d9020cf3793de",
+          "git_blob_sha1": "0ce692cda2a4eed75907d8e318b9d8b6e094f7f6",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              428,
+              481
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/mtl_nuscenes_dataset_ego.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/mtl_nuscenes_dataset_ego.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/datasets/pipelines/motion_labels.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/datasets/pipelines/motion_labels.py",
+          "sha256": "f6f0299b5f1ceeb8f12bb87d63d3a16a9a975b33ebcc19fa9b0fdea8012ea773",
+          "git_blob_sha1": "a3710250ad9fa1aef71c6c33cafe61a4741c67f8",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              20,
+              42
+            ],
+            [
+              44,
+              146
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/pipelines/motion_labels.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/pipelines/motion_labels.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/datasets/utils/geometry.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/datasets/utils/geometry.py",
+          "sha256": "48b2514844bc4c8a2661583ec034b696464ac77aabb82794e67cae9fc0c6508d",
+          "git_blob_sha1": "8444f2ba4f0fb809773d162865409f957c1ad8b5",
+          "tree_blob_match": true,
+          "reviewed_ranges": [],
+          "review_depth": "retrieved_context_not_claimed_fully_reviewed",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/utils/geometry.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/utils/geometry.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/datasets/utils/instance.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/datasets/utils/instance.py",
+          "sha256": "3c1f2224dbe08bfedc5224d3614b1681da7154aae451e83cbd74ba3f623b7b8f",
+          "git_blob_sha1": "ba3d84157daf59780a9ab498f70c01faa4b86405",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              87,
+              170
+            ],
+            [
+              272,
+              376
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/utils/instance.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/utils/instance.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/datasets/utils/warper.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/datasets/utils/warper.py",
+          "sha256": "92ae4b073dc53f69f7c27ffd6fb34b331f4ac6cc15cc719dde125266f8de5e17",
+          "git_blob_sha1": "77f7b3bf376d60ba932831e57b9f499215a6c131",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              18,
+              132
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/utils/warper.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/datasets/utils/warper.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/models/dense_heads/loss_utils.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/models/dense_heads/loss_utils.py",
+          "sha256": "c01f1bcfd33368f5a75700752ff04369104bdef93717b1b9a1fbc18c3623b62f",
+          "git_blob_sha1": "5ce260293fa5eb6a933c5e55f4cdfb3753dac9b6",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              180,
+              224
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/dense_heads/loss_utils.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/dense_heads/loss_utils.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/models/motion_heads/_base_motion_head.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/models/motion_heads/_base_motion_head.py",
+          "sha256": "afbf961f2b58fee8df004f48d97905df96b857f53cd56a47ac8639b08c4b5404",
+          "git_blob_sha1": "60fa44cb096d9ad1ac13c1d4fb1149392de0eadb",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              143,
+              170
+            ],
+            [
+              296,
+              360
+            ],
+            [
+              362,
+              452
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_heads/_base_motion_head.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_heads/_base_motion_head.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/models/motion_heads/fierymotion.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/models/motion_heads/fierymotion.py",
+          "sha256": "7f6b70b3e965583b5f2599733e905815064633703efa432c4095dc47e6411a67",
+          "git_blob_sha1": "5dffce44ed5481857756a4d4000dd532ab620e5b",
+          "tree_blob_match": true,
+          "reviewed_ranges": [],
+          "review_depth": "retrieved_context_not_claimed_fully_reviewed",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_heads/fierymotion.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_heads/fierymotion.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py",
+          "sha256": "01cb530ad3bb0d4eb317ca95daf1458b1cf5c9960e3738156803b009981392e7",
+          "git_blob_sha1": "a8dd380da44114b93dc156eccb250edd88a0dd82",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              18,
+              91
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/models/motion_modules.py",
+          "local_path": "analysis/o_motion_20260915/sources_eulerian_motion_v1/BEVerse/projects/mmdet3d_plugin/models/motion_modules.py",
+          "sha256": "e3b5d9bb7b2559ace604428774a58e5201bc1660ffe6c330c0ed468554e4aa06",
+          "git_blob_sha1": "3cba2559ac2241eb86b16c6c7dcc979b7456bde2",
+          "tree_blob_match": true,
+          "reviewed_ranges": [
+            [
+              149,
+              227
+            ],
+            [
+              230,
+              325
+            ],
+            [
+              434,
+              449
+            ]
+          ],
+          "review_depth": "targeted_read",
+          "permalink": "https://github.com/zhangyp15/BEVerse/blob/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_modules.py",
+          "raw_url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_modules.py"
+        }
+      ]
+    }
+  ],
+  "local_context": [
+    {
+      "path": "analysis/o_motion_20260915/future_state_motion_v1.py",
+      "sha256": "96e796dd5bb6d33949a03a6c451919ef2e19c75b81eaea4b10e2c98f8ecc176e"
+    },
+    {
+      "path": "analysis/m0_improvement_20260915/coordinate_contract_audit.md",
+      "sha256": "14158ef05c2ed6010c33f7b6062f93572c5c37419e9e211b35dc568bcf4afb30"
+    }
+  ],
+  "key_distinctions": {
+    "FIERY_instance_flow": "one_step_forward_raster_centroid_displacement_on_each_source_time_instance_mask",
+    "BEVerse_instance_flow": "same_supervised_instance_flow_family_as_FIERY",
+    "BEVerse_feature_flow": "separate_target_grid_backward_sampling_offset_with_no_direct_instance_flow_label_loss",
+    "KB": "t0_source_indexed_rigid_material_point_displacement_from_native_same_index_hidden_features; no proved fixed_R_hidden_frame",
+    "ego_vector_warp_caveat": "Spatial resampling of a two-channel vector field does not itself rotate vector components. Source-chain inference, no model effect measured."
+  }
+}

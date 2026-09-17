@@ -1,0 +1,2 @@
+# Research receipts are byte-exact archives; preserve CSV CRLF and source EOFs.
+research/analysis/** -text whitespace=cr-at-eol,-blank-at-eof

@@ -1,0 +1,35 @@
+{
+  "status": "FIXED_BEFORE_FULL_TRACKER_RESULTS",
+  "source_sha256": "d159ddfcf7859d96da0dbe66db5a81a28d0c1c634893b443bf77e1cd73b6710c",
+  "arms": [
+    "zero",
+    "D",
+    "CRN_CV",
+    "CV_D_speed05",
+    "surface_all_zero",
+    "surface_quality_zero",
+    "CV_surface_all_uncovered",
+    "CV_surface_quality_uncovered"
+  ],
+  "variants": [
+    "delta",
+    "raft_matched"
+  ],
+  "radius_m": 1,
+  "grid_stride": 32,
+  "grid_phase": 4,
+  "quality_masks": {
+    "delta": "official predicted vis >0.9 at past",
+    "raft_matched": "original RAFT FB<=1px"
+  },
+  "horizons_s": [
+    0.5,
+    1,
+    1.5,
+    2
+  ],
+  "primary_time": "nominal for all arms",
+  "sensitivity_only": "actual future dt for CV and surface; D unchanged",
+  "population": "all original points, all valid objects; zero fallback and covered-CV hybrids",
+  "fitting": false
+}

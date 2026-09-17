@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE",
+  "schema": "m0-objective-supervision-aggregate-complete-v1",
+  "summary_sha256": "46c37b5b074e73896e357e0bc9744a538abb01b288521769a577f459be54ad6b",
+  "files_sha256": {
+    "summary.json": "46c37b5b074e73896e357e0bc9744a538abb01b288521769a577f459be54ad6b",
+    "report.md": "29aa971b31eeef25e51eb430f3a28db222c50e25af36318c3ce7ef81d85346c5",
+    "metrics.csv": "5ae79810c616460fee4a6531770d1d22e813ad24d879a150efd33131cd631983",
+    "contrasts.csv": "593c86b2d8889b761f98fd66bc781744af31aaf606e4f223c7a130e147c95b6e"
+  },
+  "objective_protocol_sha256": "275b2551775b169471cb230a1416d0454c0560d229c4fe9b7ec5166cfc4c460d",
+  "samples": 200,
+  "scenes": 100,
+  "models": [
+    "M0",
+    "M0_fp32",
+    "native1",
+    "F",
+    "O"
+  ],
+  "seconds": 2.8354321100050583
+}

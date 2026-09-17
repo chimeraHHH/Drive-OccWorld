@@ -1,0 +1,23 @@
+{
+  "status": "DRAFT_STATIC_ONLY_NATIVE_UNEXECUTED",
+  "sources_sha256": {
+    "object_state_forecast_train_v1.py": "2841aeaa533b4883e635014fa74d22520d94890ef1939a136f75beb8366ad162",
+    "object_state_forecast_development_inputs_v1.py": "7cd498d13d45d5960c6f494ebf7b750718b397d90720ecd745a8c527b0dace06"
+  },
+  "checks": {
+    "gt_only_AST_exact": true,
+    "verify_common_denominators_AST_exact": true,
+    "append_many_AST_exact": true
+  },
+  "python_executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "parser_feature_version": [
+    3,
+    10
+  ],
+  "Torch_forward_performed": false,
+  "optimizer_updates": 0,
+  "conditioner_v2_binding_pending": false,
+  "formal_resource_frozen": false,
+  "conditioner_v2_bound_sha256": "dad88c05105d85d9b2a6094c687630f1d661cd7a4e35be42a15a5d01b94a8f36",
+  "actual_native_preflight_pending": true
+}

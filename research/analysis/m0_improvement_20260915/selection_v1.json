@@ -1,0 +1,4284 @@
+{
+  "schema": "native-state-selection-v1",
+  "catalog_sha256": "b59f92a4488dc465130b9477f50bcf6b16469b27b26205443f6878cf022c90f1",
+  "rule": "SHA ordered scenes, two evenly spaced interior usable positions per scene; identities only",
+  "records": [
+    {
+      "sample_token": "464fe0be05a74ec9852573cb9e3afd89",
+      "scene_token": "1ad821fcfc9f4c24bb879ec7d5ba0ec1",
+      "official_index": 9899,
+      "split": "train"
+    },
+    {
+      "sample_token": "ac2bf219e68b4809b2321f779d5b6eb5",
+      "scene_token": "1ad821fcfc9f4c24bb879ec7d5ba0ec1",
+      "official_index": 9917,
+      "split": "train"
+    },
+    {
+      "sample_token": "1dacdffab5c240f1b20e05566b940ef6",
+      "scene_token": "d2db9f5df62c4d338d3bed43f616b954",
+      "official_index": 23322,
+      "split": "train"
+    },
+    {
+      "sample_token": "8f4744720f3d43a1a28c0751cc3182ac",
+      "scene_token": "d2db9f5df62c4d338d3bed43f616b954",
+      "official_index": 23340,
+      "split": "train"
+    },
+    {
+      "sample_token": "0e2e9cc881f845bbb38bad8fa367376f",
+      "scene_token": "634a8c5835e44aec912604a9a1972a5d",
+      "official_index": 346,
+      "split": "train"
+    },
+    {
+      "sample_token": "792f03b28270411aa517a77b213e9321",
+      "scene_token": "634a8c5835e44aec912604a9a1972a5d",
+      "official_index": 363,
+      "split": "train"
+    },
+    {
+      "sample_token": "f321f91b34444807947e73f80b5c045b",
+      "scene_token": "65cfdc10a42e499ea704c617e077afe0",
+      "official_index": 17058,
+      "split": "train"
+    },
+    {
+      "sample_token": "d5b3d5e487394761af1d9bd5cd3bdec6",
+      "scene_token": "65cfdc10a42e499ea704c617e077afe0",
+      "official_index": 17075,
+      "split": "train"
+    },
+    {
+      "sample_token": "f2d49101073a4317857c3c47dc0126f7",
+      "scene_token": "212b65c558254e2084489bf76e371e1a",
+      "official_index": 5963,
+      "split": "train"
+    },
+    {
+      "sample_token": "6040d435ce9c4b83a13fd5a73ae9e6c6",
+      "scene_token": "212b65c558254e2084489bf76e371e1a",
+      "official_index": 5980,
+      "split": "train"
+    },
+    {
+      "sample_token": "64c0e2fd8adc47c895531c7d13e3bfd2",
+      "scene_token": "e12dee10fe2545e4ab88459ed4268bc6",
+      "official_index": 21505,
+      "split": "train"
+    },
+    {
+      "sample_token": "c6833999e8454f7c9793b8a967eede89",
+      "scene_token": "e12dee10fe2545e4ab88459ed4268bc6",
+      "official_index": 21523,
+      "split": "train"
+    },
+    {
+      "sample_token": "9a8cb194cb624978be61a06d5727c186",
+      "scene_token": "1c76efe7d0b048bc815c0445eeaa76ab",
+      "official_index": 9556,
+      "split": "train"
+    },
+    {
+      "sample_token": "9febea5a0e73433abc0d6a8b9702553a",
+      "scene_token": "1c76efe7d0b048bc815c0445eeaa76ab",
+      "official_index": 9574,
+      "split": "train"
+    },
+    {
+      "sample_token": "2b10042df3774a69bb15174c5d5d0825",
+      "scene_token": "2cc8ffb250c44b42a888e9185810e04c",
+      "official_index": 17538,
+      "split": "train"
+    },
+    {
+      "sample_token": "6e837d5dad9d40b5b98dc64c2402d7df",
+      "scene_token": "2cc8ffb250c44b42a888e9185810e04c",
+      "official_index": 17555,
+      "split": "train"
+    },
+    {
+      "sample_token": "125bf46a76ac4b45852d9771e005dc07",
+      "scene_token": "e5514b8f435e475cac4eba74b44773b5",
+      "official_index": 23768,
+      "split": "train"
+    },
+    {
+      "sample_token": "6372712792144ebe9443900597ffbaef",
+      "scene_token": "e5514b8f435e475cac4eba74b44773b5",
+      "official_index": 23785,
+      "split": "train"
+    },
+    {
+      "sample_token": "6c40abdc4cb845c88f737a285c820e17",
+      "scene_token": "7809330e0345423ab6212787edf3561b",
+      "official_index": 8381,
+      "split": "train"
+    },
+    {
+      "sample_token": "f221e5f40a6147cd85fc75d1362ca34d",
+      "scene_token": "7809330e0345423ab6212787edf3561b",
+      "official_index": 8398,
+      "split": "train"
+    },
+    {
+      "sample_token": "0b03409f980d495f8895785ec6963cb6",
+      "scene_token": "03ee880dd4e348f4b3407f0d073c7c70",
+      "official_index": 920,
+      "split": "train"
+    },
+    {
+      "sample_token": "c0cc6b799a424a3cbad4bcf8a6920359",
+      "scene_token": "03ee880dd4e348f4b3407f0d073c7c70",
+      "official_index": 937,
+      "split": "train"
+    },
+    {
+      "sample_token": "0ad1dc79bcf642838081403fe51c4a5b",
+      "scene_token": "93032908bafd484ea10a39b0d5d3fff6",
+      "official_index": 2936,
+      "split": "train"
+    },
+    {
+      "sample_token": "9a7bdc8243df48e59f45e0f6d178bd4b",
+      "scene_token": "93032908bafd484ea10a39b0d5d3fff6",
+      "official_index": 2953,
+      "split": "train"
+    },
+    {
+      "sample_token": "9e9d11854d574aff9676ddfd7d55b4b9",
+      "scene_token": "f92422ed4b4e427194a4958ccf15709a",
+      "official_index": 10481,
+      "split": "train"
+    },
+    {
+      "sample_token": "c053abf9792847e0a5c872ae741d6338",
+      "scene_token": "f92422ed4b4e427194a4958ccf15709a",
+      "official_index": 10498,
+      "split": "train"
+    },
+    {
+      "sample_token": "329bcbf19e444c93ad82cfb88e5055f2",
+      "scene_token": "17302a41218442ffbb0b094adb0669ab",
+      "official_index": 6338,
+      "split": "train"
+    },
+    {
+      "sample_token": "5917ca5d98db49b5a8c108d997662879",
+      "scene_token": "17302a41218442ffbb0b094adb0669ab",
+      "official_index": 6355,
+      "split": "train"
+    },
+    {
+      "sample_token": "b93a645bc5434ecb98f56725aebce095",
+      "scene_token": "d58468c6097c425e89671a7b3f480acf",
+      "official_index": 16751,
+      "split": "train"
+    },
+    {
+      "sample_token": "b97ce3141f8d440f8dc17aa8bb3fa73e",
+      "scene_token": "d58468c6097c425e89671a7b3f480acf",
+      "official_index": 16768,
+      "split": "train"
+    },
+    {
+      "sample_token": "706d7015b80d4329b80d4a8c52139ab4",
+      "scene_token": "dd61533869aa48f2aaa7e8a6418bdbe6",
+      "official_index": 751,
+      "split": "train"
+    },
+    {
+      "sample_token": "1e826ac20baa41bbbe2046b14897e618",
+      "scene_token": "dd61533869aa48f2aaa7e8a6418bdbe6",
+      "official_index": 768,
+      "split": "train"
+    },
+    {
+      "sample_token": "affb2fc34b82481f976b863959511646",
+      "scene_token": "4a4d09496d594c7385a1ec227bdb3a7f",
+      "official_index": 14127,
+      "split": "train"
+    },
+    {
+      "sample_token": "935674ef9a4446e4b8bdea92036cda9b",
+      "scene_token": "4a4d09496d594c7385a1ec227bdb3a7f",
+      "official_index": 14145,
+      "split": "train"
+    },
+    {
+      "sample_token": "903d98fc61404d7a90a668a97758594a",
+      "scene_token": "0ced08ea43754420a23b2fbec667a763",
+      "official_index": 13781,
+      "split": "train"
+    },
+    {
+      "sample_token": "e0a5550770b945b59b08c3b7e895ba7d",
+      "scene_token": "0ced08ea43754420a23b2fbec667a763",
+      "official_index": 13798,
+      "split": "train"
+    },
+    {
+      "sample_token": "e63cd60405fd41998ec826c597981f51",
+      "scene_token": "47cfdbcf14fe47d2a3b9e7e5b46d8a36",
+      "official_index": 19843,
+      "split": "train"
+    },
+    {
+      "sample_token": "edfc9540581a4e48a8c55cfdae1085cc",
+      "scene_token": "47cfdbcf14fe47d2a3b9e7e5b46d8a36",
+      "official_index": 19861,
+      "split": "train"
+    },
+    {
+      "sample_token": "f9f5d91bb85543059e5a2e5700af9978",
+      "scene_token": "2ba06ef7b3b44cbfad6d771981d86af9",
+      "official_index": 3603,
+      "split": "train"
+    },
+    {
+      "sample_token": "d5401caa83b84ec6ab6990091add2b97",
+      "scene_token": "2ba06ef7b3b44cbfad6d771981d86af9",
+      "official_index": 3620,
+      "split": "train"
+    },
+    {
+      "sample_token": "a4c9e9ba0f624abeb5de23b2aa528af7",
+      "scene_token": "ee909cb746e44174be804f26bc971efe",
+      "official_index": 16682,
+      "split": "train"
+    },
+    {
+      "sample_token": "6c6c0463929d4d21b2fffa4675603461",
+      "scene_token": "ee909cb746e44174be804f26bc971efe",
+      "official_index": 16700,
+      "split": "train"
+    },
+    {
+      "sample_token": "345b75d1024f441ebe189a0f833d8e9e",
+      "scene_token": "448cf480b0b8400a86881d28c2c5f734",
+      "official_index": 210,
+      "split": "train"
+    },
+    {
+      "sample_token": "37ce810641124b06be766c880df322d1",
+      "scene_token": "448cf480b0b8400a86881d28c2c5f734",
+      "official_index": 227,
+      "split": "train"
+    },
+    {
+      "sample_token": "5fbadbe078a945fd8ded567f0d1943a0",
+      "scene_token": "c67b72f4a0bd4f2b96ecbd0e01c58232",
+      "official_index": 2902,
+      "split": "train"
+    },
+    {
+      "sample_token": "7dac88445b3b4e8389c6485cf9e54ff7",
+      "scene_token": "c67b72f4a0bd4f2b96ecbd0e01c58232",
+      "official_index": 2919,
+      "split": "train"
+    },
+    {
+      "sample_token": "69d319058a844cb3b0724429bf5758a4",
+      "scene_token": "2422d2652f4f42298a389a6e0dfef307",
+      "official_index": 18190,
+      "split": "train"
+    },
+    {
+      "sample_token": "666e070e6a4e4c53ac42fe92c615f83a",
+      "scene_token": "2422d2652f4f42298a389a6e0dfef307",
+      "official_index": 18208,
+      "split": "train"
+    },
+    {
+      "sample_token": "5733d8cd964449ae8abca63c218ac733",
+      "scene_token": "d3d94f2ce3dc4db4b3ba6f4aa81c3987",
+      "official_index": 10721,
+      "split": "train"
+    },
+    {
+      "sample_token": "885b6b7800be44b495cb9acdd3259c87",
+      "scene_token": "d3d94f2ce3dc4db4b3ba6f4aa81c3987",
+      "official_index": 10739,
+      "split": "train"
+    },
+    {
+      "sample_token": "3d367131d9d54495ad981f01e38677c8",
+      "scene_token": "daa9fce50073470398da3c2bccdaf21b",
+      "official_index": 785,
+      "split": "train"
+    },
+    {
+      "sample_token": "f420e4f04e314c7ebfbf7cb798afbacc",
+      "scene_token": "daa9fce50073470398da3c2bccdaf21b",
+      "official_index": 802,
+      "split": "train"
+    },
+    {
+      "sample_token": "57e3e13783154daeb56e56c178928e9a",
+      "scene_token": "12cd5f88732749a58725528bb3d86958",
+      "official_index": 4787,
+      "split": "train"
+    },
+    {
+      "sample_token": "3b230acdd6d14b43b2e87d662f3e00bf",
+      "scene_token": "12cd5f88732749a58725528bb3d86958",
+      "official_index": 4803,
+      "split": "train"
+    },
+    {
+      "sample_token": "5edd3dfe8cef41b29808f2eca3b23374",
+      "scene_token": "1d914f73a4a243c3acac50d24f083aac",
+      "official_index": 5660,
+      "split": "train"
+    },
+    {
+      "sample_token": "90e3b5bfb3874447ae13b5639076705d",
+      "scene_token": "1d914f73a4a243c3acac50d24f083aac",
+      "official_index": 5677,
+      "split": "train"
+    },
+    {
+      "sample_token": "bba9a220fa5b4daa85712a90685e9a9c",
+      "scene_token": "87a71839e68b46da8e91fb5f21b50c1c",
+      "official_index": 3299,
+      "split": "train"
+    },
+    {
+      "sample_token": "5d1513d6576341628fb0e4e4db369677",
+      "scene_token": "87a71839e68b46da8e91fb5f21b50c1c",
+      "official_index": 3315,
+      "split": "train"
+    },
+    {
+      "sample_token": "2aa98f1453ea468e86a3e1d528c0c7ce",
+      "scene_token": "2bbff07f5b4248eab483ddcf91cfa848",
+      "official_index": 2535,
+      "split": "train"
+    },
+    {
+      "sample_token": "97064c87f51243ebaa090207e5e5d262",
+      "scene_token": "2bbff07f5b4248eab483ddcf91cfa848",
+      "official_index": 2551,
+      "split": "train"
+    },
+    {
+      "sample_token": "86419bdb54164d779f695fdb5200a1b9",
+      "scene_token": "a1e7cd557b9541dbb00822ea0c56204b",
+      "official_index": 22911,
+      "split": "train"
+    },
+    {
+      "sample_token": "2fac122020814425b9d471907bd75345",
+      "scene_token": "a1e7cd557b9541dbb00822ea0c56204b",
+      "official_index": 22928,
+      "split": "train"
+    },
+    {
+      "sample_token": "77bd560633a34795aacd834f10dc443a",
+      "scene_token": "8fe2dd6f533646b39c8e81316597c52b",
+      "official_index": 18225,
+      "split": "train"
+    },
+    {
+      "sample_token": "e6896913967942df85f0faca7510bf61",
+      "scene_token": "8fe2dd6f533646b39c8e81316597c52b",
+      "official_index": 18243,
+      "split": "train"
+    },
+    {
+      "sample_token": "3823c73b76c44e85826ec8ccba8ad349",
+      "scene_token": "d0b2d916178a402a842c88f394d7d7e8",
+      "official_index": 4853,
+      "split": "train"
+    },
+    {
+      "sample_token": "0c35f172e77f4aaeb754469138c0a9c8",
+      "scene_token": "d0b2d916178a402a842c88f394d7d7e8",
+      "official_index": 4870,
+      "split": "train"
+    },
+    {
+      "sample_token": "9c740d8795df48b392d52a8419419b86",
+      "scene_token": "ab6eea0e06c84f70be411a9d36636a7a",
+      "official_index": 278,
+      "split": "train"
+    },
+    {
+      "sample_token": "ba7ebbf3fd6b4938a2d497033d177885",
+      "scene_token": "ab6eea0e06c84f70be411a9d36636a7a",
+      "official_index": 295,
+      "split": "train"
+    },
+    {
+      "sample_token": "85b3e0fd14374caf8657b59417c6cdb4",
+      "scene_token": "20ec831deb0f44e397497198cbe5a97c",
+      "official_index": 8175,
+      "split": "train"
+    },
+    {
+      "sample_token": "77e2031e8494429281798c793d3f7c3f",
+      "scene_token": "20ec831deb0f44e397497198cbe5a97c",
+      "official_index": 8193,
+      "split": "train"
+    },
+    {
+      "sample_token": "d46a1c7e86e84067bf9772df14372f41",
+      "scene_token": "b68cfa7e0bd64bd395fd922d750cfdd2",
+      "official_index": 6372,
+      "split": "train"
+    },
+    {
+      "sample_token": "83c9af923e914d8180fa6bc9d423f1e7",
+      "scene_token": "b68cfa7e0bd64bd395fd922d750cfdd2",
+      "official_index": 6389,
+      "split": "train"
+    },
+    {
+      "sample_token": "19b558f2314b4c1dbb89fb52b2cb4bc9",
+      "scene_token": "52678e6091214431bf9f3b41e5eeaa24",
+      "official_index": 3434,
+      "split": "train"
+    },
+    {
+      "sample_token": "e2106ac67bb149e99c1f7cc34ae58364",
+      "scene_token": "52678e6091214431bf9f3b41e5eeaa24",
+      "official_index": 3451,
+      "split": "train"
+    },
+    {
+      "sample_token": "38cf99c5df334164838d887d0a9db0b6",
+      "scene_token": "c6c092a66329470f836714f46b92d59b",
+      "official_index": 1428,
+      "split": "train"
+    },
+    {
+      "sample_token": "bfd4da581aef4e4aacdc94e11e9a1911",
+      "scene_token": "c6c092a66329470f836714f46b92d59b",
+      "official_index": 1446,
+      "split": "train"
+    },
+    {
+      "sample_token": "cda88bfc200b429591ef4f84b9b5a166",
+      "scene_token": "453453c849304ad69741891946d46453",
+      "official_index": 14301,
+      "split": "train"
+    },
+    {
+      "sample_token": "49436026d4d54a9c97c353eeed8ef231",
+      "scene_token": "453453c849304ad69741891946d46453",
+      "official_index": 14318,
+      "split": "train"
+    },
+    {
+      "sample_token": "d98ed5c421d648a6942135d4eb10fdff",
+      "scene_token": "fd5a3c6d3ad44954a8045edbe9d93763",
+      "official_index": 414,
+      "split": "train"
+    },
+    {
+      "sample_token": "3479a29e804d4412bc8a428dd8ed844a",
+      "scene_token": "fd5a3c6d3ad44954a8045edbe9d93763",
+      "official_index": 431,
+      "split": "train"
+    },
+    {
+      "sample_token": "b576b17c2b5340da931732ad06e6cd71",
+      "scene_token": "53d376c20b7146349a53554a4616c48c",
+      "official_index": 9038,
+      "split": "train"
+    },
+    {
+      "sample_token": "57454389c9ca4f038c7e9b58953e60f5",
+      "scene_token": "53d376c20b7146349a53554a4616c48c",
+      "official_index": 9056,
+      "split": "train"
+    },
+    {
+      "sample_token": "d6b16877eea447bbbfb39fe44dddb3a2",
+      "scene_token": "a4fe925930de41489b12b85b77d2f0cb",
+      "official_index": 18570,
+      "split": "train"
+    },
+    {
+      "sample_token": "3a5ac627f2c248be8c7396cd5d019e8e",
+      "scene_token": "a4fe925930de41489b12b85b77d2f0cb",
+      "official_index": 18587,
+      "split": "train"
+    },
+    {
+      "sample_token": "5dcdd57ab723413f8a71dd9de5b884a8",
+      "scene_token": "8c7dfcee70754286959b80c6cfe2d246",
+      "official_index": 12990,
+      "split": "train"
+    },
+    {
+      "sample_token": "f7c5033c2de64fe9b5a0ebb03ef39fbe",
+      "scene_token": "8c7dfcee70754286959b80c6cfe2d246",
+      "official_index": 13007,
+      "split": "train"
+    },
+    {
+      "sample_token": "63bc780621f04be4afb9b1fd44c2c3ab",
+      "scene_token": "83773bcf46ac486383529098de0542dd",
+      "official_index": 1897,
+      "split": "train"
+    },
+    {
+      "sample_token": "65b8c23b14e24c5eb621958f5e96c83e",
+      "scene_token": "83773bcf46ac486383529098de0542dd",
+      "official_index": 1915,
+      "split": "train"
+    },
+    {
+      "sample_token": "e7cc339e60a24f34a3abc3a32c7dd695",
+      "scene_token": "692fe09aecae4b1a94f8a3bceedd9b7c",
+      "official_index": 23734,
+      "split": "train"
+    },
+    {
+      "sample_token": "f803286c6f664f8a95d4bf0d383ac9c9",
+      "scene_token": "692fe09aecae4b1a94f8a3bceedd9b7c",
+      "official_index": 23751,
+      "split": "train"
+    },
+    {
+      "sample_token": "8d01c8bd68044d52be46b59f6f3677e3",
+      "scene_token": "cf10376382b74af1975be86f7190df20",
+      "official_index": 5929,
+      "split": "train"
+    },
+    {
+      "sample_token": "15b27b4f02d4474598f5b7b905826f29",
+      "scene_token": "cf10376382b74af1975be86f7190df20",
+      "official_index": 5946,
+      "split": "train"
+    },
+    {
+      "sample_token": "139f7f74d2e94cbaabbece5484db597d",
+      "scene_token": "21464a6831c1443db294d1b56a7a33a5",
+      "official_index": 18810,
+      "split": "train"
+    },
+    {
+      "sample_token": "1b72adfcd1d740239a15ff1491706bd2",
+      "scene_token": "21464a6831c1443db294d1b56a7a33a5",
+      "official_index": 18827,
+      "split": "train"
+    },
+    {
+      "sample_token": "d2440099d59945f88b369068adc63e21",
+      "scene_token": "0053e9c440a94c1b84bd9c4223efc4b0",
+      "official_index": 3536,
+      "split": "train"
+    },
+    {
+      "sample_token": "12ef6d025df840d585c6e4a3b896fcf4",
+      "scene_token": "0053e9c440a94c1b84bd9c4223efc4b0",
+      "official_index": 3553,
+      "split": "train"
+    },
+    {
+      "sample_token": "042fabdff30f4df4880c43ac0a4baae8",
+      "scene_token": "2f9da038274a4448bdbb83f994fc6381",
+      "official_index": 10652,
+      "split": "train"
+    },
+    {
+      "sample_token": "449e5da7ba964a128f97695d3d97821b",
+      "scene_token": "2f9da038274a4448bdbb83f994fc6381",
+      "official_index": 10670,
+      "split": "train"
+    },
+    {
+      "sample_token": "9faaa1ac2a1042b1a8a0bfbd729c8c22",
+      "scene_token": "2135a00f664d4a3bbfb938e007befa06",
+      "official_index": 18706,
+      "split": "train"
+    },
+    {
+      "sample_token": "496e42a10612467a81e04a83779e47d4",
+      "scene_token": "2135a00f664d4a3bbfb938e007befa06",
+      "official_index": 18724,
+      "split": "train"
+    },
+    {
+      "sample_token": "384f47f52e2d49d2a6a46477c527c981",
+      "scene_token": "8461c1125eaf46c7abaf4ee18e8c4ee6",
+      "official_index": 18536,
+      "split": "train"
+    },
+    {
+      "sample_token": "144b5914d5f04380a63d88f9b54f08de",
+      "scene_token": "8461c1125eaf46c7abaf4ee18e8c4ee6",
+      "official_index": 18553,
+      "split": "train"
+    },
+    {
+      "sample_token": "277b967f11ff4429aa74268c95eead1e",
+      "scene_token": "b57e1a48e584451f8f966ab083c8d07d",
+      "official_index": 23563,
+      "split": "train"
+    },
+    {
+      "sample_token": "900d2fa2780448eda28168e64411fedc",
+      "scene_token": "b57e1a48e584451f8f966ab083c8d07d",
+      "official_index": 23580,
+      "split": "train"
+    },
+    {
+      "sample_token": "a72536281789461aa7456a2d3855216d",
+      "scene_token": "48ba943c3d19463a81281bf6a7078eac",
+      "official_index": 14197,
+      "split": "train"
+    },
+    {
+      "sample_token": "a1de5468bd3c4829bcbccf29b60be15e",
+      "scene_token": "48ba943c3d19463a81281bf6a7078eac",
+      "official_index": 14214,
+      "split": "train"
+    },
+    {
+      "sample_token": "ec165926809a44d48df2c7a21d9eee74",
+      "scene_token": "66461d94f2e44d39a90843ff2dce11e8",
+      "official_index": 15545,
+      "split": "train"
+    },
+    {
+      "sample_token": "7825b975c45f48b9a9b5207fb817b747",
+      "scene_token": "66461d94f2e44d39a90843ff2dce11e8",
+      "official_index": 15562,
+      "split": "train"
+    },
+    {
+      "sample_token": "a4d6e99f30ed4c5589bf6f87503fa064",
+      "scene_token": "c34206e65a1442828b950b0ca52098b7",
+      "official_index": 19119,
+      "split": "train"
+    },
+    {
+      "sample_token": "cbbe7763d9b744deafb85088ebaed0fa",
+      "scene_token": "c34206e65a1442828b950b0ca52098b7",
+      "official_index": 19136,
+      "split": "train"
+    },
+    {
+      "sample_token": "f196a3aa0fdb400e97aa72f453842de5",
+      "scene_token": "7463b2d752f0464f803b07a945ee7c5a",
+      "official_index": 6474,
+      "split": "train"
+    },
+    {
+      "sample_token": "2749f0576fc1433e95e6cd1a78276158",
+      "scene_token": "7463b2d752f0464f803b07a945ee7c5a",
+      "official_index": 6492,
+      "split": "train"
+    },
+    {
+      "sample_token": "689abe75535442ed8273862cbd602132",
+      "scene_token": "c0cb50847c3949a0b4baf2e200ac897c",
+      "official_index": 5256,
+      "split": "train"
+    },
+    {
+      "sample_token": "ca7b70df065847fab0179df83eeb9cfa",
+      "scene_token": "c0cb50847c3949a0b4baf2e200ac897c",
+      "official_index": 5273,
+      "split": "train"
+    },
+    {
+      "sample_token": "62ea548f78524fe9a2c1050e7aa2722c",
+      "scene_token": "e2d9a52b37bd4b63b913777ef77b2d4f",
+      "official_index": 20261,
+      "split": "train"
+    },
+    {
+      "sample_token": "060da0971e984d1d917e3edaa7121fea",
+      "scene_token": "e2d9a52b37bd4b63b913777ef77b2d4f",
+      "official_index": 20278,
+      "split": "train"
+    },
+    {
+      "sample_token": "fc89b2fdbc2240868ca3b5c21a784d6e",
+      "scene_token": "7ad327c8827849ed91136bb2d04acec9",
+      "official_index": 3265,
+      "split": "train"
+    },
+    {
+      "sample_token": "ce6843df3972418586859fd6198f84b7",
+      "scene_token": "7ad327c8827849ed91136bb2d04acec9",
+      "official_index": 3282,
+      "split": "train"
+    },
+    {
+      "sample_token": "9a4b0ba95d5043fa94ed7c5ba13977de",
+      "scene_token": "dc9ef63b61394d3d8effeb51919f2144",
+      "official_index": 3771,
+      "split": "train"
+    },
+    {
+      "sample_token": "b855ba0a97594566bac51422fcac34bf",
+      "scene_token": "dc9ef63b61394d3d8effeb51919f2144",
+      "official_index": 3788,
+      "split": "train"
+    },
+    {
+      "sample_token": "d245f146da3643f997b09e6b0c33e421",
+      "scene_token": "cddd0d5be10b4313a859524952455f43",
+      "official_index": 15372,
+      "split": "train"
+    },
+    {
+      "sample_token": "8f02ac4e684f49dbae02d100df7783f7",
+      "scene_token": "cddd0d5be10b4313a859524952455f43",
+      "official_index": 15390,
+      "split": "train"
+    },
+    {
+      "sample_token": "b9f6b4cab37d42f5b1433a8122d2c622",
+      "scene_token": "f69f7b4cefb7493bb1a8185f6f01d137",
+      "official_index": 13849,
+      "split": "train"
+    },
+    {
+      "sample_token": "bef4139125a24369b58188f5fd76e46f",
+      "scene_token": "f69f7b4cefb7493bb1a8185f6f01d137",
+      "official_index": 13866,
+      "split": "train"
+    },
+    {
+      "sample_token": "77b90de459b14687a73ce7514570eb35",
+      "scene_token": "53484b9d012842bb98719a9d12b038ca",
+      "official_index": 9281,
+      "split": "train"
+    },
+    {
+      "sample_token": "1631e8f103174734a92cbb43a71c68dc",
+      "scene_token": "53484b9d012842bb98719a9d12b038ca",
+      "official_index": 9298,
+      "split": "train"
+    },
+    {
+      "sample_token": "457cc290e113489e87e2ee5d66695b4c",
+      "scene_token": "e1e664292aa144bc8d0d5d6441df084c",
+      "official_index": 17572,
+      "split": "train"
+    },
+    {
+      "sample_token": "372360d05c2c4711839d96282118e55e",
+      "scene_token": "e1e664292aa144bc8d0d5d6441df084c",
+      "official_index": 17589,
+      "split": "train"
+    },
+    {
+      "sample_token": "e68562df146f47718e728268c17483b6",
+      "scene_token": "1a819a84e3494177b47bea8c7f0770ec",
+      "official_index": 12687,
+      "split": "train"
+    },
+    {
+      "sample_token": "a7d479a4fd1a45c1817b51cff76eae56",
+      "scene_token": "1a819a84e3494177b47bea8c7f0770ec",
+      "official_index": 12704,
+      "split": "train"
+    },
+    {
+      "sample_token": "7749fb76f70f4ee0924abb5995481fd7",
+      "scene_token": "433a14f8dcf5457fb2c4def5c749122a",
+      "official_index": 1932,
+      "split": "train"
+    },
+    {
+      "sample_token": "8bceded5e2cc45178d75212822f4eea1",
+      "scene_token": "433a14f8dcf5457fb2c4def5c749122a",
+      "official_index": 1948,
+      "split": "train"
+    },
+    {
+      "sample_token": "d43c68c5909a49169060608c20af79e6",
+      "scene_token": "1959c8f440a340fda3ea2cac0ac528ec",
+      "official_index": 2334,
+      "split": "train"
+    },
+    {
+      "sample_token": "ebe193a1e35544c19937125ec4bf1839",
+      "scene_token": "1959c8f440a340fda3ea2cac0ac528ec",
+      "official_index": 2351,
+      "split": "train"
+    },
+    {
+      "sample_token": "188ed7e6dc7444fcaa3478034eacc5c6",
+      "scene_token": "3d42cd90a8184d9ebd3bb85b6416314d",
+      "official_index": 7053,
+      "split": "train"
+    },
+    {
+      "sample_token": "279abe1bfc0047c79f3a190bd202f0dd",
+      "scene_token": "3d42cd90a8184d9ebd3bb85b6416314d",
+      "official_index": 7070,
+      "split": "train"
+    },
+    {
+      "sample_token": "b88ce49c51f449cba7dbb1548690e792",
+      "scene_token": "aee27b55da77468ba444357348f5cf88",
+      "official_index": 8311,
+      "split": "train"
+    },
+    {
+      "sample_token": "0adb5d0087b046d1b40c1d4cc3b658d0",
+      "scene_token": "aee27b55da77468ba444357348f5cf88",
+      "official_index": 8329,
+      "split": "train"
+    },
+    {
+      "sample_token": "2bb10d32abfd49f4b598d8323b3c7dbe",
+      "scene_token": "d865cb18632040fdb4cb06b6e3331cdb",
+      "official_index": 3738,
+      "split": "train"
+    },
+    {
+      "sample_token": "9d5b17e0d78d474da3bb194736d9c6b0",
+      "scene_token": "d865cb18632040fdb4cb06b6e3331cdb",
+      "official_index": 3754,
+      "split": "train"
+    },
+    {
+      "sample_token": "16075f3f32e94781b4390e5c22dab544",
+      "scene_token": "881da81bb35a4bdb925e0a2884ee7f0f",
+      "official_index": 17229,
+      "split": "train"
+    },
+    {
+      "sample_token": "871e2ce2acc044399f622789e9bf2007",
+      "scene_token": "881da81bb35a4bdb925e0a2884ee7f0f",
+      "official_index": 17246,
+      "split": "train"
+    },
+    {
+      "sample_token": "590f69d8787d401aa8f341a6c06d9b4f",
+      "scene_token": "37284f813cc74496971ff58f5d37400a",
+      "official_index": 18328,
+      "split": "train"
+    },
+    {
+      "sample_token": "5a478c8d1aea4e7696a68622dee0f547",
+      "scene_token": "37284f813cc74496971ff58f5d37400a",
+      "official_index": 18346,
+      "split": "train"
+    },
+    {
+      "sample_token": "f1db9106c34845808eccdab8d2206040",
+      "scene_token": "00590cbfa24a430a8c274b51e1c71231",
+      "official_index": 4246,
+      "split": "train"
+    },
+    {
+      "sample_token": "9c31efbd1aa44ab1a6e030953c7e790a",
+      "scene_token": "00590cbfa24a430a8c274b51e1c71231",
+      "official_index": 4263,
+      "split": "train"
+    },
+    {
+      "sample_token": "88bf28f11c6040658f565da3bea775b8",
+      "scene_token": "fcb40dc8514444c49b1fdc06f80a123b",
+      "official_index": 2700,
+      "split": "train"
+    },
+    {
+      "sample_token": "6d450599d315481e990652bcd9876f7d",
+      "scene_token": "fcb40dc8514444c49b1fdc06f80a123b",
+      "official_index": 2717,
+      "split": "train"
+    },
+    {
+      "sample_token": "ea9098b0ee8746929a85088ae7d75337",
+      "scene_token": "11058d54abcd4829828523040372ce05",
+      "official_index": 6816,
+      "split": "train"
+    },
+    {
+      "sample_token": "c68e879286184edf81a76add0f68f824",
+      "scene_token": "11058d54abcd4829828523040372ce05",
+      "official_index": 6833,
+      "split": "train"
+    },
+    {
+      "sample_token": "6e38491647b54955bf7c02c3c7e6d4d4",
+      "scene_token": "cffc45a1565446fab5014afb3da169e8",
+      "official_index": 7155,
+      "split": "train"
+    },
+    {
+      "sample_token": "5fd7cba182e24ebebc0e1bd87144e583",
+      "scene_token": "cffc45a1565446fab5014afb3da169e8",
+      "official_index": 7172,
+      "split": "train"
+    },
+    {
+      "sample_token": "e9934aef2d4244b8b363a6eda5b01256",
+      "scene_token": "bcb05cffb5814973a6cff4fbdca2b99b",
+      "official_index": 7325,
+      "split": "train"
+    },
+    {
+      "sample_token": "3e16a97397f84c938747ce4147ae9918",
+      "scene_token": "bcb05cffb5814973a6cff4fbdca2b99b",
+      "official_index": 7341,
+      "split": "train"
+    },
+    {
+      "sample_token": "a3b5089458164571af72135375dd8ca9",
+      "scene_token": "4b5bf3f4668d44fea9a676e9c4a8a79e",
+      "official_index": 19431,
+      "split": "train"
+    },
+    {
+      "sample_token": "725639ebab884c8c96de160ef0c6669b",
+      "scene_token": "4b5bf3f4668d44fea9a676e9c4a8a79e",
+      "official_index": 19448,
+      "split": "train"
+    },
+    {
+      "sample_token": "d943cda912b347eb9caeb6317d6c6c34",
+      "scene_token": "81227a12571240e0b9d537165f57e177",
+      "official_index": 3130,
+      "split": "train"
+    },
+    {
+      "sample_token": "0d20e15d0c9c453b8027e6faa240baec",
+      "scene_token": "81227a12571240e0b9d537165f57e177",
+      "official_index": 3147,
+      "split": "train"
+    },
+    {
+      "sample_token": "687e601e59d44bfbb7f2fd19d98185d7",
+      "scene_token": "d0880a386b6d434bb5cd13c134af7a3e",
+      "official_index": 988,
+      "split": "train"
+    },
+    {
+      "sample_token": "b56f9bb8b47f45aea938669ec9b4b645",
+      "scene_token": "d0880a386b6d434bb5cd13c134af7a3e",
+      "official_index": 1005,
+      "split": "train"
+    },
+    {
+      "sample_token": "b04e7c7433ea4a0aabde9e3dcb35b132",
+      "scene_token": "4431d97ea17044ad9c09c13d16684054",
+      "official_index": 2801,
+      "split": "train"
+    },
+    {
+      "sample_token": "3338d1c5a5c54c36bc25471b18f94ef7",
+      "scene_token": "4431d97ea17044ad9c09c13d16684054",
+      "official_index": 2817,
+      "split": "train"
+    },
+    {
+      "sample_token": "2f0ad04cba5547cfb6a582b9bccd53e3",
+      "scene_token": "41e0d46e715a476ab05e4d62e415ea41",
+      "official_index": 9728,
+      "split": "train"
+    },
+    {
+      "sample_token": "6d9a229b227f4d14bab72f133fd21eb4",
+      "scene_token": "41e0d46e715a476ab05e4d62e415ea41",
+      "official_index": 9745,
+      "split": "train"
+    },
+    {
+      "sample_token": "286e8c69733d4907bab8147acb0b4453",
+      "scene_token": "7e2d9f38f8eb409ea57b3864bb4ed098",
+      "official_index": 17263,
+      "split": "train"
+    },
+    {
+      "sample_token": "998ae284e416404c91cf6867906f79c8",
+      "scene_token": "7e2d9f38f8eb409ea57b3864bb4ed098",
+      "official_index": 17280,
+      "split": "train"
+    },
+    {
+      "sample_token": "d7be461787154e41babdbde402f5c3ab",
+      "scene_token": "f612aec0c3e34e32b2e9e48670cdecca",
+      "official_index": 8797,
+      "split": "train"
+    },
+    {
+      "sample_token": "0ac2735db9f14da59422a6ddcfdffbbd",
+      "scene_token": "f612aec0c3e34e32b2e9e48670cdecca",
+      "official_index": 8815,
+      "split": "train"
+    },
+    {
+      "sample_token": "a9b89c9e46f94ec68e17d6f5871d674b",
+      "scene_token": "892ed06c432448fe87ecb5d31756f14a",
+      "official_index": 7493,
+      "split": "train"
+    },
+    {
+      "sample_token": "b789d7f4d3534bbda924af97b7f91dfc",
+      "scene_token": "892ed06c432448fe87ecb5d31756f14a",
+      "official_index": 7510,
+      "split": "train"
+    },
+    {
+      "sample_token": "7848fab61fec4ff58c634eebb41138da",
+      "scene_token": "68fc5e3698a544d1bdf5847b88ad77d4",
+      "official_index": 20502,
+      "split": "train"
+    },
+    {
+      "sample_token": "cda537bd13304d85950e5e9b52763ea5",
+      "scene_token": "68fc5e3698a544d1bdf5847b88ad77d4",
+      "official_index": 20519,
+      "split": "train"
+    },
+    {
+      "sample_token": "22b2881ee63046a3b5a680fc86f2023a",
+      "scene_token": "a2b64d02c5fa4b9bab671a97561b6b33",
+      "official_index": 23426,
+      "split": "train"
+    },
+    {
+      "sample_token": "3e16485d2ed3436e8fcb71ed66015120",
+      "scene_token": "a2b64d02c5fa4b9bab671a97561b6b33",
+      "official_index": 23443,
+      "split": "train"
+    },
+    {
+      "sample_token": "993a62212975460eb987c56b7488c31b",
+      "scene_token": "762e6aac0d6f4c1b9b0286ab4b2da654",
+      "official_index": 4988,
+      "split": "train"
+    },
+    {
+      "sample_token": "f28577f482674846a1c861009c1e17b3",
+      "scene_token": "762e6aac0d6f4c1b9b0286ab4b2da654",
+      "official_index": 5004,
+      "split": "train"
+    },
+    {
+      "sample_token": "6b4607a2d5a945b0aef8fbaf8b846fb9",
+      "scene_token": "0e247ba64b9d4a34a7256b6c173b1b5d",
+      "official_index": 17777,
+      "split": "train"
+    },
+    {
+      "sample_token": "e30c58b478cb462fba6d767b27245b9e",
+      "scene_token": "0e247ba64b9d4a34a7256b6c173b1b5d",
+      "official_index": 17795,
+      "split": "train"
+    },
+    {
+      "sample_token": "c0a7993dfe8a45cf97f5e62216c32848",
+      "scene_token": "55162149a9464d5bb0b0ebd914567e09",
+      "official_index": 15821,
+      "split": "train"
+    },
+    {
+      "sample_token": "fda01c5334f846cbbfe0343ad4997c5c",
+      "scene_token": "55162149a9464d5bb0b0ebd914567e09",
+      "official_index": 15838,
+      "split": "train"
+    },
+    {
+      "sample_token": "b47e31481532444bb0b543a0ec192959",
+      "scene_token": "59530445fcc04c2090bfaf63f342f794",
+      "official_index": 5088,
+      "split": "train"
+    },
+    {
+      "sample_token": "653b2b59f1e3486b96dc1a5845b32046",
+      "scene_token": "59530445fcc04c2090bfaf63f342f794",
+      "official_index": 5105,
+      "split": "train"
+    },
+    {
+      "sample_token": "4fae011f5d73477185e9ab98062357f1",
+      "scene_token": "a59b6db922ff490da5ccfc9980700935",
+      "official_index": 15511,
+      "split": "train"
+    },
+    {
+      "sample_token": "d7e7493e09ab414ebec72a327358ce84",
+      "scene_token": "a59b6db922ff490da5ccfc9980700935",
+      "official_index": 15528,
+      "split": "train"
+    },
+    {
+      "sample_token": "e9790d775ba34509ba79d97344f11bfc",
+      "scene_token": "fbf27198b3424e28ab1de2a12eb3dc4a",
+      "official_index": 5324,
+      "split": "train"
+    },
+    {
+      "sample_token": "09742d648cdb48e880ddeb123f33a529",
+      "scene_token": "fbf27198b3424e28ab1de2a12eb3dc4a",
+      "official_index": 5341,
+      "split": "train"
+    },
+    {
+      "sample_token": "77a9dea8700647098b8bace6da46359d",
+      "scene_token": "cfeb880362694fa7a428aec2fd139daa",
+      "official_index": 11312,
+      "split": "train"
+    },
+    {
+      "sample_token": "ef8a7a4118284de79e300efd943ca619",
+      "scene_token": "cfeb880362694fa7a428aec2fd139daa",
+      "official_index": 11330,
+      "split": "train"
+    },
+    {
+      "sample_token": "b8d4d48ad1f6426c851ec672df731011",
+      "scene_token": "90d616aaefc4429380388205ebb23398",
+      "official_index": 6612,
+      "split": "train"
+    },
+    {
+      "sample_token": "3c801157314743848a6b7ba091148b43",
+      "scene_token": "90d616aaefc4429380388205ebb23398",
+      "official_index": 6628,
+      "split": "train"
+    },
+    {
+      "sample_token": "eaf28160bb164f3c856dda709d2c2a36",
+      "scene_token": "827712f3e79340d8878de0202c5b3960",
+      "official_index": 11554,
+      "split": "train"
+    },
+    {
+      "sample_token": "bd460a65806a4c8ebd0f279673593b0d",
+      "scene_token": "827712f3e79340d8878de0202c5b3960",
+      "official_index": 11572,
+      "split": "train"
+    },
+    {
+      "sample_token": "f9bc822bcdaf47fd99a4c686bd7c7448",
+      "scene_token": "eae0cfe3be5f44a5be4f3e2c961397ed",
+      "official_index": 3231,
+      "split": "train"
+    },
+    {
+      "sample_token": "09c209efe7494b40a05d6ddad98faefc",
+      "scene_token": "eae0cfe3be5f44a5be4f3e2c961397ed",
+      "official_index": 3248,
+      "split": "train"
+    },
+    {
+      "sample_token": "6708a82e3f1b453fbcec3cf279d2f0d6",
+      "scene_token": "d7ebcbbd26d849b384c11bec8df28a9b",
+      "official_index": 1022,
+      "split": "train"
+    },
+    {
+      "sample_token": "274763ea86e64977a6e4c7bcc643b8c6",
+      "scene_token": "d7ebcbbd26d849b384c11bec8df28a9b",
+      "official_index": 1039,
+      "split": "train"
+    },
+    {
+      "sample_token": "106849058d3b4e51bccc30fdaf9b1f84",
+      "scene_token": "d1ece215e0a8442691cb5e380a6fb935",
+      "official_index": 8762,
+      "split": "train"
+    },
+    {
+      "sample_token": "d29d66e1bf84489795ff2620ed6ae70a",
+      "scene_token": "d1ece215e0a8442691cb5e380a6fb935",
+      "official_index": 8780,
+      "split": "train"
+    },
+    {
+      "sample_token": "411d26f26cc14405870448b7ad2f4700",
+      "scene_token": "788c5502523f4d01b3a8de47ec3dadfb",
+      "official_index": 12040,
+      "split": "train"
+    },
+    {
+      "sample_token": "08bb4b8e0c39480090fc778a0b3ade0b",
+      "scene_token": "788c5502523f4d01b3a8de47ec3dadfb",
+      "official_index": 12058,
+      "split": "train"
+    },
+    {
+      "sample_token": "0c57bb7dc3ea47fab28386d61b838118",
+      "scene_token": "5c6620829a1f492b8482218670aa0541",
+      "official_index": 19188,
+      "split": "train"
+    },
+    {
+      "sample_token": "712ac4e723024c2cba4fa01324cb164c",
+      "scene_token": "5c6620829a1f492b8482218670aa0541",
+      "official_index": 19205,
+      "split": "train"
+    },
+    {
+      "sample_token": "6fa104a81d44441e87a1e94c18f5912c",
+      "scene_token": "98fc76cc0e364efdaa7e86a36b666dda",
+      "official_index": 15924,
+      "split": "train"
+    },
+    {
+      "sample_token": "a0d58edfe29d4c1a8783c07aa69d7d84",
+      "scene_token": "98fc76cc0e364efdaa7e86a36b666dda",
+      "official_index": 15942,
+      "split": "train"
+    },
+    {
+      "sample_token": "7ff1ca7a12b644e19b9d74b9f2cba770",
+      "scene_token": "724957e51f464a9aa64a16458443786d",
+      "official_index": 3670,
+      "split": "train"
+    },
+    {
+      "sample_token": "08182180dbf44de4b237cb6f42159e96",
+      "scene_token": "724957e51f464a9aa64a16458443786d",
+      "official_index": 3687,
+      "split": "train"
+    },
+    {
+      "sample_token": "971f7df7e4f64081a7b22089a8532caf",
+      "scene_token": "53c92676ef334011bd4689494ac11fa0",
+      "official_index": 2167,
+      "split": "train"
+    },
+    {
+      "sample_token": "1b63fa9aa9564e63a6357657b64bcb69",
+      "scene_token": "53c92676ef334011bd4689494ac11fa0",
+      "official_index": 2183,
+      "split": "train"
+    },
+    {
+      "sample_token": "acf742e8b754450ebce6120c981c734a",
+      "scene_token": "0c13be31e9854d97960d1af570db433f",
+      "official_index": 10037,
+      "split": "train"
+    },
+    {
+      "sample_token": "4c65208f2e2540ef904d8085e4581301",
+      "scene_token": "0c13be31e9854d97960d1af570db433f",
+      "official_index": 10054,
+      "split": "train"
+    },
+    {
+      "sample_token": "19bef248fa2f4d62b63c92f08fc5fb34",
+      "scene_token": "6d8cb5391245464c9de1c412819df210",
+      "official_index": 23253,
+      "split": "train"
+    },
+    {
+      "sample_token": "40a75e2e0dc24387bfdb5bffc306eb70",
+      "scene_token": "6d8cb5391245464c9de1c412819df210",
+      "official_index": 23270,
+      "split": "train"
+    },
+    {
+      "sample_token": "1334070944844e7ca581fcedf7903eef",
+      "scene_token": "3359935281a34136992997acab7cdddd",
+      "official_index": 13058,
+      "split": "train"
+    },
+    {
+      "sample_token": "a1cc6da41ee5448eaf303e1f25a8cd2d",
+      "scene_token": "3359935281a34136992997acab7cdddd",
+      "official_index": 13076,
+      "split": "train"
+    },
+    {
+      "sample_token": "832b8e79b505462ab2308947b362d543",
+      "scene_token": "6e820d4c44b74793aacd0c7091488865",
+      "official_index": 21471,
+      "split": "train"
+    },
+    {
+      "sample_token": "51d6c23413794051a5ead976f5c0f3be",
+      "scene_token": "6e820d4c44b74793aacd0c7091488865",
+      "official_index": 21488,
+      "split": "train"
+    },
+    {
+      "sample_token": "44b43d57e2774d05af3fb830b301c7c6",
+      "scene_token": "f7d01e23508040c2aec430e8da13fb76",
+      "official_index": 12178,
+      "split": "train"
+    },
+    {
+      "sample_token": "e1c6b0cd53444abbb08ed530dead984c",
+      "scene_token": "f7d01e23508040c2aec430e8da13fb76",
+      "official_index": 12196,
+      "split": "train"
+    },
+    {
+      "sample_token": "a9217751ddd14fa3825b21aa4d71e008",
+      "scene_token": "5ab815cbcfee494499e41151890d6d8f",
+      "official_index": 12417,
+      "split": "train"
+    },
+    {
+      "sample_token": "76d3717f2aaa4e688ac4dfd6cfda0525",
+      "scene_token": "5ab815cbcfee494499e41151890d6d8f",
+      "official_index": 12434,
+      "split": "train"
+    },
+    {
+      "sample_token": "43f3b614597f40908b8ebfdf5b5e534c",
+      "scene_token": "9c83e438973e4824853e6a38928ca4ff",
+      "official_index": 20053,
+      "split": "train"
+    },
+    {
+      "sample_token": "34caa0707099444b9b67a5ee305f0de7",
+      "scene_token": "9c83e438973e4824853e6a38928ca4ff",
+      "official_index": 20070,
+      "split": "train"
+    },
+    {
+      "sample_token": "e5dd90c2e732492fb5752cc3ebc30fd3",
+      "scene_token": "521f01dfc8c9402e8309e047e2eea112",
+      "official_index": 17846,
+      "split": "train"
+    },
+    {
+      "sample_token": "09a249bd9b9946e68b226fde84d6f212",
+      "scene_token": "521f01dfc8c9402e8309e047e2eea112",
+      "official_index": 17864,
+      "split": "train"
+    },
+    {
+      "sample_token": "75d9b7ca576b4f6883622198c6349992",
+      "scene_token": "4047f251c21a475abb49518e0fa6fa9e",
+      "official_index": 1596,
+      "split": "train"
+    },
+    {
+      "sample_token": "3bd84dfa58ea46469a3c79466eae4110",
+      "scene_token": "4047f251c21a475abb49518e0fa6fa9e",
+      "official_index": 1613,
+      "split": "train"
+    },
+    {
+      "sample_token": "c36440db6ac14f5bad4ad9b576c7df1e",
+      "scene_token": "865c607c8ef44f13b39744a0de110740",
+      "official_index": 22705,
+      "split": "train"
+    },
+    {
+      "sample_token": "6283801f21774fc9b6b57d1559c26b61",
+      "scene_token": "865c607c8ef44f13b39744a0de110740",
+      "official_index": 22722,
+      "split": "train"
+    },
+    {
+      "sample_token": "3783d0a95b874befb7a88d16e08e5457",
+      "scene_token": "add2303ca41d445c8339e05769745fc0",
+      "official_index": 22533,
+      "split": "train"
+    },
+    {
+      "sample_token": "fb0b52fdbcef4ae7aa0f55547be86360",
+      "scene_token": "add2303ca41d445c8339e05769745fc0",
+      "official_index": 22550,
+      "split": "train"
+    },
+    {
+      "sample_token": "446369799ef64a4bb73d8c55114c7a22",
+      "scene_token": "8383c0b1422b46ad90e2a64ff3e91fcf",
+      "official_index": 18121,
+      "split": "train"
+    },
+    {
+      "sample_token": "0b623bf991964b25893fe39c90d5fbf8",
+      "scene_token": "8383c0b1422b46ad90e2a64ff3e91fcf",
+      "official_index": 18138,
+      "split": "train"
+    },
+    {
+      "sample_token": "f11e0c2b6ce24a72b3c0402127100a13",
+      "scene_token": "a25d763258dc4526b52759b3ddaad7ec",
+      "official_index": 9315,
+      "split": "train"
+    },
+    {
+      "sample_token": "6234fd8b20294f699d6ec796ed1a635c",
+      "scene_token": "a25d763258dc4526b52759b3ddaad7ec",
+      "official_index": 9333,
+      "split": "train"
+    },
+    {
+      "sample_token": "e1bbc31754a4492ebcd58cfd17901a95",
+      "scene_token": "7bcc4753bdb64d2cb407b55cc4e4527f",
+      "official_index": 5793,
+      "split": "train"
+    },
+    {
+      "sample_token": "b8c08ed494d04992a209ae9d625dc20e",
+      "scene_token": "7bcc4753bdb64d2cb407b55cc4e4527f",
+      "official_index": 5809,
+      "split": "train"
+    },
+    {
+      "sample_token": "4dace430a2204e6886e893d6b06a2b03",
+      "scene_token": "55638ae3a8b34572aef756ee7fbce0df",
+      "official_index": 9522,
+      "split": "train"
+    },
+    {
+      "sample_token": "c91289f8d19c4e64a4722356845dc9b7",
+      "scene_token": "55638ae3a8b34572aef756ee7fbce0df",
+      "official_index": 9539,
+      "split": "train"
+    },
+    {
+      "sample_token": "0adff0caddfa42be8035da49059e5509",
+      "scene_token": "d4d2faa310a748dda508d15c6d5c4244",
+      "official_index": 21951,
+      "split": "train"
+    },
+    {
+      "sample_token": "2bc2f750659641b8b3cf010bb070de71",
+      "scene_token": "d4d2faa310a748dda508d15c6d5c4244",
+      "official_index": 21968,
+      "split": "train"
+    },
+    {
+      "sample_token": "cdb3834353f14888a0ff07af5a9cf749",
+      "scene_token": "6e81ee0f64274490a403bbd6482c2bf9",
+      "official_index": 1327,
+      "split": "train"
+    },
+    {
+      "sample_token": "5ec52a5436e34d23a36295880d892f83",
+      "scene_token": "6e81ee0f64274490a403bbd6482c2bf9",
+      "official_index": 1344,
+      "split": "train"
+    },
+    {
+      "sample_token": "90fdd41c84c64e4e8961eab7ae9c06c9",
+      "scene_token": "bd210a5bc7004d8c94b68cf6366612a2",
+      "official_index": 4754,
+      "split": "train"
+    },
+    {
+      "sample_token": "f1ce824cdf754a9d8680aa480ed4387e",
+      "scene_token": "bd210a5bc7004d8c94b68cf6366612a2",
+      "official_index": 4770,
+      "split": "train"
+    },
+    {
+      "sample_token": "afd66979dd774c629aa3681b61d52a5f",
+      "scene_token": "bfe368f8c6a44efcb323a82f6974a9a6",
+      "official_index": 22671,
+      "split": "train"
+    },
+    {
+      "sample_token": "2493689b4eac432dba2fd1041b91923d",
+      "scene_token": "bfe368f8c6a44efcb323a82f6974a9a6",
+      "official_index": 22688,
+      "split": "train"
+    },
+    {
+      "sample_token": "ed890213fb4c43bc8915c4182bac8471",
+      "scene_token": "8cf06ee8cd004478aa46f391310b923e",
+      "official_index": 17709,
+      "split": "train"
+    },
+    {
+      "sample_token": "5e56652972d9440f83c0b0412599a9e0",
+      "scene_token": "8cf06ee8cd004478aa46f391310b923e",
+      "official_index": 17726,
+      "split": "train"
+    },
+    {
+      "sample_token": "6b7487db4612438db7d446e2832a9e2e",
+      "scene_token": "2fc3753772e241f2ab2cd16a784cc680",
+      "official_index": 11105,
+      "split": "train"
+    },
+    {
+      "sample_token": "46292fc546f048f29520299220f22798",
+      "scene_token": "2fc3753772e241f2ab2cd16a784cc680",
+      "official_index": 11123,
+      "split": "train"
+    },
+    {
+      "sample_token": "313bd1121da9493cbd23c14c304ddfbc",
+      "scene_token": "e209e66ff7834490b212c16cb12a1ce9",
+      "official_index": 10345,
+      "split": "train"
+    },
+    {
+      "sample_token": "30024639a3634532852a38cf55ac4edd",
+      "scene_token": "e209e66ff7834490b212c16cb12a1ce9",
+      "official_index": 10362,
+      "split": "train"
+    },
+    {
+      "sample_token": "09f4d7c1a61e43a596471832c29d0b65",
+      "scene_token": "f9e460f092c94466b1211704b5a8859d",
+      "official_index": 3839,
+      "split": "train"
+    },
+    {
+      "sample_token": "64fdcad3ecca43db8b59ff82860fab1b",
+      "scene_token": "f9e460f092c94466b1211704b5a8859d",
+      "official_index": 3856,
+      "split": "train"
+    },
+    {
+      "sample_token": "6d6e64ac8e9f493c80015dc1bfaad116",
+      "scene_token": "b0be2e24e2234947867c7f555f6f59d2",
+      "official_index": 6951,
+      "split": "train"
+    },
+    {
+      "sample_token": "3f20e02a159543189e5dba04f5bda828",
+      "scene_token": "b0be2e24e2234947867c7f555f6f59d2",
+      "official_index": 6968,
+      "split": "train"
+    },
+    {
+      "sample_token": "11803b234b3e4ad9b2f15a3fcf7e94a3",
+      "scene_token": "1f23540a109243438a5e3bd47e70105d",
+      "official_index": 14749,
+      "split": "train"
+    },
+    {
+      "sample_token": "49b30ce77b8d447fa075d502ca270214",
+      "scene_token": "1f23540a109243438a5e3bd47e70105d",
+      "official_index": 14767,
+      "split": "train"
+    },
+    {
+      "sample_token": "f98c93e5df534bf49de031c097bbdacb",
+      "scene_token": "dcdea563c77544bb887de11d87619d3c",
+      "official_index": 16854,
+      "split": "train"
+    },
+    {
+      "sample_token": "54e1e626c41c4e34a7cdd0340e4d3c6b",
+      "scene_token": "dcdea563c77544bb887de11d87619d3c",
+      "official_index": 16871,
+      "split": "train"
+    },
+    {
+      "sample_token": "4363b70353184168a3349cd31b7320d8",
+      "scene_token": "4ea72ee843914a6cbd755e39f2489156",
+      "official_index": 6202,
+      "split": "train"
+    },
+    {
+      "sample_token": "16c40ac6687e4d2786fdd4b7b3dcdedd",
+      "scene_token": "4ea72ee843914a6cbd755e39f2489156",
+      "official_index": 6219,
+      "split": "train"
+    },
+    {
+      "sample_token": "c72c0fda0495458eae44d8e1153b8a20",
+      "scene_token": "bf753f22bc524274bc359467e0be149c",
+      "official_index": 20467,
+      "split": "train"
+    },
+    {
+      "sample_token": "02c86af3f1ec4b15b7a8e09d48084d46",
+      "scene_token": "bf753f22bc524274bc359467e0be149c",
+      "official_index": 20485,
+      "split": "train"
+    },
+    {
+      "sample_token": "073afa99ee2c450db16f669478ed4566",
+      "scene_token": "52bb785dcb5548a1836898f14fb3cf6d",
+      "official_index": 9108,
+      "split": "train"
+    },
+    {
+      "sample_token": "644f657767ac4ebea67a176665d0891b",
+      "scene_token": "52bb785dcb5548a1836898f14fb3cf6d",
+      "official_index": 9125,
+      "split": "train"
+    },
+    {
+      "sample_token": "ab0aacc8bccc486aba2486aed314cbc0",
+      "scene_token": "38b3010304734913bb148d17ebbc352b",
+      "official_index": 15993,
+      "split": "train"
+    },
+    {
+      "sample_token": "54d2d80208c648aa8c161cea7280184d",
+      "scene_token": "38b3010304734913bb148d17ebbc352b",
+      "official_index": 16011,
+      "split": "train"
+    },
+    {
+      "sample_token": "145233ee6af94decbe64e7b86876dc4d",
+      "scene_token": "c7780850596641b8ab5f352d16b178e4",
+      "official_index": 14576,
+      "split": "train"
+    },
+    {
+      "sample_token": "4980b1ddc70f47f6be482e46818e30d1",
+      "scene_token": "c7780850596641b8ab5f352d16b178e4",
+      "official_index": 14594,
+      "split": "train"
+    },
+    {
+      "sample_token": "607fc657690241eab205825e2948d76a",
+      "scene_token": "88084e0150d64dd1949a9cf1493e5188",
+      "official_index": 6065,
+      "split": "train"
+    },
+    {
+      "sample_token": "5ff0af8818744e71b07941992876a80a",
+      "scene_token": "88084e0150d64dd1949a9cf1493e5188",
+      "official_index": 6083,
+      "split": "train"
+    },
+    {
+      "sample_token": "a947cd1e2e74443eabecda428171ec76",
+      "scene_token": "e0a212aafd574781b122a6ba66599a1e",
+      "official_index": 20226,
+      "split": "train"
+    },
+    {
+      "sample_token": "cc417ee6f7d8408bab19d3a6d87cd6ec",
+      "scene_token": "e0a212aafd574781b122a6ba66599a1e",
+      "official_index": 20244,
+      "split": "train"
+    },
+    {
+      "sample_token": "c996761433394622addfc610ce32fd99",
+      "scene_token": "37cfda558193400bbe3a5ff14ae4606e",
+      "official_index": 16062,
+      "split": "train"
+    },
+    {
+      "sample_token": "9a7a1fab514046ea835806f70dc1597a",
+      "scene_token": "37cfda558193400bbe3a5ff14ae4606e",
+      "official_index": 16080,
+      "split": "train"
+    },
+    {
+      "sample_token": "c8dffa0409f8436fa17e602f104f6307",
+      "scene_token": "08110c8640454affb5167801442a85fd",
+      "official_index": 7629,
+      "split": "train"
+    },
+    {
+      "sample_token": "d189bcc2f6bc4b0aaad87dfaa0dd5d3a",
+      "scene_token": "08110c8640454affb5167801442a85fd",
+      "official_index": 7647,
+      "split": "train"
+    },
+    {
+      "sample_token": "5629ba4e3a7047158d7eb297880a45aa",
+      "scene_token": "bc5daf905b854dbc8944811c4b7c319d",
+      "official_index": 22430,
+      "split": "train"
+    },
+    {
+      "sample_token": "f7f43bc7b845465e9a8cdaf6780c71f9",
+      "scene_token": "bc5daf905b854dbc8944811c4b7c319d",
+      "official_index": 22447,
+      "split": "train"
+    },
+    {
+      "sample_token": "edb51cd57c864760a0a0f7eeba64176e",
+      "scene_token": "fe4fdd7a28754baeac7074ad78f55a52",
+      "official_index": 23185,
+      "split": "train"
+    },
+    {
+      "sample_token": "e99e0df7e21f49bc80e95b84da7ed34b",
+      "scene_token": "fe4fdd7a28754baeac7074ad78f55a52",
+      "official_index": 23202,
+      "split": "train"
+    },
+    {
+      "sample_token": "6387a2e37f0f4008b64d643dec75a044",
+      "scene_token": "d83994e61a1b431cacf34931801d0c78",
+      "official_index": 20433,
+      "split": "train"
+    },
+    {
+      "sample_token": "b6a7cfea9c124319b224ff9efc28057f",
+      "scene_token": "d83994e61a1b431cacf34931801d0c78",
+      "official_index": 20450,
+      "split": "train"
+    },
+    {
+      "sample_token": "075ea49415a6494a8ad61054226f9f1c",
+      "scene_token": "9a61a88ed9094334a73aa93c08222110",
+      "official_index": 717,
+      "split": "train"
+    },
+    {
+      "sample_token": "b81e52b232ba4c59aeaeced962b202f0",
+      "scene_token": "9a61a88ed9094334a73aa93c08222110",
+      "official_index": 734,
+      "split": "train"
+    },
+    {
+      "sample_token": "74377123547c4b56a22d0a345f22578b",
+      "scene_token": "dbe2eceb3e4649289366f674c2ba4274",
+      "official_index": 2568,
+      "split": "train"
+    },
+    {
+      "sample_token": "c2e492f747ca4ae8bcb53401474bfe7d",
+      "scene_token": "dbe2eceb3e4649289366f674c2ba4274",
+      "official_index": 2584,
+      "split": "train"
+    },
+    {
+      "sample_token": "f2074d5bed79494bba092ede8dbb1a09",
+      "scene_token": "7e3a6bdd6c6f4c8fb018cff404974446",
+      "official_index": 954,
+      "split": "train"
+    },
+    {
+      "sample_token": "66e98d5c80c6408cbb3aee9ab0c8bc73",
+      "scene_token": "7e3a6bdd6c6f4c8fb018cff404974446",
+      "official_index": 971,
+      "split": "train"
+    },
+    {
+      "sample_token": "32baebbedb3e450493ee2bcaa1fc4eb1",
+      "scene_token": "35c3bc100e4b4e5089820986d3f50fa3",
+      "official_index": 7836,
+      "split": "train"
+    },
+    {
+      "sample_token": "f4f7ffac5d0442cb9bd7f1116d318bb8",
+      "scene_token": "35c3bc100e4b4e5089820986d3f50fa3",
+      "official_index": 7853,
+      "split": "train"
+    },
+    {
+      "sample_token": "ac619c2b27444b64a53acb5f6268ef43",
+      "scene_token": "35ecd252b8ee4cbc83376148e192a803",
+      "official_index": 7459,
+      "split": "train"
+    },
+    {
+      "sample_token": "bbfecc1449134f4f94a1495d48ad8219",
+      "scene_token": "35ecd252b8ee4cbc83376148e192a803",
+      "official_index": 7476,
+      "split": "train"
+    },
+    {
+      "sample_token": "872bf036313d4d038fd7cfec1b669905",
+      "scene_token": "6308d6d934074a028fc3145eedf3e65f",
+      "official_index": 12586,
+      "split": "train"
+    },
+    {
+      "sample_token": "bde7320e9cf04de4b3d4a14b504e197b",
+      "scene_token": "6308d6d934074a028fc3145eedf3e65f",
+      "official_index": 12603,
+      "split": "train"
+    },
+    {
+      "sample_token": "595826b7d7a145758ac88de2fa794785",
+      "scene_token": "d4c5db6faa9f443795ad86561e9e556e",
+      "official_index": 15718,
+      "split": "train"
+    },
+    {
+      "sample_token": "0f72c9caa3d04e9a9653a3d735f25965",
+      "scene_token": "d4c5db6faa9f443795ad86561e9e556e",
+      "official_index": 15735,
+      "split": "train"
+    },
+    {
+      "sample_token": "3e929f4dcbce427b827d5fc30a891ab0",
+      "scene_token": "2ce2df158372461fa91ce77455656f81",
+      "official_index": 3907,
+      "split": "train"
+    },
+    {
+      "sample_token": "4f8b69e992c04457aa352538922feb5c",
+      "scene_token": "2ce2df158372461fa91ce77455656f81",
+      "official_index": 3924,
+      "split": "train"
+    },
+    {
+      "sample_token": "5390327f084b413abbe07fb130f76ad8",
+      "scene_token": "cf3db17f34cd412faca3535ac8c7069a",
+      "official_index": 7767,
+      "split": "train"
+    },
+    {
+      "sample_token": "89e4fbd894934bffaa3ad15243aaa3f2",
+      "scene_token": "cf3db17f34cd412faca3535ac8c7069a",
+      "official_index": 7785,
+      "split": "train"
+    },
+    {
+      "sample_token": "b2818f4741a943059234cd128bcc7094",
+      "scene_token": "df8dfada99a04a81bd1b102eeb84e9bc",
+      "official_index": 10687,
+      "split": "train"
+    },
+    {
+      "sample_token": "2c05a4aef2224d9682b19ba1eca54f33",
+      "scene_token": "df8dfada99a04a81bd1b102eeb84e9bc",
+      "official_index": 10704,
+      "split": "train"
+    },
+    {
+      "sample_token": "6d48aad71eef4bd9906ca372091d239c",
+      "scene_token": "9f3c8453d03d4df5946444757376b826",
+      "official_index": 13815,
+      "split": "train"
+    },
+    {
+      "sample_token": "1b1b58aff5904dffa49d717834f9adb9",
+      "scene_token": "9f3c8453d03d4df5946444757376b826",
+      "official_index": 13832,
+      "split": "train"
+    },
+    {
+      "sample_token": "ee246c2ab07d490eab7b36d511658e7c",
+      "scene_token": "c71940250758484c913c23850c284fba",
+      "official_index": 11140,
+      "split": "train"
+    },
+    {
+      "sample_token": "b3f62bbc54364c518ef66da5c658959e",
+      "scene_token": "c71940250758484c913c23850c284fba",
+      "official_index": 11157,
+      "split": "train"
+    },
+    {
+      "sample_token": "282f9289bfb64b9b9a249e3708300e49",
+      "scene_token": "9a1188aba4bf458c8220818a6c0be55a",
+      "official_index": 1965,
+      "split": "train"
+    },
+    {
+      "sample_token": "7c4502faf6c9481cbd85a9d87c27b613",
+      "scene_token": "9a1188aba4bf458c8220818a6c0be55a",
+      "official_index": 1981,
+      "split": "train"
+    },
+    {
+      "sample_token": "3d1eb3da8dfc4059b703484a83330a07",
+      "scene_token": "70368a18644046f898ab836fc8a3c03f",
+      "official_index": 1463,
+      "split": "train"
+    },
+    {
+      "sample_token": "37ee0263ec47496fbc7ed2555b6d7003",
+      "scene_token": "70368a18644046f898ab836fc8a3c03f",
+      "official_index": 1479,
+      "split": "train"
+    },
+    {
+      "sample_token": "08230092a33b4202be479c0bbab7ca67",
+      "scene_token": "c6da5920d2bc459bb3bc51ee6b9fdd7e",
+      "official_index": 12889,
+      "split": "train"
+    },
+    {
+      "sample_token": "2c0b1dfe5463455eb4b487392ce764c6",
+      "scene_token": "c6da5920d2bc459bb3bc51ee6b9fdd7e",
+      "official_index": 12906,
+      "split": "train"
+    },
+    {
+      "sample_token": "ed2e7d24f2ad41abb3d37cd9a0ca8e89",
+      "scene_token": "d25718445d89453381c659b9c8734939",
+      "official_index": 22808,
+      "split": "train"
+    },
+    {
+      "sample_token": "7bf1cef0e253474e847ee4c2eb955901",
+      "scene_token": "d25718445d89453381c659b9c8734939",
+      "official_index": 22826,
+      "split": "train"
+    },
+    {
+      "sample_token": "83981e8cea394f7db74f8a3cf430a52e",
+      "scene_token": "2d8e61ea27fd419ba9b708488e3f2f10",
+      "official_index": 12248,
+      "split": "train"
+    },
+    {
+      "sample_token": "21ab7be5a6c84dce873ee701bba785ae",
+      "scene_token": "2d8e61ea27fd419ba9b708488e3f2f10",
+      "official_index": 12265,
+      "split": "train"
+    },
+    {
+      "sample_token": "34d0e2936b8a43648358f94eb2afc971",
+      "scene_token": "4772f5283211444eaabd463cd341d360",
+      "official_index": 15889,
+      "split": "train"
+    },
+    {
+      "sample_token": "8b073db4f02a4a23a353165e55c9a9ae",
+      "scene_token": "4772f5283211444eaabd463cd341d360",
+      "official_index": 15907,
+      "split": "train"
+    },
+    {
+      "sample_token": "f7d79d0b93934eb3a7d1043d12c09d33",
+      "scene_token": "4deb245e67374cd88e64d6557b652841",
+      "official_index": 19878,
+      "split": "train"
+    },
+    {
+      "sample_token": "0f38e8b2f9b841269d5acba752d9311e",
+      "scene_token": "4deb245e67374cd88e64d6557b652841",
+      "official_index": 19896,
+      "split": "train"
+    },
+    {
+      "sample_token": "d8fc55cac6bb431b89ca33e889a02139",
+      "scene_token": "5c9bd7ead37e4aa9989f7909f3a78baa",
+      "official_index": 4314,
+      "split": "train"
+    },
+    {
+      "sample_token": "da8429b9357b40b3bfd3fc3b81748f50",
+      "scene_token": "5c9bd7ead37e4aa9989f7909f3a78baa",
+      "official_index": 4331,
+      "split": "train"
+    },
+    {
+      "sample_token": "08064c1d5ec84bd08fcf9b3acebd8e36",
+      "scene_token": "30e77a3561ce4f1bb4fd90e322ea29d7",
+      "official_index": 5122,
+      "split": "train"
+    },
+    {
+      "sample_token": "a18f6a3866e643e6bbf08564b801c754",
+      "scene_token": "30e77a3561ce4f1bb4fd90e322ea29d7",
+      "official_index": 5138,
+      "split": "train"
+    },
+    {
+      "sample_token": "8995d0dfe3db4228a071482f87ba51c0",
+      "scene_token": "6207269cb9474c14b01f9610b2ee30aa",
+      "official_index": 6884,
+      "split": "train"
+    },
+    {
+      "sample_token": "79eb7f6b270743769504531f8dea9025",
+      "scene_token": "6207269cb9474c14b01f9610b2ee30aa",
+      "official_index": 6901,
+      "split": "train"
+    },
+    {
+      "sample_token": "917a76cd5f564387bcacc22537010630",
+      "scene_token": "73030fb67d3c46cfb5e590168088ae39",
+      "official_index": 515,
+      "split": "train"
+    },
+    {
+      "sample_token": "e380df67fa3d49c7add4657b69605cdc",
+      "scene_token": "73030fb67d3c46cfb5e590168088ae39",
+      "official_index": 532,
+      "split": "train"
+    },
+    {
+      "sample_token": "5126621b4cac430aa2f2c4654216a9f9",
+      "scene_token": "19284973bd0342998c37848e931a90d0",
+      "official_index": 19569,
+      "split": "train"
+    },
+    {
+      "sample_token": "ef148767741a4f759fb40af0e8de82cf",
+      "scene_token": "19284973bd0342998c37848e931a90d0",
+      "official_index": 19586,
+      "split": "train"
+    },
+    {
+      "sample_token": "5bc241e0da6649fca924a960ced35721",
+      "scene_token": "dc6235e2281943548084c484cb38b876",
+      "official_index": 4382,
+      "split": "train"
+    },
+    {
+      "sample_token": "9cf926efef01406a9e03a53bf1e76936",
+      "scene_token": "dc6235e2281943548084c484cb38b876",
+      "official_index": 4399,
+      "split": "train"
+    },
+    {
+      "sample_token": "23a0f10578a24eb4bd0edf187f0bfb3d",
+      "scene_token": "390f81ac97474695a727d688240e6fba",
+      "official_index": 22464,
+      "split": "train"
+    },
+    {
+      "sample_token": "c1b4ecef2b704e59b81df5fec5698a86",
+      "scene_token": "390f81ac97474695a727d688240e6fba",
+      "official_index": 22481,
+      "split": "train"
+    },
+    {
+      "sample_token": "796a74809a0e442d883d9eb46a1e4969",
+      "scene_token": "5a1d2867bb504c888a628ad549cc10b6",
+      "official_index": 17674,
+      "split": "train"
+    },
+    {
+      "sample_token": "8dc2011aa6ee4933a8f0e40f1bb9578d",
+      "scene_token": "5a1d2867bb504c888a628ad549cc10b6",
+      "official_index": 17692,
+      "split": "train"
+    },
+    {
+      "sample_token": "f7e431e6c0c04c0b90bea8b13c1336fd",
+      "scene_token": "c74a3a7265ae45f99f65628fbd7cd2a4",
+      "official_index": 2601,
+      "split": "train"
+    },
+    {
+      "sample_token": "eaf4aa90827c4532b8b870b060d165bd",
+      "scene_token": "c74a3a7265ae45f99f65628fbd7cd2a4",
+      "official_index": 2617,
+      "split": "train"
+    },
+    {
+      "sample_token": "695002c4e007485da98e14f133f6a875",
+      "scene_token": "3be5ff913abf449bac92ce2d2a4cffa0",
+      "official_index": 19362,
+      "split": "train"
+    },
+    {
+      "sample_token": "2320b7e99ec844ee96d87f97b8953aa8",
+      "scene_token": "3be5ff913abf449bac92ce2d2a4cffa0",
+      "official_index": 19379,
+      "split": "train"
+    },
+    {
+      "sample_token": "0ed988b247e0428792625796b968be80",
+      "scene_token": "e323a27a0ba94ab5ab11010d778cd41f",
+      "official_index": 8588,
+      "split": "train"
+    },
+    {
+      "sample_token": "70c3847dae314974add12657c6358097",
+      "scene_token": "e323a27a0ba94ab5ab11010d778cd41f",
+      "official_index": 8606,
+      "split": "train"
+    },
+    {
+      "sample_token": "12dfd08e65f24bc489837920a02db6b5",
+      "scene_token": "2e3c0f308fcf4664bf7994053d7080b9",
+      "official_index": 2401,
+      "split": "train"
+    },
+    {
+      "sample_token": "d3bf338551454fabaaae2eb1f3998a97",
+      "scene_token": "2e3c0f308fcf4664bf7994053d7080b9",
+      "official_index": 2418,
+      "split": "train"
+    },
+    {
+      "sample_token": "4d6e380971ef488582bce4a4b70bcafb",
+      "scene_token": "c7b8d96173bf41dc8df8c0d16adfc71e",
+      "official_index": 19739,
+      "split": "train"
+    },
+    {
+      "sample_token": "3ae1b374e2df4a2c9c5ba8182e6a072d",
+      "scene_token": "c7b8d96173bf41dc8df8c0d16adfc71e",
+      "official_index": 19757,
+      "split": "train"
+    },
+    {
+      "sample_token": "d1128584076d4fa2bd256d3584340018",
+      "scene_token": "242ac1b59fec4e0c9c200ffca81775e2",
+      "official_index": 21229,
+      "split": "train"
+    },
+    {
+      "sample_token": "6016a26c820740dc8843fa7fe70f44a8",
+      "scene_token": "242ac1b59fec4e0c9c200ffca81775e2",
+      "official_index": 21246,
+      "split": "train"
+    },
+    {
+      "sample_token": "a4f2c78985514ca1943baf03f735fdc2",
+      "scene_token": "1ec0b9bc3eca4b76b2610c519f843762",
+      "official_index": 8108,
+      "split": "train"
+    },
+    {
+      "sample_token": "814a6b62eb91467f8dedd512682bd224",
+      "scene_token": "1ec0b9bc3eca4b76b2610c519f843762",
+      "official_index": 8125,
+      "split": "train"
+    },
+    {
+      "sample_token": "774ecbdc1aaa43a4906ad82258a45d8a",
+      "scene_token": "cc9d6954dc6448359fc1e8aeafc5f760",
+      "official_index": 8041,
+      "split": "train"
+    },
+    {
+      "sample_token": "d1ffe5746dc64d22ba32efe10c092225",
+      "scene_token": "cc9d6954dc6448359fc1e8aeafc5f760",
+      "official_index": 8057,
+      "split": "train"
+    },
+    {
+      "sample_token": "e46f026841cc49c4882022f10acb58e3",
+      "scene_token": "c5b36e5275cc4a2285d095e87347c49a",
+      "official_index": 17743,
+      "split": "train"
+    },
+    {
+      "sample_token": "bec4c5db7b774e5f8158105424cfbfbf",
+      "scene_token": "c5b36e5275cc4a2285d095e87347c49a",
+      "official_index": 17760,
+      "split": "train"
+    },
+    {
+      "sample_token": "022b65e3be30420abda7edbff9f521f5",
+      "scene_token": "277af8c7487f4f24bd2953d4dc8d11ff",
+      "official_index": 22739,
+      "split": "train"
+    },
+    {
+      "sample_token": "f7c3100a5f404694a842526368798208",
+      "scene_token": "277af8c7487f4f24bd2953d4dc8d11ff",
+      "official_index": 22756,
+      "split": "train"
+    },
+    {
+      "sample_token": "2ecaf407f6284c2280ab5a7b8372e589",
+      "scene_token": "095d9b93b583425f910ae2afaf1d017d",
+      "official_index": 1664,
+      "split": "train"
+    },
+    {
+      "sample_token": "95eebfccdb2e40e7b484d88ccdfbc023",
+      "scene_token": "095d9b93b583425f910ae2afaf1d017d",
+      "official_index": 1680,
+      "split": "train"
+    },
+    {
+      "sample_token": "469e993c84074b039f6be03219f7a5d2",
+      "scene_token": "1d25e9071ea94891b5eb7554e77a11bb",
+      "official_index": 10861,
+      "split": "train"
+    },
+    {
+      "sample_token": "198474f0cf9d48b58e1b51a2af7eae6a",
+      "scene_token": "1d25e9071ea94891b5eb7554e77a11bb",
+      "official_index": 10878,
+      "split": "train"
+    },
+    {
+      "sample_token": "52d0abc9e882435d9455125729f8c3c5",
+      "scene_token": "ea4c42715ae24b0b952c57a9af1e7731",
+      "official_index": 11208,
+      "split": "train"
+    },
+    {
+      "sample_token": "df739714c0b14097ac14784f981506ca",
+      "scene_token": "ea4c42715ae24b0b952c57a9af1e7731",
+      "official_index": 11226,
+      "split": "train"
+    },
+    {
+      "sample_token": "b35e7712a09e4bea902a1f5de6da678d",
+      "scene_token": "f36162eac28641a0978032ff89e0f752",
+      "official_index": 9659,
+      "split": "train"
+    },
+    {
+      "sample_token": "77785efa22c940a9a199f9ad9c58a5f6",
+      "scene_token": "f36162eac28641a0978032ff89e0f752",
+      "official_index": 9676,
+      "split": "train"
+    },
+    {
+      "sample_token": "3cf8c6c9a99249078aead11f9117deea",
+      "scene_token": "8fbbe701baf641359129ea166e1674ec",
+      "official_index": 143,
+      "split": "train"
+    },
+    {
+      "sample_token": "70162d437421474ebca25c10b35d8eee",
+      "scene_token": "8fbbe701baf641359129ea166e1674ec",
+      "official_index": 160,
+      "split": "train"
+    },
+    {
+      "sample_token": "a3fe4eb0294545e4b7efc85a41aa07e5",
+      "scene_token": "5b9c64f03f8b4a4f8189a18d74f866c2",
+      "official_index": 7972,
+      "split": "train"
+    },
+    {
+      "sample_token": "0927ea8036a342228b7506dd8a5875f7",
+      "scene_token": "5b9c64f03f8b4a4f8189a18d74f866c2",
+      "official_index": 7989,
+      "split": "train"
+    },
+    {
+      "sample_token": "986057845cd64a45a60cdcf85e9b16df",
+      "scene_token": "06c43bc74aff453081ce83eb126a756e",
+      "official_index": 7938,
+      "split": "train"
+    },
+    {
+      "sample_token": "6abd1df827694c06a954cc185f70a80b",
+      "scene_token": "06c43bc74aff453081ce83eb126a756e",
+      "official_index": 7955,
+      "split": "train"
+    },
+    {
+      "sample_token": "756c8ec62b384be590fab58b539f08ab",
+      "scene_token": "7599adab7f3944dc8ac1c88b4f3bb082",
+      "official_index": 3468,
+      "split": "train"
+    },
+    {
+      "sample_token": "e8cd45be3b6b46a89089065896488540",
+      "scene_token": "7599adab7f3944dc8ac1c88b4f3bb082",
+      "official_index": 3485,
+      "split": "train"
+    },
+    {
+      "sample_token": "845f935b23b94e1686fc11bf656500f3",
+      "scene_token": "c6d1085c40614693a046dae3168bdb35",
+      "official_index": 21126,
+      "split": "train"
+    },
+    {
+      "sample_token": "524ec0ad7b494da1b5c2b0d1e79e6eec",
+      "scene_token": "c6d1085c40614693a046dae3168bdb35",
+      "official_index": 21143,
+      "split": "train"
+    },
+    {
+      "sample_token": "d1136fce62f14400a069613e274f46f7",
+      "scene_token": "de7d80a1f5fb4c3e82ce8a4f213b450a",
+      "official_index": 23392,
+      "split": "train"
+    },
+    {
+      "sample_token": "98fa81992fb04e799c329eca220e7164",
+      "scene_token": "de7d80a1f5fb4c3e82ce8a4f213b450a",
+      "official_index": 23409,
+      "split": "train"
+    },
+    {
+      "sample_token": "3a974aeb2f5c4d219e9ca9749f2ed172",
+      "scene_token": "fb255bba9b6a4f37a8894e336d2136f1",
+      "official_index": 19774,
+      "split": "train"
+    },
+    {
+      "sample_token": "8e52a9a8cb6c4d86885740b6f1c48c3e",
+      "scene_token": "fb255bba9b6a4f37a8894e336d2136f1",
+      "official_index": 19792,
+      "split": "train"
+    },
+    {
+      "sample_token": "e60b0f309b01456dbb187f81689ed9c6",
+      "scene_token": "34a9823fac0d4b9db30898e00b5f9f9c",
+      "official_index": 21882,
+      "split": "train"
+    },
+    {
+      "sample_token": "1a9d994571ac4b7983679ed1f8c89b23",
+      "scene_token": "34a9823fac0d4b9db30898e00b5f9f9c",
+      "official_index": 21899,
+      "split": "train"
+    },
+    {
+      "sample_token": "ab97f69c71b643ec8d754b010775d2b0",
+      "scene_token": "b0644660d7864451bfc4b3432bb5b47e",
+      "official_index": 14231,
+      "split": "train"
+    },
+    {
+      "sample_token": "8bb4dc1051674c9c8526ff869987b557",
+      "scene_token": "b0644660d7864451bfc4b3432bb5b47e",
+      "official_index": 14249,
+      "split": "train"
+    },
+    {
+      "sample_token": "fdac236259694a488d1add6af2a2ac56",
+      "scene_token": "373bf99c103d4464a7b963a83523fbcb",
+      "official_index": 10930,
+      "split": "train"
+    },
+    {
+      "sample_token": "0e6c7fd566bd4953a0824b4df5a9133d",
+      "scene_token": "373bf99c103d4464a7b963a83523fbcb",
+      "official_index": 10948,
+      "split": "train"
+    },
+    {
+      "sample_token": "dc600c51de26458abeb9a15f367dfb9d",
+      "scene_token": "2f0e54af35964a3fb347359836bec035",
+      "official_index": 12005,
+      "split": "train"
+    },
+    {
+      "sample_token": "e7080b204c77441bb6d2e845b58b8699",
+      "scene_token": "2f0e54af35964a3fb347359836bec035",
+      "official_index": 12023,
+      "split": "train"
+    },
+    {
+      "sample_token": "8a49a2f960c3408dab88629ab5ea9500",
+      "scene_token": "69295e26c8d146de94ea5307d8d74819",
+      "official_index": 2502,
+      "split": "train"
+    },
+    {
+      "sample_token": "07c8878f8f8c442998e93dec74829c41",
+      "scene_token": "69295e26c8d146de94ea5307d8d74819",
+      "official_index": 2518,
+      "split": "train"
+    },
+    {
+      "sample_token": "2a4f955848f444069753099cd64ab898",
+      "scene_token": "2ffd7e2a1daf4b928464ddb2ed3dca59",
+      "official_index": 312,
+      "split": "train"
+    },
+    {
+      "sample_token": "0dd20349cbb04a0eb6e157b65d74ec21",
+      "scene_token": "2ffd7e2a1daf4b928464ddb2ed3dca59",
+      "official_index": 329,
+      "split": "train"
+    },
+    {
+      "sample_token": "4864664f6d414a20b08064b051d4a2c5",
+      "scene_token": "9a81caa3d5134d7f87ee4786ccef68f7",
+      "official_index": 1697,
+      "split": "train"
+    },
+    {
+      "sample_token": "6418c381346245459a53cdff48e1a6ae",
+      "scene_token": "9a81caa3d5134d7f87ee4786ccef68f7",
+      "official_index": 1713,
+      "split": "train"
+    },
+    {
+      "sample_token": "20cc8746e136431e8fbd9ba34ffd9d91",
+      "scene_token": "63252988084b4943a50734990c47e039",
+      "official_index": 12653,
+      "split": "train"
+    },
+    {
+      "sample_token": "81586e68eac84c6bb6dc3e8a31eb26bc",
+      "scene_token": "63252988084b4943a50734990c47e039",
+      "official_index": 12670,
+      "split": "train"
+    },
+    {
+      "sample_token": "01778b3915c84f4ea6036da0cd64e855",
+      "scene_token": "0287702725184161af95373198546a59",
+      "official_index": 15303,
+      "split": "train"
+    },
+    {
+      "sample_token": "7c6fed7a322c4bc3b6c1ae1c503ea502",
+      "scene_token": "0287702725184161af95373198546a59",
+      "official_index": 15321,
+      "split": "train"
+    },
+    {
+      "sample_token": "6583f9773dfd495b921ba49adb564ec3",
+      "scene_token": "85e8f6d6743a4897b5e07e685267868e",
+      "official_index": 10515,
+      "split": "train"
+    },
+    {
+      "sample_token": "f149f3d0947842818f0a1d280a589f04",
+      "scene_token": "85e8f6d6743a4897b5e07e685267868e",
+      "official_index": 10533,
+      "split": "train"
+    },
+    {
+      "sample_token": "63e39f83ae0e414fad8cb4019aa82574",
+      "scene_token": "54ec146682e24683becfeab4124e8402",
+      "official_index": 14438,
+      "split": "train"
+    },
+    {
+      "sample_token": "957df5dac322423bb6363e3302143b47",
+      "scene_token": "54ec146682e24683becfeab4124e8402",
+      "official_index": 14455,
+      "split": "train"
+    },
+    {
+      "sample_token": "950a17444123496c942f762ea9f10700",
+      "scene_token": "9833ac6de5ae418f9e6d0eeb58e72beb",
+      "official_index": 7189,
+      "split": "train"
+    },
+    {
+      "sample_token": "b09cec9cd5964c3083f7ad0f382b2dbb",
+      "scene_token": "9833ac6de5ae418f9e6d0eeb58e72beb",
+      "official_index": 7206,
+      "split": "train"
+    },
+    {
+      "sample_token": "6609080340b445f6a41c8017fddc6c53",
+      "scene_token": "d39c6835da754adfa0f75183e685c403",
+      "official_index": 8623,
+      "split": "train"
+    },
+    {
+      "sample_token": "639675b475314c22ac27f0e71c53b311",
+      "scene_token": "d39c6835da754adfa0f75183e685c403",
+      "official_index": 8640,
+      "split": "train"
+    },
+    {
+      "sample_token": "ca02a8dc44db4108b246ac398cadf89e",
+      "scene_token": "6b6a24b7ae6b40ee95d60918f7f4cb2e",
+      "official_index": 16444,
+      "split": "train"
+    },
+    {
+      "sample_token": "8f195d5f5baa4e8caefae2698bf48272",
+      "scene_token": "6b6a24b7ae6b40ee95d60918f7f4cb2e",
+      "official_index": 16461,
+      "split": "train"
+    },
+    {
+      "sample_token": "3840ac0fccee448b83f56e854a1ae34f",
+      "scene_token": "94f224a2a36c4bbbab59120cc6c31f6e",
+      "official_index": 4687,
+      "split": "train"
+    },
+    {
+      "sample_token": "dcbe1aa00efd41389846529418d80bbf",
+      "scene_token": "94f224a2a36c4bbbab59120cc6c31f6e",
+      "official_index": 4703,
+      "split": "train"
+    },
+    {
+      "sample_token": "825f54223cc34e3bb570e1eb0b3c80f7",
+      "scene_token": "0be1ff07a8f148ca9535fb7f0deaf828",
+      "official_index": 18294,
+      "split": "train"
+    },
+    {
+      "sample_token": "05cfd843394a4659835c6eedce4f96c0",
+      "scene_token": "0be1ff07a8f148ca9535fb7f0deaf828",
+      "official_index": 18311,
+      "split": "train"
+    },
+    {
+      "sample_token": "e154fa0b72ef4a428a17b76e5a8cba6c",
+      "scene_token": "240d15482599449a9bd0432fbfa688ab",
+      "official_index": 20018,
+      "split": "train"
+    },
+    {
+      "sample_token": "1acb8d19109a4e6bab8477ece8cd0749",
+      "scene_token": "240d15482599449a9bd0432fbfa688ab",
+      "official_index": 20036,
+      "split": "train"
+    },
+    {
+      "sample_token": "11aad8bb7d0344ce86b68f1f9dfead3b",
+      "scene_token": "75548269eb0a4614a6f84ab8d7713196",
+      "official_index": 18672,
+      "split": "train"
+    },
+    {
+      "sample_token": "42d4a9c9157f488aa5ea41405a0e025a",
+      "scene_token": "75548269eb0a4614a6f84ab8d7713196",
+      "official_index": 18689,
+      "split": "train"
+    },
+    {
+      "sample_token": "2823f6af6c8741618d2c9f8deecf34c1",
+      "scene_token": "717053dec2ef4baa913ba1e24c09edff",
+      "official_index": 17606,
+      "split": "train"
+    },
+    {
+      "sample_token": "c73c5f7fc8a14fe0875cf000047ea9a1",
+      "scene_token": "717053dec2ef4baa913ba1e24c09edff",
+      "official_index": 17623,
+      "split": "train"
+    },
+    {
+      "sample_token": "f5af6a6efa424ee5885773195dbec7cf",
+      "scene_token": "fd0d4fdda5c04f7eb43ecd2097df56fa",
+      "official_index": 16305,
+      "split": "train"
+    },
+    {
+      "sample_token": "7a41f2bf5528463c80f24a783b48554f",
+      "scene_token": "fd0d4fdda5c04f7eb43ecd2097df56fa",
+      "official_index": 16323,
+      "split": "train"
+    },
+    {
+      "sample_token": "b0ee7a58b7b949e9b729fde056b346ac",
+      "scene_token": "4f679c8f8f6d4f5d8466253dda4733ba",
+      "official_index": 22259,
+      "split": "train"
+    },
+    {
+      "sample_token": "a6680d8aade9442b8714474d46cac639",
+      "scene_token": "4f679c8f8f6d4f5d8466253dda4733ba",
+      "official_index": 22276,
+      "split": "train"
+    },
+    {
+      "sample_token": "e08fe69b1a6c44d98139170217f3ae0f",
+      "scene_token": "2c96ff6afc9e4cf7bc8b107fce955c1f",
+      "official_index": 14092,
+      "split": "train"
+    },
+    {
+      "sample_token": "8e8e4aa7a38f449db11ea94e34357e82",
+      "scene_token": "2c96ff6afc9e4cf7bc8b107fce955c1f",
+      "official_index": 14110,
+      "split": "train"
+    },
+    {
+      "sample_token": "cb83f1ffae9d4334b48328a79fbddc98",
+      "scene_token": "579fb61492be4ffc97132658f8e4bb9c",
+      "official_index": 10209,
+      "split": "train"
+    },
+    {
+      "sample_token": "0422ebe250b44495b876a52cd12944c1",
+      "scene_token": "579fb61492be4ffc97132658f8e4bb9c",
+      "official_index": 10226,
+      "split": "train"
+    },
+    {
+      "sample_token": "9ee04e589c14490dace621ee4002cdbb",
+      "scene_token": "2a334f5c4615465f86a250d4758a2d7d",
+      "official_index": 22155,
+      "split": "train"
+    },
+    {
+      "sample_token": "a62fa8c288dc46abb5f52fb202e50997",
+      "scene_token": "2a334f5c4615465f86a250d4758a2d7d",
+      "official_index": 22172,
+      "split": "train"
+    },
+    {
+      "sample_token": "7e61fe827a52474ab5f19d48c60da3d4",
+      "scene_token": "670e01eb31b64b509db5290531254203",
+      "official_index": 2134,
+      "split": "train"
+    },
+    {
+      "sample_token": "1c42045eba0b4885a9fbe8bf483ee213",
+      "scene_token": "670e01eb31b64b509db5290531254203",
+      "official_index": 2150,
+      "split": "train"
+    },
+    {
+      "sample_token": "4fde06ca966a4410ae9779d3f895da66",
+      "scene_token": "a8819942e8bb43b6a832c56dfb78cfc6",
+      "official_index": 5021,
+      "split": "train"
+    },
+    {
+      "sample_token": "65d1f31faea54d63b0095267afbda101",
+      "scene_token": "a8819942e8bb43b6a832c56dfb78cfc6",
+      "official_index": 5037,
+      "split": "train"
+    },
+    {
+      "sample_token": "671dea66d87b4cbfa7fd2e2221ce71e9",
+      "scene_token": "359f9c029ae44e1d9d47c05bc7915561",
+      "official_index": 1394,
+      "split": "train"
+    },
+    {
+      "sample_token": "03b1880912dc4590b00679eb1d363841",
+      "scene_token": "359f9c029ae44e1d9d47c05bc7915561",
+      "official_index": 1411,
+      "split": "train"
+    },
+    {
+      "sample_token": "cd02952686cf4e8d97a0a8be226f5726",
+      "scene_token": "b2119bd765a94b0cb705424800307bbf",
+      "official_index": 21643,
+      "split": "train"
+    },
+    {
+      "sample_token": "cb23f348ceec4571881744b9864b386b",
+      "scene_token": "b2119bd765a94b0cb705424800307bbf",
+      "official_index": 21660,
+      "split": "train"
+    },
+    {
+      "sample_token": "5c54af3107b84d349fa334ac17ca7691",
+      "scene_token": "5674c9e612cc4f7793330a361755830a",
+      "official_index": 10071,
+      "split": "train"
+    },
+    {
+      "sample_token": "f29d283a2acd468dba30b42f57172422",
+      "scene_token": "5674c9e612cc4f7793330a361755830a",
+      "official_index": 10089,
+      "split": "train"
+    },
+    {
+      "sample_token": "8e262a53e14d4327aed7dd8ce51fd85c",
+      "scene_token": "f4395dd8e4004f12a8dec3079a93d804",
+      "official_index": 2734,
+      "split": "train"
+    },
+    {
+      "sample_token": "ebbbb7d8075b4fee839314f90e66583f",
+      "scene_token": "f4395dd8e4004f12a8dec3079a93d804",
+      "official_index": 2750,
+      "split": "train"
+    },
+    {
+      "sample_token": "5745b90ad1514a0c8396fef52c7c0ca4",
+      "scene_token": "9f5f2211d6f943a89dd87bbe9703539d",
+      "official_index": 18914,
+      "split": "train"
+    },
+    {
+      "sample_token": "7d826065e5ad4f5b9538a229348912dc",
+      "scene_token": "9f5f2211d6f943a89dd87bbe9703539d",
+      "official_index": 18931,
+      "split": "train"
+    },
+    {
+      "sample_token": "013eec82e2ca46f5a5b73cddccaf2c23",
+      "scene_token": "a5003bf9af8545a3a4c7f1f5604e8d3b",
+      "official_index": 20571,
+      "split": "train"
+    },
+    {
+      "sample_token": "beb61504d9974b89a533308285ccf2f2",
+      "scene_token": "a5003bf9af8545a3a4c7f1f5604e8d3b",
+      "official_index": 20588,
+      "split": "train"
+    },
+    {
+      "sample_token": "39caa802aad944049d7a4087ce339bff",
+      "scene_token": "febc1800b9ed432d96aee5ecf0156831",
+      "official_index": 3063,
+      "split": "train"
+    },
+    {
+      "sample_token": "cdca0e249bcd4712a033a728be1d8bb0",
+      "scene_token": "febc1800b9ed432d96aee5ecf0156831",
+      "official_index": 3080,
+      "split": "train"
+    },
+    {
+      "sample_token": "265c0db8390c4b7a9569f37d0f5baab8",
+      "scene_token": "a2e8f126913b4f72909e06d881dc5a8b",
+      "official_index": 18155,
+      "split": "train"
+    },
+    {
+      "sample_token": "0ecfad934d6d44a0b2a8825746d4349e",
+      "scene_token": "a2e8f126913b4f72909e06d881dc5a8b",
+      "official_index": 18173,
+      "split": "train"
+    },
+    {
+      "sample_token": "36d07275902b4296adbcd42164af45f2",
+      "scene_token": "d033fb0d79ea42b9a356fa5162172598",
+      "official_index": 16613,
+      "split": "train"
+    },
+    {
+      "sample_token": "500aeaaa1ab944c6825263e95be2d216",
+      "scene_token": "d033fb0d79ea42b9a356fa5162172598",
+      "official_index": 16631,
+      "split": "train"
+    },
+    {
+      "sample_token": "88d0ff68b5264f49a3f93185ad4ea6ec",
+      "scene_token": "da41ecbc644b4915b84bb732e35ebf8c",
+      "official_index": 11624,
+      "split": "train"
+    },
+    {
+      "sample_token": "64441e6ee5f243df9773861fc7638fbe",
+      "scene_token": "da41ecbc644b4915b84bb732e35ebf8c",
+      "official_index": 11641,
+      "split": "train"
+    },
+    {
+      "sample_token": "f017adc5c691441c8a1d218e38551501",
+      "scene_token": "02f1e5e2fc544798aad223f5ae5e8440",
+      "official_index": 9487,
+      "split": "train"
+    },
+    {
+      "sample_token": "85bdefc22b6c475fb681b4fd4d6daf1c",
+      "scene_token": "02f1e5e2fc544798aad223f5ae5e8440",
+      "official_index": 9505,
+      "split": "train"
+    },
+    {
+      "sample_token": "dca3f5e0149f4df78bba0a8e885cf138",
+      "scene_token": "bd850592cd2541288b177b8e20baa31e",
+      "official_index": 12485,
+      "split": "train"
+    },
+    {
+      "sample_token": "f64ea030f47e4046bda7414266eeb136",
+      "scene_token": "bd850592cd2541288b177b8e20baa31e",
+      "official_index": 12502,
+      "split": "train"
+    },
+    {
+      "sample_token": "a232ecf86c954455846c23378f850c74",
+      "scene_token": "b79d940da8df43d09ee972c2414ffeca",
+      "official_index": 1090,
+      "split": "train"
+    },
+    {
+      "sample_token": "77fb48fed340429595ce38626acda315",
+      "scene_token": "b79d940da8df43d09ee972c2414ffeca",
+      "official_index": 1106,
+      "split": "train"
+    },
+    {
+      "sample_token": "df4aac083c0e475da9902e30e80d34c1",
+      "scene_token": "befb96098dc14988ac468a6bd3cbd4a0",
+      "official_index": 8485,
+      "split": "train"
+    },
+    {
+      "sample_token": "a04be2f206b0470187c14da238056376",
+      "scene_token": "befb96098dc14988ac468a6bd3cbd4a0",
+      "official_index": 8502,
+      "split": "train"
+    },
+    {
+      "sample_token": "079f80fa0cd04c1e822f8bce5ffc374b",
+      "scene_token": "13c6a31ab85547b08dab2544024553a8",
+      "official_index": 9419,
+      "split": "train"
+    },
+    {
+      "sample_token": "fb1dca2598514419aa3046b510ead3b2",
+      "scene_token": "13c6a31ab85547b08dab2544024553a8",
+      "official_index": 9436,
+      "split": "train"
+    },
+    {
+      "sample_token": "2ea5f68ed4e94018a4c64440384a5436",
+      "scene_token": "aad7d3bf3c7a47ad9cb93d9b92ed38ee",
+      "official_index": 3332,
+      "split": "train"
+    },
+    {
+      "sample_token": "4c3a6e6425ff44378338093b9660ad1e",
+      "scene_token": "aad7d3bf3c7a47ad9cb93d9b92ed38ee",
+      "official_index": 3349,
+      "split": "train"
+    },
+    {
+      "sample_token": "1d73b1bfbacc4eda8f48cf3b14ce13e8",
+      "scene_token": "4959ccdac5774a088d0c9e10667f09f1",
+      "official_index": 6918,
+      "split": "train"
+    },
+    {
+      "sample_token": "1cd3b8ba9e2a4ddfa75f6d99010b8e69",
+      "scene_token": "4959ccdac5774a088d0c9e10667f09f1",
+      "official_index": 6934,
+      "split": "train"
+    },
+    {
+      "sample_token": "3647d841ca524fb89b13f571c892d573",
+      "scene_token": "dbd9183e1278475ea54761297e004b04",
+      "official_index": 14853,
+      "split": "train"
+    },
+    {
+      "sample_token": "99b567f5bf11471c8cc241ca0addf4ea",
+      "scene_token": "dbd9183e1278475ea54761297e004b04",
+      "official_index": 14871,
+      "split": "train"
+    },
+    {
+      "sample_token": "b50707c212f640719eb3bfd96d725319",
+      "scene_token": "c9d654d4279c4efa9745a25ba6b373ee",
+      "official_index": 7291,
+      "split": "train"
+    },
+    {
+      "sample_token": "78217754499a4ff4a140cd3cb545acdc",
+      "scene_token": "c9d654d4279c4efa9745a25ba6b373ee",
+      "official_index": 7308,
+      "split": "train"
+    },
+    {
+      "sample_token": "0ca9186f66f24ac4b7701089fe426569",
+      "scene_token": "da783af4b5124333911684dbaf31d969",
+      "official_index": 12821,
+      "split": "train"
+    },
+    {
+      "sample_token": "bb6ff9f246ed4883ac361a83e123dc5e",
+      "scene_token": "da783af4b5124333911684dbaf31d969",
+      "official_index": 12838,
+      "split": "train"
+    },
+    {
+      "sample_token": "815bc49c243d425184b5c5476762c754",
+      "scene_token": "45fc8a7a26c5469a88db999ae8468777",
+      "official_index": 15130,
+      "split": "train"
+    },
+    {
+      "sample_token": "fd89f519814441a4993cdcd76cdcbc5c",
+      "scene_token": "45fc8a7a26c5469a88db999ae8468777",
+      "official_index": 15147,
+      "split": "train"
+    },
+    {
+      "sample_token": "77c3f5aa740b4c5f825faef5d6d36439",
+      "scene_token": "ea0979999bf84ee6a6230b1bde7ec723",
+      "official_index": 21608,
+      "split": "train"
+    },
+    {
+      "sample_token": "5aefac2e3b8d442da9327d4906321ed4",
+      "scene_token": "ea0979999bf84ee6a6230b1bde7ec723",
+      "official_index": 21626,
+      "split": "train"
+    },
+    {
+      "sample_token": "38336dea37174ec0bfee7392e32373f7",
+      "scene_token": "36349e9caeff483e9d8d25e9743b9f5b",
+      "official_index": 18879,
+      "split": "train"
+    },
+    {
+      "sample_token": "88ed58783df541f0a418d56178ec66e8",
+      "scene_token": "36349e9caeff483e9d8d25e9743b9f5b",
+      "official_index": 18897,
+      "split": "train"
+    },
+    {
+      "sample_token": "b9b017cd56b04509be86a65893634db6",
+      "scene_token": "d0de3bf834b747179080898725b0f21d",
+      "official_index": 6782,
+      "split": "train"
+    },
+    {
+      "sample_token": "27f3f29554074a9fbb9de01757dcd166",
+      "scene_token": "d0de3bf834b747179080898725b0f21d",
+      "official_index": 6799,
+      "split": "train"
+    },
+    {
+      "sample_token": "a54b4297db2e425087862f643c309aa7",
+      "scene_token": "96a410b8fe5e4b57bf69b844bfd4d28c",
+      "official_index": 14022,
+      "split": "train"
+    },
+    {
+      "sample_token": "60c31a60ba61410a9417a40699d57d41",
+      "scene_token": "96a410b8fe5e4b57bf69b844bfd4d28c",
+      "official_index": 14040,
+      "split": "train"
+    },
+    {
+      "sample_token": "38a6bb28e66b43c3925db5a1217385a8",
+      "scene_token": "2755560e05784e5cbc76619793d36e86",
+      "official_index": 3366,
+      "split": "train"
+    },
+    {
+      "sample_token": "29006d6b02d443dd85e619c7add229d7",
+      "scene_token": "2755560e05784e5cbc76619793d36e86",
+      "official_index": 3383,
+      "split": "train"
+    },
+    {
+      "sample_token": "7b784a18fec44eeba45f661a63100cb4",
+      "scene_token": "c133e78e55ae487c821803a3b183d1ab",
+      "official_index": 9625,
+      "split": "train"
+    },
+    {
+      "sample_token": "3af62d38092d498eb48a6eeceb896554",
+      "scene_token": "c133e78e55ae487c821803a3b183d1ab",
+      "official_index": 9642,
+      "split": "train"
+    },
+    {
+      "sample_token": "faca7c0bced94a0ca9e1819b991da083",
+      "scene_token": "087c6e521e974c708d49cac1db095691",
+      "official_index": 17949,
+      "split": "train"
+    },
+    {
+      "sample_token": "105737a1956a45f2b74a98a5a1872108",
+      "scene_token": "087c6e521e974c708d49cac1db095691",
+      "official_index": 17966,
+      "split": "train"
+    },
+    {
+      "sample_token": "23cf741b7a7a445fafe88522f277e893",
+      "scene_token": "2575c1870ede486b8568279b4731e47e",
+      "official_index": 13711,
+      "split": "train"
+    },
+    {
+      "sample_token": "d06063eb1f6d44388feb31a5f8c32362",
+      "scene_token": "2575c1870ede486b8568279b4731e47e",
+      "official_index": 13729,
+      "split": "train"
+    },
+    {
+      "sample_token": "fe9b2293c75742588aa2d219eb1112d0",
+      "scene_token": "d1455a9d8add42dba52beac59a67259c",
+      "official_index": 20087,
+      "split": "train"
+    },
+    {
+      "sample_token": "e7305f2769054c02a90f82a05478b3fe",
+      "scene_token": "d1455a9d8add42dba52beac59a67259c",
+      "official_index": 20105,
+      "split": "train"
+    },
+    {
+      "sample_token": "dca7d8b2f9724e2b8276635e1cb8cfcd",
+      "scene_token": "75a4ec12042542149b0a77a0a10d6330",
+      "official_index": 110,
+      "split": "train"
+    },
+    {
+      "sample_token": "6cdfbf3918bd4c618670ea779eec0f77",
+      "scene_token": "75a4ec12042542149b0a77a0a10d6330",
+      "official_index": 126,
+      "split": "train"
+    },
+    {
+      "sample_token": "e33ba1dd471d42618157916d9a306f20",
+      "scene_token": "28db6ee9a8d34e9e88e741817b6733c1",
+      "official_index": 15441,
+      "split": "train"
+    },
+    {
+      "sample_token": "875e463133974ef38959caa058217159",
+      "scene_token": "28db6ee9a8d34e9e88e741817b6733c1",
+      "official_index": 15459,
+      "split": "train"
+    },
+    {
+      "sample_token": "34801195772643398d62604284d7d529",
+      "scene_token": "0e37d4a357db4246a908cfd97d17efc6",
+      "official_index": 1730,
+      "split": "train"
+    },
+    {
+      "sample_token": "9668165e9a9343a3a78be8a3dfff5910",
+      "scene_token": "0e37d4a357db4246a908cfd97d17efc6",
+      "official_index": 1746,
+      "split": "train"
+    },
+    {
+      "sample_token": "e0e53baf22fd40e58afa5cb1cdd68fe5",
+      "scene_token": "55b44b64f35c48689cdca8c39b672db4",
+      "official_index": 17983,
+      "split": "train"
+    },
+    {
+      "sample_token": "f5b8a3505dfd4dddb58a47f4e0f92c53",
+      "scene_token": "55b44b64f35c48689cdca8c39b672db4",
+      "official_index": 18001,
+      "split": "train"
+    },
+    {
+      "sample_token": "75eb4bfa656444208de811d53e305e37",
+      "scene_token": "64ca274b5f69458bb5d21e0e2e071902",
+      "official_index": 17915,
+      "split": "train"
+    },
+    {
+      "sample_token": "cb3af934d05f46e39d6eb8c1b6ca35c8",
+      "scene_token": "64ca274b5f69458bb5d21e0e2e071902",
+      "official_index": 17932,
+      "split": "train"
+    },
+    {
+      "sample_token": "e2248640ec3a4913a4fcb5ed0625a27a",
+      "scene_token": "40516b7f46e548d19dfee580e9a5afa6",
+      "official_index": 16409,
+      "split": "train"
+    },
+    {
+      "sample_token": "e0b2bbe71eec4dbb9ace43d37a0054a1",
+      "scene_token": "40516b7f46e548d19dfee580e9a5afa6",
+      "official_index": 16427,
+      "split": "train"
+    },
+    {
+      "sample_token": "ea83029218ac4d27a90cafc691e12e2e",
+      "scene_token": "2c1f2e5096434cd78919b2ae442d4ba4",
+      "official_index": 2868,
+      "split": "train"
+    },
+    {
+      "sample_token": "563da98bb187410da91634b68548c6a2",
+      "scene_token": "2c1f2e5096434cd78919b2ae442d4ba4",
+      "official_index": 2885,
+      "split": "train"
+    },
+    {
+      "sample_token": "67d0da99535444b3949db621396830e1",
+      "scene_token": "22daa579e9d54040b3f76a4eeef3a587",
+      "official_index": 3637,
+      "split": "train"
+    },
+    {
+      "sample_token": "4af43936b4314d22a59d775f671592ef",
+      "scene_token": "22daa579e9d54040b3f76a4eeef3a587",
+      "official_index": 3653,
+      "split": "train"
+    },
+    {
+      "sample_token": "5bb4e6b3326c4178b6bd56e33bdd9bb7",
+      "scene_token": "590b4e5a4f94426ab3b1a66f35e140d5",
+      "official_index": 15338,
+      "split": "train"
+    },
+    {
+      "sample_token": "deb0f3ec2ef64f6d961973545ab1e85c",
+      "scene_token": "590b4e5a4f94426ab3b1a66f35e140d5",
+      "official_index": 15355,
+      "split": "train"
+    },
+    {
+      "sample_token": "c9e5b2d175864c52ac9d05e03b228a6e",
+      "scene_token": "bc4fd5a05a004333b9411754630f4cba",
+      "official_index": 42,
+      "split": "train"
+    },
+    {
+      "sample_token": "76e24263470c42e58cdac8ffa03efbf4",
+      "scene_token": "bc4fd5a05a004333b9411754630f4cba",
+      "official_index": 59,
+      "split": "train"
+    },
+    {
+      "sample_token": "297c52902a384b84ba179f3160ac54e9",
+      "scene_token": "aedcd3cf7c4a49d7a4a43ab7443a9eb1",
+      "official_index": 2036,
+      "split": "development"
+    },
+    {
+      "sample_token": "13a72e775b3244dc934ec260fb858b9e",
+      "scene_token": "aedcd3cf7c4a49d7a4a43ab7443a9eb1",
+      "official_index": 2053,
+      "split": "development"
+    },
+    {
+      "sample_token": "01076466d815421c857d2c8cf8034488",
+      "scene_token": "7bd098ac88cb4221addd19202a7ea5de",
+      "official_index": 2998,
+      "split": "development"
+    },
+    {
+      "sample_token": "4ada511e868c4d5dbeae60cf54f19987",
+      "scene_token": "7bd098ac88cb4221addd19202a7ea5de",
+      "official_index": 3015,
+      "split": "development"
+    },
+    {
+      "sample_token": "603c9225a5624229bae41a819d10c9cd",
+      "scene_token": "ca6e45c25d954dc4af6e12dd7b23454d",
+      "official_index": 2174,
+      "split": "development"
+    },
+    {
+      "sample_token": "fc78e150abaa49ee895d2f7f13c011a1",
+      "scene_token": "ca6e45c25d954dc4af6e12dd7b23454d",
+      "official_index": 2191,
+      "split": "development"
+    },
+    {
+      "sample_token": "561cf9acfda645b79bc52ec82537970c",
+      "scene_token": "cba3ddd5c3664a43b6a08e586e094900",
+      "official_index": 819,
+      "split": "development"
+    },
+    {
+      "sample_token": "7f06772548b74f3a912afe867ba70a6d",
+      "scene_token": "cba3ddd5c3664a43b6a08e586e094900",
+      "official_index": 835,
+      "split": "development"
+    },
+    {
+      "sample_token": "006cbdb235c64999b6f5cfbb63ec88c4",
+      "scene_token": "b07358651c604e2d83da7c4d4755de73",
+      "official_index": 1829,
+      "split": "development"
+    },
+    {
+      "sample_token": "dafe7793990d41a0ae1e50260899f8b4",
+      "scene_token": "b07358651c604e2d83da7c4d4755de73",
+      "official_index": 1847,
+      "split": "development"
+    },
+    {
+      "sample_token": "aa4dc9c8df844c9cb1c4c9bfa27d5665",
+      "scene_token": "30a1a4ccd60047b4a22ee3bf0645f3ad",
+      "official_index": 2588,
+      "split": "development"
+    },
+    {
+      "sample_token": "a64c6582af2b4452bd3372cdd3acf69b",
+      "scene_token": "30a1a4ccd60047b4a22ee3bf0645f3ad",
+      "official_index": 2605,
+      "split": "development"
+    },
+    {
+      "sample_token": "4872c7dd52d345e39853f3f4826c4254",
+      "scene_token": "50ff554b3ecb4d208849d042b7643715",
+      "official_index": 2347,
+      "split": "development"
+    },
+    {
+      "sample_token": "a364a98930634dd7b0885e922421e5fe",
+      "scene_token": "50ff554b3ecb4d208849d042b7643715",
+      "official_index": 2365,
+      "split": "development"
+    },
+    {
+      "sample_token": "1dba2c2cc477431e837ef77249b4a5e3",
+      "scene_token": "223096a415cc45bf8ecd4c3a42251fd7",
+      "official_index": 4133,
+      "split": "development"
+    },
+    {
+      "sample_token": "6f18a056e80c4f13a101a6ab5f8b4b80",
+      "scene_token": "223096a415cc45bf8ecd4c3a42251fd7",
+      "official_index": 4151,
+      "split": "development"
+    },
+    {
+      "sample_token": "f283d4f95ae54ef6aad442186245a667",
+      "scene_token": "21a7ba093614493b83838b9656b3558d",
+      "official_index": 2070,
+      "split": "development"
+    },
+    {
+      "sample_token": "e0a72ae4bc354aff9264ca5a4ce1f611",
+      "scene_token": "21a7ba093614493b83838b9656b3558d",
+      "official_index": 2088,
+      "split": "development"
+    },
+    {
+      "sample_token": "51499cd837e04024a7b26c5969c8645a",
+      "scene_token": "4962cb207a824e57bd10a2af49354b16",
+      "official_index": 1899,
+      "split": "development"
+    },
+    {
+      "sample_token": "cbe53c84189945eeb7cbf16b9f4717de",
+      "scene_token": "4962cb207a824e57bd10a2af49354b16",
+      "official_index": 1916,
+      "split": "development"
+    },
+    {
+      "sample_token": "72f030bd5dd142d497c090dc04bb5697",
+      "scene_token": "b51869782c0e464b8021eb798609f35f",
+      "official_index": 615,
+      "split": "development"
+    },
+    {
+      "sample_token": "f8b5e98950ed483e92ece29c264c072e",
+      "scene_token": "b51869782c0e464b8021eb798609f35f",
+      "official_index": 632,
+      "split": "development"
+    },
+    {
+      "sample_token": "5448c4ae531944f3af9ac5d78154ed8d",
+      "scene_token": "96e5f1f0944946f391b4ef33ad623008",
+      "official_index": 2105,
+      "split": "development"
+    },
+    {
+      "sample_token": "32ce7110abf24875bdc14b13be3d0501",
+      "scene_token": "96e5f1f0944946f391b4ef33ad623008",
+      "official_index": 2123,
+      "split": "development"
+    },
+    {
+      "sample_token": "45266b136cf846b0a7d398d2360f9a17",
+      "scene_token": "c525507ee2ef4c6d8bb64b0e0cf0dd32",
+      "official_index": 1187,
+      "split": "development"
+    },
+    {
+      "sample_token": "4f2578e3107f4ad79f88a61b28893916",
+      "scene_token": "c525507ee2ef4c6d8bb64b0e0cf0dd32",
+      "official_index": 1203,
+      "split": "development"
+    },
+    {
+      "sample_token": "d04424a0e40d4f55a806d9f2df9c1cf8",
+      "scene_token": "6741d407b1b44511853e5ec7aaee2992",
+      "official_index": 4063,
+      "split": "development"
+    },
+    {
+      "sample_token": "46a2d2d638b64d89b1b01984d999f47b",
+      "scene_token": "6741d407b1b44511853e5ec7aaee2992",
+      "official_index": 4081,
+      "split": "development"
+    },
+    {
+      "sample_token": "52d62696a9bd45d786ace56d2cfee529",
+      "scene_token": "19d97841d6f64eba9f6eb9b6e8c257dc",
+      "official_index": 3032,
+      "split": "development"
+    },
+    {
+      "sample_token": "6c8d4379e83646d08436f6ec92b35fe5",
+      "scene_token": "19d97841d6f64eba9f6eb9b6e8c257dc",
+      "official_index": 3049,
+      "split": "development"
+    },
+    {
+      "sample_token": "f779f508dec14f77aea011187f55c25c",
+      "scene_token": "44c9089913db4d4ab839a2fcb35989ed",
+      "official_index": 2520,
+      "split": "development"
+    },
+    {
+      "sample_token": "ffb7844721e748a99211c9c28336b94a",
+      "scene_token": "44c9089913db4d4ab839a2fcb35989ed",
+      "official_index": 2537,
+      "split": "development"
+    },
+    {
+      "sample_token": "0775bcc755c148ef831dffe278b1bb94",
+      "scene_token": "5301151d8b6a42b0b252e95634bd3995",
+      "official_index": 2792,
+      "split": "development"
+    },
+    {
+      "sample_token": "07aa86866b04474491cb54589c61fd9f",
+      "scene_token": "5301151d8b6a42b0b252e95634bd3995",
+      "official_index": 2810,
+      "split": "development"
+    },
+    {
+      "sample_token": "a35e04cb7b8f466ca0d4031b483e0b0e",
+      "scene_token": "3ada261efee347cba2e7557794f1aec8",
+      "official_index": 2758,
+      "split": "development"
+    },
+    {
+      "sample_token": "a3cbed1b71c54b1cb067b434284cf955",
+      "scene_token": "3ada261efee347cba2e7557794f1aec8",
+      "official_index": 2775,
+      "split": "development"
+    },
+    {
+      "sample_token": "3894f0cc4ccb4530ad440951da061b97",
+      "scene_token": "d01e7279da2649ef896dc42f6b9ee7ab",
+      "official_index": 3273,
+      "split": "development"
+    },
+    {
+      "sample_token": "25409c26381a4f088d389972741f3839",
+      "scene_token": "d01e7279da2649ef896dc42f6b9ee7ab",
+      "official_index": 3291,
+      "split": "development"
+    },
+    {
+      "sample_token": "1c9469a9d1db45f99f95fbe9c0095087",
+      "scene_token": "1aa633b683174280b243e0a9a7ad9171",
+      "official_index": 175,
+      "split": "development"
+    },
+    {
+      "sample_token": "6e60a07fb4234c1d8b669f62bd49da5b",
+      "scene_token": "1aa633b683174280b243e0a9a7ad9171",
+      "official_index": 191,
+      "split": "development"
+    },
+    {
+      "sample_token": "c42d28e39ee049f7a6ce91dc71dc341d",
+      "scene_token": "36f27b26ef4c423c9b79ac984dc33bae",
+      "official_index": 3859,
+      "split": "development"
+    },
+    {
+      "sample_token": "cfaee01077f7488faeeb7848337646da",
+      "scene_token": "36f27b26ef4c423c9b79ac984dc33bae",
+      "official_index": 3876,
+      "split": "development"
+    },
+    {
+      "sample_token": "962eba6509994f189ac59e3d8355f15a",
+      "scene_token": "7061c08f7eec4495979a0cf68ab6bb79",
+      "official_index": 2277,
+      "split": "development"
+    },
+    {
+      "sample_token": "94acb150fe514333affb990c91ac370f",
+      "scene_token": "7061c08f7eec4495979a0cf68ab6bb79",
+      "official_index": 2295,
+      "split": "development"
+    },
+    {
+      "sample_token": "978a078289b64db3a6a318e8547076ba",
+      "scene_token": "5a0dd8908a3a459b83ec5eb6ac7d0f82",
+      "official_index": 683,
+      "split": "development"
+    },
+    {
+      "sample_token": "4ea2156b82df43cb8e80a3cb344b20a3",
+      "scene_token": "5a0dd8908a3a459b83ec5eb6ac7d0f82",
+      "official_index": 700,
+      "split": "development"
+    },
+    {
+      "sample_token": "39685006d5a84f43bb48b6eeed53987b",
+      "scene_token": "5521cd85ed0e441f8d23938ed09099dd",
+      "official_index": 4445,
+      "split": "development"
+    },
+    {
+      "sample_token": "b95bf07efd5b4c02849af122b367dad1",
+      "scene_token": "5521cd85ed0e441f8d23938ed09099dd",
+      "official_index": 4462,
+      "split": "development"
+    },
+    {
+      "sample_token": "d8cc7ad7ebc44bca98de21543ae2ad09",
+      "scene_token": "c92fdd793fbb4401b12782a9b8d4a499",
+      "official_index": 3617,
+      "split": "development"
+    },
+    {
+      "sample_token": "4926edfdebf84707b0df0f122ab560a5",
+      "scene_token": "c92fdd793fbb4401b12782a9b8d4a499",
+      "official_index": 3635,
+      "split": "development"
+    },
+    {
+      "sample_token": "44183eea3bf14378a2e4f2929b18a564",
+      "scene_token": "197a7e4d3de84e57af17b3d65fcb3893",
+      "official_index": 3410,
+      "split": "development"
+    },
+    {
+      "sample_token": "5be9e033b43f46968d516ada3bd28fe2",
+      "scene_token": "197a7e4d3de84e57af17b3d65fcb3893",
+      "official_index": 3427,
+      "split": "development"
+    },
+    {
+      "sample_token": "296fcfbf2e29489699f1cb5631f38ff5",
+      "scene_token": "c3ab8ee2c1a54068a72d7eb4cf22e43d",
+      "official_index": 8,
+      "split": "development"
+    },
+    {
+      "sample_token": "27f42a55215f4223a01afa79fcda72e6",
+      "scene_token": "c3ab8ee2c1a54068a72d7eb4cf22e43d",
+      "official_index": 24,
+      "split": "development"
+    },
+    {
+      "sample_token": "27db2832d44144829b896d46b441f66c",
+      "scene_token": "acc29386502047339e1ec6b9c7e512d2",
+      "official_index": 378,
+      "split": "development"
+    },
+    {
+      "sample_token": "ba47b8c21bc446f3bfa60f004ca45106",
+      "scene_token": "acc29386502047339e1ec6b9c7e512d2",
+      "official_index": 394,
+      "split": "development"
+    },
+    {
+      "sample_token": "219ea9af33d94b7a94e869d6192f018b",
+      "scene_token": "b789de07180846cc972118ee6d1fb027",
+      "official_index": 2896,
+      "split": "development"
+    },
+    {
+      "sample_token": "261cc24af3424327afbf4a848ebce1c8",
+      "scene_token": "b789de07180846cc972118ee6d1fb027",
+      "official_index": 2913,
+      "split": "development"
+    },
+    {
+      "sample_token": "0017c2623c914571a1ff2a37f034ffd7",
+      "scene_token": "26a6b03c8e2f4e6692f174a7074e54ff",
+      "official_index": 1864,
+      "split": "development"
+    },
+    {
+      "sample_token": "95ed5d5037b64b73b3e4028d4ce99082",
+      "scene_token": "26a6b03c8e2f4e6692f174a7074e54ff",
+      "official_index": 1882,
+      "split": "development"
+    },
+    {
+      "sample_token": "6fc78b0072614c04b88f4da1862ff5af",
+      "scene_token": "a7d073bc435b4356a0a9a5ebfb61f229",
+      "official_index": 3342,
+      "split": "development"
+    },
+    {
+      "sample_token": "2417605b784b4c3594076159a7e58376",
+      "scene_token": "a7d073bc435b4356a0a9a5ebfb61f229",
+      "official_index": 3359,
+      "split": "development"
+    },
+    {
+      "sample_token": "dcbda46c996c440cbbb5d6cbfe468df6",
+      "scene_token": "3045ed93c2534ec2a5cabea89b186bd9",
+      "official_index": 3066,
+      "split": "development"
+    },
+    {
+      "sample_token": "ad40b9d838994f6cac6c6d78ec2e174a",
+      "scene_token": "3045ed93c2534ec2a5cabea89b186bd9",
+      "official_index": 3083,
+      "split": "development"
+    },
+    {
+      "sample_token": "f3b10b3ae50a4ada8ad177f61b3138f5",
+      "scene_token": "7210f928860043b5a7e0d3dd4b3e80ff",
+      "official_index": 2964,
+      "split": "development"
+    },
+    {
+      "sample_token": "c6e22e0e30e84aa18112c81c85755b25",
+      "scene_token": "7210f928860043b5a7e0d3dd4b3e80ff",
+      "official_index": 2981,
+      "split": "development"
+    },
+    {
+      "sample_token": "419069c2cc8f42269ffe622eca310155",
+      "scene_token": "e8834785d9ff4783a5950281a4579943",
+      "official_index": 4922,
+      "split": "development"
+    },
+    {
+      "sample_token": "b587b544aa814cdf9a1cbc9d6819c383",
+      "scene_token": "e8834785d9ff4783a5950281a4579943",
+      "official_index": 4939,
+      "split": "development"
+    },
+    {
+      "sample_token": "d1c43c499cf0486a814077f1b22d9121",
+      "scene_token": "a04daf2d0f194b2ab2ff2a47dfebc1d7",
+      "official_index": 4547,
+      "split": "development"
+    },
+    {
+      "sample_token": "766eeca23b634da28ab4d1454cab145e",
+      "scene_token": "a04daf2d0f194b2ab2ff2a47dfebc1d7",
+      "official_index": 4564,
+      "split": "development"
+    },
+    {
+      "sample_token": "4739e7db16554b498a08a5d3b5a41d66",
+      "scene_token": "dce6f3f2bf6b4859abcf3268581969d3",
+      "official_index": 3204,
+      "split": "development"
+    },
+    {
+      "sample_token": "3b8d799305e54bfd8da165f83a75a2d0",
+      "scene_token": "dce6f3f2bf6b4859abcf3268581969d3",
+      "official_index": 3222,
+      "split": "development"
+    },
+    {
+      "sample_token": "6a85b1377e5c42dfb6e125b2cb0a4ec8",
+      "scene_token": "91c071bcc1ad4fa1b555399e1cfbab79",
+      "official_index": 852,
+      "split": "development"
+    },
+    {
+      "sample_token": "c8b6a861ef0445cd8bef18eb2b7f9e89",
+      "scene_token": "91c071bcc1ad4fa1b555399e1cfbab79",
+      "official_index": 869,
+      "split": "development"
+    },
+    {
+      "sample_token": "a68a08180d9749c28b9fec0abf30548c",
+      "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+      "official_index": 3444,
+      "split": "development"
+    },
+    {
+      "sample_token": "497c804c355940f0b543631e7547cfb7",
+      "scene_token": "55b3a17359014f398b6bbd90e94a8e1b",
+      "official_index": 3461,
+      "split": "development"
+    },
+    {
+      "sample_token": "a593f1a21f6e4deca2e30c009916ed7a",
+      "scene_token": "848ac962547c4508b8f3b0fcc8d53270",
+      "official_index": 310,
+      "split": "development"
+    },
+    {
+      "sample_token": "74f6b583f9eb441db5b95b67cbec71f5",
+      "scene_token": "848ac962547c4508b8f3b0fcc8d53270",
+      "official_index": 327,
+      "split": "development"
+    },
+    {
+      "sample_token": "e2f8a076219842f990ab826c9c4e5aab",
+      "scene_token": "4bb9626f13184da7a67ba1b241c19558",
+      "official_index": 2140,
+      "split": "development"
+    },
+    {
+      "sample_token": "346141c776054dbca969d860b37dbc42",
+      "scene_token": "4bb9626f13184da7a67ba1b241c19558",
+      "official_index": 2157,
+      "split": "development"
+    },
+    {
+      "sample_token": "d659884a037a4421aebe2e9c94be8ab7",
+      "scene_token": "04219bfdc9004ba2af16d3079ecc4353",
+      "official_index": 4273,
+      "split": "development"
+    },
+    {
+      "sample_token": "68d9e485a01b44d2932acdaf2cfa6650",
+      "scene_token": "04219bfdc9004ba2af16d3079ecc4353",
+      "official_index": 4291,
+      "split": "development"
+    },
+    {
+      "sample_token": "8bf071b1b92c4ff1bd5016bfb30de3f7",
+      "scene_token": "6f83169d067343658251f72e1dd17dbc",
+      "official_index": 1725,
+      "split": "development"
+    },
+    {
+      "sample_token": "37535cd306954669a2b21578573b93e3",
+      "scene_token": "6f83169d067343658251f72e1dd17dbc",
+      "official_index": 1743,
+      "split": "development"
+    },
+    {
+      "sample_token": "3ba93f957fe54c8c891a2cd5992e65a9",
+      "scene_token": "68e79a88244f447f993a72da444b29ba",
+      "official_index": 919,
+      "split": "development"
+    },
+    {
+      "sample_token": "53a80b41beee4a1eb751e3dc89af5765",
+      "scene_token": "68e79a88244f447f993a72da444b29ba",
+      "official_index": 935,
+      "split": "development"
+    },
+    {
+      "sample_token": "0fa78a0795154a34bd569aa0802d9212",
+      "scene_token": "aacd6706a091407fb1b0e5343d27da7e",
+      "official_index": 3722,
+      "split": "development"
+    },
+    {
+      "sample_token": "5b78dddb2f0a4d9c9ebd29f852cbe453",
+      "scene_token": "aacd6706a091407fb1b0e5343d27da7e",
+      "official_index": 3739,
+      "split": "development"
+    },
+    {
+      "sample_token": "f2efcbf8dc2f4cf4a4d96a9fc6ec0d84",
+      "scene_token": "f5b29a1e09d04355adcd60ab72de006b",
+      "official_index": 3100,
+      "split": "development"
+    },
+    {
+      "sample_token": "f542a7d55b5c4e97bf42eee1f442356c",
+      "scene_token": "f5b29a1e09d04355adcd60ab72de006b",
+      "official_index": 3118,
+      "split": "development"
+    },
+    {
+      "sample_token": "6f5980b6721c4486b815a3cc6037b48a",
+      "scene_token": "32185f91e68f4069ab3cdd2f4f1a4ff1",
+      "official_index": 4342,
+      "split": "development"
+    },
+    {
+      "sample_token": "107ac5a9705f400f8e7bcc61a068d546",
+      "scene_token": "32185f91e68f4069ab3cdd2f4f1a4ff1",
+      "official_index": 4359,
+      "split": "development"
+    },
+    {
+      "sample_token": "cd908fdce67249f3a8a14b987f00592e",
+      "scene_token": "e7ef871f77f44331aefdebc24ec034b7",
+      "official_index": 1422,
+      "split": "development"
+    },
+    {
+      "sample_token": "3064a6b9b3f04e5d8e51eefb4be8506a",
+      "scene_token": "e7ef871f77f44331aefdebc24ec034b7",
+      "official_index": 1439,
+      "split": "development"
+    },
+    {
+      "sample_token": "36decc5fa3744f0886c634e4e58022bb",
+      "scene_token": "85651af9c04945c3a394cf845cb480a6",
+      "official_index": 3376,
+      "split": "development"
+    },
+    {
+      "sample_token": "18a5b211c20b4fbd9512fc2bdd22f901",
+      "scene_token": "85651af9c04945c3a394cf845cb480a6",
+      "official_index": 3393,
+      "split": "development"
+    },
+    {
+      "sample_token": "6de71c9651024035831674a178e65de9",
+      "scene_token": "3a2d9bf6115f40898005d1c1df2b7282",
+      "official_index": 3513,
+      "split": "development"
+    },
+    {
+      "sample_token": "ca4c7c5a92ff4f50a4fcfa277513eee7",
+      "scene_token": "3a2d9bf6115f40898005d1c1df2b7282",
+      "official_index": 3531,
+      "split": "development"
+    },
+    {
+      "sample_token": "98fc274ca14d44a5b9117fbfb04d18b1",
+      "scene_token": "0ac05652a4c44374998be876ba5cd6fd",
+      "official_index": 2724,
+      "split": "development"
+    },
+    {
+      "sample_token": "453118c5050748d3939e45666ff915f3",
+      "scene_token": "0ac05652a4c44374998be876ba5cd6fd",
+      "official_index": 2741,
+      "split": "development"
+    },
+    {
+      "sample_token": "041205dedd7546918012ae140353073f",
+      "scene_token": "e60ef590e3614187b7800db3e5284e1a",
+      "official_index": 4581,
+      "split": "development"
+    },
+    {
+      "sample_token": "db1230b086a94740ad857c30c785efde",
+      "scene_token": "e60ef590e3614187b7800db3e5284e1a",
+      "official_index": 4598,
+      "split": "development"
+    },
+    {
+      "sample_token": "3a58d50af7664817bbe31b231a5e17ae",
+      "scene_token": "5eaff323af5b4df4b864dbd433aeb75c",
+      "official_index": 1557,
+      "split": "development"
+    },
+    {
+      "sample_token": "bbe3c0605629491ba2dc5eef6ff2d3d4",
+      "scene_token": "5eaff323af5b4df4b864dbd433aeb75c",
+      "official_index": 1573,
+      "split": "development"
+    },
+    {
+      "sample_token": "5850f2ddde324e80bb28d792bfefb632",
+      "scene_token": "656bb27689dc4e9b8e4559e3f6a7e534",
+      "official_index": 2208,
+      "split": "development"
+    },
+    {
+      "sample_token": "7d47a8f93f564e4e9546107d21de0551",
+      "scene_token": "656bb27689dc4e9b8e4559e3f6a7e534",
+      "official_index": 2226,
+      "split": "development"
+    },
+    {
+      "sample_token": "9bccf886ed0e4f0cb18a557f0104b024",
+      "scene_token": "6498fce2f38645fc9bf9d4464b159230",
+      "official_index": 5093,
+      "split": "development"
+    },
+    {
+      "sample_token": "fa0c3d61420d4a049d13e56a169f0f8b",
+      "scene_token": "6498fce2f38645fc9bf9d4464b159230",
+      "official_index": 5110,
+      "split": "development"
+    },
+    {
+      "sample_token": "e84b6659a1f34f468a2f35bd22633c5e",
+      "scene_token": "955ff42a1990442d868cdfc0c01583d4",
+      "official_index": 4203,
+      "split": "development"
+    },
+    {
+      "sample_token": "2a78754c96654b4ab9f5276957e8ae88",
+      "scene_token": "955ff42a1990442d868cdfc0c01583d4",
+      "official_index": 4221,
+      "split": "development"
+    },
+    {
+      "sample_token": "f2b4bd49dd73457395591ff69ac90dec",
+      "scene_token": "fcc020250f884397965ba00c1d9ad9e6",
+      "official_index": 1490,
+      "split": "development"
+    },
+    {
+      "sample_token": "645e0c2f9b724c5b95fe434930c2682a",
+      "scene_token": "fcc020250f884397965ba00c1d9ad9e6",
+      "official_index": 1506,
+      "split": "development"
+    },
+    {
+      "sample_token": "ff16605ea58741f4a23989424a85907e",
+      "scene_token": "f24b4682fbb9482aba149534deed1cc9",
+      "official_index": 3927,
+      "split": "development"
+    },
+    {
+      "sample_token": "98ed36568ff04788807662cc63893caa",
+      "scene_token": "f24b4682fbb9482aba149534deed1cc9",
+      "official_index": 3944,
+      "split": "development"
+    },
+    {
+      "sample_token": "f4550267cd0240e1a1ceb844e33e97d4",
+      "scene_token": "d29527ec841045d18d04a933e7a0afd2",
+      "official_index": 4956,
+      "split": "development"
+    },
+    {
+      "sample_token": "59f7b9d48e694f45ac2a6e9532c408eb",
+      "scene_token": "d29527ec841045d18d04a933e7a0afd2",
+      "official_index": 4973,
+      "split": "development"
+    },
+    {
+      "sample_token": "94fc83c54c6f4f48acdca0b2c529c305",
+      "scene_token": "112ca771e318478a88cfa692f61ffcac",
+      "official_index": 4238,
+      "split": "development"
+    },
+    {
+      "sample_token": "a80dc57ecf7c438c8eb933d75b7fb210",
+      "scene_token": "112ca771e318478a88cfa692f61ffcac",
+      "official_index": 4256,
+      "split": "development"
+    },
+    {
+      "sample_token": "eae74c5f4b2b418cb0e95df20bc147dd",
+      "scene_token": "952cb0bcd89b4ca4b904cdcbbf595523",
+      "official_index": 2450,
+      "split": "development"
+    },
+    {
+      "sample_token": "44dbaeefe4b148dfb4499a37a24a6ad7",
+      "scene_token": "952cb0bcd89b4ca4b904cdcbbf595523",
+      "official_index": 2468,
+      "split": "development"
+    },
+    {
+      "sample_token": "cbbd333271434197b1bd8302ae03100f",
+      "scene_token": "8180a1dbbba3479bb0c7f4ff6e9a3f0e",
+      "official_index": 109,
+      "split": "development"
+    },
+    {
+      "sample_token": "58b9fd4376c741b3ad035aec9bef660d",
+      "scene_token": "8180a1dbbba3479bb0c7f4ff6e9a3f0e",
+      "official_index": 125,
+      "split": "development"
+    },
+    {
+      "sample_token": "88918bab1cb841f3a0fbb92a1110fc47",
+      "scene_token": "6d872d1448814fd189e631b1187c3771",
+      "official_index": 1456,
+      "split": "development"
+    },
+    {
+      "sample_token": "1fde5dec10c4471d97b84c10742a01b5",
+      "scene_token": "6d872d1448814fd189e631b1187c3771",
+      "official_index": 1473,
+      "split": "development"
+    },
+    {
+      "sample_token": "f8de8186b0b046418127ad7007a206c7",
+      "scene_token": "e8099a6136804f3bb9b38ff94d98eb64",
+      "official_index": 4683,
+      "split": "development"
+    },
+    {
+      "sample_token": "a3d51357165948e294511359f8aa71cf",
+      "scene_token": "e8099a6136804f3bb9b38ff94d98eb64",
+      "official_index": 4701,
+      "split": "development"
+    },
+    {
+      "sample_token": "529080134759454a8176daca17b87a15",
+      "scene_token": "afd73f70ff7d46d6b772d341c08e31a5",
+      "official_index": 1051,
+      "split": "development"
+    },
+    {
+      "sample_token": "1c5d68d702df41fab44824a6b8e360c9",
+      "scene_token": "afd73f70ff7d46d6b772d341c08e31a5",
+      "official_index": 1068,
+      "split": "development"
+    },
+    {
+      "sample_token": "b6b0d9f2f2e14a3aaa2c8aedeb1edb69",
+      "scene_token": "fcbccedd61424f1b85dcbf8f897f9754",
+      "official_index": 1153,
+      "split": "development"
+    },
+    {
+      "sample_token": "cc57c1ea80fe46a7abddfdb15654c872",
+      "scene_token": "fcbccedd61424f1b85dcbf8f897f9754",
+      "official_index": 1170,
+      "split": "development"
+    },
+    {
+      "sample_token": "c0ab12380dbd49d9aad1098df78e3800",
+      "scene_token": "9d1307e95c524ca4a51e03087bd57c29",
+      "official_index": 1623,
+      "split": "development"
+    },
+    {
+      "sample_token": "4fc9bbe6198c4b8e837fd2ae0de6a4e2",
+      "scene_token": "9d1307e95c524ca4a51e03087bd57c29",
+      "official_index": 1639,
+      "split": "development"
+    },
+    {
+      "sample_token": "afac870c38c6434190080ac3a71a46b2",
+      "scene_token": "ec7b7459461e4da1a236ba23e22377c9",
+      "official_index": 3995,
+      "split": "development"
+    },
+    {
+      "sample_token": "7c9bf8de5a684231b9e501a03c481acf",
+      "scene_token": "ec7b7459461e4da1a236ba23e22377c9",
+      "official_index": 4012,
+      "split": "development"
+    },
+    {
+      "sample_token": "1afd654caa104e888ec4c74b60cb90ed",
+      "scene_token": "84e056bd8e994362a37cba45c0f75558",
+      "official_index": 2656,
+      "split": "development"
+    },
+    {
+      "sample_token": "ef1b0ef208114d07992b390e856c69b0",
+      "scene_token": "84e056bd8e994362a37cba45c0f75558",
+      "official_index": 2673,
+      "split": "development"
+    },
+    {
+      "sample_token": "a945d7d02c7a4ef98f1b5aaa1557f546",
+      "scene_token": "034dee1695304630b0692da8c1f153fc",
+      "official_index": 4615,
+      "split": "development"
+    },
+    {
+      "sample_token": "d5173a8c31584f1b87d4ad15cbe1530a",
+      "scene_token": "034dee1695304630b0692da8c1f153fc",
+      "official_index": 4632,
+      "split": "development"
+    },
+    {
+      "sample_token": "8a05f7a2995b44beadcff8d41caef34b",
+      "scene_token": "c4df079d260241ff8015218e29b42ea7",
+      "official_index": 4410,
+      "split": "development"
+    },
+    {
+      "sample_token": "5c6c12c50bce465b983194d0ebe5a801",
+      "scene_token": "c4df079d260241ff8015218e29b42ea7",
+      "official_index": 4428,
+      "split": "development"
+    },
+    {
+      "sample_token": "fdb723ef23d64b47aead300ed1d573f7",
+      "scene_token": "080a52cb8f59489b9cddc7b721808088",
+      "official_index": 142,
+      "split": "development"
+    },
+    {
+      "sample_token": "2b4bb1ecb2244264ba9043ee04854ac2",
+      "scene_token": "080a52cb8f59489b9cddc7b721808088",
+      "official_index": 158,
+      "split": "development"
+    },
+    {
+      "sample_token": "17d4c42103af4608a0d58cfbc2fbc849",
+      "scene_token": "54f56f80350b4c07af598ee87cf3886a",
+      "official_index": 2690,
+      "split": "development"
+    },
+    {
+      "sample_token": "61e91a0c66ce42bb8aabdeb3376ecd00",
+      "scene_token": "54f56f80350b4c07af598ee87cf3886a",
+      "official_index": 2707,
+      "split": "development"
+    },
+    {
+      "sample_token": "357116a604d548c9bb406cdcc3a8f85e",
+      "scene_token": "0e7ede02718341558414865d5c604745",
+      "official_index": 2485,
+      "split": "development"
+    },
+    {
+      "sample_token": "2d90da12000843c29b5c5e1566bf9a90",
+      "scene_token": "0e7ede02718341558414865d5c604745",
+      "official_index": 2503,
+      "split": "development"
+    },
+    {
+      "sample_token": "9397c89e75ff4f49882869f914d7ddd4",
+      "scene_token": "8edbc31083ab4fb187626e5b3c0411f7",
+      "official_index": 751,
+      "split": "development"
+    },
+    {
+      "sample_token": "2073ebd27d7844d2a0379ec496b0e9fd",
+      "scene_token": "8edbc31083ab4fb187626e5b3c0411f7",
+      "official_index": 768,
+      "split": "development"
+    },
+    {
+      "sample_token": "7ac3bb7fba5c4852a685555407cd10f1",
+      "scene_token": "efa5c96f05594f41a2498eb9f2e7ad99",
+      "official_index": 547,
+      "split": "development"
+    },
+    {
+      "sample_token": "d34984a371044f33998cde724c33a102",
+      "scene_token": "efa5c96f05594f41a2498eb9f2e7ad99",
+      "official_index": 564,
+      "split": "development"
+    },
+    {
+      "sample_token": "5c6f3a7e402c4985916cd6ed07e66f6f",
+      "scene_token": "2eb4d7f00e584a548aa0b899638bfb0a",
+      "official_index": 952,
+      "split": "development"
+    },
+    {
+      "sample_token": "1981ee55006c4e00823d29de105d1680",
+      "scene_token": "2eb4d7f00e584a548aa0b899638bfb0a",
+      "official_index": 968,
+      "split": "development"
+    },
+    {
+      "sample_token": "a07a94dd9a3243fca35da0c4cb10187a",
+      "scene_token": "07aed9dae37340a997535ad99138e243",
+      "official_index": 4029,
+      "split": "development"
+    },
+    {
+      "sample_token": "d31fd9e576a54fdb871ee5941c471199",
+      "scene_token": "07aed9dae37340a997535ad99138e243",
+      "official_index": 4046,
+      "split": "development"
+    },
+    {
+      "sample_token": "048a45dd2cf54aa5808d8ccc85731d44",
+      "scene_token": "325cef682f064c55a255f2625c533b75",
+      "official_index": 4098,
+      "split": "development"
+    },
+    {
+      "sample_token": "4b894442c95141f9affd731d9da7b43c",
+      "scene_token": "325cef682f064c55a255f2625c533b75",
+      "official_index": 4116,
+      "split": "development"
+    },
+    {
+      "sample_token": "5220c9131b5348908b432a541833c515",
+      "scene_token": "cb3e964697d448b3bc04a9bc06c9e131",
+      "official_index": 4513,
+      "split": "development"
+    },
+    {
+      "sample_token": "b408a086d2794f69b715a7835e9ef416",
+      "scene_token": "cb3e964697d448b3bc04a9bc06c9e131",
+      "official_index": 4530,
+      "split": "development"
+    },
+    {
+      "sample_token": "16c5497de38748a3af307eebc09dff0d",
+      "scene_token": "40209c4e465d4b4e8341ebd52be0d842",
+      "official_index": 2312,
+      "split": "development"
+    },
+    {
+      "sample_token": "5c3ac3d68f3a4abcb0a7d00eabf4acc5",
+      "scene_token": "40209c4e465d4b4e8341ebd52be0d842",
+      "official_index": 2330,
+      "split": "development"
+    },
+    {
+      "sample_token": "eaa81f61d6a74d7da1d54fb2d2f2bdf8",
+      "scene_token": "d7bacba9119840f78f3c804134ceece0",
+      "official_index": 1967,
+      "split": "development"
+    },
+    {
+      "sample_token": "a05ed335816047d5b21c742a4e077f93",
+      "scene_token": "d7bacba9119840f78f3c804134ceece0",
+      "official_index": 1984,
+      "split": "development"
+    },
+    {
+      "sample_token": "3491f51657dc4f459739cbbdd093e223",
+      "scene_token": "905cfed4f0fc46679e8df8890cca4141",
+      "official_index": 3825,
+      "split": "development"
+    },
+    {
+      "sample_token": "e4571b3d5c2e47178cc767b3f9d2a4e3",
+      "scene_token": "905cfed4f0fc46679e8df8890cca4141",
+      "official_index": 3842,
+      "split": "development"
+    },
+    {
+      "sample_token": "98592cf269d34c80bdb23c6fa2708db8",
+      "scene_token": "b4b82c4d338a4b6d86835388ce076345",
+      "official_index": 886,
+      "split": "development"
+    },
+    {
+      "sample_token": "0637df67b6fe4c5087e9139089ba1b49",
+      "scene_token": "b4b82c4d338a4b6d86835388ce076345",
+      "official_index": 902,
+      "split": "development"
+    },
+    {
+      "sample_token": "c7a8c96025e346579d4149d27e232e20",
+      "scene_token": "3363f396bb43405fbdd17d65dc123d4e",
+      "official_index": 1795,
+      "split": "development"
+    },
+    {
+      "sample_token": "fa0f79d60d594c8ea52b7f258af94fe4",
+      "scene_token": "3363f396bb43405fbdd17d65dc123d4e",
+      "official_index": 1812,
+      "split": "development"
+    },
+    {
+      "sample_token": "b923744651764ed194ddf7526b9b2cf6",
+      "scene_token": "ddb615d9bb22484cabc6545b632a1025",
+      "official_index": 1119,
+      "split": "development"
+    },
+    {
+      "sample_token": "9bbe4968739d429b9e6a05b60690c67e",
+      "scene_token": "ddb615d9bb22484cabc6545b632a1025",
+      "official_index": 1136,
+      "split": "development"
+    },
+    {
+      "sample_token": "c4a291f361bb4e84bba77b62db710b8e",
+      "scene_token": "3927699fa562451a98bb13bf8405361d",
+      "official_index": 1590,
+      "split": "development"
+    },
+    {
+      "sample_token": "5001ffaf66384b63a0e51b5083a3bc30",
+      "scene_token": "3927699fa562451a98bb13bf8405361d",
+      "official_index": 1606,
+      "split": "development"
+    },
+    {
+      "sample_token": "38bde80644fd47f4b08d8de873a8be1b",
+      "scene_token": "7365495b74464629813b41eacdb711af",
+      "official_index": 785,
+      "split": "development"
+    },
+    {
+      "sample_token": "5a85db16e41543e5bcfe5341d3c85787",
+      "scene_token": "7365495b74464629813b41eacdb711af",
+      "official_index": 802,
+      "split": "development"
+    },
+    {
+      "sample_token": "cd1b9e250a4a4a71bd7bf0b8168a7bdc",
+      "scene_token": "e6f1a7e6218a4737bfedc6af90926b3e",
+      "official_index": 4718,
+      "split": "development"
+    },
+    {
+      "sample_token": "07984a39f9b042819fd93ef41e4c0981",
+      "scene_token": "e6f1a7e6218a4737bfedc6af90926b3e",
+      "official_index": 4735,
+      "split": "development"
+    },
+    {
+      "sample_token": "70b93dd31d724e7fbab2d20ade9bb4c1",
+      "scene_token": "2f56eb47c64f43df8902d9f88aa8a019",
+      "official_index": 717,
+      "split": "development"
+    },
+    {
+      "sample_token": "0e4aea0d177c480a9ae050a01368ebde",
+      "scene_token": "2f56eb47c64f43df8902d9f88aa8a019",
+      "official_index": 734,
+      "split": "development"
+    },
+    {
+      "sample_token": "9a99dae6476a4c6287b6a835258aaabd",
+      "scene_token": "a2b005c4dd654af48194ada18662c8ca",
+      "official_index": 3478,
+      "split": "development"
+    },
+    {
+      "sample_token": "5b4dc4663841468cb454f35a7bbf75a5",
+      "scene_token": "a2b005c4dd654af48194ada18662c8ca",
+      "official_index": 3496,
+      "split": "development"
+    },
+    {
+      "sample_token": "729eba6060494d40b9b0a04eec0d98cb",
+      "scene_token": "991d65cab952449a821deb32e971ff19",
+      "official_index": 2827,
+      "split": "development"
+    },
+    {
+      "sample_token": "649a61c361bf48d98b5f280cc10aa006",
+      "scene_token": "991d65cab952449a821deb32e971ff19",
+      "official_index": 2844,
+      "split": "development"
+    },
+    {
+      "sample_token": "a16e29084602482e892e608f505c6285",
+      "scene_token": "380ff00ec86447e3b986edc8e82ffba7",
+      "official_index": 3961,
+      "split": "development"
+    },
+    {
+      "sample_token": "190ad8d6769c4f32ae1a5292d2e5a408",
+      "scene_token": "380ff00ec86447e3b986edc8e82ffba7",
+      "official_index": 3978,
+      "split": "development"
+    },
+    {
+      "sample_token": "05e312eae68c454c86cea669ee26ced1",
+      "scene_token": "3b2ee26cb8484f77895bc336663df502",
+      "official_index": 1287,
+      "split": "development"
+    },
+    {
+      "sample_token": "bb228f1f38484616b591ec833f9a2e76",
+      "scene_token": "3b2ee26cb8484f77895bc336663df502",
+      "official_index": 1304,
+      "split": "development"
+    },
+    {
+      "sample_token": "03f6a362b0774343b475ec45be465a87",
+      "scene_token": "fb73d1a6c16147ee9416faf6b310fadb",
+      "official_index": 1354,
+      "split": "development"
+    },
+    {
+      "sample_token": "02fa71fc16d449c382c24b1b7deef3ba",
+      "scene_token": "fb73d1a6c16147ee9416faf6b310fadb",
+      "official_index": 1371,
+      "split": "development"
+    },
+    {
+      "sample_token": "5973a055a6ac40e9934cfce8afa82fbe",
+      "scene_token": "9f1f69646d644e35be4fe0122a8b91ef",
+      "official_index": 41,
+      "split": "development"
+    },
+    {
+      "sample_token": "1db65e17354d4873bd22d3186e7dfcdf",
+      "scene_token": "9f1f69646d644e35be4fe0122a8b91ef",
+      "official_index": 58,
+      "split": "development"
+    },
+    {
+      "sample_token": "102fadd49f0a42bebb20a558c0f95031",
+      "scene_token": "57dc3221a3d845b5ab17ff0f98ce336f",
+      "official_index": 2243,
+      "split": "development"
+    },
+    {
+      "sample_token": "e7a4e9440654403ebc21f1ac13924cf1",
+      "scene_token": "57dc3221a3d845b5ab17ff0f98ce336f",
+      "official_index": 2260,
+      "split": "development"
+    },
+    {
+      "sample_token": "ffb68ec5043b45f499086fd8c24dc2b6",
+      "scene_token": "c65c4acf86954f8cbd53a3541a3bfa3a",
+      "official_index": 985,
+      "split": "development"
+    },
+    {
+      "sample_token": "674ac51c90f444ffa066c3aa15991728",
+      "scene_token": "c65c4acf86954f8cbd53a3541a3bfa3a",
+      "official_index": 1001,
+      "split": "development"
+    },
+    {
+      "sample_token": "10b3b79602e246c5811dd7f977a3860f",
+      "scene_token": "9068766ee9374872a380fe75fcfb299e",
+      "official_index": 2861,
+      "split": "development"
+    },
+    {
+      "sample_token": "665cf9ea96fb4782b1193025868b4670",
+      "scene_token": "9068766ee9374872a380fe75fcfb299e",
+      "official_index": 2879,
+      "split": "development"
+    },
+    {
+      "sample_token": "7723b0a5b55e49028244c6094eb0fb2b",
+      "scene_token": "e036014a715945aa965f4ec24e8639c9",
+      "official_index": 4479,
+      "split": "development"
+    },
+    {
+      "sample_token": "a224a5f1b1434735ba1791aeffb9df6e",
+      "scene_token": "e036014a715945aa965f4ec24e8639c9",
+      "official_index": 4496,
+      "split": "development"
+    },
+    {
+      "sample_token": "0c9100bbabe84ff9b3f10842e676d4f9",
+      "scene_token": "64bfc5edd71147858ce7446892d7f864",
+      "official_index": 3756,
+      "split": "development"
+    },
+    {
+      "sample_token": "049cb10452884d49a9ed95336af17edf",
+      "scene_token": "64bfc5edd71147858ce7446892d7f864",
+      "official_index": 3773,
+      "split": "development"
+    }
+  ],
+  "training_scenes": 256,
+  "development_scenes": 100,
+  "historical_val_exposure": true,
+  "locked_scenes_used": false,
+  "interpretation": "Development architecture screen, not full validation or independent test evidence"
+}

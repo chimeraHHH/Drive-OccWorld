@@ -1,0 +1,116 @@
+{
+  "schema": "motion-evidence-discrimination-analysis-v1",
+  "collector_sha256": "3bf1cd4c2cadca9d84d2220371f4eaa046db48cd48cd7ccc6fb25f222c110342",
+  "protocol_sha256": "7e52515ec303570d6e1e64c50866120af3012bbdcdd76ac2e14b2f3a21f6d969",
+  "support": {
+    "split": "train",
+    "samples": 512,
+    "scenes": 256,
+    "source_points": 1740053,
+    "object_horizon_rows": 43189,
+    "objects_by_horizon": [
+      11254,
+      10967,
+      10636,
+      10332
+    ],
+    "valid_points_by_horizon": [
+      1709467,
+      1675202,
+      1639983,
+      1608197
+    ]
+  },
+  "horizons_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "arms": [
+    "D",
+    "CRN_CV",
+    "fixed_blend",
+    "zero"
+  ],
+  "groups": [
+    "all",
+    "stationary",
+    "ambiguous",
+    "moving"
+  ],
+  "evidence_population": "current prediction owner < 0 AND original future label valid",
+  "benefit_xy_m": "norm(gt_xy) - norm(D_xy - gt_xy)",
+  "auc": {
+    "positive": "benefit > 0",
+    "negative": "benefit < 0",
+    "zero": "excluded only from binary AUC; count retained",
+    "weight": "1 / number of ALL original valid points in the same anchor-object-horizon",
+    "formula": "weighted positive-negative ranking probability; tied scores count 0.5",
+    "undefined": "null if either weighted class has no support",
+    "directions": {
+      "lsq_speed_xy_mps": 1,
+      "min_horizon_speed_xy_mps": 1,
+      "max_horizon_speed_xy_mps": 1,
+      "non_cv_velocity_rms_xy_mps": -1,
+      "relative_non_cv_velocity_rms_xy": -1,
+      "local_3x3_velocity_rms_xy_mps": -1,
+      "local_3x3_predicted_coverage_fraction": 1
+    },
+    "direction_selection": false,
+    "per_scene": "same weights and classes, every one of 256 scenes; undefined is null",
+    "scene_summary": "equal-scene median and 25/75 percentiles over defined scene AUCs; not a confidence interval"
+  },
+  "speed_control": {
+    "feature": "lsq_speed_xy_mps",
+    "bin_edges_mps": [
+      0.0,
+      0.1,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      null
+    ],
+    "final_edge": "positive infinity",
+    "intervals": "left closed, right open",
+    "refit_bins": false,
+    "within_bin_auc_weight": "original object weight, not renormalized within bin"
+  },
+  "continuous": {
+    "conditional_mean": "sum(point_weight * benefit) / sum(point_weight) in named subset",
+    "full_contribution": "sum(point_weight * benefit) / ALL original object count in named horizon/group",
+    "positive_gain": "same full denominator, include only benefit > 0",
+    "negative_cost": "same full denominator, sum -benefit for benefit < 0",
+    "empty_subset": "conditional mean null; full contribution zero when full denominator exists"
+  },
+  "physical": {
+    "metrics": [
+      "XY_EPE_m",
+      "XYZ_EPE_m"
+    ],
+    "mean": "point Euclidean error within original object, then equal original-object mean",
+    "parts": "covered/uncovered point error sums / original object point count, then original-object mean",
+    "fixed_blend": "CRN_CV on owner>=0; D on owner<0; no GT routing",
+    "missing_future": "original label valid only; do not invent zero-error observations",
+    "zero_benefit_points_remain": true
+  },
+  "inference": {
+    "fitting": false,
+    "threshold_search": false,
+    "new_gate": false,
+    "model_forward": false,
+    "bootstrap": false,
+    "training_seed_uncertainty": false,
+    "scene_AUC_IQR_is_CI": false
+  },
+  "limitations": [
+    "D saw every train512 scene; no held-out D generalization claim",
+    "four horizons are outputs of one head, not independent observations",
+    "smoothness is not certainty; magnitude and relative residual are coupled",
+    "large AUC for tiny gains does not establish a useful routing rule",
+    "rigid-box sparse material-point proxy omits unlabeled and ambiguous source regions",
+    "no occupancy result, no O flow and no claim of exceeding O"
+  ]
+}

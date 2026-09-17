@@ -1,0 +1,28 @@
+{
+  "source_sha256": "ad0ad68507cfda0c107fd942befed102257b772b30ecb00fb1c2d3433f446722",
+  "surface_job": "metric_surface_history_train16_v2",
+  "anchors": 16,
+  "radius_m": 1,
+  "FB_threshold_px": 1,
+  "arms": [
+    "zero",
+    "D",
+    "CRN_CV",
+    "CV_D_speed05",
+    "surface_all_zero",
+    "surface_fb1_zero",
+    "CV_surface_all_uncovered",
+    "CV_surface_fb1_uncovered"
+  ],
+  "nominal_horizons": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "primary_clock": "nominal, preserves prior D/CV protocol",
+  "sensitivity_clock": "actual future dt for CV and surface",
+  "selection_or_fitting": false,
+  "all_original_points": true,
+  "all_original_valid_objects": true
+}

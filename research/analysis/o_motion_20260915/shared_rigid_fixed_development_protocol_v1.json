@@ -1,0 +1,93 @@
+{
+  "schema": "shared-rigid-fixed-development-v1",
+  "status": "FROZEN",
+  "evaluation": {
+    "anchors": 200,
+    "scenes": 100,
+    "final_updates": 512,
+    "training_seed": 11,
+    "native_arms": [
+      "O",
+      "Cpl",
+      "Fix"
+    ],
+    "physical_arms": [
+      "D",
+      "CRN_CV",
+      "Cpl",
+      "Fix"
+    ],
+    "selection": "original development200 in original order; fixed final only",
+    "native": "original five-horizon native evaluation and unchanged full GT argmax",
+    "physical": "all original valid virtual rigid material points; fixed current predicted ownership; uncovered zero",
+    "primary": "four-future mean of per-horizon pooled GMO IoU; not semantic mIoU",
+    "risk": "original full FP/FN, actual-moving and high-speed recall, arrival/vacating transitions",
+    "t0": "each model own native t0; common GT support; no cross-model t0 equality gate",
+    "physical_comparison": "Cpl/Fix versus same-support CRN_CV, D, zero; O has no flow",
+    "O_reference": "all 200 original per-horizon confusion matrices exact",
+    "historical_CV_float_check": {
+      "rel_tol": 1e-12,
+      "abs_tol_m": 1e-10,
+      "scope": "CPU platform/reduction rounding only"
+    },
+    "checkpoint_selection": false,
+    "threshold_fitting": false,
+    "optimizer_updates": 0
+  },
+  "numerical_policy": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": true,
+    "cudnn_benchmark": false
+  },
+  "training_protocol_sha256": "9c12d8ba84de797f3e452c0ea6449d881761325241e7fdca807d0cd84aa56199",
+  "sources_sha256": {
+    "train_connected_motion_v2.py": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a",
+    "train_supported_fusion_v2.py": "61cb7c96fc8127f4b3b5ef34fff380e0c2076210463cff29e4cee5d3a5d87d7c",
+    "supported_motion_fusion.py": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "learned_transport_probe_v1.py": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+    "objective_supervision_adapters.py": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703",
+    "joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "common_change_evaluation_v2.py": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059",
+    "common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+    "motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+    "common_connected_motion_evaluation_v2.py": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1",
+    "object_state_forecast_preflight_v2.py": "6160b6741f525abcebfccc2b3549b21abffc75b2263bfa5c31c3c8a5231eff9b",
+    "object_state_prediction_inputs_v1.py": "55e39715fdf19e5ae1f227a943a843b194eabed08e788ccb2694a040d6f18256",
+    "object_state_conditioner_v2.py": "dad88c05105d85d9b2a6094c687630f1d661cd7a4e35be42a15a5d01b94a8f36",
+    "rigid_object_motion_v1.py": "64ed69ba8e271aa915e30c7b30862c382ccc85628f2558415a272e12b7d378a5",
+    "joint_rigid_object_features_v1.py": "dcaac4557959ec5f2df6f338bdb88eaa20ddadec9cbe23f3ed7a099cfe83cc47",
+    "shared_rigid_native_bridge_v1.py": "5e778cc5e51733787913e7b9b35174792388c1599f08ad38abfbdb7b10b8d92e",
+    "shared_rigid_prediction_geometry_v1.py": "ef5ea1f0a2e8be5c99ffd366038fd39bc759e4cea1c985824931ce3363b7155a",
+    "crn_full_grid_geometry_v1.py": "1c1e7f0799b593b3ad41f282d8506bdc1312a1a8e53994ea8ba595ad12055b9c",
+    "shared_rigid_native_preflight_v1.py": "99a043d557b4001259fc0067257177239262e5cac7af84d866f68852a55696d2",
+    "shared_rigid_geometry_cache_v1.py": "d47431242dff6d9dba10fbd791e6516739b410282e60bf7f73470186c90fcaaa",
+    "object_state_forecast_development_inputs_v1.py": "7cd498d13d45d5960c6f494ebf7b750718b397d90720ecd745a8c527b0dace06",
+    "train_shared_rigid_state_v1.py": "3378bf608b262264eed99124f323b1e2a517faaf706b612256fb8ba2b0156ff3",
+    "shared_rigid_final_endpoint_v1.py": "549112b0a8de1fe5dd705da5376aff3622f48a087a67b2f0bef2d1a357191917",
+    "summarize_object_state_common_v1.py": "4a03aeda837e78b97ff18d27140d08602619ee96502b7f62fa82f591ca08f584",
+    "summarize_object_state_physical_v1.py": "bd2c652a1682c8ea3e16c0d35ec69ba75957da7886cd9f20a1bb700af3c011b6",
+    "summarize_future_state_common_v1.py": "23f6fc0a6d7a9c63a1e77f90ca94a2aedc72b68b82b201df4f34c6d3f3123e8a",
+    "summarize_future_state_physical_v1.py": "920f4f96e0bd5df247b3d096bdf1709d80fed593622b70373093ea1160db2de3",
+    "crn_box_origin_adapter_v1.py": "aa05e4cd8d2c9ffbf41e751ebc0bda7114040753e404c0560975ee134e23a101",
+    "history_state_predictability_diagnostic_v1.py": "2b14c95bfa027416304288eec1282d1cc001984be42261cf656ee2cb6d6c96da",
+    "summarize_common_change_v3.py": "338f9c0bb28b800711e6527d9208c3046132a5c652805a92333e4c209c529918",
+    "summarize_common_change_v2.py": "318dee1a19fbd5b0863f50d2e0346723d7050329b55170cb8efac60929b962ae",
+    "summarize_connected_motion_v1.py": "3b0822c7d4c9218211dfec7c7d6854fd67b28f9b43640134dfe2228690a2c40e",
+    "predicted_object_state_cv_diagnostic_v2.py": "0de90351e60330cc1a9208e3233f8b1077614ce69695ff044dd01f2f488516b5",
+    "evaluate_shared_rigid_state_v1.py": "9785bb3082ac2c805ab54d291152391f0a4943f9948934ce9932cb4e530e9e6a"
+  },
+  "resources": {
+    "max_seconds": 1800.0,
+    "max_allocated_gib": 32.0
+  },
+  "analysis_sources_sha256": {
+    "summarize_shared_rigid_state_v1.py": "9376155e95ac3d17001139b980c7c9fb30e0afda3c4a381e71941b19317ecfc6"
+  },
+  "final_checkpoint_rule": "actual successful fixed512 training completion; supplied SHA binds that endpoint only"
+}

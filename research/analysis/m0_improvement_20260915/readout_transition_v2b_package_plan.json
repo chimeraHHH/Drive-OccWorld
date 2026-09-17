@@ -1,0 +1,66 @@
+{
+  "status": "COMPLETE_PACKAGE_PENDING_INDEPENDENT_REVIEW",
+  "created_utc": "2026-09-14T22:58:22.992584+00:00",
+  "new_job": "readout_transition_v2b",
+  "new_campaign": "campaign_readout_transition_v2b",
+  "script": "run_readout_transition_campaign_v2.py",
+  "source_and_assets_sha256": {
+    "run_readout_transition_campaign_v2.py": "e3ec99f45c7e91355cf4d2eef7ace6a92ef94036d0915f61bf0fc23b3f6a7756",
+    "job_runner.py": "07c26a06723d97c218eb6d6243406bbb6512355588031a079f156e624818d8a8",
+    "aggregate_memory.py": "2e3d6368b39018da5c950eac72324e5a4682c1cb4008faf36ce26cbda8af2e9a",
+    "frame_aggregate.py": "2c4a42753b1ba3f549c3c8f00e69a7e0be2546211c28747edfdcaf11347c11b5",
+    "frame_consistent_adapter.py": "3aef116f11bf1ce04d11d501b5e3a2f4a44b24b75cf26bd8ec5b14bd56b5be94",
+    "frame_train.py": "7539c19e8cd184df9d25f86d6bd1561fb2164420a15924642d62cfc74cb502a3",
+    "full_resolution_supervision_preflight.py": "12698cb2bb071dd6daf79ccc64ba8f506d0a773a676dd57296f8410fe747d0f7",
+    "joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "memory_experiment.py": "42f81d5799c32bf98e6e6da4055d79c9d62f50332d8aed87797e4ea72a7d6f2c",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "objective_full_dependency.py": "55939464aee53067227e4ff98e4cd66890616141a33f54a97f671e25014eddde",
+    "objective_supervision_adapters.py": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703",
+    "objective_supervision_aggregate.py": "9e2327d51dd34e3f207d216b0966177531ffdc4e6ecdddddf0f06004ace5e256",
+    "objective_supervision_preflight.py": "8ff38bcb9b910559bd6e612c32a4eab6012ecdfad2e1d83270699c068572324e",
+    "objective_supervision_protocol_v1.json": "275b2551775b169471cb230a1416d0454c0560d229c4fe9b7ec5166cfc4c460d",
+    "objective_supervision_train.py": "3fce7837cf9e58e7c72ca747b6e609f60c4f78b57e3dba23826dc3862a49e4cc",
+    "observation_memory.py": "0f01a29dc79daf2f0abb42bd2a23f8d168606cd3928212229ee5aeb3f94a5733",
+    "posthoc_train_diagnostic.py": "15a7f27f03d15a6e980358f6f0be1415c80e34abc91dcf83cc2caec5baaf7048",
+    "protocol_v2.json": "071547971498579a5f695697aacaa2dbf17eecfdd93c066c011227bcac08505a",
+    "readout_transition_diagnostic_v2.py": "489fccce38cb418b02d6de18164b70c192b8c76d8e9654c4d8293ce9e7bf0b06",
+    "readout_transition_diagnostic_protocol_v2.json": "deba0647052014de50a00e373582806e6dfa814c16f9c4eaa524d93b66bf77cf",
+    "run_campaign_card.py": "b562b772a995aa466122b4f9233c1c679dcb3fd18a51b1c218cccd73c49a0246",
+    "run_objective_supervision_campaign.py": "205f3d0d680de490113d0470e819e90ad3f5f612098420049dcfd2e93d7feeab",
+    "selection_v1.json": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+    "test_observation_memory.py": "23b11b542e3b5898b97f39fd2cebc7781ebf3d3c185de7799ce32345ac740026",
+    "wait_for_native_cache.py": "43f2994f895bf01b87ad638b626010c969ebb9c94ed8d0c90859c6996cd9b388"
+  },
+  "source_or_protocol_changes_since_v2": false,
+  "only_package_addition_since_failed_v2": "selection_v1.json",
+  "wait_limit_seconds": 300,
+  "outer_max_seconds": 2220,
+  "pilot_max_seconds": 300,
+  "development_max_seconds_ceiling": 1500,
+  "diagnostic_total_max_seconds": 1800,
+  "term_cleanup_grace_seconds": 20,
+  "max_allocated_gib": 32,
+  "new_output_required": true,
+  "automatic_retry": false,
+  "optimizer_updates": 0,
+  "launch_provenance": {
+    "original_v1_dispatch_receipt": {
+      "local_path": "receipts/readout_transition_v1_dispatch.json",
+      "sha256": "aeeeb1b7efde06b9885e4b18bb5a139bc598b8396cadf18686524322a981e7db"
+    },
+    "original_v1_remote_launch": {
+      "local_path": "receipts/readout_transition_v1_failure_evidence/jobs/readout_transition_v1/launch.json",
+      "sha256": "0d74396bb0ba5e9ea2df332c35e03a3e561fd610d3da6e378e2a81d3b0e0a4e8"
+    },
+    "failed_v2_dispatch_receipt": {
+      "local_path": "receipts/readout_transition_v2_dispatch.json",
+      "sha256": "22c39b8e5a0f5811aa2a8adcc3aae37e428a9e34c2f83239715b4e664fb70a17"
+    },
+    "failed_v2_remote_launch": {
+      "local_path": "server_results/jobs/readout_transition_v2/launch.json",
+      "sha256": "6f6a6155321b1016122eb7609c8306f068f866bbaebc3c437c073669d279e02d"
+    }
+  },
+  "launch_provenance_note": "Dispatch receipt wraps returncode/stdout/stderr; remote launch is a separate JSON file. Both exact byte hashes are bound explicitly and parsed launch objects are equal."
+}

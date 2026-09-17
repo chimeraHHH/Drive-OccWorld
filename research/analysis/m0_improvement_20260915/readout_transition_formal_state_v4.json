@@ -1,0 +1,144 @@
+{
+  "updated_utc": "2026-09-15T02:22:40.307968+00:00",
+  "user_request": "开始正式诊断",
+  "job": "readout_transition_v4",
+  "campaign": "campaign_readout_transition_v4",
+  "protocol_sha256": "4baad13ab4d6fe0ddce740b6a345923668f3bba2e4a8b10e21bb84f7694b0d83",
+  "state": "EXITED_ZERO",
+  "phase": "COMPLETE",
+  "launch_identity": {
+    "runner_pid": 2220046,
+    "uid": 1009,
+    "startticks": 106286634,
+    "created_utc": "2026-09-15T00:07:51.702842+00:00"
+  },
+  "samples": 200,
+  "scenes": 100,
+  "combinations": [
+    "CC",
+    "CO",
+    "OC",
+    "OO"
+  ],
+  "optimizer_updates": 0,
+  "new_training": false,
+  "previous_M0_improvement_goal_remains_complete": true,
+  "pilot_seconds": 300,
+  "development_ceiling_seconds": 3000,
+  "total_seconds": 3600,
+  "automatic_retry": false,
+  "monitor_receipt": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/m0_improvement_20260915/receipts/readout_transition_v4_monitor_20260915_102229_915054.json",
+  "result_complete": true,
+  "pilot_status": "PASS_READOUT_TRANSITION_ENGINEERING",
+  "pilot_seconds_actual": 104.0136631000787,
+  "actual_development_budget_seconds": 2167,
+  "development_process": {
+    "pid": 2220211,
+    "uid": 1009,
+    "startticks": 106297654,
+    "gpu_uuid": "GPU-74b9b73f-c405-55bc-bf76-f8aa85d1e7fe"
+  },
+  "pilot_complete_sha256": "18cef39f4cd283d1059f9abe7ab9ae9d24b6929d271ee2820ff5b8e23bc2049b",
+  "development_authorization_sha256": "59a285a715e9e51618304e91322b1c53dd5c8d95e906cb81919c5ea12475b767",
+  "plot_script": "plot_readout_transition_results_v4.py",
+  "progress": {
+    "completed": 200,
+    "planned": 200
+  },
+  "error": null,
+  "returncode": 0,
+  "finished_utc": "2026-09-15T00:28:04.978361+00:00",
+  "elapsed_seconds": 1210.1655377699062,
+  "all_engineering_gates_passed": true,
+  "model_and_input_state_unchanged": true,
+  "summary_sha256": "f5cbfd7a47d3e426c6b6125d3ea888adffb4d3d8962052930c723d0827243dc0",
+  "complete_sha256": "f8a649ce2d65c0b4ad60fd6feb526194c1624e3e8694ab8f5e415f8d25f40fbf",
+  "future_macro_gmo_percent": {
+    "CC": 13.73855587653895,
+    "CO": 13.778904712098322,
+    "OC": 14.70152139985766,
+    "OO": 14.663996820993908
+  },
+  "effects_future_macro_gmo": {
+    "total_O_minus_C": {
+      "delta_ratio": 0.009254409444549583,
+      "delta_pp": 0.9254409444549583,
+      "ci95_ratio": [
+        0.007890497087048292,
+        0.010615852544253465
+      ],
+      "ci95_pp": [
+        0.7890497087048292,
+        1.0615852544253466
+      ]
+    },
+    "readout_on_C_features": {
+      "delta_ratio": 0.00040348835559372853,
+      "delta_pp": 0.04034883555937285,
+      "ci95_ratio": [
+        0.00019848494190232506,
+        0.0006237481819506688
+      ],
+      "ci95_pp": [
+        0.019848494190232505,
+        0.06237481819506688
+      ]
+    },
+    "features_under_O_readout": {
+      "delta_ratio": 0.008850921088955854,
+      "delta_pp": 0.8850921088955854,
+      "ci95_ratio": [
+        0.0074656098495369146,
+        0.010243726372496712
+      ],
+      "ci95_pp": [
+        0.7465609849536915,
+        1.0243726372496713
+      ]
+    },
+    "features_under_C_readout": {
+      "delta_ratio": 0.009629655233187095,
+      "delta_pp": 0.9629655233187095,
+      "ci95_ratio": [
+        0.008134515586156212,
+        0.01113695854630811
+      ],
+      "ci95_pp": [
+        0.8134515586156212,
+        1.113695854630811
+      ]
+    },
+    "readout_on_O_features": {
+      "delta_ratio": -0.0003752457886375127,
+      "delta_pp": -0.03752457886375127,
+      "ci95_ratio": [
+        -0.0006974474458437269,
+        -6.053453967086801e-05
+      ],
+      "ci95_pp": [
+        -0.06974474458437269,
+        -0.006053453967086802
+      ]
+    },
+    "interaction_on_metric_scale": {
+      "delta_ratio": -0.0007787341442312412,
+      "delta_pp": -0.07787341442312412,
+      "ci95_ratio": [
+        -0.0009527208298877931,
+        -0.00060822925166934
+      ],
+      "ci95_pp": [
+        -0.09527208298877932,
+        -0.06082292516693401
+      ]
+    }
+  },
+  "actual_figure": "figures/readout_transition_development_v4/readout_transition_results.pdf",
+  "figure_visual_qa": "figures/readout_transition_development_v4/visual_qa.json",
+  "interpretation": "正式诊断结果与推进方向.md",
+  "independent_audit": "readout_transition_v4_independent_audit.md",
+  "independent_audit_sha256": "046d935901ac8b9b8e89e98d51f190513cfb40ece8e0188246de6e013645436a",
+  "independent_statistics_max_difference": 0.0,
+  "interpretation_sha256": "6b9be15f12bbbc49dca07cf977c87f745e22236218da460db4d9acc3b8ba7e5a",
+  "all_delivery_checks_passed": true
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "source-support-innovation-research-sources-v1",
+  "checked_date": "2026-09-16",
+  "no_models_run": true,
+  "no_training": true,
+  "statistics_recomputed": false,
+  "local_sha256": {
+    "common_connected_motion_dev200_v2_pooled.json": "e4f832e95a903310ac95e032b78d473651bc8b23a6c7cc154eec9d4183326040",
+    "connected_motion_dev200_pooled_v1.json": "b0dd6508154b59ef947b446ddc86dbd3e996a38caf250927d5b51acebc56e485",
+    "server_results/training/common_connected_motion_dev200_v2/records.jsonl": "5699c554924db0a96b9fb21a12cf3398ace28b30f0a8c1eafa17bde9d25cfc92",
+    "server_results/training/connected_motion_train_v2/development_records.jsonl": "e9dc348405fc335acd36080045d2aa9c0e287100ee7486b804bc26ae781a3430",
+    "server_results/training/connected_motion_train_v2/development_objects.jsonl": "b73499b8e4ce1bd0de6ffc3ff6001d3a58ab9f33483c8bfb8f7ed68e6f88d0ea",
+    "supported_motion_fusion.py": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c"
+  },
+  "papers": [
+    {
+      "name": "STrajNet",
+      "year": 2023,
+      "venue": "ICRA",
+      "paper": "https://arxiv.org/pdf/2208.00394",
+      "reviewed_sections": [
+        "III-A",
+        "III-D",
+        "III-E",
+        "III-F",
+        "IV-A",
+        "Table I"
+      ],
+      "repository": "https://github.com/georgeliu233/STrajNet",
+      "branch": "master",
+      "commit": "21884df0ea34c725f970c26267eb191fa3c9e8f6",
+      "files_sha256": {
+        "FG_MSA.py": "b6b788953d277a51e7b72a6aa03e095b255076ed0910527d0e4a838b78729ca2",
+        "loss.py": "7db42787b3827ba02477b58cf5043f65a356891553098e22dffcb43ddd0ad9d7",
+        "modules.py": "92bced7b6a930815dd12c44090ca5e5b7c0577f79b5fd53b5d292bede5a7668f",
+        "train.py": "0319b6cd9ab4e53308f42df2c31fcec3143e694ee8eaad7e4e3de2a9fe3b9bb2"
+      },
+      "license_verified": false,
+      "released_weights_verified": false,
+      "executed": false
+    },
+    {
+      "name": "ImplicitO",
+      "year": 2023,
+      "venue": "CVPR",
+      "paper": "https://arxiv.org/html/2308.01471v1",
+      "project": "https://waabi.ai/research/implicito",
+      "reviewed_sections": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "4",
+        "Appendix A",
+        "Tables 2 and 3"
+      ],
+      "public_implementation_verified": false,
+      "released_weights_verified": false
+    }
+  ],
+  "diagnostic_scope": "Design audit only; partial-oracle producer not yet available for this review."
+}

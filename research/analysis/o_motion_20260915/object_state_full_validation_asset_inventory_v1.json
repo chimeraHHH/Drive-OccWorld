@@ -1,0 +1,260 @@
+{
+  "schema": "object-state-full-validation-asset-inventory-v1",
+  "status": "LOCAL_READ_ONLY_INVENTORY_NOT_A_FULL_LAUNCH",
+  "created_local_date": "2026-09-16",
+  "source_files_sha256": {
+    "analysis/m0_improvement_20260915/full_validation_selection_v1.json": "60811c8a0847eaf38caeac489eb5dafc3f34cf90b402e640a182356a620eb391",
+    "analysis/m0_improvement_20260915/selection_v1.json": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+    "analysis/m0_improvement_20260915/server_results/catalog_v1/catalog.json": "b59f92a4488dc465130b9477f50bcf6b16469b27b26205443f6878cf022c90f1",
+    "analysis/m0_improvement_20260915/objective_joint_evaluation_protocol_v2.json": "b1b1b046b5acf9dc1207a19e0b7b740d6db38a0982a3794f670fa06862189f28",
+    "analysis/m0_improvement_20260915/server_results/campaign_objective_joint_full_v2/summary_v1/summary.json": "199347570b9d34130c6366ef3fb138bbc08c1310a50010a1f200061fe428f463",
+    "analysis/m0_improvement_20260915/server_results/campaign_objective_joint_full_v2/summary_v1/complete.json": "cdf54175b84613b1e175fe783f490ab62681c18060c5289981f2be426d2a53e5",
+    "analysis/m0_improvement_20260915/server_results/campaign_objective_joint_full_v2/summary_v1/raw_confusions.npz": "4f649ede18d41e371bb36837e642b99e095c24936601761e1f402744399366f4",
+    "analysis/m0_improvement_20260915/server_results/campaign_objective_joint_full_v2/summary_v1/sample_hash_ledger.json": "cc5fde3022bd5450ec86498e3889d6a7c120c1da1066514794859bacc09eefac",
+    "analysis/o_motion_20260915/full_motion_targets_local_v1/manifest.json": "48ac12f1ce24ed1639c17aed0fcdc8ad2eef2cceff10c181b2a0f82f81fc90bb",
+    "analysis/o_motion_20260915/full_motion_targets_local_v1/complete.json": "de10ddd9013d7efd68249bced50448fb083c6d059546f8cfa0560be02b702252",
+    "analysis/o_motion_20260915/full_motion_targets_local_v1/statistics.json": "6365681906fc61ac53b8a638154eab53904771c882b1ad0a8562a8a615ce0bbe",
+    "analysis/o_motion_20260915/full_sparse_motion_local_v1/manifest.json": "59535fe4f21e73182da5090e6b12ec60a0dfb40382564f0bb16409565699fc4e",
+    "analysis/o_motion_20260915/full_sparse_motion_local_v1/complete.json": "68fc77c6fe474fe5ed722e07be0341731a15a3adbb215dc5ecba453e06fec545",
+    "analysis/o_motion_20260915/full_sparse_motion_local_v1/statistics.json": "888e0249d82379220f5b0ae3dac5398495ed8b9e4e829b81074731bfce53c70c",
+    "analysis/o_motion_20260915/full_sparse_motion_local_v1/development_intersection_audit.json": "25d53489439b35a526810d7bc42a1bd9a582e8951254249b38451f63d19cef06",
+    "analysis/o_motion_20260915/receipts/crn_state_source_precheck_v1.json": "bdca5bedb41c8c3d420b2430903d1d5b910a3fedabbefc91ba94d4efdfb102d6",
+    "analysis/radar_fusion_baselines_20260909/CRN_completion_recovery_audit.json": "9493056d3a9c9abeb5273ae1809a00dbacf48cb7aa3c2800ad1bb3b4a431ee76",
+    "analysis/o_motion_20260915/crn_state_dev200_v1/manifest.json": "152c86fb03ee3695358fc7ad4d5731f6b21a77db560af6815329535d7c44c275",
+    "analysis/o_motion_20260915/crn_state_dev200_centered_v1/complete.json": "650f19ae2709bbb8af39ed8c70dcebb7cbb720b7a6bc5fdfa6fc7040a9361b7d",
+    "analysis/o_motion_20260915/native_full_o_stream_v1.py": "3a8d338de78caae5d73e11012cd9cec38a47621913ddbb0bbda9cfae6e510bef",
+    "analysis/o_motion_20260915/server_results/training/native_full_o_stream_preflight_v1/summary.json": "3b2a7c87cf51e0547a6fccfac055a7434e11d4ce2209c193e2b5825e934b5a62",
+    "analysis/o_motion_20260915/server_results/training/native_full_o_stream_preflight_v1/complete.json": "c35bbe651fe0f28f7d8bbd2c7cf02f50dae893b2bba356cf4931beb26dcebe43",
+    "analysis/o_motion_20260915/server_results/training/native_full_o_stream_preflight_v1/manifest.json": "9b69f2d34e95712988f758f986c0cfca622a6abfa9e93f178977843c53787b1a",
+    "analysis/o_motion_20260915/server_results/training/native_full_o_stream_preflight_v1/loaded_model.json": "d145177db54f66bc020f71cf1346acb9fce0f03fddd16f58de0d3bddabb27bbc",
+    "analysis/o_motion_20260915/receipts/full_motion_targets_mirror_v1/process_receipt.json": "11e3f6058dc36e5d8b1a8e93c5134b8a9a96cf090e0372f758f714f05409eafd",
+    "analysis/o_motion_20260915/receipts/full_sparse_motion_upload_v1/process_receipt.json": "2ea1ad3c52a8b704de01776cb55f720caacc8079857f2cae6609f98aa82381f4",
+    "analysis/o_motion_20260915/object_state_forecast_train_v1.py": "2841aeaa533b4883e635014fa74d22520d94890ef1939a136f75beb8366ad162",
+    "analysis/o_motion_20260915/object_state_conditioner_v2.py": "dad88c05105d85d9b2a6094c687630f1d661cd7a4e35be42a15a5d01b94a8f36",
+    "analysis/o_motion_20260915/object_state_forecast_development_inputs_v1.py": "7cd498d13d45d5960c6f494ebf7b750718b397d90720ecd745a8c527b0dace06",
+    "analysis/o_motion_20260915/object_state_prediction_inputs_v1.py": "55e39715fdf19e5ae1f227a943a843b194eabed08e788ccb2694a040d6f18256",
+    "analysis/o_motion_20260915/future_state_motion_v1.py": "96e796dd5bb6d33949a03a6c451919ef2e19c75b81eaea4b10e2c98f8ecc176e",
+    "analysis/o_motion_20260915/load_future_state_motion_v1.py": "880e54af4f6438a3d28197ffa1a17ca1a9e897dc81d1ee5599c788404a53b28c",
+    "analysis/o_motion_20260915/full_future_feature_residual_evaluation_v1.py": "da0480e78351b1be9442ef1e3d65928ccb5dce1630d467f299ea8f158c3d91f2",
+    "analysis/o_motion_20260915/summarize_object_state_common_v1.py": "4a03aeda837e78b97ff18d27140d08602619ee96502b7f62fa82f591ca08f584",
+    "analysis/o_motion_20260915/summarize_object_state_physical_v1.py": "bd2c652a1682c8ea3e16c0d35ec69ba75957da7886cd9f20a1bb700af3c011b6",
+    "analysis/o_motion_20260915/crn_box_origin_adapter_v1.py": "aa05e4cd8d2c9ffbf41e751ebc0bda7114040753e404c0560975ee134e23a101",
+    "analysis/o_motion_20260915/crn_origin_correction_contract_v1.json": "c4b99aadab4bdd20485c3a544ba9cd735441101f59ec228230a6d79f5d46a51b",
+    "analysis/o_motion_20260915/predicted_object_state_cv_diagnostic_v2.py": "0de90351e60330cc1a9208e3233f8b1077614ce69695ff044dd01f2f488516b5",
+    "analysis/o_motion_20260915/train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "analysis/o_motion_20260915/common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+    "analysis/o_motion_20260915/common_change_evaluation_v2.py": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059"
+  },
+  "scope": {
+    "server_contact": false,
+    "GPU": false,
+    "optimizer_updates": 0,
+    "partial_VG_scores_read": false,
+    "large_checkpoints_rehashed": false,
+    "original_1_31GB_CRN_export_reread": false,
+    "full_raw_and_sparse_payload_files_hashed": 10238
+  },
+  "selection": {
+    "full_anchors": 5119,
+    "full_scenes": 150,
+    "unsupported_count_5129": true,
+    "official_indices_contiguous": true,
+    "development_anchor_intersection": 200,
+    "development_scenes": 100,
+    "full_anchors_in_development_scenes": 3412,
+    "outside_development_scenes": 50,
+    "full_anchors_outside_development_scenes": 1707,
+    "natural_scene_anchor_count_range": [
+      33,
+      35
+    ],
+    "extra50_are_not_blind": true
+  },
+  "CRN_coverage": {
+    "evidence": "embedded expected_tokens in historical source precheck; historical authenticated complete export scan bound by SHA; this audit did not reread remote export",
+    "expected_manifest_sha256": "1cd1a86b3dbfe829c578385f88be4becc72fd40655797285bd66174671e1b58e",
+    "expected_tokens": 6019,
+    "full_missing_from_expected": [],
+    "expected_extra_tokens": 900,
+    "seven_frame_raw_union": 6019,
+    "seven_frame_union_equals_CRN_expected": true,
+    "extra_frames_per_scene": [
+      6
+    ],
+    "export_sha256": "fec6541461bf6eb0ad5f3e113e4fcb13c937896731203ef5de003a6ac0055653",
+    "export_path": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/radar_fusion_baselines_20260909/CRN/attempt01_full/results_nusc.json"
+  },
+  "labels": {
+    "raw_and_sparse_order_identity_exact": true,
+    "all_payload_file_hashes_match": true,
+    "raw_frames_minus2_through_plus4": true,
+    "sparse_statistics": {
+      "samples": 5119,
+      "scenes": 150,
+      "totals": {
+        "union_instances": 151535,
+        "t0_present_boxes": 126122,
+        "retained_objects": 102899,
+        "t0_boxes_without_unique_grid_point": 23223,
+        "source_points": 14985578,
+        "overlapping_grid_points": 92691,
+        "uncovered_grid_points": 3261081731,
+        "candidate_grid_points": 24497008,
+        "valid_points_by_horizon": [
+          14721370,
+          14452869,
+          14163899,
+          13854279
+        ],
+        "missing_points_by_horizon": [
+          264208,
+          532709,
+          821679,
+          1131299
+        ],
+        "valid_objects_by_horizon": [
+          100059,
+          97244,
+          94293,
+          91174
+        ],
+        "missing_objects_by_horizon": [
+          2840,
+          5655,
+          8606,
+          11725
+        ],
+        "valid_future_points_outside_half_open_extent_by_horizon": [
+          90035,
+          183186,
+          269724,
+          351932
+        ],
+        "object_speed_group_counts_by_horizon": [
+          [
+            47549,
+            17271,
+            35239
+          ],
+          [
+            47946,
+            15699,
+            33599
+          ],
+          [
+            48028,
+            13882,
+            32383
+          ],
+          [
+            47767,
+            12153,
+            31254
+          ]
+        ],
+        "point_speed_group_counts_by_horizon": [
+          [
+            8160138,
+            2847101,
+            3714131
+          ],
+          [
+            8262253,
+            2663180,
+            3527436
+          ],
+          [
+            8385899,
+            2365051,
+            3412949
+          ],
+          [
+            8444111,
+            2086632,
+            3323536
+          ]
+        ]
+      },
+      "empty_source_samples": 27,
+      "source_points_min": 0,
+      "source_points_max": 23960,
+      "bytes": 224805118
+    },
+    "old_development_intersection_audit": "PASS",
+    "point_semantics": "Virtual grid material points uniquely covered by one raw GMO t0 box; not measured points or scene flow"
+  },
+  "original_full_reference": {
+    "complete_ledger_all_files_match": true,
+    "files": {
+      "models": {
+        "shape": [
+          4
+        ],
+        "dtype": "<U7"
+      },
+      "hist_by_model_sample_horizon": {
+        "shape": [
+          4,
+          5119,
+          5,
+          2,
+          2
+        ],
+        "dtype": "uint64"
+      },
+      "target_counts_0_1_255_by_sample_frame": {
+        "shape": [
+          5119,
+          7,
+          3
+        ],
+        "dtype": "uint64"
+      },
+      "sample_tokens": {
+        "shape": [
+          5119
+        ],
+        "dtype": "<U32"
+      },
+      "scene_tokens": {
+        "shape": [
+          5119
+        ],
+        "dtype": "<U32"
+      },
+      "official_indices": {
+        "shape": [
+          5119
+        ],
+        "dtype": "int64"
+      },
+      "horizon_seconds": {
+        "shape": [
+          5
+        ],
+        "dtype": "float64"
+      }
+    },
+    "models": [
+      "M0",
+      "M0_fp32",
+      "native1",
+      "O"
+    ],
+    "tokens_scenes_indices_exact_order": true
+  },
+  "historical_stream_resources": {
+    "elapsed_seconds": 56.1986404700001,
+    "model_initialization_seconds": 42.04817232000278,
+    "max_sample_seconds": 10.144818950000627,
+    "peak_allocated_bytes": 4448122880
+  },
+  "elapsed_local_inventory_seconds": 3.422434791980777,
+  "missing_new_work": [
+    "full5119 centered CRN prediction subset plus order/hash/origin contract; no new detector inference needed if the historical full export remains accessible",
+    "completed V/G endpoint and strict three-component inference loader; no candidate endpoint read here",
+    "V/G native stream consumer with full state/label inputs and model-specific t0; no R/R0 output-composition assumptions",
+    "full D/V/G/CRN-CV physical records and 150-scene collector; existing physical results cover development only",
+    "actual combined-pipeline resource preflight before setting any full budget"
+  ]
+}

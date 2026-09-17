@@ -1,0 +1,407 @@
+{
+  "schema": "m0-temporal-literature-v1",
+  "created_at": "2026-09-14T16:35:24.903211+00:00",
+  "scope": "Public primary-source research and read-only local code; no skills, no server, no training",
+  "papers": [
+    {
+      "id": "drive_occworld",
+      "title": "Driving in the Occupancy World: Vision-Centric 4D Occupancy Forecasting and Planning via World Models for Autonomous Driving",
+      "date": "2024-08-26",
+      "venue": "AAAI 2025; official proceedings verified",
+      "primary_url": "https://arxiv.org/html/2408.14197v3",
+      "version": "arXiv 2408.14197 v3; AAAI final proceedings also opened",
+      "read_depth": "Methods 3.1–3.3; task/metric definitions 4.1; tables 1–2; author detector/head/config",
+      "source_facts": [
+        "BEV history encoder + memory queue + autoregressive future BEV decoder; semantic/motion conditional normalization; occupancy and backward centripetal flow heads.",
+        "Future decoder uses deformable self-attention, temporal cross-attention, and action conditioning. Source losses combine CE, Lovasz and geometry terms; this is not uniform NLL-only training.",
+        "Inflated GMO, fine-grained GMO, and fine-grained GMO+GSO are separate tasks; general movable classes are not per-instance actual motion annotations."
+      ],
+      "code": {
+        "local_root": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/Drive-OccWorld",
+        "repository_url": "https://github.com/yuyang-cloud/Drive-OccWorld",
+        "commit": "3bd90b39fc83c944e047b35e26c46b3807b203af",
+        "license": "Apache-2.0",
+        "files": [
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/Drive-OccWorld/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py",
+            "sha256": "9d71c124e732b14f80596098f7d6c45cba7e3c8a328c2b68f06e2015996f2631"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/Drive-OccWorld/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py",
+            "sha256": "be1be97292b0dda0ed5a9ca92534fdf950162c812487dc00f4e67deb8de281e4"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/Drive-OccWorld/projects/configs/fine_grained/action_condition_GMO.py",
+            "sha256": "7d82e17c48bfce0c70e28f2a31550bc78be831be473528d8e695d95670a83f6d"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/Drive-OccWorld/LICENSE",
+            "sha256": "43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1"
+          }
+        ],
+        "local_modification_note": ""
+      },
+      "portability": {
+        "level": "existing M0 foundation",
+        "mechanism": "Reference implementation and matched protocol anchor; generic autoregression or ego alignment is already present.",
+        "dependencies": [
+          "Python 3.8",
+          "PyTorch 1.10.1+cu111",
+          "mmcv-full 1.4.0",
+          "mmdet 2.14.0",
+          "mmdet3d 0.17.1",
+          "DCNv3/deformable attention extensions"
+        ]
+      },
+      "counterexamples_and_limits": [
+        "No direct numeric comparison across inflated and fine-grained rows. Future ego/action inputs must match M0.",
+        "Local source M0 forecasting transition predicts full next state; its queue with length 1 removes the measured t0 state after first future step."
+      ],
+      "training_cost": {
+        "config_epochs": 24,
+        "samples_per_gpu": 1,
+        "learning_rate": 0.0002,
+        "measured_h200_training_hours": null
+      }
+    },
+    {
+      "id": "ir_wm",
+      "title": "Vision-Centric 4D Occupancy Forecasting and Planning via Implicit Residual World Models",
+      "date": "2025-10-19",
+      "venue": "ICRA 2026; arXiv comments and author repository acceptance announcement verified",
+      "primary_url": "https://arxiv.org/pdf/2510.16729",
+      "version": "arXiv 2510.16729 v3, 2026-02-08",
+      "read_depth": "Methods III B–C; setup IV; ablation tables VI–IX; actual Drive_OccWorld detector and fine-GMO config",
+      "source_facts": [
+        "Predicts a latent BEV increment, adds it to previous state, and feeds the summed state back into streaming memory.",
+        "Paper feature alignment uses semantic and ego-motion conditioning. Open-source fine-GMO config sets sem_norm=False, ego_motion_ln=True, memory_queue_len=1.",
+        "Future feature teacher L2 (TSS) does not show a consistent forecasting gain in the paper ablation; do not default to distillation."
+      ],
+      "code": {
+        "local_root": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/IR-WM",
+        "repository_url": "https://github.com/yuyang-cloud/Drive-OccWorld",
+        "commit": "a83e4a24a8dbf008e5fe4e02d7efb692c1bec582",
+        "license": "Apache-2.0",
+        "files": [
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/IR-WM/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py",
+            "sha256": "4ad672f484e3a50ae775362b0ca5108b460584831e073cc9776d8aebe8d54f32"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/IR-WM/projects/mmdet3d_plugin/bevformer/detectors/drive_occworldV2.py",
+            "sha256": "e4fe8374096123f6b15b9d7563c09b0380fa72d2b88e06d5a7e002d192c136eb"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/IR-WM/projects/configs/fine_grained/action_condition_GMO.py",
+            "sha256": "98d16ebba6a2627af3cd7c7208de5826afeefbda52c6062c6582ae4c020d5ffa"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/IR-WM/DOCS/INSTALL.MD",
+            "sha256": "6129598a98372edbe0468b064230fea9c04d4d55895bbed5e4bffee9547cf104"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/IR-WM/LICENSE",
+            "sha256": "5ad8c213095c573921d7388edf93f6a9f54490b8ebf3b165ae8ef1947cf70846"
+          }
+        ],
+        "local_modification_note": "Local drive_occworld.py restores occupancy forward_head/return fields; V2 also has a local patch. The residual recurrence is unchanged from HEAD. Do not represent these local files as pristine author code."
+      },
+      "portability": {
+        "level": "directly implementable temporal transition, adaptation required",
+        "interface": "future_pred: next_bev_feats.append(next_bev_feats[-1] + pred_feat), then queue the summed final-layer feature; detector lines 374 and following.",
+        "dependencies": [
+          "Same BEVFormer/MMCV family as M0",
+          "Official old stack Python 3.8 / torch 1.10.1 / mmcv 1.4.0"
+        ]
+      },
+      "counterexamples_and_limits": [
+        "An existing full-state M0 transition cannot be made residual merely by adding previous state; that changes initial predictions. Function-preserving migration must be designed and tested.",
+        "This is an internal recurrent state residual, not the frozen-output residual heads tested in R2–R4.",
+        "The single-slot official fine-GMO queue still drops direct measured-state access."
+      ],
+      "training_cost": {
+        "config_epochs": 24,
+        "samples_per_gpu": 1,
+        "learning_rate": 0.0002,
+        "measured_h200_training_hours": null
+      }
+    },
+    {
+      "id": "occprophet",
+      "title": "OccProphet: Pushing the Efficiency Frontier of Camera-Only 4D Occupancy Forecasting with an Observer-Forecaster-Refiner Framework",
+      "date": "2025-02-21",
+      "venue": "ICLR 2025; official proceedings verified",
+      "primary_url": "https://arxiv.org/pdf/2502.15180",
+      "version": "arXiv 2502.15180; official ICLR title includes the/an; author code released 2025-10-01",
+      "read_depth": "Methods 3.2–3.4; experiments 4.1 and component ablations; UNetPredictor, ConditionalGenerator, detector history extraction",
+      "source_facts": [
+        "Observed voxel history is ego-aligned. Hybrid temporal fusion uses scene, BEV and height views; conditional generator predicts all future features in parallel.",
+        "Refiner concatenates observed history with predicted future features, then returns only refined futures. It does not consume future camera observations at inference.",
+        "Dynamic kernel uses Linear(T*C, Tprime*C*T*C*k^3); direct C=256 port is expensive. Author code has leave_attn_unused=True legacy default with instruction to set False for new training."
+      ],
+      "code": {
+        "local_root": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/OccProphet",
+        "repository_url": "https://github.com/JLChen-C/OccProphet",
+        "commit": "d41f8ae9b0b5cb47e0152dfec50115ab9cc0006c",
+        "license": "MIT",
+        "files": [
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/OccProphet/projects/occ_plugin/occupancy/necks/unet_trans.py",
+            "sha256": "68617bd624d8fee725c0059782ed6baf27a9d0a18aaab108d8d79402765e14a2"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/OccProphet/projects/occ_plugin/occupancy/detectors/occprophet.py",
+            "sha256": "4dec70bf2b0a3f297cfb6f140aac45ecebca80062d047597c90cfc79c126a200"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/OccProphet/projects/configs/occprophet/OccProphet_4x1_fine-GMO_nuscenes-occ.py",
+            "sha256": "5bdd8c68d55c729112ad767767eadc8195b6648725845f41ac93e01817fe80c3"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/OccProphet/README.md",
+            "sha256": "0c1f40f51daf23db2586ae90d6e0c7348990a501c6753f9a71361befcb71dd41"
+          },
+          {
+            "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/OccProphet/LICENSE",
+            "sha256": "d1abe2c0622ea04c6f2ea9364551467840f730baa43818d7b4034a4caf48b68e"
+          }
+        ],
+        "local_modification_note": "Two local compatibility edits in data loading/view transformation; inspected core unet_trans.py is unmodified."
+      },
+      "portability": {
+        "level": "module adaptation, not drop-in",
+        "interface": "UNetPredictor.forward lines 651–688; ConditionalGenerator lines 187–282; optional post_unet mixes history and all future features.",
+        "dependencies": [
+          "Python 3.7 / torch 1.10.1+cu113",
+          "mmcv-full 1.4.0 / mmdet3d 0.17.1",
+          "3D convolution, custom voxel pooling; SyncBN configuration",
+          "Compress C before any dynamic-kernel port"
+        ]
+      },
+      "counterexamples_and_limits": [
+        "A voxel encoder differs from M0 BEV tokens. Preserve M0 axes/decoder rather than transplanting the entire image-lifting pipeline.",
+        "Parallel versus autoregressive prediction is established prior art, not a novel claim.",
+        "Author speed/memory comparisons are against Cam4DOcc and cannot be imported as M0 costs."
+      ],
+      "training_cost": {
+        "config_epochs": 24,
+        "samples_per_gpu": 1,
+        "learning_rate": 0.0003,
+        "author_hardware_claim": "Minimum one RTX 4090; example uses four GPUs",
+        "first_epoch_cache_warning": "Author README states initial label generation may take hours",
+        "measured_h200_training_hours": null
+      }
+    },
+    {
+      "id": "efficientocf",
+      "title": "Spatiotemporal Decoupling for Efficient Vision-Based Occupancy Forecasting",
+      "date": "2024-11-21",
+      "venue": "CVPR 2025; official CVF proceedings verified",
+      "primary_url": "https://arxiv.org/html/2411.14169v1",
+      "version": "arXiv v1 method read; CVPR 2025 final publication identity verified",
+      "read_depth": "Methods III A–C; supplementary section headings and ablation discussion; author detector and V1.1 config",
+      "source_facts": [
+        "Compresses voxel columns with learned average/max pooling and predicts 2D occupancy, height and backward centripetal flow.",
+        "Temporal refinement propagates current instance associations through flow and masks occupancy predictions; it is not simple advection of calibrated 3D probabilities.",
+        "Conditional IoU relaxes penalties inside object boxes and differs from ordinary native IoU. The height-filled representation changes shape assumptions."
+      ],
+      "code": {
+        "repository_url": "https://github.com/BIT-XJY/EfficientOCF",
+        "commit": "bc2289fafe38d1d6befa88c32cb48e30eb632e5c",
+        "commit_date": "2025-03-03T07:50:38Z",
+        "license": "MIT",
+        "read_files": [
+          "projects/occ_plugin/occupancy/detectors/efficientocf.py",
+          "projects/configs/baselines/EfficientOCF_V1.1.py"
+        ],
+        "code_interface": "extract_feat/cumulative_warp_occ; occ/flow/height branches; downstream flow-based instance refinement"
+      },
+      "portability": {
+        "level": "flow/instance mechanism useful; full representation not recommended first",
+        "dependencies": [
+          "Python 3.7",
+          "torch 1.10.1+cu113",
+          "mmcv-full 1.4.0 / mmdet3d 0.17.1",
+          "Instance and flow supervision plus voxel pooling"
+        ]
+      },
+      "counterexamples_and_limits": [
+        "Do not switch to conditional IoU to claim exceeding M0.",
+        "One height per column cannot preserve arbitrary 3D fine occupancy topology.",
+        "New instance/flow labels change supervision; isolate them as an added-supervision experiment."
+      ],
+      "training_cost": {
+        "config_epochs": 15,
+        "samples_per_gpu": 1,
+        "author_training_command_gpus": 8,
+        "author_reported_inference_ms": 82.33,
+        "measured_h200_training_hours": null
+      }
+    },
+    {
+      "id": "come",
+      "title": "COME: Adding Scene-Centric Forecasting Control to Occupancy World Model",
+      "date": "2025-06-16",
+      "venue": "NeurIPS 2025; official proceedings verified",
+      "primary_url": "https://arxiv.org/html/2506.13260v1",
+      "version": "arXiv v1 methods read; final venue identity verified; latest author code commit below",
+      "read_depth": "Methods 3.1–3.4; implementation 4.1; forecasting comparisons; author UNet/align config/environment",
+      "source_facts": [
+        "A scene-centric U-Net aligns historical and future occupancy coordinates to a reference frame and predicts futures in parallel; final predictions are transformed to future frames.",
+        "Its occupancy forecaster conditions a pretrained diffusion world model with a ControlNet-style branch and visibility handling.",
+        "Occ3D occupancy inputs, camera-estimated occupancy, and GT/predicted ego trajectories are different settings. They are not the M0 fine-GMO protocol."
+      ],
+      "code": {
+        "repository_url": "https://github.com/synsin0/COME",
+        "commit": "d88378b43e37ef17c108ff0213646db568d0879b",
+        "commit_date": "2026-07-01T08:38:00Z",
+        "license": "Apache-2.0",
+        "read_files": [
+          "occforecasting/occforecasting/models/unet.py",
+          "occforecasting/configs/unet/unet_aligned_past2s_future_3s.py",
+          "environment.yml"
+        ],
+        "code_interface": "UNet.forward at line 187; reshape target T/height; align_source_coors=True and align_target_coors=True"
+      },
+      "portability": {
+        "level": "reference-frame parallel predictor adaptable; full diffusion route conceptual for current budget",
+        "dependencies": [
+          "Author environment: Python 3.8, torch 2.0.1+CUDA11.8",
+          "mmcv 2.0.1, mmdet 3.3.0, mmdet3d 1.4.0",
+          "Generative route additionally requires DOME VAE/DiT checkpoints"
+        ]
+      },
+      "counterexamples_and_limits": [
+        "M0 already has ego-aligned attention, so adding generic ego alignment is not a contribution.",
+        "Full multi-stage diffusion training is a large cost increase, not a cheap head replacement.",
+        "Static-dominated Occ3D gains do not imply fine-GMO gains."
+      ],
+      "training_cost": {
+        "author_paper_stages_epochs": [
+          2000,
+          12,
+          1000
+        ],
+        "author_paper_stage_batch": [
+          128,
+          32,
+          64
+        ],
+        "cost_evidence_note": "Values from arXiv v1 setup; actual reproducible wall-clock not verified; do not convert to H200 hours",
+        "measured_h200_training_hours": null
+      }
+    },
+    {
+      "id": "occtens",
+      "title": "OccTENS: 3D Occupancy World Model via Temporal Next-Scale Prediction",
+      "date": "2025-09-04",
+      "venue": "IEEE Robotics and Automation Letters 2026, accepted January 2026 per author PDF header; publisher bibliographic page not separately verified",
+      "primary_url": "https://arxiv.org/html/2509.03887v2",
+      "version": "arXiv 2509.03887 v2, 2026-03-18",
+      "read_depth": "Methods III A–D; setup IV A; tables I/III/IV and efficiency discussion",
+      "source_facts": [
+        "Separates temporal next-scene prediction and spatial next-scale generation with distinct temporal/spatial attention; ego-pose is an additional scale-zero token.",
+        "Uses a multiscale occupancy VQ tokenizer; four input frames over 2s predict six future frames over 3s on Occ3D nuScenes/Waymo.",
+        "Camera variant uses FBOCC-predicted occupancy; -O uses ground-truth occupancy. Default six scales reports 0.56s versus OccWorld 0.35s; only reduced two-scale variant is faster in that table."
+      ],
+      "code": {
+        "repository_url": null,
+        "commit": null,
+        "license": null,
+        "code_search_status": "No verified author repository found in bounded exact-title/code search; this is not proof no release exists."
+      },
+      "portability": {
+        "level": "concept only at present",
+        "dependencies": [
+          "New multiscale VQ tokenizer (4096 entries, C128, factor8)",
+          "TensFormer multi-scale token training",
+          "FBOCC for camera-derived occupancy input"
+        ]
+      },
+      "counterexamples_and_limits": [
+        "Requires retraining/tokenizer changes and a different annotation pipeline.",
+        "More parallel spatial generation does not ensure lower latency at the selected model size.",
+        "No code/license/checkpoint implementation readiness established."
+      ],
+      "training_cost": {
+        "stages": [
+          "tokenizer",
+          "generation"
+        ],
+        "epochs": null,
+        "author_default_inference_seconds": 0.56,
+        "measured_h200_training_hours": null
+      }
+    }
+  ],
+  "supplementary_nearest_neighbors": [
+    {
+      "id": "streamingt2v",
+      "title": "StreamingT2V: Consistent, Dynamic, and Extendable Long Video Generation from Text",
+      "venue": "CVPR 2025",
+      "primary_url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Henschel_StreamingT2V_Consistent_Dynamic_and_Extendable_Long_Video_Generation_from_Text_CVPR_2025_paper.pdf",
+      "project_url": "https://streamingt2v.github.io/",
+      "read_depth": "Official CVF search full-text section 4/4.1 plus author method page; direct PDF open failed",
+      "evidence": "CAM conditions on recent generated frames and APM on a fixed anchor from initial chunk.",
+      "boundary": "Direct prior art for long/short memory idea, but anchor can itself be generated; not a measured-versus-generated occupancy comparison.",
+      "code_audit": null
+    },
+    {
+      "id": "worldmem",
+      "title": "WORLDMEM: Long-term Consistent World Simulation with Memory",
+      "date": "2025-04-16",
+      "venue": "NeurIPS 2025",
+      "primary_url": "https://arxiv.org/html/2504.12369v2",
+      "version": "v2 2025-12-02",
+      "read_depth": "Methods 3.2–3.4, algorithm1, attention equations and ablations",
+      "evidence": "Pose/time-aware memory retrieval and cross-attention preserve context outside a rolling generation window; memory may contain generated frames.",
+      "boundary": "Minecraft/RealEstate video reconstruction, not fine-GMO forecasting; does not establish superiority of a measured anchor against matched rolling-two BEV memory.",
+      "code_audit": null
+    }
+  ],
+  "local_m0_evidence": [
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py",
+      "sha256": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5"
+    },
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py",
+      "sha256": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf"
+    },
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py",
+      "sha256": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f"
+    }
+  ],
+  "preferred_mechanisms": [
+    {
+      "rank": 1,
+      "name": "Persistent measured t0 BEV + latest generated BEV, versus capacity-matched rolling two-state memory",
+      "reason": "Directly restores observation access after first rollout while retaining whole transition learning; matched two-memory comparator separates memory content from size.",
+      "novelty": "Established memory idea; exact M0 comparison not found in bounded search, not a novelty certificate."
+    },
+    {
+      "rank": 2,
+      "name": "Compressed-channel history/future joint spatial-temporal refiner",
+      "reason": "Can repair cross-horizon/shape errors while retaining measured history; architecture mechanism distinct from recalibrating final scalar scores.",
+      "novelty": "OccProphet/COME-inspired adaptation, not novel AR-versus-NAR."
+    }
+  ],
+  "queries": [
+    "2024 2025 2026 occupancy forecasting Drive-OccWorld IR-WM OccProphet",
+    "Spatiotemporal Decoupling EfficientOCF author code",
+    "COME scene centric forecasting control occupancy world model",
+    "OccTENS official code github",
+    "occupancy forecasting observed memory future",
+    "occupancy world anchor history prediction",
+    "StreamingT2V long-term anchor",
+    "WorldMem memory 2025"
+  ],
+  "unknowns": [
+    "No measured H200 retraining wall-clock for any transplant; no training performed.",
+    "No verified OccTENS author code/license.",
+    "No exhaustive novelty conclusion for measured-anchor-versus-rolling-two memory.",
+    "Full final-version method diff for EfficientOCF/COME not audited; v1 method descriptions distinguished from final venue.",
+    "Performance improvement over M0 remains untested; single training seed is required."
+  ]
+}

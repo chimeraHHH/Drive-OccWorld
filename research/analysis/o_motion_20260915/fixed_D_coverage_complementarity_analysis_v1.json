@@ -1,0 +1,2905 @@
+{
+  "schema": "fixed-D-coverage-complementarity-analysis-v1",
+  "status": "COMPLETE_CPU_RECORD_ANALYSIS",
+  "created_utc": "2026-09-16T06:30:09.855264+00:00",
+  "sources": {
+    "diagnostic_complete_sha256": "310f1965bde29f2a0a30fae8bceaabb66de0ad97f2cc734ab4e4b46a1d2844ef",
+    "diagnostic_files_sha256": {
+      "manifest.json": "e062034236be4cd516a73f53898c035484816926c2ecb05976fc67357442d7c2",
+      "objects.jsonl": "eefc72266ccaa3d15e6ddb2344c5a40949a9248f371c7807da55a30f7a9e86d5",
+      "summary.json": "910848879bd1edc21e96de74b0224e75f59d77b673a24ba69d33eb085cf2fda1"
+    },
+    "protocol_sha256": "8a0c3ba31a308d5acdf99019bcdac3ca4487d76078f745b3475c14666fd45431",
+    "producer_sha256": "1a730762d74dda2fcf367d19c80a159e212a9be8884a4cb33e605e9341006211",
+    "reference_complete_sha256": "edfdf0b38145ad0b1d5fb69370ba8e8d91fda973f33540c1f5149917f58077f6",
+    "reference_summary_sha256": "ba67afc75b02ef481b0846914207fc01c6d04a4d0c675d3a7c00d1129b81141e",
+    "rules_sha256": "9fc7da2764cd191d558f70767eaff07b7d053299c0eb349f05949f5676f06de9",
+    "analysis_sha256": "568d53f8db265b19651e1bd869a0d6c5f22cc8d1bbb69fd383017a34da33d8a8"
+  },
+  "rules": {
+    "schema": "fixed-D-coverage-complementarity-analysis-v1",
+    "horizons_seconds": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "groups": [
+      "all",
+      "moving",
+      "ambiguous",
+      "stationary"
+    ],
+    "arms": [
+      "D",
+      "CRN_CV",
+      "fixed_blend",
+      "zero"
+    ],
+    "fixed_blend_producer_name": "CV_covered_D_uncovered",
+    "full_support": {
+      "anchors": 200,
+      "scenes": 100,
+      "object_horizon_rows": 16074
+    },
+    "full_mean": "mean point Euclidean error within each original anchor-instance, then equal anchor-instance mean",
+    "conditional_mean": "mean subset-point error within each nonempty anchor-instance subset, then equal nonempty anchor-instance mean",
+    "contribution": "subset point-error sum / original object point count, then mean over ALL original anchor-instances",
+    "empty_subset": {
+      "conditional_mean": null,
+      "error_sum": 0.0,
+      "full_denominator_contribution": 0.0
+    },
+    "zero_full_source": "producer row zero_epe_xy_m / zero_epe_3d_m",
+    "zero_subset_source": "frozen CRN-CV v2 coverage_object_records: zero subset mean times subset count; no raw point-norm recomputation",
+    "bootstrap": {
+      "comparison": "fixed_blend-minus-CRN_CV",
+      "unit": "scene",
+      "paired": true,
+      "repetitions": 10000,
+      "seed": 11,
+      "interval": "percentile95",
+      "preserve_all_natural_objects_within_scene": true,
+      "equal_scene_means": false,
+      "multiplicity_adjusted": false,
+      "training_seed_uncertainty_included": false
+    },
+    "validation": {
+      "reference_rtol": 1e-12,
+      "reference_atol_m": 1e-10
+    },
+    "restrictions": {
+      "no_model_or_threshold_selection": true,
+      "no_candidate_or_occupancy_claim": true,
+      "no_O_flow": true,
+      "historical_development_exposure": true,
+      "rigid_box_proxy_not_measured_scene_flow": true
+    }
+  },
+  "samples": 200,
+  "scenes": 100,
+  "object_horizon_rows": 16074,
+  "scene_tokens": [
+    "034dee1695304630b0692da8c1f153fc",
+    "04219bfdc9004ba2af16d3079ecc4353",
+    "07aed9dae37340a997535ad99138e243",
+    "080a52cb8f59489b9cddc7b721808088",
+    "0ac05652a4c44374998be876ba5cd6fd",
+    "0e7ede02718341558414865d5c604745",
+    "112ca771e318478a88cfa692f61ffcac",
+    "197a7e4d3de84e57af17b3d65fcb3893",
+    "19d97841d6f64eba9f6eb9b6e8c257dc",
+    "1aa633b683174280b243e0a9a7ad9171",
+    "21a7ba093614493b83838b9656b3558d",
+    "223096a415cc45bf8ecd4c3a42251fd7",
+    "26a6b03c8e2f4e6692f174a7074e54ff",
+    "2eb4d7f00e584a548aa0b899638bfb0a",
+    "2f56eb47c64f43df8902d9f88aa8a019",
+    "3045ed93c2534ec2a5cabea89b186bd9",
+    "30a1a4ccd60047b4a22ee3bf0645f3ad",
+    "32185f91e68f4069ab3cdd2f4f1a4ff1",
+    "325cef682f064c55a255f2625c533b75",
+    "3363f396bb43405fbdd17d65dc123d4e",
+    "36f27b26ef4c423c9b79ac984dc33bae",
+    "380ff00ec86447e3b986edc8e82ffba7",
+    "3927699fa562451a98bb13bf8405361d",
+    "3a2d9bf6115f40898005d1c1df2b7282",
+    "3ada261efee347cba2e7557794f1aec8",
+    "3b2ee26cb8484f77895bc336663df502",
+    "40209c4e465d4b4e8341ebd52be0d842",
+    "44c9089913db4d4ab839a2fcb35989ed",
+    "4962cb207a824e57bd10a2af49354b16",
+    "4bb9626f13184da7a67ba1b241c19558",
+    "50ff554b3ecb4d208849d042b7643715",
+    "5301151d8b6a42b0b252e95634bd3995",
+    "54f56f80350b4c07af598ee87cf3886a",
+    "5521cd85ed0e441f8d23938ed09099dd",
+    "55b3a17359014f398b6bbd90e94a8e1b",
+    "57dc3221a3d845b5ab17ff0f98ce336f",
+    "5a0dd8908a3a459b83ec5eb6ac7d0f82",
+    "5eaff323af5b4df4b864dbd433aeb75c",
+    "6498fce2f38645fc9bf9d4464b159230",
+    "64bfc5edd71147858ce7446892d7f864",
+    "656bb27689dc4e9b8e4559e3f6a7e534",
+    "6741d407b1b44511853e5ec7aaee2992",
+    "68e79a88244f447f993a72da444b29ba",
+    "6d872d1448814fd189e631b1187c3771",
+    "6f83169d067343658251f72e1dd17dbc",
+    "7061c08f7eec4495979a0cf68ab6bb79",
+    "7210f928860043b5a7e0d3dd4b3e80ff",
+    "7365495b74464629813b41eacdb711af",
+    "7bd098ac88cb4221addd19202a7ea5de",
+    "8180a1dbbba3479bb0c7f4ff6e9a3f0e",
+    "848ac962547c4508b8f3b0fcc8d53270",
+    "84e056bd8e994362a37cba45c0f75558",
+    "85651af9c04945c3a394cf845cb480a6",
+    "8edbc31083ab4fb187626e5b3c0411f7",
+    "905cfed4f0fc46679e8df8890cca4141",
+    "9068766ee9374872a380fe75fcfb299e",
+    "91c071bcc1ad4fa1b555399e1cfbab79",
+    "952cb0bcd89b4ca4b904cdcbbf595523",
+    "955ff42a1990442d868cdfc0c01583d4",
+    "96e5f1f0944946f391b4ef33ad623008",
+    "991d65cab952449a821deb32e971ff19",
+    "9d1307e95c524ca4a51e03087bd57c29",
+    "9f1f69646d644e35be4fe0122a8b91ef",
+    "a04daf2d0f194b2ab2ff2a47dfebc1d7",
+    "a2b005c4dd654af48194ada18662c8ca",
+    "a7d073bc435b4356a0a9a5ebfb61f229",
+    "aacd6706a091407fb1b0e5343d27da7e",
+    "acc29386502047339e1ec6b9c7e512d2",
+    "aedcd3cf7c4a49d7a4a43ab7443a9eb1",
+    "afd73f70ff7d46d6b772d341c08e31a5",
+    "b07358651c604e2d83da7c4d4755de73",
+    "b4b82c4d338a4b6d86835388ce076345",
+    "b51869782c0e464b8021eb798609f35f",
+    "b789de07180846cc972118ee6d1fb027",
+    "c3ab8ee2c1a54068a72d7eb4cf22e43d",
+    "c4df079d260241ff8015218e29b42ea7",
+    "c525507ee2ef4c6d8bb64b0e0cf0dd32",
+    "c65c4acf86954f8cbd53a3541a3bfa3a",
+    "c92fdd793fbb4401b12782a9b8d4a499",
+    "ca6e45c25d954dc4af6e12dd7b23454d",
+    "cb3e964697d448b3bc04a9bc06c9e131",
+    "cba3ddd5c3664a43b6a08e586e094900",
+    "d01e7279da2649ef896dc42f6b9ee7ab",
+    "d29527ec841045d18d04a933e7a0afd2",
+    "d7bacba9119840f78f3c804134ceece0",
+    "dce6f3f2bf6b4859abcf3268581969d3",
+    "ddb615d9bb22484cabc6545b632a1025",
+    "e036014a715945aa965f4ec24e8639c9",
+    "e60ef590e3614187b7800db3e5284e1a",
+    "e6f1a7e6218a4737bfedc6af90926b3e",
+    "e7ef871f77f44331aefdebc24ec034b7",
+    "e8099a6136804f3bb9b38ff94d98eb64",
+    "e8834785d9ff4783a5950281a4579943",
+    "ec7b7459461e4da1a236ba23e22377c9",
+    "efa5c96f05594f41a2498eb9f2e7ad99",
+    "f24b4682fbb9482aba149534deed1cc9",
+    "f5b29a1e09d04355adcd60ab72de006b",
+    "fb73d1a6c16147ee9416faf6b310fadb",
+    "fcbccedd61424f1b85dcbf8f897f9754",
+    "fcc020250f884397965ba00c1d9ad9e6"
+  ],
+  "bootstrap_weights_sha256": "1f1bdad2e7b0df2b277ba76144cc681d3d411a4edb77c30fe812aeb0d704d8e6",
+  "bins": [
+    {
+      "horizon_seconds": 0.5,
+      "group": "all",
+      "original_object_count": 4189,
+      "original_point_count": 652710,
+      "scenes_with_support": 100,
+      "covered_point_count": 464311,
+      "uncovered_point_count": 188399,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.4088212495972059,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4016441063260149,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2794153192222812
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.42443041913110147,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.12940593037492473
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.31062311432138345,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.22097947936731965,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.14708007766377124
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6284909180254561,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16354303665761216
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.27648600803869594,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.22097947936731965,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.14708007766377124
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.42443041913110147,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.12940593037492473
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.638758608283777,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6639841694620309,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.47521557162616485
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6284909180254561,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16354303665761216
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.03413710628268747,
+            "lower95_m": -0.04548836690575204,
+            "upper95_m": -0.023938954873822443,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.42359473088949334,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.41670654570807514,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.28958064647859966
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.43964873811747435,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1340140844108937
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.3277666972623176,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2387399920019465,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1591772137374577
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6451043130774596,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16858948352485992
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.29319129814835143,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2387399920019465,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1591772137374577
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.43964873811747435,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1340140844108937
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.6549103938286202,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3772,
+                  "point_count": 464311,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6804579614747577,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.4863209103037603
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3591,
+                  "point_count": 188399,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6451043130774596,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16858948352485992
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.03457539911396622,
+            "lower95_m": -0.04585287260881197,
+            "upper95_m": -0.02437375579161615,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "moving",
+      "original_object_count": 1397,
+      "original_point_count": 148448,
+      "scenes_with_support": 98,
+      "covered_point_count": 112673,
+      "uncovered_point_count": 35775,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 1.0714744686332336,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.0697004514044615,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.7348940929215738
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2071667147858416,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.33658037571165966
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.836515831223366,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5595997222082874,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.36724115450801287
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9668106909381133,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.46927467671535317
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.7038215302196725,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5595997222082874,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.36724115450801287
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2071667147858416,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.33658037571165966
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 1.8415941517419812,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9456436453026267,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.3723194750266283
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9668106909381133,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.46927467671535317
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.1326943010036935,
+            "lower95_m": -0.16046880040384887,
+            "upper95_m": -0.1073784696655009,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 1.0783660754442361,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.0771353323734063,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.7400715218129803
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2139912383890672,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.3382945536312557
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.8449931783824064,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5698419613640917,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.37453123763734525
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9712978640054744,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.47046194074506115
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.7128257912686011,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5698419613640917,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.37453123763734525
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2139912383890672,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.3382945536312557
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 1.845983353394994,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1238,
+                  "point_count": 112673,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9502849507422453,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.3755214126499329
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1102,
+                  "point_count": 35775,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9712978640054744,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.47046194074506115
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.13216738711380543,
+            "lower95_m": -0.15988189230596855,
+            "upper95_m": -0.10686749860223828,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "ambiguous",
+      "original_object_count": 712,
+      "original_point_count": 117367,
+      "scenes_with_support": 89,
+      "covered_point_count": 85538,
+      "uncovered_point_count": 31829,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.12946692523323677,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1270945890478293,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09139742241513911
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.13018209350857363,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03806950281809764
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.12064322068844513,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.12982549607676167,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.08976699026373722
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.10918606804360495,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.030876230424707884
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.12783649308183487,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.12982549607676167,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.08976699026373722
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.13018209350857363,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03806950281809764
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.10840075600775297,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.10833905969575576,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07752452558304507
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.10918606804360495,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.030876230424707884
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.007193272393389759,
+            "lower95_m": 0.003292254891969537,
+            "upper95_m": 0.012842211630714495,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.15026346432152496,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.14797498866509676,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.106193311636847
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1518140173466525,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.044070152684677996
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.14092104405855957,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.14993287156252172,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.10404809560542924
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.13051508820861638,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03687294845313032
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.14811824829010722,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.14993287156252172,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.10404809560542924
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1518140173466525,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.044070152684677996
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.12928608025270816,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 665,
+                  "point_count": 85538,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.129273502203295,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09241313179957783
+                },
+                "uncovered": {
+                  "nonempty_object_count": 610,
+                  "point_count": 31829,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.13051508820861638,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03687294845313032
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.007197204231547675,
+            "lower95_m": 0.0032998358029798698,
+            "upper95_m": 0.01284062370416627,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "stationary",
+      "original_object_count": 2080,
+      "original_point_count": 386895,
+      "scenes_with_support": 99,
+      "covered_point_count": 266100,
+      "uncovered_point_count": 120795,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.05938554380577099,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.05681889165660692,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03785998060149908
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.06089453877890281,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.021525563204271892
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.02244694064570186,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.029115133862291823,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.018830988181760985
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.012177756098463532,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.0036159524639408757
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.040356551386032884,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.029115133862291823,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.018830988181760985
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.06089453877890281,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.021525563204271892
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.012438193192150738,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.012731931315383329,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.008822240728209862
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.012177756098463532,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.0036159524639408757
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.01790961074033102,
+            "lower95_m": 0.013240205487278622,
+            "upper95_m": 0.024982639831239894,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.07739102581902106,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.07486366049774913,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.04979027607725245
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.07895355151337968,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.027600749741768613
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.044338192914390506,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.05102062176218289,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03340911793066025
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.034372079999930305,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.010929074983730257
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.06100986767242885,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.05102062176218289,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03340911793066025
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.07895355151337968,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.027600749741768613
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.0348698105362284,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1869,
+                  "point_count": 266100,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.03545627752739188,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.023940735552498146
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1879,
+                  "point_count": 120795,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.034372079999930305,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.010929074983730257
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.016671674758038352,
+            "lower95_m": 0.011835768273852397,
+            "upper95_m": 0.02383915594403365,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "all",
+      "original_object_count": 4076,
+      "original_point_count": 642680,
+      "scenes_with_support": 100,
+      "covered_point_count": 456822,
+      "uncovered_point_count": 185858,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.7878001667738374,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.772994694449324,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.5409204930747696
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.8137449057215213,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2468796736990678
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.6010294417007375,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4224641943661261,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2830803528071069
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2330027313450604,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.31794908889363055
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.5299600265061747,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4224641943661261,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2830803528071069
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.8137449057215213,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2468796736990678
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 1.2566101079824987,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.3060601496459148,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9386610190888683
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2330027313450604,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.31794908889363055
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.07106941519456274,
+            "lower95_m": -0.09415595883000637,
+            "upper95_m": -0.05014793408119734,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.8144523585219805,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.7989125870309246,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.5583739560185089
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.8413036665812518,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2560784025034715
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.6320339586492569,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4531834293306548,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.3039829639003939
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2635060880454967,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.32805099474886307
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.5600613664038655,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4531834293306548,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.3039829639003939
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.8413036665812518,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2560784025034715
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 1.2861208293186062,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3676,
+                  "point_count": 456822,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.334840106782656,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9580698345697434
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3500,
+                  "point_count": 185858,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.2635060880454967,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.32805099474886307
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.07197259224539151,
+            "lower95_m": -0.09497202092811154,
+            "upper95_m": -0.051102664598011445,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "moving",
+      "original_object_count": 1320,
+      "original_point_count": 140000,
+      "scenes_with_support": 97,
+      "covered_point_count": 105706,
+      "uncovered_point_count": 34294,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 2.137870342540006,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.132605345955602,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.4744248942123623
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.413508372166765,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.663445448327644
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 1.6702983495082142,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1024300134945395,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.7304648196019324
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.0142779084255436,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9398335299062818
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 1.3939102679295763,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1024300134945395,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.7304648196019324
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.413508372166765,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.663445448327644
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 3.7383096133963853,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.951900877522905,
+                  "FULL_original_object_denominator_contribution_mean_m": 2.7984760834901032
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.0142779084255436,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9398335299062818
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.2763880815786378,
+            "lower95_m": -0.3357555526506917,
+            "upper95_m": -0.22277541051002564,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 2.152842534863885,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.1446328717022567,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.4830223654648866
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.429303023438331,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.6698201693989979
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 1.6876250495250615,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1188658683882575,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.7423072015241465
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.025831226407264,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9453178480009149
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 1.4121273709231446,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1188658683882575,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.7423072015241465
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.429303023438331,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.6698201693989979
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 3.748958810646601,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1171,
+                  "point_count": 105706,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.959075230230649,
+                  "FULL_original_object_denominator_contribution_mean_m": 2.8036409626456864
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1034,
+                  "point_count": 34294,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.025831226407264,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9453178480009149
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.27549767860191715,
+            "lower95_m": -0.33477013040236175,
+            "upper95_m": -0.2219902082879297,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "ambiguous",
+      "original_object_count": 655,
+      "original_point_count": 112081,
+      "scenes_with_support": 87,
+      "covered_point_count": 81163,
+      "uncovered_point_count": 30918,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.2393178417276714,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2346340120618697,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16526858177411854
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2438555555400269,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07404925995355287
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.22394487003973002,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.23742761885265112,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16362677437156006
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.20585059431629377,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06031809566816991
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.23767603432511294,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.23742761885265112,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16362677437156006
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2438555555400269,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07404925995355287
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.20324750891872367,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.20310233118051718,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1429294132505538
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.20585059431629377,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06031809566816991
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.013731164285382963,
+            "lower95_m": 0.006391384269516732,
+            "upper95_m": 0.024224004639389635,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.27264912492768956,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.268459856115262,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.18890262583527184
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2778890324569484,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.08374649909241774
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.25704777777391546,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.27093477464598265,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.18714700586774086
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2398167828532261,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06990077190617462
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.2708935049601586,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.27093477464598265,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.18714700586774086
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2778890324569484,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.08374649909241774
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.2370105241167064,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 607,
+                  "point_count": 81163,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.23762939169265432,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.16710975221053181
+                },
+                "uncovered": {
+                  "nonempty_object_count": 566,
+                  "point_count": 30918,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2398167828532261,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06990077190617462
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.013845727186243117,
+            "lower95_m": 0.006626151077179083,
+            "upper95_m": 0.024315360699549267,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "stationary",
+      "original_object_count": 2101,
+      "original_point_count": 390599,
+      "scenes_with_support": 99,
+      "covered_point_count": 269953,
+      "uncovered_point_count": 120646,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.11058136186850472,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1063355065121973,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07153743376982158
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1129038256680177,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03904392809868313
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.04679595104490238,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.06212553637735238,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.039241513067037145
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.025386718954040616,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.0075544379778652426
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.07828544116572027,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.06212553637735238,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.039241513067037145
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1129038256680177,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03904392809868313
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.02581960595510413,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.02640572576000353,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.018265167977238886
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.025386718954040616,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.0075544379778652426
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.031489490120817885,
+            "lower95_m": 0.022895508374959767,
+            "upper95_m": 0.04434828794174598,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.14248952426826658,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.13829422787163967,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09262803540965686
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.14493595496237574,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.049861488858609734
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.0857396742690982,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.10076551429226872,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06502035507032926
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.06517132682063186,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.02071931919876894
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.11488184392893899,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.10076551429226872,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06502035507032926
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.14493595496237574,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.049861488858609734
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.06585482006315245,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1898,
+                  "point_count": 269953,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.06667760652029092,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.04513550086438352
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1900,
+                  "point_count": 120646,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.06517132682063186,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.02071931919876894
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.029142169659840796,
+            "lower95_m": 0.02040579376062374,
+            "upper95_m": 0.04209086940962604,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "all",
+      "original_object_count": 3960,
+      "original_point_count": 632865,
+      "scenes_with_support": 100,
+      "covered_point_count": 449911,
+      "uncovered_point_count": 182954,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 1.155807414860782,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1361942548243973,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.7994522318290911
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1912820771251782,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.35635518303169095
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.8941258129716114,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6367016184474718,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.42973896906104847
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.8267563111018348,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.464386843910563
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.7860941520927395,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6367016184474718,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.42973896906104847
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1912820771251782,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.35635518303169095
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 1.8660234078083442,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9415927030839648,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.401636563897781
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.8267563111018348,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.46438684391056306
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.10803166087887207,
+            "lower95_m": -0.14225350782238955,
+            "upper95_m": -0.07710848690744121,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 1.1929807515895707,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.1728763092161116,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.8242649239284201
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.229414686236043,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.36871582766115046
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.9375922831810851,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6800266715755179,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.4593224003156278
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.8697613831688655,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.47826988286545735
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.8280382279767784,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.6800266715755179,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.4593224003156278
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.229414686236043,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.36871582766115046
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 1.9076817642333619,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3576,
+                  "point_count": 449911,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.9825591696078528,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.4294118813679049
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3400,
+                  "point_count": 182954,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.8697613831688655,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.47826988286545735
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.10955405520430687,
+            "lower95_m": -0.14364644022209297,
+            "upper95_m": -0.07883792781011964,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "moving",
+      "original_object_count": 1269,
+      "original_point_count": 136093,
+      "scenes_with_support": 97,
+      "covered_point_count": 103531,
+      "uncovered_point_count": 32562,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 3.188857214172381,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.1822310319734317,
+                  "FULL_original_object_denominator_contribution_mean_m": 2.2167527664513647
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.602889179207957,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.972104447721016
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 2.5221987530764003,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.6886195715245804,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.1310397501662608
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 6.049441357462082,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.3911590029101393
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 2.1031441978872776,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.6886195715245804,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.1310397501662608
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.602889179207957,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.972104447721016
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 5.628847887882849,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 5.947809788313237,
+                  "FULL_original_object_denominator_contribution_mean_m": 4.237688884972711
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 6.049441357462082,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.3911590029101393
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.41905455518912305,
+            "lower95_m": -0.5089300725696292,
+            "upper95_m": -0.33840630065049726,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 3.2044950936062535,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.1990621492615703,
+                  "FULL_original_object_denominator_contribution_mean_m": 2.228539438124928
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.617972459306856,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9759556554813256
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 2.5404528670959534,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.7105804985468958,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.1467681876241584
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 6.058528371004668,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.393684679471795
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 2.1227238431054842,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.7105804985468958,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.1467681876241584
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 3.617972459306856,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.9759556554813256
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 5.638005287474002,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1129,
+                  "point_count": 103531,
+                  "conditional_equal_nonempty_object_mean_epe_m": 5.957190222748207,
+                  "FULL_original_object_denominator_contribution_mean_m": 4.244320608002207
+                },
+                "uncovered": {
+                  "nonempty_object_count": 991,
+                  "point_count": 32562,
+                  "conditional_equal_nonempty_object_mean_epe_m": 6.058528371004668,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.393684679471795
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.41772902399046935,
+            "lower95_m": -0.5075118130128238,
+            "upper95_m": -0.33717932645426596,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "ambiguous",
+      "original_object_count": 567,
+      "original_point_count": 99083,
+      "scenes_with_support": 86,
+      "covered_point_count": 72099,
+      "uncovered_point_count": 26984,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.3355456588090989,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.33020894223872765,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2312021221497229
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.33762683266998017,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.10434353665937592
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.32820627985947226,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.3458018244450905,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2424167803745618
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.28328896179980834,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.08578949948491048
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.34676031703393767,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.3458018244450905,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2424167803745618
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.33762683266998017,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.10434353665937592
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.28347431516522575,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.28312028705627396,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.19768481568031526
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.28328896179980834,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.08578949948491049
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.018554037174465427,
+            "lower95_m": 0.008528807898714809,
+            "upper95_m": 0.03345043665617554,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.3797497968006298,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.3752758796839826,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2631303041130251
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.38167888363097074,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.11661949268760465
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.3712723077757748,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.3891722457552363,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2730097127731905
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.32808114150345813,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09826259500258429
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.38962920546079516,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.3891722457552363,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.2730097127731905
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.38167888363097074,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.11661949268760465
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.32895471890317085,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 527,
+                  "point_count": 72099,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.3295755686113064,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.23069212390058655
+                },
+                "uncovered": {
+                  "nonempty_object_count": 500,
+                  "point_count": 26984,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.32808114150345813,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09826259500258429
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.018356897685020346,
+            "lower95_m": 0.008512957271955498,
+            "upper95_m": 0.03313455856080626,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "stationary",
+      "original_object_count": 2124,
+      "original_point_count": 397689,
+      "scenes_with_support": 99,
+      "covered_point_count": 274281,
+      "uncovered_point_count": 123408,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.1601144865909541,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1543081810386621,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.10436910271069957
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.16295571990336827,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.055745383880254504
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.07249295717199099,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.09799788012205489,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06074696800771657
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.038936925930544784,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.011745989164274412
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.11649235188797108,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.09799788012205489,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06074696800771657
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.16295571990336827,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.055745383880254504
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.04035536181686618,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.04106972080414358,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.028609372652591773
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.038936925930544784,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.011745989164274412
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.04399939471598009,
+            "lower95_m": 0.032660042425323874,
+            "upper95_m": 0.06043319297493944,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.20827748009529495,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.20036152429533516,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1350648160752941
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.21150329188788197,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07321266402000083
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.13112963961556873,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.15387303186541507,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09833868550491058
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.09908146482807144,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.032790954110658126
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.1715513495249114,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.15387303186541507,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09833868550491058
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.21150329188788197,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07321266402000083
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.10041137049976791,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1920,
+                  "point_count": 274281,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.09910286686291542,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.06762041638910979
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1909,
+                  "point_count": 123408,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.09908146482807144,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.032790954110658126
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.04042170990934271,
+            "lower95_m": 0.0288280706656463,
+            "upper95_m": 0.05689603572559174,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "all",
+      "original_object_count": 3849,
+      "original_point_count": 621434,
+      "scenes_with_support": 100,
+      "covered_point_count": 441445,
+      "uncovered_point_count": 179989,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 1.5146521635874053,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.4981748895383724,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.0609159795072003
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.5557001737926939,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.4537361840802048
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 1.191356083460521,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.8652674198989219,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.5923019350265117
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.4069601038504445,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.5990541484340093
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 1.0460381191067163,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.8652674198989219,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.5923019350265117
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.5557001737926939,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.4537361840802048
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 2.471062105583879,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.5793720003925653,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.8720079571498693
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.4069601038504445,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.5990541484340093
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.14531796435380456,
+            "lower95_m": -0.19138372189427574,
+            "upper95_m": -0.10450601037268993,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 1.5630115290809112,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.5458491287633793,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.093236469316613
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.604582094047456,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.46977505976429834
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 1.2474861383903666,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.9210544088244946,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.6304004860867597
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.462205037972589,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.6170856523036071
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 1.100175545851058,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.9210544088244946,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.6304004860867597
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 1.604582094047456,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.46977505976429834
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 2.525290350301217,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 3485,
+                  "point_count": 441445,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.632715159097545,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.90820469799761
+                },
+                "uncovered": {
+                  "nonempty_object_count": 3308,
+                  "point_count": 179989,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.462205037972589,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.6170856523036071
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.14731059253930875,
+            "lower95_m": -0.1932075834677082,
+            "upper95_m": -0.10647563786491925,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "moving",
+      "original_object_count": 1226,
+      "original_point_count": 132148,
+      "scenes_with_support": 96,
+      "covered_point_count": 100684,
+      "uncovered_point_count": 31464,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 4.2082396162186075,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.214052853417788,
+                  "FULL_original_object_denominator_contribution_mean_m": 2.9639973828580146
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.760507718430397,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.2442422333605925
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 3.3867385623069413,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.317403310668332,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.5803684428108962
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 8.06414223874987,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.8063701194960453
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 2.824610676171488,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.317403310668332,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.5803684428108962
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.760507718430397,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.2442422333605925
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 7.509774838693985,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 7.9384416305393914,
+                  "FULL_original_object_denominator_contribution_mean_m": 5.703404719197939
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 8.06414223874987,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.8063701194960453
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.5621278861354531,
+            "lower95_m": -0.6818429277957205,
+            "upper95_m": -0.45351424882062685,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 4.22838188371261,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.235679926143086,
+                  "FULL_original_object_denominator_contribution_mean_m": 2.979308402977068
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.779734034187583,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.2490734807355424
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 3.409315497861369,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.344396394194256,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.5997656217324818
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 8.075750757388391,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.8095498761288873
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 2.848839102468024,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 2.344396394194256,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.5997656217324818
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 4.779734034187583,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.2490734807355424
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 7.521651437161432,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1097,
+                  "point_count": 100684,
+                  "conditional_equal_nonempty_object_mean_epe_m": 7.95064041114621,
+                  "FULL_original_object_denominator_contribution_mean_m": 5.7121015610325445
+                },
+                "uncovered": {
+                  "nonempty_object_count": 954,
+                  "point_count": 31464,
+                  "conditional_equal_nonempty_object_mean_epe_m": 8.075750757388391,
+                  "FULL_original_object_denominator_contribution_mean_m": 1.8095498761288873
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": -0.560476395393345,
+            "lower95_m": -0.6798334719786766,
+            "upper95_m": -0.4520118339178407,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "ambiguous",
+      "original_object_count": 487,
+      "original_point_count": 83899,
+      "scenes_with_support": 86,
+      "covered_point_count": 59650,
+      "uncovered_point_count": 24249,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.47401114730302774,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4684232278215377,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.330011273068447
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4618069037040174,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.14399987423458072
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.4802309625562112,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5137649746826518,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.3619944605619414
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.38699401002011036,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.11823650199426988
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.5059943347965221,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5137649746826518,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.3619944605619414
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4618069037040174,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.14399987423458072
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.38378074003157386,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.3816183121966298,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.26554423803730404
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.38699401002011036,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.11823650199426988
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.025763372240310837,
+            "lower95_m": 0.011995574826084973,
+            "upper95_m": 0.04479664249091534,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.5269431807511332,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5222872502198072,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.3669764747244291
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5132648205301436,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1599667060267041
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.5322217929276832,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5653688686923296,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.39775933950852693
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.44029228173410784,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.13446245341915625
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.557726045535231,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5653688686923296,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.39775933950852693
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.5132648205301436,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.1599667060267041
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.43950849825690513,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 451,
+                  "point_count": 59650,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.4386472292013664,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.30504604483774894
+                },
+                "uncovered": {
+                  "nonempty_object_count": 429,
+                  "point_count": 24249,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.44029228173410784,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.13446245341915625
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.025504252607547875,
+            "lower95_m": 0.0118080644407328,
+            "upper95_m": 0.044652543577373055,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "stationary",
+      "original_object_count": 2136,
+      "original_point_count": 405387,
+      "scenes_with_support": 99,
+      "covered_point_count": 281111,
+      "uncovered_point_count": 124276,
+      "metrics": {
+        "xy": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.20587592669819085,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.19982686323923607,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.13524781074670147
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2112294284855106,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07062811595148936
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.09340618402919491,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.12470703302153133,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07769060615038367
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.05351267401104777,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.01571557787881125
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.14831872210187305,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.12470703302153133,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07769060615038367
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.2112294284855106,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.07062811595148936
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.05488430325755971,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.05603050793272883,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.03916872537874846
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.05351267401104777,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.01571557787881125
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.05491253807267811,
+            "lower95_m": 0.041354877910204445,
+            "upper95_m": 0.073533788226852,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        },
+        "3d": {
+          "arms": {
+            "D": {
+              "full_object_mean_epe_m": 0.2693885098197402,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.26081145323297783,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.17627224960625493
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.27423412492810334,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09311626021348529
+                }
+              }
+            },
+            "CRN_CV": {
+              "full_object_mean_epe_m": 0.16973845184021613,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.19777512160145808,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.12705525297905568
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.13081696322122915,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.04268319886116046
+                }
+              }
+            },
+            "fixed_blend": {
+              "full_object_mean_epe_m": 0.22017151319254097,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.19777512160145808,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.12705525297905568
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.27423412492810334,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09311626021348529
+                }
+              }
+            },
+            "zero": {
+              "full_object_mean_epe_m": 0.13307924049548525,
+              "parts": {
+                "covered": {
+                  "nonempty_object_count": 1937,
+                  "point_count": 281111,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.1318171905305808,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.09039604163432478
+                },
+                "uncovered": {
+                  "nonempty_object_count": 1925,
+                  "point_count": 124276,
+                  "conditional_equal_nonempty_object_mean_epe_m": 0.13081696322122915,
+                  "FULL_original_object_denominator_contribution_mean_m": 0.04268319886116046
+                }
+              }
+            }
+          },
+          "fixed_blend_minus_CRN_CV": {
+            "difference_m": 0.05043306135232482,
+            "lower95_m": 0.03646859559982801,
+            "upper95_m": 0.06962533072009909,
+            "defined_draws": 10000,
+            "undefined_draws": 0
+          }
+        }
+      }
+    }
+  ],
+  "runtime": {
+    "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.4.4",
+    "Torch_imported": false,
+    "model_forward": false,
+    "optimizer_updates": 0
+  },
+  "verification": {
+    "original_full_support_and_reference_rows_verified": true,
+    "original_D_and_CV_full_means_reproduced": true,
+    "all_partition_counts_means_sums_reconstructed": true,
+    "fixed_blend_uses_only_preassigned_owner": true,
+    "checkpoint_tensors_reloaded_by_this_analysis": false
+  }
+}

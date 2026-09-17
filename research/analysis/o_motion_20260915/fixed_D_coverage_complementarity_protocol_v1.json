@@ -1,0 +1,61 @@
+{
+  "schema": "fixed-D-coverage-complementarity-v1",
+  "status": "FROZEN",
+  "recipe": {
+    "samples": 200,
+    "scenes": 100,
+    "object_horizon_rows": 16074,
+    "optimizer_updates": 0,
+    "horizons_seconds": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "coverage": "current_prediction_owner>=0",
+    "diagnostic_field": "CRN_CV on covered; fixed D on uncovered; no fitting",
+    "forward_order": "full D/CV/blend fields before load_sparse and gather_sparse",
+    "point_order": "XYZ C-order; native D [1,4,3,200,200,16]",
+    "aggregation": "point errors within object; equal object means; partition contributions divide original full object count",
+    "reference_rtol": 1e-12,
+    "reference_atol_m": 1e-10,
+    "numerical_policy": {
+      "dtype": "float32",
+      "matmul_tf32": false,
+      "cudnn_tf32": true,
+      "cudnn_benchmark": false
+    }
+  },
+  "sources_sha256": {
+    "train_connected_motion_v2.py": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a",
+    "train_supported_fusion_v2.py": "61cb7c96fc8127f4b3b5ef34fff380e0c2076210463cff29e4cee5d3a5d87d7c",
+    "supported_motion_fusion.py": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "learned_transport_probe_v1.py": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+    "objective_supervision_adapters.py": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703",
+    "joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "shared_rigid_geometry_cache_v1.py": "d47431242dff6d9dba10fbd791e6516739b410282e60bf7f73470186c90fcaaa",
+    "shared_rigid_prediction_geometry_v1.py": "ef5ea1f0a2e8be5c99ffd366038fd39bc759e4cea1c985824931ce3363b7155a",
+    "crn_full_grid_geometry_v1.py": "1c1e7f0799b593b3ad41f282d8506bdc1312a1a8e53994ea8ba595ad12055b9c",
+    "object_state_prediction_inputs_v1.py": "55e39715fdf19e5ae1f227a943a843b194eabed08e788ccb2694a040d6f18256",
+    "object_state_forecast_development_inputs_v1.py": "7cd498d13d45d5960c6f494ebf7b750718b397d90720ecd745a8c527b0dace06",
+    "motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+    "fixed_D_coverage_complementarity_v1.py": "1a730762d74dda2fcf367d19c80a159e212a9be8884a4cb33e605e9341006211"
+  },
+  "connected_protocol_sha256": "e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259",
+  "d_complete_sha256": "f0bf075fa36622b38c0c5136b187a184d16d3e07ed00857dfe21a0545f1c5f56",
+  "geometry_complete_sha256": "a2504a0389cb2756032531961e305e22287ec890c96085e5ea29b2e61e4f1c99",
+  "reference_complete_sha256": "edfdf0b38145ad0b1d5fb69370ba8e8d91fda973f33540c1f5149917f58077f6",
+  "reference_summary_sha256": "ba67afc75b02ef481b0846914207fc01c6d04a4d0c675d3a7c00d1129b81141e",
+  "runtime_contract_sha256": "5972a886bb4bd48c1ecf621c3295ff29720cd12fce51315c4c7e34fe84d1cd9c",
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+  "resources": {
+    "max_seconds": 900,
+    "max_allocated_gib": 8,
+    "cpu_threads": 2
+  }
+}

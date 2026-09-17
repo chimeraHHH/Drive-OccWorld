@@ -1,0 +1,14 @@
+{
+  "schema": "motion-target-builder-local-check-v1",
+  "script_sha256": "0064b3bb3dd3d8a124e49524ae848e0af1c556e12850947577280e988a7f2685",
+  "python310_ast": true,
+  "compile": true,
+  "cli_help": true,
+  "actual_two_anchor_pose_count": 14,
+  "actual_lidar_to_global_vs_independent_quaternion_max_abs_error": 3.3306690738754696e-15,
+  "json_streamer_actual_5119_record_6243721byte_ledger_equals_json_load": true,
+  "streaming_file_sha_matches_independent_sha": true,
+  "synthetic_labels_used": false,
+  "temporary_real_array_fixture_removed": true,
+  "GPU_used": false
+}

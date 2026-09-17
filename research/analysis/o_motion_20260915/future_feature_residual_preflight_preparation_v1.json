@@ -1,0 +1,172 @@
+{
+  "schema": "future-feature-residual-preflight-preparation-v1",
+  "status": "PREPARED_NOT_DISPATCHED",
+  "protocol_candidate_sha256": "7b1b6f4bc73942f477e8855559e0907fdb2e602ee5bc6ab9d927ef22206c5b26",
+  "protocol_candidate_status": "REVIEW_REQUIRED",
+  "source_sha256": {
+    "train_connected_motion_v2.py": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a",
+    "train_supported_fusion_v2.py": "61cb7c96fc8127f4b3b5ef34fff380e0c2076210463cff29e4cee5d3a5d87d7c",
+    "supported_motion_fusion.py": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "learned_transport_probe_v1.py": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+    "objective_supervision_adapters.py": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703",
+    "joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "common_change_evaluation_v2.py": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059",
+    "common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+    "motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+    "common_connected_motion_evaluation_v2.py": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1",
+    "train_future_feature_residual_v1.py": "2226681ee8b6b0b7ffe40ee40540947619217f2f3cdd83d034f101ba6706cbde",
+    "future_feature_residual_v1.py": "e427b74698ad4537f135f6dab03df9787f8661abac666164e21e48997caa541d"
+  },
+  "package_files": {
+    "train_connected_motion_v2.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/train_connected_motion_v2.py",
+      "sha256": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a"
+    },
+    "train_supported_fusion_v2.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/train_supported_fusion_v2.py",
+      "sha256": "61cb7c96fc8127f4b3b5ef34fff380e0c2076210463cff29e4cee5d3a5d87d7c"
+    },
+    "supported_motion_fusion.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/supported_motion_fusion.py",
+      "sha256": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c"
+    },
+    "transport_ops.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/transport_ops.py",
+      "sha256": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c"
+    },
+    "train_source_motion_v1.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/train_source_motion_v1.py",
+      "sha256": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e"
+    },
+    "motion_prediction_head.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/motion_prediction_head.py",
+      "sha256": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9"
+    },
+    "learned_transport_probe_v1.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/learned_transport_probe_v1.py",
+      "sha256": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054"
+    },
+    "native_state_cache.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/m0_improvement_20260915/native_state_cache.py",
+      "sha256": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0"
+    },
+    "oracle_transport_probe.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/oracle_transport_probe.py",
+      "sha256": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b"
+    },
+    "objective_supervision_adapters.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/m0_improvement_20260915/objective_supervision_adapters.py",
+      "sha256": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703"
+    },
+    "joint_native_evaluation.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/m0_improvement_20260915/joint_native_evaluation.py",
+      "sha256": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578"
+    },
+    "common_change_evaluation_v2.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/common_change_evaluation_v2.py",
+      "sha256": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059"
+    },
+    "common_occupancy_change_metrics_v1.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/common_occupancy_change_metrics_v1.py",
+      "sha256": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951"
+    },
+    "motion_geometry.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/motion_geometry.py",
+      "sha256": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31"
+    },
+    "common_connected_motion_evaluation_v2.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/common_connected_motion_evaluation_v2.py",
+      "sha256": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1"
+    },
+    "train_future_feature_residual_v1.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/train_future_feature_residual_v1.py",
+      "sha256": "2226681ee8b6b0b7ffe40ee40540947619217f2f3cdd83d034f101ba6706cbde"
+    },
+    "future_feature_residual_v1.py": {
+      "source": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/future_feature_residual_v1.py",
+      "sha256": "e427b74698ad4537f135f6dab03df9787f8661abac666164e21e48997caa541d"
+    },
+    "future_feature_residual_preflight_protocol_v1.json": {
+      "source": "analysis/o_motion_20260915/future_feature_residual_preflight_protocol_v1.json",
+      "sha256": "7b1b6f4bc73942f477e8855559e0907fdb2e602ee5bc6ab9d927ef22206c5b26"
+    },
+    "connected_motion_protocol_v2.json": {
+      "source": "analysis/o_motion_20260915/connected_motion_protocol_v2.json",
+      "sha256": "e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259"
+    },
+    "runtime_source_contract.json": {
+      "source": "analysis/m0_improvement_20260915/runtime_source_contract.json",
+      "sha256": "5972a886bb4bd48c1ecf621c3295ff29720cd12fce51315c4c7e34fe84d1cd9c"
+    },
+    "job_runner.py": {
+      "source": "analysis/m0_improvement_20260915/job_runner.py",
+      "sha256": "07c26a06723d97c218eb6d6243406bbb6512355588031a079f156e624818d8a8"
+    }
+  },
+  "command": [
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_m3_h200/envs/hym_driveocc_m3/bin/python",
+    "-B",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915/jobs/future_feature_residual_preflight_v1/package/train_future_feature_residual_v1.py",
+    "--protocol",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915/jobs/future_feature_residual_preflight_v1/package/future_feature_residual_preflight_protocol_v1.json",
+    "--connected-protocol",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915/jobs/future_feature_residual_preflight_v1/package/connected_motion_protocol_v2.json",
+    "--training-run",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915/connected_motion_train_v2",
+    "--config",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_sota_p2_20260911/runtime/configs/S0.py",
+    "--checkpoint",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_sota_p2_20260911/assets/m0_epoch24.pth",
+    "--o-checkpoint",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915/campaign_objective_v1/runs/O/latest.pth",
+    "--repo",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2",
+    "--runtime-contract",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915/jobs/future_feature_residual_preflight_v1/package/runtime_source_contract.json",
+    "--train-cache",
+    "/home/wangning/data_cache/RadarFlowOcc_m0_improvement_20260915/campaign_cache_v1/train",
+    "--out",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915/future_feature_residual_preflight_v1",
+    "--device",
+    "cuda:0",
+    "--preflight",
+    "--max-seconds",
+    "600",
+    "--max-allocated-gib",
+    "32"
+  ],
+  "outer_job_runner_seconds": 660,
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "CUDA_VISIBLE_DEVICES": "root binds one currently idle GPU UUID"
+  },
+  "system_driver_libraries_required": true,
+  "legacy_driver_override_forbidden": true,
+  "device_note": "cuda:0 is logical device inside one-GPU CUDA_VISIBLE_DEVICES; root coordinates physical card and verifies idle state.",
+  "train_run_semantics": "Strict loader reads actual completed D payload and authenticating small-file hashes; no optimizer restoration and no old dev performance used for training.",
+  "required_assets": [
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915/connected_motion_train_v2",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915/campaign_objective_v1/runs/O/latest.pth",
+    "/storage/data/metaiot_data/wangning/RadarFlowOcc_sota_p2_20260911/assets/m0_epoch24.pth",
+    "/home/wangning/data_cache/RadarFlowOcc_m0_improvement_20260915/campaign_cache_v1/train"
+  ],
+  "tests": {
+    "python310_ast": true,
+    "CLI_help": true,
+    "source17_and_pack21_sha_verified": true,
+    "actual_cpu7": true,
+    "actual_native_GPU_preflight": false
+  },
+  "no_dispatch": true,
+  "no_weights_saved_in_preflight": true,
+  "formal_train_resource": null,
+  "notice": "Root must freeze protocol status and record resulting final protocol SHA before staging; this candidate SHA is not the future frozen protocol SHA."
+}

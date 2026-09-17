@@ -1,0 +1,10 @@
+{
+  "status": "BOUNDED_READ_ONLY_QUERY_TIMED_OUT_NO_RESULTS",
+  "script_sha256": "b1c30d5c0c090210a3eeea06c3e689569cc3de6e0988fbe88b731dba2e1b4a56",
+  "limit_seconds": 110,
+  "stage": "importing nuscenes.utils.splits invokes package __init__, sklearn import",
+  "output_bytes": 0,
+  "model_loaded": false,
+  "remote_writes": false,
+  "retry_change": "Read installed splits.py literals by AST, without importing NuScenes; set CPU BLAS threads to1"
+}

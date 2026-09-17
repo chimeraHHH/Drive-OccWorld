@@ -43,6 +43,7 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
                  plan_grid_conf=None,
                  radar_cfg=None,
                  radar_observation_cfg=None,
+                 allow_dual_radar_inputs=False,
                  future_metadata_only=False,
 
                  *args,
@@ -81,7 +82,7 @@ class NuScenesWorldDatasetTemplate(CustomNuScenesDataset):
                 nusc=self.nusc, **radar_cfg)
         self.radar_observation_loader = None
         if radar_observation_cfg is not None:
-            if radar_cfg is not None:
+            if radar_cfg is not None and not allow_dual_radar_inputs:
                 raise ValueError('M3 radar_observation_cfg requires radar_cfg=None; '
                                  'support radar features are built in the model')
             self.radar_observation_loader = NuScenesRadarObservations(

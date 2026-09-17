@@ -1,0 +1,20 @@
+{
+  "schema": "objective-joint-merge-complete-v2",
+  "status": "COMPLETE",
+  "mode": "full",
+  "samples": 5119,
+  "scenes": 150,
+  "summary_sha256": "199347570b9d34130c6366ef3fb138bbc08c1310a50010a1f200061fe428f463",
+  "files_sha256": {
+    "summary.json": "199347570b9d34130c6366ef3fb138bbc08c1310a50010a1f200061fe428f463",
+    "report.md": "ef0ad9c0c23e2b638af5af5e45646f826f14c5d0f498863967b7057c2d805c79",
+    "sample_hash_ledger.json": "cc5fde3022bd5450ec86498e3889d6a7c120c1da1066514794859bacc09eefac",
+    "development_disclosure.json": "f0ffa226c3981d6fdc1ce0d1bfd59c912391c9a3f3e492a981b459b338dbbcac",
+    "raw_confusions.npz": "4f649ede18d41e371bb36837e642b99e095c24936601761e1f402744399366f4",
+    "metrics.csv": "a363dbb0e2e5c9d1687f8db2c0f9a8167847428b8ccd17fc9804c9cfaf1b6102",
+    "contrasts.csv": "340a4ac50d3605be226c3c8cdb7bd5b3cf29addc90139682714db0ba885f5f5a"
+  },
+  "evaluation_protocol_sha256": "b1b1b046b5acf9dc1207a19e0b7b740d6db38a0982a3794f670fa06862189f28",
+  "merge_seconds": 39.32035697018728,
+  "source_result_files_modified": false
+}

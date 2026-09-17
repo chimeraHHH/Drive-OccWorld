@@ -1,0 +1,73 @@
+{
+  "schema": "source-motion-training-v1",
+  "status": "FROZEN",
+  "training": {
+    "seed": 11,
+    "train_samples": 512,
+    "development_samples": 200,
+    "passes": 4,
+    "accumulate": 4,
+    "updates": 512,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "grad_clip": 10.0,
+    "warmup_updates": 25,
+    "final_lr_ratio": 0.1,
+    "smooth_l1_beta_m": 0.5,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "lr_schedule": "zero_based_u: u<25=>lr*(0.1+0.9*u/25); otherwise lr*(0.1+0.45*(1+cos(pi*(u-25)/486)))",
+    "sample_order": "continuous_numpy_RandomState11_permutation_each_pass",
+    "loss": "point_xyz_mean_then_object_mean_within_group_then_present_group_mean_then_valid_horizon_mean"
+  },
+  "source_shape_xyz": [
+    200,
+    200,
+    16
+  ],
+  "extent_xyz": [
+    -51.2,
+    -51.2,
+    -5.0,
+    51.2,
+    51.2,
+    3.0
+  ],
+  "numerical_policy": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": true,
+    "cudnn_benchmark": false
+  },
+  "sources_sha256": {
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0"
+  },
+  "cache_index_sha256": {
+    "train": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+    "development": "fd42d2e511d754755fa5e2c06527077351869f06e868ecb8acb4404eadaa26c3"
+  },
+  "labels": {
+    "manifest_sha256": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe",
+    "complete_sha256": "3d14a03cd61761a1ebc26313463dbff06854907c19c49057667a0ffd257e05bd"
+  },
+  "resources": {
+    "preflight": {
+      "max_seconds": 600,
+      "max_allocated_gib": 16
+    },
+    "train": {
+      "max_seconds": 7200,
+      "max_allocated_gib": 16
+    }
+  },
+  "frozen_utc": "2026-09-15T14:43:10.862447+00:00",
+  "scientific_scope": "Preparatory source-point rigid-box motion head; no O occupancy score, no claim of outperforming O motion",
+  "training_labels": "Future rigid-box correspondence proxy in fixed t0 LiDAR; target-only, not an inference input",
+  "next_model_requirement": "Learned displacement must be connected to original occupancy task and compared with a matched zero-transport training control"
+}

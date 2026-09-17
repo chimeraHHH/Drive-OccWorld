@@ -1,0 +1,366 @@
+{
+  "retrieved_utc": "2026-09-15T10:08:37.098137+00:00",
+  "scope": "primary paper and author code static audit; no install, training, GPU or server execution",
+  "code_reads": [
+    {
+      "work": "Cam4DOcc",
+      "repo": "haomo-ai/Cam4DOcc",
+      "commit": "542f14a9d9e142d9faf9044df47c8488a7c3166a",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/haomo-ai/Cam4DOcc/542f14a9d9e142d9faf9044df47c8488a7c3166a/LICENSE",
+      "sha256": "cd6eb243f5907a2dfef539fe06f95fe6e9ef0443381170d4f62888c5731e78c9",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/Cam4DOcc/LICENSE",
+      "bytes": 1065
+    },
+    {
+      "work": "Cam4DOcc",
+      "repo": "haomo-ai/Cam4DOcc",
+      "commit": "542f14a9d9e142d9faf9044df47c8488a7c3166a",
+      "path": "projects/occ_plugin/datasets/pipelines/loading_instance.py",
+      "url": "https://raw.githubusercontent.com/haomo-ai/Cam4DOcc/542f14a9d9e142d9faf9044df47c8488a7c3166a/projects/occ_plugin/datasets/pipelines/loading_instance.py",
+      "sha256": "e1b1aa25c92b79a2fa1a30221d4420d64e8c7f5abe8790c3c69d47d17363967c",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/Cam4DOcc/projects/occ_plugin/datasets/pipelines/loading_instance.py",
+      "bytes": 24148
+    },
+    {
+      "work": "Cam4DOcc",
+      "repo": "haomo-ai/Cam4DOcc",
+      "commit": "542f14a9d9e142d9faf9044df47c8488a7c3166a",
+      "path": "projects/occ_plugin/occupancy/dense_heads/flow_head.py",
+      "url": "https://raw.githubusercontent.com/haomo-ai/Cam4DOcc/542f14a9d9e142d9faf9044df47c8488a7c3166a/projects/occ_plugin/occupancy/dense_heads/flow_head.py",
+      "sha256": "047b0c6f445e484173f75bed0b65ec2fa256520fbc27f4db30ba87736a7757b1",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/Cam4DOcc/projects/occ_plugin/occupancy/dense_heads/flow_head.py",
+      "bytes": 7132
+    },
+    {
+      "work": "PowerBEV",
+      "repo": "EdwardLeeLPZ/PowerBEV",
+      "commit": "7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/LICENSE",
+      "sha256": "28bc3bcbf4e4fe8481cb443521c18a0b04983e4796e0ecd89fdb469159ee24e6",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/PowerBEV/LICENSE",
+      "bytes": 2672
+    },
+    {
+      "work": "PowerBEV",
+      "repo": "EdwardLeeLPZ/PowerBEV",
+      "commit": "7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321",
+      "path": "powerbev/utils/instance.py",
+      "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/utils/instance.py",
+      "sha256": "0fbf0c45a9f162c2a8495cc12e50e7fce5fe97fbbd8a4422fdaa1f10b58c9912",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/PowerBEV/powerbev/utils/instance.py",
+      "bytes": 11305
+    },
+    {
+      "work": "PowerBEV",
+      "repo": "EdwardLeeLPZ/PowerBEV",
+      "commit": "7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321",
+      "path": "powerbev/models/powerbev.py",
+      "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/models/powerbev.py",
+      "sha256": "2125c55fb095d4030f838b0455cf0a4208db7a42576f6e1763f13716c8dee519",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/PowerBEV/powerbev/models/powerbev.py",
+      "bytes": 10798
+    },
+    {
+      "work": "PowerBEV",
+      "path": "powerbev/models/predictor.py",
+      "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/models/predictor.py",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "work": "UniAD",
+      "repo": "OpenDriveLab/UniAD",
+      "commit": "609ee083ea51c3521c323f1279dfc4cee0e60467",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/OpenDriveLab/UniAD/609ee083ea51c3521c323f1279dfc4cee0e60467/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/UniAD/LICENSE",
+      "bytes": 11357
+    },
+    {
+      "work": "UniAD",
+      "repo": "OpenDriveLab/UniAD",
+      "commit": "609ee083ea51c3521c323f1279dfc4cee0e60467",
+      "path": "projects/mmdet3d_plugin/uniad/dense_heads/motion_head.py",
+      "url": "https://raw.githubusercontent.com/OpenDriveLab/UniAD/609ee083ea51c3521c323f1279dfc4cee0e60467/projects/mmdet3d_plugin/uniad/dense_heads/motion_head.py",
+      "sha256": "487b0d171b49252d68865fcd6abf36861356de85f38373340c64ec91209f03eb",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/UniAD/projects/mmdet3d_plugin/uniad/dense_heads/motion_head.py",
+      "bytes": 30489
+    },
+    {
+      "work": "UniAD",
+      "repo": "OpenDriveLab/UniAD",
+      "commit": "609ee083ea51c3521c323f1279dfc4cee0e60467",
+      "path": "projects/mmdet3d_plugin/uniad/dense_heads/occ_head.py",
+      "url": "https://raw.githubusercontent.com/OpenDriveLab/UniAD/609ee083ea51c3521c323f1279dfc4cee0e60467/projects/mmdet3d_plugin/uniad/dense_heads/occ_head.py",
+      "sha256": "e05d9463ca04b4efa3c32f011b3a220bd437758c94846b9f84a60f70ab19f877",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/UniAD/projects/mmdet3d_plugin/uniad/dense_heads/occ_head.py",
+      "bytes": 19673
+    },
+    {
+      "work": "UniAD",
+      "repo": "OpenDriveLab/UniAD",
+      "commit": "609ee083ea51c3521c323f1279dfc4cee0e60467",
+      "path": "projects/mmdet3d_plugin/datasets/pipelines/occflow_label.py",
+      "url": "https://raw.githubusercontent.com/OpenDriveLab/UniAD/609ee083ea51c3521c323f1279dfc4cee0e60467/projects/mmdet3d_plugin/datasets/pipelines/occflow_label.py",
+      "sha256": "37c855aa32cb0b4c2e32735047f4566d8d770b4e825877f22a6b61015ef2b067",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/UniAD/projects/mmdet3d_plugin/datasets/pipelines/occflow_label.py",
+      "bytes": 11750
+    },
+    {
+      "work": "UniAD",
+      "repo": "OpenDriveLab/UniAD",
+      "commit": "609ee083ea51c3521c323f1279dfc4cee0e60467",
+      "path": "projects/mmdet3d_plugin/losses/traj_loss.py",
+      "url": "https://raw.githubusercontent.com/OpenDriveLab/UniAD/609ee083ea51c3521c323f1279dfc4cee0e60467/projects/mmdet3d_plugin/losses/traj_loss.py",
+      "sha256": "40b135c44f5d6ebd3003d5f20c461c5704c4cdc33c91c218c545eff0dd4ab443",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/UniAD/projects/mmdet3d_plugin/losses/traj_loss.py",
+      "bytes": 8891
+    },
+    {
+      "work": "STCOcc",
+      "repo": "lzzzzzm/STCOcc",
+      "commit": "23a4a346a30ab1242ef99a54bac14d4c4c67e08c",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/lzzzzzm/STCOcc/23a4a346a30ab1242ef99a54bac14d4c4c67e08c/LICENSE",
+      "sha256": "6a0f871507c98c64ecbf33a87b04d3c916f862b1629117235af72178f0ef2739",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/STCOcc/LICENSE",
+      "bytes": 1067
+    },
+    {
+      "work": "STCOcc",
+      "repo": "lzzzzzm/STCOcc",
+      "commit": "23a4a346a30ab1242ef99a54bac14d4c4c67e08c",
+      "path": "mmdet3d/models/stcocc/heads/occ_flow_head.py",
+      "url": "https://raw.githubusercontent.com/lzzzzzm/STCOcc/23a4a346a30ab1242ef99a54bac14d4c4c67e08c/mmdet3d/models/stcocc/heads/occ_flow_head.py",
+      "sha256": "fdf997eb34f78444279820bcc8c84751e1403ed37a57d2796c7f9b155d355456",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/STCOcc/mmdet3d/models/stcocc/heads/occ_flow_head.py",
+      "bytes": 2492
+    },
+    {
+      "work": "LetOccFlow",
+      "repo": "eliliu2233/occ-flow",
+      "commit": "c782571ecc4556cb5a72c2d4be3ba40a2e9e839b",
+      "path": "config/nuscenes/nuscenes_occ_flow_voxelaffm.py",
+      "url": "https://raw.githubusercontent.com/eliliu2233/occ-flow/c782571ecc4556cb5a72c2d4be3ba40a2e9e839b/config/nuscenes/nuscenes_occ_flow_voxelaffm.py",
+      "sha256": "0ff4e6197a2edf65e8bff90f1df4a0852a18dd7dfe9087f0797b9aa0d5657072",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/LetOccFlow/config/nuscenes/nuscenes_occ_flow_voxelaffm.py",
+      "bytes": 13589
+    },
+    {
+      "work": "LetOccFlow",
+      "repo": "eliliu2233/occ-flow",
+      "commit": "c782571ecc4556cb5a72c2d4be3ba40a2e9e839b",
+      "path": "loss/flow_loss.py",
+      "url": "https://raw.githubusercontent.com/eliliu2233/occ-flow/c782571ecc4556cb5a72c2d4be3ba40a2e9e839b/loss/flow_loss.py",
+      "sha256": "91ec294a9205d1cb99978913f21553fae9ffd70306f9287821ad4d20d46f34b8",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/LetOccFlow/loss/flow_loss.py",
+      "bytes": 14743
+    },
+    {
+      "work": "LetOccFlow",
+      "repo": "eliliu2233/occ-flow",
+      "commit": "c782571ecc4556cb5a72c2d4be3ba40a2e9e839b",
+      "path": "loss/reproj_loss_flow.py",
+      "url": "https://raw.githubusercontent.com/eliliu2233/occ-flow/c782571ecc4556cb5a72c2d4be3ba40a2e9e839b/loss/reproj_loss_flow.py",
+      "sha256": "4d64b3bcf847c68bf5884da5768dbdd30e95990f3de069d231d04c36f3a7fa68",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/LetOccFlow/loss/reproj_loss_flow.py",
+      "bytes": 12073
+    },
+    {
+      "work": "LetOccFlow",
+      "repo": "eliliu2233/occ-flow",
+      "commit": "c782571ecc4556cb5a72c2d4be3ba40a2e9e839b",
+      "path": "model/neck/temporal_aggregation.py",
+      "url": "https://raw.githubusercontent.com/eliliu2233/occ-flow/c782571ecc4556cb5a72c2d4be3ba40a2e9e839b/model/neck/temporal_aggregation.py",
+      "sha256": "f69ec69e4c69a5645ab7b39dc60652721f3b60314097e39ae970ddac924c2f68",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/LetOccFlow/model/neck/temporal_aggregation.py",
+      "bytes": 16563
+    },
+    {
+      "work": "PowerBEV",
+      "repo": "EdwardLeeLPZ/PowerBEV",
+      "commit": "7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321",
+      "path": "powerbev/models/stconv.py",
+      "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/models/stconv.py",
+      "sha256": "da30d82753f033c429e642fbbf7aec01bfa83a9014ebfd0472460502920534a3",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/PowerBEV/powerbev/models/stconv.py",
+      "bytes": 8458
+    },
+    {
+      "work": "BEVerse",
+      "repo": "zhangyp15/BEVerse",
+      "commit": "5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be",
+      "path": "projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py",
+      "url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py",
+      "sha256": "01cb530ad3bb0d4eb317ca95daf1458b1cf5c9960e3738156803b009981392e7",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/BEVerse/projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py",
+      "bytes": 3357
+    },
+    {
+      "work": "BEVerse",
+      "repo": "zhangyp15/BEVerse",
+      "commit": "5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be",
+      "path": "projects/mmdet3d_plugin/models/motion_modules.py",
+      "url": "https://raw.githubusercontent.com/zhangyp15/BEVerse/5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be/projects/mmdet3d_plugin/models/motion_modules.py",
+      "sha256": "e3b5d9bb7b2559ace604428774a58e5201bc1660ffe6c330c0ed468554e4aa06",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/BEVerse/projects/mmdet3d_plugin/models/motion_modules.py",
+      "bytes": 15729
+    },
+    {
+      "work": "EfficientOCF",
+      "repo": "BIT-XJY/EfficientOCF",
+      "commit": "bc2289fafe38d1d6befa88c32cb48e30eb632e5c",
+      "path": "projects/occ_plugin/occupancy/detectors/efficientocf.py",
+      "url": "https://raw.githubusercontent.com/BIT-XJY/EfficientOCF/bc2289fafe38d1d6befa88c32cb48e30eb632e5c/projects/occ_plugin/occupancy/detectors/efficientocf.py",
+      "sha256": "0c39250f99b159dfa444bc7b8d38b70dc1efe1309306104bca57d418de6a4a01",
+      "local_path": "analysis/o_motion_20260915/motion_source_reads/EfficientOCF/projects/occ_plugin/occupancy/detectors/efficientocf.py",
+      "bytes": 52753
+    }
+  ],
+  "additional_repository_metadata": [
+    {
+      "repo": "zhangyp15/BEVerse",
+      "commit": "5c6f4f7bb5f2c647e5c2301ef6e6b4e78f2253be",
+      "license": null,
+      "relevant_paths": [
+        "projects/mmdet3d_plugin/datasets/pipelines/__pycache__/motion_labels.cpython-37.pyc",
+        "projects/mmdet3d_plugin/datasets/pipelines/motion_labels.py",
+        "projects/mmdet3d_plugin/models/__pycache__/motion_modules.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/dense_heads/__pycache__/motion_head.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/dense_heads/__pycache__/res_motion_head.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/dense_heads/motion_head.py",
+        "projects/mmdet3d_plugin/models/motion_heads/__init__.py",
+        "projects/mmdet3d_plugin/models/motion_heads/__pycache__/__init__.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/motion_heads/__pycache__/_base_motion_head.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/motion_heads/__pycache__/fierymotion.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/motion_heads/__pycache__/iterative_flow.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/motion_heads/__pycache__/res_motion_head.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/motion_heads/__pycache__/resmotionv1.cpython-37.pyc",
+        "projects/mmdet3d_plugin/models/motion_heads/_base_motion_head.py",
+        "projects/mmdet3d_plugin/models/motion_heads/fierymotion.py",
+        "projects/mmdet3d_plugin/models/motion_heads/iterative_flow.py",
+        "projects/mmdet3d_plugin/models/motion_modules.py",
+        "projects/mmdet3d_plugin/visualize/__pycache__/motion_visualisation.cpython-37.pyc",
+        "projects/mmdet3d_plugin/visualize/motion_visualisation.py"
+      ]
+    }
+  ],
+  "paper_sources": [
+    {
+      "name": "PowerBEV",
+      "venue": "IJCAI 2023",
+      "url": "https://www.ijcai.org/proceedings/2023/0120.pdf",
+      "read_scope": "full method incl centripetal flow and post-processing"
+    },
+    {
+      "name": "Cam4DOcc",
+      "venue": "CVPR 2024",
+      "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Ma_Cam4DOcc_Benchmark_for_Camera-Only_4D_Occupancy_Forecasting_in_Autonomous_Driving_CVPR_2024_paper.pdf",
+      "read_scope": "official repo + exact label source; paper benchmark context"
+    },
+    {
+      "name": "EfficientOCF",
+      "venue": "CVPR 2025",
+      "url": "https://arxiv.org/html/2411.14169v1",
+      "official_repo": "https://github.com/BIT-XJY/EfficientOCF",
+      "read_scope": "spatiotemporal decoupling, association, metrics; exact detector source"
+    },
+    {
+      "name": "BEVerse",
+      "venue": "ECCV 2022",
+      "url": "https://arxiv.org/abs/2205.09743",
+      "read_scope": "paper task/iterative flow; exact original transition/warp source"
+    },
+    {
+      "name": "Let Occ Flow",
+      "venue": "CoRL 2024 / PMLR 2025",
+      "url": "https://arxiv.org/html/2407.07587v2",
+      "publisher": "https://proceedings.mlr.press/v270/liu25e.html",
+      "read_scope": "task equation, rendering, dynamic decomposition, metrics; exact loss source"
+    },
+    {
+      "name": "STCOcc",
+      "venue": "CVPR 2025",
+      "url": "https://arxiv.org/html/2504.19749v1",
+      "official_repo": "https://github.com/lzzzzzm/STCOcc",
+      "read_scope": "current-time perception task, flow evaluation, exact flow head"
+    },
+    {
+      "name": "UniAD",
+      "venue": "CVPR 2023",
+      "url": "https://arxiv.org/pdf/2212.10156",
+      "read_scope": "motion/occupancy method plus actual author current code"
+    },
+    {
+      "name": "SelfOccFlow",
+      "venue": "RA-L 2026",
+      "url": "https://arxiv.org/html/2602.23894v1",
+      "doi": "https://doi.org/10.1109/LRA.2026.3665447",
+      "official_code_status": "not verified in this bounded search",
+      "read_scope": "static/dynamic fields, similarity flow, TP-conditioned mAVE"
+    },
+    {
+      "name": "GEM",
+      "venue": "arXiv 2026",
+      "url": "https://arxiv.org/abs/2605.17682",
+      "read_scope": "reverified abstract; prior detailed project audit retained",
+      "official_code_status": "not verified in this bounded search"
+    },
+    {
+      "name": "GaussianWorld",
+      "venue": "CVPR 2025",
+      "url": "https://github.com/zuosc19/GaussianWorld",
+      "read_scope": "official repository task scope only"
+    },
+    {
+      "name": "ConsistentCity",
+      "venue": "ICCV 2025",
+      "url": "https://benjin.me/publication/iccv25_consistentcity/",
+      "read_scope": "author method/project page",
+      "official_code_url": "https://github.com/V2AI/CC",
+      "code_fetch_status": "404 this audit; not a claim permanently unavailable"
+    },
+    {
+      "name": "OccFlowNet",
+      "venue": "WACV 2025",
+      "url": "https://github.com/boschresearch/OccFlowNet",
+      "read_scope": "author README; companion independent source audit shared in same new task directory"
+    }
+  ],
+  "license_findings": {
+    "Cam4DOcc": "MIT; actual LICENSE read",
+    "PowerBEV": "two MIT notices (PowerBEV and FIERY); GitHub API NOASSERTION does not mean no license",
+    "UniAD": "Apache-2.0; actual LICENSE read",
+    "STCOcc": "MIT; actual LICENSE read",
+    "EfficientOCF": "MIT via author repository metadata/README",
+    "LetOccFlow": "no LICENSE found in retrieved recursive tree; do not promise code redistribution",
+    "BEVerse": "no root LICENSE verified; use algorithmic reference, no license permission inferred"
+  },
+  "prior_local_documents": {
+    "analysis/m0_improvement_20260915/literature_temporal.md": "7c36e6dc88203d62b63534213fc43c460e4cb88f85682b3b9dfb8a37821c7d86",
+    "analysis/m0_improvement_20260915/2026_literature_update.md": "345e4b0ee0ac228da001141fd90443b669bfbf58f28314326dfe79172386e457",
+    "analysis/m0_improvement_20260915/新增文献_直接预测与监督尺度.md": "107be459214ab37db5a6b5ae356b1ecb4e0f084dde2ba1149c98ace7fd29cef1",
+    "analysis/m0_improvement_20260915/coordinate_contract_audit.md": "14158ef05c2ed6010c33f7b6062f93572c5c37419e9e211b35dc568bcf4afb30"
+  },
+  "proposal_not_results": {
+    "priority": "A first-stage: fixed-t0-LiDAR output-space occupancy transport oracle, then supervised source displacement + gated fusion; latent splat deferred",
+    "controls": [
+      "same-budget auxiliary-only motion supervision with transport disconnected",
+      "read-only zero/time-mismatched transport intervention without changing weights or predicted displacement"
+    ],
+    "no_training": true,
+    "no_gpu_or_server_execution": true,
+    "no_existing_source_modified": true,
+    "future_input_policy": "future images/poses/instance labels only in training targets except originally permitted ego/action conditioning",
+    "unresolved": [
+      "exact target proxy coverage",
+      "native O latent-space versus GT coordinate compatibility",
+      "common O/candidate motion evaluator",
+      "GPU/time budget",
+      "loss scale/optimizer controls"
+    ],
+    "root_route_refinement": "No O internal recurrence or coordinate correction. Separate source-prediction versus source-GT oracle. Exact motion/zero-motion share source and splat; oracle cannot be a deployed candidate."
+  }
+}

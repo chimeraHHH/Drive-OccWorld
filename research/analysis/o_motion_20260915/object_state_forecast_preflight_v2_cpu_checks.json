@@ -1,0 +1,30 @@
+{
+  "status": "V2_STATIC_BINDING_PASS_NATIVE_UNEXECUTED",
+  "sources_sha256": {
+    "object_state_forecast_preflight_v2.py": "6160b6741f525abcebfccc2b3549b21abffc75b2263bfa5c31c3c8a5231eff9b",
+    "object_state_prediction_inputs_v1.py": "55e39715fdf19e5ae1f227a943a843b194eabed08e788ccb2694a040d6f18256",
+    "object_state_conditioner_v2.py": "dad88c05105d85d9b2a6094c687630f1d661cd7a4e35be42a15a5d01b94a8f36"
+  },
+  "checks": {
+    "head_lr_AST_exact": true,
+    "seed_all_AST_exact": true,
+    "rng_state_AST_exact": true,
+    "restore_rng_AST_exact": true,
+    "rng_digest_AST_exact": true,
+    "non_head_digest_AST_exact": true,
+    "gradient_stats_AST_exact": true,
+    "compare_initial_occupancy_AST_exact": true,
+    "intervention_probe_AST_exact": true,
+    "main_AST_exact": true
+  },
+  "inherited_actual_first16_pose_and_numpy_checks_sha256": "141040a44ca052905e71e57151f9c4656cd2e8f522949276284b8a8ca45c39f8",
+  "actual_conditioner_v2_Torch_CPU_receipt_sha256": "1fe2253b97b5dac963fd3780b081dfdbfc68f597b630aa2b78f1c80272d080c8",
+  "python_executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "parser_feature_version": [
+    3,
+    10
+  ],
+  "new_native_forward": false,
+  "new_optimizer_updates": 0,
+  "train512_asset_complete": false
+}

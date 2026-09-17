@@ -1,0 +1,15 @@
+# Cpl/Fix 正式训练与缓存源码独立审查
+
+**未发现实质源码阻断。** 已完整阅读训练器393行与缓存355行及其实际helper调用；仅本地读取源码/JSON、核SHA、Python3.10 AST和元数据身份，不导入Torch、不SSH、不训练、不读中间开发分数。固定终点评价链另见 `shared_rigid_fixed_eval_source_audit_v1.md/json`。
+
+正式训练从原O及fresh seed11对象模块重建，两臂deepcopy同初态，独立参数和AdamW；原四轮512顺序、accum4共512更新，forward/backward配对恢复RNG。当前预测几何/固定t0 BEV进入前向，forward_sample不含targets；原occupancy与稀疏物理标签在预测后用于loss。完整float64材料点场先定义再按原合法源点采样，无GT框/支持反过来定义owner或前向地址。首update前四微步检查完整CV和两臂预测一致；正式不重复VJP或地址干预，也不复用预检权重。
+
+两臂仅Cpl学得的Gaussian地址与Fix的CV地址不同，物理残差和值路径都保留。Fix的occupancy→pose非零是允许的。物理loss本设计不经原生futurehead；原生head仍由原CE+Lovász训练，因此最终t0 logits不保证不变。空对象/无梯度遵原AdamW None跳过规则，记录实际逐参数步数；最终只保存固定512的head+新模块、优化器与来源，不是独立完整模型。终态明确为training完成、dev200待评，不冒称实验完成。
+
+缓存保存10个数组，dtype/shape/bytes原样压缩并逐样本写后解压核验；固定共享640000点XYZ-C-order，原全场owner/velocity运算域与对象state运算域分开保留。仅读取raw carrier的当前G0，不取轨迹/未来位姿作输入，不重复底心→几何中心转换。train使用本地ordinal0–511，development本地0–199对应raw512+i；正式训练只load train。
+
+拒绝机制：输出目录已存在时不重建、不resume；完整manifest/complete仅全部任务成功后发布。加载拒绝failed.json、缺complete、错误源/selection、非712覆盖或错顺序；单dev0 QA默认拒绝。全部小completion在构造时认证，NPZ完整文件与数组字节在每次load时认证，**不是构造时重读全部NPZ**。worker中的NumPy/压缩不可抢占，异常时进程池可能等待正在执行的worker；硬时间界依赖外层所属进程组runner，不能把合作式deadline说成即时抢占。
+
+本次收尾另核了已完成全712构建的小元数据：complete `a2504a0389cb2756032531961e305e22287ec890c96085e5ea29b2e61e4f1c99`、manifest `9952c8fb8edcc15fee607d362e1a5a1396e3048d4ebc09945918f88124675ab2`，712记录与原selection逐条身份/顺序/分split原ordinal一致，全部write-roundtrip标志为真；4个spawn worker、每worker相关线程环境2，builder内耗时 **905.587008s**。这是真实已完成构建的记录，不是单dev0外推；本独审未重读712份NPZ或重算几何，也不把该耗时当训练ETA。
+
+源码：trainer `3378bf608b262264eed99124f323b1e2a517faaf706b612256fb8ba2b0156ff3`；cache `d47431242dff6d9dba10fbd791e6516739b410282e60bf7f73470186c90fcaaa`。本审查JSON SHA：`52eadf934d72f821aefebb73d1e140ab0565b2d1c20018309dda73412a103004`。

@@ -1,0 +1,22 @@
+{
+  "status": "THREE_CPU_GEOMETRY_CHECKS_PASS",
+  "checks": 3,
+  "geometry_sha256": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+  "script_sha256": "ef748a3efabbcdbbcbf8e1678b64f5692e2e957aef0bd3d3ddb9d24c77fe1b85",
+  "real_prediction_scoring_performed": false,
+  "model_forward": false,
+  "optimizer_updates": 0,
+  "syntax_python310": true,
+  "CLI_help_checked": true,
+  "actual_metadata_authentication_pass": true,
+  "actual_selected_samples": 200,
+  "actual_selected_boxes": 94892,
+  "actual_D_object_horizon_rows": 16074,
+  "full_CRN_export_reread_here": false,
+  "checkpoint_loaded_here": false,
+  "extraction_sha256": {
+    "predictions.json": "b673ebbce36d7fa101a0c085b7e0115fec11a5e4bd2874bb4d28d4448a2d647e",
+    "manifest.json": "152c86fb03ee3695358fc7ad4d5731f6b21a77db560af6815329535d7c44c275",
+    "complete.json": "ddeff445a45608955c7b6b5b164d9b70786d95e042c05a1bfce87c39fd0ea226"
+  }
+}

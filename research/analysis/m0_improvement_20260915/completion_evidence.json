@@ -1,0 +1,59 @@
+{
+  "completed_utc": "2026-09-14T23:22:49.203650+00:00",
+  "status": "ACHIEVED_FIXED_TASK_M0_IMPROVEMENT",
+  "objective": "Develop and verify a learned model better than M0 on the unchanged original future GMO task",
+  "full_samples": 5119,
+  "full_scenes": 150,
+  "training_seed": 11,
+  "original_M0_retained": true,
+  "full_scores_percent": {
+    "M0": 13.944375832331367,
+    "M0_fp32": 13.944850906530709,
+    "native1": 13.727646143124867,
+    "O": 14.74779288146352
+  },
+  "primary_effects_pp": {
+    "O_minus_M0_fp32": {
+      "delta": 0.8029419749328109,
+      "ci95": [
+        0.6817817621685348,
+        0.9406098037937325
+      ]
+    },
+    "O_minus_C": {
+      "delta": 1.0201467383386538,
+      "ci95": [
+        0.929598415154961,
+        1.1115063787903101
+      ]
+    }
+  },
+  "artifacts_sha256": {
+    "server_results/campaign_objective_joint_full_v2/summary_v1/summary.json": "199347570b9d34130c6366ef3fb138bbc08c1310a50010a1f200061fe428f463",
+    "full_objective_independent_audit.md": "8024dc6f43215a658c6669a27e99dbb39e1ee7099d699c0d83059393ea20e77e",
+    "full_objective_interpretation.md": "e8a30acd0ebc61180175d340a5ce3283bd23d45761a74d511ae605905a0e863d",
+    "O验证通过模型卡.md": "3ae1dba35300084b882b258397afd73bf6fc9218e20c932a4cd4babf5d2a7044",
+    "figures/objective_full_v2_reviewed/render_receipt.json": "8d9e4b1c209c70f7ec27b654094992ae67b29e2dde81e90a4b5b0439a9b2c1c2",
+    "figures/objective_full_v2_reviewed/visual_qa.json": "8ec1dbd283581cb346f38ef5c99ced121d0f5979a5368a39fb52c73bdd3b4353",
+    "readout_transition_v3_pilot_audit.md": "3b9a3ebaf482197d922dabb4bcdc0e5654b1986dd70016f98cef445c2d94d5b1",
+    "server_results/campaign_readout_transition_v3/pilot/complete.json": "b445a81450edc8c7a236747df0194ac4f10e704160925b0cd30abb24e8d8a328",
+    "server_results/campaign_readout_transition_v3/failed.json": "0c2fa255d76af7ee4446c582a8485e76fed65855775405c2457860870373ea8f"
+  },
+  "bounded_diagnostic": {
+    "pilot": "PASS",
+    "development": "NOT_RUN_PRESET_RESOURCE_STOP",
+    "cap_required_seconds": 2388,
+    "cap_allowed_seconds": 1500,
+    "automatic_retry": false,
+    "additional_training": false,
+    "mechanism_claim": false
+  },
+  "not_claimed": [
+    "ICLR novelty or acceptance readiness",
+    "new blind validation",
+    "training-seed robustness",
+    "all-horizon or all-error-type improvement"
+  ],
+  "remaining_required_work": [],
+  "no_further_computation_queued": true
+}

@@ -1,0 +1,187 @@
+{
+  "status": "POSTHOC_DESCRIPTIVE_COVERAGE_OBJECT_STRATIFICATION",
+  "summary_sha256": "b401a8aa878d83c86148a3927f185f5c5227035bfb8385781077a9e4dbcbb7fb",
+  "contract": "Predetermined equal quarter bins of per-object source point coverage. Within each bin all source points remain for D and CRN_CV. Coverage uses GT support, cannot be a deployment routing feature. No new scoring, no significance or threshold choice.",
+  "rows": [
+    {
+      "horizon_seconds": 0.5,
+      "group": "moving",
+      "coverage_bin": "none",
+      "objects": 202,
+      "D_xy_epe": 0.9459212420388766,
+      "CRN_CV_xy_epe": 1.0169136269269374,
+      "zero_xy_epe": 1.0169136269269374
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "moving",
+      "coverage_bin": "(0,.25]",
+      "objects": 200,
+      "D_xy_epe": 1.0537282033551245,
+      "CRN_CV_xy_epe": 1.4475464789530832,
+      "zero_xy_epe": 1.6493004599017675
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "moving",
+      "coverage_bin": "(.25,.5]",
+      "objects": 632,
+      "D_xy_epe": 1.082325439204001,
+      "CRN_CV_xy_epe": 1.4034002000642807,
+      "zero_xy_epe": 1.9548391370971643
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "moving",
+      "coverage_bin": "(.5,.75]",
+      "objects": 336,
+      "D_xy_epe": 1.1022402313871638,
+      "CRN_CV_xy_epe": 1.1736395193416715,
+      "zero_xy_epe": 2.1953964215894826
+    },
+    {
+      "horizon_seconds": 0.5,
+      "group": "moving",
+      "coverage_bin": "(.75,1]",
+      "objects": 27,
+      "D_xy_epe": 1.5053965109160616,
+      "CRN_CV_xy_epe": 1.1633785014416795,
+      "zero_xy_epe": 2.3821797431288623
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "moving",
+      "coverage_bin": "none",
+      "objects": 187,
+      "D_xy_epe": 1.86172534091095,
+      "CRN_CV_xy_epe": 2.004016397428145,
+      "zero_xy_epe": 2.004016397428145
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "moving",
+      "coverage_bin": "(0,.25]",
+      "objects": 190,
+      "D_xy_epe": 2.0388766603967143,
+      "CRN_CV_xy_epe": 2.8353012972912945,
+      "zero_xy_epe": 3.231983055296672
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "moving",
+      "coverage_bin": "(.25,.5]",
+      "objects": 601,
+      "D_xy_epe": 2.151496705075324,
+      "CRN_CV_xy_epe": 2.8199233932920817,
+      "zero_xy_epe": 3.9512334145382186
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "moving",
+      "coverage_bin": "(.5,.75]",
+      "objects": 316,
+      "D_xy_epe": 2.244765696461543,
+      "CRN_CV_xy_epe": 2.4160347528444066,
+      "zero_xy_epe": 4.546998912516032
+    },
+    {
+      "horizon_seconds": 1.0,
+      "group": "moving",
+      "coverage_bin": "(.75,1]",
+      "objects": 26,
+      "D_xy_epe": 3.2332372344218223,
+      "CRN_CV_xy_epe": 2.4371260990769277,
+      "zero_xy_epe": 5.161457860202365
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "moving",
+      "coverage_bin": "none",
+      "objects": 175,
+      "D_xy_epe": 2.767585676706402,
+      "CRN_CV_xy_epe": 2.998858012126939,
+      "zero_xy_epe": 2.998858012126939
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "moving",
+      "coverage_bin": "(0,.25]",
+      "objects": 179,
+      "D_xy_epe": 3.006911825475254,
+      "CRN_CV_xy_epe": 4.236985523009053,
+      "zero_xy_epe": 4.831122699490541
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "moving",
+      "coverage_bin": "(.25,.5]",
+      "objects": 585,
+      "D_xy_epe": 3.190810116520307,
+      "CRN_CV_xy_epe": 4.225203815481703,
+      "zero_xy_epe": 5.911472320825555
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "moving",
+      "coverage_bin": "(.5,.75]",
+      "objects": 306,
+      "D_xy_epe": 3.389325293250337,
+      "CRN_CV_xy_epe": 3.6975677383082903,
+      "zero_xy_epe": 6.860162550567108
+    },
+    {
+      "horizon_seconds": 1.5,
+      "group": "moving",
+      "coverage_bin": "(.75,1]",
+      "objects": 24,
+      "D_xy_epe": 5.014068195919915,
+      "CRN_CV_xy_epe": 3.8442882470022126,
+      "zero_xy_epe": 8.167325259826274
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "moving",
+      "coverage_bin": "none",
+      "objects": 165,
+      "D_xy_epe": 3.5025640300317775,
+      "CRN_CV_xy_epe": 3.8168566167779594,
+      "zero_xy_epe": 3.8168566167779594
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "moving",
+      "coverage_bin": "(0,.25]",
+      "objects": 176,
+      "D_xy_epe": 3.972423652067718,
+      "CRN_CV_xy_epe": 5.580845027641481,
+      "zero_xy_epe": 6.37396032052171
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "moving",
+      "coverage_bin": "(.25,.5]",
+      "objects": 564,
+      "D_xy_epe": 4.212807781737375,
+      "CRN_CV_xy_epe": 5.643674150081409,
+      "zero_xy_epe": 7.8812430434739955
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "moving",
+      "coverage_bin": "(.5,.75]",
+      "objects": 297,
+      "D_xy_epe": 4.531234362443683,
+      "CRN_CV_xy_epe": 5.042465234117779,
+      "zero_xy_epe": 9.26002208667387
+    },
+    {
+      "horizon_seconds": 2.0,
+      "group": "moving",
+      "coverage_bin": "(.75,1]",
+      "objects": 24,
+      "D_xy_epe": 6.684664467466544,
+      "CRN_CV_xy_epe": 5.40432385807227,
+      "zero_xy_epe": 10.839081574881993
+    }
+  ]
+}

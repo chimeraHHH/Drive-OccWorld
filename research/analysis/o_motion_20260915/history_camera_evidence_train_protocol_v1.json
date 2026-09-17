@@ -1,0 +1,72 @@
+{
+  "schema": "history-camera-evidence-train-v1",
+  "status": "FROZEN",
+  "module_sha256": "c7469179d1628979b30eb256e695fdd6479ffd6e2df047d380d890512f57a5ea",
+  "module_constants": {
+    "camera_order": [
+      "CAM_FRONT",
+      "CAM_FRONT_RIGHT",
+      "CAM_FRONT_LEFT",
+      "CAM_BACK",
+      "CAM_BACK_LEFT",
+      "CAM_BACK_RIGHT"
+    ],
+    "horizons_seconds": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "patch_radius": 3,
+    "patch_size": 7,
+    "zncc_eps": 0.00392156862745098,
+    "texture_std_min": 0.00784313725490196,
+    "reason_codes": {
+      "0": "valid",
+      "1": "no_current_zero_view",
+      "2": "missing_previous_keyframe",
+      "3": "hypothesis_projection_invalid",
+      "4": "low_current_zero_texture"
+    },
+    "axes": {
+      "hypothesis": [
+        "zero",
+        "D"
+      ],
+      "time": [
+        "current",
+        "past"
+      ],
+      "uv": [
+        "pixel_x",
+        "pixel_y"
+      ]
+    }
+  },
+  "history_inputs_complete_sha256": "040d62242a541b9685f3f39f1534b3663b0e1142b4cd7d9737cdbfd15d94314d",
+  "motion_complete_sha256": "3bd429effb1fbe50ac0aeb77330bc0100ee144bf8406fbd078097fb336301a73",
+  "geometry_complete_sha256": "a2504a0389cb2756032531961e305e22287ec890c96085e5ea29b2e61e4f1c99",
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+  "resources": {
+    "max_seconds": 600,
+    "cpu_threads": 2
+  },
+  "scope": {
+    "samples": 512,
+    "scenes": 256,
+    "source_points": 1740053,
+    "input_query_only": true,
+    "labels_read": false,
+    "GT_depth_allowed": false,
+    "images": "same-camera raw current and previous sample keyframe",
+    "velocity": "original four nominal horizon LSQ; full3D",
+    "camera_selection": "zero-current projectable camera nearest optical axis; fixed order tie; no reselection",
+    "score": "regularized ZNCC_D minus ZNCC_zero",
+    "broken": "horizontal circular roll of past image by width//2; identical score support",
+    "missing": "retain all original queries/reasons; scores NaN",
+    "fitting": false,
+    "threshold_selection": false,
+    "development": false,
+    "model_forward": false
+  }
+}

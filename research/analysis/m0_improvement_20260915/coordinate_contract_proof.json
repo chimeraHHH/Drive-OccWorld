@@ -1,0 +1,403 @@
+{
+  "schema": "m0-coordinate-contract-geometry-proof-v1",
+  "status": "PASS_GEOMETRY_COUNTEREXAMPLES",
+  "proof_kind": "Exact source-assignment AST with NumPy matrix arithmetic on synthetic physical planar poses; not a neural/CUDA or real-data inference test.",
+  "sources_sha256": {
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_template.py": "9de0dfbba0b77567cf011fb0adb163492e8d5e6f510040b95626b3bcded822cc",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_transformer.py": "384f283c7338fb5e2c212011f3fc56982b150c54b0f39c602120f4139535f740",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/modules/conditionalnorm.py": "31549af09e3aa73d172af854299cd4ada20ceff69db7ee57dbe0f1f7b23ed76d",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/utils/e2e_predictor_utils.py": "5e73296356636d50474a55fb6a4360404d8d46d995cd9e196ac33ce83c2283be",
+    "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/modules/encoder.py": "7442c34f1ed8d283232e8f90c108335b19b88e2fa9a2ff4b1838fede0a8c3cf3",
+    "analysis/sota_p2_20260911/configs/S0.py": "c92faf7c2a4697ae7faa0c69ca844068dd8f5a6d28463e7ad45307c4ab374303"
+  },
+  "executed_source_fragments": {
+    "loader": "egopose_list = results['egopose_list']\nego2lidar_list = results['ego2lidar_list']\npresent_global2ego = egopose_list[self.time_history_field]\npresent_ego2lidar = ego2lidar_list[self.time_history_field]\ncur_global2ego = egopose_list[count]\ncur_ego2lidar = ego2lidar_list[count]\npcd_np_cor = np.dot(cur_ego2lidar[1].inverse.rotation_matrix, pcd_np_cor.T)\npcd_np_cor = pcd_np_cor.T\npcd_np_cor = pcd_np_cor - cur_ego2lidar[0]\npcd_np_cor = np.dot(cur_global2ego[1].inverse.rotation_matrix, pcd_np_cor.T)\npcd_np_cor = pcd_np_cor.T\npcd_np_cor = pcd_np_cor - cur_global2ego[0]\npcd_np_cor = pcd_np_cor + present_global2ego[0]\npcd_np_cor = np.dot(present_global2ego[1].rotation_matrix, pcd_np_cor.T)\npcd_np_cor = pcd_np_cor.T\npcd_np_cor = pcd_np_cor + present_ego2lidar[0]\npcd_np_cor = np.dot(present_ego2lidar[1].rotation_matrix, pcd_np_cor.T)\npcd_np_cor = pcd_np_cor.T",
+    "dataset_matrices": "cur_lidar_to_ref_lidar = curr_l2e_transform.T @ curr_e2g_transform.T @ ref_g2e_transform.T @ ref_e2l_transform.T\nref_lidar_to_cur_lidar = ref_l2e_transform.T @ ref_e2g_transform.T @ curr_g2e_transform.T @ curr_e2l_transform.T",
+    "attention_matrix": "future_to_history_list = torch.matmul(future2ref, ref_to_history_list)",
+    "attention_query": "aligned_bev_coords = torch.matmul(aligned_bev_coords, future_to_history_list)"
+  },
+  "cases": [
+    {
+      "case": "identity",
+      "world_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "future_ego_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "future_ego_yaw_radians": 0.0,
+      "future_local_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "source_loader_label_anchor_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "native_query_of_stationary_point_xy": [
+        10.1,
+        4.3
+      ],
+      "native_memory_sample_for_that_query_xy": [
+        10.1,
+        4.3
+      ],
+      "native_memory_sample_at_supervised_label_index_xy": [
+        10.1,
+        4.3
+      ],
+      "query_label_displacement_m": 0.0,
+      "query_label_displacement_in_0p512m_cells": 0.0,
+      "future2ref_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ref2future_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "case": "ego_translation_plus_x_2m",
+      "world_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "future_ego_translation": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "future_ego_yaw_radians": 0.0,
+      "future_local_point": [
+        8.1,
+        4.3,
+        0.1
+      ],
+      "source_loader_label_anchor_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "native_query_of_stationary_point_xy": [
+        8.1,
+        4.3
+      ],
+      "native_memory_sample_for_that_query_xy": [
+        10.1,
+        4.3
+      ],
+      "native_memory_sample_at_supervised_label_index_xy": [
+        12.1,
+        4.3
+      ],
+      "query_label_displacement_m": 2.0,
+      "query_label_displacement_in_0p512m_cells": 3.90625,
+      "future2ref_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ref2future_row_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -2.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "case": "ego_yaw_plus_90deg",
+      "world_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "future_ego_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "future_ego_yaw_radians": 1.5707963267948966,
+      "future_local_point": [
+        4.300000000000001,
+        -10.1,
+        0.1
+      ],
+      "source_loader_label_anchor_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "native_query_of_stationary_point_xy": [
+        4.300000000000001,
+        -10.1
+      ],
+      "native_memory_sample_for_that_query_xy": [
+        10.1,
+        4.3
+      ],
+      "native_memory_sample_at_supervised_label_index_xy": [
+        -4.299999999999999,
+        10.1
+      ],
+      "query_label_displacement_m": 15.524174696260022,
+      "query_label_displacement_in_0p512m_cells": 30.320653703632857,
+      "future2ref_row_matrix": [
+        [
+          6.123233995736766e-17,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          6.123233995736766e-17,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ref2future_row_matrix": [
+        [
+          6.123233995736766e-17,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          6.123233995736766e-17,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "case": "ego_translation_and_yaw",
+      "world_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "future_ego_translation": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "future_ego_yaw_radians": 1.5707963267948966,
+      "future_local_point": [
+        4.300000000000001,
+        -8.1,
+        0.1
+      ],
+      "source_loader_label_anchor_point": [
+        10.1,
+        4.3,
+        0.1
+      ],
+      "native_query_of_stationary_point_xy": [
+        4.300000000000001,
+        -8.1
+      ],
+      "native_memory_sample_for_that_query_xy": [
+        10.1,
+        4.3
+      ],
+      "native_memory_sample_at_supervised_label_index_xy": [
+        -2.299999999999999,
+        10.1
+      ],
+      "query_label_displacement_m": 13.68941196691808,
+      "query_label_displacement_in_0p512m_cells": 26.737132747886875,
+      "future2ref_row_matrix": [
+        [
+          6.123233995736766e-17,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0,
+          6.123233995736766e-17,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ref2future_row_matrix": [
+        [
+          6.123233995736766e-17,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          6.123233995736766e-17,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.2246467991473532e-16,
+          2.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "calibrated_extrinsic_label_error": 2.6645352591003757e-15,
+  "established": [
+    "Loader expresses each sequence occupancy in current-anchor LiDAR coordinates.",
+    "Declared query-to-memory correspondence uses the future-local grid, with stored memory frame transformed by ref2future.",
+    "A zero-offset geometric correspondence places a stationary point at a different token than the anchor-frame target under nonidentity ego motion.",
+    "Pointwise decoding, axis transpose and resize are not an ego-dependent coordinate warp."
+  ],
+  "not_established": [
+    "Learned model outputs must remain future-local: offsets and action conditions can learn compensating mappings.",
+    "Observed checkpoint performance loss is caused by this mismatch.",
+    "Adding a post-hoc warp to a trained anchor-supervised model improves or preserves scores.",
+    "Real cached target generation matches every inspected local helper on server; additional template/grid/encoder hashes should be verified."
+  ],
+  "no_training": true,
+  "no_remote_calls": true,
+  "phantom_script_sha256": "15519383a5deb5722323408ae803cd78c1daf618e1852b9ddbc37384f3753649"
+}

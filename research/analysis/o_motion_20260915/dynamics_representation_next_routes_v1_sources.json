@@ -1,0 +1,246 @@
+{
+  "schema": "dynamics-representation-next-routes-sources-v1",
+  "generated_at_utc": "2026-09-15T19:07:56.706619+00:00",
+  "scope": "two original papers and official source; one proposed route; no skills, model execution or training",
+  "entries": [
+    {
+      "id": "PowerBEV",
+      "paper": {
+        "title": "PowerBEV: A Powerful Yet Lightweight Framework for Instance Prediction in Bird's-Eye View",
+        "venue": "IJCAI 2023",
+        "url": "https://www.ijcai.org/proceedings/2023/0120.pdf",
+        "sections_read": [
+          "3.2",
+          "3.3",
+          "3.4",
+          "4.2"
+        ],
+        "scope": "new official-code inspection in this bounded task; prior project coverage not exhaustively searched",
+        "pdf_sha256": "56f3f68b83c83be4b825ad9f90cad2cef245b78aede45f40910c3d94bd8fe4fe",
+        "local_pdf": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/PowerBEV.pdf",
+        "paper_read_method": "web primary publisher PDF; selected methodology text; local bytes archived; not full-paper peer review"
+      },
+      "official_repository": "https://github.com/EdwardLeeLPZ/PowerBEV",
+      "officiality_evidence": "paper explicitly links this repository",
+      "commit": "7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321",
+      "code": [
+        {
+          "path": "powerbev/models/powerbev.py",
+          "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/models/powerbev.py",
+          "sha256": "2125c55fb095d4030f838b0455cf0a4208db7a42576f6e1763f13716c8dee519",
+          "bytes": 10798,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/PowerBEV/powerbev/models/powerbev.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "powerbev/models/stconv.py",
+          "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/models/stconv.py",
+          "sha256": "da30d82753f033c429e642fbbf7aec01bfa83a9014ebfd0472460502920534a3",
+          "bytes": 8458,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/PowerBEV/powerbev/models/stconv.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "powerbev/trainer.py",
+          "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/trainer.py",
+          "sha256": "72d46f8a3f2160d825b23822b101952d79a329ed96801b85cb7e239594cad7ea",
+          "bytes": 11814,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/PowerBEV/powerbev/trainer.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "powerbev/utils/instance.py",
+          "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/utils/instance.py",
+          "sha256": "0fbf0c45a9f162c2a8495cc12e50e7fce5fe97fbbd8a4422fdaa1f10b58c9912",
+          "bytes": 11305,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/PowerBEV/powerbev/utils/instance.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "powerbev/data.py",
+          "url": "https://raw.githubusercontent.com/EdwardLeeLPZ/PowerBEV/7cdce93e76f3a0e91fcefaf0ab7bfe33f7c53321/powerbev/data.py",
+          "sha256": "45504007ed194a413c5939aa692c4bf04c9b6a728115516cbdbbac837bea7f61",
+          "bytes": 28695,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/PowerBEV/powerbev/data.py",
+          "inspection": "downloaded dependency only; not substantively inspected"
+        }
+      ],
+      "execution_verified": false,
+      "checkpoint_verified": false,
+      "external_training_performed": false
+    },
+    {
+      "id": "FipTR",
+      "paper": {
+        "title": "FipTR: A Simple yet Effective Transformer Framework for Future Instance Prediction in Autonomous Driving",
+        "venue": "ECCV 2024",
+        "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/11758.pdf",
+        "sections_read": [
+          "3.3",
+          "3.4",
+          "3.5",
+          "3.6"
+        ],
+        "scope": "deepening prior motion_connection_representation_review_v1.md; not a newly discovered/uncovered paper",
+        "pdf_sha256": "6f13539942d4259065b22385e743006aaa109954257bc882f94a446f9671d15f",
+        "local_pdf": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR.pdf",
+        "paper_read_method": "web primary publisher PDF; selected methodology text; local bytes archived; not full-paper peer review"
+      },
+      "official_repository": "https://github.com/TabGuigui/FipTR",
+      "officiality_evidence": "paper explicitly links this repository",
+      "commit": "3f8b59ab76d444d1b8929b60ea757fb9119db012",
+      "code": [
+        {
+          "path": "projects/configs/fiptr_lss_tiny/FipTR_LSS_Tiny.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/configs/fiptr_lss_tiny/FipTR_LSS_Tiny.py",
+          "sha256": "9ac95ae1d2262b2dc15e8bc9c1f97b52cbc90039e871eeef1ae2481a3fe31035",
+          "bytes": 13038,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/configs/fiptr_lss_tiny/FipTR_LSS_Tiny.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/fiptr/dense_heads/fistr_lss_head_timespecificmaskquery.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/fiptr/dense_heads/fistr_lss_head_timespecificmaskquery.py",
+          "sha256": "6353d50e4ab2792ea8859d9bb9df282bf9eb0313c526801eacdd47021bc1c66e",
+          "bytes": 35850,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/fiptr/dense_heads/fistr_lss_head_timespecificmaskquery.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/fiptr/modules/flow_guided_self_attention.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/fiptr/modules/flow_guided_self_attention.py",
+          "sha256": "2d1612dd39eb99e1721d1de64222709cd08339c23aab756b9e8457fb8a4d4391",
+          "bytes": 11981,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/fiptr/modules/flow_guided_self_attention.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/fiptr/modules/future_decoder.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/fiptr/modules/future_decoder.py",
+          "sha256": "b28a7f24ab8a04ca0d1f4ade776657ef878416625aaacd1082b2a698866c2c73",
+          "bytes": 7940,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/fiptr/modules/future_decoder.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/fiptr/pipelines/motion_labels.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/fiptr/pipelines/motion_labels.py",
+          "sha256": "12537b5058c833876ea749bd0cf097879bc2206d6b39c8dff1dbf157fed3e254",
+          "bytes": 20061,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/fiptr/pipelines/motion_labels.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/core/bbox/assigners/__init__.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/core/bbox/assigners/__init__.py",
+          "sha256": "472657f8d346608055efa5d11af0a4728ff30167412446eb353760426ba5d2fb",
+          "bytes": 451,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/core/bbox/assigners/__init__.py",
+          "inspection": "downloaded dependency only; not substantively inspected"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_3d.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_3d.py",
+          "sha256": "ceb59550dbb3299bdcdefae096d8c42c98525949d25288a0d05585cbd5a218e7",
+          "bytes": 6404,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_3d.py",
+          "inspection": "downloaded dependency only; not substantively inspected"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_3d_track.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_3d_track.py",
+          "sha256": "404fbc5343fd0aa21e02fa42d596bf3600cb5e5e7accc2e3a8a8a0a0cb001731",
+          "bytes": 5560,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_3d_track.py",
+          "inspection": "downloaded dependency only; not substantively inspected"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_mask.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_mask.py",
+          "sha256": "2937109d04c64114c8e9cc358f56b8d0b274fe5d2c0ca51768e755ff041bbaa8",
+          "bytes": 6684,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_mask.py",
+          "inspection": "downloaded dependency only; not substantively inspected"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_mask_strong.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_mask_strong.py",
+          "sha256": "bd134e5f218b6962dabf77d393776b7f9007d9431bfee014c9d58c2d8b5ca921",
+          "bytes": 19981,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/core/bbox/assigners/hungarian_assigner_mask_strong.py",
+          "inspection": "selected mechanism/label lines read"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/core/bbox/match_costs/__init__.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/core/bbox/match_costs/__init__.py",
+          "sha256": "b9be8c28bb3443107142b7a3d561e0af366f6c8b7b78c4f51256c4746f70ad63",
+          "bytes": 163,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/core/bbox/match_costs/__init__.py",
+          "inspection": "downloaded dependency only; not substantively inspected"
+        },
+        {
+          "path": "projects/mmdet3d_plugin/core/bbox/match_costs/match_cost.py",
+          "url": "https://raw.githubusercontent.com/TabGuigui/FipTR/3f8b59ab76d444d1b8929b60ea757fb9119db012/projects/mmdet3d_plugin/core/bbox/match_costs/match_cost.py",
+          "sha256": "eb45e87a653e2e55c1c9753aa543368cd1408fcddb83f6502341fd6854f00899",
+          "bytes": 3181,
+          "local_path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_source_reads_v1/FipTR/projects/mmdet3d_plugin/core/bbox/match_costs/match_cost.py",
+          "inspection": "selected mechanism/label lines read"
+        }
+      ],
+      "execution_verified": false,
+      "checkpoint_verified": false,
+      "external_training_performed": false
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/future_feature_residual_dev200_pooled_v1.json",
+      "sha256": "4b755b15d2b98f19047d44e71201f58ef3ff5be09054f0c39ad3758c1752a60a",
+      "inspection": "selected relevant code or reported-value keys; full label corpus not re-audited"
+    },
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/motion_connection_representation_review_v1.md",
+      "sha256": "c6b3110ac9af45fc165d17ed69322041c1c5d5b85ea0859d50def2d3e35b4bbf",
+      "inspection": "selected relevant code or reported-value keys; full label corpus not re-audited"
+    },
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/build_motion_targets_v1.py",
+      "sha256": "0064b3bb3dd3d8a124e49524ae848e0af1c556e12850947577280e988a7f2685",
+      "inspection": "selected relevant code or reported-value keys; full label corpus not re-audited"
+    },
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/build_sparse_motion_supervision_v1.py",
+      "sha256": "a63f5083dad4f5092bdc9d4d87b888dd53f54b95986b2f8b3a13769e9e78f023",
+      "inspection": "selected relevant code or reported-value keys; full label corpus not re-audited"
+    },
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/motion_geometry.py",
+      "sha256": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+      "inspection": "selected relevant code or reported-value keys; full label corpus not re-audited"
+    },
+    {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/train_source_motion_v1.py",
+      "sha256": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+      "inspection": "selected relevant code or reported-value keys; full label corpus not re-audited"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "DriveWorld CVPR 2024",
+      "paper_url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Min_DriveWorld_4D_Pre-trained_Scene_Understanding_via_World_Models_for_Autonomous_CVPR_2024_paper.pdf",
+      "status": "primary paper located; no official runnable repository verified; not a candidate"
+    }
+  ],
+  "proposal_status": "candidate only; root selection awaits D/CV common diagnostic; S/I design, budget and promotion/stop criteria are suggestions, not frozen or authorized for execution",
+  "report": {
+    "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/analysis/o_motion_20260915/dynamics_representation_next_routes_v1.md",
+    "sha256": "6d7699b7910cce3cfe12151a6d7fa22fa5b61a6b358a404689634dd5127510bb"
+  },
+  "manifest_name_correction": {
+    "previous_filename": "sources.json",
+    "dedicated_filename": "dynamics_representation_next_routes_v1_sources.json",
+    "historical_file_overwritten": false,
+    "evidence": "Before initial write, exec output explicitly reported analysis/o_motion_20260915/sources.json False; no historical file existed at that path.",
+    "restoration_required": false
+  }
+}

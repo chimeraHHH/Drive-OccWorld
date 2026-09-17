@@ -1,0 +1,31 @@
+{
+  "schema": "connected-motion-analysis-source-bindings-v2",
+  "status": "FROZEN_BEFORE_FINAL_RESULTS",
+  "training_job": "connected_motion_train_v2",
+  "sources_sha256": {
+    "connected_motion_comparison_contract_v1.json": "5ad21424bab877fd1fb0739a3b2ba35904d36dee50aea7b78f4035f64de4d0dd",
+    "connected_motion_protocol_v2.json": "e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259",
+    "train_connected_motion_v2.py": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a",
+    "common_connected_motion_evaluation_v2.py": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1",
+    "summarize_connected_motion_v1.py": "3b0822c7d4c9218211dfec7c7d6854fd67b28f9b43640134dfe2228690a2c40e",
+    "summarize_common_change_v2.py": "318dee1a19fbd5b0863f50d2e0346723d7050329b55170cb8efac60929b962ae",
+    "common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951"
+  },
+  "comparison_pairs": [
+    "J-O",
+    "D-O",
+    "J-D"
+  ],
+  "physical_pairs": [
+    "J-P",
+    "D-P",
+    "J-D",
+    "J-zero",
+    "D-zero",
+    "P-zero"
+  ],
+  "physical_ground_truth": "rigid box virtual source points; not observed scene flow",
+  "statistical_scope": "scene paired bootstrap, fixed training seed11, original metric and disclosed historical development exposure",
+  "common_statistics_v2_delta": "Adds the predeclared J-minus-D pair only; original pooled-count formulas and existing pair calculations unchanged",
+  "native_O_physical_flow_not_invented": true
+}

@@ -1,0 +1,32 @@
+{
+  "status": "REAL_CENTERED_DEV200_AUTHENTICATION_PASS",
+  "source_sha256": "7cd498d13d45d5960c6f494ebf7b750718b397d90720ecd745a8c527b0dace06",
+  "asset_receipt": {
+    "complete_sha256": "650f19ae2709bbb8af39ed8c70dcebb7cbb720b7a6bc5fdfa6fc7040a9361b7d",
+    "manifest_sha256": "8d95afb4ca7e8f86720bdc00b6b1f62084aa76aa081352d4bab08d3c38237d36",
+    "predictions_sha256": "e1558af2a51ee40e976525d0679135066f93537fc8cfcc873511be44615cf05f",
+    "raw_extraction": {
+      "complete_sha256": "ddeff445a45608955c7b6b5b164d9b70786d95e042c05a1bfce87c39fd0ea226",
+      "manifest_sha256": "152c86fb03ee3695358fc7ad4d5731f6b21a77db560af6815329535d7c44c275",
+      "predictions_sha256": "b673ebbce36d7fa101a0c085b7e0115fec11a5e4bd2874bb4d28d4448a2d647e"
+    },
+    "export_sha256": "fec6541461bf6eb0ad5f3e113e4fcb13c937896731203ef5de003a6ac0055653",
+    "checkpoint_sha256": "f725aafc7f033f484f13704134178f2377b3e12bb7e85207b447f8a3ebfa0cb3",
+    "origin_adapter_sha256": "aa05e4cd8d2c9ffbf41e751ebc0bda7114040753e404c0560975ee134e23a101",
+    "origin_contract_sha256": "c4b99aadab4bdd20485c3a544ba9cd735441101f59ec228230a6d79f5d46a51b",
+    "origin_proof_sha256": "2d9b711857e82ff1c3e88be16064a05d12b03d63f23f1d2545941c5b6fca0149",
+    "samples": 200,
+    "scenes": 100,
+    "boxes": 94892,
+    "origin_adapted_once_by_asset_producer": true,
+    "origin_adaptation_in_consumer": false,
+    "detector_rerun": false,
+    "raw_manifest_sha256": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+    "raw_complete_sha256": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69"
+  },
+  "python": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "torch_imported": false,
+  "model_forward": false,
+  "optimizer_updates": 0,
+  "scores_computed": false
+}

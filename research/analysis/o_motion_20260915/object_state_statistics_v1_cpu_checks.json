@@ -1,0 +1,31 @@
+{
+  "schema": "object-state-statistics-real-prior-math-checks-v1",
+  "status": "REAL_OLD_MATH_COMPATIBILITY_PASS_NO_VG_RESULTS",
+  "checks": {
+    "actual_old_KB_integer_collect_exact": true,
+    "no_old_module_global_mutation": true,
+    "actual_old_KB_all_common_metrics_and_10000_CI_exact": true,
+    "actual_D_and_CRNv2_embedded_D_16074_exact": true,
+    "actual_CRNv2_all_label_support_and_missing_boundaries_exact": true,
+    "actual_CRNv2_XY_XYZ_mean_median_p90_and_10000_CI_exact": true,
+    "actual_old_KB_endpoint_rejected_not_treated_as_VG": "Need the complete fixed512 plus full200 endpoint"
+  },
+  "input_sha256": {
+    "analysis/o_motion_20260915/server_results/training/future_state_motion_train_v1/development_records.jsonl": "ade04c283dda913c7729c0a239e65f7f824dd3cb9fa2de30b1452ba6422c40b4",
+    "analysis/o_motion_20260915/future_state_motion_dev200_common_v1.json": "2bb493b746273a2bae0804718168e3b7b8fb62a636c80859fdb36fb442bec784",
+    "analysis/o_motion_20260915/crn_object_state_cv_dev200_v2/summary.json": "ba67afc75b02ef481b0846914207fc01c6d04a4d0c675d3a7c00d1129b81141e"
+  },
+  "sources_sha256": {
+    "summarize_object_state_common_v1.py": "4a03aeda837e78b97ff18d27140d08602619ee96502b7f62fa82f591ca08f584",
+    "summarize_object_state_physical_v1.py": "bd2c652a1682c8ea3e16c0d35ec69ba75957da7886cd9f20a1bb700af3c011b6"
+  },
+  "runtime": {
+    "python": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "numpy": "2.4.4"
+  },
+  "seconds": 0.9717649999656714,
+  "V_G_models_or_performance_created": false,
+  "GPU_used": false,
+  "new_training_updates": 0,
+  "bootstrap_seed_is_not_training_seed": true
+}

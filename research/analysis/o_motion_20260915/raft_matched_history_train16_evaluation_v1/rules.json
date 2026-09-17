@@ -1,0 +1,35 @@
+{
+  "status": "FIXED_RULES_NO_FIT",
+  "source_sha256": "d159ddfcf7859d96da0dbe66db5a81a28d0c1c634893b443bf77e1cd73b6710c",
+  "surface_complete_sha256": "5b3ae4aaeef4cfe4803571780a8491c0ecf120286b59cfd605ddf1737cb99cf5",
+  "baseline_complete_sha256": "3bd429effb1fbe50ac0aeb77330bc0100ee144bf8406fbd078097fb336301a73",
+  "geometry_sha256": "91bcc80882e41ffd5234cecce4b517ef4081839c89dbb6a048c4226b723ca6fd",
+  "radius_m": 1.0,
+  "surface_variants": [
+    "in_roi",
+    "quality_in_roi"
+  ],
+  "quality_definition": "forward-backward error <=1 original pixel",
+  "arms": [
+    "zero",
+    "D",
+    "CRN_CV",
+    "CV_D_speed05",
+    "surface_all_zero",
+    "surface_quality_zero",
+    "CV_surface_all_uncovered",
+    "CV_surface_quality_uncovered"
+  ],
+  "primary_time": "nominal horizon for CV and surface, matching original D/CV protocol",
+  "sensitivity": "actual future elapsed time for both CV and surface; native D unchanged",
+  "population": "all original material points and all original future-valid objects; no support filtering",
+  "surface_interpolation": "nearest 3D point within 1m; fixed image grid; no GT ownership or label used to choose neighbor",
+  "GT_use": "original points sample a fixed input-only surface field; GT motion only scores that field",
+  "baseline_is_O": false,
+  "occupancy_evaluated": false,
+  "selection_or_fitting": false,
+  "checks": [
+    "1m boundary retained; unsupported zero fallback",
+    "unequal object sizes remain object-equal"
+  ]
+}

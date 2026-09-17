@@ -1,0 +1,115 @@
+{
+  "schema": "future-feature-residual-training-v1",
+  "status": "FROZEN",
+  "training": {
+    "seed": 11,
+    "train_samples": 512,
+    "development_samples": 200,
+    "passes": 4,
+    "accumulate": 4,
+    "updates": 512,
+    "parameters_per_arm": 41137,
+    "lr": 0.001,
+    "grad_clip": 35.0,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "amsgrad": false,
+    "warmup_updates": 25,
+    "final_lr_ratio": 0.1,
+    "order": "continuous_numpy_RandomState11_permutation_each_pass",
+    "lr_schedule": "train_source_motion_v1.schedule_lr(u); u=0..511",
+    "loss": "unchanged native coarse twelve computed; original O CE[1,5]+Lovasz six selected",
+    "scope": "only independent new 41137-parameter residual modules; O and actual final D motion frozen",
+    "architecture": "shared Linear256->(Z*8) projection; source 3D trilinear feature transport; Conv3d19->16 k3 ReLU -> zero Conv3d16->1 k1; no GN",
+    "transport": "R actual final D displacement; R0 zero displacement; same original O current hard mask",
+    "feature_input": "O terminal readout prehook clone [5,B,YX,256]; no raw boxes or motion labels",
+    "target": "signed residual on final decoder future foreground logit only; t0/intermediate/background unchanged",
+    "checkpoint": "fixed final512 only; no resume, best selection or initial-development scoring"
+  },
+  "numerical_policy": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": true,
+    "cudnn_benchmark": false
+  },
+  "sources_sha256": {
+    "train_connected_motion_v2.py": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a",
+    "train_supported_fusion_v2.py": "61cb7c96fc8127f4b3b5ef34fff380e0c2076210463cff29e4cee5d3a5d87d7c",
+    "supported_motion_fusion.py": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "learned_transport_probe_v1.py": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+    "objective_supervision_adapters.py": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703",
+    "joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "common_change_evaluation_v2.py": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059",
+    "common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+    "motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+    "common_connected_motion_evaluation_v2.py": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1",
+    "train_future_feature_residual_v1.py": "2226681ee8b6b0b7ffe40ee40540947619217f2f3cdd83d034f101ba6706cbde",
+    "future_feature_residual_v1.py": "e427b74698ad4537f135f6dab03df9787f8661abac666164e21e48997caa541d"
+  },
+  "connected_protocol_sha256": "e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259",
+  "connected_complete_sha256": "f0bf075fa36622b38c0c5136b187a184d16d3e07ed00857dfe21a0545f1c5f56",
+  "D_checkpoint_sha256": "7e2750d56ade7fb36e334b6431e83f51aafa997357744780a507924a696951e3",
+  "runtime_source_contract_sha256": "5972a886bb4bd48c1ecf621c3295ff29720cd12fce51315c4c7e34fe84d1cd9c",
+  "cache_index_sha256": {
+    "train": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+    "development": "fd42d2e511d754755fa5e2c06527077351869f06e868ecb8acb4404eadaa26c3"
+  },
+  "o_development_records_sha256": "3f426891f6811a595542a1e9694783521ae89cf18d6385896012e5f52a8e9b9a",
+  "raw_labels": {
+    "manifest_sha256": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+    "complete_sha256": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69"
+  },
+  "engineering": {
+    "preflight_complete_sha256": "754b00c9ae4bec10a5ead57053a67178ced4c503df561ae4fb60ea7e2861a97d",
+    "core_cpu_tests": {
+      "job": "future_feature_residual_cpu_v1",
+      "status": "EXITED_ZERO",
+      "returncode": 0,
+      "tests": 7,
+      "seconds": 2.224409200000082,
+      "files_sha256": {
+        "launch.json": "fb023a8891f6801cca6ca52cf8bbde9e46a793a4884e9ead3038fa5074a5341a",
+        "state.json": "5f6cbc5a2ed755a0768421b5e2693a0a1d5f876e440f56225204f0c78f092ad8",
+        "output.log": "23e8b029cf610d03d6c537b41e181c838888d33390a4dd58d3bbd0dfa7deb486"
+      },
+      "test_source_sha256": "c4062b4a6216463c9ba901a21a9f37cd2382e6c2cced8651005c94a10bb416ec",
+      "scope": "Actual CPU core tests only; no native GPU updates or effectiveness claim"
+    }
+  },
+  "resources": {
+    "preflight": {
+      "max_seconds": 600.0,
+      "max_allocated_gib": 32.0
+    },
+    "train": {
+      "max_seconds": 3600.0,
+      "max_allocated_gib": 32.0
+    }
+  },
+  "execution_scope": "Fresh matched R/R0 fixed512 updates each plus final dev200 with original O and common GT; no preflight weights reused, no checkpoint/threshold selection.",
+  "analysis_bindings_sha256": "b21c6e04fbd36f6923e0affa9db9c1f19840d4199c14fde714e6b6b96136fa92",
+  "resource_basis": {
+    "preflight_complete_sha256": "754b00c9ae4bec10a5ead57053a67178ced4c503df561ae4fb60ea7e2861a97d",
+    "preflight_original_protocol_sha256": "32141dd3fcdbbeffe8e9c27443cf05dff0be2d7aff095d44d507777fa69773ad",
+    "actual_initialization_seconds": 11.55200116999913,
+    "actual_warm_max_matched_update_seconds": 2.3854955800015887,
+    "512_update_extrapolation_seconds": 1221.3737369608134,
+    "actual_preflight_peak_allocated_bytes": 4828348416,
+    "development_seconds_estimate": 600,
+    "development_estimate_basis": "completed common O/J/D dev200 took 428.995 script seconds; R/R0 adds feature-residual inference; 600 is an estimate, not a measured new run",
+    "overall_wall_ceiling_seconds": 3600,
+    "outer_runner_ceiling_seconds": 3660,
+    "estimated_end_to_end_seconds": 1900,
+    "no_budget_extension_or_restart_on_timeout": true
+  }
+}

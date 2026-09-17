@@ -1,0 +1,178 @@
+{
+  "schema": "object-state-forecast-preflight-local-checks-v1",
+  "status": "CPU_PARSE_GEOMETRY_METADATA_PASS_NATIVE_UNEXECUTED",
+  "runtime": {
+    "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "python": "3.14.4 (main, Apr  7 2026, 13:13:20) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "numpy": "2.4.4"
+  },
+  "sources_sha256": {
+    "object_state_forecast_preflight_v1.py": "1bc7d146be133f9801fed5a0b2a2eb02cd58f2451b3f4674f63e9e7145d08f00",
+    "object_state_prediction_inputs_v1.py": "55e39715fdf19e5ae1f227a943a843b194eabed08e788ccb2694a040d6f18256",
+    "object_state_conditioner_v1.py": "cdaf1ef70a2ca11ee7d027817046d767b5b341727694f07d24d9f9bee244102c",
+    "future_state_motion_v1.py": "96e796dd5bb6d33949a03a6c451919ef2e19c75b81eaea4b10e2c98f8ecc176e"
+  },
+  "checks": {
+    "python310_AST": true,
+    "column_pose_center_and_vector_no_translation": true,
+    "fixed_GMO_all_scores_original_order": true,
+    "empty_geometry_shapes": true,
+    "actual_dev200_asset_rejected_before_Torch": "Not completed official train512 inference",
+    "actual_first16_metadata_identity_pose_sha": true,
+    "selected_first2_distinct_scenes": true,
+    "original_schedule_rng_gradient_helper_AST_exact": true,
+    "no_Torch_import": true
+  },
+  "selected_ordinals": [
+    396,
+    445,
+    60,
+    115,
+    423,
+    146,
+    410,
+    329,
+    285,
+    199,
+    339,
+    139,
+    394,
+    323,
+    174,
+    267
+  ],
+  "real_metadata": [
+    {
+      "ordinal": 396,
+      "sample_token": "01778b3915c84f4ea6036da0cd64e855",
+      "scene_token": "0287702725184161af95373198546a59",
+      "official_index": 15303,
+      "split": "train",
+      "raw_pose_carrier_sha256": "1cb3fcce6b17d8c057086a73e76a9ad4af625a13d567aa5a534d8d941d6428fa"
+    },
+    {
+      "ordinal": 445,
+      "sample_token": "cdca0e249bcd4712a033a728be1d8bb0",
+      "scene_token": "febc1800b9ed432d96aee5ecf0156831",
+      "official_index": 3080,
+      "split": "train",
+      "raw_pose_carrier_sha256": "51d89f8e3219b3240653bc6fe447c57581c342616c47489e27d76e0724f56557"
+    },
+    {
+      "ordinal": 60,
+      "sample_token": "86419bdb54164d779f695fdb5200a1b9",
+      "scene_token": "a1e7cd557b9541dbb00822ea0c56204b",
+      "official_index": 22911,
+      "split": "train",
+      "raw_pose_carrier_sha256": "9d40d675a3fd10d03c49ad8702f8f091bcaa4fd5411ffad4f8deaa40132666c1"
+    },
+    {
+      "ordinal": 115,
+      "sample_token": "060da0971e984d1d917e3edaa7121fea",
+      "scene_token": "e2d9a52b37bd4b63b913777ef77b2d4f",
+      "official_index": 20278,
+      "split": "train",
+      "raw_pose_carrier_sha256": "bbaa1c6aded5234a8e1945cd583897c9129328b3866d2c215330928609f8f1dd"
+    },
+    {
+      "ordinal": 423,
+      "sample_token": "8e8e4aa7a38f449db11ea94e34357e82",
+      "scene_token": "2c96ff6afc9e4cf7bc8b107fce955c1f",
+      "official_index": 14110,
+      "split": "train",
+      "raw_pose_carrier_sha256": "ae2f183f4b9faf49b745b8d3268bcc4777bf9dfb4a6cc3348b309187a6337b2c"
+    },
+    {
+      "ordinal": 146,
+      "sample_token": "88bf28f11c6040658f565da3bea775b8",
+      "scene_token": "fcb40dc8514444c49b1fdc06f80a123b",
+      "official_index": 2700,
+      "split": "train",
+      "raw_pose_carrier_sha256": "3e8198c2a67ae18e7f076bccd5ef36dc0903e622a9c662e1570fe92ef0b4da5c"
+    },
+    {
+      "ordinal": 410,
+      "sample_token": "825f54223cc34e3bb570e1eb0b3c80f7",
+      "scene_token": "0be1ff07a8f148ca9535fb7f0deaf828",
+      "official_index": 18294,
+      "split": "train",
+      "raw_pose_carrier_sha256": "64cea5fade411f18a35999bc9ee444cd5a08efba36864e3db22bb1d3f5098e28"
+    },
+    {
+      "ordinal": 329,
+      "sample_token": "e380df67fa3d49c7add4657b69605cdc",
+      "scene_token": "73030fb67d3c46cfb5e590168088ae39",
+      "official_index": 532,
+      "split": "train",
+      "raw_pose_carrier_sha256": "15bef9076250ef82c5043df257d35c52db76eab5eb9fbf1b8d56b7dc7cdafa78"
+    },
+    {
+      "ordinal": 285,
+      "sample_token": "b81e52b232ba4c59aeaeced962b202f0",
+      "scene_token": "9a61a88ed9094334a73aa93c08222110",
+      "official_index": 734,
+      "split": "train",
+      "raw_pose_carrier_sha256": "6d06d39c570836a77ec1799418608d9f7b5d8013118db5a90d7b4f9ca8f08792"
+    },
+    {
+      "ordinal": 199,
+      "sample_token": "08bb4b8e0c39480090fc778a0b3ade0b",
+      "scene_token": "788c5502523f4d01b3a8de47ec3dadfb",
+      "official_index": 12058,
+      "split": "train",
+      "raw_pose_carrier_sha256": "18cc669f0a1d95121c6d8c31d53b3f56ff0f71623de3df2b67e45a6d3b867463"
+    },
+    {
+      "ordinal": 339,
+      "sample_token": "eaf4aa90827c4532b8b870b060d165bd",
+      "scene_token": "c74a3a7265ae45f99f65628fbd7cd2a4",
+      "official_index": 2617,
+      "split": "train",
+      "raw_pose_carrier_sha256": "dd562611353d9e4ef6b747967be614ead103d5c7e6af6a891a5bcafddb6342fe"
+    },
+    {
+      "ordinal": 139,
+      "sample_token": "9d5b17e0d78d474da3bb194736d9c6b0",
+      "scene_token": "d865cb18632040fdb4cb06b6e3331cdb",
+      "official_index": 3754,
+      "split": "train",
+      "raw_pose_carrier_sha256": "03e6776d9cafd1cee6c2acbc06a642d4e069a1569560b8423dcd233929f360ac"
+    },
+    {
+      "ordinal": 394,
+      "sample_token": "20cc8746e136431e8fbd9ba34ffd9d91",
+      "scene_token": "63252988084b4943a50734990c47e039",
+      "official_index": 12653,
+      "split": "train",
+      "raw_pose_carrier_sha256": "e1d575d7405514f6cc1b03d4b1e097147fe77afe48455d695c21a9a54c0e2d05"
+    },
+    {
+      "ordinal": 323,
+      "sample_token": "da8429b9357b40b3bfd3fc3b81748f50",
+      "scene_token": "5c9bd7ead37e4aa9989f7909f3a78baa",
+      "official_index": 4331,
+      "split": "train",
+      "raw_pose_carrier_sha256": "d087af13b082924f03c7f6257da2c8053a4ce10037dc3cbe900715a5c5e0e398"
+    },
+    {
+      "ordinal": 174,
+      "sample_token": "993a62212975460eb987c56b7488c31b",
+      "scene_token": "762e6aac0d6f4c1b9b0286ab4b2da654",
+      "official_index": 4988,
+      "split": "train",
+      "raw_pose_carrier_sha256": "4402d27ffdb606bf5626bcbbef379732de5719cca123657f210f973595a56ec9"
+    },
+    {
+      "ordinal": 267,
+      "sample_token": "54d2d80208c648aa8c161cea7280184d",
+      "scene_token": "38b3010304734913bb148d17ebbc352b",
+      "official_index": 16011,
+      "split": "train",
+      "raw_pose_carrier_sha256": "c4e7a01a13859ad6bb7a8105d6d53dbcfd8bc9bcc9efc189030efcbb7a3c091e"
+    }
+  ],
+  "model_forward_performed": false,
+  "optimizer_updates": 0,
+  "training_prediction_asset_authenticated": false,
+  "native_preflight_performed": false
+}

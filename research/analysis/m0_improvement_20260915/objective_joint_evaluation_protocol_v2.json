@@ -1,0 +1,144 @@
+{
+  "schema": "objective-joint-evaluation-protocol-v2",
+  "status": "FROZEN_BEFORE_OBJECTIVE_JOINT_PILOT",
+  "created_utc": "2026-09-14T20:07:25.487739+00:00",
+  "parent_protocol_sha256": "071547971498579a5f695697aacaa2dbf17eecfdd93c066c011227bcac08505a",
+  "objective_train_protocol_sha256": "275b2551775b169471cb230a1416d0454c0560d229c4fe9b7ec5166cfc4c460d",
+  "candidate_names": [
+    "O"
+  ],
+  "nomination_rule": {
+    "metric": "future_macro_gmo",
+    "comparators": [
+      "M0_fp32",
+      "native1"
+    ],
+    "minimum_point_delta_pp": 0.5,
+    "minimum_ci_lower_pp": 0.0,
+    "ci_lower_strict": true,
+    "include_all_qualifying_in_F_O_order": true
+  },
+  "source_sha256": {
+    "objective_joint_evaluation.py": "ab0b80aa14ecd8587077e20cf9fbc06c6c8df724f7e0a3c8c3abece2285ee9c7",
+    "objective_joint_merge.py": "0f41248104fe26e1660d672f0bd2cf7b88b94f61f795ab2836dd2969fef77330",
+    "joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "merge_joint_evaluation.py": "e54e1eda2647f487f9b3f1bb1441307f7ebd7c7125e16296a29bc0508279bf24",
+    "run_objective_joint_campaign.py": "05924a58b845b84803355fdbff20553989adbed39e3dc2ac648a7934ec7d5ed6",
+    "objective_joint_evaluation_v2.py": "f8e3da3de084f5cde3d35b9574124d9684b7ecf77387bd03cf5828c02f7d88ca",
+    "objective_joint_merge_v2.py": "0394ff12140891f70f38527f290b7f71e3c6b52bfe76bde80002620c20ac003b",
+    "run_objective_joint_campaign_v2.py": "837bafed3419c0c187ea4827a368ce7567c4e02cd7143e8a52550a84b7dd90be",
+    "native_boundary_diff.py": "b15ba346382245c2736552fdb651aa6b719d05caa9b999fea8db89b008962d74"
+  },
+  "runtime_source_sha256": {
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/bevformer.py": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/radar_bev_encoder.py": "326592d9fb94bd37bd957855bc332863dd552a32a814e67915514cda2905df5f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/radar_bev.py": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_transformer.py": "384f283c7338fb5e2c212011f3fc56982b150c54b0f39c602120f4139535f740",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/modules/conditionalnorm.py": "31549af09e3aa73d172af854299cd4ada20ceff69db7ee57dbe0f1f7b23ed76d",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/semkitti_loss.py": "e6a4b9accef1f47cf031f84e18fac925d2764b4105b8010486c8229e589abaa4",
+    "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/bevformer/losses/lovasz_softmax.py": "046a43d610d34cdd6d4b5f791aa5df0723e9cae3cbff4e34de086574b62cf8be"
+  },
+  "development_summary": {
+    "directory": "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915/campaign_objective_v1/summary_v1",
+    "complete_sha256": "29a79f3225505cf8784d1a70e8207f36ff2f8b13792bd51929b86a896d3ba3ca",
+    "summary_sha256": "46c37b5b074e73896e357e0bc9744a538abb01b288521769a577f459be54ad6b"
+  },
+  "final_sources": {
+    "native1": {
+      "directory": "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915/campaign_memory_v1/runs/native1",
+      "files_sha256": {
+        "manifest.json": "d296f591dc6642e26c7ee162ece6406fab1cdeaea5fd56bdff96c5954de4968b",
+        "training_complete.json": "5a19c2bd9fe17bc02f97fabc65f119ddfa085c583943ff0ac5472023160eb394",
+        "complete.json": "8e6f58fa8f0d149ddcdc69c9a3d7cfe58d1a63a6dfe56007013567f123859a28",
+        "training.jsonl": "0f7b650d3ab4f9fd0a1612943191e1411cb313586a2037e3de4b92b1a88de53f",
+        "development_records.jsonl": "8155c8ce3813a0d91a35f76dd08365e1e958121990f89bd7a7f71bed086307dd",
+        "frozen_native_fp32_records.jsonl": "e60706ec3fee6c37582795a474fbcf5959dcafe9175e16a68d9cddfd54cd8882",
+        "latest.pth": "a12426c51b785fb34c3f6c09ec7fdf3c62b9da89e82f5a10d539a851a5a2d72b"
+      },
+      "final_head_state_sha256": "3e67265a15e54ebc6aa249852c64f4d807c8bd6613d6c6f3ef6dba175d3db9c5"
+    },
+    "O": {
+      "directory": "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915/campaign_objective_v1/runs/O",
+      "files_sha256": {
+        "manifest.json": "bbec852ef7323dbef406f36b639896869e2b9388fa4593320c03b52580570e97",
+        "training_complete.json": "886d1c3dcfea19b7c84edb4a941b27e23f10a90af9bc7290e3401d24dc19691d",
+        "complete.json": "762d6db14f48389c83ca70a22cf84eea11b909aab5dac88edec4687abbb490b6",
+        "control_reuse.json": "6f1f7d136941eda6ffbffca0a1b826c5f303af3719573aeb58074cb4ebaa6461",
+        "training.jsonl": "c5895553f25f8f26fbcedf2479b4302bee314be68e21a42717fc6e63e93d9b70",
+        "development_records.jsonl": "3f426891f6811a595542a1e9694783521ae89cf18d6385896012e5f52a8e9b9a",
+        "latest.pth": "ee9d91f58005b4732f5f68ffe90343a299016cc38582514f58b12aca77e0af70"
+      },
+      "final_head_state_sha256": "1816cc040b3068b6e5ed3591aec6b8b919d2b3bd8b54b2186e4311ed2fa284fb"
+    }
+  },
+  "selections": {
+    "pilot": {
+      "file": "joint_preflight_selection_v1.json",
+      "sha256": "e616af491e77ad977dfddfd931c1110f9580921bc38ed6ad84281dfe23a9754d"
+    },
+    "full": {
+      "file": "full_validation_selection_v1.json",
+      "sha256": "60811c8a0847eaf38caeac489eb5dafc3f34cf90b402e640a182356a620eb391"
+    }
+  },
+  "resources": {
+    "pilot": {
+      "max_seconds": 600,
+      "max_allocated_gib": 64,
+      "shard_count": 2
+    },
+    "full": {
+      "max_seconds": 21600,
+      "max_allocated_gib": 64,
+      "shard_count": 2
+    }
+  },
+  "historical_validation_exposure": true,
+  "new_blind_test": false,
+  "multiple_comparison_adjustment": false,
+  "training_seeds_added": 0,
+  "config_sha256": "c92faf7c2a4697ae7faa0c69ca844068dd8f5a6d28463e7ad45307c4ab374303",
+  "m0_sha256": "0348dc8f28d2959637dcd9ac7ccd29fea0da20c25c9856cdb4709c3e221dd9dc",
+  "numerical_policy": {
+    "observer_cache_matmul_tf32": true,
+    "observer_cache_cudnn_tf32": true,
+    "future_matmul_tf32": false,
+    "future_cudnn_tf32": true,
+    "float_dtype": "float32",
+    "original_M0_reference": "native unchanged cached predictions with TF32 enabled",
+    "additional_reference": "same cached observed state, native M0 future head without matmul TF32, frozen before optimizer"
+  },
+  "supersedes_evaluation_protocol_sha256": "76a2b11739c9367de8cbd8f22d67c1dc68b4e52cf9a4ec2d817cf16ffaa7240a",
+  "revision_reason": "Observed mismatch only in unused random planning sample_traj; actual fresh inputs unchanged, complete hashes retained; all other typed leaves and GT/logits/confusion parity remain exact. No scientific metric, candidate, checkpoint or training change.",
+  "inactive_boundary_policy": {
+    "path": "inputs.plan_dict.sample_traj",
+    "shape": [
+      1,
+      1800,
+      5,
+      3
+    ],
+    "dtype": "float64",
+    "planning_must_be_disabled": true,
+    "comparison_only_projection": true,
+    "source_function_ast_sha256": "2593f6549742ec99c7c0b9877d63361c57f3126012626f51b7e96db7d494cbba",
+    "previous_cache_source_coverage_claim": false,
+    "sources": {
+      "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_template.py": "9de0dfbba0b77567cf011fb0adb163492e8d5e6f510040b95626b3bcded822cc",
+      "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/datasets/samplers/sampler.py": "65b7cea1de9e6563674b6faf80ba809b2497083fe3a5141f92d8ea9e9beee95c",
+      "/home/wangning/Workspace/RadarFlowOcc-sota-p2/projects/mmdet3d_plugin/models/utils/grid_mask.py": "92589caffcd8102b02cafff78e64614ecf8bc8ad548ab95cbf4d1a898327f150"
+    },
+    "diagnostic": {
+      "directory": "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915/objective_boundary_diff_v1",
+      "difference_sha256": "aecf29305e3d4b086e834df4b391580e0964a330a22f4d91c09566b4036b95a5",
+      "complete_sha256": "9577fa4cadd0c1be8c8c189dba6f85e8ed330ea912f7f7047967ced717f635fb"
+    }
+  },
+  "additional_source_observation_receipt_sha256": "7173c7eaa0542f2c22b816af4c2b0d0997e750e92c5974aedf68734a0f6cb409"
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "crn-train512-preparation-and-inference-plan-v1",
+  "status": "REVIEW_REQUIRED",
+  "local_source_sha256": {
+    "prepare_crn_train512_inputs_v1.py": "75b5bba81c59348f9c0f190a34065d84ed465814e2cbd98f84578a823dff6e38",
+    "crn_train512_inference_v1.py": "b77f18b1ba9af4a29213ad3a17048f55ebd0259abb5a788147e748661ff8e290",
+    "crn_box_origin_adapter_v1.py": "aa05e4cd8d2c9ffbf41e751ebc0bda7114040753e404c0560975ee134e23a101",
+    "crn_train512_source_contract_v1.json": "e147d9deca1409ee060a1ceb384f89424b55a9c40a866576b638f92f7f414e5a"
+  },
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+  "remote_new_root": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/crn_train512_state_v1",
+  "original_repo": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN",
+  "official_checkpoint": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/radar_fusion_baselines_20260909/official_assets/CRN_r50_256x704_128x128_4key.pth",
+  "official_checkpoint_sha256": "f725aafc7f033f484f13704134178f2377b3e12bb7e85207b447f8a3ebfa0cb3",
+  "resources": {
+    "prepare_cpu_inner_seconds": 1800,
+    "prepare_outer_seconds": 1860,
+    "projection_workers": 2,
+    "pilot_inner_seconds": 600,
+    "pilot_outer_seconds": 660,
+    "pilot_gpu_allocated_gib": 16,
+    "full_script_ceiling_seconds": 1800,
+    "full_final_budget": null,
+    "automatic_dispatch_or_retry": false
+  },
+  "actual_asset_complete_sha256": null,
+  "actual_pilot_complete_sha256": null,
+  "prepare_argv": [
+    "python",
+    "-B",
+    "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/crn_train512_state_v1/package/prepare_crn_train512_inputs_v1.py",
+    "--repo",
+    "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN",
+    "--source-data-root",
+    "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/radar_fusion_baselines_20260909/data_views/CRN",
+    "--source-contract",
+    "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/crn_train512_state_v1/package/crn_train512_source_contract_v1.json",
+    "--source-contract-sha256",
+    "e147d9deca1409ee060a1ceb384f89424b55a9c40a866576b638f92f7f414e5a",
+    "--selection",
+    "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/crn_train512_state_v1/package/selection_v1.json",
+    "--out",
+    "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/crn_train512_state_v1/assets",
+    "--max-seconds",
+    "1800"
+  ],
+  "prepare_environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "scientific_scope": "Author official weights inference only, train subset, no optimizer or new performance metric. No inference on dev200 and no overwrite of original exports."
+}

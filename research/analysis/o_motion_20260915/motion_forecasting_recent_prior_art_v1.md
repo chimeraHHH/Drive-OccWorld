@@ -1,0 +1,13 @@
+# 近期运动与占据预测先例：对当前 J/D 问题的覆盖
+
+核查：2026-09-16。范围限以下四项原论文及作者来源；不读取正在运行的 J/D 结果，不训练。**最直接的覆盖来自 Asghar 等的 2026 修订稿：物理 flow 监督、占据传播梯度及 IoU／动态召回的取舍，均已有明确先例。**
+
+1. **Asghar 等，Integrating Specialized and Generic Agent Motion Prediction with Dynamic Occupancy Grid Maps（2026 修订预印本）**。§IV-D/E、式(5)(7)：在有动态 GT flow 或静态占据的格点施加 L1，同时让全图 warped occupancy 损失经 backward flow 反传；另有直接占据预测分支。输入是 DOGM／车辆栅格，预测 2.5 s BEV，非我们的雷达视觉原生 3D GMO。§VI、表 II 同时报告动态 EPE／召回：车辆直接预测→与传播结果相乘，IoU **0.467→0.480**，动态召回 **0.563→0.499**。这直接否定“接入运动并提高 IoU 必然改善动态覆盖”的推论。其 GT flow 来自对象位移，未等同真实点级 scene flow；未核到我们的速度分组或同模型 stop-gradient 对照。未核到作者代码／权重；arXiv 注明 T-IV 第二轮审稿，不能写成已接收。[正文 §IV–VI](https://arxiv.org/html/2602.07938v1)，[版本状态](https://arxiv.org/abs/2602.07938)。
+
+2. **Lengyel，CCLSTM（2025 预印本）**。§3.2 式(3–9)：occupancy／flow／trace 权重为 1000／25／10；BCE 的格点乘数为 (1+O(1+\|F_{GT}\|/10))，明确针对静止样本偏多。trace 用预测 flow 搬运前一帧 **GT** occupancy，与下一帧 GT 比较；不是把预测 occupancy 乘进该式。flow 正文称 MSE，但式(7)写 L1，缺代码不能替作者消解矛盾。WOMD 输入包含历史对象占据、地图及历史 backward flow，输出 8 s；报告 Flow EPE、soft-IoU 等，未见速度分组召回。已覆盖“用真实运动加权占据风险”的一般想法。作者声明的 GitHub 仓库本次 API 返回 404，未确认公开权重，不能视为随取可测基线。[正文 §3.2–4](https://arxiv.org/html/2506.06128v1)，[作者页面](https://aimotive.com/occupancy-forecasting)，[声明仓库](https://github.com/aimotive/CCLSTM)。
+
+3. **EfficientOCF，Spatiotemporal Decoupling for Efficient Vision-Based Occupancy Forecasting（CVPR 2025）**。视觉序列预测 BEV occupancy、height 和 backward centripetal flow，再做实例关联／3D 重建，是任务最接近的一项。作者代码 `forward_train` 独立汇总三类监督，flow 为 **0.01×SmoothL1（ignore=255）**；实例传播路径明确 `detach`，并有 argmax／整数化，不能据此声称其最终占据损失通过实例搬运回传到 flow。公开评价输出含 3D IoU／recall、VPQ，未核到物理 EPE 或速度分组 recall。代码为 MIT；README 的 checkpoint 是本地示例路径，未核到可下载权重。其标签加工、训练规模及实例处理仍须另行对齐，不能直接复用论文分数。[论文](https://arxiv.org/abs/2411.14169)，[作者仓库](https://github.com/BIT-XJY/EfficientOCF)，[训练与 detach 路径 L466–547、L1006–1048](https://github.com/BIT-XJY/EfficientOCF/blob/main/projects/occ_plugin/occupancy/detectors/efficientocf.py#L466)，[flow loss L115–128](https://github.com/BIT-XJY/EfficientOCF/blob/main/projects/occ_plugin/occupancy/dense_heads/flow_head.py#L115)。
+
+4. **LEGO-Motion（2025 预印本）**。§III-E 式(7–11)：非空格点位移 SmoothL1、静动状态 CE、类别 CE、实例 mask 监督共同训练；实例特征通过门控和注意力增强 BEV。输入为五帧 LiDAR，评价当前非空格点的 **1 s 位移 L2**，分静止 ≤0.2、慢速 (0.2,5]、快速 >5 m/s，另报运动稳定性；不是完整未来 3D occupancy 的共同 IoU／recall。它已覆盖“实例一致性＋物理运动分组评价”，但所核配方未含 future occupancy transport 的任务梯度。作者只声明将公开代码，本次未核到作者仓库／权重。其 500／100／250 scene 划分也不能混作本项目官方 train／val 划分。[正文 §III–IV、表 II／IV](https://arxiv.org/html/2503.07367v1)。
+
+**对本项目的判断（推论）**：不能主张首次联合 occupancy／flow、首次动态重加权、首次观察 IoU 与运动指标分离。当前 J/D 的价值是把**是否让占据梯度进入同一个物理位移头**作同初始化、同监督和预算的干预，并分别检查位移误差与共同占据风险；这仍是机制诊断，尚不是“物理分量与任务修正已解耦”的方法结果。若 J 只提高 IoU 而损害物理 EPE，才支持研究受约束物理分量与独立任务残差；若二者同升，则不能预设分离必需。本次四项中未核到这一严格同预算干预，不等于已证明新颖性，也不构成公开权重可比基线承诺。

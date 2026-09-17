@@ -1,0 +1,22 @@
+# Keep this archive limited to source, protocols, notes, and aggregate evidence.
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+*.pkl
+*.7z
+*.zip
+*.tar*
+*.log
+*.pem
+*.key
+.env*
+ssh_config*
+**/external/
+**/jobs/
+**/receipts/
+**/queried/
+**/datasets/
+**/checkpoints/
+**/__pycache__/

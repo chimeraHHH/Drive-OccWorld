@@ -1,0 +1,75 @@
+{
+  "schema": "o-motion-contract-audit-evidence-v1",
+  "status": "PASS_BOUNDED_RAW_METADATA_AND_SOURCE_AUDIT",
+  "raw_evidence_sha256": "e72922db8d49fd89696209173ddf7c69bd13129ccbe4cb2cd35fa553d7984021",
+  "raw_query_script_sha256": "66e797b411edbb3a81f1125d037f18d339778be51cfc3f4b85d315a9b893dc11",
+  "protocol_v2_sha256": "071547971498579a5f695697aacaa2dbf17eecfdd93c066c011227bcac08505a",
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+  "catalog_sha256": "b59f92a4488dc465130b9477f50bcf6b16469b27b26205443f6878cf022c90f1",
+  "catalog_matches_frozen_selection": true,
+  "source_match": {
+    "projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_template.py": {
+      "server_sha256": "9de0dfbba0b77567cf011fb0adb163492e8d5e6f510040b95626b3bcded822cc",
+      "local_sha256": "9de0dfbba0b77567cf011fb0adb163492e8d5e6f510040b95626b3bcded822cc",
+      "equal": true
+    },
+    "projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py": {
+      "server_sha256": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+      "local_sha256": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+      "equal": true
+    },
+    "projects/mmdet3d_plugin/datasets/pipelines/loading_instance.py": {
+      "server_sha256": "d63d9fbce4eec46e2713eef027e1ab7be5ba73183c859f3928c68e50a52ed9b6",
+      "local_sha256": "d63d9fbce4eec46e2713eef027e1ab7be5ba73183c859f3928c68e50a52ed9b6",
+      "equal": true
+    },
+    "projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py": {
+      "server_sha256": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+      "local_sha256": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+      "equal": true
+    },
+    "projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py": {
+      "server_sha256": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+      "local_sha256": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+      "equal": true
+    },
+    "projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py": {
+      "server_sha256": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+      "local_sha256": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+      "equal": true
+    },
+    "projects/mmdet3d_plugin/bevformer/losses/semkitti_loss.py": {
+      "server_sha256": "e6a4b9accef1f47cf031f84e18fac925d2764b4105b8010486c8229e589abaa4",
+      "local_sha256": "e6a4b9accef1f47cf031f84e18fac925d2764b4105b8010486c8229e589abaa4",
+      "equal": true
+    },
+    "tools/data_converter/nuscenes_converter.py": {
+      "server_sha256": "0a88ebf1a6f25bd7c1072f7689a82b992ed14a73d50b50b0397cc6a3a5df2b82",
+      "local_sha256": "0a88ebf1a6f25bd7c1072f7689a82b992ed14a73d50b50b0397cc6a3a5df2b82",
+      "equal": true
+    }
+  },
+  "splits": {
+    "train": {
+      "anchors": 23930,
+      "scenes": 700,
+      "ann_file": "/home/wangning/data_cache/RadarFlowOcc_m3_h200/datasets/nuscenes_driveocc/nuscenes_infos_temporal_train_new.pkl",
+      "previously_certified_ann_sha256": "45bff6a897f4835084eb287a7cf6c4cf2b6cf8330196e494987f512055080584",
+      "large_pkl_reread_this_audit": false
+    },
+    "validation": {
+      "anchors": 5119,
+      "scenes": 150,
+      "ann_file": "/home/wangning/data_cache/RadarFlowOcc_m3_h200/datasets/nuscenes_driveocc/nuscenes_infos_temporal_val_new.pkl",
+      "previously_certified_ann_sha256": "83c1637453777f2ff02d5ae0daa719d008f1c7f450662b2ebe77074c35ee7eb9",
+      "large_pkl_reread_this_audit": false
+    }
+  },
+  "native_cache_contains_motion_labels": false,
+  "predictions_read": false,
+  "checkpoint_read": false,
+  "model_computation": false,
+  "failed_prior_query_preserved": "metadata_probe_v1_failure.json",
+  "raw_box_motion_is_not_point_scene_flow": true,
+  "train_val_scenes_disjoint": true
+}

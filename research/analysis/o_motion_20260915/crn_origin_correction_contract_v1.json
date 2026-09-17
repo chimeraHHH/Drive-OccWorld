@@ -1,0 +1,23 @@
+{
+  "schema": "crn-bottom-center-semantic-correction-v1",
+  "status": "SOURCE_CONFIRMED_BEFORE_CORRECTED_SCORE",
+  "utc": "2026-09-15T20:55:28.189229+00:00",
+  "raw_export_sha256": "fec6541461bf6eb0ad5f3e113e4fcb13c937896731203ef5de003a6ac0055653",
+  "runtime_proof_sha256": "2d9b711857e82ff1c3e88be16064a05d12b03d63f23f1d2545941c5b6fca0149",
+  "change": "Recover geometric centre = raw global translation + exported rotation matrix column2 * exported height/2. Full quaternion rotation; no global-z-only approximation.",
+  "basis": "Actual CRN centre-z targets -> inherited CenterHead subtracts half-height -> LiDARInstance3DBoxes.tensor -> eval_step .tensor -> exporter Box(center=first3) -> global pose. evaluate_official.py calls model.eval_step.",
+  "unchanged": [
+    "source boxes order and all scores/classes/sizes/velocities",
+    "fixed200/100scenes and original16074 object-horizon support",
+    "highest covering score, original-order tie, uncovered zero",
+    "nominal0.5/1/1.5/2sec horizons",
+    "point-to-object weighting and pairedscene10000seed11statistics"
+  ],
+  "not_claimed": [
+    "bitwise recovery of pre-float32-subtraction centre",
+    "GT-fitted translation correction",
+    "new model accuracy improvement or occupancy gain"
+  ],
+  "raw_diagnostic_complete_sha256": "3cda7974b2feeadb50be710e7128841cdce8294e0d09fd5116f0edb5a39244b5",
+  "new_scores_seen": false
+}

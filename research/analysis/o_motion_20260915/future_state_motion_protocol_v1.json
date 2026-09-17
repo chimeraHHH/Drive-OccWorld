@@ -1,0 +1,112 @@
+{
+  "schema": "future-state-motion-training-v1",
+  "status": "FROZEN",
+  "training": {
+    "seed": 11,
+    "updates": 512,
+    "examples": 2048,
+    "accumulate": 4,
+    "train_samples": 512,
+    "planned_formal_updates": 512,
+    "formal_authorized": true,
+    "future_head_parameters": 13274016,
+    "motion_readout_parameters": 745392,
+    "future_head_lr": 1e-05,
+    "future_head_grad_clip": 35.0,
+    "future_head_warmup_updates": 50,
+    "readout_lr": 0.001,
+    "readout_grad_clip": 10.0,
+    "readout_warmup_updates": 25,
+    "weight_decay": 0.01,
+    "optimizer": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "amsgrad": false,
+    "physical_loss_coefficient": 1.0,
+    "occupancy_loss_coefficient": 1.0,
+    "smooth_l1_beta_m": 0.5,
+    "sample_order": "all four continuous RandomState11 permutations of 512",
+    "schedule": "original O head 512-update warmup/cosine; original source-motion readout schedule",
+    "occupancy_loss": "original coarse twelve computed; original O CE[1,5]+Lovasz six selected",
+    "physical_loss": "original sparse point_xyz/object/present_group/valid_horizon means",
+    "arm_difference": "K retains native terminal feature graph; B detaches readout features only",
+    "scope": "whole native future_pred_head plus new readout; D and non-future-head O state frozen",
+    "rng": "same pre-forward Python/NumPy/CPU/CUDA state restored for paired K/B microsteps",
+    "initialization": "same actual O final and same new seed11 readout; dense displacement starts at actual D",
+    "initial_loss_comparison": "same-logit CE per term rel1e-5 abs1e-7; Lovasz exact; physical index_add scalar difference descriptive, input bytes exact",
+    "outputs": "no logit composition; native O occupancy prediction returned verbatim",
+    "weights_persisted": true,
+    "development_evaluation": true,
+    "passes": 4,
+    "development_samples": 200,
+    "development_scenes": 100,
+    "checkpoint": "fixed final512 only; no resume, best, or intermediate development",
+    "diagnostic_physical_VJP_microsteps": [
+      4,
+      2044
+    ],
+    "diagnostic_VJP_controls_training": false
+  },
+  "numerical_policy": {
+    "dtype": "float32",
+    "matmul_tf32": false,
+    "cudnn_tf32": true,
+    "cudnn_benchmark": false
+  },
+  "sources_sha256": {
+    "train_connected_motion_v2.py": "1df18b52c9e00f168c749384546c5818e6e5abbcc093c84ca23a63086d29e84a",
+    "train_supported_fusion_v2.py": "61cb7c96fc8127f4b3b5ef34fff380e0c2076210463cff29e4cee5d3a5d87d7c",
+    "supported_motion_fusion.py": "60b1a248ae3237f6f55686cf11349bd85d7c1b98495c714ca55f828da38d140c",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "learned_transport_probe_v1.py": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0",
+    "oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+    "objective_supervision_adapters.py": "44d91a01909d39c759f3b919e1863b431a25751891aba861575a6fdd6f3ed703",
+    "joint_native_evaluation.py": "280a032a95070f4a618664f5e47788f00a04d8c048865b5e6000f80b724d1578",
+    "common_change_evaluation_v2.py": "b73a616c16a1765aeb71e2922c8ba512972b38566f74363a391b0f2e57fc2059",
+    "common_occupancy_change_metrics_v1.py": "0ca592ca0b41ecf3524a0e49d8414e35518f4f9e50ccbb50937af8fded666951",
+    "motion_geometry.py": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+    "common_connected_motion_evaluation_v2.py": "57cf304bafb050fac05b06abe68ce4600a37ca020d9d10d0673ec0ab1edb3bc1",
+    "future_state_motion_v1.py": "96e796dd5bb6d33949a03a6c451919ef2e19c75b81eaea4b10e2c98f8ecc176e",
+    "future_state_motion_preflight_v1.py": "5397cb38b258f1ef2ef27b6e1bf47ef4b4085fa8b43a52e10d5c7b7fc34e91ab",
+    "future_state_motion_train_v1.py": "2cb16d2d1e15a17b808b23cee8637066c9f5fb85f934950cdf94d680e10bc393"
+  },
+  "preflight_protocol_sha256": "d03a261909cfe3bcdd36da4b0a622580a610647e1f06f0d643514514da822234",
+  "engineering_preflight_complete_sha256": "8d2e2dd9094ffb897eccd60febc95d2e06b30f93e7b8aaad74dc4657bde20dbd",
+  "connected_protocol_sha256": "e933d234c1adf49941a903f12483985eba9bde2393172a3a114e95343aeec259",
+  "connected_complete_sha256": "f0bf075fa36622b38c0c5136b187a184d16d3e07ed00857dfe21a0545f1c5f56",
+  "D_checkpoint_sha256": "7e2750d56ade7fb36e334b6431e83f51aafa997357744780a507924a696951e3",
+  "runtime_source_contract_sha256": "5972a886bb4bd48c1ecf621c3295ff29720cd12fce51315c4c7e34fe84d1cd9c",
+  "cache_index_sha256": {
+    "train": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+    "development": "fd42d2e511d754755fa5e2c06527077351869f06e868ecb8acb4404eadaa26c3"
+  },
+  "labels": {
+    "manifest_sha256": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe",
+    "complete_sha256": "3d14a03cd61761a1ebc26313463dbff06854907c19c49057667a0ffd257e05bd"
+  },
+  "raw_labels": {
+    "manifest_sha256": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+    "complete_sha256": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69"
+  },
+  "o_development_records_sha256": "3f426891f6811a595542a1e9694783521ae89cf18d6385896012e5f52a8e9b9a",
+  "resources": {
+    "max_seconds": 4800.0,
+    "max_allocated_gib": 32.0
+  },
+  "resource_decision": {
+    "design_sha256": "de6fdbb1e15ea6fcd4243e1d7d2806663c4233e2ba5e153d9d5ecfa32adfed62",
+    "actual_preflight_audit_sha256": "757ba426e26faad51165f96d311e54636aa54e85ba44af38731e14f112e5e1e7",
+    "automatic_budget_expansion": false
+  },
+  "analysis_sources_sha256": {
+    "summarize_future_state_common_v1.py": "23f6fc0a6d7a9c63a1e77f90ca94a2aedc72b68b82b201df4f34c6d3f3123e8a",
+    "summarize_future_state_physical_v1.py": "920f4f96e0bd5df247b3d096bdf1709d80fed593622b70373093ea1160db2de3"
+  },
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d"
+}

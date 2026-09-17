@@ -1,0 +1,71 @@
+{
+  "schema": "history-pose-address-control-train-v1",
+  "status": "FROZEN",
+  "created_utc": "2026-09-16T08:30:49.250520+00:00",
+  "extractor_sha256": "f721ae8b4ee12b7795a7b2e5d26d6c9aa6ef6c02103af21fbf85522244e9869f",
+  "core_sha256": "7de75c862634729a804b95ac6b6d9f03b2193a0622a279102083977fa1724072",
+  "parent_core_sha256": "c7469179d1628979b30eb256e695fdd6479ffd6e2df047d380d890512f57a5ea",
+  "camera_complete_sha256": "0c0d2e640a12e3299e8dacc03189776669cd2e50036a65de823026304119b648",
+  "history_inputs_complete_sha256": "040d62242a541b9685f3f39f1534b3663b0e1142b4cd7d9737cdbfd15d94314d",
+  "motion_complete_sha256": "3bd429effb1fbe50ac0aeb77330bc0100ee144bf8406fbd078097fb336301a73",
+  "raw_manifest_sha256": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+  "raw_complete_sha256": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69",
+  "points_file_sha256": "91bcc80882e41ffd5234cecce4b517ef4081839c89dbb6a048c4226b723ca6fd",
+  "resources": {
+    "max_seconds": 600,
+    "cpu_threads": 2
+  },
+  "reference_reason_codes": {
+    "0": "valid",
+    "1": "original_photo_invalid",
+    "2": "current_pose_unavailable",
+    "3": "past_pose_unavailable",
+    "4": "current_GT_projection_invalid",
+    "5": "past_GT_projection_invalid"
+  },
+  "pose_reason_codes": {
+    "0": "available",
+    "1": "time_outside",
+    "2": "missing_box",
+    "3": "broken_link",
+    "4": "not_evaluated"
+  },
+  "constants": {
+    "slerp_nlerp_dot": 0.9995,
+    "time_order": [
+      "current",
+      "past"
+    ],
+    "sample_slots": [
+      -2,
+      -1,
+      0
+    ],
+    "patch_size": 7,
+    "zncc_eps": 0.00392156862745098,
+    "shared_middle_endpoint": "earlier [0,1] bracket, no availability fallback"
+  },
+  "scope": {
+    "samples": 512,
+    "scenes": 256,
+    "source_points": 1740053,
+    "images": "Original six current and previous keyframes, same selected camera per original point",
+    "GT": "Privileged historical rigid-box reference only; not deployable",
+    "strict_three_slot_carrier": true,
+    "interpolation": "Linear centers and shortest-arc normalized quaternion SLERP; no size scaling",
+    "timestamps": "GT pose at camera timestamp bracketed by original box sample times; original D timing still camera minus original LiDAR",
+    "extrapolation": false,
+    "future_poses": false,
+    "additional_texture_filter": false,
+    "reference_valid": "original_photo_valid AND both historical poses bracketed/linked AND both GT projections valid",
+    "broken": "Original past image circular width//2 roll; current image unchanged; common reference-valid population",
+    "output": "GT true/broken correlation and paired differences vs unchanged cached D/zero; all original queries retained",
+    "fitting": false,
+    "threshold_selection": false,
+    "model_forward": false,
+    "optimizer_updates": 0,
+    "development": false,
+    "images_authenticated_before_decode": true,
+    "original_cached_arrays_must_remain_unchanged": true
+  }
+}

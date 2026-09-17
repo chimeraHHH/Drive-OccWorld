@@ -1,0 +1,270 @@
+{
+  "schema": "full-native-fusion-integration-readonly-inventory-v1",
+  "research_roots": {
+    "checked_utc": "2026-09-15T16:03:04.971485+00:00",
+    "scope": "bounded directory metadata only; no arrays or checkpoints read",
+    "roots": {
+      "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915": [
+        {
+          "name": "campaign_frame_v1"
+        },
+        {
+          "name": "campaign_memory_v1"
+        },
+        {
+          "name": "campaign_objective_joint_full_v2",
+          "children": [
+            "complete.json",
+            "evaluation",
+            "manifest.json",
+            "merge.log",
+            "shard_00.log",
+            "shard_01.log",
+            "state.json",
+            "summary_v1"
+          ]
+        },
+        {
+          "name": "campaign_objective_joint_pilot_v1"
+        },
+        {
+          "name": "campaign_objective_joint_pilot_v2"
+        },
+        {
+          "name": "campaign_objective_v1"
+        },
+        {
+          "name": "campaign_readout_transition_v1"
+        },
+        {
+          "name": "campaign_readout_transition_v2"
+        },
+        {
+          "name": "campaign_readout_transition_v2b"
+        },
+        {
+          "name": "campaign_readout_transition_v3"
+        },
+        {
+          "name": "campaign_readout_transition_v4"
+        },
+        {
+          "name": "catalog_v1"
+        },
+        {
+          "name": "frame_preflight_v1"
+        },
+        {
+          "name": "frame_preflight_v2"
+        },
+        {
+          "name": "frame_preflight_v3"
+        },
+        {
+          "name": "full_supervision_preflight_v1",
+          "children": [
+            "complete.json",
+            "manifest.json",
+            "progress.json",
+            "report.md",
+            "summary.json"
+          ]
+        },
+        {
+          "name": "jobs"
+        },
+        {
+          "name": "memory_precision_probe_v1"
+        },
+        {
+          "name": "memory_profile_v1"
+        },
+        {
+          "name": "memory_profile_v2"
+        },
+        {
+          "name": "memory_train_diagnostic_v1"
+        },
+        {
+          "name": "native_replay_gradient_v1"
+        },
+        {
+          "name": "objective_boundary_diff_v1"
+        },
+        {
+          "name": "objective_supervision_preflight_v1"
+        },
+        {
+          "name": "real_coordinate_audit_v1"
+        },
+        {
+          "name": "supervision_granularity_v1"
+        }
+      ],
+      "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/o_motion_20260915": [
+        {
+          "name": "jobs"
+        },
+        {
+          "name": "motion_extraction_package_v1"
+        },
+        {
+          "name": "motion_head_cpu_test_v1"
+        },
+        {
+          "name": "motion_targets_v1",
+          "children": [
+            "complete.json",
+            "development",
+            "manifest.json",
+            "statistics.json",
+            "train"
+          ]
+        },
+        {
+          "name": "probes"
+        },
+        {
+          "name": "source_motion_preflight_v1"
+        },
+        {
+          "name": "source_motion_train_v1"
+        },
+        {
+          "name": "sparse_motion_v1"
+        },
+        {
+          "name": "supported_fusion_loss_diagnostic_v1"
+        },
+        {
+          "name": "supported_fusion_preflight_v1"
+        },
+        {
+          "name": "supported_fusion_preflight_v2"
+        },
+        {
+          "name": "supported_fusion_train_v2"
+        },
+        {
+          "name": "transport_cpu_test_v1"
+        }
+      ]
+    },
+    "full_evaluation_samples": {
+      "directory": "/storage/data/metaiot_data/wangning/RadarFlowOcc_research_20260914/m0_improvement_20260915/campaign_objective_joint_full_v2/evaluation/samples",
+      "subdirectories": 5119,
+      "08e76760a8c64a92a86686baf68f6aff": [
+        {
+          "name": "complete.json",
+          "bytes": 269
+        },
+        {
+          "name": "records.json",
+          "bytes": 5792
+        }
+      ],
+      "f9b33fd383b143f6bc20d6796e94620d": [
+        {
+          "name": "complete.json",
+          "bytes": 275
+        },
+        {
+          "name": "records.json",
+          "bytes": 5834
+        }
+      ]
+    }
+  },
+  "native_cache_roots": {
+    "checked_utc": "2026-09-15T16:03:59.220360+00:00",
+    "scope": "depth 2 cache directory metadata; small complete/index headers only",
+    "roots": {
+      "/home/wangning/data_cache/RadarFlowOcc_m0_improvement_20260915": [
+        {
+          "name": "campaign_cache_v1",
+          "children": [
+            "development",
+            "train"
+          ],
+          "cache": {
+            "/home/wangning/data_cache/RadarFlowOcc_m0_improvement_20260915/campaign_cache_v1/train": {
+              "complete": {
+                "status": "COMPLETE_NATIVE_STATE_CACHE",
+                "samples": 512,
+                "index_sha256": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+                "cache_bytes": 98661699136,
+                "seconds": 1779.497077589971,
+                "optimizer_steps": 0,
+                "native_radar_unchanged": true,
+                "all_samples_bitwise_replayed": true,
+                "maximum_cuda_memory_bytes": 4448122880
+              },
+              "complete_sha256": "69e49dbd8c7667e9c6e17c2ce70b4f879e8f40c33a0018251b9de2ae978d01bc",
+              "index_sha256": "1dc14643df86f85c5ae87b17b83c60cada99f189a025675d150062acb046e7b1",
+              "index_schema": "m0-native-state-cache-v1",
+              "index_split": "train",
+              "index_records_count": 512
+            },
+            "/home/wangning/data_cache/RadarFlowOcc_m0_improvement_20260915/campaign_cache_v1/development": {
+              "complete": {
+                "status": "COMPLETE_NATIVE_STATE_CACHE",
+                "samples": 200,
+                "index_sha256": "fd42d2e511d754755fa5e2c06527077351869f06e868ecb8acb4404eadaa26c3",
+                "cache_bytes": 38539732848,
+                "seconds": 776.9960475499975,
+                "optimizer_steps": 0,
+                "native_radar_unchanged": true,
+                "all_samples_bitwise_replayed": true,
+                "maximum_cuda_memory_bytes": 4448122880
+              },
+              "complete_sha256": "0128d88e9ed04b85c5bd86a00fc5e273199afe5cedb6fea6586080e6d48b8a84",
+              "index_sha256": "fd42d2e511d754755fa5e2c06527077351869f06e868ecb8acb4404eadaa26c3",
+              "index_schema": "m0-native-state-cache-v1",
+              "index_split": "development",
+              "index_records_count": 200
+            }
+          }
+        },
+        {
+          "name": "native_preflight_v1",
+          "children": [
+            "complete.json",
+            "index.json",
+            "progress.json",
+            "samples"
+          ],
+          "cache": {
+            "/home/wangning/data_cache/RadarFlowOcc_m0_improvement_20260915/native_preflight_v1": {
+              "complete": {
+                "status": "COMPLETE_NATIVE_STATE_CACHE",
+                "samples": 2,
+                "index_sha256": "20e84214b8b727820417052028ef85fdb1011e87dd07cecf4b53e5c803acc1aa",
+                "cache_bytes": 385397308,
+                "seconds": 167.10331537993625,
+                "optimizer_steps": 0,
+                "native_radar_unchanged": true,
+                "all_samples_bitwise_replayed": true,
+                "maximum_cuda_memory_bytes": 4448122880
+              },
+              "complete_sha256": "56d635525c030ff78c41dc3049dc7027bc1329f8251a6a6e1b3156038ba486cb",
+              "index_sha256": "20e84214b8b727820417052028ef85fdb1011e87dd07cecf4b53e5c803acc1aa",
+              "index_schema": "m0-native-state-cache-v1",
+              "index_split": "train",
+              "index_records_count": 2
+            }
+          }
+        }
+      ],
+      "/home/wangning/data_cache/RadarFlowOcc_m0_diagnostics_20260914": [
+        {
+          "name": "torch_extensions",
+          "children": [
+            "dvxlr",
+            "dvxlr_v2"
+          ]
+        }
+      ]
+    }
+  },
+  "conclusion": "Within the named research/cache roots only train512, development200 and train2 native-state caches were found. The completed full5119 evaluator stores small records and complete receipts, not replayable state arrays. This is not a server-wide filesystem search."
+}

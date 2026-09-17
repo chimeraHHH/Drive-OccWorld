@@ -1,0 +1,24 @@
+{
+  "schema": "learned-transport-probe-v1",
+  "status": "FROZEN",
+  "anchors": 16,
+  "sources_sha256": {
+    "learned_transport_probe_v1.py": "d4a21ea06f062218aa3c0ec8eb461f98db9cef07e7e7206100960d50e545a054",
+    "oracle_transport_probe.py": "2ca37ca1a3cbfd335890fc315c9e1f058f91f00325f72d29eda62dd66396d95b",
+    "transport_ops.py": "18708c7b33de30c31f684d7a3d7d39cf754c9b54e91ff87da894d9d14140406c",
+    "motion_prediction_head.py": "f5e50b7486b5285092ca6523f305a5d643a73355c73382c8eaa24ab928a847b9",
+    "train_source_motion_v1.py": "e34efdfd6dca7b60a8a4ddb3359417bbe5ba9e7b04a4b150e8b6428b81dd582e",
+    "native_state_cache.py": "41953909ddfdfd08d51d98385a450640e5314b775ab01458cb55ff1b18e4bfb0"
+  },
+  "training": {
+    "protocol_sha256": "96713467ddac9f048691855f2ef5ecdd2377129a5f37189b88c33346aec63120",
+    "complete_sha256": "53b2409376d522369e15feec1d536797f08fd04250cde33bd29caceeddfc2fce",
+    "checkpoint_sha256": "449e37a18136f51fe3716f9cd0333a3a3888a5d4d6747c01b982c2dd0c9d2d84",
+    "head_state_sha256": "38d5080f0edeedec21893852cc44ffc68a8e4e110f7cab5f262a3c429b9ca8fa"
+  },
+  "oracle_reference_records_sha256": "4685394ec5d551a831252a5b1a35d951bc5fd88026531fac63b75f862715d76b",
+  "resources": {
+    "max_seconds": 900,
+    "max_allocated_gib": 16
+  }
+}

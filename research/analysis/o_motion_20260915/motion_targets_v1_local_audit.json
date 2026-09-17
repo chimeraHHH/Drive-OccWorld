@@ -1,0 +1,55 @@
+{
+  "schema": "motion-target-local-delivery-audit-v1",
+  "status": "PASS_ALL_712_RAW_TARGETS",
+  "complete_sha256": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69",
+  "manifest_sha256": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+  "statistics_sha256": "e99825503dfe8f025ce4ef5ca19f1b986d047afff778123a378cf532cd516f61",
+  "script_sha256": "0064b3bb3dd3d8a124e49524ae848e0af1c556e12850947577280e988a7f2685",
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+  "raw_witness_sha256": "e72922db8d49fd89696209173ddf7c69bd13129ccbe4cb2cd35fa553d7984021",
+  "all712_gzip_and_uncompressed_hashes_verified": true,
+  "all712_identities_order_and_null_masks_verified": true,
+  "independent_statistics": {
+    "train": {
+      "anchors": 512,
+      "anchor_instance_pairs": 16458,
+      "no_GMO_anchors": 0,
+      "zero_sensor_points_box_frames": 15269,
+      "valid_box_frames": 96799,
+      "missing_box_slots": 18407,
+      "born_after_t0": 1752,
+      "absent_at_t0": 2666,
+      "disappeared_before_last": 2537,
+      "complete_7_frames": 11339
+    },
+    "development": {
+      "anchors": 200,
+      "anchor_instance_pairs": 6259,
+      "no_GMO_anchors": 0,
+      "zero_sensor_points_box_frames": 6285,
+      "valid_box_frames": 36660,
+      "missing_box_slots": 7153,
+      "born_after_t0": 672,
+      "absent_at_t0": 1001,
+      "disappeared_before_last": 987,
+      "complete_7_frames": 4247
+    }
+  },
+  "train_dev_scene_instance_annotation_disjoint": true,
+  "actual_two_anchor_raw_annotations_exact": 77,
+  "actual_14_poses_max_abs_difference": 3.3306690738754696e-15,
+  "all_pose_max_rotation_orthogonality_error": 1.7763568394002505e-15,
+  "all_pose_max_determinant_error": 1.7763568394002505e-15,
+  "actual_adjacent_sample_dt_seconds_min_max": [
+    0.394377,
+    0.601561
+  ],
+  "actual_lidar_sample_skew_seconds_min_max": [
+    0.0,
+    0.0
+  ],
+  "previous_small_metadata_full_hashes_match": true,
+  "full_large_metadata_hashes_from_bound_extractor_not_reread_locally": true,
+  "files": 712,
+  "model_predictions_or_checkpoints_loaded": false
+}

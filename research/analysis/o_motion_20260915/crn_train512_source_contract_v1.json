@@ -1,0 +1,32 @@
+{
+  "schema": "crn-train512-source-contract-v1",
+  "official_commit": "5e9d2fa2f91c714b297e75ca666d27fc4ad0d13d",
+  "files_sha256": {
+    "datasets/nusc_det_dataset.py": "45651e062f2258092f18720890ff7eff77c3f71664d751e04e865e9f55927ed3",
+    "evaluators/det_evaluators.py": "e027413d25302d5a236868ae6ed797a304c57ceefe132c16f77c6af2f5b2f5d3",
+    "exps/base_exp.py": "5e01fd0e09253c34d7c7296ccd07052a23a875a9996cabe8fa5edba1c3d1144d",
+    "exps/det/CRN_r50_256x704_128x128_4key.py": "ebde9f5ea5826b89423535c9298b0098ab6796fd797042dfc811fcfb50c8dda2",
+    "layers/backbones/base_lss_fpn.py": "37e336a03819fc8180b53d8ca01848dd9672653ab75570fabd5f76107c3c55da",
+    "layers/backbones/pts_backbone.py": "d66b37dd9882d175bef405593ea4fea0e1b3aa61e416d5a7c2d3939b53ec9a80",
+    "layers/backbones/rvt_lss_fpn.py": "91efe0b0ae01f40de2553a9110e57e89d8c73ac0654a47cc46b6e266cd2512c1",
+    "layers/fuser/conv_fuser.py": "af0858877dfe6344fb46de50e413bb8e5a399ff667f7fdaa54b850f8c7e7d67f",
+    "layers/fuser/multimodal_feature_aggregation.py": "01f4a57235f82fd1ac2e9762db51e78d0d85713eaff2a8a3a5c9c6b57d1e9c41",
+    "layers/heads/bev_depth_head_det.py": "2fe7bca860157b0b6a06c945b4eedc8efc1d3fc89fe565ee7b2a752b79c033f7",
+    "layers/modules/multi_scale_deformable_attn_function.py": "a865baa651628f695f1a0995ef74c1ed57f03ad517fea48d687b81a963b4bf6f",
+    "layers/modules/multimodal_deformable_cross_attention.py": "8f3642706af128a8fbf7e2b619de1a4722baa93361dd0accf7548f5998c3306e",
+    "mmdetection3d/mmdet3d/core/bbox/coders/centerpoint_bbox_coders.py": "20fd2c5ad66b72f368296c1ec96f230036bd7511a5c0a8dba4a1bd4e5c6dd300",
+    "mmdetection3d/mmdet3d/core/bbox/structures/base_box3d.py": "e22904836111737f105eb98cb77c8127cf4530572ea8f216256de5c92f5f4a19",
+    "mmdetection3d/mmdet3d/core/bbox/structures/lidar_box3d.py": "acd9be3cb745c59e83bd9b0ae47cac1e48527fbbeeabfaae14f95181923063f0",
+    "mmdetection3d/mmdet3d/models/dense_heads/centerpoint_head.py": "24befa63fbc130efd7c1d969cb95309ed3f121df7a8e7b836e1740451a7760f7",
+    "models/base_bev_depth.py": "899985dde4dea0d4f12e07ebd0a5642203cfcbcad9f9b51da4f9e65e1000109b",
+    "models/camera_radar_net_det.py": "ba8df91783f2194483d19f6c298a6223916f6f55a9a28d15e30877e466f01df5",
+    "ops/average_voxel_pooling_v2/__init__.py": "771a0c43265436ae3eb03e5c103cee3c2fc23dca9b488dc8b183c58d90b38180",
+    "ops/average_voxel_pooling_v2/average_voxel_pooling.py": "ff20e886da9ce4a1f1d7945c6990f952cbd8808366d6f22804ebf64f856139eb",
+    "ops/voxel_pooling_v2/__init__.py": "daef4ba2483f192a0a6860306caee7aa6768c397f0482a426475e42f27a69992",
+    "ops/voxel_pooling_v2/voxel_pooling.py": "bf1bccb95e25f8aec368554f79baeaa9116ad5f73364e947920573c222c5d881",
+    "scripts/gen_info.py": "c65bd94133a987855d1f63e82d9f03c3a66084135f7e67aebab07b4b76ef1ba8",
+    "scripts/gen_radar_bev.py": "c7c64b0554a4df28e18bda394265fed9344e465dcaf4a1bce19bdda6d712dfde",
+    "scripts/gen_radar_pv.py": "1cbc331527a69a71a9619ffbd56d528a76ee1b20c20c255d1b42cf25c6841f79"
+  },
+  "note": "Retained original CRN evaluation source snapshot, including existing runtime backbone compatibility edit; not a new method or edit."
+}

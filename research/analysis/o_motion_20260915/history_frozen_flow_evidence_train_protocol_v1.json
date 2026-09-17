@@ -1,0 +1,138 @@
+{
+  "schema": "history-frozen-flow-evidence-train-v1",
+  "status": "FROZEN",
+  "source_sha256": "17ecf5be37edcee747f4b2b6e2a760655b697c94142a5ec539acf90a3f298e93",
+  "module_sha256": "02f5c5efca336bffba37b9fe510a667716e758ef333d7e0d60ee998b268be1da",
+  "probe_source_sha256": "60491da9cc3b0dcfabcf9c09d15ca6ac1b2f2e8175b657870c6d54fb6e65789e",
+  "asset_manifest_sha256": "db378bcf49a348a8968d571f834a33e3f434582e7b0d551b805f49cefb320cdd",
+  "checkpoint_sha256": "fcfa4125d6418f4de95d84aec20a3c5f4e205101715a79f193243c186ac9a7e1",
+  "history_inputs_complete_sha256": "040d62242a541b9685f3f39f1534b3663b0e1142b4cd7d9737cdbfd15d94314d",
+  "camera_complete_sha256": "0c0d2e640a12e3299e8dacc03189776669cd2e50036a65de823026304119b648",
+  "resources": {
+    "max_seconds": 3600,
+    "cpu_threads": 2,
+    "max_allocated_bytes": 12884901888
+  },
+  "settings": {
+    "official_commit": "2888e15a51fa41140771d3f498ed8023cff098d1",
+    "model": "full_RAFT_things",
+    "iterations": 20,
+    "dtype": "float32",
+    "TF32": false,
+    "mixed_precision": false,
+    "alternate_corr": false,
+    "cudnn_benchmark": false,
+    "eval": true,
+    "no_grad": true,
+    "flow_init": null,
+    "input_RGB_range": [
+      0,
+      255
+    ],
+    "original_shape_HWC": [
+      900,
+      1600,
+      3
+    ],
+    "official_padder": [
+      0,
+      0,
+      2,
+      2
+    ],
+    "unpad_to_original": true,
+    "flows": [
+      "current_to_past",
+      "past_to_current",
+      "current_to_broken_past"
+    ],
+    "calls_per_camera": 3,
+    "cameras_per_sample": 6,
+    "total_model_forwards": 9216,
+    "broken_past": "torch.roll(original_raw_past,800,width_axis) before official pad; independent forward",
+    "broken_candidate_past_addresses": "unchanged, matching original ZNCC broken convention",
+    "fb": "true forward+true reverse only; continuous; no filtering/threshold",
+    "sampling": "bilinear closed original pixel-center domain; exact last pixel allowed; no extrapolation",
+    "hypothesis_order": [
+      "zero",
+      "D"
+    ],
+    "time_order": [
+      "current",
+      "past"
+    ],
+    "score": "norm(u0current+F(u0current)-u0past)-norm(uDcurrent+F(uDcurrent)-uDpast)",
+    "positive_score_direction": "supports D over zero",
+    "geometric_control": "norm((uDpast-uDcurrent)-(u0past-u0current))",
+    "primary": "original camera reason0 exactly",
+    "extension": "original lowtexture reason4 exactly; no original ZNCC scores available",
+    "other_reasons": "remain missing; original five reason codes retained",
+    "out_of_bounds_predicted_endpoint": "keep primary/extension residual; only FB becomes missing"
+  },
+  "scope": {
+    "samples": 512,
+    "scenes": 256,
+    "source_points": 1740053,
+    "primary_points": 1397509,
+    "lowtexture_extension_points": 261702,
+    "image_flow_inputs": "only authenticated current/previous raw RGB",
+    "query_population": "original GT-defined virtual material points; not certified visible surfaces and not a GT-free deployed query generator",
+    "D_use": "cached hypothesis UV only after independent image flow",
+    "GT_target_arrays_read": false,
+    "training": false,
+    "optimizer_updates": 0,
+    "fitting": false,
+    "threshold_search": false,
+    "development": false,
+    "dense_full_flow_saved": false,
+    "model_loads": 1,
+    "fresh_official_checkpoint": true,
+    "no_automatic_retry": true
+  },
+  "prespecified_analysis": {
+    "primary_scores": [
+      "flow_score",
+      "broken_flow_score",
+      "original_ZNCC_score",
+      "original_broken_ZNCC_score",
+      "D_speed",
+      "hypothesis_flow_separation_px"
+    ],
+    "extension_scores": [
+      "flow_score",
+      "broken_flow_score",
+      "D_speed",
+      "hypothesis_flow_separation_px"
+    ],
+    "directions": "all positive, no sign selection",
+    "future_target": "original D-versus-zero future XY displacement benefit, all four horizons",
+    "past_target": "existing history-GT actual-camera-time benefit only on original photo-valid and pose-valid shared support; unavailable on reason4",
+    "weights": "unchanged 1/all original object points",
+    "physical_denominators": "all original future-valid objects, including unobserved and covered points",
+    "strata": [
+      "all",
+      "no_radar",
+      "radar_present"
+    ],
+    "future_groups": [
+      "all",
+      "stationary",
+      "ambiguous",
+      "moving"
+    ],
+    "speed_bins_mps": [
+      0,
+      0.1,
+      0.5,
+      1,
+      2,
+      5,
+      10,
+      null
+    ],
+    "individual_speed_bin_scope": "only no_radar/all; exact previous fixed bins",
+    "FB": "conditional continuous summaries and available/OOB physical accounting, never gate or select score population",
+    "no_bootstrap_or_fit": true,
+    "interpretation": "train512 internal evidence discrimination, not measured flow accuracy, causal sensor information or model gain"
+  }
+}

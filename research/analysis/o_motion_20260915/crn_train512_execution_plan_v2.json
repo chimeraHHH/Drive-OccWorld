@@ -1,0 +1,97 @@
+{
+  "schema": "crn-train512-continuation-plan-v2",
+  "status": "ROOT_AND_INDEPENDENT_REVIEWED_READY_FOR_CPU_CONTINUATION",
+  "remote_new_root": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/crn_train512_state_v2",
+  "old_root_read_only": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/crn_train512_state_v1",
+  "local_source_sha256": {
+    "prepare_crn_train512_inputs_v1.py": "75b5bba81c59348f9c0f190a34065d84ed465814e2cbd98f84578a823dff6e38",
+    "prepare_crn_train512_inputs_v2.py": "5552845d1f4173ec1be707807b49c6320499bf3c04caa47da6f7afa40e5d07cc",
+    "crn_train512_inference_v2.py": "6a21dbf78da927865f490101ed0d31691f7c244074c7c90d4eb9e3487d5197f8",
+    "crn_box_origin_adapter_v1.py": "aa05e4cd8d2c9ffbf41e751ebc0bda7114040753e404c0560975ee134e23a101",
+    "crn_train512_source_contract_v1.json": "e147d9deca1409ee060a1ceb384f89424b55a9c40a866576b638f92f7f414e5a"
+  },
+  "selection_sha256": "5a940471f03746892dac862054e05590fcf463359a6b16097a1106f4100dde4d",
+  "old_launch_local_envelope": "analysis/o_motion_20260915/receipts/crn_train512_prepare_dispatch_20260916_051950.json",
+  "old_launch_local_envelope_sha256": "34e818781be63ff9df455924a50401df0075333ead6e65a86db42ea9e23911ad",
+  "old_runner": {
+    "pid": 2528261,
+    "uid": 1031,
+    "startticks": 194814315
+  },
+  "actual_terminal_receipt_sha256": "229cdce5e150f130b5b3f47cce69d4b5e26640a7d19aa12ab52a6f74ca97ee17",
+  "actual_reused_prefix_frames": null,
+  "runtime_required_bindings": [
+    "old flat launch JSON path",
+    "old job directory spec.json and terminal state.json",
+    "verified stopped receipt path and actual SHA; no continuation while live"
+  ],
+  "resources": {
+    "prepare_cpu_inner_seconds": 7200,
+    "prepare_outer_seconds": 7260,
+    "projection_workers": 2,
+    "OPENBLAS_NUM_THREADS": 1,
+    "OMP_NUM_THREADS": 1,
+    "GPU_used": false,
+    "automatic_retry": false,
+    "inference_budget_changed": false
+  },
+  "resource_basis": {
+    "kind": "parent reported live observations; not a new measurement",
+    "elapsed_seconds": [
+      108,
+      162.65,
+      253.52
+    ],
+    "completed_history_frames": [
+      20,
+      62,
+      140
+    ],
+    "planned_history_frames": 2048,
+    "recent_frames_per_second": 0.8583690987124463,
+    "estimated_remaining_seconds_at_recent_rate": 2222.82,
+    "estimate_is_not_completion_or_speed_guarantee": true,
+    "final_v1_observation": {
+      "seconds": 1135.0964019049425,
+      "completed_frames": 1098,
+      "planned_frames": 2048,
+      "remaining_frames": 950,
+      "recent_frames_per_second_approx": 1.16,
+      "ETA_is_not_a_guarantee": true
+    }
+  },
+  "python": "/home/huayiming/Workspace/RadarFlowOcc/envs/hym_driveocc_py38/bin/python",
+  "original_repo": "/home/huayiming/Workspace/RadarFlowOcc/code/radar-fusion-baselines/CRN",
+  "source_data_root": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/radar_fusion_baselines_20260909/data_views/CRN",
+  "official_checkpoint": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/radar_fusion_baselines_20260909/official_assets/CRN_r50_256x704_128x128_4key.pth",
+  "official_checkpoint_sha256": "f725aafc7f033f484f13704134178f2377b3e12bb7e85207b447f8a3ebfa0cb3",
+  "reuse_contract": {
+    "prefix": "history_plan.needed_history_indices[:progress.completed_history_frames] after authentication and /proc absence",
+    "frames_outside_prefix": "never read or reused",
+    "files_per_frame": 7,
+    "full_info": "byte-exact copy plus all 28130 token/scene/time order and consumed sensor metadata verification",
+    "old_persisted_per_file_sha_ledger": false,
+    "new_copy_checks": [
+      "float32 finite",
+      "bytes divisible by 28",
+      "source stat unchanged",
+      "source SHA before/after copy equals destination SHA",
+      "no overwrite"
+    ],
+    "authors_workers_changed": false,
+    "annotation_input_changed": false
+  },
+  "inference_v2_diff": "Only prepare helper filename v1 to v2; complete asset source binding remains strict, native prediction/format/origin conversion byte-identical",
+  "package_files": [
+    "prepare_crn_train512_inputs_v1.py",
+    "prepare_crn_train512_inputs_v2.py",
+    "crn_train512_inference_v2.py",
+    "crn_box_origin_adapter_v1.py",
+    "crn_train512_source_contract_v1.json",
+    "selection_v1.json",
+    "job_runner.py"
+  ],
+  "static_receipt_sha256": "3d2be90a68546aa2d067b620a8bb11b93247301ccf31eec99bd7da708e8e1515",
+  "dispatch_performed": false,
+  "available_stopped_prefix_frames": 1098
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "history-motion-alignment-train-analysis-v1",
+  "status": "PRESPECIFIED_BEFORE_REAL_ALIGNMENT_STATISTICS",
+  "sources": {
+    "history_camera_analyzer_sha256": "69ad87766e8964412fef11bd3e0b7810b4c109a5e2bc7ce1f94475e580df68c0",
+    "history_camera_rules_sha256": "166c9ea6ae2054983e81ddb6ef2513c8743875e787282aa44e99ee23de290944",
+    "geometry_sha256": "e9d232c3f7aaacd073cfda645868e357afad9e5a2684d07b2f3f2394bd796a31",
+    "sparse_builder_sha256": "a63f5083dad4f5092bdc9d4d87b888dd53f54b95986b2f8b3a13769e9e78f023",
+    "raw_manifest_sha256": "4d38d8feaa0c200620700fda43377fb20512c6232a30172a728fa558f57f6d71",
+    "raw_complete_sha256": "e79b12f752fc76df4036025728a131c75c55f2994e9ef9058560c3084839ce69",
+    "sparse_manifest_sha256": "cdb11231cbc3213d213e1f3f718fe9d3c90665dccea4154ecf3372ad1ce91efe",
+    "sparse_complete_sha256": "3d14a03cd61761a1ebc26313463dbff06854907c19c49057667a0ffd257e05bd",
+    "points_file_sha256": "91bcc80882e41ffd5234cecce4b517ef4081839c89dbb6a048c4226b723ca6fd",
+    "camera_complete_sha256": "0c0d2e640a12e3299e8dacc03189776669cd2e50036a65de823026304119b648"
+  },
+  "support": {
+    "samples": 512,
+    "scenes": 256,
+    "source_points": 1740053,
+    "original_object_horizon_rows": 43189,
+    "split": "train",
+    "reselection": false
+  },
+  "horizons_seconds": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "past_reference": {
+    "current_index": 2,
+    "previous_index": 1,
+    "minus2_fallback": false,
+    "material_point_formula": "inv(G0) @ A_prev @ inv(A0) @ G0 @ p0 - p0",
+    "source_frame": "fixed current LiDAR R, full 3D metres",
+    "link": "same instance_token, prev.next=current.annotation and current.prev=prev.annotation",
+    "signed_dt_seconds": "(previous sample timestamp_us - current sample timestamp_us)/1e6 < 0",
+    "predicted_history": "signed_dt_seconds * fixed four nominal horizon LSQ D velocity; no GT in velocity",
+    "benefit_xy_m": "norm(H_xy) - norm(Dpast_xy-H_xy)",
+    "camera_interpolation": false,
+    "future_poses_in_past_score": false
+  },
+  "history_reason_codes": {
+    "0": "available_previous_box_and_link",
+    "1": "missing_previous_box",
+    "2": "incomplete_previous_annotation_link"
+  },
+  "forward_2s_geometry_gate": {
+    "scope": "every original valid 2s source point, including covered/history-missing points",
+    "formula": "same original rigid geometry helper and original authenticated full grid",
+    "tolerance_absolute_m": 1e-06,
+    "tolerance_relative": 2e-07,
+    "formula_of_tolerance": "abs(expected_float64-stored_float32) <= 1e-6+2e-7*abs(expected_float64)",
+    "source_of_tolerance": "unchanged independent_material_audit in frozen build_sparse_motion_supervision_v1.py",
+    "usage": "geometry validation only, never a historical score feature"
+  },
+  "populations": {
+    "main": "original future-valid AND CRN owner<0 AND original camera reason==0 AND history reason==0",
+    "radar_strata": [
+      "all",
+      "no_radar",
+      "radar_present"
+    ],
+    "no_radar_priority_prespecified": true,
+    "GT_motion_group_filter": false,
+    "history_missing": "retained in original full-future denominator bookkeeping; not zero-imputed",
+    "camera_selection": "reuse already frozen input-only camera selection and mask; labels cannot alter it",
+    "GT_motion_groups": [
+      "all",
+      "stationary",
+      "ambiguous",
+      "moving"
+    ],
+    "GT_group_usage": "descriptive scoring-only partition; every group retained; all-speed group tables, seven-bin table only no_radar/all",
+    "explicit_support_stages": [
+      "U_h original future-valid CRN-uncovered stratum",
+      "history_available within U_h",
+      "camera_available within U_h",
+      "history_and_camera_available common population"
+    ]
+  },
+  "point_weight": "1/n_ALL_original_current_source_points_of_object; original future validity is object-wide",
+  "full_denominator": "ALL original valid future objects at that horizon, including covered, no-history and camera-missing",
+  "speed_edges_mps": [
+    0.0,
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    null
+  ],
+  "last_edge": "positive infinity",
+  "bins": "left closed right open, all seven plus all-speeds",
+  "auc_tasks": {
+    "past_benefit_positive": [
+      "score_true",
+      "score_broken",
+      "lsq_speed_xy_mps"
+    ],
+    "future_benefit_positive": [
+      "Bpast_oracle_reference",
+      "score_true",
+      "score_broken",
+      "lsq_speed_xy_mps"
+    ],
+    "all_directions": 1,
+    "common_support": "same population for all seven entries in each cell",
+    "zero_benefit": "exclude only from that binary AUC; count zero and retain physical bookkeeping",
+    "ties": 0.5,
+    "undefined": "null if either weighted class absent"
+  },
+  "sign_table": {
+    "rows": "past benefit negative/zero/positive",
+    "columns": "future benefit negative/zero/positive",
+    "entries": "original point weights and full-future denominator future gain/cost; zero rows/columns explicit",
+    "scope": "same history-available camera-valid population"
+  },
+  "coverage": "All original future points and separately CRN-uncovered radar strata retain all three history reasons and all four future GT groups. All-speed tables also cross history status with five camera reasons. Seven speed bins only no-radar/all. Covered points remain in original future accounting.",
+  "frozen_math_reuse": [
+    "analyze_motion_evidence_train_v1.weighted_auc",
+    "analyze_motion_evidence_train_v1.continuous"
+  ],
+  "frozen_authentication_reuse": [
+    "analyze_history_camera_evidence_train_v1.dependencies/authenticate/collect, which bind original motion/radar/camera sources and weights"
+  ],
+  "restrictions": {
+    "no_fit": true,
+    "no_threshold_search": true,
+    "no_direction_selection": true,
+    "no_bootstrap": true,
+    "no_model": true,
+    "no_images_reopened": true,
+    "no_development_data_files": true,
+    "no_GT_deployment_feature": true,
+    "no_mathematical_upper_bound_claim": true
+  },
+  "interpretation": [
+    "This is train512 already seen by D; validation was historically exposed and is not read here.",
+    "GT boxes are virtual rigid material-point labels, not measured surfaces or scene flow.",
+    "Previous/current sample-keyframe box times differ from each camera timestamp, typically tens of milliseconds; report actual offsets. No perfect-photometry or camera-time-oracle claim.",
+    "Bpast is a privileged diagnostic reference, not a mathematical upper bound and not an inference signal.",
+    "Near-zero benefits can affect sign AUC; ranking does not certify practical routing or future occupancy/motion gains.",
+    "Input-only photometry definition and source/camera support remain unchanged.",
+    "Bpast and future benefit share D magnitude; if H=0 then Bpast=-norm(Dpast). High pooled oracle-reference AUC alone cannot establish temporal discriminability; inspect same-population D-speed controls and future GT groups/fixed speed bins.",
+    "One historical score is shared by all four future horizons; these are not four independent pieces of historical evidence."
+  ],
+  "resources": {
+    "CPU_only": true,
+    "max_seconds": 300
+  }
+}

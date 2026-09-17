@@ -1,0 +1,57 @@
+{
+  "schema": "primary-literature-card-sources-v1",
+  "checked_date_local": "2026-09-15",
+  "paper": "Sanyal et al., Optimizing non-decomposable measures with deep networks (2018)",
+  "article_doi": "10.1007/s10994-018-5736-y",
+  "scope": "primary sources only; no skills, training, installation or frozen-source edits",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1802.00086",
+      "used_for": "bibliography/version; arXiv v1 submitted 2018-01-31"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1802.00086",
+      "used_for": "full main paper and appendices, 17-page version; page references are one-based arXiv pages"
+    },
+    {
+      "url": "https://arxiv.org/html/1802.00086",
+      "used_for": "searchable equations and sections, crosschecked against PDF page markers"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10994-018-5736-y",
+      "used_for": "journal metadata and Note 3 original repository attribution",
+      "access": "subscription preview, not final published full text"
+    },
+    {
+      "url": "https://github.com/purushottamkar/DeepPerf",
+      "used_for": "author repository directly linked by journal; README links first-author mirror",
+      "commit": "c012be18ee0db9d6f7cd7ad24d2a7161be7754a0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/purushottamkar/DeepPerf/c012be18ee0db9d6f7cd7ad24d2a7161be7754a0/deep_non_decomp_src/DAMP/ANNAMP.py",
+      "used_for": "actual DAME implementation; squared-error warmup, gated rewards, Adam, stale value variable, final-batch omission",
+      "sha256": "f8dc9cc832533faa4290f703b60537ff9c48250f53c8a3c0f96bde7d6ce61a0c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/purushottamkar/DeepPerf/c012be18ee0db9d6f7cd7ad24d2a7161be7754a0/deep_non_decomp_src/ANNAMPTrain.py",
+      "used_for": "entry point, feature cache and training-dataset reporting selection"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/purushottamkar/DeepPerf/c012be18ee0db9d6f7cd7ad24d2a7161be7754a0/deep_non_decomp_src/DeeSpade/dual_step.py",
+      "used_for": "dual projection/FTL vs default implementation"
+    },
+    {
+      "url": "https://api.github.com/repos/purushottamkar/DeepPerf/git/trees/c012be18ee0db9d6f7cd7ad24d2a7161be7754a0?recursive=1",
+      "used_for": "repository source tree and scope of detected license/dependency metadata",
+      "matching_paths": [
+        "seq2seq-attn/LICENSE"
+      ]
+    }
+  ],
+  "limitations": [
+    "No global or current-optimizer convergence guarantee independently proved.",
+    "No occupancy, multihorizon experiment or author code executed.",
+    "Own project formulas and candidate experiment suggestions are not attributed as paper theorems.",
+    "No partial full-validation result was used."
+  ]
+}

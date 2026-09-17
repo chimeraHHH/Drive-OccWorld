@@ -1,0 +1,439 @@
+{
+  "schema": "m0.architecture_inventory.v1",
+  "status": "LOCAL_STATIC_AUDIT_COMPLETE",
+  "created_at": "2026-09-14T16:39:11.559970+00:00",
+  "workspace": "/Users/yiminghua/2026Summer/WorldModel/dropple",
+  "scope": {
+    "server_connected": false,
+    "training_run": false,
+    "old_source_modified": false,
+    "skills_used": false,
+    "local_torch_available": false,
+    "remote_asset_existence_live_verified": false
+  },
+  "sources": [
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py",
+      "sha256": "67a8f36e6e886f1f722a27efb4eaf83bb51685679f4c85c74ded3b1c6f2a56b5",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/bevformer/detectors/drive_occworld.py",
+      "reference_sha256": "264c66c8870b2d9f71da778d605517b7af84de1a66774f040cf97b89db981196",
+      "reference_byte_identical": false
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/bevformer.py",
+      "sha256": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/bevformer/detectors/bevformer.py",
+      "reference_sha256": "c1d881c652f540f0b4a40d3d9a72a532e739bf0f4fd103d496575833d3f46487",
+      "reference_byte_identical": true
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/detectors/radar_bev_encoder.py",
+      "sha256": "326592d9fb94bd37bd957855bc332863dd552a32a814e67915514cda2905df5f",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/bevformer/detectors/radar_bev_encoder.py",
+      "reference_sha256": "b3010d4f715b0010ea0f868532c188dde13a839656c7dbd17cb3242f028e3631",
+      "reference_byte_identical": false
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py",
+      "sha256": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_v1.py",
+      "reference_sha256": "4738c03a28e353efd4dec68adf6c9407aa73b9273bd13c2f67021795d6240a7a",
+      "reference_byte_identical": true
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py",
+      "sha256": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py",
+      "reference_sha256": "8e7a7adabb968a67ddc52c46a8927a90d3286572fc8395dd8fa98d7ffe40e4cf",
+      "reference_byte_identical": true
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py",
+      "sha256": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/bevformer/modules/world_decoder.py",
+      "reference_sha256": "b3ebebf5c40b4ce8ed4b61065d6157f587dc1e32ea620f79db5cd301ffa6cf4f",
+      "reference_byte_identical": true
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py",
+      "sha256": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/datasets/pipelines/loading_occupancy.py",
+      "reference_sha256": "ac9190193630eca9f3118136e2d0b46bf528217f50244e37e6fc1cbff4841d1e",
+      "reference_byte_identical": true
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py",
+      "sha256": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/datasets/nuscenes_world_dataset_v1.py",
+      "reference_sha256": "c54dd6823a736ef283fe213771d563833975df6076756d6831f96718ff143923",
+      "reference_byte_identical": true
+    },
+    {
+      "path": "code/Drive-OccWorld-sota-p2/projects/mmdet3d_plugin/datasets/radar_bev.py",
+      "sha256": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+      "reference_path": "code/Drive-OccWorld-sota-p2-reference/projects/mmdet3d_plugin/datasets/radar_bev.py",
+      "reference_sha256": "87ddb0e056163b00abe3962803073090661a2e76e20f382f548fb3134f6c9e77",
+      "reference_byte_identical": true
+    },
+    {
+      "path": "analysis/sota_p2_20260911/configs/S0.py",
+      "sha256": "c92faf7c2a4697ae7faa0c69ca844068dd8f5a6d28463e7ad45307c4ab374303"
+    },
+    {
+      "path": "analysis/r2_execution_20260914/train_heads.py",
+      "sha256": "61abf3e1574d630e522cf0398b3a84ba6f67aa0b8f8a3821c9b75bd3b010b25d"
+    },
+    {
+      "path": "analysis/r2_execution_20260914/extract_common.py",
+      "sha256": "186e9820412ee92ff420f6b698864ca7ec7ad3f77dc8044e8648954b5ee89060"
+    },
+    {
+      "path": "analysis/r3_execution_20260914/train_r3.py",
+      "sha256": "7829a83e91b432078b7be860de213e3b4d0a83525886815d13fc313ec64cd215"
+    },
+    {
+      "path": "code/vision-baselines/IR-WM/projects/mmdet3d_plugin/bevformer/detectors/drive_occworldV2.py",
+      "sha256": "e4fe8374096123f6b15b9d7563c09b0380fa72d2b88e06d5a7e002d192c136eb"
+    },
+    {
+      "path": "code/vision-baselines/IR-WM/projects/mmdet3d_plugin/bevformer/dense_heads/world_head_base.py",
+      "sha256": "b03ff02f74c73dc1514820c33afcad8068400aeaa36c64aa30e028ce743a6c4d"
+    },
+    {
+      "path": "code/vision-baselines/OccProphet/projects/occ_plugin/occupancy/necks/unet_trans.py",
+      "sha256": "68617bd624d8fee725c0059782ed6baf27a9d0a18aaab108d8d79402765e14a2"
+    },
+    {
+      "path": "code/vision-baselines/OccProphet/projects/configs/occprophet/OccProphet_4x1_fine-GMO_nuscenes-occ.py",
+      "sha256": "5bdd8c68d55c729112ad767767eadc8195b6648725845f41ac93e01817fe80c3"
+    }
+  ],
+  "repos": {
+    "main": {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/Drive-OccWorld-sota-p2",
+      "git_metadata_available": false
+    },
+    "reference": {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/Drive-OccWorld-sota-p2-reference",
+      "git_metadata_available": false
+    },
+    "IR-WM": {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/IR-WM",
+      "head": "a83e4a24a8dbf008e5fe4e02d7efb692c1bec582"
+    },
+    "OccProphet": {
+      "path": "/Users/yiminghua/2026Summer/WorldModel/dropple/code/vision-baselines/OccProphet",
+      "head": "d41f8ae9b0b5cb47e0152dfec50115ab9cc0006c"
+    }
+  },
+  "m0_contract": {
+    "input": "history/current camera + native 5-radar x 5-sweep BEV + given future ego/action",
+    "label": "GMO versus non-GMO, not measured moving versus static",
+    "gmo_source_classes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10
+    ],
+    "non_gmo_source_classes": [
+      0,
+      1,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "ignore": 255,
+    "horizons_s": [
+      0,
+      0.5,
+      1,
+      1.5,
+      2
+    ],
+    "input_history_frames": 2,
+    "gt_xyz_shape": [
+      512,
+      512,
+      40
+    ],
+    "pc_range": [
+      -51.2,
+      -51.2,
+      -5,
+      51.2,
+      51.2,
+      3
+    ],
+    "bev_hw": [
+      200,
+      200
+    ],
+    "embed_dims": 256,
+    "pred_height": 16,
+    "classes": 2,
+    "image_backbone": "R101 DCNv2 + FPN4",
+    "bev_encoder_layers": 6,
+    "world_decoder_layers": 3,
+    "memory_queue_len": 1,
+    "explicit_horizon_embedding": false,
+    "radar_channels": 8,
+    "radar_injection": "reference BEV additive only",
+    "future_gradient_detached": false,
+    "history_gradient_default": false,
+    "future_replay_training_valid_frames_required": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "world_query_table_parameter_count_exact": 10240000,
+    "total_trainable_head_parameters": null,
+    "target_pool": "special 2x2x2 occupied-mode; singleton foreground with 7 zeros becomes ignore255",
+    "loss_resolution": [
+      256,
+      256,
+      20
+    ],
+    "eval_resolution": [
+      512,
+      512,
+      40
+    ],
+    "losses": {
+      "class_weighted_CE": [
+        1,
+        5
+      ],
+      "semantic_scaling": 1,
+      "geometric_scaling": 1,
+      "lovasz": 1,
+      "intermediate_layers_supervised": 3,
+      "times_supervised": "current plus four future"
+    },
+    "native_vs_common_input": "R2 extractor replaces native radar B with common-filtered B_common; new main comparison must restore native"
+  },
+  "checkpoint_assets": {
+    "M0": {
+      "sha256": "0348dc8f28d2959637dcd9ac7ccd29fea0da20c25c9856cdb4709c3e221dd9dc",
+      "remote_path": "/storage/data/metaiot_data/wangning/RadarFlowOcc_sota_p2_20260911/assets/m0_epoch24.pth",
+      "epoch": 24,
+      "use": "strict model-only initialization; no optimizer resume",
+      "existence_evidence": "prior completed runtime receipt; not checked live in this audit"
+    },
+    "IR-WM": {
+      "remote_path": "/storage/data/metaiot_data/huayiming/RadarFlowOcc/experiments/vision_baselines_20260908/official_assets/MMO_MSO_with_plan_fully_decoupled.pth",
+      "sha256": "8e1816dc290df28f1e89d0b88eddb451b9ab20fc85a8ef6449d9226ceeacd1ce",
+      "state_tensors": 1046,
+      "official_parameters": 78584248,
+      "config": "/home/huayiming/Workspace/RadarFlowOcc/code/vision-baselines/IR-WM/projects/configs/e2e/MMO_MSO_with_plan_fully_decoupled.py",
+      "classes": 17,
+      "use": "completed official evaluation retained; residual-state implementation reference",
+      "not_drop_in": "class count and future planning contract differ"
+    },
+    "OccProphet": {
+      "local_repo": "code/vision-baselines/OccProphet",
+      "remote_checkpoint_path": null,
+      "checkpoint_sha256": null,
+      "identity_note": "official fine-GMO full evaluation complete; precise checkpoint SHA not located in selected receipts during this bounded audit",
+      "use": "UNetPredictor/HybridFusion architecture reference, not blind weight transplant"
+    },
+    "R2_R3_frozen_heads": {
+      "M0": "0348dc8f28d2959637dcd9ac7ccd29fea0da20c25c9856cdb4709c3e221dd9dc",
+      "U_P0": "77b6fbf64ea2e4f9f73727011be4b5703705f70661265177181ca5b11f42b6c3",
+      "U_P2": "85e05d0887c6dcc30d5dc32c43fd78b47c47f54fca0f3720a1ec8121c759a92f",
+      "S_P0": "01bb1b91e313bdcac05115ae66219734285323fab78c51630f52048a6f82fec2",
+      "S_P2": "bed4bdc240569aa7902c7844d6c0efd2cee5d3d56259120c62d3f1fbe947564c",
+      "B_P0": "c10fb80fb348d6a053b9db72209668aa8d9b33b17b04e82f0583ed35f305e354",
+      "B_P2": "2c065e88d4854a76f67bda0b290dae99159a4d47d65d4013ad3c34e0faaaa314"
+    }
+  },
+  "data_assets": {
+    "recorded_native_dataset_root": "/home/wangning/data_cache/RadarFlowOcc_m3_h200/datasets/nuscenes_driveocc/",
+    "recorded_occ_root": "/home/wangning/data_cache/RadarFlowOcc_m3_h200/datasets/nuScenes-Occupancy-v0.1",
+    "recorded_native_radar_cache": "/home/wangning/data_cache/RadarFlowOcc_sota_p2_20260911/radar5",
+    "train_ann": "nuscenes_infos_temporal_train_new.pkl",
+    "val_ann": "nuscenes_infos_temporal_val_new.pkl",
+    "r2_cache": {
+      "train_anchors": 128,
+      "development_anchors": 32,
+      "train_index_sha256": "e015006bea44123f27017932c4a20568a894617814cbd3dc039c08b91890139a",
+      "dev_index_sha256": "30f0693759ef4e6b5113c74c258e6448a840374e06a426cf317463742310a84e",
+      "features_shape": [
+        4,
+        256,
+        200,
+        200
+      ],
+      "logits_shape": [
+        4,
+        2,
+        200,
+        200,
+        16
+      ],
+      "gt_shape": [
+        4,
+        512,
+        512,
+        40
+      ],
+      "has_t0_state": false,
+      "input_radar_contract": "B_common",
+      "can_train_world_forecaster": false
+    },
+    "r4_cache": {
+      "calibration_anchors": 32,
+      "evaluation_anchors": 32,
+      "historical_validation_exposure": true,
+      "input_radar_contract": "B_common",
+      "train_reuse_allowed": false
+    }
+  },
+  "current_evidence": {
+    "full_m0_pooled_future_gmo_percent": 13.975796,
+    "full_m0_tokens": 5119,
+    "full_occprophet_gmo_percent": 11.9789,
+    "irwm_common_tokens": 4969,
+    "irwm_gmo_percent": 14.4288,
+    "m0_irwm_common_gmo_percent": 14.006,
+    "r4_summary_path": "analysis/r4_execution_20260914/server_results/analysis_v2/summary/summary.json",
+    "r4_summary_sha256": "cb40a012b77d73004bc3df90459e26289d944d6998ad6cf8548d441800fa1828",
+    "r4_assessment": "B AP improvement does not establish higher fixed-risk GMO; P2 point branch no reliable increment; retain M0",
+    "metric_warning": "full comparison pooled four horizons vs R4 macro of horizon IoU"
+  },
+  "structural_candidates": [
+    {
+      "id": "A_persistent_observation_memory",
+      "priority": 1,
+      "kind": "hypothesis_not_confirmed",
+      "change": "separate immutable observed O from recurrent generated S; update entire world head",
+      "state_equation": "S_h = T(S_(h-1), O, action_h, dt_h)",
+      "checkpoint_migrations": [
+        "prev_frame_embedding 1->2 or explicit source embedding",
+        "cross-attention only num_levels1->2; self-attention remains1",
+        "sampling_offsets and attention_weights output rows expand",
+        "new observation branch masked/gated for initial M0 parity",
+        "separate per-slot coordinate/conditional-normalization transforms"
+      ],
+      "required_controls": [
+        "matched native M0 continuation",
+        "capacity-matched generated-only extra slot",
+        "persistent observed+generated memory"
+      ],
+      "nontrivial_tests": [
+        "4h frozen migration parity",
+        "independent SE2 phantom for two slots",
+        "last-step loss gradient to early generated states and source observation",
+        "fixed state O intervention changes output",
+        "stationary ego explicit dt discrimination",
+        "batch permutation independence"
+      ]
+    },
+    {
+      "id": "B_spatial_3d_decoder",
+      "priority": 2,
+      "kind": "hypothesis_not_confirmed",
+      "change": "height lift + multi-scale 3D/factorized spatial refiner with trainable original future head",
+      "source_interfaces": [
+        "OccProphet HybridFusion(B,T,C,H,W,Z)",
+        "OccProphet UNetPredictor pre/generator/post modules"
+      ],
+      "required_controls": [
+        "native original target versus structure-only change",
+        "supervision/count-target change separated from architecture",
+        "2D spatial capacity control if 3D claim"
+      ],
+      "nontrivial_tests": [
+        "single native foreground voxel count conservation",
+        "thin structure and same-xy different-z phantom",
+        "axis and interpolation identity",
+        "zero residual migration parity",
+        "spatial final-horizon loss reaches future transformer"
+      ],
+      "objective_caveat": "count-weighted BCE exact only when coarse block shares a logit; not generally exact after native trilinear interpolation"
+    }
+  ],
+  "native_cache_interface": {
+    "boundary": "original Drive_OccWorld.future_pred",
+    "input_files_separate_from_targets": true,
+    "persist": [
+      "reference_bev",
+      "initial_future_pred_kwargs",
+      "native_radar_bev_identity",
+      "original_metadata_dtypes",
+      "current_plus_future_gt",
+      "original_logits_and_confusions",
+      "sample_scene_lidar_and_source_hashes"
+    ],
+    "reference_shape": [
+      1,
+      40000,
+      256
+    ],
+    "memory_shape": [
+      1,
+      1,
+      40000,
+      256
+    ],
+    "gt_shape": [
+      5,
+      512,
+      512,
+      40
+    ],
+    "logits_shape": [
+      5,
+      2,
+      200,
+      200,
+      16
+    ],
+    "uncompressed_core_bytes_per_anchor": 120268800,
+    "replay_acceptance": [
+      "native full path equals cached 4h output and integer confusion",
+      "valid_frames all four in training replay",
+      "gradient reaches early rollout states",
+      "no target arrays in model inputs"
+    ],
+    "scope": "fixed native M0 perception, trainable complete future head; not end-to-end sensor training"
+  },
+  "cost": {
+    "measurement_source": "analysis/sota_p2_20260911/P2执行状态.md",
+    "historical_S0_four_epoch_training_H200_gpu_hours": 21.92088,
+    "historical_microstep_seconds": 0.8384,
+    "cache_training_throughput_measured": false,
+    "proposed_preflight_max_updates": 100,
+    "proposed_preflight_gpu_hours_ceiling": 1,
+    "proposed_full_original_one_epoch_per_arm_including_eval_ceiling_gpu_hours": 8,
+    "proposed_two_arm_ceiling_gpu_hours": 16,
+    "new_budget_authorized_by_this_audit": false,
+    "seed": 11,
+    "server_serial_required": true,
+    "automatic_scientific_retries": false
+  },
+  "latent_engineering_issues": [
+    {
+      "severity": "runtime_if_enabled",
+      "source": "bevformer.py:199,242",
+      "description": "_obtain_backwarded_history_bev call misses prev_bev_list; default backwarded_prev_frame_num=0 unaffected"
+    },
+    {
+      "severity": "migration_contract",
+      "description": "old P2 train_entry.py fixes seed0/four epochs; cannot silently reuse for new seed11 contract"
+    },
+    {
+      "severity": "scientific_contract",
+      "description": "no empirical foreground support loss fraction or causal bottleneck measured in this static audit"
+    }
+  ],
+  "report": "M0架构与改进接口审计.md"
+}
